@@ -1,0 +1,31 @@
+UMR Zoom meeting summary 12/17/2018
+
+Participants: Bill, Martha, James P, Tim, Jeff, Yuchen, Jayeol, Meagan, Sara, Bert
+
+Meeting summary:
+
+We reviewed a few sentences from LORELEI_NW_AFP_ENG_0024_20060217_28amrs.txt and discussed temporal and modality annotation:
+
+Bill raised the issue of how to annotate modality as relations on AMR graphs, and we discussed how this might be done on 
+a couple of examples.
+
+Martha suggested it is useful to do RED annotation on these examples and see which aspect of RED annotation can be adopted 
+on UMR annotation.
+
+Bert raised the possibility of annotating tense as relations on AMR graphs, and suggested that the :time attribute on AMR
+graphs can be replaced with TimeML style temporal relations to abstract away from cross-linguistic variations. In addition, 
+semantic tense can also be annotated in the same manner, as a temporal relation between an event and the document creation 
+time (or Now). It is also proposed as a way to avoid tense annotation on events, and the temporal location of some events
+are better expressed as relation between the event and some reference event.
+
+Tim raised the issue of modified temporal relations with this approach (e.g., one day before ...), but suggested that this
+can be addressed by reifying such relations as concepts.
+
+Bill raised the issue of how to decide which events should be annotated as a relation between the event and DCT (i.e., semantic
+tense), and which events should be annotated in relation with respect to other events. We agreed this is the central issue
+if such an approach is feasible.
+
+Next Meeting: Jan 9, 2019 with Johan Bos.
+In prepartion for the meeting, we need to prepare a list of topics to discuss with Google Doc. Bert will create the Google
+Doc.
+
