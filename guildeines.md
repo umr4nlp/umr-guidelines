@@ -27,9 +27,9 @@ from **Abstract Meaning Representation** (AMR), which focuses on *predicte-argum
 that focuses on *coreference*, *temporal* and *modal* relations.
 
 
-Edmund Pope tasted freedom today for the first time in more than eight months.
-
 ```
+Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
+
 (t2 / taste-01
   :ARG0 (p / person :wiki "Edmond_Pope"
          :name (n2 / name :op1 "Edmund" :op2 "Pope"))
@@ -49,7 +49,7 @@ Edmund Pope tasted freedom today for the first time in more than eight months.
 ```
   
 ```
- Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
+Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
 (b2 / businessman
       :mod (c5 / country :wiki "United_States"
@@ -79,7 +79,7 @@ Edmund Pope tasted freedom today for the first time in more than eight months.
 ```
 
 ```
-He denied any wrongdoing.
+Snt3: He denied any wrongdoing.
 (d / deny-01
       :ARG0 (h / he)
       :ARG1 (t / thing
@@ -96,6 +96,7 @@ He denied any wrongdoing.
 ```
 
 ```
+Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 (p3 / pardon-01
       :ARG0 (p / person :wiki "Vladimir_Putin"
             :name (n / name :op1 "Vladimir" :op2 "Putin")
@@ -118,7 +119,7 @@ He denied any wrongdoing.
 
 
 ```
- Pope was flown to the U.S. military base at Ramstein, Germany.
+Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
  
 (f / fly-01
       :ARG1 (p / person :wiki "Edmond_Pope"
@@ -140,7 +141,7 @@ He denied any wrongdoing.
 
 
 ```
-He will spend the next several days at the medical center there before he returns home with his wife Sherry
+Snt6: He will spend the next several days at the medical center there before he returns home with his wife Sherry
 
 (s2 / spend-02
       :ARG0 (h2 / he)
@@ -172,7 +173,7 @@ He will spend the next several days at the medical center there before he return
 ```
 
  ```
-   Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
+Snt7: Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
 
 (h / have-mod-91
        :ARG1 (p / person :wiki "Edmond_Pope"
@@ -188,7 +189,7 @@ He will spend the next several days at the medical center there before he return
 ```
 
 ```
-Doctors will examine him for signs that the cancer may have come back while he awaiting trial in a Russian jail.
+Snt8: Doctors will examine him for signs that the cancer may have come back while he awaiting trial in a Russian jail.
 
  (e / examine-01
        :ARG0 (d3 / doctor)
@@ -210,7 +211,7 @@ Doctors will examine him for signs that the cancer may have come back while he a
 ```
 
 ```
- A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
+Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
 (s / say-01
       :ARG0 (p3 / person
             :ARG0-of (h2 / have-org-role-91
