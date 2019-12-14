@@ -80,14 +80,13 @@ Edmund Pope tasted freedom today for the first time in more than eight months.
 
 ```
 He denied any wrongdoing.
-\begin{verbatim}
 (d / deny-01
       :ARG0 (h / he)
       :ARG1 (t / thing
             :ARG1-of (d2 / do-02
                   :ARG0 h
                   :ARG1-of (w / wrong-02))))
-```
+
 ((Temporal    
   :after (DCT, s3|d/deny))
  (Modal
