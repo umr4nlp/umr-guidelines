@@ -21,6 +21,8 @@
 
 ##  Part 1. Introduction
 
+The Uniform Meaning Representation (UMR) project aims to design a meaning representation 
+
 ## Part 2. Sentence-Level Representation
 
 ### Part 2-1. Predicate Argument Structure
