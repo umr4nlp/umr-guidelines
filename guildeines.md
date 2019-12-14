@@ -42,10 +42,10 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
                     :unit (m2 / month)))))
                     
 (temporal-dependencies
-    :depends_on (DCT, today)
-    :includes (today, taste)
+    :depends_on (DCT, s1t3/today)
+    :includes (s1t3/today, s1t2/taste-01)
  modal-dependencies
-    :POS (Auth, taste))
+    :POS (Auth, s1t2/taste-01))
 ```
   
 ```
@@ -71,11 +71,11 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
             :ARG3 s2))
  
 ( (Temporal
-    :includes (last week, convict)
-    :includes (last week, sentence))
+    :includes (s2w/week, s2c4/convict-01)
+    :includes (s2w/week, s2s/sentence-01))
   (Modal
-    :POS (Auth, convict)
-    :POS (Auth, sentence)))
+    :POS (Auth, s2c4/convict-01)
+    :POS (Auth, s2s/sentence-01)))
 ```
 
 ```
@@ -88,11 +88,11 @@ Snt3: He denied any wrongdoing.
                   :ARG1-of (w / wrong-02))))
 
 ((Temporal    
-  :after (DCT, s3|d/deny))
+  :after (DCT, s3d/deny-01))
  (Modal
-  :POS (Auth, s3|d/deny))
+  :POS (Auth, s3d/deny-01))
  (Coref
-  :same (s1|p/Edmund Pope, s3|h/he)))     
+  :same (s1p/person, s3h/he)))     
 ```
 
 ```
@@ -110,11 +110,11 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
                   :mod (h3 / health))))
 
   ((Temporal
-       :before (convict, pardon))
+       :before (s2c4/convict-01, s4p3/pardon-01))
   (Modal
-       :POS (Auth, pardon))
+       :POS (Auth, s4p3/pardon-01))
   (Coref
-       :same (Edmund Pope, him)))   
+       :same (s1p/person,s4h2/he)))   
 ```
 
 
@@ -134,9 +134,9 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
                         :name (n2 / name :op1 "Germany")))))
 
 ((Temporal
-    :before (pardon, flow))
+    :before (s4p3/pardon-01, s5f/fly-01))
  (Modal
-    :POS (Auth, flow)))   
+    :POS (Auth, s5f/fly-01)))   
 ```
 
 
@@ -163,13 +163,13 @@ Snt6: He will spend the next several days at the medical center there before he 
             :location (t2 / there)))
 
 ( (Temporal
-    :before (DCT, spend)
-    :before (spend, return))
+    :before (DCT, s6s2/spend-02)
+    :before (s6s2/spend-02, s6r/return-01))
   (Modal
-    :POS (Auth, spend)
-    :POS (Auth, return))
+    :POS (Auth, s6s2/spend-02)
+    :POS (Auth, s6r/return-01))
   (Coref
-    :same (Edmund Pope, he)))
+    :same (s1p/person, s6h2 / he)))
 ```
 
  ```
@@ -225,12 +225,12 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
                         :ARG1 (b2 / blood)
                         :ARG1-of (h / high-02))))
 ((Temporal
-   :after (DCT, say)
-   :overlap (say, suffer))
+   :after (DCT, s9s/say-01)
+   :overlap (s9s/say-01, s9s3/suffer-01))
  (Modal
-   :POS (Auth, say)
-   :POS (Auth, spokeswoman)
-   :POS (spokeswoman, suffer)))
+   :POS (Auth, s9s/say-01)
+   :POS (Auth, s9p3/person)
+   :POS (s9p3/person, s9s3/suffer-01)))
  ```
 
 
