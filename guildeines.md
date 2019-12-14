@@ -22,9 +22,12 @@
 ##  Part 1. Introduction
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
-the interpretation of a text by the computer. UMR combines a *sentence-level* representation that is adapted 
+the computational interpretation of a text. UMR combines a *sentence-level* representation that is adapted 
 from **Abstract Meaning Representation** (AMR), which focuses on *predicte-argument structures*, *word senses*, *named entities*, *multi-word expressions*, *aspect*, and *quantification*, and a document-level representation
 that focuses on *coreference*, *temporal* and *modal* relations.
+
+
+
 
 ## Part 2. Sentence-Level Representation
 
