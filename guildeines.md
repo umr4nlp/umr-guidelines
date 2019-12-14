@@ -26,6 +26,20 @@ the computational interpretation of a text. UMR combines a *sentence-level* repr
 from **Abstract Meaning Representation** (AMR), which focuses on *predicte-argument structures*, *word senses*, *named entities*, *multi-word expressions*, *aspect*, and *quantification*, and a document-level representation
 that focuses on *coreference*, *temporal* and *modal* relations.
 
+```
+(t2 / taste-01
+  :ARG0 (p / person :wiki "Edmond_Pope"
+         :name (n2 / name :op1 "Edmund" :op2 "Pope"))
+  :ARG1 (f / free-04
+         :ARG1 p)
+  :time (t3 / today)
+  :ord (o3 / ordinal-entity :value 1
+        :range (m / more-than
+                :op1 (t / temporal-quantity :quant 8
+                    :unit (m2 / month)))))
+'''                   
+                    
+
 
 
 
