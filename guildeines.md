@@ -22,10 +22,11 @@
 ##  Part 1. Introduction
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
-the computational interpretation of a text. UMR combines a *sentence-level* representation that is adapted 
-from **Abstract Meaning Representation** (AMR), which focuses on *predicte-argument structures*, *word senses*, *named entities*, *multi-word expressions*, *aspect*, and *quantification*, and a document-level representation
-that focuses on *coreference*, *temporal* and *modal* relations.
+the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
+from **Abstract Meaning Representation** (AMR), which focuses on **predicte-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation
+that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document, and then describe in more detail each component of UMR. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations. 
 
+Operationally, for both sentence-level and document-level annotation, we assume an annotation procedure in which a document is processed sentence by sentence. The sentence-level representation is annotated first, so that the document-level annotation can make reference to the concepts in the sentence-level representation.
 
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
@@ -52,7 +53,11 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
      )
         
 ```
-  
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in Section  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
+
+The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant that indicates that the *taste-01* event definitely happened, and is thus positive (as indicated by the *POS* label) from the author's perspective.
+
+
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
