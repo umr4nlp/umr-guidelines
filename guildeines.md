@@ -41,24 +41,15 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
                 :op1 (t / temporal-quantity :quant 8
                     :unit (m2 / month)))))
                     
-(temporal-dependencies
-    :depends_on (DCT, s1t3/today)
-    :includes (s1t3/today, s1t2/taste-01)
- modal-dependencies
-    :POS (Auth, s1t2/taste-01))
-
-:SNT(s2 / sentence
-            :coref(
-                same(s2), s1i)
-                same(s2p2, s1p)
-            )
-            :temporal(
-                overlap(s2b, dct)
-            )
-            :modality(
-                pos(s2b, aut)
-            )
-        )
+(s1 / sentence
+    :temporal(
+          depends_on (DCT, s1t3/today)
+          includes (s1t3/today, s1t2/taste-01)
+           )
+    :modality(
+           :POS (Auth, s1t2/taste-01)
+             )
+     )
         
 ```
   
@@ -84,12 +75,16 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
                         :unit (y2 / year)))
             :ARG3 s2))
  
-( (Temporal
-    :includes (s2w/week, s2c4/convict-01)
-    :includes (s2w/week, s2s/sentence-01))
-  (Modal
-    :POS (Auth, s2c4/convict-01)
-    :POS (Auth, s2s/sentence-01)))
+(s2 / sentence
+    :temporal(
+        includes (s2w/week, s2c4/convict-01)
+        includes (s2w/week, s2s/sentence-01)
+           )
+    :modality(
+      POS (Auth, s2c4/convict-01)
+       POS (Auth, s2s/sentence-01)
+             )
+     )
 ```
 
 ```
@@ -100,13 +95,17 @@ Snt3: He denied any wrongdoing.
             :ARG1-of (d2 / do-02
                   :ARG0 h
                   :ARG1-of (w / wrong-02))))
-
-((Temporal    
-  :after (DCT, s3d/deny-01))
- (Modal
-  :POS (Auth, s3d/deny-01))
- (Coref
-  :same (s1p/person, s3h/he)))     
+  
+(s3 / sentence
+    :coref(
+           same (s1p/person, s3h/he))
+    :temporal(
+            after (DCT, s3d/deny-01))
+    :modality(
+            POS (Auth, s3d/deny-01))
+            POS (Auth, s3h/he)
+            NEG (s3h/he, s3d2/do-02)
+     )
 ```
 
 ```
@@ -123,12 +122,14 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
             :ARG0 (r2 / reason
                   :mod (h3 / health))))
 
-  ((Temporal
-       :before (s2c4/convict-01, s4p3/pardon-01))
-  (Modal
-       :POS (Auth, s4p3/pardon-01))
-  (Coref
-       :same (s1p/person,s4h2/he)))   
+(s4 / sentence
+    :coref(
+         Same (s1p/person,s4h2/he))
+    :temporal(
+         Before (s2c4/convict-01, s4p3/pardon-01))
+    :modality(
+         POS (Auth, s4p3/pardon-01))
+     )
 ```
 
 
@@ -147,10 +148,12 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
                   :location (c2 / country :wiki "Germany"
                         :name (n2 / name :op1 "Germany")))))
 
-((Temporal
-    :before (s4p3/pardon-01, s5f/fly-01))
- (Modal
-    :POS (Auth, s5f/fly-01)))   
+(s5 / sentence
+    :temporal(
+         Before (s4p3/pardon-01, s5f/fly-01))
+    :modality(
+         POS (Auth, s5f/fly-01))
+     )
 ```
 
 
@@ -176,14 +179,15 @@ Snt6: He will spend the next several days at the medical center there before he 
             :mod (m / medical)
             :location (t2 / there)))
 
-( (Temporal
-    :before (DCT, s6s2/spend-02)
-    :before (s6s2/spend-02, s6r/return-01))
-  (Modal
-    :POS (Auth, s6s2/spend-02)
-    :POS (Auth, s6r/return-01))
-  (Coref
-    :same (s1p/person, s6h2 / he)))
+(s6 / sentence
+  :temporal(
+    before (DCT, s6s2/spend-02)
+    before (s6s2/spend-02, s6r/return-01))
+  :modality
+    POS (Auth, s6s2/spend-02)
+    POS (Auth, s6r/return-01))
+  :coref
+    same (s1p/person, s6h2 / he)))
 ```
 
  ```
@@ -200,6 +204,13 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
                    :ARG1 p
                    :location (c / country :wiki "Russia"
                          :name (n2 / name :op1 "Russia")))))
+
+(s7 / sentence
+  :temporal(
+    overlap (s7a/arrest-01, s7r/remission-02))
+  :modality
+    POS (Auth, s7a/arrest-01)
+    POS (Auth, s7r/remission-02)))
 ```
 
 ```
@@ -222,6 +233,15 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
                                      :mod (c2 / country :wiki "Russia"
                                            :name (n3 / name :op1 "Russia"))))))
              :ARG2 d3))
+(s8 / sentence
+  :temporal(
+    before (DCT, s8e / examine-01))
+  :modality(
+    POS (AUTH, s8e / examine-01)
+    NEU (AUTH, s8c3/come-01)
+    POS (AUTH, s8a/await-01))
+  :coref(
+    Same(s7p / person, s8h/he))) 
 ```
 
 ```
@@ -238,13 +258,14 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
                   :op2 (p2 / pressure-01
                         :ARG1 (b2 / blood)
                         :ARG1-of (h / high-02))))
-((Temporal
-   :after (DCT, s9s/say-01)
-   :overlap (s9s/say-01, s9s3/suffer-01))
- (Modal
-   :POS (Auth, s9s/say-01)
-   :POS (Auth, s9p3/person)
-   :POS (s9p3/person, s9s3/suffer-01)))
+(s9/sentence
+ :Temporal
+   after (DCT, s9s/say-01)
+   overlap (s9s/say-01, s9s3/suffer-01))
+ :Modality
+   (POS (Auth, s9s/say-01)
+   POS (Auth, s9p3/person)
+   POS (s9p3/person, s9s3/suffer-01)))
  ```
 
 
