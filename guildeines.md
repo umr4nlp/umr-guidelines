@@ -46,6 +46,20 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
     :includes (s1t3/today, s1t2/taste-01)
  modal-dependencies
     :POS (Auth, s1t2/taste-01))
+
+:SNT(s2 / sentence
+            :coref(
+                same(s2), s1i)
+                same(s2p2, s1p)
+            )
+            :temporal(
+                overlap(s2b, dct)
+            )
+            :modality(
+                pos(s2b, aut)
+            )
+        )
+        
 ```
   
 ```
