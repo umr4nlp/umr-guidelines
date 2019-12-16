@@ -11,9 +11,10 @@
 * Part 2. Sentence-Level Representation
     * Part 2-1. Predicate Argument Structure
     * Part 2-2. Aspect
-    * Part 2-3. Quantification
+    * Part 2-3. Quantification, negation
     * Part 2-4. Named Entities
     * Part 2-5. Multiple Word Expressions
+    * Part 2-6. How to map multi-concept words
 * Part 3. Document-Level Representation
     * Part 3-1. Coreference
     * Part 3-2. Temporal Dependency
