@@ -296,4 +296,1203 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
 ### Part 3-2. Temporal Dependency
 ### Part 3-3. Modal Dependency
 
+The modal annotation takes the form of dependency structures: each event receives an annotation
+which indicates which linguistic material it depends on for its temporal
+or modal interpretation, and what type of dependency relation holds
+between the parent and the child. That is, the nodes in the dependency
+structure are linguistic expressions (either events or modal conceivers) and the edges represent modal (epistemic) strength. 
+
+In the modal dependency structure, there are three types of nodes:
+events identified in the first pass, modal conceivers (akin to sources),
+and the <span>have-condition</span> node for conditional events. The
+second pass involves identifying the conceivers in the text, adding the
+<span>have-condition</span> node if applicable, and creating the
+dependency structure using those nodes and the events identified in the
+first pass. This is done in a single pass through the document.
+
+#### Identifying conceivers
+
+##### Author(s)
+
+Every text will have at least one <span>AUTH</span> node, used for the
+author(s) of the document. When there are multiple authors (for example,
+in a discussion forum, or in a transcript of an interview) each author
+will get their own node. It is necessary to add a node for each author
+because all of the content in a document is filtered through an author’s
+(or speaker’s) perspective.
+
+##### Conceivers other than author(s)
+
+Aside from authors, there are nodes in the modal dependency for
+conceivers mentioned in the document; these correspond to sources in
+FactBank (). All non-author conceivers are dependent on the author
+node(s) because everything in the text is ultimately from the author’s
+perspective.
+
+Conceiver nodes are added when another entity’s mental attitude or point
+of view towards an event is expressed in the text. Certain types of
+predicates inherently involve conceivers/sources: report, knowledge,
+belief, opinion, doubt, perception, and inference (). The examples below
+in [\[conceivers\]](#conceivers) show some of the types of predicates
+that require the introduction of a conceiver node into the modal
+dependency structure.
+
+<span id="conceivers" label="conceivers">\[conceivers\]</span>
+
+<span id="Marythinks" label="Marythinks">\[Marythinks\]</span> *Mary
+that John **mowed** the
+lawn.*  
+<span>AUTH</span>  
+<span>MARY</span>
+
+<span id="NYTreportedinquiry" label="NYTreportedinquiry">\[NYTreportedinquiry\]</span>
+*The New York Times that the impeachment **inquiry** has begun.*  
+<span>AUTH</span>  
+<span>NEW\_YORK\_TIMES</span>
+
+<span id="perception" label="perception">\[perception\]</span> *John the
+cat **eat** breakfast.*  
+<span>AUTH</span>  
+<span>JOHN</span>
+
+<span id="deonticevent" label="deonticevent">\[deonticevent\]</span>
+*Mary to **leave**
+early.*  
+<span>AUTH</span>  
+<span>MARY</span>
+
+<span id="deonticnominal" label="deonticnominal">\[deonticnominal\]</span>
+*John really a boat.*  
+<span>AUTH</span>  
+<span>JOHN</span>
+
+<span id="deonticoblig" label="deonticoblig">\[deonticoblig\]</span>
+*The university Mary to **register** by Monday.*  
+<span>AUTH</span>  
+<span>JOHN</span>
+
+<span id="purpclausecon" label="purpclausecon">\[purpclausecon\]</span>
+*Mary is **going** to California **see** the beach.*  
+<span>AUTH</span>  
+<span>JOHN</span>
+
+As mentioned above, every example (or document) requires the
+introduction of an <span>AUTH</span> node. Predicates of belief, as in
+[\[Marythinks\]](#Marythinks), also require the addition of a conceiver
+node for the believer, here <span>MARY</span>. This is necessary in
+order to capture the fact that the modal status of the <span>mow</span>
+event is provided by Mary and the author may or may not agree with
+Mary’s perspective. Similarly, predicates of reporting, as in
+[\[NYTreportedinquiry\]](#NYTreportedinquiry), and perception, as in
+[\[perception\]](#perception), require the introduction of conceiver
+nodes for the reporter (<span>NEW\_YORK\_TIMES</span>) and the perceiver
+(<span>JOHN</span>).
+
+Certain deontic events, such as those in
+[\[deonticevent\]](#deonticevent) and
+[\[deonticnominal\]](#deonticnominal) also require the addition of a
+conceiver node to the dependency structure. Hopes, wishes, desires, and
+fears all model the mental content of a conceiver in the text – these
+are based on a conceiver’s beliefs or perspective about the world.
+Conceiver nodes should be added, even when the complement of the deontic
+predicate isn’t an event, as in [\[deonticnominal\]](#deonticnominal).
+Obligation deontics, as in [\[deonticoblig\]](#deonticoblig), require
+the introduction of a conceiver node for the source of the obligation
+(here, <span>JOHN</span>), but not the endpoint of the obligation
+(<span>MARY</span>). This is because, in
+[\[deonticoblig\]](#deonticoblig), nothing is asserted about Mary’s
+beliefs, desires, attitude or perspective.
+
+Purpose clauses, as in [\[purpclausecon\]](#purpclausecon), require the
+introduction of a conceiver node for the subject of the sentence; this
+is because the author is expressing the intentions of the subject of the
+sentence.
+
+As shown by [\[NYTreportedinquiry\]](#NYTreportedinquiry), conceivers
+can be inanimate entities when they metonymically refer to a volitional
+entity (or volitional entities); that is, the
+<span>NEW\_YORK\_TIMES</span> node stands for the people who contribute
+to the newspaper.
+
+It’s important to point out that conceivers don’t actually represent
+individuals in the text, but their sets of beliefs. That is, the
+<span>MARY</span> conceiver node doesn’t correspond to the entity named
+*Mary* in the document; it stands for a set of Mary’s beliefs as
+presented by the author of the text. This means that there may be
+multiple conceiver nodes for a single individual’s beliefs. This occurs
+under two different circumstances: when the conceiver nodes are nested
+underneath different other conceiver nodes in the dependency structure
+as in [\[diffcon\]](#diffcon), and when they’re nested underneath the
+same conceiver node, but with a different modal strength value as in
+[\[diffstrength\]](#diffstrength). (See §[4.3.2](#conedges) on how to
+add conceiver nodes to the dependency structure with modal strength
+edges.)
+
+<span id="multconnodes" label="multconnodes">\[multconnodes\]</span>
+
+<span id="diffcon" label="diffcon">\[diffcon\]</span> *John Mary to
+**visit** Italy, but I she to **visit** France.*  
+<span>AUTH</span>  
+<span>JOHN</span>  
+<span>MARY\_1</span>  
+<span>MARY\_2</span>
+
+<span id="diffstrength" label="diffstrength">\[diffstrength\]</span>
+*Mary to **visit** Italy and she to **visit** France as well.*  
+<span>AUTH</span>  
+<span>MARY\_1</span>  
+<span>MARY\_2</span>
+
+In [\[diffcon\]](#diffcon), we need two separate <span>MARY</span>
+nodes: one which is dependent on the <span>JOHN</span> node to represent
+John’s beliefs about Mary’s beliefs (really, the author’s beliefs about
+John’s beliefs about Mary’s beliefs) and one which is nested directly
+underneath the <span>AUTH</span> node to represent the author’s beliefs
+about Mary’s beliefs. In [\[diffstrength\]](#diffstrength), there are
+two separate <span>MARY</span> nodes that correspond to the author’s
+different levels of certainty about Mary’s sets of beliefs. One of the
+<span>MARY</span> nodes represents Mary’s set of beliefs that the author
+is certain of (her desire to visit Italy) and the other
+<span>MARY</span> node represents Mary’s beliefs that the author is
+unsure of (her desire to visit France).
+
+##### Shared beliefs
+
+Authors may also attribute beliefs to groups of individuals. In these
+cases, separate conceiver nodes should be created for each unique group
+of individuals; these groups may (or may not) include the author. This
+can be seen below in
+([\[sharedconceivers\]](#sharedconceivers)).
+
+<span id="sharedconceivers" label="sharedconceivers">\[sharedconceivers\]</span>
+
+*Mary and I that John **left** early. Mary was that John **left**
+because they had to **get** pizza later.*  
+<span>AUTH</span>  
+<span>MARY\_AUTH</span>  
+<span>MARY</span>  
+<span>MARY\_JOHN</span>
+
+Here, there is a node for the author because all examples require an
+<span>AUTH</span> node. The <span>MARY\_AUTH</span> node represents the
+shared beliefs of Mary and the author (namely, that John left the event
+early); the <span>MARY</span> node is required because *surprise* models
+Mary’s mental content. And the <span>MARY\_JOHN</span> node represents
+Mary and John’s shared belief about their pizza plans.
+
+##### Generic and unspecified conceivers
+
+Sometimes, conceivers need to be identified even when they aren’t
+explicitly mentioned in the text, as in [\[genericcon\]](#genericcon).
+
+<span id="genericcon" label="genericcon">\[genericcon\]</span>
+
+<span id="prohibit" label="prohibit">\[prohibit\]</span> *My **request**
+was .*  
+<span>AUTH</span>  
+<span>NULL\_HEARER</span>
+
+<span id="report" label="report">\[report\]</span> *It has been that
+multiple roads are **closed**.*  
+<span>AUTH</span>  
+<span>NULL\_REPORTER</span>
+
+This is often the case when predicates that introduce conceivers are
+used in passive constructions. Even though there is no span of text that
+represents the conceivers, they should still be identified as nodes in
+the dependency structure.
+
+Unlike perception events and reporting events, obligation deontics, as
+in [\[deonticnocon\]](#deonticnocon), don’t require the introduction of
+a null conceiver node.
+
+<span id="deonticnocon" label="deonticnocon">\[deonticnocon\]</span>
+*Mary to **register** by Monday.*  
+<span>AUTH</span>
+
+When the source of obligation is expressed (as shown above in
+[\[deonticoblig\]](#deonticoblig)), a conceiver node is introduced for
+the source of the obligation. It is not always clear, however, that an
+external source is present when it is not overtly expressed. Therefore,
+null conceivers are not identified for obligation deontics.
+
+#### The <span>have-condition</span> node
+
+The <span>have-condition</span> node is a special node that is required
+in the modal dependency structure for linguistic material that expresses
+hypothetical situations contingent on certain conditions. The canonical
+English conditional construction is shown below in
+[\[canoncond\]](#canoncond).
+
+<span id="canoncond" label="canoncond">\[canoncond\]</span>
+
+*If it **rains**, Mary will **stay** home.*  
+<span>have-condition</span>
+
+Here, the hypothetical situation, Mary staying home, is conditional on
+the raining event. The UMR-TAMP annotation does not capture the causal
+relation between the <span>rain</span> event and the <span>stay</span>
+event; this may be annotated elsewhere in the UMR annotation scheme. The
+UMR-TAMP modal annotation captures the fact that both of these events
+occur in the same hypothetical scenario – these are not two independent
+hypothetical events. The <span>have-condition</span> node acts a parent
+to both the <span>rain</span> event and the <span>stay</span> event in
+the modal dependency (see §[\[conditionals\]](#conditionals)). This
+captures that the events in the conditional construction occupy the same
+hypothetical “world” or space and not separate hypothetical
+worlds/spaces.
+
+Conditional constructions may take a variety of morphosyntactic forms,
+both across languages and within a language. Although the canonical
+English conditional construction takes the *if.., then...* form, there
+are are other ways to express conditional semantics, such as those in
+[\[otherconds\]](#otherconds) below.
+
+<span id="otherconds" label="otherconds">\[otherconds\]</span>
+
+<span id="longas" label="longas">\[longas\]</span> *As long as it
+**rains**, Mary will **stay** home.*  
+<span>have-condition</span>
+
+<span id="casethat" label="casethat">\[casethat\]</span> *Mary will
+**stay** home, in (the) case (that) it **rains**.*  
+<span>have-condition</span>
+
+Regardless of the form, the conditional semantics requires the
+introduction of the <span>have-condition</span> node.
+
+The <span>have-condition</span> node is also used for different types of
+conditionals and constructions related to conditionals. The
+<span>have-condition</span> node is also required for counterfactuals,
+as in [\[counterfactualrain\]](#counterfactualrain), and concessive
+conditionals, as in
+[\[concess\]](#concess).
+
+<span id="otherconds" label="otherconds">\[otherconds\]</span>
+
+<span id="counterfactualrain" label="counterfactualrain">\[counterfactualrain\]</span>
+*If it had **rained**, Mary would have **stayed** home.*  
+<span>have-condition</span>
+
+<span id="concess" label="concess">\[concess\]</span>
+
+*Even if it had **rained**, Mary would have **stayed** home.*  
+<span>have-condition</span>
+
+These types of constructions will be annotated differently in terms of
+their modal strength values (see §[\[conditionals\]](#conditionals)),
+but they all require the introduction of a <span>have-condition</span>
+node.
+
+#### Constructing the modal dependency structure
+
+The different types of nodes in the modal dependency structure have been
+covered in the previous sections: authors, conceivers,
+<span>have-condtion</span>, and the events identified in the first pass.
+There is one other node in the dependency structure: a <span>ROOT</span>
+node, under which all other nodes are nested.
+
+This section covers the modal strength values that characterize the
+edges and guidelines on how to construct the dependency structure. The
+different types of nodes are organized within the dependency structure
+as shown in Figure [\[exampletree\]](#exampletree).
+
+Every document will have a single <span>ROOT</span> node at the top of
+the dependency structure. All <span>AUTH</span> nodes are direct
+children of the <span>ROOT</span> node and only <span>AUTH</span> nodes
+can be direct children of the <span>ROOT</span> node. That is,
+non-author conceivers and events will never be direct children of the
+<span>ROOT</span> node. This is because any and all information in a
+document is presented from (one of) the author’s perspective(s).
+
+<span>AUTH</span> nodes may have either events, conceivers, or
+<span>have-condition</span> nodes as their direct children. This reflect
+the fact that authors may give their own perspective on an event or
+model another conceiver’s perspective on an event. Non-author conceivers
+should always be direct children of an <span>AUTH</span> node or another
+non-author conceiver node; that is, a conceiver node will never have an
+event node as its parent.
+
+##### Overview of modal edges
+
+As has been stated above, the edges in the modal dependency correspond
+to modal strength values. The same edge labels are used at all levels of
+the dependency structure, with the exception of the link between the
+<span>ROOT</span> and <span>AUTH</span> node(s). This edge label is
+always <span>Modal</span>.
+
+Modal strength values correspond to epistemic strength, i.e. the author
+or conceiver’s certainty about the occurrence of the event in the real
+world, or certainty about another conceiver’s mental content. Based on ,
+a typological study of modal systems across languages, and following
+FactBank (), the UMR-TAMP annotation distinguishes three levels of modal
+strength: Full, Partial, and Neutral, illustrated in
+[\[modalvalues\]](#modalvalues).
+
+<span id="modalvalues" label="modalvalues">\[modalvalues\]</span>
+
+<span id="full" label="full">\[full\]</span> Full:  
+*The cat already **ate** breakfast.*
+
+<span id="partial" label="partial">\[partial\]</span>
+
+Partial:  
+*The cat already **ate** breakfast.*
+
+<span id="neutral" label="neutral">\[neutral\]</span>
+
+Neutral:  
+*The cat have already **eaten** breakfast.*
+
+The Full modal value, as in [\[full\]](#full), corresponds to complete
+certainty; that is, the conceiver is 100% certain that the event occurs
+in the real world. The Neutral modal value, shown in
+[\[neutral\]](#neutral), indicates the possibility of the event;
+essentially, this corresponds to 50/50 certainty that the event occurs
+in the real world. The Partial modal value, as in
+[\[partial\]](#partial), falls between the Full and Neutral values; the
+conceiver believes that more likely than not, the event occurs in the
+real world.
+
+Also following FactBank (), the UMR-TAMP annotation scheme combines the
+three-way epistemic strength distinction (Full, Partial, Neutral) with a
+binary polarity distinction (Positive, Negative). This results in six
+modal strength values shown below in Table
+[\[introvalues\]](#introvalues).
+
+| Label                                  | Value                               |
+| :------------------------------------- | :---------------------------------- |
+| <span class="smallcaps">pos</span>     | full strength, positive polarity    |
+| <span class="smallcaps">prt</span>     | partial strength, positive polarity |
+| <span class="smallcaps">neut</span>    | neutral strength, positive polarity |
+| <span class="smallcaps">neutneg</span> | neutral strength, negative polarity |
+| <span class="smallcaps">prtneg</span>  | partial strength, negative polarity |
+| <span class="smallcaps">neg</span>     | full strength, negative polarity    |
+
+Epistemic strength labels<span label="introvalues"></span>
+
+The following sections will show how these edge values are applied to
+different types of nodes in the modal dependency structure. Throughout
+these sections, the format <span>Edge(Child node,Parent node)</span>
+will be used to represent the dependency structure.
+
+##### Edges between conceiver nodes
+
+As mentioned above, the edge between the <span>ROOT</span> and the
+<span>AUTH</span> is always <span>Modal</span> and does not take one of
+the modal strength values shown above in Table
+[\[introvalues\]](#introvalues). Every other edge in the modal
+dependency, however, is characterized by the modal strength values.
+
+For edges between two conceiver nodes, these values represent the degree
+of confidence a conceiver has in modelling the contents of another
+conceiver’s set of beliefs. That is, the author (or another conceiver)
+may have different levels of confidence about whether or not a
+particular individual holds the set of beliefs represented by a
+conceiver node. Examples for each of the six possible edges values is
+shown below in Table [\[conceiveredge\]](#conceiveredge).
+
+| Annotation                      | Example                          |
+| :------------------------------ | :------------------------------- |
+| <span>Pos(MARY,AUTH)</span>     | *Mary believes the cat **ate**.* |
+| <span>Prt(MARY,AUTH)</span>     | *Mary believes the cat **ate**.* |
+| <span>Neut(MARY,AUTH)</span>    | *Mary believe the cat **ate**.*  |
+| <span>NeutNeg(MARY,AUTH)</span> | *Mary believe the cat **ate**.*  |
+| <span>PrtNeg(MARY,AUTH)</span>  | *Mary believe the cat **ate**.*  |
+| <span>Neg(MARY,AUTH)</span>     | *Mary believe the cat **ate**.*  |
+
+Edges between conceiver nodes<span label="conceiveredge"></span>
+
+For example, in *Mary might believe the cat ate*, the author is unsure
+whether or not Mary holds the belief about the eating event. Therefore,
+there is a <span>Neut</span> relation between the <span>AUTH</span> node
+and the <span>MARY</span> conceiver node.
+
+Note that this edge captures the author (or parent conceiver) node’s
+certainty about the set of beliefs of the child conceiver node. That is,
+it is not capturing the child conceiver’s certainty about the event in
+question. Generally, when a predicate that introduces a conceiver is
+modalized, the strength indicated by the modal is annotated between the
+conceiver nodes, as in [\[deonticcon\]](#deonticcon).
+
+<span id="deonticcon" label="deonticcon">\[deonticcon\]</span>
+
+<span id="think" label="think">\[think\]</span> *Mary thinks the cat
+might have **eaten** breakfast.*  
+<span>Pos(MARY,AUTH)</span>
+
+<span id="doubt" label="doubt">\[doubt\]</span> *Mary probably doubts
+that the cat **ate** breakfast.*  
+<span>Prt(MARY,AUTH)</span>
+
+In [\[think\]](#think), Mary is uncertain about the eating event, but
+there is a <span>Pos</span> edge between the <span>AUTH</span> and
+<span>MARY</span> nodes because the author is sure of Mary’s beliefs
+(§[4.3.3](#modaleventedges) covers how to annotate Mary’s uncertainty).
+In [\[doubt\]](#doubt), the author only has probable certainty about
+Mary’s beliefs, annotated with the <span>Prt</span> edge between the
+<span>AUTH</span> and <span>MARY</span> nodes.
+
+##### Edges involving event nodes
+
+The same set of six epistemic strength values are used for edges that
+involve events; there are also two additional unspecified values. This
+section covers the edges between conceivers and events and between two
+events (the parental options for events in the modal dependency
+structure are fairly limited by the semantics of the text, but see
+section [\[parentnodes\]](#parentnodes) on selecting appropriate parent
+nodes). The eight values and their interpretation for events nodes are
+shown below. The corresponding FactBank values are shown in parentheses.
+
+> <span>Pos</span>: full positive support; complete certainty that the
+> event occurs (CT+)  
+> <span>Prt</span>: partial positive support; there is strong, but not
+> definitive certainty that the event occurs (CR+)  
+> <span>Neut</span>: positive neutral support; there is neutral
+> certainty that the event occurs/doesn’t occur; event is expressed
+> positively (PS+)  
+> <span>NeutNeg</span>: negative neutral support; there is neutral
+> certainty that the event occurs/doesn’t occur; negation of event is
+> expressed (PS-)  
+> <span>PrtNeg</span>: partial negative support; there is strong but not
+> definitive certainty that the event does not occur (PR-)  
+> <span>Neg</span>: full negative support; complete certainty that the
+> event does not occur (CT-)  
+> <span>Unsp</span>: The conceiver knows that the event either did or
+> did not occur, but is uncertain about the polarity (CTu)  
+> <span>NegUnsp</span>: The conceiver does not know what the factual
+> status of the event is, or does not commit to it (Uu)
+
+Degree of certainty corresponds most straightforwardly to the degree of
+confidence of a conceiver in the occurrence of an episodic event, i.e.
+the epistemic/evidential continuum from certainty to possibility and
+from direct evidence to second-hand (reported or inferred) evidence. We
+use the same values for epistemic/evidential support and deontic
+modality. The interpretation of the value - as epistemic/evidential or
+deontic - is not reflected in the modal annotation.
+
+###### Non-future events
+
+For non-future (non-deontic) events, the strength values correspond to
+the conceiver’s level of certainty towards the occurrence of the event
+in the real world. Events presented as fact by a conceiver will be
+annotated with <span>Pos</span>, while events for which the conceiver
+categorically denies their occurrence are marked <span>Neg</span>. When
+the conceiver doesn’t present the event as fact, but has a higher level
+of certainty towards the event either being true or not true, this is
+annotated as partial strength (<span>Prt</span> or, when the polarity is
+negative, <span>PrtNeg</span>). When the conceiver doesn’t lean either
+direction towards the event being true in the real world or not, the
+event is annotated as neutral (<span>Neut</span> or
+<span>NeutNeg</span>, depending on the polarity of the linguistic
+expression). This system of annotation is why predicates such as *think*
+or *believe* are not annotated as event nodes: they correspond exactly
+to the edges between conceivers and events. These strength values are
+exemplified in ([\[episodic\]](#episodic)).
+
+<span id="episodic" label="episodic">\[episodic\]</span>
+
+<span id="anaphora" label="anaphora">\[anaphora\]</span> *The dog
+**barked** last night*.  
+<span>Pos(bark,AUTH)</span>
+
+<span id="anaphora" label="anaphora">\[anaphora\]</span> *The dog
+**barked** last night.*  
+<span>Prt(bark,AUTH)</span>
+
+<span id="anaphora" label="anaphora">\[anaphora\]</span> *The dog have
+**barked** last night.*  
+<span>Neut(bark,AUTH)</span>
+
+<span id="anaphora" label="anaphora">\[anaphora\]</span> *The dog have
+**barked** last night.*  
+<span>NeutNeg(bark,AUTH)</span>
+
+<span id="anaphora" label="anaphora">\[anaphora\]</span> *The dog
+**bark** last night.*  
+<span>PrtNeg(bark,AUTH)</span>
+
+<span id="anaphora" label="anaphora">\[anaphora\]</span> *The dog
+**bark** last night.*  
+<span>Neg(bark,AUTH)</span>
+
+###### Future events and deontic modality
+
+For events embedded in deontic modals, or presented as (potentially)
+happening in the future, modal strength refers to the predictability of
+the occurrence of the event in the future, as presented by the
+conceiver. Predictive future has full strength (<span>Pos</span> or
+<span>Neg</span>); intentions, commands, and purpose clauses correspond
+to partial strength (<span>PosPrt</span> or <span>NegPrt</span>); and
+desire and permission correspond to neutral (<span>Neut</span> or
+<span>NeutNeg</span>) strength. This is illustrated in
+([\[futurestrength\]](#futurestrength)).
+
+<span id="futurestrength" label="futurestrength">\[futurestrength\]</span>
+
+<span id="futpos" label="futpos">\[futpos\]</span> *I **go** to Santa
+Fe*.  
+<span>Pos(go,AUTH)</span>
+
+<span id="futprt" label="futprt">\[futprt\]</span> *I to **go** to Santa
+Fe. / You **go** to Santa Fe.* / *I’m getting my car **fixed** **go** to
+Santa Fe.*  
+<span>Prt(go,AUTH)</span>
+
+<span id="futneut" label="futneut">\[futneut\]</span> *I to **go** to
+Santa Fe. / You are to **go** to Santa Fe.*  
+<span>Neut(go,AUTH)</span>
+
+The predictive future, as in [\[futpos\]](#futpos), is annotated with
+full modal strength because it presents the future event as a certainty
+(i.e., it is as certain as is possible for future events). Intentions,
+commands, and purpose clauses, as in [\[futprt\]](#futprt), are
+annotated with partial modal strength because they present the future
+event as less likely than the predictive future, but more likely to
+happen than the neutral strength deontics. Finally, desire and
+permission, as in [\[futneut\]](#futneut), are annotated as neutral
+strength.
+
+Examples like [\[futuretests\]](#futuretests) demonstrate how the
+predictive future, intention, and desire present events with different
+future likelihoods, based on whether or not they’re compatible with
+different strength negatives of the same event.
+
+<span id="futuretests" label="futuretests">\[futuretests\]</span>
+
+<span id="futtestpos" label="futtestpos">\[futtestpos\]</span> *\*I will
+go to Santa Fe, but I won’t go.*  
+*\*I will go to Santa Fe, but I probably won’t go.*  
+*\*I will go to Santa Fe, but I might not go.*
+
+<span id="futtestprt" label="futtestprt">\[futtestprt\]</span> *\*I
+intend to go to Santa Fe, but I won’t go.*  
+*\*I intend to go to Santa Fe, but I probably won’t go.*  
+*I intend to go to Santa Fe, but I might not go.*
+
+<span id="futtestneut" label="futtestneut">\[futtestneut\]</span> *I
+want to go to Santa Fe, but I won’t go.*  
+*I want to go to Santa Fe, but I probably won’t go.*  
+*I want to go to Santa Fe, but I might not go.*
+
+The predictive future, as in [\[futtestpos\]](#futtestpos), can’t
+combine with any strength of negative. This is because full positive
+strength doesn’t allow for any uncertainty, or any possibility that the
+event does not occur. The partial strength future/deontic events, like
+intention as in [\[futtestprt\]](#futtestprt), are only compatible with
+a neutral strength negative of the same event. Partial strength allows
+for the possibility that the event won’t occur in the future, but can’t
+occur with the partial (or full) strength negative of the event. Neutral
+strength future/deontics, like desires as in
+[\[futtestneut\]](#futtestneut), can occur with any strength negative of
+the same event, since the event is only presented as a possibility.
+
+As mentioned in §[4.3.2](#conedges) modalized deontic predicates capture
+the modal value with the link between the <span>AUTH</span> and the
+conceiver node. This means that the link between a conceiver and the
+node for the deontic predicate is very often a default <span>Pos</span>
+value; see example ([\[defaultpos\]](#defaultpos)).
+
+<span id="defaultpos" label="defaultpos">\[defaultpos\]</span> *Mary
+**want** to **visit** France.*  
+<span>Neut(MARY,AUTH)</span>  
+<span>Pos(want,MARY)</span>  
+<span>Neut(visit,want)</span>
+
+This is because the link between a conceiver and the deontic predicate
+represents the modal strength of the event with respect to the
+conceiver, and not the author. That is, the author is unsure of Mary’s
+desires; the author is not asserting that Mary is unsure of her own
+desires.
+
+When the conceiver is unsure of their own beliefs, desires, etc., this
+is represented with the link between the conceiver and the deontic
+predicate, as in ([\[mightwant\]](#mightwant)).
+
+<span id="mightwant" label="mightwant">\[mightwant\]</span>
+
+*Mary that she **want** to **visit** France.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Neut(want,MARY)</span>  
+<span>Neut(visit,want)</span>
+
+Here, the author is sure of Mary’s beliefs, so there is a
+<span>Pos</span> link between the author and Mary’s set of beliefs. But,
+Mary herself is unsure of her desire to visit France; therefore, there
+is a <span>Neut</span> link between the <span>MARY</span> node and the
+<span>want</span> node.
+
+###### Interaction of modal strength and negation
+
+Since the modal edge values combine both epistemic strength and
+polarity, the interaction of negation (polarity) and epistemic strength
+within a construction requires further annotation guidelines. As is the
+case with the UMR-TAMP annotation scheme in general, it is important to
+annotate the meaning of the text, regardless of its morphosyntactic
+form. For example, certain constructions in English exhibit what is
+often called neg-raising, as in [\[negraise1\]](#negraise1).
+
+<span id="negraisethink" label="negraisethink">\[negraisethink\]</span>
+
+<span id="negraise1" label="negraise1">\[negraise1\]</span> *Mary John
+**is in** his office.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Neg(be-in,MARY)</span>
+
+<span id="negraise2" label="negraise2">\[negraise2\]</span> *Mary John
+**isn’t in** his office.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Neg(be-in,MARY)</span>
+
+Although the negation in [\[negraise1\]](#negraise1) is syntactically on
+*think*, the meaning of [\[negraise1\]](#negraise1) and
+[\[negraise2\]](#negraise2) is the same. That is, that Mary has a belief
+that John is in not in his office. Therefore, both of these have the
+same annotation, with the negation represented between the
+<span>MARY</span> node and the <span>be-in</span> node. Further examples
+of this can be seen below in [\[negraise\]](#negraise).
+
+<span id="negraise" label="negraise">\[negraise\]</span>
+
+<span id="POS" label="POS">\[POS\]</span> *Mary **want** to **go**. /
+Mary **wants** to **go**.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(want,MARY)</span>  
+<span>NeutNeg(go,want)</span>
+
+<span id="NEUT" label="NEUT">\[NEUT\]</span> *Mary **planning** on
+**going**. / Mary is **planning** to **go**.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(plan,MARY)</span>  
+<span>PrtNeg(go,plan)</span>
+
+Note that only certain predicates allow neg-raising in English (e.g.,
+*believe, think, want, plan*); other predicates (e.g., *know*) have
+different meanings depending on the syntactic location of the negation.
+
+When negation interacts with highly grammaticalized modals, this is
+invariably represented with the negation inside the scope of the modal
+(again, regardless of where the negation is syntactically). Since
+grammaticalized modals aren’t identified as their own event (i.e.,
+node), the strength of the grammaticalized modal and the negation must
+be annotated with a single edge. This amounts to combining the strength
+of the modal (i.e., partial or neutral) with the negative polarity
+(<span>PrtNeg</span> or <span>NeutNeg</span>). This can be seen in
+example ([\[combo\]](#combo)) below.
+
+<span id="combo" label="combo">\[combo\]</span>
+
+<span id="POS" label="POS">\[POS\]</span> *Mary to **go**. / Mary
+(choose to) **go**.*  
+<span>NeutNeg(go,AUTH)</span>
+
+<span id="NEUT" label="NEUT">\[NEUT\]</span> *Mary is to **go**. / Mary
+is to **go**.*  
+<span>NegPrt(go,AUTH)</span>
+
+*Mary **open** the box. / that Mary **open** the box.*  
+<span>NegPrt(open,AUTH)</span>
+
+*He **be in** his office. / that he **is** **in** his office.*  
+<span>NeutNeg(be-in,AUTH)</span>
+
+There are also cases where the modal value of the edge is not a
+straightforward combination of the modal strength and negation. Examples
+of these can be seen below in ([\[notcombo\]](#notcombo)).
+
+<span id="notcombo" label="notcombo">\[notcombo\]</span>
+
+<span id="POS" label="POS">\[POS\]</span> *for Mary **to be** in France
+already.*  
+<span>Neg(be-in,AUTH)</span>
+
+<span id="NEUT" label="NEUT">\[NEUT\]</span> *You **enter**. / for you
+**to enter**.*  
+<span>NegPrt(enter,AUTH)</span>
+
+In these cases, the combination of a weak modal (*can, may*) with
+negation leads to a stronger negative strength relation (either full or
+partial).
+
+###### Selecting parent nodes
+
+For each event annotated for modality, both a modal strength edge value
+and a parent node must be selected. In the majority of cases, it is
+rather straightforward which node should be selected as the parent of an
+event in question.
+
+<span id="clearparent" label="clearparent">\[clearparent\]</span>
+
+<span id="travel" label="travel">\[travel\]</span> *Mary **travelled**
+to France.*  
+<span>Pos(travel,AUTH)</span>
+
+<span id="grammodal" label="grammodal">\[grammodal\]</span> *Mary might
+**travel** this summer.*  
+<span>Neut(travel,AUTH)</span>
+
+<span id="purpclause" label="purpclause">\[purpclause\]</span> *Mary
+will **travel** to France in order to **see** the Louvre.*  
+<span>Pos(travel,AUTH)</span>  
+<span>Pos(MARY,AUTH)</span>  
+<span>Prt(see,MARY)</span>
+
+<span id="belief" label="belief">\[belief\]</span> *Mary thinks she will
+**travel** to France.*  
+<span>Pos(MARY, AUTH)</span>  
+<span>Pos(travel,MARY)</span>
+
+For the events in examples like [\[travel\]](#travel) and
+[\[grammodal\]](#grammodal), <span>AUTH</span> is the parent node of the
+event. Grammaticalized modals aren’t annotated as their own nodes,
+therefore events under the scope of their modality are annotated
+directly underneath the relevant conceiver node, such as the author in
+[\[grammodal\]](#grammodal). The events in purpose clauses, as in
+[\[purpclause\]](#purpclause), are also represented as direct children
+of the conceiver node (here, <span>MARY</span>). Since belief predicates
+also aren’t represented as nodes in the annotation, the complements of
+belief predicates will be linked directly to the relevant conceiver, as
+in ([\[belief\]](#belief)).
+
+There are also cases where there may be a choice between selecting a
+conceiver or another event as the parent node. This is specifically the
+case when modal predicates are represented as their own events (nodes)
+in the annotation, as in ([\[modalevent\]](#modalevent)).
+
+<span id="modalevent" label="modalevent">\[modalevent\]</span>
+
+<span id="wants" label="wants">\[wants\]</span> *Mary **wants** to
+**travel** this summer.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(want,MARY)</span>  
+<span>Neut(travel,want)</span>
+
+<span id="decided" label="decided">\[decided\]</span> *Mary **decided**
+to **travel** this summer.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(decide,MARY)</span>  
+<span>Prt(travel,decide)</span>
+
+<span id="expects" label="expects">\[expects\]</span> *Mary **expects**
+to **travel** this summer.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(expect,MARY)</span>  
+<span>Prt(travel,expect)</span>
+
+<span id="allows" label="allows">\[allows\]</span> *This bar **allows
+smoking**.*  
+<span>Pos(BAR,AUTH)</span>  
+<span>Pos(allow,BAR)</span>  
+<span>Neut(smoke,allow)</span>
+
+<span id="allows" label="allows">\[allows\]</span> *We are **required**
+to **order** two drinks.*  
+<span>Pos(require,AUTH)</span>  
+<span>Neut(order,require)</span>
+
+In these cases, it may not be clear whether the node for the modalized
+event (e.g., <span>travel</span> in [\[wants\]](#wants)) should be a
+direct child of the relevant conceiver (<span>MARY</span>) or the modal
+predicate event node (<span>want</span>). In all clauses with modal
+predicates, the modalized event (e.g., <span>travel</span>) should be
+represented as the child of the modal predicate (e.g.,
+<span>want</span>) and not directly underneath the conceiver. This is
+the only case (aside from reporting events, covered in
+§[\[reportingevents\]](#reportingevents) below) where events will be
+the children of other events instead of (a direct child of) the relevant
+conceiver. The event is still nested underneath the relevant conceiver,
+just not as its direct child.
+
+If multiple events are presented with the same modal strength, they
+should be linked to the same parent node with the appropriate modal
+strength value; they should not be linked to each
+other.
+
+<span id="samespace" label="samespace">\[samespace\]</span>
+
+<span id="mighttravelwork" label="mighttravelwork">\[mighttravelwork\]</span>
+*Mary might **travel** and **work** on a paper this
+summer.*  
+<span>Neut(travel,AUTH)</span>  
+<span>Neut(work,AUTH</span>
+
+<span id="wanttravelwork" label="wanttravelwork">\[wanttravelwork\]</span>
+*Mary **wants** to **travel** and **work** on a paper this summer*.  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(want,MARY)</span>  
+<span>Neut(travel,want)</span>  
+<span>Neut(work,want)</span>
+
+In [\[mighttravelwork\]](#mighttravelwork), the author has a neutral
+epistemic stance towards both the *travel* and *work* events; these
+events are annotated separately as children of the <span>AUTH</span>
+node and not directly linked to each other. Similarly, in
+[\[wanttravelwork\]](#wanttravelwork), both *travel* and *work* are
+Mary’s desires; they are both annotated as children of
+<span>want</span> and not linked to each other.
+
+###### Nested modal strengths
+
+The main way in which this annotation differs from FactBank is that it
+allows for the nesting of modal strengths; that is, events can be
+annotated as the children of other (possibly modalized) events in the
+dependency structure. This is especially often the case when dealing
+with deontic modals, as in [\[nesting\]](#nesting).
+
+<span id="nesting" label="nesting">\[nesting\]</span>
+
+<span id="mayneed" label="mayneed">\[mayneed\]</span> *I **need** to
+**bring** a rain coat*.  
+<span>Neut(need-01,AUTH)</span>  
+<span>Prt(bring-01,need-01)</span>
+
+<span id="probablywant" label="probablywant">\[probablywant\]</span>
+*I’ll **want** to **leave** early*.  
+<span>Prt(want,AUTH)</span>  
+<span>Neut(leave,want)</span>
+
+In [\[mayneed\]](#mayneed), the partial strength deontic *need* is
+embedded within the neutral epistemic modal *may*. In an annotation
+scheme which does not allow nesting, it is not clear whether *bring*
+should be annotated as neutral or partial strength. Here, however, we
+can capture both by annotating *need* as neutral strength depending
+directly on the author, and *bring* as partial strength depending on
+*need*. This is the reason why the complements of modal predicates are
+annotated as children of the modal predicate: by annotating
+<span>leave</span> as dependent on <span>want</span>, we can capture the
+nested modal strengths in an example like
+[\[probablywant\]](#probablywant).
+
+###### Conditionals
+
+Conditional constructions are some of the most complex modal expressions
+and therefore require more specific annotation guidelines. As discussed
+in [4.2](#havecondnode), conditionals require the addition of a
+<span>have-condition</span> node. For hypothetical (i.e., prototypical)
+conditionals, the <span>have-condition</span> node is linked to the
+relevant conceiver with a <span>Neut</span> edge label; the protasis and
+apodosis are linked to the <span>have-condition</span> node with their
+appropriate modal strength. Examples are shown in
+[\[basicconds\]](#basicconds).
+
+<span id="basicconds" label="basicconds">\[basicconds\]</span>
+
+<span id="posposcond" label="posposcond">\[posposcond\]</span> *If it
+**rains**, I’ll **stay** home.*  
+<span>Neut(have-condition,AUTH)</span>  
+<span>Pos(rain,have-condition)</span>  
+<span>Pos(stay,have-condition)</span>
+
+<span id="posneutcond" label="posneutcond">\[posneutcond\]</span> *If it
+**rains**, I **stay** home.*  
+<span>Neut(have-condition,AUTH)</span>  
+<span>Pos(rain,have-condition)</span>  
+<span>Neut(stay,have-condition)</span>
+
+<span id="neutnegcond" label="neutnegcond">\[neutnegcond\]</span> *As
+long as it **rain**, I’ll **go** to school.*  
+<span>Neut(have-condition,AUTH)</span>  
+<span>Neg(rain,have-condition)</span>  
+<span>Prt(go,have-condition)</span>
+
+<span id="multpros" label="multpros">\[multpros\]</span> *If it **rain**
+and if I **find** a ride, I’ll **go** to school and **take** the
+test.*  
+<span>Neut(have-condition,AUTH)</span>  
+<span>Neg(rain,have-condition)</span>  
+<span>Pos(find,have-condition)</span>  
+<span>Prt(go,have-condition)</span>  
+<span>Prt(take,have-condition)</span>
+
+The <span>Neut</span> edge between the <span>have-condition</span> node
+and the relevant conceiver reflects that the events in a conditional are
+presented as only possible, not likely or certain. As mentioned in
+[4.2](#havecondnode), the causal relationship between the events in the
+protasis and apodosis of a conditional is not annotated, just the modal
+strength of each event. The <span>Neut</span> link is annotated between
+the <span>have-condition</span> node and the relevant conceiver because
+it scopes over the events in the protasis and the apodosis; furthermore,
+the events in the protasis and apodosis can contain modals and negation
+whose value is annotated in the link between the
+<span>have-condition</span> node and the event.
+
+The modal strength edge value between an event and the
+<span>have-condition</span> node reflects the event’s modal value within
+the conditional. In [\[posposcond\]](#posposcond), where there’s no
+negation or modals, both events have a <span>Pos</span> relation to the
+<span>have-condition</span> node. In [\[posneutcond\]](#posneutcond),
+the apodosis includes the modal *might* and therefore there is a
+<span>Neut</span> edge between the <span>stay</span> event and the
+<span>have-condition</span> node. Example
+[\[neutnegcond\]](#neutnegcond) has a negative in the protasis and the
+partial strength *probably* in the apodosis. This is annotated with a
+<span>Neg</span> edge between <span>rain</span> and
+<span>have-condition</span> and a <span>Prt</span> edge between
+<span>go</span> and <span>have-condition</span>.
+
+As is shown in [\[multpros\]](#multpros), there may be multiple events
+in the protasis and/or apodosis. All events are linked to the
+<span>have-condition</span> node with the appropriate modal strength
+edge value.
+
+As mentioned in [4.2](#havecondnode), the <span>have-condition</span>
+node is also used for counterfactuals, as in
+[\[counterfactual\]](#counterfactual), and in concessive conditionals,
+as in
+[\[concessive\]](#concessive).
+
+<span id="otherconds" label="otherconds">\[otherconds\]</span>
+
+<span id="counterfactual" label="counterfactual">\[counterfactual\]</span>
+
+*If it had **rained**, I would have **stayed** home.*  
+<span>Neg(have-condition,AUTH)</span>  
+<span>Pos(rain,have-condition)</span>  
+<span>Pos(go,have-condition)</span>  
+<span id="concessive" label="concessive">\[concessive\]</span> *Even if
+it is **raining**, I will **go** to school.*  
+<span>Neut(have-condition,AUTH)</span>  
+<span>Pos(rain,have-concession)</span>  
+<span>Pos(go,have-concession)</span>
+
+The structure of the dependency is the same for counterfactuals and
+concessive conditionals as it is for hypothetical conditionals: that is,
+the events in the protasis and apodosis are children of the
+<span>have-condition</span> node. For counterfactuals, as in
+[\[counterfactual\]](#counterfactual), the edge value between the
+conceiver and the <span>have-condition</span> node is full negative
+(<span>Neg</span>). This is because counterfactuals present the events
+in both the protasis and apodosis as (certaintly) not occurring.
+Concessive conditionals, as in [\[concessive\]](#concessive), are
+annotated with a <span>Neut</span> link between the conceiver and the
+<span>have-condition</span> node.
+
+Like hypothetical conditionals, the events in the protasis and apodosis
+of counterfactuals and concessive conditionals may be negated or
+modalized; there also may be multiple events in the protasis or
+apodosis. These are shown in [\[othercondmods\]](#othercondmods).
+
+<span id="othercondmods" label="othercondmods">\[othercondmods\]</span>
+
+<span id="negneutcond" label="negneutcond">\[negneutcond\]</span> *I
+have **gone** to school, if it **rained** and if I had **woken** up on
+time.*  
+<span>Neg(have-condition,AUTH)</span>  
+<span>Neut(go,have-condition)</span>  
+<span>Neg(rain,have-condition)</span>  
+<span>Pos(wake,have-condition)</span>
+
+<span id="concessivenegneut" label="concessivenegneut">\[concessivenegneut\]</span>
+*Even if it **raining**, I **go** to school.*  
+<span>Neut(have-condition,AUTH)</span>  
+<span>Neg(rain,have-condition)</span>  
+<span>NeutNeg(go,have-condition)</span>
+
+<span>-2.5ex-1ex -.25ex</span><span>1.25ex
+.25ex</span><span>****</span><span>Reporting events</span>
+<span id="reportingevents" label="reportingevents">\[reportingevents\]</span>
+
+Reporting or saying events (e.g., *say, tell, shout, report*) also
+require special guidelines. These types of events, as in
+[\[basicreports\]](#basicreports), express both an event in the
+(author’s) ‘real-world’ and the mental content of the agent of the
+reporting predicate. This means that the agents of reporting predicates
+should be identified as conceivers. The conceiver node represents the
+fact that what a person (or a group of people) says is on some level
+based on their beliefs - either they report their beliefs accurately, or
+they lie, pretend, or otherwise misrepresent their beliefs. Therefore,
+the reporting predicate (like <span>say</span> in
+[\[Marysaid\]](#Marysaid) and <span>report</span> in
+[\[NYTreported\]](#NYTreported)) are annotated as a child of the
+<span>AUTH</span> node; the events that are reported are annotated as
+children of the reporter conceiver node (<span>MARY</span> in
+[\[Marysaid\]](#Marysaid) and <span>NEW\_YORK\_TIMES</span> in
+[\[NYTreported\]](#NYTreported).
+
+<span id="basicreports" label="basicreports">\[basicreports\]</span>
+
+<span id="Marysaid" label="Marysaid">\[Marysaid\]</span> *Mary **said**
+that she **went** to Santa Fe.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(say,AUTH)</span>  
+<span>Pos(go,MARY)</span>
+
+<span id="NYTreported" label="NYTreported">\[NYTreported\]</span> *The
+New York Times **reported** that Congress **voted** on the bill this
+afternoon.*  
+<span>Pos(NEW\_YORK\_TIMES,AUTH)</span>  
+<span>Pos(report,AUTH)</span>  
+<span>Pos(vote,NEW\_YORK\_TIMES)</span>
+
+The annotation of the reporting predicate directly underneath the
+<span>AUTH</span> node represents the fact that the reporting event
+occurs in the real world. The reported events, however, do not
+(necessarily) occur in the real world, but they reflect the mental
+content of the agent of the reporting predicate.
+
+When the author is certain that the reporting event occurs, as in
+[\[Marysaid\]](#Marysaid) and [\[NYTreported\]](#NYTreported), this is
+annotated with a <span>Pos</span> value between the author node and the
+reporting event; this is also annotated in the link between the author
+node and the conceiver node for the agent of the reporting predicate.
+That is, the author’s certainty about the conceiver’s beliefs is based
+on the author’s certainty about the occurrence of the reporting event.
+With reporting events, the author’s evidence for the conceiver’s beliefs
+comes from the reporting event; therefore the edge between the author
+node and the reporting event node and the edge between the author node
+and the reporting conceiver node will always have the same modal value.
+
+For example, in [\[Marysaid\]](#Marysaid), the author is certain that
+the reporting event occurred and therefore the author is certain about
+Mary’s set of of beliefs. Note that this annotation doesn’t capture the
+author’s certainty about the reported events, i.e. in
+[\[Marysaid\]](#Marysaid) the author doesn’t have a perspective on
+whether or not Mary actually went to Santa Fe. This faithfully
+represents the semantics of reporting constructions; the author doesn’t
+express an opinion on the reality of the reported events.
+
+When the author is uncertain about the occurrence of the reporting
+event, this is also reflected in both the edge between the author and
+the reporting predicate and the edge between the author and the
+reporting conceiver; see [\[mightsay\]](#mightsay) and
+[\[notsay\]](#notsay).
+
+<span id="reportsuncertain" label="reportsuncertain">\[reportsuncertain\]</span>
+
+<span id="mightsay" label="mightsay">\[mightsay\]</span>
+
+*Mary have **said** that she **went** to Santa Fe.*  
+<span>Neut(MARY,AUTH)</span>  
+<span>Neut(say,AUTH)</span>  
+<span>Pos(go,MARY)</span>
+
+<span id="notsay" label="notsay">\[notsay\]</span> *Mary **say** that
+she **went** to Santa Fe.*  
+<span>Neg(MARY,AUTH)</span>  
+<span>Neg(say,AUTH)</span>  
+<span>Pos(go,MARY)</span>
+
+In [\[mightsay\]](#mightsay), the neutral modal strength indicated by
+*might* corresponds to both the <span>Neut</span> edge between the
+<span>AUTH</span> and <span>MARY</span> nodes and the <span>Neut</span>
+edge between the <span>AUTH</span> and <span>say</span> nodes. As
+explained above, if the author is uncertain about whether the saying
+event occurs, the author must also be uncertain about Mary’s beliefs (as
+expressed in the saying event). Similarly, if the author believes that
+the saying event did not occur, as in [\[notsay\]](#notsay), there is a
+<span>Neg</span> edge between both the <span>AUTH</span> and
+<span>MARY</span> nodes and between the <span>AUTH</span> and
+<span>say</span> nodes.
+
+Finally, the edge between the reporting event and the reported event(s)
+reflects the modal status of the reported events, as in
+[\[reportnest\]](#reportnest).
+
+<span id="reportnest" label="reportnest">\[reportnest\]</span>
+
+<span id="sayneut" label="sayneut">\[sayneut\]</span> *Mary **said**
+that John have **gone** to Santa Fe.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(say,AUTH)</span>  
+<span>Neut(go,MARY)</span>
+
+<span id="sayprt" label="sayprt">\[sayprt\]</span> *Mary **said** that
+John **go** to Santa Fe.*  
+<span>Pos(MARY,AUTH)</span>  
+<span>Pos(say,AUTH)</span>  
+<span>NegPrt(go,MARY)</span>
+
+In [\[sayneut\]](#sayneut), Mary reports the *go* event with only
+neutral certainty; this is reflected in the edge between the
+<span>say</span> and <span>go</span> events. In [\[sayprt\]](#sayprt),
+Mary reports the *go* event with negative partial certainty; this is
+also reflected in the edge between the <span>say</span> and
+<span>go</span> events.
+
+#### English constructions and lexical items
+
+This list gives the modal strength value associated with common English
+modal constructions (this is certaintly not an exhaustive list). For
+modal predicates that are identified as their own event node (e.g.,
+deontic predicates), the modal strength value characterizes the link
+between the modal predicate node and its child event. For example,
+*want* is in the <span>Neut(ral)</span> list, which indicates that there
+is a <span>Neut</span> link between the <span>want</span> node and its
+complement event node.  
+(full positive)
+
+  - Simple assertions: declarative sentences
+
+  - Certainty: *certainly, be sure, definitely, necessarily*
+
+  - Predictive future: *will,* non-intentional *be going to*
+
+  - Factual predicates: *manage to, finished*
+
+(partial positive)
+
+  - Strong epistemic modals: *must/must have, have to, expect that,
+    deduce*
+
+  - Strong epistemic adverbs/adjectives: *probably/be probable that,
+    likely/be likely that*
+
+  - Strong deontic modals:
+    
+      - Intention: *intend, plan,* intentional *be going to, decide, be
+        slated to*
+    
+      - Obligation: imperative, deontic *must, have to, should, ought
+        to, be required to, need; order to, tell to, demand*
+    
+      - Purpose clauses/purposive event nominals: *(in order) to* VERB,
+        *for* EVENT.NOM
+
+(neutral positive)
+
+  - Weak epistemic modals: *may, might/might have, could have*
+
+  - Weak epistemic adverbs/adjectives: *maybe, possibly/be possible
+    that*
+
+  - Conditionals
+
+  - Hope/Fear: *hope, fear, worry, dread*
+
+  - Weak deontic modals
+    
+      - Desire: *want, prefer, would like to*
+    
+      - Permission: *let, permit, allow*
+
+(neutral negative)
+
+  - Doubt: *doubt, call into question, be dubious that, be skeptical
+    that*
+
+  - Combination of (some) <span>Neut</span> lexical items with negation
+
+(partial negative)
+
+  - Strong negative deontics: *forbid, ban, disallow*
+
+  - Negative imperatives
+
+  - Combination of (some) <span>Prt</span> lexical items with negation
+
+(full negative)
+
+  - Negation: *not, never, no* + noun phrase
+
+  - Negative complement taking predicates that entail that the event
+    didn’t happen: *deny, prevent, prohibit, block, cease, it is
+    impossible that, avoid*
+
+  - Counterfactuals
+
+  - Wishes: *wish*
+
+  
+
+
 
