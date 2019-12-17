@@ -157,6 +157,8 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
      )
 ```
 
+In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is done by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positve from the point of view of the author.
+
 
 ```
 Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
@@ -180,7 +182,9 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
          POS (Auth, s5f/fly-01))
      )
 ```
-
+In the document-level annotation of this sentence, *pardon-01* from the previous sentence is chosen as the
+reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is positive that the *fly-01* 
+event happened.
 
 ```
 Snt6: He will spend the next several days at the medical center there before he returns home with his wife Sherry
@@ -214,6 +218,8 @@ Snt6: He will spend the next several days at the medical center there before he 
   :coref
     same (s1p/person, s6h2 / he)))
 ```
+In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* actually happened according to the author. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in sentence 1. 
+
 
  ```
 Snt7: Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
@@ -232,11 +238,14 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
 
 (s7 / sentence
   :temporal(
-    overlap (s7a/arrest-01, s7r/remission-02))
+    overlap (s7a/arrest-01, s7r/remission-02)
+    after (DCT, s7a/arrest-01))
   :modality
     POS (Auth, s7a/arrest-01)
     POS (Auth, s7r/remission-02)))
 ```
+For Sentence 7, the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-2* happened.
+
 
 ```
 Snt8: Doctors will examine him for signs that the cancer may have come back while he awaiting trial in a Russian jail.
@@ -269,6 +278,8 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
     Same(s7p / person, s8h/he))) 
 ```
 
+The *examine-01* event will happen after the DCT. According to the author, the *examine-01* event definitely happened.
+The author is neutral about whether the cancer has come back. *he* is annotated as being the same person as Alexander Pope.
 ```
 Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
 (s / say-01
