@@ -96,7 +96,11 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
              )
      )
 ```
-<!-- should annotate coreference for nominals?-->
+<!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
+
+For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
+happened *last week*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
+*sentence* event definitely happened. 
 
 
 ```
@@ -119,6 +123,15 @@ Snt3: He denied any wrongdoing.
             NEG (s3h/he, s3d2/do-02)
      )
 ```
+
+For this sentence, the coreference annotation indicates that *he* is the same person as *Alexander Pope* mentioned in
+Sentence 1. 
+
+The temporal annotation indicates that the document creation time is after his denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear the denying event happened before or after the conviction and sentencing events, so the reference time is determined to be the document creation time.
+
+The modal relation indicates that the denying event definitely happened according to the author, and wrongdoing did not happen according to Alexander Pope, based on the author's account.
+
+
 
 ```
 Snt4: Russian President Vladimir Putin pardoned him for health reasons.
