@@ -10,8 +10,8 @@
 * Part 1. Introduction
 * Part 2. Sentence-Level Representation
     * Part 2-1. UMR Concepts
-      * Part 2-1-1. Named Entities
-      * Part 2-1-2. Multiple Word Expressions as a single concept
+      * Part 2-1-1. Named entities
+      * Part 2-1-2. Multiple-Word concepts
       * Part 2-1-3. Multi-concept words
       * Part 2-1-4. Word senses
     * Part 2-2. UMR relations 
@@ -58,7 +58,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
      )
         
 ```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in Section  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in Section 3-2.  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
 
 The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant that indicates that the *taste-01* event definitely happened, and is thus positive (as indicated by the *POS* label) from the author's perspective.
 
@@ -92,10 +92,12 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
            )
     :modality(
       POS (Auth, s2c4/convict-01)
-       POS (Auth, s2s/sentence-01)
+      POS (Auth, s2s/sentence-01)
              )
      )
 ```
+<!-- should annotate coreference for nominals?-->
+
 
 ```
 Snt3: He denied any wrongdoing.
