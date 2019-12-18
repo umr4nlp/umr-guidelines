@@ -299,11 +299,11 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
    after (DCT, s9s/say-01)
    overlap (s9s/say-01, s9s3/suffer-01))
  :Modality
-   (POS (Auth, s9s/say-01)
+   POS (Auth, s9s/say-01)
    POS (Auth, s9p3/person)
    POS (s9p3/person, s9s3/suffer-01)))
  ```
-
+The document-level representation indicates the *say-01* event happened before the *say-01* event, and the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
 
 
 
