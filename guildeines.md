@@ -315,11 +315,51 @@ The document-level representation indicates the *say-01* event happened before t
 
 ## Part 2. Sentence-Level Representation
 
-### Part 2-1. Predicate Argument Structure
-### Part 2-2. Aspect
-### Part 2-3. Quantification
-### Part 2-4. Named Entities
-### Part 2-5. Multiple Word Expressions
+### Part 2-1. UMR Concepts
+ #### Part 2-1-1. Named entities
+ 
+So when we are forced to hallucinate an entity type, AMR requires us to draw from this canonical list (borrowing from information extraction and question answering):
+
+person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement
+organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league
+
+[commerical_org (company), political_org (political-party), government_org (government_organization), military_org (military), criminal_org (criminal-organization), academic_org (school, university, research-institute), sports_org (team, league), market_sector]
+
+location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation
+
+[ge (ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest), celestial-body (moon, planet, star, constellation), region (local-region, country-region, world-region), gpe (city, city-district, county, state, province, territory, country)] (landforms and water forms?)
+
+facility, airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park
+[facility] (transportation, entertainment, sacred places?)
+
+event, incident, natural-disaster, earthquake, war, conference, game, festival
+[incident (natural-disaster, earthquake, war), organized_event (conference, game, festival)]
+
+product, vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program
+[product]
+
+publication, book, newspaper, magazine, journal
+[publication]
+
+Natural-object
+[natural-object]
+
+award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program
+
+Biomedical:
+molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid
+
+pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition
+
+ #### Part 2-1-2. Multiple-Word concepts
+ #### Part 2-1-3. Multi-concept words
+ #### Part 2-1-4. Word senses
+### Part 2-2. UMR relations 
+   #### Predicate Argument Structure
+### Part 2-3. UMR features
+   #### Aspect
+### Part 2-4. Quantification, negation
+
 
 ## Part 3. Document-Level Representation
 ### Part 3-1. Coreference
