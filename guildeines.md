@@ -328,39 +328,29 @@ Edmond Pope is an American businessman.
             :name (n6 / name :op1 "America"))
       :domain (p / person :wiki "Edmond_Pope"
             :name (n5 / name :op1 "Pope")))                   
- ```        
- 
+```        
+The total set of entity types are hierarchically organized 
 
-person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement
-organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league
 
-[commerical_org (company), political_org (political-party), government_org (government_organization), military_org (military), criminal_org (criminal-organization), academic_org (school, university, research-institute), sports_org (team, league), market_sector]
 
-location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation
+<!--organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league-->
+<!--location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation, (landforms and water forms?)-->
 
-[ge (ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest), celestial-body (moon, planet, star, constellation), region (local-region, country-region, world-region), gpe (city, city-district, county, state, province, territory, country)] (landforms and water forms?)
 
-facility, airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park
-[facility] (transportation, entertainment, sacred places?)
-
-event, incident, natural-disaster, earthquake, war, conference, game, festival
-[incident (natural-disaster, earthquake, war), organized_event (conference, game, festival)]
-
-product, vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program
-[product]
-
-publication, book, newspaper, magazine, journal
-[publication]
-
-Natural-object
-[natural-object]
-
-award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program
-
-Biomedical:
-molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid
-
-pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition
+|Type   |  Subtype (AMR NE Type) |
+|-------|------------------------|
+|       |person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement|
+|Organization | commerical_org (company), political_org (political-party), government_org (government_organization), military_org (military), criminal_org (criminal-organization), academic_org (school, university, research-institute), sports_org (team, league), market-sector|
+|       | Geographic-entity (ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest)|
+|       |Celestial-body (moon, planet, star, constellation), region (local-region, country-region, world-region)|
+|       |GPE (city, city-district, county, state, province, territory, country)| 
+|       |facility (airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park)|
+|       |event  (incident, natural-disaster, earthquake, war, conference, game, festival)|
+|       |product (vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program)|
+|       |publication (book, newspaper, magazine, journal)|
+|       |Natural-object|
+|        |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
+|        |Biomedical-entity (molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition)|
 
  #### Part 2-1-2. Multiple-Word concepts
  #### Part 2-1-3. Multi-concept words
