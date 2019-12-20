@@ -329,8 +329,6 @@ Edmond Pope is an American businessman.
             :name (n5 / name :op1 "Pope")))                   
  ```        
  
- 
-So when we are forced to hallucinate an entity type, AMR requires us to draw from this canonical list (borrowing from information extraction and question answering):
 
 person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement
 organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league
@@ -375,7 +373,11 @@ pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-c
 
 ## Part 3. Document-Level Representation
 ### Part 3-1. Coreference
+Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity that is self-identifiable without additional context, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is identifying the most relevant types of coreference the UMR framework.
+
+
 ### Part 3-2. Temporal Dependency
+
 ### Part 3-3. Modal Dependency
 
 The modal annotation takes the form of dependency structures: each event receives an annotation
