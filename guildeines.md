@@ -93,6 +93,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
     :modality(
       POS (Auth, s2c4/convict-01)
       POS (Auth, s2s/sentence-01)
+      POS (Auth, s2s2 / spy-01)
              )
      )
 ```
