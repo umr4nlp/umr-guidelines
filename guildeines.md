@@ -318,6 +318,18 @@ The document-level representation indicates the *say-01* event happened before t
 ### Part 2-1. UMR Concepts
  #### Part 2-1-1. Named entities
  
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. The following is an example that has a *country* entity and a *person* entity. 
+
+```                    
+Edmond Pope is an American businessman.
+(b2 / businessman
+      :mod (c5 / country :wiki "United_States"
+            :name (n6 / name :op1 "America"))
+      :domain (p / person :wiki "Edmond_Pope"
+            :name (n5 / name :op1 "Pope")))                   
+ ```        
+ 
+ 
 So when we are forced to hallucinate an entity type, AMR requires us to draw from this canonical list (borrowing from information extraction and question answering):
 
 person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement
