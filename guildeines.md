@@ -405,8 +405,26 @@ Snt3: He denied any wrongdoing.
 
 Subset relation:
 
-
-
+```
+# ::snt He is very possesive and controlling but he has no right to be as we are not together.
+(c / contrast-01
+      :ARG1 (a / and
+            :op1 (p / possessive-03
+                  :ARG0 (h2 / he)
+                  :degree (v2 / very))
+            :op2 (c3 / control-01
+                  :ARG0 h2
+                  :degree (v / very)))
+      :ARG2 (r / right-05 :polarity -
+            :ARG1 h2
+            :ARG2 a
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (t / together
+                        :domain (w / we)))))
+(s / sentence
+  :coref (subset (s4h2, s4w)
+          subset (AUTH, s4w)))
+```
 
 ### Part 3-2. Temporal Dependency
 
