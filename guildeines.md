@@ -364,7 +364,48 @@ The total set of entity types are hierarchically organized
 
 ## Part 3. Document-Level Representation
 ### Part 3-1. Coreference
-Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity that is self-identifiable without additional context, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is identifying the most relevant types of coreference the UMR framework.
+Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
+
+For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In the example below, *he* refers to the same person as the person whose name is "Edmond Pope":
+
+```
+Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
+
+(t2 / taste-01
+  :ARG0 (p / person :wiki "Edmond_Pope"
+         :name (n2 / name :op1 "Edmund" :op2 "Pope"))
+  :ARG1 (f / free-04
+         :ARG1 p)
+  :time (t3 / today)
+  :ord (o3 / ordinal-entity :value 1
+        :range (m / more-than
+                :op1 (t / temporal-quantity :quant 8
+                    :unit (m2 / month)))))
+
+
+Snt3: He denied any wrongdoing.
+(d / deny-01
+      :ARG0 (h / he)
+      :ARG1 (t / thing
+            :ARG1-of (d2 / do-02
+                  :ARG0 h
+                  :ARG1-of (w / wrong-02))))
+  
+(s3 / sentence
+    :coref(
+           same (s1p/person, s3h/he))
+    :temporal(
+            after (DCT, s3d/deny-01))
+    :modality(
+            POS (Auth, s3d/deny-01))
+            POS (Auth, s3h/he)
+            NEG (s3h/he, s3d2/do-02)
+     )
+```
+
+Subset relation:
+
+
 
 
 ### Part 3-2. Temporal Dependency
