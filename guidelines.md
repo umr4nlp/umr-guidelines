@@ -11,7 +11,7 @@
 * Part 2. Sentence-Level Representation
     * Part 2-1. UMR Concepts
       * Part 2-1-1. Named entities
-      * Part 2-1-2. Multiple-Word concepts
+      * Part 2-1-2. Multiple-word concepts
       * Part 2-1-3. Multi-concept words
       * Part 2-1-4. Word senses
     * Part 2-2. UMR relations 
