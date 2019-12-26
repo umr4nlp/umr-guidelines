@@ -428,6 +428,364 @@ Subset relation:
 
 ### Part 3-2. Temporal Dependency
 
+The temporal dependency is divided into two passes: the first pass involves setting up the temporal
+superstructure – the top levels of the dependency structure and the fourth
+pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined meta nodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
+
+#### Temporal superstructure
+
+The highest level of the temporal
+dependency is always a single <span>ROOT</span> node. The temporal
+superstructure consists of two types of nodes: time expressions and
+pre-defined metanodes. For now at least, <span>Temp</span> is the
+relation that is used to link all nodes in the superstructure.
+
+##### Pre-defined metanodes
+
+The first type of node in the temporal superstructure are the
+pre-defined metanodes: <span>Past\_Ref, Present\_Ref,
+Future\_Ref</span>, and <span>DCT</span> (document creation time).
+Unlike time expressions, the pre-defined metanodes don’t correspond to
+linguistic material in the text. All four of the pre-defined metanodes
+should be added at the top of every temporal dependency structure.
+Whether or not they are actually used in the annotation will be
+determined when events are annotated in the next pass. As mentioned
+above, there is a generic <span>Temp</span> relation between all nodes
+in the temporal superstructure; this is shown in Figure
+[\[tempsuper\]](#tempsuper).
+
+##### Time expressions
+
+The other type of node in the temporal superstructure are time
+expressions. Time expressions are broken down into a taxonomy that
+determines their representation in the temporal superstructure (see
+Table 1 in Zhang & Xue (2018), reproduced here in Table
+[\[timex-taxonomy\]](#timex-taxonomy)).
+
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span><strong>Examples</strong></span></th>
+<th style="text-align: center;"><span><strong>Possible Reference Times</strong></span></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Locatable</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Absolute</td>
+<td style="text-align: center;">May 2015</td>
+<td style="text-align: center;">ROOT</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p>Time</p></td>
+<td style="text-align: center;">Time</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Relative</td>
+<td style="text-align: center;">today, two days later</td>
+<td style="text-align: center;">DCT, another Concrete</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><p>Expressions</p></td>
+<td style="text-align: center;">Expressions</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">nowadays</td>
+<td style="text-align: center;">Present/Past/Future_Ref</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">every month</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+First, time expressions are distinguished based on whether they are
+locatable on a timeline or not. Unlocatable time expressions are time
+expressions which refer to the duration (*for three hours*) or
+quantification (*every day*) of an event. Unlocatable time expressions
+are not represented in the temporal dependency structure at any level.
+
+<!-- (they do influence the aspect annotation; see §[3](#aspectannotation)) -->
+
+All locatable time expressions are represented in the temporal
+superstructure. Locatable time expressions are divided between concrete
+and vague time expressions. Vague time expressions (e.g. *nowadays, in
+the old days*) are represented as the children of <span>Present\_Ref,
+Past\_Ref,</span> or <span>Future\_Ref</span>. Concrete time expressions
+are divided into relative and absolute time expressions. Relative
+concrete time expressions (*yesterday, the week before*) are represented
+as the children of either <span>DCT</span> (as in *yesterday*) or
+another concrete time expression on which they depend for their
+interpretation (as in *the week before*). Finally, absolute concrete
+time expressions (*in 2019*) are represented as children of
+<span>ROOT</span>.
+
+##### Key events
+
+For news stories only, the temporal superstructure includes the “key
+event” in the text. The key event is the main event around which the
+news story is centered. It is often mentioned in the title or first
+sentence of the news story and referred to many times in the text. The
+key event should be added to the superstructure, with a relation to the
+timex which most specifically locates it in time.
+
+#### Temporal relations
+
+The second pass in the temporal annotation involves placing events on to the
+temporal dependency structure based on their temporal relations with
+other events and time expressions. Unlike the modal dependency structure
+which includes all of the events identified in the first pass, the
+temporal dependency structure only includes events whose aspect
+annotation is NOT <span>State</span>. That is, events annotated with the
+aspect value <span>State</span> are not annotated for temporal location.
+This is because states, by definition, don’t involve change; therefore,
+they generally cannot be located on a timeline in the same way as
+non-stative events.
+
+Each (non-stative) event will be annotated as the child of either a time
+expression in the superstructure or another event (or both). The set of
+temporal relations are shown below. Note that the labels characterize
+the relation from child to parent.
+
+> <span>Contained</span>: child is entirely contained within the parent;
+> parent begins before child and parent ends after child (Note: this is
+> called ‘Includes’ in Zhang & Xue 2018)  
+> <span>After</span>: child is after parent  
+> <span>Before</span>: child is before parent  
+> <span>Overlap</span>: child and parent overlap (either partially or
+> fully)  
+
+The goal of this temporal annotation scheme is to give each event the
+most precise temporal location possible. We also want to avoid adding
+annotations which do not give any additional information (i.e., the
+relation falls out logically from the other annotations). Annotators
+should proceed through the steps below for each event until it has at
+least one temporal annotation.
+
+1.  The most specific location for any event will be a
+    <span>Contained</span> relation to a timex (although see the
+    exception below). If possible, link the event to a time expression
+    (timex). This can be any timex in the superstructure, but most of
+    the time it will be in the same clause as the event. If the event
+    cannot be related to a timex, proceed to 2. If the event is related
+    to a timex, proceed to 3.
+    
+      - **Exception:** The only scenario in which an event, which has a clear temporal
+        relation with a timex, doesn’t need to have this relation
+        annotated is when the relation logically falls out from other
+        annotations. This is the case when an event is a subevent of an
+        event that is <span>Contained</span> in a timex. That is, if
+        event A is <span>Contained</span> within event B (i.e., a
+        subevent) and event B is <span>Contained</span> within a timex,
+        then logically, event A must also be <span>Contained</span>
+        within the timex and therefore this relation doesn’t need to be
+        annotated.
+
+2.  If the event can’t be linked to a timex, then try to link it to
+    another event in text. Starting with the immediately preceding event
+    in the text and working back through the events in the same sentence
+    and the preceding sentence, find an event that is a good parent. If
+    there is not a good parent in the same sentence or immediately
+    preceding sentence, then proceed to 4. An event is considered a good
+    parent if:
+    
+      - It has a clear temporal relation to the child event AND
+    
+      - It has a <span>Pos</span> relation to the same conceiver as the
+        child event OR
+    
+      - It has the same modal relation to the same conceiver/event as
+        the child event OR
+    
+      - It is either the parent or the child of the event in the modal
+        dependency.
+    
+      - **Exception:** With reporting constructions, the reporting event
+        and reported events can be linked in the temporal dependency
+        (even though they are not linked in the modal dependency).
+
+3.  Even if the event can be related to a timex, its temporal location
+    may be made more precise by specifying a second relation to an
+    event. Only add an event-event relation if it makes the temporal
+    location of the child event more specific. In practice, this means
+    that events which are <span>Contained</span> within a timex will
+    only be related to events <span>Contained</span> within the same
+    timex or events which are not contained within any timex. (That is,
+    two events <span>Contained</span> within different timexs should not
+    be related to each other.) Aside from that, follow the same rules as
+    in 2 for selecting a good parent event.
+
+4.  If an event cannot be related to either a timex or another event,
+    then relate it to the key event in the text, if there is one.
+
+5.  If an event cannot be related to a timex, another event, or the key
+    event, then link it to a tense metanode.
+
+In order to demonstrate how these rules work, let’s look at the
+annotation of ([\[leriassaid\]](#leriassaid)) below.
+
+<span id="leriassaid" label="leriassaid">\[leriassaid\]</span> *Lerias
+**said** that many Guinsaugon residents had been **evacuated** after
+**landslides** had **killed** more than 20 people on Leyte, but that
+many had **returned** because the **rains** had **stopped** and the sun
+had **come out**.*  
+Key event: landslide\_KEY
+
+| Events    | Modal annotation      | Temporal annotation |
+| :-------- | :-------------------- | :------------------ |
+| say       | Pos(say,AUTH)         |                     |
+| evacuate  | Pos(evacuate,LERIAS)  |                     |
+| landslide | Pos(landslide,LERIAS) |                     |
+| kill      | Pos(kill,LERIAS)      |                     |
+| return    | Pos(return,LERIAS)    |                     |
+| rain      | Pos(rain,LERIAS)      |                     |
+| stop      | Pos(stop,LERIAS)      |                     |
+| come-out  | Pos(come-out,LERIAS)  |                     |
+
+For <span>say</span>, it does not have a <span>Contained</span> relation
+with either of the time expressions in the example, so we move to step
+2. It’s also the first event in the sentence, so (assuming it can’t be
+linked to any of the events in the previous sentence), we move to step
+4. We do know that <span>say</span> occurred after the key event in the
+text, therefore we can add <span>After(say,landslide\_KEY)</span> and
+move on to the next event.
+
+<span>Evacuate</span> is not necessarily <span>Contained</span> within
+either of the timexs, so we move to step 2. Since <span>evacuate</span>
+is a reported event, the reporting event, <span>say</span>, is an
+appropriate parent in the temporal dependency; we can add
+<span>Before(evacuate,say).</span>
+
+Next, we have <span>landslide</span>. Following step 1,
+<span>landslide</span> is <span>Contained</span> within the timex
+*earlier in the week*, so we add
+<span>Contained(landslide,earlier\_week)</span>. Then, we move to step 3
+and see if the temporal location of <span>landslide</span> can be made
+more specific by adding an event relation. The immediately preceding
+event in the text, <span>evacuate</span>, has a clear temporal relation
+and the same modal annotation as <span>landslide</span> and is therefore
+a good parent. We can add <span>Before(landslide,evacuate)</span>.
+
+Then, we move on to <span>kill</span>. Like <span>landslide</span>,
+<span>kill</span> is <span>Contained</span> within the timex *earlier in
+the week*, so we can add <span>Contained(kill,earlier\_week)</span>.
+Then we move to step 3 and can add a relation to <span>landslide</span>:
+<span>Overlap(kill,landslide)</span>.
+
+<span>Return</span> can be linked to the timex *Friday*:
+<span>Contained(return,Friday)</span>. Moving to step 3, we look earlier
+in the sentence for a parent event. Both <span>kill</span> and
+<span>landslide</span> are Contained within a different timex, so they
+don’t make good parents. That is, by virtue of the fact that
+<span>return</span> is <span>Contained</span> on *Friday* and
+<span>kill</span> and <span>landslide</span> are <span>Contained</span>
+in *earlier in the week*, it logically falls out that
+<span>return</span> happened after both <span>kill</span> and
+<span>landslide</span>; therefore, we don’t need to annotate this
+relation. <span>Evacuate</span>, however, is not <span>Contained</span>
+within a timex and has the same modal annotation as <span>return</span>;
+so, we can add <span>After(return,evacuate)</span>.
+
+<span>Rain</span> does not have a <span>Contained</span> relation with a
+timex, so we move to step 2. <span>Return</span> makes a good parent for
+<span>rain</span> since it has the same modal annotation, so we can
+add  
+<span>Before(rain,return)</span>.
+
+<span>Stop</span> also does not have a <span>Contained</span> relation
+with a timex. The preceding event, <span>rain</span>, makes a good
+parent, since it has the same modal annotation; we can add
+<span>Overlap(stop,rain)</span>.
+
+Finally, <span>come-out</span> also does not have a
+<span>Contained</span> relation with a timex. <span>Stop</span> makes a
+good parent, since it has the same modal annotation, so we can add
+<span>Overlap(come-out,stop)</span>. This gives us the full annotation
+below.
+
+| Events    | Modal annotation   | Temporal annotation                |
+| :-------- | :----------------- | :--------------------------------- |
+| say       | Pos(say,LERIAS)    | After(say,landslide\_KEY)          |
+| evacuate  | Pos(evacuate,say)  | Before(evacuate, say)              |
+| landslide | Pos(landslide,say) | Contained(landslide,earlier\_week) |
+|           |                    | Before(landslide,evacuate)         |
+| kill      | Pos(kill,say)      | Contained(kill,earlier\_week)      |
+|           |                    | Overlap(kill,landslide)            |
+| return    | Pos(return,say)    | Contained(return,Friday)           |
+|           |                    | After(return,evacuate)             |
+| rain      | Pos(rain,say)      | Before(rain,return)                |
+| stop      | Pos(stop,say)      | Overlap(stop,rain)                 |
+| come-out  | Pos(come-out,say)  | Overlap(come-out,stop)             |
+
+##### Contained or Overlap
+
+Following the definition of the <span>Contained</span> and the
+<span>Overlap</span> relations, <span>Overlap</span> must be used rather
+than <span>Contained</span> for events that are perfectly simultaneous
+(beginning and ending at the exact same time point). The
+<span>Contained</span> relation will instead be used for all relations
+where both the beginning and ending of one event are included within the
+temporal duration of a second event - this includes subevent structure
+and also events which have a purely temporal (and not causal or
+conceptual) relation between them.
+
+##### Causally related events
+
+Causal relations between events are always annotated as
+<span>After</span> relations. This means that in examples such as *the
+crops grew well because it rained enough*, <span>After(grow,rain)</span>
+is annotated even though the causing event (raining) and the caused
+event (growing) partly overlap. If the causal relationship is explicitly
+predicated, it is identified as a separate event. It is then annotated
+as <span>After</span> the causing event, and the caused event is
+annotated as following it. Therefore, *the opening of the food can
+prompted my cat to meow* is annotated as <span>After(prompt,open)</span>
+and <span>After(meow,prompt)</span>.
+
+##### Deontic modal events
+
+For deontics and purpose clauses, the deontic or purpose complement
+(e.g., *go* in *Mary wants to go*) is annotated with with an
+<span>After</span> relation to the deontic predicate (here, *want*).
+This is important because it makes sure that events can be interpreted
+as deontically modalized - the modal annotation scheme itself does not
+provide for this.
+
+
+
+
+
+<!-- 1.  The term “event” is used throughout these guidelines as a
+    superordinate category subsuming processes and states, as is
+    customary in the cognitive linguistic tradition. The more specific
+    category of telic processes (which is also often called “event” in
+    the formal semantics literature), we will refer to as “performance”
+    (see §[3](#aspectannotation)). 2.  We are considering using the <span>NA</span> value for non-real
+    events as well, but for now, these types of events should receive
+    one of the other aspect values. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Part 3-3. Modal Dependency
 
 The modal annotation takes the form of dependency structures: each event receives an annotation
