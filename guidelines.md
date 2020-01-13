@@ -12,13 +12,13 @@
     * Part 2-1. UMR Concepts
       * Part 2-1-1. Named entities
       * Part 2-1-2. Multiple-word concepts
-      * Part 2-1-3. Multi-concept words
+      * Part 2-1-3. Multi-concept words (Bill, Andy, James, Martha (reader))
       * Part 2-1-4. Word senses
     * Part 2-2. UMR relations 
-      * Predicate Argument Structure
-    * Part 2-3. UMR features
-      * Aspect
-    * Part 2-4. Quantification, negation
+      * Predicate Argument Structure (Bill and Martha)
+    * Part 2-3. UMR features 
+      * Aspect (could potentially become concepts?)
+    * Part 2-4. Quantification, negation (James)
 * Part 3. Document-Level Representation
     * Part 3-1. Coreference
     * Part 3-2. Temporal Dependency
