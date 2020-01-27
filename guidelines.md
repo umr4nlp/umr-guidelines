@@ -10,9 +10,9 @@
 * Part 1. Introduction
 * Part 2. Sentence-Level Representation
     * Part 2-1. UMR Concepts
-      * Part 2-1-1. Named entities 
-      * Part 2-1-2. Multiple-word concepts 
-      * Part 2-1-3. Multi-concept words (Bill, Andy, James, Martha (reader))
+      * Part 2-1-1. Named entities  (Bert, Andy)
+      * Part 2-1-2. Multiple-word concepts [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
+      * Part 2-1-3. Multi-concept words (Bill, Andy, James, Martha (reader))[reflexives,causatives, inchoatives, noun incorporation
       * Part 2-1-4. Word senses
     * Part 2-2. UMR relations 
       * Predicate Argument Structure (Bill and Martha)
@@ -21,7 +21,7 @@
     * Part 2-4. Quantification, negation (James)
 * Part 3. Document-Level Representation
     * Part 3-1. Coreference (Jayeol, Bert) [Should this include event coreference?]
-    * Part 3-2. Temporal Dependency
+    * Part 3-2. Temporal Dependency (Bert)
     * Part 3-3. Modality Dependency (Meagan, Bill)
 
 ##  Part 1. Introduction
