@@ -10,8 +10,8 @@
 * Part 1. Introduction
 * Part 2. Sentence-Level Representation
     * Part 2-1. UMR Concepts
-      * Part 2-1-1. Named entities
-      * Part 2-1-2. Multiple-word concepts
+      * Part 2-1-1. Named entities 
+      * Part 2-1-2. Multiple-word concepts 
       * Part 2-1-3. Multi-concept words (Bill, Andy, James, Martha (reader))
       * Part 2-1-4. Word senses
     * Part 2-2. UMR relations 
@@ -20,9 +20,9 @@
       * Aspect (could potentially become concepts?)
     * Part 2-4. Quantification, negation (James)
 * Part 3. Document-Level Representation
-    * Part 3-1. Coreference
+    * Part 3-1. Coreference (Jayeol, Bert) [Should this include event coreference?]
     * Part 3-2. Temporal Dependency
-    * Part 3-3. Modality Dependency
+    * Part 3-3. Modality Dependency (Meagan, Bill)
 
 ##  Part 1. Introduction
 
@@ -364,6 +364,8 @@ The total set of entity types are hierarchically organized
 
 ## Part 3. Document-Level Representation
 ### Part 3-1. Coreference
+
+
 Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
 
 For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In the example below, *he* refers to the same person as the person whose name is "Edmond Pope":
@@ -425,6 +427,8 @@ Subset relation:
   :coref (subset (s4h2, s4w)
           subset (AUTH, s4w)))
 ```
+
+
 
 ### Part 3-2. Temporal Dependency
 
