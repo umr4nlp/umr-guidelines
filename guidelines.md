@@ -23,6 +23,7 @@
     * Part 3-1. Coreference (Jayeol, Bert) [Should this include event coreference?]
     * Part 3-2. Temporal Dependency (Bert)
     * Part 3-3. Modality Dependency (Meagan, Bill)
+* Integrated examples
 
 ##  Part 1. Introduction
 
@@ -428,6 +429,17 @@ Subset relation:
   :coref (subset (s4h2, s4w)
           subset (AUTH, s4w)))
 ```
+
+#### Event coreference
+Event / subevent
+ ** Meanwhile, Greek authorities announced that they have made two arrests in the case. The first, a 65-year-old man, was reportedly seen torching trees across southern Peloponnese. The second person arrested and charged was a 77-year-old woman who reportedly was seen starting a fire while cooking outside in Zaharo.
+ Script / subevent?
+** Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
+ Alternative reference
+**	The Three Gorges project on the Yangtze River has recently introduced the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit provided to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
+ Event identity
+**	On Wednesday, two arrests were announced. "We have arrested two people and have detained several more for questioning," said Vasundhara Raje. "
+
 
 
 
@@ -1990,6 +2002,141 @@ complement event node.
   - Wishes: *wish*
 
   
+  
+ ## Part 4: Integrated examples
 
+PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
+
+```
+\ref	CrowCh(o).096
+\tx	"wohei,"	hee3oohok	nuhu'	3ii'okuni3i,	"nooxohowu',
+\mb	wohei		hee3oohok	nuhu'	3ii'oku -ni3i	nooxoh -owu'
+\ge	okay		said.to.s.o.	this	IC.sit -4PL	dig.hole.with.tool -2PL.IMPER
+\ps	part		vta.3s/4	det	vai -infl	vti -infl
+			Hee3- ‘say s.t. to s.o.’ (verb, di-transitive)
+			ARG 0 = [Crow Chief] [not overt in sentence]
+			ARG 1 = [those sitting there]
+			ARG 2 = [wohei/okay] + [dig for them, dig for them]
+			Nooxoh- ‘dig for s.t. with a tool’ (verb, transitive)
+			ARG 0 = [those sitting there]
+			ARG 1 = [bullets] [not overt in sentence]
+
+\tx	nooxohowu'!
+\mb	nooxoh -owu'
+\ge	dig.hole.with.tool -2PL.IMPER
+\ps	vti -infl
+\ft	"Wohei, the Crow Chief said to the ones sitting there, "dig for them, dig for them!"
+
+(h / hee3-01
+   :Arg0 (p / person :ref "3sg")
+   :Arg1 (p2 / person :ref "4pl"
+             :mod (n2 / nuhu')
+             :Arg0-of (x / 3ii'oku))
+   :Arg2 (n / nooxoh-01 :mode imperative
+              :Arg0 p2
+             :Arg1 (t / thing)
+             :discmark (w / wohei))
+    :time (b/before :op (n/now)))
+
+\ref	CrowCh(o).097
+\tx	bii'inowuneehek,	neihoowneh'e'.
+\mb	bii'in -owunee	-hek	neihoow- neh' -e'
+\ge	find.s.t. -2PL	-SUBJ	1.NEG- kill -3/1
+\ps	vti -infl	-infl		infl.pref- vta -infl
+\ft	"If you find [the bullets], he does not kill me."
+	Bii’in- ‘find s.t.’ (verb, transitive)
+	ARG 0 = [you]
+	ARG 1 = [bullets] [not overt in sentence]
+	Neh’- ‘kill s.o.’ (verb, transitive)
+	ARG 0 = [he]
+	ARG 1 = [me]
+(n/neh’ 
+   :Arg0 (p / person :ref “3sg”)
+   :Arg1 (p2/person :ref “1sg”)
+   :polarity –
+   :condition (b/ Bii’in
+                         :Arg0 (p3 /person :ref “2pl”)
+                         :Arg1 (t/thing ))
+\ref	CrowCh(o).098
+\tx	ciibii'inowuneehek,	noh	ne'neh'einoo."
+\mb	cii- bii'in -owunee	-hek	noh	ne'- neh' -einoo
+\ge	NEG- find.s.t. -2PL	-SUBJ	and	then- kill -3S/1S
+\ps	pref- vti -infl	-infl	part	pref- vta -infl
+\ft	"If you don't find them, then he kills me."
+	SAME ARG STRUCTURE AS PRECEDING
+(n/neh’ 
+   :Arg0 (p / person :ref “3sg”)
+   :Arg1 (p2/person :ref “1sg”)
+   :condition (b/ Bii’in
+                         :polarity –
+                         :Arg0 (p3 /person :ref “2pl”)
+                         :Arg1 (t/thing ))
+
+\ref	CrowCh(o).099
+\tx	wo'oe'onoun	he'ih'iinooxoheino'.
+\mb	wo'oe'onoun	he'ih'ii- nooxohei -no'
+\ge	on.and.on	NARRPAST.IMPERF- dig.holes -pers.PL
+\ps	part		pref- vai.o -infl
+\ft	On and on they were digging (for them).
+			Nooxohei- ‘dig, dig for s.t. unspecified’ (verb, intransitive)
+			ARG 0 = [the ones sitting there] [not overt in sentence]
+ 			ARG 1 (implied only) = [the bullets] [not overt in sentence, and
+ 				verb is syntactically/grammatically intransitive, though
+ 				semantically transitive]
+
+(n/nooxohei
+   :Arg0 (p/person :ref “3pl”)
+   :Arg1 (t /thing)
+   :manner (w / wo'oe'onoun)
+   :time (b/before :op (n/now)))
+
+    
+\ref	CrowCh(o).100
+\tx	he'ihnooko'wuuteen.
+\mb	he'ih- nooko'wuutee-  ni
+\ge	NARRPAST- white.streak.in/on.ground
+\ps	pref- vii- OS.OBV
+\ft	The ground had a white mark/streak in it.
+	Nooko’wuutee- ‘there is a white mark in the ground’ or ‘the ground is marked white’ (verb, intransitive)
+	ARG 0 = [the ground] (incorporated into the verb)
+
+(w / nooko'wuutee
+       :Arg0 (t /thing)
+       :time (b/before :op (n/now)))
+
+\ref	CrowCh(o).101
+\tx	niisootoxuuus	ne'no'uxoo';		nooxoheino'.
+\mb	niisootox- uuus	ne'- no'uxoo -'		nooxohei -no'
+\ge	seven- days	then- arrive -0S		dig.holes -pers.PL
+\ps	pref- ni.pl	pref- vai+aff -infl	vai.o -infl
+\ft	For seven days they are digging (for them).
+			No’uxoo- ‘a certain time arrives, comes’ (verb, intransitive)
+			ARG 0 = [(end of) seven days]
+			Nooxohei- ‘dig for s.t. unspecified’ (verb, intransitive)
+			SEE ARG STRUCTURE ABOVE
+(a/and 
+   : op1 ( n /No’uxoo
+                   :Arg0 (n2 /  niisootoxuuus)
+                   :time (b/before :op1 (n /now)))
+   :op2  (n2/ nooxohei
+                  :Arg0 (p/person :ref “3pl”)
+                  :Arg1 (t /thing)))
+
+
+\ref	CrowCh(o).102
+\tx	hoo3ontii3i';
+\mb	hoo3ontii -3i'
+\ge	fail.to.do.s.t. -3PL
+\ps	vai.t -infl
+\ft	They failed to find them;
+	Hoo3ontii- ‘fail to do s.t.’ (verb, intransitive)
+	ARG 0 = [the ones sitting there] [not overt in the sentence]
+	ARG 1 (implied only) = [find the bullets by digging] [not overt in the sentence, and the verb is syntactically/grammatically intransitive, though semantically transitive]
+   (h/ hoo3ontii
+       :Arg0 (p  /person :ref “3pl”)
+       :time (b /before :op (n /now)))
+
+```
+The above segment illustrates many of the issues with Arapaho: lack of overt noun phrases in a sentence; noun incorporation; and a mismatch between syntactic argument structure and semantic argument structure. Also, the actual arguments are really the pronominal affixes on the verb, Marianne Mithun would argue, and the overt nominals are just there as adjuncts for clarification where necessary.
 
 
