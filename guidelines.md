@@ -38,6 +38,7 @@ Operationally, for both sentence-level and document-level annotation, we assume 
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
 (t2 / taste-01
+  :aspect Performance
   :ARG0 (p / person :wiki "Edmond_Pope"
          :name (n2 / name :op1 "Edmund" :op2 "Pope"))
   :ARG1 (f / free-04
@@ -73,12 +74,14 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
       :domain (p / person :wiki "Edmond_Pope"
             :name (n5 / name :op1 "Pope"))
       :ARG1-of (c4 / convict-01
+      	    :aspect Performance
             :ARG2 (c / charge-05
                   :ARG1 b2
                   :ARG2 (s2 / spy-01 :ARG0 p))
             :time (w / week
                   :mod (l / last)))
       :ARG1-of (s / sentence-01
+            :aspect Performance
             :ARG2 (p2 / prison
                   :mod (c3 / country :wiki "Russia"
                         :name (n4 / name :op1 "Russia"))
@@ -107,7 +110,8 @@ happened *last week*. The modal dependencies indicate that from the author's per
 
 ```
 Snt3: He denied any wrongdoing.
-(d / deny-01
+(d / deny-01 
+      :aspect Performance
       :ARG0 (h / he)
       :ARG1 (t / thing
             :ARG1-of (d2 / do-02
@@ -138,6 +142,7 @@ The modal relation indicates that the denying event definitely happened accordin
 ```
 Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 (p3 / pardon-01
+      :aspect Performance
       :ARG0 (p / person :wiki "Vladimir_Putin"
             :name (n / name :op1 "Vladimir" :op2 "Putin")
             :ARG0-of (h / have-org-role-91
@@ -166,6 +171,7 @@ In the document-level representation for this sentence, the person that is pardo
 Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
  
 (f / fly-01
+      :aspect Performance
       :ARG1 (p / person :wiki "Edmond_Pope"
             :name (n3 / name :op1 "Pope"))
       :destination (b2 / base
@@ -227,6 +233,7 @@ In the temporal annotation of this sentence, the DCT is chosen as the reference 
 Snt7: Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
 
 (h / have-mod-91
+       :aspect Stative
        :ARG1 (p / person :wiki "Edmond_Pope"
              :name (n3 / name :op1 "Pope"))
        :ARG2 (r / remission-02
@@ -234,6 +241,7 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
                    :name (n / name :op1 "bone" :op2 "cancer")
                    :ARG1-of (r2 / rare-02))
              :time (a / arrest-01
+	           :aspect Performance
                    :ARG1 p
                    :location (c / country :wiki "Russia"
                          :name (n2 / name :op1 "Russia")))))
@@ -285,10 +293,12 @@ The author is neutral about whether the cancer has come back. *he* is annotated 
 ```
 Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
 (s / say-01
+      :aspect Performance
       :ARG0 (p3 / person
             :ARG0-of (h2 / have-org-role-91
                   :ARG2 (s2 / spokeswoman)))
       :ARG1 (s3 / suffer-01
+            :aspect Stative
             :ARG0 (p / person :wiki "Edmond_Pope" :name (n / name :op1 "Pope"))
             :ARG1 (a / and
                   :op1 (m / malnourished-01
