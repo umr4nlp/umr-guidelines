@@ -2043,7 +2043,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
               :Arg0 p2
              :Arg1 (t / thing)
              :discmark (w / wohei))
-    :time (b/before :op (n/now)))
+    :time (b/before :op (n/now))
+    :aspect Performance)
 
 \ref	CrowCh(o).097
 \tx	bii'inowuneehek,	neihoowneh'e'.
@@ -2063,7 +2064,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
    :polarity –
    :condition (b/ Bii’in
                          :Arg0 (p3 /person :ref “2pl”)
-                         :Arg1 (t/thing ))
+                         :Arg1 (t/thing )))
+			 
 \ref	CrowCh(o).098
 \tx	ciibii'inowuneehek,	noh	ne'neh'einoo."
 \mb	cii- bii'in -owunee	-hek	noh	ne'- neh' -einoo
@@ -2095,7 +2097,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
    :Arg0 (p/person :ref “3pl”)
    :Arg1 (t /thing)
    :manner (w / wo'oe'onoun)
-   :time (b/before :op (n/now)))
+   :time (b/before :op (n/now))
+   :aspect Activity)
 
     
 \ref	CrowCh(o).100
@@ -2109,7 +2112,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 (w / nooko'wuutee
        :Arg0 (t /thing)
-       :time (b/before :op (n/now)))
+       :time (b/before :op (n/now))
+       :aspect State)
 
 \ref	CrowCh(o).101
 \tx	niisootoxuuus	ne'no'uxoo';		nooxoheino'.
@@ -2124,10 +2128,12 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (a/and 
    : op1 ( n /No’uxoo
                    :Arg0 (n2 /  niisootoxuuus)
-                   :time (b/before :op1 (n /now)))
+                   :time (b/before :op1 (n /now))
+		   :aspect Performance)
    :op2  (n2/ nooxohei
                   :Arg0 (p/person :ref “3pl”)
-                  :Arg1 (t /thing)))
+                  :Arg1 (t /thing))
+		  :aspect Activity)
 
 
 \ref	CrowCh(o).102
@@ -2141,7 +2147,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	ARG 1 (implied only) = [find the bullets by digging] [not overt in the sentence, and the verb is syntactically/grammatically intransitive, though semantically transitive]
    (h/ hoo3ontii
        :Arg0 (p  /person :ref “3pl”)
-       :time (b /before :op (n /now)))
+       :time (b /before :op (n /now))
+       :aspect Endeavor)
 
 ```
 The above segment illustrates many of the issues with Arapaho: lack of overt noun phrases in a sentence; noun incorporation; and a mismatch between syntactic argument structure and semantic argument structure. Also, the actual arguments are really the pronominal affixes on the verb, Marianne Mithun would argue, and the overt nominals are just there as adjuncts for clarification where necessary.
