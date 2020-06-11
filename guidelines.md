@@ -431,14 +431,21 @@ Subset relation:
 ```
 
 #### Event coreference
-Event / subevent
- ** Meanwhile, Greek authorities announced that they have made two arrests in the case. The first, a 65-year-old man, was reportedly seen torching trees across southern Peloponnese. The second person arrested and charged was a 77-year-old woman who reportedly was seen starting a fire while cooking outside in Zaharo.
- Script / subevent?
-** Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
- Alternative reference
-**	The Three Gorges project on the Yangtze River has recently introduced the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit provided to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
- Event identity
-**	On Wednesday, two arrests were announced. "We have arrested two people and have detained several more for questioning," said Vasundhara Raje. "
+-- Event / subevent
+
+  Meanwhile, Greek authorities announced that they have made two arrests in the case. The first, a 65-year-old man, was reportedly seen torching trees across southern Peloponnese. The second person arrested and charged was a 77-year-old woman who reportedly was seen starting a fire while cooking outside in Zaharo.
+  
+--  Script / subevent?
+
+ Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
+ 
+ -- Alternative reference
+ 
+	The Three Gorges project on the Yangtze River has recently introduced the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit provided to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
+	
+ -- Event identity
+ 
+	On Wednesday, two arrests were announced. "We have arrested two people and have detained several more for questioning," said Vasundhara Raje. "
 
 
 
