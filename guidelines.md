@@ -443,15 +443,46 @@ Subset relation:
 #### Event coreference
 - Event / subevent
 
+::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+ ::snt 1 arrest took place in the Netherlands and another in Germany.
+ ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
+
+```
+(a / and
+      :op1 (a2 / arrest-01 :quant 1
+            :location (c / country :wiki "Netherlands"
+                  :name (n / name :op1 "Netherlands")))
+      :op2 (a3 / arrest-01
+            :location (c2 / country :wiki "Germany"
+                  :name (n2 / name :op1 "Germany"))
+            :mod (a4 / another)))
+```	    
+ ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+ ::snt The arrests were ordered by anti-terrorism judge fragnoli.
+ ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
+```
+(o / order-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Fragnoli")
+            :ARG0-of (o2 / oppose-01
+                  :ARG1 (t / terrorism))
+            :ARG0-of (h / have-org-role-91
+                  :ARG3 (j / judge-01)))
+      :ARG2 (a / arrest-01))
+ 
+ (s / sentence
+  :coref (subevent (s1a3, s2a))
+```
+
   Meanwhile, Greek authorities announced that they have made two arrests in the case. The first, a 65-year-old man, was reportedly seen torching trees across southern Peloponnese. The second person arrested and charged was a 77-year-old woman who reportedly was seen starting a fire while cooking outside in Zaharo.
   
 - Script / subevent?
 
- Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
+ Reports suggest that the group of nine were having a **picnic** on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners **ventured** outside the city of Saada without the required police escorts due to the heightened security situation in the area.
  
  - Alternative reference
  
-	The Three Gorges project on the Yangtze River has recently introduced the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit provided to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
+	The Three Gorges project on the Yangtze River has recently **introduced** the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit **provided** to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
 	
  - Event identity
  
