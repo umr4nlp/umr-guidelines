@@ -485,13 +485,85 @@ Subset relation:
 	The Three Gorges project on the Yangtze River has recently **introduced** the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit **provided** to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
 	
  - Event identity
- 
+
+
 	On Wednesday, two arrests were announced. "We have arrested two people and have detained several more for questioning," said Vasundhara Raje. "
+	
 
+::id PROXY_APW_ENG_20080415_1054.19 ::date 2013-07-19T04:50:53 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+::snt El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
+ ::save-date Wed Jan 20, 2016 ::file PROXY_APW_ENG_20080415_1054_19.txt
+```
+(a / and
+      :op1 (c / confiscate-01
+            :ARG1 (a2 / and
+                  :op1 (p3 / property
+                        :poss (p / person :wiki "Khairat_el-Shater" :name (n / name :op1 "El-Shater")))
+                  :op2 (p4 / property
+                        :poss (p2 / person :wiki - :name (n2 / name :op1 "Malek")))))
+      :op2 (b / believe-01
+            :ARG1 (w / worth-01
+                  :ARG1 a2
+                  :ARG2 (m / multiple
+                        :op1 (m2 / monetary-quantity :quant 1000000
+                              :unit (d / dollar))))))
+```
 
+ ::id PROXY_APW_ENG_20080415_1054.20 ::date 2013-07-19T04:57:55 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+ ::snt Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial bases.
+ ::save-date Thu May 28, 2015 ::file PROXY_APW_ENG_20080415_1054_20.txt
+```
+(s / state-01
+      :ARG0 (p / person :wiki "Hamdeen_Sabahi" :name (n / name :op1 "Abdel-Maksoud"))
+      :ARG1 (a / affect-01
+            :ARG0 (c / confiscate-01)
+            :ARG1 (b2 / base
+                  :poss (o / organization :wiki "Muslim_Brotherhood" :name (n2 / name :op1 "Brotherhood"))
+                  :mod (f / finance))))
+
+(s / sentence
+  :coref (same-event (s1c, s2c))
+```
 
 
 ### Part 3-2. Temporal Dependency
+
+The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In the sentence below, the time expression 
+*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In the example below, the temporal relation between *sign* and the DCT is annotated as `:time (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
+
+
+
+
+```
+::id PROXY_AFP_ENG_20020105_0162.15 ::date 2013-05-08T13:37:04 ::snt-type body ::annotator LDC-AMR-14 ::preferred
+::snt In April 1998 Arab countries signed an anti-terrorism agreement that binds the signatories to coordinate to fight terrorism.
+::save-date Wed Dec 11, 2013 ::file PROXY_AFP_ENG_20020105_0162_15.txt
+(s / sign-02
+      :ARG0 (c / country
+            :mod (e / ethnic-group :wiki "Arabs"
+                  :name (n / name :op1 "Arab")))
+      :ARG1 (a2 / agree-01
+            :topic (c3 / counter-01
+                  :ARG1 (t2 / terrorism)
+                  :ARG0-of (b / bind-01
+                        :ARG1 c
+                        :ARG2 (c2 / coordinate-01
+                              :ARG1 c
+                              :purpose (f / fight-01
+                                    :ARG0 c
+                                    :ARG1 (t / terrorism))))))
+      :time (d / date-entity :year 1998 :month 4)
+      :time (b2 /before :op (n/now))
+      :aspect Performance))
+ ```
+
+In addition to temporal relations at the sentence-level, we also annotate temporal relations at the document level.
+
+
+
+ However, temporal relations at the sentence-level structure are insufficient to interpret the temporal relations. 
+In UMR, we also introduce temporal relations in the document-level structure.
+
 
 The temporal dependency is divided into two passes: the first pass involves setting up the temporal
 superstructure – the top levels of the dependency structure and the fourth
