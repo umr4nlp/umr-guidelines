@@ -557,14 +557,11 @@ The temporal annotation in UMR is done at both the sentence level and the docume
       :aspect Performance))
  ```
 
-In addition to temporal relations at the sentence-level, we also annotate temporal relations at the document level.
+In addition to temporal relations at the sentence level, we also annotate temporal relations at the document level.
 
 
 
- However, temporal relations at the sentence-level structure are insufficient to interpret the temporal relations. 
-In UMR, we also introduce temporal relations in the document-level structure.
-
-
+<!--
 The temporal dependency is divided into two passes: the first pass involves setting up the temporal
 superstructure – the top levels of the dependency structure and the fourth
 pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined meta nodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
@@ -675,6 +672,8 @@ news story is centered. It is often mentioned in the title or first
 sentence of the news story and referred to many times in the text. The
 key event should be added to the superstructure, with a relation to the
 timex which most specifically locates it in time.
+
+--!>
 
 #### Temporal relations
 
@@ -789,65 +788,65 @@ Key event: landslide\_KEY
 | stop      | Pos(stop,LERIAS)      |                     |
 | come-out  | Pos(come-out,LERIAS)  |                     |
 
-For <span>say</span>, it does not have a <span>Contained</span> relation
+For *say*, it does not have a **Contained** relation
 with either of the time expressions in the example, so we move to step
 2. It’s also the first event in the sentence, so (assuming it can’t be
 linked to any of the events in the previous sentence), we move to step
-4. We do know that <span>say</span> occurred after the key event in the
-text, therefore we can add <span>After(say,landslide\_KEY)</span> and
+4. We do know that *say* occurred after the key event in the
+text, therefore we can add *After(say,landslide\_KEY)* and
 move on to the next event.
 
-<span>Evacuate</span> is not necessarily <span>Contained</span> within
-either of the timexs, so we move to step 2. Since <span>evacuate</span>
-is a reported event, the reporting event, <span>say</span>, is an
+*Evacuate* is not necessarily **Contained** within
+either of the timexs, so we move to step 2. Since *evacuate*
+is a reported event, the reporting event, *say*, is an
 appropriate parent in the temporal dependency; we can add
-<span>Before(evacuate,say).</span>
+*Before(evacuate,say).*
 
-Next, we have <span>landslide</span>. Following step 1,
-<span>landslide</span> is <span>Contained</span> within the timex
+Next, we have *landslide*. Following step 1,
+*landslide* is **Contained** within the timex
 *earlier in the week*, so we add
-<span>Contained(landslide,earlier\_week)</span>. Then, we move to step 3
-and see if the temporal location of <span>landslide</span> can be made
+*Contained(landslide,earlier\_week)*. Then, we move to step 3
+and see if the temporal location of *landslide* can be made
 more specific by adding an event relation. The immediately preceding
-event in the text, <span>evacuate</span>, has a clear temporal relation
-and the same modal annotation as <span>landslide</span> and is therefore
-a good parent. We can add <span>Before(landslide,evacuate)</span>.
+event in the text, *evacuate*, has a clear temporal relation
+and the same modal annotation as *landslide* and is therefore
+a good parent. We can add *Before(landslide,evacuate)*.
 
-Then, we move on to <span>kill</span>. Like <span>landslide</span>,
-<span>kill</span> is <span>Contained</span> within the timex *earlier in
-the week*, so we can add <span>Contained(kill,earlier\_week)</span>.
-Then we move to step 3 and can add a relation to <span>landslide</span>:
-<span>Overlap(kill,landslide)</span>.
+Then, we move on to *kill*. Like *landslide*,
+*kill* is **Contained** within the timex *earlier in
+the week*, so we can add *Contained(kill,earlier\_week)*.
+Then we move to step 3 and can add a relation to *landslide*:
+*Overlap(kill,landslide)*.
 
-<span>Return</span> can be linked to the timex *Friday*:
-<span>Contained(return,Friday)</span>. Moving to step 3, we look earlier
-in the sentence for a parent event. Both <span>kill</span> and
-<span>landslide</span> are Contained within a different timex, so they
+*Return* can be linked to the timex *Friday*:
+*Contained(return,Friday)*. Moving to step 3, we look earlier
+in the sentence for a parent event. Both *kill* and
+*landslide* are Contained within a different timex, so they
 don’t make good parents. That is, by virtue of the fact that
-<span>return</span> is <span>Contained</span> on *Friday* and
-<span>kill</span> and <span>landslide</span> are <span>Contained</span>
+*return* is **Contained** on *Friday* and
+*kill* and *landslide* are **Contained**
 in *earlier in the week*, it logically falls out that
-<span>return</span> happened after both <span>kill</span> and
-<span>landslide</span>; therefore, we don’t need to annotate this
-relation. <span>Evacuate</span>, however, is not <span>Contained</span>
-within a timex and has the same modal annotation as <span>return</span>;
-so, we can add <span>After(return,evacuate)</span>.
+*return* happened after both *kill* and
+*landslide*; therefore, we don’t need to annotate this
+relation. *Evacuate*, however, is not **Contained**
+within a timex and has the same modal annotation as *return*;
+so, we can add *After(return,evacuate)*.
 
-<span>Rain</span> does not have a <span>Contained</span> relation with a
-timex, so we move to step 2. <span>Return</span> makes a good parent for
-<span>rain</span> since it has the same modal annotation, so we can
+*Rain* does not have a **Contained** relation with a
+timex, so we move to step 2. *Return* makes a good parent for
+*rain* since it has the same modal annotation, so we can
 add  
-<span>Before(rain,return)</span>.
+*Before(rain,return)*.
 
-<span>Stop</span> also does not have a <span>Contained</span> relation
-with a timex. The preceding event, <span>rain</span>, makes a good
+*Stop* also does not have a **Contained** relation
+with a timex. The preceding event, *rain*, makes a good
 parent, since it has the same modal annotation; we can add
-<span>Overlap(stop,rain)</span>.
+*Overlap(stop,rain)*.
 
-Finally, <span>come-out</span> also does not have a
-<span>Contained</span> relation with a timex. <span>Stop</span> makes a
+Finally, *come-out* also does not have a
+<span>Contained</span> relation with a timex. *Stop* makes a
 good parent, since it has the same modal annotation, so we can add
-<span>Overlap(come-out,stop)</span>. This gives us the full annotation
+*Overlap(come-out,stop)*. This gives us the full annotation
 below.
 
 | Events    | Modal annotation   | Temporal annotation                |
