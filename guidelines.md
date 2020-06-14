@@ -648,9 +648,11 @@ locatable on a timeline or not. Unlocatable time expressions are time
 expressions which refer to the duration (*for three hours*) or
 quantification (*every day*) of an event. Unlocatable time expressions
 are not represented in the temporal dependency structure at any level.
+-->
 
 <!-- (they do influence the aspect annotation; see §[3](#aspectannotation)) -->
 
+<!--
 All locatable time expressions are represented in the temporal
 superstructure. Locatable time expressions are divided between concrete
 and vague time expressions. Vague time expressions (e.g. *nowadays, in
@@ -672,8 +674,7 @@ news story is centered. It is often mentioned in the title or first
 sentence of the news story and referred to many times in the text. The
 key event should be added to the superstructure, with a relation to the
 timex which most specifically locates it in time.
-
---!>
+-->
 
 #### Temporal relations
 
