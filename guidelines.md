@@ -386,6 +386,7 @@ For the UMR corereference annotation, we first need to answer two questions. The
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
 (t2 / taste-01
+  :Aspect Performance
   :ARG0 (p / person :wiki "Edmond_Pope"
          :name (n2 / name :op1 "Edmund" :op2 "Pope"))
   :ARG1 (f / free-04
@@ -399,6 +400,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 
 Snt3: He denied any wrongdoing.
 (d / deny-01
+      :Aspect Performance
       :ARG0 (h / he)
       :ARG1 (t / thing
             :ARG1-of (d2 / do-02
@@ -424,6 +426,7 @@ Subset relation:
 (c / contrast-01
       :ARG1 (a / and
             :op1 (p / possessive-03
+	          :Aspect Stative
                   :ARG0 (h2 / he)
                   :degree (v2 / very))
             :op2 (c3 / control-01
@@ -434,10 +437,10 @@ Subset relation:
             :ARG2 a
             :ARG1-of (c2 / cause-01
                   :ARG0 (t / together
+		        :Aspect Stative
                         :domain (w / we)))))
 (s / sentence
-  :coref (subset (s4h2, s4w)
-          subset (AUTH, s4w)))
+  :coref (subset (s4h2, s4w)))
 ```
 
 #### Event coreference
@@ -450,9 +453,11 @@ Subset relation:
 ```
 (a / and
       :op1 (a2 / arrest-01 :quant 1
+            :Aspect Performance
             :location (c / country :wiki "Netherlands"
                   :name (n / name :op1 "Netherlands")))
       :op2 (a3 / arrest-01
+            :Aspect Performance
             :location (c2 / country :wiki "Germany"
                   :name (n2 / name :op1 "Germany"))
             :mod (a4 / another)))
@@ -462,6 +467,7 @@ Subset relation:
  ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
 ```
 (o / order-01
+      :Aspect Performance
       :ARG0 (p / person :wiki -
             :name (n / name :op1 "Fragnoli")
             :ARG0-of (o2 / oppose-01
@@ -496,6 +502,7 @@ Subset relation:
 ```
 (a / and
       :op1 (c / confiscate-01
+            :Aspect Performance
             :ARG1 (a2 / and
                   :op1 (p3 / property
                         :poss (p / person :wiki "Khairat_el-Shater" :name (n / name :op1 "El-Shater")))
@@ -514,6 +521,7 @@ Subset relation:
  ::save-date Thu May 28, 2015 ::file PROXY_APW_ENG_20080415_1054_20.txt
 ```
 (s / state-01
+      :Aspect Performance
       :ARG0 (p / person :wiki "Hamdeen_Sabahi" :name (n / name :op1 "Abdel-Maksoud"))
       :ARG1 (a / affect-01
             :ARG0 (c / confiscate-01)
