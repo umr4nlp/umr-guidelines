@@ -441,7 +441,7 @@ Subset relation:
 ```
 
 #### Event coreference
-- Event / subevent
+- same-event, subset
 
 ::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt 1 arrest took place in the Netherlands and another in Germany.
@@ -471,7 +471,7 @@ Subset relation:
       :ARG2 (a / arrest-01))
  
  (s / sentence
-  :coref (subevent (s1a3, s2a))
+  :coref (subset (s1a3, s2a))
 ```
 
   Meanwhile, Greek authorities announced that they have made two arrests in the case. The first, a 65-year-old man, was reportedly seen torching trees across southern Peloponnese. The second person arrested and charged was a 77-year-old woman who reportedly was seen starting a fire while cooking outside in Zaharo.
