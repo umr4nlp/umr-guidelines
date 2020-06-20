@@ -51,13 +51,8 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
                     
 (s1 / sentence
     :temporal(
-          depends_on (DCT, s1t3/today)
-          includes (s1t3/today, s1t2/taste-01)
-           )
-    :modality(
-           :POS (Auth, s1t2/taste-01)
-             )
-     )
+          (s1t3 depends-on DCT) )
+    :modal( (s1t2 :AFF AUTH) ) )
         
 ```
 The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in Section 3-2.  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
@@ -91,15 +86,12 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
  
 (s2 / sentence
     :temporal(
-        includes (s2w/week, s2c4/convict-01)
-        includes (s2w/week, s2s/sentence-01)
-           )
-    :modality(
-      POS (Auth, s2c4/convict-01)
-      POS (Auth, s2s/sentence-01)
-      POS (Auth, s2s2 / spy-01)
-             )
-     )
+        (s2s :After s2c4)
+	(s2w :depends-on DCT) )
+    :modal(
+      (s2c4 :AFF AUTH)
+      (s2s :AFF AUT)
+      (s2s2 :AFF AUTH) ) )
 ```
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
 
@@ -119,15 +111,10 @@ Snt3: He denied any wrongdoing.
                   :ARG1-of (w / wrong-02))))
   
 (s3 / sentence
-    :coref(
-           same (s1p/person, s3h/he))
-    :temporal(
-            after (DCT, s3d/deny-01))
-    :modality(
-            POS (Auth, s3d/deny-01))
-            POS (Auth, s3h/he)
-            NEG (s3h/he, s3d2/do-02)
-     )
+    :coref( (s3h :same-entity s1p))
+    :temporal((s3d :before DCT))
+    :modal ( (s3d :AFF AUTH))
+	     (s3d2 :NEG (s2h :AFF AUTH)  )
 ```
 
 For this sentence, the coreference annotation indicates that *he* is the same person as *Alexander Pope* mentioned in
@@ -155,13 +142,9 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
                   :mod (h3 / health))))
 
 (s4 / sentence
-    :coref(
-         Same (s1p/person,s4h2/he))
-    :temporal(
-         Before (s2c4/convict-01, s4p3/pardon-01))
-    :modality(
-         POS (Auth, s4p3/pardon-01))
-     )
+    :coref( (s4h :same-entity s1p))
+    :temporal( (s4p3 :after s2s))
+    :modal ( (s4p3 :AFF AUTH)) )
 ```
 
 In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is done by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positve from the point of view of the author.
@@ -184,11 +167,8 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
                         :name (n2 / name :op1 "Germany")))))
 
 (s5 / sentence
-    :temporal(
-         Before (s4p3/pardon-01, s5f/fly-01))
-    :modality(
-         POS (Auth, s5f/fly-01))
-     )
+    :temporal((s5f :after s4p3))
+    :modal ((s5f :AFF AUTH) )
 ```
 In the document-level annotation of this sentence, *pardon-01* from the previous sentence is chosen as the
 reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is positive that the *fly-01* 
@@ -218,13 +198,11 @@ Snt6: He will spend the next several days at the medical center there before he 
 
 (s6 / sentence
   :temporal(
-    before (DCT, s6s2/spend-02)
-    before (s6s2/spend-02, s6r/return-01))
-  :modality
-    POS (Auth, s6s2/spend-02)
-    POS (Auth, s6r/return-01))
-  :coref
-    same (s1p/person, s6h2 / he)))
+     (s6s2 :after s5f)
+     (s6r :after s6s2 ))
+  :modal (s6s2 :AFF AUTH)
+         (s6r :AFF AUTH))
+  :coref (s6h2 :same-entity s1p)))
 ```
 In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* actually happened according to the author. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in sentence 1. 
 
@@ -247,12 +225,9 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
                          :name (n2 / name :op1 "Russia")))))
 
 (s7 / sentence
-  :temporal(
-    overlap (s7a/arrest-01, s7r/remission-02)
-    after (DCT, s7a/arrest-01))
-  :modality
-    POS (Auth, s7a/arrest-01)
-    POS (Auth, s7r/remission-02)))
+  :temporal( (s7a :overlap s7r))
+  :modal ((s7a :AFF AUTH)
+         (s7r :AFF AUTH)))
 ```
 For Sentence 7, the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-2* happened.
 
@@ -278,14 +253,11 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
                                            :name (n3 / name :op1 "Russia"))))))
              :ARG2 d3))
 (s8 / sentence
-  :temporal(
-    before (DCT, s8e / examine-01))
-  :modality(
-    POS (AUTH, s8e / examine-01)
-    NEU (AUTH, s8c3/come-01)
-    POS (AUTH, s8a/await-01))
-  :coref(
-    Same(s7p / person, s8h/he))) 
+  :temporal( (s8e :after s6s2))
+  :modal ((s8e :AFF AUTH)
+          (s8c3 :NEU AUTH)
+          (s8a :AFF AUTH))
+  :coref((s8h :same-entity s7p))) 
 ```
 
 The *examine-01* event will happen after the DCT. According to the author, the *examine-01* event definitely happened.
@@ -307,20 +279,12 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
                         :ARG1 (b2 / blood)
                         :ARG1-of (h / high-02))))
 (s9/sentence
- :Temporal
-   after (DCT, s9s/say-01)
-   overlap (s9s/say-01, s9s3/suffer-01))
- :Modality
-   POS (Auth, s9s/say-01)
-   POS (Auth, s9p3/person)
-   POS (s9p3/person, s9s3/suffer-01)))
+ :Temporal ((s9s :before DCT)
+            (s9s3 :overlap s9s))
+ :Modal ((s9s :AFF AUTH)
+         (s9s3 :AFF (s9p3 :AFF AUTH)))
  ```
 The document-level representation indicates the *say-01* event happened before the *say-01* event, and the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
-
-
-
-             
-                    
 
 
 
