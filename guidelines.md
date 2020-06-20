@@ -20,9 +20,9 @@
       * Aspect (could potentially become concepts?)
     * Part 2-4. Quantification, negation (James)
 * Part 3. [Document-Level Representation](#part-3-document-level-representation)
-    * Part 3-1. Coreference (Jayeol, Bert) [Should this include event coreference?]
-    * Part 3-2. [Temporal Dependency](#part-3-2-temporal-dependency) (Bert)
-    * Part 3-3. Modality Dependency (Meagan, Bill)
+    * Part 3-1. Coreference (Jayeol, Bert) 
+    * Part 3-2. [Temporal Dependency](#part-3-2-temporal-dependency) (Bert, Jiarui)
+    * Part 3-3. [Modality Dependency](#part-3-3-modal-dependency) (Meagan, Bill)
 * Integrated examples
 
 ##  Part 1: Introduction
