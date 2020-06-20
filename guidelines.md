@@ -372,15 +372,7 @@ Snt3: He denied any wrongdoing.
                   :ARG1-of (w / wrong-02))))
   
 (s3 / sentence
-    :coref(
-           same (s1p/person, s3h/he))
-    :temporal(
-            after (DCT, s3d/deny-01))
-    :modality(
-            POS (Auth, s3d/deny-01))
-            POS (Auth, s3h/he)
-            NEG (s3h/he, s3d2/do-02)
-     )
+    :coref((s3h :same-entity s1p)) )
 ```
 
 Subset relation:
@@ -404,7 +396,7 @@ Subset relation:
 		        :Aspect Stative
                         :domain (w / we)))))
 (s / sentence
-  :coref (subset (s4h2, s4w)))
+  :coref ((s4h2 :subset-of s4w)))
 ```
 
 #### Event coreference
@@ -448,7 +440,7 @@ Subset relation:
                   :mod (f / finance))))
 
 (s2 / sentence
-  :coref (same-event (s1c, s2c))
+  :coref ((s2c :same-event s1c)))
 ```
 
 Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide**.
@@ -493,7 +485,7 @@ Event identity also includes cases where the same underlying event is referred t
             :ARG1-of (l / loan-01)))
 	    
 (s / sentence
-   :coref (same-event (s2p, s1i)))
+   :coref ((s2p :same-event s1i)))
 ```	 
 
 - subset
@@ -532,7 +524,7 @@ Event identity also includes cases where the same underlying event is referred t
       :ARG2 (a / arrest-01))
  
  (s / sentence
-  :coref (subset (s1a3, s2a))
+  :coref ((s1a3, s2a :subset-of s1a3))
 ```
 
 - Script / subevent?
