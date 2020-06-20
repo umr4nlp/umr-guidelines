@@ -483,7 +483,7 @@ Subset relation:
                   :poss (o / organization :wiki "Muslim_Brotherhood" :name (n2 / name :op1 "Brotherhood"))
                   :mod (f / finance))))
 
-(s / sentence
+(s2 / sentence
   :coref (same-event (s1c, s2c))
 ```
 
