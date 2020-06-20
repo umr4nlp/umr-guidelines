@@ -444,56 +444,12 @@ Subset relation:
 ```
 
 #### Event coreference
-- same-event, subset
-
-::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
- ::snt 1 arrest took place in the Netherlands and another in Germany.
- ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
-
-```
-(a / and
-      :op1 (a2 / arrest-01 :quant 1
-            :Aspect Performance
-            :location (c / country :wiki "Netherlands"
-                  :name (n / name :op1 "Netherlands")))
-      :op2 (a3 / arrest-01
-            :Aspect Performance
-            :location (c2 / country :wiki "Germany"
-                  :name (n2 / name :op1 "Germany"))
-            :mod (a4 / another)))
-```	    
- ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
- ::snt The arrests were ordered by anti-terrorism judge fragnoli.
- ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
-```
-(o / order-01
-      :Aspect Performance
-      :ARG0 (p / person :wiki -
-            :name (n / name :op1 "Fragnoli")
-            :ARG0-of (o2 / oppose-01
-                  :ARG1 (t / terrorism))
-            :ARG0-of (h / have-org-role-91
-                  :ARG3 (j / judge-01)))
-      :ARG2 (a / arrest-01))
- 
- (s / sentence
-  :coref (subset (s1a3, s2a))
-```
-
-  Meanwhile, Greek authorities announced that they have made two arrests in the case. The first, a 65-year-old man, was reportedly seen torching trees across southern Peloponnese. The second person arrested and charged was a 77-year-old woman who reportedly was seen starting a fire while cooking outside in Zaharo.
-  
-- Script / subevent?
-
- Reports suggest that the group of nine were having a **picnic** on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners **ventured** outside the city of Saada without the required police escorts due to the heightened security situation in the area.
- 
  
 	
  - Event identity
 
-
-	On Wednesday, two arrests were announced. "We have arrested two people and have detained several more for questioning," said Vasundhara Raje. "
-	
-
+ We use *same-event* to represent cases where two event mentions refer to  the same event.
+ 
 ::id PROXY_APW_ENG_20080415_1054.19 ::date 2013-07-19T04:50:53 ::snt-type body ::annotator SDL-AMR-09 ::preferred
 ::snt El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
  ::save-date Wed Jan 20, 2016 ::file PROXY_APW_ENG_20080415_1054_19.txt
@@ -576,6 +532,53 @@ Event identity also includes cases where the same underlying event is referred t
    :coref (same-event (s2p, s1i)))
 ```	 
 
+- subset
+
+*subset* is also used to annotate the subset relations between two event mentions, with one referring to a subset of another.
+
+
+::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+ ::snt 1 arrest took place in the Netherlands and another in Germany.
+ ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
+
+```
+(a / and
+      :op1 (a2 / arrest-01 :quant 1
+            :Aspect Performance
+            :location (c / country :wiki "Netherlands"
+                  :name (n / name :op1 "Netherlands")))
+      :op2 (a3 / arrest-01
+            :Aspect Performance
+            :location (c2 / country :wiki "Germany"
+                  :name (n2 / name :op1 "Germany"))
+            :mod (a4 / another)))
+```	    
+ ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+ ::snt The arrests were ordered by anti-terrorism judge fragnoli.
+ ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
+```
+(o / order-01
+      :Aspect Performance
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Fragnoli")
+            :ARG0-of (o2 / oppose-01
+                  :ARG1 (t / terrorism))
+            :ARG0-of (h / have-org-role-91
+                  :ARG3 (j / judge-01)))
+      :ARG2 (a / arrest-01))
+ 
+ (s / sentence
+  :coref (subset (s1a3, s2a))
+```
+
+- Script / subevent?
+
+For now UMR does not annotate cases where one event is a subevent of another event, or when an event is part of a `script'. These will be annotated under temporal relations.
+
+ Reports suggest that the group of nine were having a **picnic** on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners **ventured** outside the city of Saada without the required police escorts due to the heightened security situation in the area.
+  
+  
+  
 
 
 ### Part 3-2. Temporal Dependency
