@@ -838,9 +838,9 @@ had **come out**.*
 Key event: landslide\_KEY
 
 
-# ::id NW_AFP_ENG_0024_2006_0217.16 ::date 2017-11-03T23:39:57 ::annotator SDL-AMR-09 ::preferred
-# ::snt Lerias said that many Guinsaugon residents had been evacuated after landslides earlier in the week had killed more than 20 people on Leyte, but that many had returned Friday because the rains had stopped and the sun had come out.
-# ::save-date Thu Dec 14, 2017 ::file NW_AFP_ENG_0024_2006_0217_16.txt
+ ::id NW_AFP_ENG_0024_2006_0217.16 ::date 2017-11-03T23:39:57 ::annotator SDL-AMR-09 ::preferred
+ ::snt Lerias said that many Guinsaugon residents had been evacuated after landslides earlier in the week had killed more than 20 people on Leyte, but that many had returned Friday because the rains had stopped and the sun had come out.
+ ::save-date Thu Dec 14, 2017 ::file NW_AFP_ENG_0024_2006_0217_16.txt
 ```
 (s / say-01
       :ARG0 (p / person :wiki -
