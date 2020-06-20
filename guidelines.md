@@ -25,7 +25,7 @@
     * Part 3-3. Modality Dependency (Meagan, Bill)
 * Integrated examples
 
-##  Part 1 Introduction
+##  Part 1: Introduction
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
 the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
