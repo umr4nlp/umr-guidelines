@@ -7,7 +7,7 @@
 
 **Table of Contents**
 
-* Part 1. [Introduction](#part-1.-introduction)
+* Part 1. [Introduction](#part-1-introduction)
 * Part 2. Sentence-Level Representation
     * Part 2-1. UMR Concepts
       * Part 2-1-1. Named entities  (Bert, Andy)
@@ -25,7 +25,7 @@
     * Part 3-3. Modality Dependency (Meagan, Bill)
 * Integrated examples
 
-##  Part 1. Introduction
+##  Part 1 Introduction
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
 the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
