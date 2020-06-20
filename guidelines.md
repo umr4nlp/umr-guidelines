@@ -7,7 +7,7 @@
 
 **Table of Contents**
 
-* Part 1. [Introduction](part-1.-introduction)
+* Part 1. [Introduction](#part-1.-introduction)
 * Part 2. Sentence-Level Representation
     * Part 2-1. UMR Concepts
       * Part 2-1-1. Named entities  (Bert, Andy)
