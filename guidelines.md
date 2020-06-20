@@ -613,7 +613,11 @@ The temporal annotation in UMR is done at both the sentence level and the docume
  ```
 
 In addition to temporal relations at the sentence level, we also annotate temporal relations at the document level.
+The document-level temporal relations focus on event-event and time-time relations. Time-time relations are annotated when 
+a relative time depends on another time expression for its interpretation
 
+
+Event-event relations are annotated only when the temporal relations are clearly supported by morpho-syntactic clues or when there is a clear temporal sequence can be inferred. 
 
 
 <!--
@@ -832,6 +836,43 @@ annotation of ([\[leriassaid\]](#leriassaid)) below.
 many had **returned** because the **rains** had **stopped** and the sun
 had **come out**.*  
 Key event: landslide\_KEY
+
+
+# ::id NW_AFP_ENG_0024_2006_0217.16 ::date 2017-11-03T23:39:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt Lerias said that many Guinsaugon residents had been evacuated after landslides earlier in the week had killed more than 20 people on Leyte, but that many had returned Friday because the rains had stopped and the sun had come out.
+# ::save-date Thu Dec 14, 2017 ::file NW_AFP_ENG_0024_2006_0217_16.txt
+```
+(s / say-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Lerias"))
+      :ARG1 (e / evacuate-01
+            :ARG2 (p2 / person
+                  :ARG0-of (r / reside-01
+                        :ARG1 (c / city :wiki "Saint_Bernard,_Southern_Leyte"
+                              :name (n2 / name :op1 "Guinsaugon")))
+                  :quant (m / many))
+            :time (a / after
+                  :op1 (k / kill-01
+                        :ARG0 (l / landslide)
+                        :ARG1 (p3 / person
+                              :quant (m2 / more-than :op1 20))
+                        :location (i2 / island :wiki "Leyte"
+                              :name (n3 / name :op1 "Leyte"))
+                        :time (w / week)
+                        :time (b / before
+                              :op1 s)))
+            :concession (r2 / return-01
+                  :ARG1 p2
+                  :time (d / date-entity
+                        :weekday (f / friday))
+                  :ARG1-of (c2 / cause-01
+                        :ARG0 (a2 / and
+                              :op1 (s2 / stop-01
+                                    :ARG1 (r3 / rain-01))
+                              :op2 (c3 / come-out-09
+                                    :ARG1 (s3 / sun)))))))
+```
+
 
 | Events    | Modal annotation      | Temporal annotation |
 | :-------- | :-------------------- | :------------------ |
