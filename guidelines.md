@@ -486,9 +486,7 @@ Subset relation:
 
  Reports suggest that the group of nine were having a **picnic** on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners **ventured** outside the city of Saada without the required police escorts due to the heightened security situation in the area.
  
- - Alternative reference
  
-	The Three Gorges project on the Yangtze River has recently **introduced** the first foreign capital. The loan, a sum of 12.5 million US dollars, is an export credit **provided** to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
 	
  - Event identity
 
@@ -532,6 +530,52 @@ Subset relation:
 (s / sentence
   :coref (same-event (s1c, s2c))
 ```
+
+Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide**.
+ 
+	
+
+ ::id nw.chtb_0021.2 ::date 2012-11-01T15:15:42 ::annotator SDL-AMR-09 ::preferred
+ ::snt The Three Gorges project on the Yangtze River has recently **introduced*** the first foreign capital .
+ ::save-date Fri Oct 24, 2014 ::file nw_chtb_0021_2.txt
+```
+(i / introduce-01
+      :ARG0 (p / project :wiki "Three_Gorges_Dam" :name (n / name :op1 "The" :op2 "Three" :op3 "Gorges")
+            :location (r / river :wiki "Yangtze" :name (n2 / name :op1 "Yangtze" :op2 "River")))
+      :ARG1 (c2 / capital
+            :mod (f2 / foreign)
+            :ord (o / ordinal-entity :value 1))
+      :time (r2 / recent))
+```
+ ::id nw.chtb_0021.3 ::date 2012-11-01T15:29:23 ::annotator SDL-AMR-09 ::preferred
+ ::snt The loan , a sum of 12.5 million US dollars , is an export credit **provided** to the Three Gorges project by the Canadian government , which will be used mainly for the management system of the Three Gorges project .
+ ::save-date Thu Dec 19, 2013 ::file nw_chtb_0021_3.txt
+
+```
+(c2 / credit
+      :mod (e / export-01)
+      :ARG1-of (p / provide-01
+            :ARG0 (g / government-organization
+                  :ARG0-of (g2 / govern-01
+                        :mod (c / country :wiki "Canada"
+                              :name (n / name :op1 "Canada"))))
+            :ARG2 (p2 / project :wiki "Three_Gorges_Dam"
+                  :name (n2 / name :op1 "Three" :op2 "Gorges")))
+      :ARG1-of (u / use-01
+            :ARG2 (s / system
+                  :poss p2
+                  :mod (m2 / manage-01))
+            :mod (m3 / main))
+      :domain (m / monetary-quantity :quant 12500000
+            :unit (d / dollar
+                  :mod (c3 / country :wiki "United_States"
+                        :name (n3 / name :op1 "US")))
+            :ARG1-of (l / loan-01)))
+	    
+(s / sentence
+   :coref (same-event (s2p, s1i)))
+```	 
+
 
 
 ### Part 3-2. Temporal Dependency
