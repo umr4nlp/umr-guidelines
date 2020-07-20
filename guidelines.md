@@ -14,6 +14,8 @@
       * Part 2-1-2. Multiple-word concepts [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
       * Part 2-1-3. Multi-concept words (Bill, Andy, James, Martha (reader))[reflexives,causatives, inchoatives, noun incorporation
       * Part 2-1-4. Word senses
+      * Part 2-1-5. Event identification
+      * Part 2-1-6. Participant identification
     * Part 2-2. [UMR relations](#part-2-2-umr-relations) 
       * Predicate Argument Structure (Bill and Martha)
     * Part 2-3. UMR features 
@@ -331,10 +333,991 @@ The total set of entity types are hierarchically organized
  #### Part 2-1-2. Multiple-Word concepts
  #### Part 2-1-3. Multi-concept words
  #### Part 2-1-4. Word senses
+ 
+ #### Part 2-1-5. Event identification
+ The criteria used to identify events in UMR are largely based on the
+criteria used in TimeML (). Event identification is not based on part of
+speech or morphosyntactic expression, but instead on a combination of
+semantic type and information packaging. Event identification should be
+done at the word (or phrase) level in a particular language. That is,
+annotators should consider the meaning of a whole word/phrase in
+deciding if it should be identified as an event; annotators need not
+analyze the morphological structure of words.
+
+In order to figure out which words in a text qualify as an event for the
+purposes of the UMR annotation, it is helpful to consider the difference
+between semantic type and information packaging (). Semantic type refers
+to the difference between entities, states (or, properties), and
+processes; this can be thought of as a categorization of things in the
+real world. Information packaging, on the other hand, characterizes how
+a particular linguistic expression “packages” the semantic content.
+Table [\[croftpostable\]](#croftpostable) below shows the typical types
+of constructions that tend to express the different combinations of
+semantic types and information packaging, modified from .
+
+|               |                   Reference                   |                    Modification                    |                  **Predication**                  |
+| :-----------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: |
+|               |                                               |                                                    |                                                   |
+|   Entities    | <span class="smallcaps">unmarked nouns</span> |                 relative clauses,                  |              **predicate nominals,**              |
+|               |                                               |                    PPs on nouns                    |                  **complements**                  |
+|               |                                               |                                                    |                                                   |
+|    States     |              deadjectival nouns               | <span class="smallcaps">unmarked adjectives</span> |             **predicate adjectives,**             |
+|               |                                               |                                                    |                  **complements**                  |
+|               |                                               |                                                    |                                                   |
+| **Processes** |       **event nominals, complements,**        |         **participles, relative clauses**          | <span class="smallcaps">**unmarked verbs**</span> |
+|               |           **infinitives, gerunds**            |                                                    |                                                   |
+
+The small caps indicates prototypical combinations (entity reference,
+state modification, and process predication); these are associated with
+unmarked parts of speech cross-linguistically (namely, nouns,
+adjectives, and verbs).
+
+The most prototypical expression for an event is a process in
+predication, therefore we identify a word/phrase as an event if it has
+either the semantic type of the prototype (process) or the prototypical
+information packaging (predication). The categories which should be
+identified as events are shown in bold in Table
+[\[croftpostable\]](#croftpostable).
+
+## Processes in predication
+
+Predicated processes are the most prototypical subcategory of events,
+corresponding cross-linguistically to unmarked verbs. They will
+therefore always be identified as events. This is shown in
+[\[predprocess\]](#predprocess) below. (Throughout this section, words
+that are identified as events will be shown in bold; the relevant
+phenomenon under discussion will be underlined.)
+
+<span id="predprocess" label="predprocess">\[predprocess\]</span>
+
+<span id="repair" label="repair">\[repair\]</span> *She
+<u>**repaired**</u> her bike*.  
+<span id="wentrepair" label="wentrepair">\[wentrepair\]</span> *Before
+she <u>**went**</u> to school, she **repaired** my bike.*  
+
+Regardless of whether they are in an independent clause, like *repaired*
+in [\[repair\]](#repair), or a dependent clause, like *went* in
+[\[wentrepair\]](#wentrepair), predicated processes are always
+identified as events.
+
+## Processes in modification and reference
+
+Processes packaged as modifiers or referents should also be identified
+as events. Cross-linguistically, these may take a variety of
+morphosyntactic forms, such as events nominals (as in
+[\[eventnom\]](#eventnom)), non-finite complements (as in
+[\[complement\]](#complement)), participles (as in
+[\[participle\]](#participle)), or relative clauses (as in
+[\[relclause\]](#relclause)).
+
+<span id="refprocess" label="refprocess">\[refprocess\]</span>
+
+<span id="eventnom" label="eventnom">\[eventnom\]</span> *The
+**<u>storm</u> damaged** the roads.*
+
+<span id="complement" label="complement">\[complement\]</span> *She
+**wanted <u>to go</u>** to school.*
+
+<span id="participle" label="participle">\[participle\]</span> *The
+student **<u>playing</u>** the violin **likes** Bach.*
+
+<span id="relclause" label="relclause">\[relclause\]</span> *The
+student, who is **<u>playing</u>** the violin, **likes** Bach.*
+
+It’s important to remember that it’s the combination of semantic type
+and information packaging that determines whether or not a particular
+word in a particular context is identified as an event. The
+morphological structure of a word (i.e., whether or not it derives from
+a verb) doesn’t factor into whether or not it is identified as an event.
+For example, not all event nominals are derived from verbs, as in
+[\[eventnom2\]](#eventnom2); and, not all words derived from verbs
+actually refer to processes, as in
+[\[nominalization\]](#nominalization).
+
+<span id="refprocess2" label="refprocess2">\[refprocess2\]</span>
+
+<span id="eventnom2" label="eventnom2">\[eventnom2\]</span> *He is
+**planning** a **<u>ceremony</u>** for Saturday.*
+
+<span id="nominalization" label="nominalization">\[nominalization\]</span>
+*The bus <u>driver</u> **turned** the corner too sharply.*
+
+Even the same lexical item may or may not refer to a process, depending
+on context as in ([\[nominal\]](#nominal)) below.
+
+<span id="nominal" label="nominal">\[nominal\]</span>
+
+<span id="event" label="event">\[event\]</span>
+
+*The <u>**final exam**</u> began at 8:00.*
+
+<span id="nonevent" label="nonevent">\[nonevent\]</span>
+
+*One student **threw** their <u>final exam</u> in the trash.*
+
+In ([\[event\]](#event)), *final exam* refers to a process and therefore
+is identified as an event. In ([\[nonevent\]](#nonevent)), however,
+*final exam* refers to a physical object and therefore should not be
+identified as an event.
+
+Participles (or other non-finite verb forms) are identified as events,
+unless they are part of a compound. For example, *floating* in *floating
+hospitals* is identified as an event, but *firing* in *firing squad* is
+not, since it is part of a compound. One way to check for this
+distinction is to see if the event described by the participle must be
+ongoing at the reference time. For example, one can say *I saw the
+firing squad* without having seen an actual firing event, whereas *I saw
+the floating hospitals* implies that the seer witnessed the floating
+event as well.
+
+## States and entities
+
+As mentioned above, anything that is predicated is identified as an
+event, even if it is not a process. These correspond to predicate
+nominals, as in [\[prednom\]](#prednom), and predicate adjectives, as in
+[\[predadj\]](#predadj).
+
+<span id="prednomadj" label="prednomadj">\[prednomadj\]</span>
+
+<span id="prednom" label="prednom">\[prednom\]</span> *She <u>**is an
+engineer**</u>.*
+
+<span id="predadj" label="predadj">\[predadj\]</span> *She <u>**is
+clever**</u>.*
+
+States and entities expressed in complement clauses are also identified
+as events, as in [\[entitycomp\]](#entitycomp) and
+[\[statecomp\]](#statecomp).
+
+<span id="compnomadj" label="compnomadj">\[compnomadj\]</span>
+
+<span id="entitycomp" label="entitycomp">\[entitycomp\]</span> *She
+wants <u>**to be a doctor**</u>.*
+
+<span id="statecomp" label="statecomp">\[statecomp\]</span> *She expects
+<u>**to be on time**</u>.*
+
+States in modification, as in [\[statemod1\]](#statemod1) and
+[\[statemod2\]](#statemod2), and states in reference, as in
+[\[stateref\]](#stateref), are not identified as events.
+
+<span id="states" label="states">\[states\]</span>
+
+<span id="statemod1" label="statemod1">\[statemod1\]</span> *The
+<u>tall</u> man...*
+
+<span id="statemod2" label="statemod2">\[statemod2\]</span> *The man,
+<u>who is tall</u>...*
+
+<span id="stateref" label="stateref">\[stateref\]</span> *His
+<u>happiness</u>...*
+
+Similarly, entities in modification, as in [\[entitymod\]](#entitymod),
+and entities in reference, as in [\[entityref\]](#entityref), are not
+identified as events.
+
+<span id="entities" label="entities">\[entities\]</span>
+
+<span id="entitymod" label="entitymod">\[entitymod\]</span> *The man,
+<u>who is a doctor</u>...*
+
+<span id="entityref" label="entityref">\[entityref\]</span> *The
+<u>doctor</u>*
+
+Causal relationships follow the same rules as states and entities. They
+are identified as events when they’re predicated, as in
+[\[causepred\]](#causepred), but they are not identified as events
+otherwise, like in [\[causeother\]](#causeother).
+
+<span id="causepred" label="causepred">\[causepred\]</span> *The
+**explosion <u>caused</u>** the house **to collapse**.*
+
+<span id="causeother" label="causeother">\[causeother\]</span> *The
+house **collapsed** <u>because</u> of the **explosion**.*
+
+## Special cases
+
+There are some common constructions where languages may use multiple
+words to express a single event. In all of these cases, only one event
+is identified.  
+**Complex predicates.** Following TimeML (), complex predicates
+correspond to a single event. Complex predicates can be identified
+following some of FrameNet’s semantic guidelines for support predicates
+(). Complex predicates in English generally consist of a *verb + noun*
+combination, as shown in [\[compred\]](#compred).
+
+<span id="compred" label="compred">\[compred\]</span> *She <u>took a
+**walk**</u> around the block.*
+
+With complex predicates in English, the noun supplies the bulk of the
+semantic information; in [\[compred\]](#compred), the event describes an
+act of walking, not an act of taking. Furthermore, the meaning of the
+verb in a complex predicate has a different meaning when used by itself
+(i.e., there is no actual taking involved in *take a walk*). The final
+criterion for the identification of complex predicates is that the
+support verb (in FrameNet’s terms) is fixed (i.e., a particular noun
+always occurs with the same support verb). For example, you can’t say
+*\*make a walk* or *\*give a walk*. Similarly, *give a talk* and *make a
+choice* also have fixed support verbs (*\*take a talk*, *\*take a
+choice*). The event noun (e.g., *walk, talk, choice*) in these cases is
+identified as the event.  
+**Light verbs.** There are a number of verbs in English that only
+indicate the occurrence of an event expressed elsewhere, such as
+*happen, occur, take place*, etc.
+
+<span id="lightv" label="lightv">\[lightv\]</span> *The **trip**
+<u>happened</u> over Spring Break.*
+
+In [\[lightv\]](#lightv), *happened* only indicates that the *trip*
+event occurred. These light verbs are not identified as events;
+therefore, in [\[lightv\]](#lightv), only *trip* is identified as an
+event.  
+**Cognate objects.** There are constructions in which a verb and its
+object refer to the same event; often, the verb and the noun are
+morphologically related. English allows a few constructions of this
+type, as in [\[cogobj\]](#cogobj); other languages may make more
+extensive use of this construction.
+
+<span id="cogobj" label="cogobj">\[cogobj\]</span> *She **laughed** <u>a
+hearty laugh</u>.*
+
+Like the other special cases discussed here, only a single event is
+identified, since semantically there is only one event. For cognate
+objects, only the verb is identified as an event.  
+**Aspectual verbs.** Languages have various ways to express aspectual
+distinctions. English uses aspectual verbs (separate from the main verb)
+in order to express inceptive ([\[incep\]](#incep)), continuative
+([\[cont\]](#cont)), terminative ([\[term\]](#term)), and completive
+([\[comp\]](#comp)) phases of an event.
+
+<span id="incep" label="incep">\[incep\]</span> *He <u>started</u>
+**painting** the wall.*
+
+<span id="cont" label="cont">\[cont\]</span> *He <u>kept on</u>
+**painting** the wall.*
+
+<span id="term" label="term">\[term\]</span> *He <u>stopped</u>
+**painting** the wall.*
+
+<span id="comp" label="comp">\[comp\]</span> *He <u>finished</u>
+**painting** the wall.*
+
+Only the verb that expresses the event (here, *paint*) is identified as
+an event. The aspectual verbs inform the aspectual annotation of the
+verb (see [3](#aspectannotation)), but they are not identified as
+separate events.
+
+Aspectual verbs may also be used with event nominals, as in
+[\[aspectnom\]](#aspectnom), or with states in
+[\[aspectstate\]](#aspectstate).
+
+<span id="aspectnom" label="aspectnom">\[aspectnom\]</span> *She
+<u>finished</u> **the race**.*
+
+<span id="aspectstate" label="aspectstate">\[aspectstate\]</span> *The
+**protests** <u>turned</u> **violent**.*
+
+These should be treated in the same way as constructions with verbs.
+That is, the aspectual verbs are not themselves identified as events.
+The event nominal, like *race* in [\[aspectnom\]](#aspectnom), or the
+word expressing the state, like *violent* in
+[\[aspectstate\]](#aspectstate), are identified as events.
+
+## Implicit events
+
+Since UMR annotates meaning, and not form, there are situations where
+events are identified in the absence of explicit linguistic material.
+These correspond to events which are implicit, given the context, but
+not overtly expressed. We encourage annotators to be conservative on
+this front; when in doubt, don’t add an implicit event.
+
+We’ve identified two types of situations in which we need to identify an
+implicit event: those where the implicit event corresponds to an event
+mentioned earlier in the text (as in [\[specific\]](#specific)), and
+those where it does not (as in [\[nonspecific\]](#nonspecific)).
+
+<span id="specific" label="specific">\[specific\]</span>
+
+<span id="smoke" label="smoke">\[smoke\]</span> *John was **smoking** on
+the corner of the street, but when he **saw** me, he stopped* <u>
+**\[smoking\]**</u>.
+
+<span id="leave" label="leave">\[leave\]</span> *They **told** me “a
+card was **left** on Tuesday” (no it wasn’t* <u>**\[left\]**</u> *of
+course)...*
+
+In [\[smoke\]](#smoke), there is an implicit second *smoking* event and
+in [\[leave\]](#leave), there is an implicit second *leave* event. These
+implicit events should be annotated as co-referential with the event
+mentioned earlier in the text (see §[2](#coref)).
+
+In [\[nonspecific\]](#nonspecific), however, the implicit events don’t
+have a relationship with an event previously mentioned in the text;
+instead, they refer to generic events which can be filled in from
+context.
+
+<span id="nonspecific" label="nonspecific">\[nonspecific\]</span>
+
+<span id="say" label="say">\[say\]</span> ***Phoned** Amtrak on
+Wednesday,* <u>**\[they said\]**</u> *“We **need** a consignment
+number”.*
+
+<span id="go" label="go">\[go\]</span> *“I have **ordered** the Coast
+Guard and our entire naval force in the (Central Philippines) region*
+<u>**\[to go\]**</u> *to the area,” she **said**.*
+
+In [\[say\]](#say), the quotation marks make it clear that there is an
+implicit *say* event. In [\[go\]](#go), we can identify a very general
+*go* event, since *ordered...to the area* implies a motion event. For
+these types of implicit events, the most abstract, least specific event
+should be identified. For example in [\[go\]](#go), we could make an
+assumption based on context clues (e.g., *Coast Guard, naval force*),
+that the type of motion event is *sail*. But, that assumption may not be
+accurate (and may not be shared amongst annotators); therefore, the most
+general event possible should be identified.
+
+## Modal events
+
+Different types of modal words may or may not be identified as events.
+First, grammaticalized modals, as in [\[modalgramm\]](#modalgramm), are
+not identified as events.
+
+<span id="modalgramm" label="modalgramm">\[modalgramm\]</span>
+
+<span id="may" label="may">\[may\]</span> *She <u>might</u> **be
+eating** pizza.*
+
+<span id="can" label="can">\[can\]</span> *She <u>can</u> **speak**
+Spanish.*
+
+<span id="should" label="should">\[should\]</span> *He <u>should</u>
+**bake** a cake for tomorrow.*
+
+The modalized event, e.g. *be eating* in [\[may\]](#may), is identified
+as an event but the modal is not. This also applies for modals that take
+the form of predicate adjectives, as in
+[\[predadjmodal\]](#predadjmodal).
+
+<span id="predadjmodal" label="predadjmodal">\[predadjmodal\]</span>
+
+*It <u>is possible</u> that she **is eating** pizza.*
+
+*She <u>is able</u> **to speak** Spanish.*
+
+Although these types of modals look like states in predication (and
+therefore worthy of identification as an event), they should be regarded
+the same as more grammaticalized modals and not identified as events.
+
+Verbs which express mental attitudes, desires, intentions, and indicate
+the modalized value of their complement are identified as their own
+events, as in [\[modalverb\]](#modalverb).
+
+<span id="modalverb" label="modalverb">\[modalverb\]</span>
+
+<span id="expect" label="expect">\[expect\]</span> *I <u>**expect**</u>
+that he will **arrive** by 4pm.*
+
+<span id="want" label="want">\[want\]</span> *She <u>**wants**</u> **to
+travel** to London.*
+
+<span id="allow" label="allow">\[allow\]</span> *They’re not
+<u>**allowed**</u> **to leave** yet.*
+
+<span id="need" label="need">\[need\]</span> *We <u>**need**</u> **to
+meet** earlier tomorrow.*
+
+There is one exception to this: events that attribute beliefs to a
+conceiver, e.g. *think, believe*, are not identified as events, as shown
+in [\[beliefs\]](#beliefs).
+
+<span id="beliefs" label="beliefs">\[beliefs\]</span>
+
+<span id="believe" label="believe">\[believe\]</span> *Mary
+<u>believes</u> that he already **ate** dinner.*
+
+<span id="think" label="think">\[think\]</span> *She <u>thinks</u> that
+he’ll **be late**.*
+
+Belief verbs will not be identified as events, since they correspond to
+the links between events in the modal strength dependency structure (see
+§[4](#modalannotation)).
+ 
+ 
+ 
+ #### Part 2-1-6. Participant identification
+ 
 ### Part 2-2. UMR relations 
    #### Predicate Argument Structure
 ### Part 2-3. UMR features
    #### Aspect
+   
+   The aspect annotation captures the internal temporal and qualitative
+structure of each event. This aspect annotation does not correspond to
+specific verbs or grammatical constructions in a language, but
+characterizes the nature of the event in context. As will be seen, this
+will involve taking aspectual constructions, temporal expressions, and
+noun phrases into account in order to determine the aspect annotation of
+the event. Each event will be annotated with one of six aspectual
+values:
+
+  - <span>Not Applicable (NA)</span>
+
+  - <span>HABITUAL</span>
+
+  - <span>STATE</span>
+
+  - <span>ACTIVITY</span>
+
+  - <span>ENDEAVOR</span>
+
+  - <span>PERFORMANCE</span>
+
+Certain types of events are not annotated for aspect; these will receive
+the <span>Not Applicable</span> annotation. Events that occur habitually
+are annotated as <span>HABITUAL</span>. All states are simply annotated
+as <span>STATE</span>, while for processes, annotators choose between
+<span>ACTIVITY</span>, <span>ENDEAVOR</span>, and
+<span>PERFORMANCE</span>. Annotators proceed through a series of
+decisions, represented in Figure 1, in order to select the appropriate
+aspect annotation for each event.
+
+Steps \#1, \#2, and \#3 in the decision tree concern the <span>Not
+Applicable</span> annotation. Step \#4 selects events for the
+<span>HABITUAL</span> annotation. Step \#5 distinguishes
+<span>STATE</span>s from processes. Step \#6 identifies events for the
+<span>ACTIVITY</span> annotation. Steps \#7, \#8, and \#9 concern the
+distinction between the <span>ENDEAVOR</span> and
+<span>PERFORMANCE</span> annotations.
+
+## 1\. Event Nominal?
+
+The first point in the decision tree concerns the morphosyntactic
+expression of the event. Events expressed as nominals often lack any
+grammatical clues as to their aspectual structure. This makes
+determining an aspectual annotation value difficult. Therefore, events
+expressed as event nominals, as in [\[eventnoms\]](#eventnoms), are
+annotated as <span>NA</span>.
+
+<span id="eventnoms" label="eventnoms">\[eventnoms\]</span>
+
+<span id="meeting" label="meeting">\[meeting\]</span> *He presented his
+research at **the meeting** yesterday.*  
+<span>meeting: NA</span>
+
+<span id="game" label="game">\[game\]</span> *After **the game**, she
+went home.*  
+<span>game: NA</span>
+
+<span id="operation" label="operation">\[operation\]</span> *The surgeon
+finished **the operation** at 3pm.*  
+<span>operation: NA</span>
+
+Any event packaged in a referring expression is considered an event
+nominal and annotated with <span>NA</span>. This includes underived
+nominals, nominalizations, and gerunds, as in [\[gerund\]](#gerund).
+
+<span id="gerund" label="gerund">\[gerund\]</span>
+
+<span id="training" label="training">\[training\]</span> ***The second
+training** was cancelled yesterday.*  
+<span>training: NA</span>
+
+<span id="barking" label="barking">\[barking\]</span> *The dog
+interrupted the meeting with **his barking**.*  
+<span>barking: NA</span>
+
+Note that *-ing* forms in English can occur in a variety of
+constructions; they should only be treated as event nominals when they
+are used in referring expressions (as in [\[training\]](#training) and
+[\[barking\]](#barking) above). When they occur in other types of
+constructions, as in [\[stopbarking\]](#stopbarking), they should not
+receive an aspect annotation at this point and should continue on to the
+next step.
+
+<span id="stopbarking" label="stopbarking">\[stopbarking\]</span> *The
+dog stopped **barking** for a few seconds.*
+
+Event nominals that occur in predicate nominal constructions, as in
+[\[earthquake\]](#earthquake), are also not annotated at this point;
+these are treated like other predicate nominal constructions (see step
+\#5 below).
+
+<span id="earthquake" label="earthquake">\[earthquake\]</span>
+
+*It was **an earthquake**.*
+
+## 2\. Non-real event?
+
+The next step in the decision tree involves the polarity and epistemic
+strength of the event (i.e., the values annotated in the modal strength
+dependency in the second pass). Events which have negative polarity
+and/or non-full epistemic strength are annotated as <span>NA</span>.
+This is because it is difficult to assess (and therefore annotate) the
+internal temporal structure of events which have not actually occurred,
+or are not actually occurring.
+
+Negative polarity events are often signalled by negative morphemes, as
+in [\[negpol\]](#negpol). The negative polarity of an event may also be
+signalled by complement-taking predicates which indicate that their
+complement did not occur, as in [\[told\]](#told), or counterfactual
+constructions, as in [\[counterfact\]](#counterfact). All negative
+polarity events are annotated as <span>NA</span>.
+
+<span id="negpol" label="negpol">\[negpol\]</span>
+
+<span id="eat" label="eat">\[eat\]</span> *She <u>didn’t</u> **eat**
+pizza for dinner last night.*  
+<span>eat: NA</span>
+
+<span id="attend" label="attend">\[attend\]</span> *He <u>never</u>
+**arrived** at the party.*  
+<span>arrive: NA</span>
+
+<span id="doctor" label="doctor">\[doctor\]</span> *He **is** <u>not</u>
+**a doctor**.*  
+<span>be-doctor: NA</span>
+
+<span id="bw" label="bw">\[bw\]</span> *That cat **<u>wasn’t</u> black
+and white.***  
+<span>be-black-and-white: NA</span>
+
+<span id="told" label="told">\[told\]</span> *I <u>wish</u> she had
+**told** me about it.*  
+<span>tell: NA</span>
+
+<span id="counterfact" label="counterfact">\[counterfact\]</span> *If it
+had **rained**, I would have **stayed** home.*  
+<span>rain: NA</span>  
+<span>stay: NA</span>
+
+Another way in which an event may be considered ‘non-real’ is if it has
+non-full epistemic strength. Events which are annotated with non-full
+epistemic strength in the modal strength annotation also receive the
+<span>NA</span> aspect value. The modal strength annotation, however,
+does not apply a single epistemic strength value to each event; instead,
+the modal strength annotation takes the form of a dependency structure,
+with epistemic strength values characterizing the links between events
+and conceivers/sources.
+
+When the event is a direct child of the <span>AUTHOR</span> node in the
+modal strength dependency, only the epistemic strength value of the
+single link between the event and <span>AUTHOR</span> needs to be taken
+into account. If this link has a value other than <span>Aff</span>, then
+the event should receive the <span>NA</span> aspect annotation; see
+[\[nonfull\]](#nonfull).
+
+<span id="nonfull" label="nonfull">\[nonfull\]</span>
+
+<span id="hike" label="hike">\[hike\]</span> *He <u>might</u> have
+**hiked** this trail yesterday.*  
+<span>hike: NA</span>
+
+<span id="leave" label="leave">\[leave\]</span> *It’s <u>likely</u> that
+she already **left**.*  
+<span>leave: NA</span>
+
+<span id="prepare" label="prepare">\[prepare\]</span> *She left early,
+<u>in order to</u> **prepare** dinner.*  
+<span>prepare: NA</span>
+
+When events are embedded underneath non-<span>AUTHOR</span> conceivers,
+there must be <span>Aff</span> values on every link from the event back
+up to the <span>AUTHOR</span>, in order for an event to be considered
+‘real’. If any link between the event and the document’s
+<span>AUTHOR</span> node has a value other than <span>Aff</span>, the
+event should be annotated as <span>NA</span>. Example
+[\[multlinks\]](#multlinks) shows events that are annotated as
+<span>NA</span> because one the links between the event node and the
+<span>AUTHOR</span> node has non-full epistemic strength.
+
+<span id="multlinks" label="multlinks">\[multlinks\]</span>
+
+<span id="fly" label="fly">\[fly\]</span> *He <u>wants</u> **to fly** to
+New York.*  
+<span>fly: NA</span>
+
+<span id="buy" label="buy">\[buy\]</span> *She <u>hopes</u> **to buy** a
+house.*  
+<span>buy: NA</span>
+
+<span id="cond" label="cond">\[cond\]</span> *If she **left** early, she
+would **be home** by now.*  
+<span>leave: NA</span>  
+<span>be-home: NA</span>
+
+Note that it is only the event expressed in the complement that receives
+the <span>NA</span> annotation. The modal verbs themselves (*want*,
+*hope*) are underneath <span>Aff</span> links in the modal strength
+dependency; therefore, they are not yet given an aspect annotation
+value.
+
+When a conceiver’s thoughts or speech are presented with certainty by
+the author, as in [\[allpos\]](#allpos), there are <span>Aff</span>
+values on all of the links between the event and the
+<span>AUTHOR</span>.
+
+<span id="allpos" label="allpos">\[allpos\]</span>
+
+<span id="saypos" label="saypos">\[saypos\]</span> *Mary <u>said</u>
+that she **went** to Santa Fe.*
+
+<span id="reportpos" label="reportpos">\[reportpos\]</span> *The New
+York Times <u>reported</u> that Congress **voted** on the bill this
+afternoon.*
+
+<span id="believe" label="believe">\[believe\]</span> *She <u>thinks</u>
+that the cat **stole** the dog’s food.*
+
+Therefore, these types of events are not annotated for aspect at this
+point, and move on to the next step.
+
+## 3\. Future event?
+
+Events that are predicted to occur in the future are also difficult to
+annotate for aspect, since the event has not yet occurred. Therefore,
+future events are also annotated with the <span>NA</span> value, as in
+[\[fut\]](#fut).
+
+<span id="fut" label="fut">\[fut\]</span>
+
+<span id="come" label="come">\[come\]</span> *He’<u>ll</u> **come**
+around tomorrow.*  
+<span>come: NA</span>
+
+<span id="write" label="write">\[write\]</span> *She <u>is going to</u>
+**write** the paper tomorrow.*  
+<span>write: NA</span>
+
+Events in the future may also have negative polarity or non-full
+epistemic stance; these events have already been annotated as
+<span>NA</span> in Step \#2.
+
+## 4\. Stative?
+
+The next step in the decision tree assesses whether the event is a
+<span>STATE</span> or a process (either <span>ACTIVITY</span>,
+<span>ENDEAVOR</span>, or <span>PERFORMANCE</span>). The distinction
+between states and processes is necessary for event identification (as
+states are only identified as events when predicated). According to ,
+states are those events which are stative—that is, no change takes place
+over the course of the event. There are various ways to express states
+in predication, shown in [\[statepred\]](#statepred); note that entities
+and locations in predication (as in [\[nompred\]](#nompred) and
+[\[locpred\]](#locpred), are also annotated as <span>STATE</span>).
+
+<span id="statepred" label="statepred">\[statepred\]</span>
+
+<span id="verb" label="verb">\[verb\]</span> *My cat **loves** tuna.*  
+<span>love: STATE</span>
+
+<span id="adjpred" label="adjpred">\[adjpred\]</span> *The doctor **is
+tall**.*  
+<span>be-tall: STATE</span>
+
+<span id="locpred" label="locpred">\[locpred\]</span> *The book **is on
+the table**.*  
+<span>be-on-the-table: STATE</span>
+
+<span id="nompred" label="nompred">\[nompred\]</span> *She **is an
+architect**.*  
+<span>be-architect: STATE</span>
+
+<span id="locpred" label="locpred">\[locpred\]</span> *Your glass **is
+in the kitchen**.*  
+<span>be-in-the-kitchen: STATE</span>
+
+States can be expressed as verbs (e.g. *love*), adjectival predicates
+(*be tall*), locative constructions (*be on the table*), and nominal
+predicates (*be an architect*).
+
+There are different types of states, shown in
+[\[statetypes\]](#statetypes), however the UMR annotation does not
+distinguish these: they are all annotated as <span>STATE</span>.
+
+<span id="statetypes" label="statetypes">\[statetypes\]</span>
+
+<span id="temp" label="temp">\[temp\]</span> *My cat **is hungry**.*  
+<span>be-hungry: STATE</span>
+
+<span id="inherent" label="inherent">\[inherent\]</span> *My cat **is
+black and white**.*  
+<span>be-black-and-white: STATE</span>
+
+<span id="end" label="end">\[end\]</span> *He **was sick** this weekend,
+but recovered by Monday.*  
+<span>be-sick: STATE</span>
+
+<span id="ongoingstate" label="ongoingstate">\[ongoingstate\]</span>
+*She **is nervous** today.*  
+<span>be-nervous: STATE</span>
+
+<span id="ambig" label="ambig">\[ambig\]</span> *She **was sick**
+yesterday.*  
+<span>be-sick: STATE</span>
+
+Both temporary states ([\[temp\]](#temp)) and stable (inherent or
+permanent) states ([\[inherent\]](#inherent)) are annotated as
+<span>STATE</span>. Likewise, states that have come to an end
+([\[end\]](#end)), states that are ongoing
+([\[ongoingstate\]](#ongoingstate)), and states where it is unclear
+whether or not they are ongoing ([\[ambig\]](#ambig)), are all annotated
+<span>STATE</span>.
+
+Modal verbs, as in [\[mod\]](#mod), are also annotated as
+<span>STATE</span>.
+
+<span id="mod" label="mod">\[mod\]</span>
+
+<span id="want" label="want">\[want\]</span> *He **wants** to travel to
+Albuquerque.*  
+<span>want: STATE</span>
+
+<span id="need" label="need">\[need\]</span> *The cat **needs** to be
+fed.*  
+<span>need: STATE</span>
+
+<span id="dread" label="dread">\[dread\]</span> *He**’s dreading** their
+decision.*  
+<span>dread: STATE</span>
+
+Ability modals, as in [\[ability\]](#ability), are also annotated with
+<span>STATE</span>.
+
+<span id="ability" label="ability">\[ability\]</span>
+
+<span id="able" label="able">\[able\]</span> *She <u>is able to</u>
+**sing** that aria.*  
+<span>sing: STATE</span>
+
+<span id="can" label="can">\[can\]</span> *This car <u>can</u> **go** up
+to 150 mph.*  
+<span>go: STATE</span>
+
+In this analysis, ability modals refer to a static state of affairs,
+i.e. an entity possesses the relevant ability. For examples like
+[\[able\]](#able), ability modals may look more like event
+quantification. That is, there are probably multiple singing events that
+this example is generalizing over. Examples like [\[can\]](#can),
+however, show how ability modals are more like states. It is possible
+that the car has never actually gone as fast as 150 mph; the car just
+has the parts and (theoretical) ability to do so. Therefore, all types
+of ability modals, both [\[able\]](#able) and [\[can\]](#can), are
+analyzed as states and annotated as such.
+
+There is a type of event, called “inactive actions” by , which is
+semantically intermediate between states and processes. In many
+languages, they can be construed either way. For example, English *lie*
+can occur in the Progressive (*Bill **is lying** on the bed*) or the
+Simple Present (*The Sandias **lie** to the east of Albuquerque*). And
+across languages there is variation as to the default construal of
+inactive actions. The most frequent inactive actions are posture verbs
+(*sit, stand, lie, hang*), perception verbs (*see/look at, watch,
+hear/listen to, feel*), some sensation verbs (*ache*), mental activity
+verbs (*think, understand*), and verbs of operation/function (*work* in
+*This washing machine **works/is working***). For the UMR annotation,
+inactive actions in all constructions are annotated as
+<span>STATE</span>.
+
+At this point, all events that have not yet received an aspect
+annotation are processes. Processes are annotated as either
+<span>ACTIVITY, ENDEAVOR</span>, or <span>PERFORMANCE</span>. These
+values differ in the boundedness of the event both in terms of temporal
+progression and qualitative state. Steps \#6-\#9 distinguish between
+different types of processes.
+
+## 5\. Habitual?
+
+The next step in the decision tree concerns the application of the
+<span>HABITUAL</span> aspect value. This value should be applied to all
+events that are presented as occurring usually or habitually, as in
+[\[hab\]](#hab).
+
+<span id="hab" label="hab">\[hab\]</span>
+
+<span id="bake" label="bake">\[bake\]</span> *He **bakes** pies.*  
+<span>bake: HABITUAL</span>
+
+<span id="ride" label="ride">\[ride\]</span> *She **rides** her bike to
+work.*  
+<span>ride: HABITUAL</span>
+
+<span id="vacation" label="vacation">\[vacation\]</span> *They
+**vacation** in Taos every winter.*  
+<span>vacation: HABITUAL</span>
+
+<span id="vacationpst" label="vacationpst">\[vacationpst\]</span> *They
+**used to vacation** in Taos every winter.*  
+<span>vacation: HABITUAL</span>
+
+In English, habitual events are signalled by the Simple Present
+construction. Note that the <span>HABITUAL</span> annotation is not used
+for ability modals (e.g., *he can bake apple pie*); these events should
+continue on to the next step.
+
+## 6\. Evidence that event ended?
+
+The <span>ACTIVITY</span> label applies when there is no evidence that
+the event has come to an end, as in [\[activity\]](#activity).
+
+<span id="activity" label="activity">\[activity\]</span>
+
+<span id="ongoing" label="ongoing">\[ongoing\]</span> *He is still
+**writing** his paper.*  
+<span>write: ACTIVITY</span>
+
+<span id="ambiguous" label="ambiguous">\[ambiguous\]</span> *He was
+**writing** his paper yesterday.*  
+<span>write: ACTIVITY</span>
+
+This covers cases where it is clear that the process is still ongoing at
+document creation time, as in [\[ongoing\]](#ongoing), but also cases
+where it is ambiguous whether or not the process continues, as in
+[\[ambiguous\]](#ambiguous).
+
+This step is largely dependent on context and real world knowledge,
+however there are some grammatical cues that can help at this point in
+the decision tree. Events in the present tense, as in
+[\[playact\]](#playact), will always be annotated as
+<span>ACTIVITY</span>.
+
+<span id="playact" label="playact">\[playact\]</span> *He **is playing**
+the violin.*  
+<span>play: ACTIVITY</span>
+
+Inceptive and continuative aspectual auxiliaries, as in
+[\[incon\]](#incon), also do not imply that an event has (necessarily)
+ended.
+
+<span id="incon" label="incon">\[incon\]</span>
+
+<span id="playstart" label="playstart">\[playstart\]</span> *He
+<u>started</u> **playing** the violin.*  
+<span>play: ACTIVITY</span>
+
+<span id="playkeep" label="playkeep">\[playkeep\]</span> *He <u>kept
+on</u> **playing** the violin.*  
+<span>play: ACTIVITY</span>
+
+If there is clear evidence that the event has come to an end prior to
+Document Creation Time (DCT), it moves on to the next step.
+
+## 7\. Aspectual marking?
+
+Steps \#7, \#8, and \#9 distinguish between the <span>ENDEAVOR</span>
+and <span>PERFORMANCE</span> aspect annotations. Both the
+<span>ENDEAVOR</span> and <span>PERFORMANCE</span> aspectual types
+entail that the process has come to an end; they are distinguished by
+the boundedness of the event in terms of qualitative state. The
+<span>PERFORMANCE</span> value is used when the event reaches a result
+state distinct from the base (start) state, that is, a specific
+“natural” endpoint. The <span>PERFORMANCE</span> value lumps
+together Vendler’s achievements (punctual) and accomplishments
+(durative). The <span>ENDEAVOR</span> value is used when the events
+ends, but does not reach a distinct result state.
+
+The strongest piece of evidence for this decision are aspectual
+constructions that distinguish between completive and terminative
+events. In English, these are expressed by aspectual auxiliary verbs,
+shown in [\[aspectaux\]](#aspectaux).
+
+<span id="aspectaux" label="aspectaux">\[aspectaux\]</span>
+
+<span id="completiveaux" label="completiveaux">\[completiveaux\]</span>
+*Mary <u>finished</u> **mowing** the lawn.*  
+<span>mow: PERFORMANCE</span>
+
+<span id="terminativeaux" label="terminativeaux">\[terminativeaux\]</span>
+*Mary <u>stopped</u> **mowing** the lawn.*  
+<span>mow: ENDEAVOR</span>
+
+Completive aspectual auxiliaries, like *finish* or *complete*, indicate
+that the event expressed by the main verb has reached a distinct result
+state and therefore should be annotated as <span>PERFORMANCE</span>.
+Terminative aspectual auxiliaries, like *stop* or *cease*, indicate that
+the event has ended without reaching a distinct result state, and
+therefore the event is annotated as <span>ENDEAVOR</span>. In languages
+that have grammaticalized aspect systems, the <span>PERFORMANCE</span>
+value corresponds to perfective categories and the <span>ENDEAVOR</span>
+value corresponds to the imperfective and/or progressive categories.
+
+If there isn’t an aspectual auxiliary in the clause, then the event
+moves on to the next step.
+
+## 8\. Temporal adverbial?
+
+The second strongest piece of evidence for the
+<span>ENDEAVOR/PERFORMANCE</span> distinction is the presence of a
+temporal adverbial. Clauses with container adverbials, as in
+[\[container\]](#container), are annotated with the
+<span>PERFORMANCE</span> value; clauses with durative adverbials, as in
+[\[durative\]](#durative), are annotated with the <span>ENDEAVOR</span>
+value.
+
+<span id="adverbial" label="adverbial">\[adverbial\]</span>
+
+<span id="container" label="container">\[container\]</span>
+
+*Mary **mowed** the lawn <u>in thirty minutes</u>.*  
+<span>mow: PERFORMANCE</span>
+
+<span id="durative" label="durative">\[durative\]</span>
+
+*Mary **mowed** the lawn <u>for thirty minutes</u>.*  
+<span>mow: ENDEAVOR</span>
+
+Example [\[container\]](#container) implies that Mary finished mowing
+the lawn; therefore the event is annotated with the
+<span>PERFORMANCE</span> value. Example [\[durative\]](#durative)
+doesn’t imply that Mary has finished mowing the lawn; therefore the
+event is annotated with the <span>ENDEAVOR</span> value.
+
+If there isn’t a durative or container adverbial in the clause, then the
+event moves on to the final step.
+
+## 9\. Non-result Path?
+
+Certain types of path expressions indicate that an event did not reach a
+specific result state; these are called non-result paths. Examples of
+non-result paths are show below in [\[nonresult\]](#nonresult).
+
+<span id="nonresult" label="nonresult">\[nonresult\]</span>
+
+<span id="wander" label="wander">\[wander\]</span> *They **wandered**
+<u>around the city</u>.*  
+<span>wander: ENDEAVOR</span>
+
+<span id="walk" label="walk">\[walk\]</span> *He **walked** <u>along the
+river</u>.*  
+<span>walk: ENDEAVOR</span>
+
+<span id="drive" label="drive">\[drive\]</span> *They **drove** <u>past
+the junction</u>.*  
+<span>drive: ENDEAVOR</span>
+
+Events with non-result paths are annotated as <span>ENDEAVOR</span>.
+
+At this point, every event that is left without an aspect annotation is
+annotated as <span>PERFORMANCE</span>. These will include processes that
+have ended and reached a result state, as shown below in
+[\[result\]](#result).
+
+<span id="result" label="result">\[result\]</span>
+
+<span id="atecookies" label="atecookies">\[atecookies\]</span> *The dog
+**ate** all the cookies.*  
+<span>eat: PERFORMANCE</span>
+
+<span id="walkto" label="walkto">\[walkto\]</span> *She **walked** to
+the grocery store.*  
+<span>walk: PERFORMANCE</span>
+
+<span id="jump" label="jump">\[jump\]</span> *The horse **jumped**.*  
+<span>jump: PERFORMANCE</span>
+
+<span id="play" label="play">\[play\]</span> *We **played** video games
+yesterday.*  
+<span>play: PERFORMANCE</span>
+
 ### Part 2-4. Quantification, negation
 
 
@@ -962,18 +1945,6 @@ provide for this.
     (see §[3](#aspectannotation)). 2.  We are considering using the <span>NA</span> value for non-real
     events as well, but for now, these types of events should receive
     one of the other aspect values. -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Part 3-3. Modal Dependency
 
