@@ -742,7 +742,7 @@ the links between events in the modal strength dependency structure (see
 ### Part 2-3. UMR features
    #### Aspect
    
-   The aspect annotation captures the internal temporal and qualitative
+The aspect annotation captures the internal temporal and qualitative
 structure of each event. This aspect annotation does not correspond to
 specific verbs or grammatical constructions in a language, but
 characterizes the nature of the event in context. As will be seen, this
@@ -786,54 +786,54 @@ The first point in the decision tree concerns the morphosyntactic
 expression of the event. Events expressed as nominals often lack any
 grammatical clues as to their aspectual structure. This makes
 determining an aspectual annotation value difficult. Therefore, events
-expressed as event nominals, as in [\[eventnoms\]](#eventnoms), are
+expressed as event nominals, as in [\[26\]](#eventnoms), are
 annotated as <span>NA</span>.
 
-<span id="eventnoms" label="eventnoms">\[eventnoms\]</span>
+<span id="eventnoms" label="eventnoms">\[26\]</span>
 
-<span id="meeting" label="meeting">\[meeting\]</span> *He presented his
+<span id="meeting" label="meeting">\[a\]</span> *He presented his
 research at **the meeting** yesterday.*  
 <span>meeting: NA</span>
 
-<span id="game" label="game">\[game\]</span> *After **the game**, she
+<span id="game" label="game">\[b\]</span> *After **the game**, she
 went home.*  
 <span>game: NA</span>
 
-<span id="operation" label="operation">\[operation\]</span> *The surgeon
+<span id="operation" label="operation">\[c\]</span> *The surgeon
 finished **the operation** at 3pm.*  
 <span>operation: NA</span>
 
 Any event packaged in a referring expression is considered an event
 nominal and annotated with <span>NA</span>. This includes underived
-nominals, nominalizations, and gerunds, as in [\[gerund\]](#gerund).
+nominals, nominalizations, and gerunds, as in [\[27\]](#gerund).
 
-<span id="gerund" label="gerund">\[gerund\]</span>
+<span id="gerund" label="gerund">\[27\]</span>
 
-<span id="training" label="training">\[training\]</span> ***The second
+<span id="training" label="training">\[a\]</span> ***The second
 training** was cancelled yesterday.*  
 <span>training: NA</span>
 
-<span id="barking" label="barking">\[barking\]</span> *The dog
+<span id="barking" label="barking">\[b\]</span> *The dog
 interrupted the meeting with **his barking**.*  
 <span>barking: NA</span>
 
 Note that *-ing* forms in English can occur in a variety of
 constructions; they should only be treated as event nominals when they
-are used in referring expressions (as in [\[training\]](#training) and
-[\[barking\]](#barking) above). When they occur in other types of
-constructions, as in [\[stopbarking\]](#stopbarking), they should not
+are used in referring expressions (as in [\[27a\]](#training) and
+[\[27b\]](#barking) above). When they occur in other types of
+constructions, as in [\[28\]](#stopbarking), they should not
 receive an aspect annotation at this point and should continue on to the
 next step.
 
-<span id="stopbarking" label="stopbarking">\[stopbarking\]</span> *The
+<span id="stopbarking" label="stopbarking">\[28\]</span> *The
 dog stopped **barking** for a few seconds.*
 
 Event nominals that occur in predicate nominal constructions, as in
-[\[earthquake\]](#earthquake), are also not annotated at this point;
+[\[29\]](#earthquake), are also not annotated at this point;
 these are treated like other predicate nominal constructions (see step
 \#5 below).
 
-<span id="earthquake" label="earthquake">\[earthquake\]</span>
+<span id="earthquake" label="earthquake">\[29\]</span>
 
 *It was **an earthquake**.*
 
@@ -848,35 +848,35 @@ internal temporal structure of events which have not actually occurred,
 or are not actually occurring.
 
 Negative polarity events are often signalled by negative morphemes, as
-in [\[negpol\]](#negpol). The negative polarity of an event may also be
+in [\[30\]](#negpol). The negative polarity of an event may also be
 signalled by complement-taking predicates which indicate that their
-complement did not occur, as in [\[told\]](#told), or counterfactual
-constructions, as in [\[counterfact\]](#counterfact). All negative
+complement did not occur, as in [\[30e\]](#told), or counterfactual
+constructions, as in [\[30f\]](#counterfact). All negative
 polarity events are annotated as <span>NA</span>.
 
-<span id="negpol" label="negpol">\[negpol\]</span>
+<span id="negpol" label="negpol">\[30\]</span>
 
-<span id="eat" label="eat">\[eat\]</span> *She <u>didn’t</u> **eat**
+<span id="eat" label="eat">\[a\]</span> *She <u>didn’t</u> **eat**
 pizza for dinner last night.*  
 <span>eat: NA</span>
 
-<span id="attend" label="attend">\[attend\]</span> *He <u>never</u>
+<span id="attend" label="attend">\[b\]</span> *He <u>never</u>
 **arrived** at the party.*  
 <span>arrive: NA</span>
 
-<span id="doctor" label="doctor">\[doctor\]</span> *He **is** <u>not</u>
+<span id="doctor" label="doctor">\[c\]</span> *He **is** <u>not</u>
 **a doctor**.*  
 <span>be-doctor: NA</span>
 
-<span id="bw" label="bw">\[bw\]</span> *That cat **<u>wasn’t</u> black
+<span id="bw" label="bw">\[d\]</span> *That cat **<u>wasn’t</u> black
 and white.***  
 <span>be-black-and-white: NA</span>
 
-<span id="told" label="told">\[told\]</span> *I <u>wish</u> she had
+<span id="told" label="told">\[e\]</span> *I <u>wish</u> she had
 **told** me about it.*  
 <span>tell: NA</span>
 
-<span id="counterfact" label="counterfact">\[counterfact\]</span> *If it
+<span id="counterfact" label="counterfact">\[f\]</span> *If it
 had **rained**, I would have **stayed** home.*  
 <span>rain: NA</span>  
 <span>stay: NA</span>
@@ -895,19 +895,19 @@ modal strength dependency, only the epistemic strength value of the
 single link between the event and <span>AUTHOR</span> needs to be taken
 into account. If this link has a value other than <span>Aff</span>, then
 the event should receive the <span>NA</span> aspect annotation; see
-[\[nonfull\]](#nonfull).
+[\[31\]](#nonfull).
 
-<span id="nonfull" label="nonfull">\[nonfull\]</span>
+<span id="nonfull" label="nonfull">\[31\]</span>
 
-<span id="hike" label="hike">\[hike\]</span> *He <u>might</u> have
+<span id="hike" label="hike">\[a\]</span> *He <u>might</u> have
 **hiked** this trail yesterday.*  
 <span>hike: NA</span>
 
-<span id="leave" label="leave">\[leave\]</span> *It’s <u>likely</u> that
+<span id="leave" label="leave">\[b\]</span> *It’s <u>likely</u> that
 she already **left**.*  
 <span>leave: NA</span>
 
-<span id="prepare" label="prepare">\[prepare\]</span> *She left early,
+<span id="prepare" label="prepare">\[c\]</span> *She left early,
 <u>in order to</u> **prepare** dinner.*  
 <span>prepare: NA</span>
 
@@ -917,21 +917,21 @@ up to the <span>AUTHOR</span>, in order for an event to be considered
 ‘real’. If any link between the event and the document’s
 <span>AUTHOR</span> node has a value other than <span>Aff</span>, the
 event should be annotated as <span>NA</span>. Example
-[\[multlinks\]](#multlinks) shows events that are annotated as
+[\[32\]](#multlinks) shows events that are annotated as
 <span>NA</span> because one the links between the event node and the
 <span>AUTHOR</span> node has non-full epistemic strength.
 
-<span id="multlinks" label="multlinks">\[multlinks\]</span>
+<span id="multlinks" label="multlinks">\[32\]</span>
 
-<span id="fly" label="fly">\[fly\]</span> *He <u>wants</u> **to fly** to
+<span id="fly" label="fly">\[a\]</span> *He <u>wants</u> **to fly** to
 New York.*  
 <span>fly: NA</span>
 
-<span id="buy" label="buy">\[buy\]</span> *She <u>hopes</u> **to buy** a
+<span id="buy" label="buy">\[b\]</span> *She <u>hopes</u> **to buy** a
 house.*  
 <span>buy: NA</span>
 
-<span id="cond" label="cond">\[cond\]</span> *If she **left** early, she
+<span id="cond" label="cond">\[c\]</span> *If she **left** early, she
 would **be home** by now.*  
 <span>leave: NA</span>  
 <span>be-home: NA</span>
@@ -943,20 +943,20 @@ dependency; therefore, they are not yet given an aspect annotation
 value.
 
 When a conceiver’s thoughts or speech are presented with certainty by
-the author, as in [\[allpos\]](#allpos), there are <span>Aff</span>
+the author, as in [\[33\]](#allpos), there are <span>Aff</span>
 values on all of the links between the event and the
 <span>AUTHOR</span>.
 
-<span id="allpos" label="allpos">\[allpos\]</span>
+<span id="allpos" label="allpos">\[33\]</span>
 
-<span id="saypos" label="saypos">\[saypos\]</span> *Mary <u>said</u>
+<span id="saypos" label="saypos">\[a\]</span> *Mary <u>said</u>
 that she **went** to Santa Fe.*
 
-<span id="reportpos" label="reportpos">\[reportpos\]</span> *The New
+<span id="reportpos" label="reportpos">\[b\]</span> *The New
 York Times <u>reported</u> that Congress **voted** on the bill this
 afternoon.*
 
-<span id="believe" label="believe">\[believe\]</span> *She <u>thinks</u>
+<span id="believe" label="believe">\[c\]</span> *She <u>thinks</u>
 that the cat **stole** the dog’s food.*
 
 Therefore, these types of events are not annotated for aspect at this
@@ -967,15 +967,15 @@ point, and move on to the next step.
 Events that are predicted to occur in the future are also difficult to
 annotate for aspect, since the event has not yet occurred. Therefore,
 future events are also annotated with the <span>NA</span> value, as in
-[\[fut\]](#fut).
+[\[34\]](#fut).
 
-<span id="fut" label="fut">\[fut\]</span>
+<span id="fut" label="fut">\[34\]</span>
 
-<span id="come" label="come">\[come\]</span> *He’<u>ll</u> **come**
+<span id="come" label="come">\[a\]</span> *He’<u>ll</u> **come**
 around tomorrow.*  
 <span>come: NA</span>
 
-<span id="write" label="write">\[write\]</span> *She <u>is going to</u>
+<span id="write" label="write">\[b\]</span> *She <u>is going to</u>
 **write** the paper tomorrow.*  
 <span>write: NA</span>
 
@@ -992,28 +992,28 @@ between states and processes is necessary for event identification (as
 states are only identified as events when predicated). According to ,
 states are those events which are stative—that is, no change takes place
 over the course of the event. There are various ways to express states
-in predication, shown in [\[statepred\]](#statepred); note that entities
-and locations in predication (as in [\[nompred\]](#nompred) and
-[\[locpred\]](#locpred), are also annotated as <span>STATE</span>).
+in predication, shown in [\[35\]](#statepred); note that entities
+and locations in predication (as in [\[35d\]](#nompred) and
+[\[35c\]](#locpred), are also annotated as <span>STATE</span>).
 
-<span id="statepred" label="statepred">\[statepred\]</span>
+<span id="statepred" label="statepred">\[35\]</span>
 
-<span id="verb" label="verb">\[verb\]</span> *My cat **loves** tuna.*  
+<span id="verb" label="verb">\[a\]</span> *My cat **loves** tuna.*  
 <span>love: STATE</span>
 
-<span id="adjpred" label="adjpred">\[adjpred\]</span> *The doctor **is
+<span id="adjpred" label="adjpred">\[b\]</span> *The doctor **is
 tall**.*  
 <span>be-tall: STATE</span>
 
-<span id="locpred" label="locpred">\[locpred\]</span> *The book **is on
+<span id="locpred" label="locpred">\[c\]</span> *The book **is on
 the table**.*  
 <span>be-on-the-table: STATE</span>
 
-<span id="nompred" label="nompred">\[nompred\]</span> *She **is an
+<span id="nompred" label="nompred">\[d\]</span> *She **is an
 architect**.*  
 <span>be-architect: STATE</span>
 
-<span id="locpred" label="locpred">\[locpred\]</span> *Your glass **is
+<span id="locpred" label="locpred">\[e\]</span> *Your glass **is
 in the kitchen**.*  
 <span>be-in-the-kitchen: STATE</span>
 
@@ -1022,77 +1022,77 @@ States can be expressed as verbs (e.g. *love*), adjectival predicates
 predicates (*be an architect*).
 
 There are different types of states, shown in
-[\[statetypes\]](#statetypes), however the UMR annotation does not
+[\[36\]](#statetypes), however the UMR annotation does not
 distinguish these: they are all annotated as <span>STATE</span>.
 
-<span id="statetypes" label="statetypes">\[statetypes\]</span>
+<span id="statetypes" label="statetypes">\[36\]</span>
 
-<span id="temp" label="temp">\[temp\]</span> *My cat **is hungry**.*  
+<span id="temp" label="temp">\[a\]</span> *My cat **is hungry**.*  
 <span>be-hungry: STATE</span>
 
-<span id="inherent" label="inherent">\[inherent\]</span> *My cat **is
+<span id="inherent" label="inherent">\[b\]</span> *My cat **is
 black and white**.*  
 <span>be-black-and-white: STATE</span>
 
-<span id="end" label="end">\[end\]</span> *He **was sick** this weekend,
+<span id="end" label="end">\[c\]</span> *He **was sick** this weekend,
 but recovered by Monday.*  
 <span>be-sick: STATE</span>
 
-<span id="ongoingstate" label="ongoingstate">\[ongoingstate\]</span>
+<span id="ongoingstate" label="ongoingstate">\[d\]</span>
 *She **is nervous** today.*  
 <span>be-nervous: STATE</span>
 
-<span id="ambig" label="ambig">\[ambig\]</span> *She **was sick**
+<span id="ambig" label="ambig">\[e\]</span> *She **was sick**
 yesterday.*  
 <span>be-sick: STATE</span>
 
-Both temporary states ([\[temp\]](#temp)) and stable (inherent or
-permanent) states ([\[inherent\]](#inherent)) are annotated as
+Both temporary states ([\[36a\]](#temp)) and stable (inherent or
+permanent) states ([\[36b\]](#inherent)) are annotated as
 <span>STATE</span>. Likewise, states that have come to an end
-([\[end\]](#end)), states that are ongoing
-([\[ongoingstate\]](#ongoingstate)), and states where it is unclear
-whether or not they are ongoing ([\[ambig\]](#ambig)), are all annotated
+([\[36c\]](#end)), states that are ongoing
+([\[36d\]](#ongoingstate)), and states where it is unclear
+whether or not they are ongoing ([\[36e\]](#ambig)), are all annotated
 <span>STATE</span>.
 
-Modal verbs, as in [\[mod\]](#mod), are also annotated as
+Modal verbs, as in [\[37\]](#mod), are also annotated as
 <span>STATE</span>.
 
-<span id="mod" label="mod">\[mod\]</span>
+<span id="mod" label="mod">\[37\]</span>
 
-<span id="want" label="want">\[want\]</span> *He **wants** to travel to
+<span id="want" label="want">\[a\]</span> *He **wants** to travel to
 Albuquerque.*  
 <span>want: STATE</span>
 
-<span id="need" label="need">\[need\]</span> *The cat **needs** to be
+<span id="need" label="need">\[b\]</span> *The cat **needs** to be
 fed.*  
 <span>need: STATE</span>
 
-<span id="dread" label="dread">\[dread\]</span> *He**’s dreading** their
+<span id="dread" label="dread">\[c\]</span> *He**’s dreading** their
 decision.*  
 <span>dread: STATE</span>
 
-Ability modals, as in [\[ability\]](#ability), are also annotated with
+Ability modals, as in [\[38\]](#ability), are also annotated with
 <span>STATE</span>.
 
-<span id="ability" label="ability">\[ability\]</span>
+<span id="ability" label="ability">\[38\]</span>
 
-<span id="able" label="able">\[able\]</span> *She <u>is able to</u>
+<span id="able" label="able">\[a\]</span> *She <u>is able to</u>
 **sing** that aria.*  
 <span>sing: STATE</span>
 
-<span id="can" label="can">\[can\]</span> *This car <u>can</u> **go** up
+<span id="can" label="can">\[b\]</span> *This car <u>can</u> **go** up
 to 150 mph.*  
 <span>go: STATE</span>
 
 In this analysis, ability modals refer to a static state of affairs,
 i.e. an entity possesses the relevant ability. For examples like
-[\[able\]](#able), ability modals may look more like event
+[\[38a\]](#able), ability modals may look more like event
 quantification. That is, there are probably multiple singing events that
-this example is generalizing over. Examples like [\[can\]](#can),
+this example is generalizing over. Examples like [\[38b\]](#can),
 however, show how ability modals are more like states. It is possible
 that the car has never actually gone as fast as 150 mph; the car just
 has the parts and (theoretical) ability to do so. Therefore, all types
-of ability modals, both [\[able\]](#able) and [\[can\]](#can), are
+of ability modals, both [\[38a\]](#able) and [\[38b\]](#can), are
 analyzed as states and annotated as such.
 
 There is a type of event, called “inactive actions” by , which is
@@ -1121,22 +1121,22 @@ different types of processes.
 The next step in the decision tree concerns the application of the
 <span>HABITUAL</span> aspect value. This value should be applied to all
 events that are presented as occurring usually or habitually, as in
-[\[hab\]](#hab).
+[\[39\]](#hab).
 
-<span id="hab" label="hab">\[hab\]</span>
+<span id="hab" label="hab">\[39\]</span>
 
-<span id="bake" label="bake">\[bake\]</span> *He **bakes** pies.*  
+<span id="bake" label="bake">\[a\]</span> *He **bakes** pies.*  
 <span>bake: HABITUAL</span>
 
-<span id="ride" label="ride">\[ride\]</span> *She **rides** her bike to
+<span id="ride" label="ride">\[b\]</span> *She **rides** her bike to
 work.*  
 <span>ride: HABITUAL</span>
 
-<span id="vacation" label="vacation">\[vacation\]</span> *They
+<span id="vacation" label="vacation">\[c\]</span> *They
 **vacation** in Taos every winter.*  
 <span>vacation: HABITUAL</span>
 
-<span id="vacationpst" label="vacationpst">\[vacationpst\]</span> *They
+<span id="vacationpst" label="vacationpst">\[d\]</span> *They
 **used to vacation** in Taos every winter.*  
 <span>vacation: HABITUAL</span>
 
@@ -1148,44 +1148,44 @@ continue on to the next step.
 ## 6\. Evidence that event ended?
 
 The <span>ACTIVITY</span> label applies when there is no evidence that
-the event has come to an end, as in [\[activity\]](#activity).
+the event has come to an end, as in [\[40\]](#activity).
 
-<span id="activity" label="activity">\[activity\]</span>
+<span id="activity" label="activity">\[40\]</span>
 
-<span id="ongoing" label="ongoing">\[ongoing\]</span> *He is still
+<span id="ongoing" label="ongoing">\[a\]</span> *He is still
 **writing** his paper.*  
 <span>write: ACTIVITY</span>
 
-<span id="ambiguous" label="ambiguous">\[ambiguous\]</span> *He was
+<span id="ambiguous" label="ambiguous">\[b\]</span> *He was
 **writing** his paper yesterday.*  
 <span>write: ACTIVITY</span>
 
 This covers cases where it is clear that the process is still ongoing at
-document creation time, as in [\[ongoing\]](#ongoing), but also cases
+document creation time, as in [\[40a\]](#ongoing), but also cases
 where it is ambiguous whether or not the process continues, as in
-[\[ambiguous\]](#ambiguous).
+[\[40b\]](#ambiguous).
 
 This step is largely dependent on context and real world knowledge,
 however there are some grammatical cues that can help at this point in
 the decision tree. Events in the present tense, as in
-[\[playact\]](#playact), will always be annotated as
+[\[41\]](#playact), will always be annotated as
 <span>ACTIVITY</span>.
 
-<span id="playact" label="playact">\[playact\]</span> *He **is playing**
+<span id="playact" label="playact">\[41\]</span> *He **is playing**
 the violin.*  
 <span>play: ACTIVITY</span>
 
 Inceptive and continuative aspectual auxiliaries, as in
-[\[incon\]](#incon), also do not imply that an event has (necessarily)
+[\[42\]](#incon), also do not imply that an event has (necessarily)
 ended.
 
-<span id="incon" label="incon">\[incon\]</span>
+<span id="incon" label="incon">\[42\]</span>
 
-<span id="playstart" label="playstart">\[playstart\]</span> *He
+<span id="playstart" label="playstart">\[a\]</span> *He
 <u>started</u> **playing** the violin.*  
 <span>play: ACTIVITY</span>
 
-<span id="playkeep" label="playkeep">\[playkeep\]</span> *He <u>kept
+<span id="playkeep" label="playkeep">\[b\]</span> *He <u>kept
 on</u> **playing** the violin.*  
 <span>play: ACTIVITY</span>
 
@@ -1209,15 +1209,15 @@ ends, but does not reach a distinct result state.
 The strongest piece of evidence for this decision are aspectual
 constructions that distinguish between completive and terminative
 events. In English, these are expressed by aspectual auxiliary verbs,
-shown in [\[aspectaux\]](#aspectaux).
+shown in [\[43\]](#aspectaux).
 
-<span id="aspectaux" label="aspectaux">\[aspectaux\]</span>
+<span id="aspectaux" label="aspectaux">\[43\]</span>
 
-<span id="completiveaux" label="completiveaux">\[completiveaux\]</span>
+<span id="completiveaux" label="completiveaux">\[a\]</span>
 *Mary <u>finished</u> **mowing** the lawn.*  
 <span>mow: PERFORMANCE</span>
 
-<span id="terminativeaux" label="terminativeaux">\[terminativeaux\]</span>
+<span id="terminativeaux" label="terminativeaux">\[b\]</span>
 *Mary <u>stopped</u> **mowing** the lawn.*  
 <span>mow: ENDEAVOR</span>
 
@@ -1239,26 +1239,26 @@ moves on to the next step.
 The second strongest piece of evidence for the
 <span>ENDEAVOR/PERFORMANCE</span> distinction is the presence of a
 temporal adverbial. Clauses with container adverbials, as in
-[\[container\]](#container), are annotated with the
+[\[44a\]](#container), are annotated with the
 <span>PERFORMANCE</span> value; clauses with durative adverbials, as in
-[\[durative\]](#durative), are annotated with the <span>ENDEAVOR</span>
+[\[44b\]](#durative), are annotated with the <span>ENDEAVOR</span>
 value.
 
-<span id="adverbial" label="adverbial">\[adverbial\]</span>
+<span id="adverbial" label="adverbial">\[44\]</span>
 
-<span id="container" label="container">\[container\]</span>
+<span id="container" label="container">\[a\]</span>
 
 *Mary **mowed** the lawn <u>in thirty minutes</u>.*  
 <span>mow: PERFORMANCE</span>
 
-<span id="durative" label="durative">\[durative\]</span>
+<span id="durative" label="durative">\[b\]</span>
 
 *Mary **mowed** the lawn <u>for thirty minutes</u>.*  
 <span>mow: ENDEAVOR</span>
 
-Example [\[container\]](#container) implies that Mary finished mowing
+Example [\[44a\]](#container) implies that Mary finished mowing
 the lawn; therefore the event is annotated with the
-<span>PERFORMANCE</span> value. Example [\[durative\]](#durative)
+<span>PERFORMANCE</span> value. Example [\[44b\]](#durative)
 doesn’t imply that Mary has finished mowing the lawn; therefore the
 event is annotated with the <span>ENDEAVOR</span> value.
 
@@ -1269,19 +1269,19 @@ event moves on to the final step.
 
 Certain types of path expressions indicate that an event did not reach a
 specific result state; these are called non-result paths. Examples of
-non-result paths are show below in [\[nonresult\]](#nonresult).
+non-result paths are show below in [\[45\]](#nonresult).
 
-<span id="nonresult" label="nonresult">\[nonresult\]</span>
+<span id="nonresult" label="nonresult">\[45\]</span>
 
-<span id="wander" label="wander">\[wander\]</span> *They **wandered**
+<span id="wander" label="wander">\[a\]</span> *They **wandered**
 <u>around the city</u>.*  
 <span>wander: ENDEAVOR</span>
 
-<span id="walk" label="walk">\[walk\]</span> *He **walked** <u>along the
+<span id="walk" label="walk">\[b\]</span> *He **walked** <u>along the
 river</u>.*  
 <span>walk: ENDEAVOR</span>
 
-<span id="drive" label="drive">\[drive\]</span> *They **drove** <u>past
+<span id="drive" label="drive">\[c\]</span> *They **drove** <u>past
 the junction</u>.*  
 <span>drive: ENDEAVOR</span>
 
@@ -1290,24 +1290,25 @@ Events with non-result paths are annotated as <span>ENDEAVOR</span>.
 At this point, every event that is left without an aspect annotation is
 annotated as <span>PERFORMANCE</span>. These will include processes that
 have ended and reached a result state, as shown below in
-[\[result\]](#result).
+[\[46\]](#result).
 
-<span id="result" label="result">\[result\]</span>
+<span id="result" label="result">\[46\]</span>
 
-<span id="atecookies" label="atecookies">\[atecookies\]</span> *The dog
+<span id="atecookies" label="atecookies">\[a\]</span> *The dog
 **ate** all the cookies.*  
 <span>eat: PERFORMANCE</span>
 
-<span id="walkto" label="walkto">\[walkto\]</span> *She **walked** to
+<span id="walkto" label="walkto">\[b\]</span> *She **walked** to
 the grocery store.*  
 <span>walk: PERFORMANCE</span>
 
-<span id="jump" label="jump">\[jump\]</span> *The horse **jumped**.*  
+<span id="jump" label="jump">\[c\]</span> *The horse **jumped**.*  
 <span>jump: PERFORMANCE</span>
 
-<span id="play" label="play">\[play\]</span> *We **played** video games
+<span id="play" label="play">\[d\]</span> *We **played** video games
 yesterday.*  
 <span>play: PERFORMANCE</span>
+  
 
 ### Part 2-4. Quantification, negation
 
