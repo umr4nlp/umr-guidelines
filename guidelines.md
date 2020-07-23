@@ -336,7 +336,7 @@ The total set of entity types are hierarchically organized
  
  #### Part 2-1-5. Event identification
  The criteria used to identify events in UMR are largely based on the
-criteria used in TimeML (). Event identification is not based on part of
+criteria used in TimeML (Pustejovsky et al. 2005). Event identification is not based on part of
 speech or morphosyntactic expression, but instead on a combination of
 semantic type and information packaging. Event identification should be
 done at the word (or phrase) level in a particular language. That is,
@@ -346,24 +346,21 @@ analyze the morphological structure of words.
 
 In order to figure out which words in a text qualify as an event for the
 purposes of the UMR annotation, it is helpful to consider the difference
-between semantic type and information packaging (). Semantic type refers
+between semantic type and information packaging (Croft 2001). Semantic type refers
 to the difference between entities, states (or, properties), and
 processes; this can be thought of as a categorization of things in the
 real world. Information packaging, on the other hand, characterizes how
 a particular linguistic expression “packages” the semantic content.
-Table [\[croftpostable\]](#croftpostable) below shows the typical types
+The table below shows the typical types
 of constructions that tend to express the different combinations of
-semantic types and information packaging, modified from .
+semantic types and information packaging, modified from Croft (2001) .
 
 |               |                   Reference                   |                    Modification                    |                  **Predication**                  |
-| :-----------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: |
-|               |                                               |                                                    |                                                   |
+| :-----------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: |                                                                                                                                                                   
 |   Entities    | <span class="smallcaps">unmarked nouns</span> |                 relative clauses,                  |              **predicate nominals,**              |
 |               |                                               |                    PPs on nouns                    |                  **complements**                  |
-|               |                                               |                                                    |                                                   |
 |    States     |              deadjectival nouns               | <span class="smallcaps">unmarked adjectives</span> |             **predicate adjectives,**             |
 |               |                                               |                                                    |                  **complements**                  |
-|               |                                               |                                                    |                                                   |
 | **Processes** |       **event nominals, complements,**        |         **participles, relative clauses**          | <span class="smallcaps">**unmarked verbs**</span> |
 |               |           **infinitives, gerunds**            |                                                    |                                                   |
 
@@ -376,28 +373,27 @@ The most prototypical expression for an event is a process in
 predication, therefore we identify a word/phrase as an event if it has
 either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which should be
-identified as events are shown in bold in Table
-[\[croftpostable\]](#croftpostable).
+identified as events are shown in bold in the table.
 
 ## Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
 therefore always be identified as events. This is shown in
-[\[predprocess\]](#predprocess) below. (Throughout this section, words
+[\[1\]](#predprocess) below. (Throughout this section, words
 that are identified as events will be shown in bold; the relevant
 phenomenon under discussion will be underlined.)
 
-<span id="predprocess" label="predprocess">\[predprocess\]</span>
+<span id="predprocess" label="predprocess">\[1\]</span>
 
-<span id="repair" label="repair">\[repair\]</span> *She
+<span id="repair" label="repair">\[a\]</span> *She
 <u>**repaired**</u> her bike*.  
-<span id="wentrepair" label="wentrepair">\[wentrepair\]</span> *Before
+<span id="wentrepair" label="wentrepair">\[b\]</span> *Before
 she <u>**went**</u> to school, she **repaired** my bike.*  
 
 Regardless of whether they are in an independent clause, like *repaired*
-in [\[repair\]](#repair), or a dependent clause, like *went* in
-[\[wentrepair\]](#wentrepair), predicated processes are always
+in [\[1a\]](#1a), or a dependent clause, like *went* in
+[\[1b\]](#wentrepair), predicated processes are always
 identified as events.
 
 ## Processes in modification and reference
@@ -405,23 +401,23 @@ identified as events.
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
 morphosyntactic forms, such as events nominals (as in
-[\[eventnom\]](#eventnom)), non-finite complements (as in
-[\[complement\]](#complement)), participles (as in
-[\[participle\]](#participle)), or relative clauses (as in
-[\[relclause\]](#relclause)).
+[\[2a\]](#eventnom)), non-finite complements (as in
+[\[2b\]](#complement)), participles (as in
+[\[2c\]](#participle)), or relative clauses (as in
+[\[2d\]](#relclause)).
 
-<span id="refprocess" label="refprocess">\[refprocess\]</span>
+<span id="refprocess" label="refprocess">\[2\]</span>
 
-<span id="eventnom" label="eventnom">\[eventnom\]</span> *The
+<span id="eventnom" label="eventnom">\[a\]</span> *The
 **<u>storm</u> damaged** the roads.*
 
-<span id="complement" label="complement">\[complement\]</span> *She
+<span id="complement" label="complement">\[b\]</span> *She
 **wanted <u>to go</u>** to school.*
 
-<span id="participle" label="participle">\[participle\]</span> *The
+<span id="participle" label="participle">\[c\]</span> *The
 student **<u>playing</u>** the violin **likes** Bach.*
 
-<span id="relclause" label="relclause">\[relclause\]</span> *The
+<span id="relclause" label="relclause">\[d\]</span> *The
 student, who is **<u>playing</u>** the violin, **likes** Bach.*
 
 It’s important to remember that it’s the combination of semantic type
@@ -430,33 +426,30 @@ word in a particular context is identified as an event. The
 morphological structure of a word (i.e., whether or not it derives from
 a verb) doesn’t factor into whether or not it is identified as an event.
 For example, not all event nominals are derived from verbs, as in
-[\[eventnom2\]](#eventnom2); and, not all words derived from verbs
+[\[3a\]](#eventnom2); and, not all words derived from verbs
 actually refer to processes, as in
-[\[nominalization\]](#nominalization).
+[\[3b\]](#nominalization).
 
-<span id="refprocess2" label="refprocess2">\[refprocess2\]</span>
+<span id="refprocess2" label="refprocess2">\[3\]</span>
 
-<span id="eventnom2" label="eventnom2">\[eventnom2\]</span> *He is
+<span id="eventnom2" label="eventnom2">\[a\]</span> *He is
 **planning** a **<u>ceremony</u>** for Saturday.*
 
-<span id="nominalization" label="nominalization">\[nominalization\]</span>
+<span id="nominalization" label="nominalization">\[b\]</span>
 *The bus <u>driver</u> **turned** the corner too sharply.*
 
 Even the same lexical item may or may not refer to a process, depending
-on context as in ([\[nominal\]](#nominal)) below.
+on context as in ([\[4\]](#nominal)) below.
 
-<span id="nominal" label="nominal">\[nominal\]</span>
-
-<span id="event" label="event">\[event\]</span>
-
+<span id="nominal" label="nominal">\[4\]</span>
+<span id="event" label="event">\[a\]</span>
 *The <u>**final exam**</u> began at 8:00.*
 
-<span id="nonevent" label="nonevent">\[nonevent\]</span>
-
+<span id="nonevent" label="nonevent">\[b\]</span>
 *One student **threw** their <u>final exam</u> in the trash.*
 
-In ([\[event\]](#event)), *final exam* refers to a process and therefore
-is identified as an event. In ([\[nonevent\]](#nonevent)), however,
+In ([\[4a\]](#event)), *final exam* refers to a process and therefore
+is identified as an event. In ([\[4b\]](#nonevent)), however,
 *final exam* refers to a physical object and therefore should not be
 identified as an event.
 
@@ -474,65 +467,64 @@ event as well.
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. These correspond to predicate
-nominals, as in [\[prednom\]](#prednom), and predicate adjectives, as in
-[\[predadj\]](#predadj).
+nominals, as in [\[5a\]](#prednom), and predicate adjectives, as in
+[\[5b\]](#predadj).
 
-<span id="prednomadj" label="prednomadj">\[prednomadj\]</span>
+<span id="prednomadj" label="prednomadj">\[5\]</span>
 
-<span id="prednom" label="prednom">\[prednom\]</span> *She <u>**is an
+<span id="prednom" label="prednom">\[a\]</span> *She <u>**is an
 engineer**</u>.*
 
-<span id="predadj" label="predadj">\[predadj\]</span> *She <u>**is
+<span id="predadj" label="predadj">\[b\]</span> *She <u>**is
 clever**</u>.*
 
 States and entities expressed in complement clauses are also identified
-as events, as in [\[entitycomp\]](#entitycomp) and
-[\[statecomp\]](#statecomp).
+as events, as in [\[6\]](#compnomadj).
 
-<span id="compnomadj" label="compnomadj">\[compnomadj\]</span>
+<span id="compnomadj" label="compnomadj">\[6\]</span>
 
-<span id="entitycomp" label="entitycomp">\[entitycomp\]</span> *She
+<span id="entitycomp" label="entitycomp">\[a\]</span> *She
 wants <u>**to be a doctor**</u>.*
 
-<span id="statecomp" label="statecomp">\[statecomp\]</span> *She expects
+<span id="statecomp" label="statecomp">\[b\]</span> *She expects
 <u>**to be on time**</u>.*
 
-States in modification, as in [\[statemod1\]](#statemod1) and
-[\[statemod2\]](#statemod2), and states in reference, as in
-[\[stateref\]](#stateref), are not identified as events.
+States in modification, as in [\[7a\]](#statemod1) and
+[\[7b\]](#statemod2), and states in reference, as in
+[\[7c\]](#stateref), are not identified as events.
 
-<span id="states" label="states">\[states\]</span>
+<span id="states" label="states">\[7\]</span>
 
-<span id="statemod1" label="statemod1">\[statemod1\]</span> *The
+<span id="statemod1" label="statemod1">\[a\]</span> *The
 <u>tall</u> man...*
 
-<span id="statemod2" label="statemod2">\[statemod2\]</span> *The man,
+<span id="statemod2" label="statemod2">\[b\]</span> *The man,
 <u>who is tall</u>...*
 
-<span id="stateref" label="stateref">\[stateref\]</span> *His
+<span id="stateref" label="stateref">\[c\]</span> *His
 <u>happiness</u>...*
 
-Similarly, entities in modification, as in [\[entitymod\]](#entitymod),
-and entities in reference, as in [\[entityref\]](#entityref), are not
+Similarly, entities in modification, as in [\[8a\]](#entitymod),
+and entities in reference, as in [\[8b\]](#entityref), are not
 identified as events.
 
-<span id="entities" label="entities">\[entities\]</span>
+<span id="entities" label="entities">\[8\]</span>
 
-<span id="entitymod" label="entitymod">\[entitymod\]</span> *The man,
+<span id="entitymod" label="entitymod">\[a\]</span> *The man,
 <u>who is a doctor</u>...*
 
-<span id="entityref" label="entityref">\[entityref\]</span> *The
+<span id="entityref" label="entityref">\[b\]</span> *The
 <u>doctor</u>*
 
 Causal relationships follow the same rules as states and entities. They
 are identified as events when they’re predicated, as in
-[\[causepred\]](#causepred), but they are not identified as events
-otherwise, like in [\[causeother\]](#causeother).
+[\[9\]](#causepred), but they are not identified as events
+otherwise, like in [\[10\]](#causeother).
 
-<span id="causepred" label="causepred">\[causepred\]</span> *The
+<span id="causepred" label="causepred">\[9\]</span> *The
 **explosion <u>caused</u>** the house **to collapse**.*
 
-<span id="causeother" label="causeother">\[causeother\]</span> *The
+<span id="causeother" label="causeother">\[10\]</span> *The
 house **collapsed** <u>because</u> of the **explosion**.*
 
 ## Special cases
@@ -540,17 +532,17 @@ house **collapsed** <u>because</u> of the **explosion**.*
 There are some common constructions where languages may use multiple
 words to express a single event. In all of these cases, only one event
 is identified.  
-**Complex predicates.** Following TimeML (), complex predicates
+**Complex predicates.** Following TimeML (Pustejovsky et al. 2005), complex predicates
 correspond to a single event. Complex predicates can be identified
 following some of FrameNet’s semantic guidelines for support predicates
-(). Complex predicates in English generally consist of a *verb + noun*
-combination, as shown in [\[compred\]](#compred).
+(Ruppenhofer et al. 2016, 34-36). Complex predicates in English generally consist of a *verb + noun*
+combination, as shown in [\[11\]](#compred).
 
-<span id="compred" label="compred">\[compred\]</span> *She <u>took a
+<span id="compred" label="compred">\[11\]</span> *She <u>took a
 **walk**</u> around the block.*
 
 With complex predicates in English, the noun supplies the bulk of the
-semantic information; in [\[compred\]](#compred), the event describes an
+semantic information; in [\[11\]](#compred), the event describes an
 act of walking, not an act of taking. Furthermore, the meaning of the
 verb in a complex predicate has a different meaning when used by itself
 (i.e., there is no actual taking involved in *take a walk*). The final
@@ -565,20 +557,20 @@ identified as the event.
 indicate the occurrence of an event expressed elsewhere, such as
 *happen, occur, take place*, etc.
 
-<span id="lightv" label="lightv">\[lightv\]</span> *The **trip**
+<span id="lightv" label="lightv">\[12\]</span> *The **trip**
 <u>happened</u> over Spring Break.*
 
-In [\[lightv\]](#lightv), *happened* only indicates that the *trip*
+In [\[12\]](#lightv), *happened* only indicates that the *trip*
 event occurred. These light verbs are not identified as events;
-therefore, in [\[lightv\]](#lightv), only *trip* is identified as an
+therefore, in [\[12\]](#lightv), only *trip* is identified as an
 event.  
 **Cognate objects.** There are constructions in which a verb and its
 object refer to the same event; often, the verb and the noun are
 morphologically related. English allows a few constructions of this
-type, as in [\[cogobj\]](#cogobj); other languages may make more
+type, as in [\[13\]](#cogobj); other languages may make more
 extensive use of this construction.
 
-<span id="cogobj" label="cogobj">\[cogobj\]</span> *She **laughed** <u>a
+<span id="cogobj" label="cogobj">\[13\]</span> *She **laughed** <u>a
 hearty laugh</u>.*
 
 Like the other special cases discussed here, only a single event is
@@ -586,20 +578,20 @@ identified, since semantically there is only one event. For cognate
 objects, only the verb is identified as an event.  
 **Aspectual verbs.** Languages have various ways to express aspectual
 distinctions. English uses aspectual verbs (separate from the main verb)
-in order to express inceptive ([\[incep\]](#incep)), continuative
-([\[cont\]](#cont)), terminative ([\[term\]](#term)), and completive
-([\[comp\]](#comp)) phases of an event.
+in order to express inceptive ([\[14\]](#incep)), continuative
+([\[15\]](#cont)), terminative ([\[16\]](#term)), and completive
+([\[17\]](#comp)) phases of an event.
 
-<span id="incep" label="incep">\[incep\]</span> *He <u>started</u>
+<span id="incep" label="incep">\[14\]</span> *He <u>started</u>
 **painting** the wall.*
 
-<span id="cont" label="cont">\[cont\]</span> *He <u>kept on</u>
+<span id="cont" label="cont">\[15\]</span> *He <u>kept on</u>
 **painting** the wall.*
 
-<span id="term" label="term">\[term\]</span> *He <u>stopped</u>
+<span id="term" label="term">\[16\]</span> *He <u>stopped</u>
 **painting** the wall.*
 
-<span id="comp" label="comp">\[comp\]</span> *He <u>finished</u>
+<span id="comp" label="comp">\[17\]</span> *He <u>finished</u>
 **painting** the wall.*
 
 Only the verb that expresses the event (here, *paint*) is identified as
@@ -608,20 +600,20 @@ verb (see [3](#aspectannotation)), but they are not identified as
 separate events.
 
 Aspectual verbs may also be used with event nominals, as in
-[\[aspectnom\]](#aspectnom), or with states in
-[\[aspectstate\]](#aspectstate).
+[\[18\]](#aspectnom), or with states in
+[\[19\]](#aspectstate).
 
-<span id="aspectnom" label="aspectnom">\[aspectnom\]</span> *She
+<span id="aspectnom" label="aspectnom">\[18\]</span> *She
 <u>finished</u> **the race**.*
 
-<span id="aspectstate" label="aspectstate">\[aspectstate\]</span> *The
+<span id="aspectstate" label="aspectstate">\[19\]</span> *The
 **protests** <u>turned</u> **violent**.*
 
 These should be treated in the same way as constructions with verbs.
 That is, the aspectual verbs are not themselves identified as events.
-The event nominal, like *race* in [\[aspectnom\]](#aspectnom), or the
+The event nominal, like *race* in [\[18\]](#aspectnom), or the
 word expressing the state, like *violent* in
-[\[aspectstate\]](#aspectstate), are identified as events.
+[\[19\]](#aspectstate), are identified as events.
 
 ## Implicit events
 
@@ -633,44 +625,44 @@ this front; when in doubt, don’t add an implicit event.
 
 We’ve identified two types of situations in which we need to identify an
 implicit event: those where the implicit event corresponds to an event
-mentioned earlier in the text (as in [\[specific\]](#specific)), and
-those where it does not (as in [\[nonspecific\]](#nonspecific)).
+mentioned earlier in the text (as in [\[20\]](#specific)), and
+those where it does not (as in [\[21\]](#nonspecific)).
 
-<span id="specific" label="specific">\[specific\]</span>
+<span id="specific" label="specific">\[20\]</span>
 
-<span id="smoke" label="smoke">\[smoke\]</span> *John was **smoking** on
+<span id="smoke" label="smoke">\[a\]</span> *John was **smoking** on
 the corner of the street, but when he **saw** me, he stopped* <u>
 **\[smoking\]**</u>.
 
-<span id="leave" label="leave">\[leave\]</span> *They **told** me “a
+<span id="leave" label="leave">\[b\]</span> *They **told** me “a
 card was **left** on Tuesday” (no it wasn’t* <u>**\[left\]**</u> *of
 course)...*
 
-In [\[smoke\]](#smoke), there is an implicit second *smoking* event and
-in [\[leave\]](#leave), there is an implicit second *leave* event. These
+In [\[20a\]](#smoke), there is an implicit second *smoking* event and
+in [\[20b\]](#leave), there is an implicit second *leave* event. These
 implicit events should be annotated as co-referential with the event
 mentioned earlier in the text (see §[2](#coref)).
 
-In [\[nonspecific\]](#nonspecific), however, the implicit events don’t
+In [\[21\]](#nonspecific), however, the implicit events don’t
 have a relationship with an event previously mentioned in the text;
 instead, they refer to generic events which can be filled in from
 context.
 
-<span id="nonspecific" label="nonspecific">\[nonspecific\]</span>
+<span id="nonspecific" label="nonspecific">\[21\]</span>
 
-<span id="say" label="say">\[say\]</span> ***Phoned** Amtrak on
+<span id="say" label="say">\[a\]</span> ***Phoned** Amtrak on
 Wednesday,* <u>**\[they said\]**</u> *“We **need** a consignment
 number”.*
 
-<span id="go" label="go">\[go\]</span> *“I have **ordered** the Coast
+<span id="go" label="go">\[b\]</span> *“I have **ordered** the Coast
 Guard and our entire naval force in the (Central Philippines) region*
 <u>**\[to go\]**</u> *to the area,” she **said**.*
 
-In [\[say\]](#say), the quotation marks make it clear that there is an
-implicit *say* event. In [\[go\]](#go), we can identify a very general
+In [\[21a\]](#say), the quotation marks make it clear that there is an
+implicit *say* event. In [\[21b\]](#go), we can identify a very general
 *go* event, since *ordered...to the area* implies a motion event. For
 these types of implicit events, the most abstract, least specific event
-should be identified. For example in [\[go\]](#go), we could make an
+should be identified. For example in [\[21b\]](#go), we could make an
 assumption based on context clues (e.g., *Coast Guard, naval force*),
 that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
@@ -679,26 +671,26 @@ general event possible should be identified.
 ## Modal events
 
 Different types of modal words may or may not be identified as events.
-First, grammaticalized modals, as in [\[modalgramm\]](#modalgramm), are
+First, grammaticalized modals, as in [\[22\]](#modalgramm), are
 not identified as events.
 
-<span id="modalgramm" label="modalgramm">\[modalgramm\]</span>
+<span id="modalgramm" label="modalgramm">\[22\]</span>
 
-<span id="may" label="may">\[may\]</span> *She <u>might</u> **be
+<span id="may" label="may">\[a\]</span> *She <u>might</u> **be
 eating** pizza.*
 
-<span id="can" label="can">\[can\]</span> *She <u>can</u> **speak**
+<span id="can" label="can">\[b\]</span> *She <u>can</u> **speak**
 Spanish.*
 
-<span id="should" label="should">\[should\]</span> *He <u>should</u>
+<span id="should" label="should">\[c\]</span> *He <u>should</u>
 **bake** a cake for tomorrow.*
 
-The modalized event, e.g. *be eating* in [\[may\]](#may), is identified
+The modalized event, e.g. *be eating* in [\[22a\]](#may), is identified
 as an event but the modal is not. This also applies for modals that take
 the form of predicate adjectives, as in
-[\[predadjmodal\]](#predadjmodal).
+[\[23\]](#predadjmodal).
 
-<span id="predadjmodal" label="predadjmodal">\[predadjmodal\]</span>
+<span id="predadjmodal" label="predadjmodal">\[23\]</span>
 
 *It <u>is possible</u> that she **is eating** pizza.*
 
@@ -710,38 +702,37 @@ the same as more grammaticalized modals and not identified as events.
 
 Verbs which express mental attitudes, desires, intentions, and indicate
 the modalized value of their complement are identified as their own
-events, as in [\[modalverb\]](#modalverb).
+events, as in [\[24\]](#modalverb).
 
-<span id="modalverb" label="modalverb">\[modalverb\]</span>
+<span id="modalverb" label="modalverb">\[24\]</span>
 
-<span id="expect" label="expect">\[expect\]</span> *I <u>**expect**</u>
+<span id="expect" label="expect">\[a\]</span> *I <u>**expect**</u>
 that he will **arrive** by 4pm.*
 
-<span id="want" label="want">\[want\]</span> *She <u>**wants**</u> **to
+<span id="want" label="want">\[b\]</span> *She <u>**wants**</u> **to
 travel** to London.*
 
-<span id="allow" label="allow">\[allow\]</span> *They’re not
+<span id="allow" label="allow">\[c\]</span> *They’re not
 <u>**allowed**</u> **to leave** yet.*
 
-<span id="need" label="need">\[need\]</span> *We <u>**need**</u> **to
+<span id="need" label="need">\[d\]</span> *We <u>**need**</u> **to
 meet** earlier tomorrow.*
 
 There is one exception to this: events that attribute beliefs to a
 conceiver, e.g. *think, believe*, are not identified as events, as shown
-in [\[beliefs\]](#beliefs).
+in [\[25\]](#beliefs).
 
-<span id="beliefs" label="beliefs">\[beliefs\]</span>
+<span id="beliefs" label="beliefs">\[25\]</span>
 
-<span id="believe" label="believe">\[believe\]</span> *Mary
+<span id="believe" label="believe">\[a\]</span> *Mary
 <u>believes</u> that he already **ate** dinner.*
 
-<span id="think" label="think">\[think\]</span> *She <u>thinks</u> that
+<span id="think" label="think">\[b\]</span> *She <u>thinks</u> that
 he’ll **be late**.*
 
 Belief verbs will not be identified as events, since they correspond to
 the links between events in the modal strength dependency structure (see
 §[4](#modalannotation)).
- 
  
  
  #### Part 2-1-6. Participant identification
