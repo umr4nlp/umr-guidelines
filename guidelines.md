@@ -595,7 +595,7 @@ in order to express inceptive ([\[14\]](#incep)), continuative
 
 Only the verb that expresses the event (here, *paint*) is identified as
 an event. The aspectual verbs inform the aspectual annotation of the
-verb (see [3](#aspectannotation)), but they are not identified as
+verb, but they are not identified as
 separate events.
 
 Aspectual verbs may also be used with event nominals, as in
@@ -640,7 +640,7 @@ course)...*
 In [\[20a\]](#smoke), there is an implicit second *smoking* event and
 in [\[20b\]](#leave), there is an implicit second *leave* event. These
 implicit events should be annotated as co-referential with the event
-mentioned earlier in the text (see §[2](#coref)).
+mentioned earlier in the text.
 
 In [\[21\]](#nonspecific), however, the implicit events don’t
 have a relationship with an event previously mentioned in the text;
@@ -730,8 +730,7 @@ in [\[25\]](#beliefs).
 he’ll **be late**.*
 
 Belief verbs will not be identified as events, since they correspond to
-the links between events in the modal strength dependency structure (see
-§[4](#modalannotation)).
+the links between events in the modal strength dependency structure.
  
  
  #### Part 2-1-6. Participant identification
@@ -750,6 +749,7 @@ noun phrases into account in order to determine the aspect annotation of
 the event. Each event will be annotated with one of six aspectual
 values:
 
+
   - <span>Not Applicable (NA)</span>
 
   - <span>HABITUAL</span>
@@ -761,6 +761,7 @@ values:
   - <span>ENDEAVOR</span>
 
   - <span>PERFORMANCE</span>
+ 
  
  
 Certain types of events are not annotated for aspect; these will receive
@@ -2070,9 +2071,7 @@ under two different circumstances: when the conceiver nodes are nested
 underneath different other conceiver nodes in the dependency structure
 as in [\[48a\]](#diffcon), and when they’re nested underneath the
 same conceiver node, but with a different modal strength value as in
-[\[48b\]](#diffstrength). (See §[4.3.2](#conedges) on how to
-add conceiver nodes to the dependency structure with modal strength
-edges.)
+[\[48b\]](#diffstrength).
 
 <span id="multconnodes" label="multconnodes">\[48\]</span>
 
@@ -2185,8 +2184,7 @@ UMR modal strength annotation captures the fact that both of these
 events occur in the same hypothetical scenario – these are not two
 independent hypothetical events. The <span>have-condition</span> node
 acts a parent to both the <span>rain</span> event and the
-<span>stay</span> event in the modal strength dependency (see
-§[\[conditionals\]](#conditionals)). This captures that the events in
+<span>stay</span> event in the modal strength dependency. This captures that the events in
 the conditional construction occupy the same hypothetical “world” or
 space and not separate hypothetical worlds/spaces.
 
@@ -2226,7 +2224,7 @@ conditionals, as in [\[54b\]](#concess).
 <span>have-condition</span>
 
 These types of constructions will be annotated differently in terms of
-their modal strength values (see §[\[conditionals\]](#conditionals)),
+their modal strength values,
 but they all require the introduction of a <span>have-condition</span>
 node.
 
@@ -2370,8 +2368,7 @@ that the cat **ate** breakfast.*
 
 In [\[56a\]](#think), Mary is uncertain about the eating event, but
 there is a <span>Aff</span> edge between the <span>AUTH</span> and
-<span>MARY</span> nodes because the author is sure of Mary’s beliefs
-(§[4.3.3](#modaleventedges) covers how to annotate Mary’s uncertainty).
+<span>MARY</span> nodes because the author is sure of Mary’s beliefs.
 In [\[56b\]](#doubt), the author only has probable certainty about
 Mary’s beliefs, annotated with the <span>Prt</span> edge between the
 <span>AUTH</span> and <span>MARY</span> nodes.
@@ -2387,24 +2384,24 @@ section [\[parentnodes\]](#parentnodes) on selecting appropriate parent
 nodes). The eight values and their interpretation for events nodes are
 shown below. The corresponding FactBank values are shown in parentheses.
 
-> <span>Aff</span>: full affirmative support; complete certainty that
-> the event occurs (CT+)  
-> <span>Prt</span>: partial affirmative support; there is strong, but
-> not definitive certainty that the event occurs (CR+)  
-> <span>Neut</span>: affirmative neutral support; there is neutral
-> certainty that the event occurs/doesn’t occur; event is expressed
-> positively (PS+)  
-> <span>NeutNeg</span>: negative neutral support; there is neutral
-> certainty that the event occurs/doesn’t occur; negation of event is
-> expressed (PS-)  
-> <span>PrtNeg</span>: partial negative support; there is strong but not
-> definitive certainty that the event does not occur (PR-)  
-> <span>Neg</span>: full negative support; complete certainty that the
-> event does not occur (CT-)  
-> <span>Unsp</span>: The conceiver knows that the event either did or
-> did not occur, but is uncertain about the polarity (CTu)  
-> <span>NegUnsp</span>: The conceiver does not know what the factual
-> status of the event is, or does not commit to it (Uu)
+<span>Aff</span>: full affirmative support; complete certainty that
+the event occurs (CT+)  
+<span>Prt</span>: partial affirmative support; there is strong, but
+not definitive certainty that the event occurs (CR+)  
+<span>Neut</span>: affirmative neutral support; there is neutral
+certainty that the event occurs/doesn’t occur; event is expressed
+positively (PS+)  
+<span>NeutNeg</span>: negative neutral support; there is neutral
+certainty that the event occurs/doesn’t occur; negation of event is
+expressed (PS-)  
+<span>PrtNeg</span>: partial negative support; there is strong but not
+definitive certainty that the event does not occur (PR-)  
+<span>Neg</span>: full negative support; complete certainty that the
+event does not occur (CT-)  
+<span>Unsp</span>: The conceiver knows that the event either did or
+did not occur, but is uncertain about the polarity (CTu)  
+<span>NegUnsp</span>: The conceiver does not know what the factual
+status of the event is, or does not commit to it (Uu)
 
 Degree of certainty corresponds most straightforwardly to the degree of
 confidence of a conceiver in the occurrence of an episodic event, i.e.
@@ -2531,7 +2528,7 @@ strength future/deontics, like desires as in
 [\[59c\]](#futtestneut), can occur with any strength negative of
 the same event, since the event is only presented as a possibility.
 
-As mentioned in §[4.3.2](#conedges) modalized deontic predicates capture
+Modalized deontic predicates capture
 the modal value with the link between the <span>AUTH</span> and the
 conceiver node. This means that the link between a conceiver and the
 node for the deontic predicate is very often a default <span>Aff</span>
@@ -2745,8 +2742,7 @@ predicate event node (<span>want</span>). In all clauses with modal
 predicates, the modalized event (e.g., <span>travel</span>) should be
 represented as the child of the modal predicate (e.g.,
 <span>want</span>) and not directly underneath the conceiver. This is
-the only case (aside from reporting events, covered in
-§[\[reportingevents\]](#reportingevents) below) where events will be
+the only case (aside from reporting events) where events will be
 the children of other events instead of (a direct child of) the relevant
 conceiver. The event is still nested underneath the relevant conceiver,
 just not as its direct child.
