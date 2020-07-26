@@ -375,14 +375,13 @@ either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which should be
 identified as events are shown in bold in the table.
 
-## Processes in predication
+##### Part 2-1-5-1. Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
 therefore always be identified as events. This is shown in
 [\[1\]](#predprocess) below. (Throughout this section, words
-that are identified as events will be shown in bold; the relevant
-phenomenon under discussion will be underlined.)
+that are identified as events will be shown in bold.)
 
 <span id="predprocess" label="predprocess">\[1\]</span>
 
@@ -396,7 +395,7 @@ in [\[1a\]](#1a), or a dependent clause, like *went* in
 [\[1b\]](#wentrepair), predicated processes are always
 identified as events.
 
-## Processes in modification and reference
+##### Part 2-1-5-2. Processes in modification and reference
 
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
@@ -463,7 +462,7 @@ firing squad* without having seen an actual firing event, whereas *I saw
 the floating hospitals* implies that the seer witnessed the floating
 event as well.
 
-## States and entities
+##### Part 2-1-5-3. States and entities
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. These correspond to predicate
@@ -527,7 +526,7 @@ otherwise, like in [\[10\]](#causeother).
 <span id="causeother" label="causeother">\[10\]</span> *The
 house **collapsed** <u>because</u> of the **explosion**.*
 
-## Special cases
+##### Part 2-1-5-4. Special cases
 
 There are some common constructions where languages may use multiple
 words to express a single event. In all of these cases, only one event
@@ -615,7 +614,7 @@ The event nominal, like *race* in [\[18\]](#aspectnom), or the
 word expressing the state, like *violent* in
 [\[19\]](#aspectstate), are identified as events.
 
-## Implicit events
+##### Part 2-1-5-5. Implicit events
 
 Since UMR annotates meaning, and not form, there are situations where
 events are identified in the absence of explicit linguistic material.
@@ -668,7 +667,7 @@ that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
 general event possible should be identified.
 
-## Modal events
+##### Part 2-1-5-6. Modal events
 
 Different types of modal words may or may not be identified as events.
 First, grammaticalized modals, as in [\[22\]](#modalgramm), are
@@ -740,7 +739,7 @@ the links between events in the modal strength dependency structure (see
 ### Part 2-2. UMR relations 
    #### Predicate Argument Structure
 ### Part 2-3. UMR features
-   #### Aspect
+   #### Part 2-3-1. Aspect
    
 The aspect annotation captures the internal temporal and qualitative
 structure of each event. This aspect annotation does not correspond to
@@ -762,14 +761,15 @@ values:
   - <span>ENDEAVOR</span>
 
   - <span>PERFORMANCE</span>
-
+ 
+ 
 Certain types of events are not annotated for aspect; these will receive
 the <span>Not Applicable</span> annotation. Events that occur habitually
 are annotated as <span>HABITUAL</span>. All states are simply annotated
 as <span>STATE</span>, while for processes, annotators choose between
 <span>ACTIVITY</span>, <span>ENDEAVOR</span>, and
 <span>PERFORMANCE</span>. Annotators proceed through a series of
-decisions, represented in Figure 1, in order to select the appropriate
+decisions, in order to select the appropriate
 aspect annotation for each event.
 
 Steps \#1, \#2, and \#3 in the decision tree concern the <span>Not
@@ -780,7 +780,7 @@ Applicable</span> annotation. Step \#4 selects events for the
 distinction between the <span>ENDEAVOR</span> and
 <span>PERFORMANCE</span> annotations.
 
-## 1\. Event Nominal?
+##### Part 2-3-1-1. Event Nominal?
 
 The first point in the decision tree concerns the morphosyntactic
 expression of the event. Events expressed as nominals often lack any
@@ -837,7 +837,7 @@ these are treated like other predicate nominal constructions (see step
 
 *It was **an earthquake**.*
 
-## 2\. Non-real event?
+##### Part 2-3-1-2. Non-real event?
 
 The next step in the decision tree involves the polarity and epistemic
 strength of the event (i.e., the values annotated in the modal strength
@@ -962,7 +962,7 @@ that the cat **stole** the dog’s food.*
 Therefore, these types of events are not annotated for aspect at this
 point, and move on to the next step.
 
-## 3\. Future event?
+##### Part 2-3-1-3. Future event?
 
 Events that are predicted to occur in the future are also difficult to
 annotate for aspect, since the event has not yet occurred. Therefore,
@@ -983,7 +983,7 @@ Events in the future may also have negative polarity or non-full
 epistemic stance; these events have already been annotated as
 <span>NA</span> in Step \#2.
 
-## 4\. Stative?
+##### Part 2-3-1-4. Stative?
 
 The next step in the decision tree assesses whether the event is a
 <span>STATE</span> or a process (either <span>ACTIVITY</span>,
@@ -1116,7 +1116,7 @@ values differ in the boundedness of the event both in terms of temporal
 progression and qualitative state. Steps \#6-\#9 distinguish between
 different types of processes.
 
-## 5\. Habitual?
+##### Part 2-3-1-5. Habitual?
 
 The next step in the decision tree concerns the application of the
 <span>HABITUAL</span> aspect value. This value should be applied to all
@@ -1145,7 +1145,7 @@ construction. Note that the <span>HABITUAL</span> annotation is not used
 for ability modals (e.g., *he can bake apple pie*); these events should
 continue on to the next step.
 
-## 6\. Evidence that event ended?
+##### Part 2-3-1-6. Evidence that event ended?
 
 The <span>ACTIVITY</span> label applies when there is no evidence that
 the event has come to an end, as in [\[40\]](#activity).
@@ -1192,7 +1192,7 @@ on</u> **playing** the violin.*
 If there is clear evidence that the event has come to an end prior to
 Document Creation Time (DCT), it moves on to the next step.
 
-## 7\. Aspectual marking?
+##### Part 2-3-1-7. Aspectual marking?
 
 Steps \#7, \#8, and \#9 distinguish between the <span>ENDEAVOR</span>
 and <span>PERFORMANCE</span> aspect annotations. Both the
@@ -1234,7 +1234,7 @@ value corresponds to the imperfective and/or progressive categories.
 If there isn’t an aspectual auxiliary in the clause, then the event
 moves on to the next step.
 
-## 8\. Temporal adverbial?
+##### Part 2-3-1-8. Temporal adverbial?
 
 The second strongest piece of evidence for the
 <span>ENDEAVOR/PERFORMANCE</span> distinction is the presence of a
@@ -1265,7 +1265,7 @@ event is annotated with the <span>ENDEAVOR</span> value.
 If there isn’t a durative or container adverbial in the clause, then the
 event moves on to the final step.
 
-## 9\. Non-result Path?
+##### Part 2-3-1-9. Non-result Path?
 
 Certain types of path expressions indicate that an event did not reach a
 specific result state; these are called non-result paths. Examples of
@@ -2236,12 +2236,8 @@ The different types of nodes in the modal strength dependency structure
 have been covered in the previous sections: authors, conceivers,
 <span>have-condtion</span>, and the events identified in the first pass.
 There is one other node in the dependency structure: a <span>ROOT</span>
-node, under which all other nodes are nested.
-
-This section covers the modal strength values that characterize the
-edges and guidelines on how to construct the dependency structure. The
-different types of nodes are organized within the dependency structure
-as shown in Figure [\[exampletree\]](#exampletree).
+node, under which all other nodes are nested. This section covers the modal strength values that characterize the
+edges and guidelines on how to construct the dependency structure.
 
 Every document will have a single <span>ROOT</span> node at the top of
 the dependency structure. All <span>AUTH</span> nodes are direct
