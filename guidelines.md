@@ -8,27 +8,29 @@
 **Table of Contents**
 
 * Part 1. [Introduction](#part-1-introduction)
-* Part 2. From AMR to UMR
-* Part 2. [Sentence-Level Representation](#part-2-sentence-level-representation)
-    * Part 2-1. [UMR Concepts](#part-2-1-umr-concepts)
-      * Part 2-1-1. [Named entities](#part-2-1-1-named-entities)  (Bert, Andy)
-      * Part 2-1-2. [Multiple-word concepts](#part-2-1-2-multiple-word-concepts)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
-      * Part 2-1-3. [Multi-concept words](#part-2-1-3-multiple-concept-words) (Bill, Andy, James, Martha (reader))[reflexives,causatives, inchoatives, noun incorporation
-      * Part 2-1-4. [Word senses](#part-2-1-4-word-senses)
-      * Part 2-1-5. [Event identification](#part-2-1-5-event-identification)
-      * Part 2-1-6. [Participant identification](#part-2-1-6-participant-identification)
-    * Part 2-2. [UMR relations](#part-2-2-umr-relations) 
-      * Predicate Argument Structure (Bill and Martha)
-    * Part 2-3. [UMR features](#part-2-3-UMR-features) 
-      * Part 2-3-1. [Aspect](#Part-2-3-1-Aspect) (could potentially become concepts?)
-      * Part 2-3-2. Mode
-      * Part 2-3-3. Polarity
-    * Part 2-4. Scope for Quantification, negation (James)
-* Part 3. [Document-Level Representation](#part-3-document-level-representation)
-    * Part 3-1. [Coreference](#part-3-1-coreference) (Jayeol, Bert) 
-    * Part 3-2. [Temporal Dependency](#part-3-2-temporal-dependency) (Bert, Jiarui)
-    * Part 3-3. [Modality Dependency](#part-3-3-modal-dependency) (Meagan, Bill)
-* Part 4. Integrated examples
+* Part 2. [From AMR to UMR](#part-2-from-amr-to-umr)
+* Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
+    * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
+      * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
+      * Part 3-1-2. [Multiple-word concepts](#part-3-1-2-multiple-word-concepts)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
+      * Part 3-1-3. [Multi-concept words](#part-3-1-3-multiple-concept-words) (Bill, Andy, James, Martha (reader))[reflexives,causatives, inchoatives, noun incorporation
+      * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
+      * Part 3-1-5. [Event identification](#part-3-1-5-event-identification)
+      * Part 3-1-6. [Participant identification](#part-3-1-6-participant-identification)
+    * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
+      * Part 3-2-1. Predicate Argument Structure (Bill and Martha)
+      * Part 3-2-2. UMR relations
+    * Part 3-3. [UMR features](#part-3-3-UMR-features) 
+      * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) (could potentially become concepts?)
+      * Part 3-3-2. Mode
+      * Part 3-3-3. Polarity
+    * Part 3-4. Scope for Quantification, negation (James)
+* Part 4. [Document-Level Representation](#part-4-document-level-representation)
+    * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
+    * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
+    * Part 4-3. [Modality Dependency](#part-4-3-modal-dependency) (Meagan, Bill)
+* Part 5. Integrated examples
+
 
 ##  Part 1: Introduction
 
@@ -292,12 +294,13 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
 The document-level representation indicates the *say-01* event happened before the *say-01* event, and the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
 
 
+##  Part 1: From AMR to UMR
 
 
-## Part 2. Sentence-Level Representation
+## Part 3. Sentence-Level Representation
 
-### Part 2-1. UMR Concepts
- #### Part 2-1-1. Named entities
+### Part 3-1. UMR Concepts
+ #### Part 3-1-1. Named entities
  
 Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. The following is an example that has a *country* entity and a *person* entity. 
 
@@ -333,11 +336,11 @@ The total set of entity types are hierarchically organized
 |        |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
 |   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
 
- #### Part 2-1-2. Multiple-Word concepts
- #### Part 2-1-3. Multi-concept words
- #### Part 2-1-4. Word senses
+ #### Part 3-1-2. Multiple-Word concepts
+ #### Part 3-1-3. Multi-concept words
+ #### Part 3-1-4. Word senses
  
- #### Part 2-1-5. Event identification
+ #### Part 3-1-5. Event identification
  The criteria used to identify events in UMR are largely based on the
 criteria used in TimeML (Pustejovsky et al. 2005). Event identification is not based on part of
 speech or morphosyntactic expression, but instead on a combination of
@@ -378,7 +381,7 @@ either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which should be
 identified as events are shown in bold in the table.
 
-##### Part 2-1-5-1. Processes in predication
+##### Part 3-1-5-1. Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
@@ -398,7 +401,7 @@ in [\[1a\]](#1a), or a dependent clause, like *went* in
 [\[1b\]](#wentrepair), predicated processes are always
 identified as events.
 
-##### Part 2-1-5-2. Processes in modification and reference
+##### Part 3-1-5-2. Processes in modification and reference
 
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
@@ -465,7 +468,7 @@ firing squad* without having seen an actual firing event, whereas *I saw
 the floating hospitals* implies that the seer witnessed the floating
 event as well.
 
-##### Part 2-1-5-3. States and entities
+##### Part 3-1-5-3. States and entities
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. These correspond to predicate
@@ -529,7 +532,7 @@ otherwise, like in [\[10\]](#causeother).
 <span id="causeother" label="causeother">\[10\]</span> *The
 house **collapsed** <u>because</u> of the **explosion**.*
 
-##### Part 2-1-5-4. Special cases
+##### Part 3-1-5-4. Special cases
 
 There are some common constructions where languages may use multiple
 words to express a single event. In all of these cases, only one event
@@ -617,7 +620,7 @@ The event nominal, like *race* in [\[18\]](#aspectnom), or the
 word expressing the state, like *violent* in
 [\[19\]](#aspectstate), are identified as events.
 
-##### Part 2-1-5-5. Implicit events
+##### Part 3-1-5-5. Implicit events
 
 Since UMR annotates meaning, and not form, there are situations where
 events are identified in the absence of explicit linguistic material.
@@ -670,7 +673,7 @@ that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
 general event possible should be identified.
 
-##### Part 2-1-5-6. Modal events
+##### Part 3-1-5-6. Modal events
 
 Different types of modal words may or may not be identified as events.
 First, grammaticalized modals, as in [\[22\]](#modalgramm), are
@@ -736,13 +739,13 @@ Belief verbs will not be identified as events, since they correspond to
 the links between events in the modal strength dependency structure.
  
  
- #### Part 2-1-6. Participant identification
+ #### Part 3-1-6. Participant identification
  
-### Part 2-2. UMR relations 
+### Part 3-2. UMR relations 
    #### Predicate Argument Structure
-### Part 2-3. UMR features
+### Part 3-3. UMR features
   
-  #### Part 2-3-1. Aspect
+  #### Part 3-3-1. Aspect
    
 The aspect annotation captures the internal temporal and qualitative
 structure of each event. This aspect annotation does not correspond to
@@ -785,7 +788,7 @@ Applicable</span> annotation. Step \#4 selects events for the
 distinction between the <span>ENDEAVOR</span> and
 <span>PERFORMANCE</span> annotations.
 
-##### Part 2-3-1-1. Event Nominal?
+##### Part 3-3-1-1. Event Nominal?
 
 The first point in the decision tree concerns the morphosyntactic
 expression of the event. Events expressed as nominals often lack any
@@ -842,7 +845,7 @@ these are treated like other predicate nominal constructions (see step
 
 *It was **an earthquake**.*
 
-##### Part 2-3-1-2. Non-real event?
+##### Part 3-3-1-2. Non-real event?
 
 The next step in the decision tree involves the polarity and epistemic
 strength of the event (i.e., the values annotated in the modal strength
@@ -967,7 +970,7 @@ that the cat **stole** the dog’s food.*
 Therefore, these types of events are not annotated for aspect at this
 point, and move on to the next step.
 
-##### Part 2-3-1-3. Future event?
+##### Part 3-3-1-3. Future event?
 
 Events that are predicted to occur in the future are also difficult to
 annotate for aspect, since the event has not yet occurred. Therefore,
@@ -988,7 +991,7 @@ Events in the future may also have negative polarity or non-full
 epistemic stance; these events have already been annotated as
 <span>NA</span> in Step \#2.
 
-##### Part 2-3-1-4. Stative?
+##### Part 3-3-1-4. Stative?
 
 The next step in the decision tree assesses whether the event is a
 <span>STATE</span> or a process (either <span>ACTIVITY</span>,
@@ -1121,7 +1124,7 @@ values differ in the boundedness of the event both in terms of temporal
 progression and qualitative state. Steps \#6-\#9 distinguish between
 different types of processes.
 
-##### Part 2-3-1-5. Habitual?
+##### Part 3-3-1-5. Habitual?
 
 The next step in the decision tree concerns the application of the
 <span>HABITUAL</span> aspect value. This value should be applied to all
@@ -1150,7 +1153,7 @@ construction. Note that the <span>HABITUAL</span> annotation is not used
 for ability modals (e.g., *he can bake apple pie*); these events should
 continue on to the next step.
 
-##### Part 2-3-1-6. Evidence that event ended?
+##### Part 3-3-1-6. Evidence that event ended?
 
 The <span>ACTIVITY</span> label applies when there is no evidence that
 the event has come to an end, as in [\[40\]](#activity).
@@ -1197,7 +1200,7 @@ on</u> **playing** the violin.*
 If there is clear evidence that the event has come to an end prior to
 Document Creation Time (DCT), it moves on to the next step.
 
-##### Part 2-3-1-7. Aspectual marking?
+##### Part 3-3-1-7. Aspectual marking?
 
 Steps \#7, \#8, and \#9 distinguish between the <span>ENDEAVOR</span>
 and <span>PERFORMANCE</span> aspect annotations. Both the
@@ -1239,7 +1242,7 @@ value corresponds to the imperfective and/or progressive categories.
 If there isn’t an aspectual auxiliary in the clause, then the event
 moves on to the next step.
 
-##### Part 2-3-1-8. Temporal adverbial?
+##### Part 3-3-1-8. Temporal adverbial?
 
 The second strongest piece of evidence for the
 <span>ENDEAVOR/PERFORMANCE</span> distinction is the presence of a
@@ -1270,7 +1273,7 @@ event is annotated with the <span>ENDEAVOR</span> value.
 If there isn’t a durative or container adverbial in the clause, then the
 event moves on to the final step.
 
-##### Part 2-3-1-9. Non-result Path?
+##### Part 3-3-1-9. Non-result Path?
 
 Certain types of path expressions indicate that an event did not reach a
 specific result state; these are called non-result paths. Examples of
@@ -1315,11 +1318,11 @@ yesterday.*
 <span>play: PERFORMANCE</span>
   
 
-### Part 2-4. Quantification, negation
+### Part 3-4. Quantification, negation
 
 
-## Part 3. Document-Level Representation
-### Part 3-1. Coreference
+## Part 4. Document-Level Representation
+### Part 4-1. Coreference
 
 
 Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
@@ -1517,7 +1520,7 @@ For now UMR does not annotate cases where one event is a subevent of another eve
   
 
 
-### Part 3-2. Temporal Dependency
+### Part 4-2. Temporal Dependency
 
 The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In the sentence below, the time expression 
 *April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In the example below, the temporal relation between *sign* and the DCT is annotated as `:time (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
@@ -1943,7 +1946,7 @@ provide for this.
     events as well, but for now, these types of events should receive
     one of the other aspect values. -->
 
-### Part 3-3. Modal Dependency
+### Part 4-3. Modal Dependency
 
 The modal strength annotation takes the form of a dependency structure:
 each event receives an annotation which indicates which linguistic
@@ -2131,7 +2134,7 @@ early); the <span>MARY</span> node is required because *surprise* models
 Mary’s mental content. And the <span>MARY\_JOHN</span> node represents
 Mary and John’s shared belief about their pizza plans.
 
-##### Part 3-3-1-4. Generic and unspecified conceivers
+##### Part 4-3-1-4. Generic and unspecified conceivers
 
 Sometimes, conceivers need to be identified even when they aren’t
 explicitly mentioned in the text, as in [\[50\]](#genericcon).
@@ -2167,7 +2170,7 @@ the source of the obligation. It is not always clear, however, that an
 external source is present when it is not overtly expressed. Therefore,
 null conceivers are not identified for obligation deontics.
 
-#### Part 3-3-2. The <span>have-condition</span> node
+#### Part 4-3-2. The <span>have-condition</span> node
 
 The <span>have-condition</span> node is a special node that is required
 in the modal strength dependency structure for linguistic material that
@@ -2232,7 +2235,7 @@ their modal strength values,
 but they all require the introduction of a <span>have-condition</span>
 node.
 
-#### Part 3-3-3. Constructing the modal strength dependency structure
+#### Part 4-3-3. Constructing the modal strength dependency structure
 
 The different types of nodes in the modal strength dependency structure
 have been covered in the previous sections: authors, conceivers,
@@ -2257,7 +2260,7 @@ should always be direct children of an <span>AUTH</span> node or another
 non-author conceiver node; that is, a conceiver node will never have an
 event node as its parent.
 
-##### Part 3-3-3-1. Overview of modal strength edges
+##### Part 4-3-3-1. Overview of modal strength edges
 
 As has been stated above, the edges in the modal strength dependency
 correspond to modal strength values. The same edge labels are used at
@@ -2319,7 +2322,7 @@ different types of nodes in the modal strength dependency structure.
 Throughout these sections, the format <span>Edge(Child node,Parent
 node)</span> will be used to represent the dependency structure.
 
-##### Part 3-3-3-2. Edges between conceiver nodes
+##### Part 4-3-3-2. Edges between conceiver nodes
 
 As mentioned above, the edge between the <span>ROOT</span> and the
 <span>AUTH</span> is always <span>Modal</span> and does not take one of
@@ -2377,7 +2380,7 @@ In [\[56b\]](#doubt), the author only has probable certainty about
 Mary’s beliefs, annotated with the <span>Prt</span> edge between the
 <span>AUTH</span> and <span>MARY</span> nodes.
 
-##### Part 3-3-3-3. Edges involving event nodes
+##### Part 4-3-3-3. Edges involving event nodes
 
 The same set of six epistemic strength values are used for edges that
 involve events; there are also two additional unspecified values. This
@@ -2415,7 +2418,7 @@ use the same values for epistemic/evidential support and deontic
 modality. The interpretation of the value - as epistemic/evidential or
 deontic - is not reflected in the modal strength annotation.
 
-###### Part 3-3-3-3-1. Non-future events
+###### Part 4-3-3-3-1. Non-future events
 
 For non-future (non-deontic) events, the strength values correspond to
 the conceiver’s level of certainty towards the occurrence of the event
@@ -2460,7 +2463,7 @@ not</u> have **barked** last night.*
 <u>didn’t</u> **bark** last night.*  
 <span>Neg(bark,AUTH)</span>
 
-###### Part 3-3-3-3-2. Future events and deontic modality
+###### Part 4-3-3-3-2. Future events and deontic modality
 
 For events embedded in deontic modals, or presented as (potentially)
 happening in the future, modal strength refers to the predictability of
@@ -2568,7 +2571,7 @@ Mary herself is unsure of her desire to visit France; therefore, there
 is a <span>Neut</span> link between the <span>MARY</span> node and the
 <span>want</span> node.
 
-###### Part 3-3-3-3-3. Interaction of modal strength and negation
+###### Part 4-3-3-3-3. Interaction of modal strength and negation
 
 Since the modal strength edges combine both epistemic strength and
 polarity, the interaction of negation (polarity) and epistemic strength
@@ -2663,7 +2666,7 @@ In these cases, the combination of a weak modal (*can, may*) with
 negation leads to a stronger negative strength relation (either full or
 partial).
 
-###### Part 3-3-3-3-4. Selecting parent nodes
+###### Part 4-3-3-3-4. Selecting parent nodes
 
 For each event annotated for modal strength, both a modal strength edge
 value and a parent node must be selected. In the majority of cases, it
@@ -2777,7 +2780,7 @@ node and not directly linked to each other. Similarly, in
 Mary’s desires; they are both annotated as children of
 <span>want</span> and not linked to each other.
 
-###### Part 3-3-3-3-5. Nested modal strengths
+###### Part 4-3-3-3-5. Nested modal strengths
 
 The main way in which this annotation differs from FactBank is that it
 allows for the nesting of modal strengths; that is, events can be
@@ -2809,7 +2812,7 @@ annotated as children of the modal predicate: by annotating
 nested modal strengths in an example like
 [\[69b\]](#probablywant).
 
-###### Part 3-3-3-3-6. Conditionals
+###### Part 4-3-3-3-6. Conditionals
 
 Conditional constructions are some of the most complex modal expressions
 and therefore require more specific annotation guidelines. As discussed
@@ -2935,7 +2938,7 @@ school.*
 <span>Neg(rain,have-condition)</span>  
 <span>NeutNeg(go,have-condition)</span>
 
-###### Part 3-3-3-3-7. Reporting events
+###### Part 4-3-3-3-7. Reporting events
 
 Reporting or saying events (e.g., *say, tell, shout, report*) also
 require special guidelines. These types of events, as in
@@ -3055,7 +3058,7 @@ Mary reports the *go* event with negative partial certainty; this is
 also reflected in the edge between the <span>say</span> and
 <span>go</span> events.
 
-#### Part 3-3-4. English constructions and lexical items
+#### Part 4-3-4. English constructions and lexical items
 
 This list gives the modal strength value associated with common English
 modal constructions (this is certaintly not an exhaustive list). For
@@ -3142,7 +3145,7 @@ Neg (full negative)
 <!-- end list -->
   
   
- ## Part 4: Integrated examples
+ ## Part 5: Integrated examples
 
 PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
 
