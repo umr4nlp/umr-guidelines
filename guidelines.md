@@ -335,6 +335,9 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 * Quantity: The value of a `:quant` attribute is a numerical number
 * Value: The value of a `:value` attribute is aa numerical number. 
 
+**Differences between AMR and UMR**
+
+* modality
 
 
 ## Part 3. Sentence-Level Representation
@@ -784,10 +787,11 @@ the links between events in the modal strength dependency structure.
 ### Part 3-2. UMR relations 
    #### Predicate Argument Structure
    
-   
-   |  Central roles      | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus |
-   |  Peripheral roles   | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee     |
-   |   Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent             |
+     Type                         | Roles
+     -----------------------------|-------------------------------------------------------------------------
+     Central roles                | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus 
+    Peripheral roles              | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee     
+    Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent             
    
    
 ### Part 3-3. UMR attributes
