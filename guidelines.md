@@ -294,7 +294,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
 The document-level representation indicates the *say-01* event happened before the *say-01* event, and the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
 
 
-##  Part 1: From AMR to UMR
+##  Part 2: From AMR to UMR
 
 
 ## Part 3. Sentence-Level Representation
