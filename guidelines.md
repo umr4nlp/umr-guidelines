@@ -296,6 +296,33 @@ The document-level representation indicates the *say-01* event happened before t
 
 ##  Part 2: From AMR to UMR
 
+UMR inherits the sentence-level representation, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node-labeled and edge-labeled graph. The nodes of this graph are UMR concepts, while edges represent UMR relations. 
+
+```
+Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
+
+(t2 / taste-01
+  :aspect Performance
+  :ARG0 (p / person :wiki "Edmond_Pope"
+         :name (n2 / name :op1 "Edmund" :op2 "Pope"))
+  :ARG1 (f / free-04
+         :ARG1 p)
+  :time (t3 / today)
+  :ord (o3 / ordinal-entity :value 1
+        :range (m / more-than
+                :op1 (t / temporal-quantity :quant 8
+                    :unit (m2 / month)))))
+```
+
+UMR concepts: There are a number of ways that UMR concepts are created based on the input sentence:
+
+* Lemmas: Some UMR concepts are simply lemmas. For example, `<today>`
+
+UMR relations
+
+UMR attrbitues
+
+
 
 ## Part 3. Sentence-Level Representation
 
