@@ -14,7 +14,7 @@
       * Part 2-1-2. Multiple-word concepts [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
       * Part 2-1-3. Multi-concept words (Bill, Andy, James, Martha (reader))[reflexives,causatives, inchoatives, noun incorporation
       * Part 2-1-4. Word senses
-      * Part 2-1-5. [Event identification] (#part-2-1-5-event-identification)
+      * Part 2-1-5. [Event identification](#part-2-1-5-event-identification)
       * Part 2-1-6. Participant identification
     * Part 2-2. [UMR relations](#part-2-2-umr-relations) 
       * Predicate Argument Structure (Bill and Martha)
