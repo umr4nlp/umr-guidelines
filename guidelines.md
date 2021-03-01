@@ -8,6 +8,7 @@
 **Table of Contents**
 
 * Part 1. [Introduction](#part-1-introduction)
+* Part 2. From AMR to UMR
 * Part 2. [Sentence-Level Representation](#part-2-sentence-level-representation)
     * Part 2-1. [UMR Concepts](#part-2-1-umr-concepts)
       * Part 2-1-1. [Named entities](#part-2-1-1-named-entities)  (Bert, Andy)
