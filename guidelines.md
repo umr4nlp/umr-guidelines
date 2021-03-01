@@ -7,8 +7,8 @@
 
 **Table of Contents**
 
-* Part 1. [Introduction](#part-1-introduction)
-* Part 2. [From AMR to UMR](#part-2-from-amr-to-umr)
+* Part 1. [Introduction](#part-1-introduction) (Bert)
+* Part 2. [From AMR to UMR](#part-2-from-amr-to-umr) (Bert)
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
       * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
@@ -20,8 +20,8 @@
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. Predicate Argument Structure (Bill and Martha)
       * Part 3-2-2. UMR relations
-    * Part 3-3. [UMR features](#part-3-3-UMR-features) 
-      * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) (could potentially become concepts?)
+    * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
+      * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
       * Part 3-3-2. Mode
       * Part 3-3-3. Polarity
     * Part 3-4. Scope for Quantification, negation (James)
@@ -314,13 +314,26 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
                     :unit (m2 / month)))))
 ```
 
-UMR concepts: There are a number of ways that UMR concepts are created based on the input sentence:
+**UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
 
-* Lemmas: Some UMR concepts are simply lemmas. For example, `<today>`
+* Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
+* word senses: When a dictionary of word senses is available for a language, a sense-disambiguated word can also be a concept. For instance, `taste-01` in the example above refers to the first sense of the word `taste`
+* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatnating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a langugage-by-language basis.
+* Named entity type. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
+* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not corrrespond with any particular word in the sentence, hence it is an `abstract` concept.
 
-UMR relations
+**UMR relations:** There are also a number of ways relations between concepts are created:
 
-UMR attrbitues
+* Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for that (a sense of the ) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3](#part-3-2-umr-relations)
+* Semantic relations: Other UMR relations include `:time`, `:org`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3](#part-3-2-umr-relations)
+
+**UMR attrbitues:** UMR currently has three attribute types:
+
+* Aspect: Aspect are annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete of Aspect values with explanations and examples can be found in [Part 3-3-1 Aspect](#part-3-3-1-aspect)
+* Polarity: Polarity is only annotated for negative polarity as indicated by negation marker or an affix indicating negation.
+* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` aand `interrogative`
+* Quantity: The value of a `:quant` attribute is a numerical number
+* Value: The value of a `:value` attribute is aa numerical number. 
 
 
 
@@ -770,7 +783,14 @@ the links between events in the modal strength dependency structure.
  
 ### Part 3-2. UMR relations 
    #### Predicate Argument Structure
-### Part 3-3. UMR features
+   
+   
+   |  Central roles      | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus |
+   |  Peripheral roles   | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee     |
+   |   Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent             |
+   
+   
+### Part 3-3. UMR attributes
   
   #### Part 3-3-1. Aspect
    
