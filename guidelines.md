@@ -787,11 +787,11 @@ the links between events in the modal strength dependency structure.
 ### Part 3-2. UMR relations 
    #### Predicate Argument Structure
    
-     Type                         | Roles
-     -----------------------------|-------------------------------------------------------------------------
-     Central roles                | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus 
-    Peripheral roles              | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee     
-    Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent             
+     |Type                          | Roles                                                                   |
+     |------------------------------|-------------------------------------------------------------------------|
+     |Central roles                 | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus|
+     |Peripheral roles              | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee    | 
+     |Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent                        |
    
    
 ### Part 3-3. UMR attributes
