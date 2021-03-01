@@ -27,7 +27,7 @@
     * Part 3-1. [Coreference](#part-3-1-coreference) (Jayeol, Bert) 
     * Part 3-2. [Temporal Dependency](#part-3-2-temporal-dependency) (Bert, Jiarui)
     * Part 3-3. [Modality Dependency](#part-3-3-modal-dependency) (Meagan, Bill)
-* Integrated examples
+* Part 4. Integrated examples
 
 ##  Part 1: Introduction
 
