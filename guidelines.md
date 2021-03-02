@@ -785,13 +785,16 @@ the links between events in the modal strength dependency structure.
  #### Part 3-1-6. Participant identification
  
 ### Part 3-2. UMR relations 
-   #### Predicate Argument Structure
+   #### Part 3-2-1. Participant roles
    
-     |Type                          | Roles                                                                   |
-     | :--------------------------: | :---------------------------------------------------------------------: |
-     |Central roles                 | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus|
-     |Peripheral roles              | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee    | 
-     |Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent                        |
+  For languages that have *frame files* that define predicate-specific roles, predicate-specific roles are used. If not, UMR provides 
+  a list of generic participant roles that do not require frame files:
+   
+     | Type                          | Roles                                                                    |
+     | ----------------------------- | -----------------------------------------------------------------------  |
+     | Central roles                 | Actor, Undergoer, Theme, Recipient, Force, Causer, Experiencer, Stimulus |
+     | Peripheral roles              | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee     | 
+     | Roles for entities and events | Cause, Manner, Reason, Purpose, Temporal, Extent                         |
    
    
 ### Part 3-3. UMR attributes
