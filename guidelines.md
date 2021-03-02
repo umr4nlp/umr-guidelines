@@ -376,7 +376,7 @@ The total set of entity types are hierarchically organized
 |  *product* |vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program|
 |       |publication (book, newspaper, magazine, journal)|
 |  *Natural-object*| |
-|        |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
+|  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
 |   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
 
  #### Part 3-1-2. Multiple-Word concepts
@@ -789,6 +789,9 @@ the links between events in the modal strength dependency structure.
    
   For languages that have *frame files* that define predicate-specific roles, predicate-specific roles are used. If not, UMR provides 
   a list of generic participant roles that do not require frame files:
+  
+  |Type   |  Subtype (AMR NE Type) |
+  |-------|------------------------|
    
      | Type                          | Roles                                                                    |
      | ----------------------------- | -----------------------------------------------------------------------  |
