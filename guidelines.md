@@ -12,11 +12,10 @@
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
       * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
-      * Part 3-1-2. [Multiple-word concepts](#part-3-1-2-multiple-word-concepts)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
-      * Part 3-1-3. [Multi-concept words](#part-3-1-3-multiple-concept-words) (Bill, Andy, James, Martha (reader))[reflexives,causatives, inchoatives, noun incorporation
-      * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
-      * Part 3-1-5. [Event identification](#part-3-1-5-event-identification)
-      * Part 3-1-6. [Participant identification](#part-3-1-6-participant-identification)
+      * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
+      * Part 3-1-3. [Word senses](#part-3-1-3-word-senses)
+      * Part 3-1-4. [Event identification](#part-3-1-4-event-identification)
+      * Part 3-1-5. [Participant identification](#part-3-1-5-participant-identification)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. Predicate Argument Structure (Bill and Martha)
       * Part 3-2-2. UMR relations
@@ -379,11 +378,16 @@ The total set of entity types are hierarchically organized
 |  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
 |   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
 
- #### Part 3-1-2. Multiple-Word concepts
- #### Part 3-1-3. Multi-concept words
- #### Part 3-1-4. Word senses
+ #### Part 3-1-2. Word concept mismatches
  
- #### Part 3-1-5. Event identification
+ #### Part 3-1-3. Word senses
+ 
+ UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
+ 
+ [English exmaple]
+ [Chinese example]
+ 
+ #### Part 3-1-4. Event identification
  The criteria used to identify events in UMR are largely based on the
 criteria used in TimeML (Pustejovsky et al. 2005). Event identification is not based on part of
 speech or morphosyntactic expression, but instead on a combination of
@@ -424,7 +428,7 @@ either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which should be
 identified as events are shown in bold in the table.
 
-##### Part 3-1-5-1. Processes in predication
+##### Part 3-1-4-1. Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
@@ -444,7 +448,7 @@ in [\[1a\]](#1a), or a dependent clause, like *went* in
 [\[1b\]](#wentrepair), predicated processes are always
 identified as events.
 
-##### Part 3-1-5-2. Processes in modification and reference
+##### Part 3-1-4-2. Processes in modification and reference
 
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
@@ -511,7 +515,7 @@ firing squad* without having seen an actual firing event, whereas *I saw
 the floating hospitals* implies that the seer witnessed the floating
 event as well.
 
-##### Part 3-1-5-3. States and entities
+##### Part 3-1-4-3. States and entities
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. These correspond to predicate
@@ -575,7 +579,7 @@ otherwise, like in [\[10\]](#causeother).
 <span id="causeother" label="causeother">\[10\]</span> *The
 house **collapsed** <u>because</u> of the **explosion**.*
 
-##### Part 3-1-5-4. Special cases
+##### Part 3-1-4-4. Special cases
 
 There are some common constructions where languages may use multiple
 words to express a single event. In all of these cases, only one event
@@ -663,7 +667,7 @@ The event nominal, like *race* in [\[18\]](#aspectnom), or the
 word expressing the state, like *violent* in
 [\[19\]](#aspectstate), are identified as events.
 
-##### Part 3-1-5-5. Implicit events
+##### Part 3-1-4-5. Implicit events
 
 Since UMR annotates meaning, and not form, there are situations where
 events are identified in the absence of explicit linguistic material.
@@ -716,7 +720,7 @@ that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
 general event possible should be identified.
 
-##### Part 3-1-5-6. Modal events
+##### Part 3-1-4-6. Modal events
 
 Different types of modal words may or may not be identified as events.
 First, grammaticalized modals, as in [\[22\]](#modalgramm), are
@@ -782,7 +786,7 @@ Belief verbs will not be identified as events, since they correspond to
 the links between events in the modal strength dependency structure.
  
  
- #### Part 3-1-6. Participant identification
+ #### Part 3-1-5. Participant identification
  
 ### Part 3-2. UMR relations 
    #### Part 3-2-1. Participant roles
