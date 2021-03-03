@@ -17,8 +17,8 @@
       * Part 3-1-4. [Event identification](#part-3-1-4-event-identification)
       * Part 3-1-5. [Participant identification](#part-3-1-5-participant-identification)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
-      * Part 3-2-1. Predicate Argument Structure (Bill and Martha)
-      * Part 3-2-2. UMR relations
+      * Part 3-2-1. Participant roles (Bill and Martha)
+      * Part 3-2-2. Non-participant UMR relations
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
       * Part 3-3-2. Mode
