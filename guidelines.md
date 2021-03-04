@@ -378,7 +378,7 @@ The total set of entity types are hierarchically organized
 |  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
 |   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
 
- #### Part 3-1-2. Word concept mismatches
+ #### Part 3-1-2. Concept-word mismatches
  
  Arapahoe example:
 ```
