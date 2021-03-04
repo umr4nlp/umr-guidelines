@@ -21,10 +21,11 @@
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-UMR-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
-      * Part 3-3-2. Mode
-      * Part 3-3-3. Polarity
-      * Part 3-3-4. Quant
-      * Part 3-3-5. Unit
+      * Part 3-3-2. [Mode](#Part-3-3-2-mode)
+      * Part 3-3-3. [Polarity](#Part-3-3-3-polarity)
+      * Part 3-3-4. [Quant](#Part-3-3-4-quant)
+      * Part 3-3-5. [Unit](#Part-3-3-5-unit)
+      
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
     * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
@@ -1410,7 +1411,13 @@ the grocery store.*
 yesterday.*  
 <span>play: PERFORMANCE</span>
   
+#### Part 3-3-2. Mode
 
+#### Part 3-3-3. Polarity
+
+#### Part 3-3-4. Quant
+
+#### Part 3-3-5. Unit
 
 
 
