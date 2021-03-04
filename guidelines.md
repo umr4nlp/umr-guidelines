@@ -15,9 +15,9 @@
       * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
       * Part 3-1-3. [Word senses](#part-3-1-3-word-senses)
       * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-event-identification)
-      * Part 3-1-5. [Participant identification](#part-3-1-5-participant-identification)
+      * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
-      * Part 3-2-1. [Participant roles](#part-3-2-1-participant-role) (Bill and Martha)
+      * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles) (Bill and Martha)
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-UMR-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
@@ -25,7 +25,6 @@
       * Part 3-3-3. Polarity
       * Part 3-3-4. Quant
       * Part 3-3-5. Unit
-    * Part 3-4. [Scope for Quantification and negation](#part-3-4-scope-for-quantification-negation) (James)
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
     * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
@@ -802,10 +801,28 @@ Belief verbs will not be identified as events, since they correspond to
 the links between events in the modal strength dependency structure.
  
  
- #### Part 3-1-5. Participant identification
+ #### Part 3-1-5. Scope for Quantification and negation
+
+To facilitate the translation of UMR into first-order expressions to support logical inference,
+we add a **scope** concept to represent the relative order of the predicate, quantified concept and negated concept.
+In most cases, the order of these elements are interpreted in textual order, and do not need an over scope annotation.
+The scope annotation is only needed when these elements are interpreted "out-of-order".
+
+```
+Someone didn't answer all the questions
+(a answer-01
+   :ARG0 (p / person)
+   :ARG1 (q / question
+              :quant A
+              :polarity -)
+   :pred-of (s / scope
+                :ARG0 p
+                :ARG1 q))
+```
  
 ### Part 3-2. UMR relations 
-   #### Part 3-2-1. Participant roles
+
+   #### Part 3-2-1. Participant roles 
    
   For languages that have *frame files* that define predicate-specific roles, predicate-specific roles are used. If not, UMR provides 
   a list of generic participant roles that do not require frame files:
@@ -1394,24 +1411,6 @@ yesterday.*
 <span>play: PERFORMANCE</span>
   
 
-### Part 3-4. Scope for Quantification and negation
-
-To facilitate the translation of UMR into first-order expressions to support logical inference,
-we add a **scope** concept to represent the relative order of the predicate, quantified concept and negated concept.
-In most cases, the order of these elements are interpreted in textual order, and do not need an over scope annotation.
-The scope annotation is only needed when these elements are interpreted "out-of-order".
-
-```
-Someone didn't answer all the questions
-(a answer-01
-   :ARG0 (p / person)
-   :ARG1 (q / question
-              :quant A
-              :polarity -)
-   :pred-of (s / scope
-                :ARG0 p
-                :ARG1 q))
-```
 
 
 
