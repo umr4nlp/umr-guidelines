@@ -17,13 +17,15 @@
       * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-event-identification)
       * Part 3-1-5. [Participant identification](#part-3-1-5-participant-identification)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
-      * Part 3-2-1. Participant roles (Bill and Martha)
-      * Part 3-2-2. Non-participant role UMR relations
+      * Part 3-2-1. [Participant roles](#part-3-2-1-participant-role) (Bill and Martha)
+      * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-UMR-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
       * Part 3-3-2. Mode
       * Part 3-3-3. Polarity
-    * Part 3-4. Scope for Quantification, negation (James)
+      * Part 3-3-4. Quant
+      * Part 3-3-5. Unit
+    * Part 3-4. [Scope for Quantification and negation](#part-3-4-scope-for-quantification-negation) (James)
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
     * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
@@ -332,7 +334,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 * Polarity: Polarity is only annotated for negative polarity as indicated by negation marker or an affix indicating negation.
 * Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` aand `interrogative`
 * Quantity: The value of a `:quant` attribute is a numerical number
-* Value: The value of a `:value` attribute is aa numerical number. 
+* Value: The value of a `:value` attribute is a numerical number. 
 
 **Differences between AMR and UMR**
 
@@ -814,6 +816,7 @@ the links between events in the modal strength dependency structure.
   | Peripheral roles | Instrument, Companion, Material/Source, Place, Start, Goal, Affectee |
   | Roles for entities and events| Cause, Manner, Reason, Purpose, Temporal, Extent |
   
+  #### Part 3-2-2. Non-participant UMR relations
    
    
 ### Part 3-3. UMR attributes
@@ -1391,7 +1394,25 @@ yesterday.*
 <span>play: PERFORMANCE</span>
   
 
-### Part 3-4. Quantification, negation
+### Part 3-4. Scope for Quantification and negation
+
+To facilitate the translation of UMR into first-order expressions to support logical inference,
+we add a **scope** concept to represent the relative order of the predicate, quantified concept and negated concept.
+In most cases, the order of these elements are interpreted in textual order, and do not need an over scope annotation.
+The scope annotation is only needed when these elements are interpreted "out-of-order".
+
+```
+Someone didn't answer all the questions
+(a answer-01
+   :ARG0 (p / person)
+   :ARG1 (q / question
+              :quant A
+              :polarity -)
+   :pred-of (s / scope
+                :ARG0 p
+                :ARG1 q))
+```
+
 
 
 ## Part 4. Document-Level Representation
