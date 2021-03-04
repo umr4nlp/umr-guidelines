@@ -14,11 +14,11 @@
       * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
       * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
       * Part 3-1-3. [Word senses](#part-3-1-3-word-senses)
-      * Part 3-1-4. [Event identification](#part-3-1-4-event-identification)
+      * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-event-identification)
       * Part 3-1-5. [Participant identification](#part-3-1-5-participant-identification)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. Participant roles (Bill and Martha)
-      * Part 3-2-2. Non-participant UMR relations
+      * Part 3-2-2. Non-participant role UMR relations
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
       * Part 3-3-2. Mode
