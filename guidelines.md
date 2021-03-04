@@ -380,6 +380,20 @@ The total set of entity types are hierarchically organized
 
  #### Part 3-1-2. Word concept mismatches
  
+ Arapahoe example:
+```
+nih-teb-e'ei-s-o'
+nih-   teb                     -e'ei -s               -o' 
+Past-  break/remove.stick.like -head -by.blade.Caus   -1s/3s 
+`I cut his head off with a knife' 
+
+(n / teb-e'ei-s
+  :actor (p / person :ref 1s)
+  :undergoer (p2 / person :ref 3s)
+  :theme (t /thing :ref obviative)
+  :Aspect Performance)
+```
+ 
  #### Part 3-1-3. Word senses
  
  UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
