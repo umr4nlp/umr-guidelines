@@ -641,8 +641,8 @@ in [\[nonvs\]](#nonvs) for object predication.
 
 <span id="zero" label="zero">\[zero\]</span> Juxtaposition (“zero
 copula”) - Kukama <br />
-ajan kunumi tsumi  
-this young.man shaman  
+ajan kunumi 	tsumi  
+this young.man 	shaman  
 ‘This young man is a shaman.’ 
 
 <span id="pred" label="pred">\[pred\]</span> Separate Predication -
@@ -814,11 +814,15 @@ determines where a language begins on the road map is whether there is
 an existing PropBank-style lexicon (frame files) for the language, which defines predicate-specific roles. An English PropBank
 frame file is shown below:  
 
-`Predicate: give.01` <br />
-`Roles:  `<br />
-`Arg0: giver ` <br />
-`Arg1: thing given  `<br />
-`Arg2: entity given to`  
+```
+
+Predicate: give.01  
+	Roles:    
+	Arg0: giver   
+	Arg1: thing given    
+	Arg2: entity given to    
+
+```
 
 Following AMR, UMR uses PropBank frame files to annotate lexicalized
 participant roles. But, this only works for languages which have
@@ -933,6 +937,7 @@ examples are shown below in Table 5.
 | <span class="smallcaps">`temporal`</span>    | event that has a temporal relation with the action                                                             | she left after **dinner**                                                                                                  |
 | <span class="smallcaps">`extent`</span>      | measurement phrase                                                                                             | he ran **seven miles**                                                                                                     |
 | <span class="smallcaps">`other`</span>       | this role can be used when an annotator is unsure of which role is appropriate                                 |                                                                                                                            |
+
 Table 5: UMR Non-lexicalized roles
 </div>
 
@@ -957,10 +962,7 @@ semantic event classes.
 |                                           |       <span class="smallcaps">`experiencer, stimulus`</span>       |  <span class="smallcaps">`extent`</span>  |
 
 Table 6: Categorization of UMR non-lexicalized roles
-
 </div>
-
-
 
 For the roles that characterize the central participant(s) in the event,
 the best way to decide which participant role label a given participant
@@ -977,31 +979,40 @@ that are transformed into the created object.
 
 <span id="cos" label="cos">\[cos\]</span>
 
-<span id="cos:cosintr" label="cos:cosintr">\[cos:cosintr\]</span> The
-ice cube melted.  
-<span id="cos:costr" label="cos:costr">\[cos:costr\]</span> The enemy
-sank the ship.  
-<span id="cos:creation" label="cos:creation">\[cos:creation\]</span> She
-built a house out of wood.  
-<span id="cos:contact" label="cos:contact">\[cos:contact\]</span> He hit
-the stick against the fence.  
+<span id="cos:cosintr" label="cos:cosintr">\[cos:cosintr\]</span>
+```
+The ice cube melted.  
 
-`(m / melt`  
-`:undergoer (i / ice cube)) ` 
+(m / melt  
+	:undergoer (i / ice cube))
+```
+<span id="cos:costr" label="cos:costr">\[cos:costr\]</span> 
+```
+The enemy sank the ship. 
 
-`(s1 / sank`  
-`:actor (e / enemy) ` <br />
-`:undergoer (s2 / ship))`
+(s1 / sank  
+	:actor (e / enemy) 
+	:undergoer (s2 / ship))
 
-`(b / build  ` <br />
-`:actor (s / she)  ` <br />
-`:undergoer (h / house) ` <br />
-`:source (w / wood))`
+```
+<span id="cos:creation" label="cos:creation">\[cos:creation\]</span> 
+```
+She built a house out of wood. 
 
-`(h1 / hit ` <br />
-`:actor (h2 / he)  `<br />
-`:instrument (s / stick)  `<br />
-`:undergoer (f / fence))  `
+(b / build  
+	:actor (s / she)  
+	:undergoer (h / house) 
+	:source (w / wood))
+```
+<span id="cos:contact" label="cos:contact">\[cos:contact\]</span> 
+```
+He hit the stick against the fence.  
+
+(h1 / hit 
+	:actor (h2 / he)  
+	:instrument (s / stick)  
+	:undergoer (f / fence)) 
+```
 
 The <span class="smallcaps">experiencer</span> and
 <span class="smallcaps">stimulus</span> roles always occur with
@@ -1010,23 +1021,25 @@ experiential events, as seen in [\[exp\]](#exp). The
 mental-level entity which attends to, reacts to, or passively
 experiences the <span class="smallcaps">stimulus</span> role.
 
-
-
 <span id="exp" label="exp">\[exp\]</span>
 
 <span id="exp:attend" label="exp:attend">\[exp:attend\]</span>
-
+```
 The audience listened to the concerto.  
+
+(l / listen
+	:experiencer (a / audience) 
+	:stimulus (c / concerto))
+```
 <span id="exp:experience" label="exp:experience">\[exp:experience\]</span>
+```
 The cat startled me.
 
-`(l / listen`  <br />
-`:experiencer (a / audience) ` <br />
-`:stimulus (c / concerto))`  <br />
+(s / startle  
+	:experiencer (m / me)
+	:stimulus (c / cat)) 
+```
 
-`(s / startle  ` <br />
-`:experiencer (m / me)`  <br />
-`:stimulus (c / cat))  `<br />
 
 The `start, goal`, and
 `source` roles only occur with motion
@@ -1051,40 +1064,50 @@ moves (unless the motion is volitional), as in
 
 <span id="motion" label="motion">\[motion\]</span>
 
-<span id="mot:actor" label="mot:actor">\[mot:actor\]</span> She walked home from the store.
+<span id="mot:actor" label="mot:actor">\[mot:actor\]</span> 
+```
+She walked home from the store.
 
-<span id="mot:theme" label="mot:theme">\[mot:theme\]</span> The leaf
-fell to the ground.
+(f / fall 
+	:theme (l / leaf)  
+	:goal (g / ground))  
+```
+<span id="mot:theme" label="mot:theme">\[mot:theme\]</span> 
+```
+The leaf fell to the ground.
 
-<span id="mot:apply" label="mot:apply">\[mot:apply\]</span> He put the books in a box.
+(w / walk 
+	:actor (s1 / she) 
+	:goal (h / home)  
+	:start (s2 / store))  
+```
+<span id="mot:apply" label="mot:apply">\[mot:apply\]</span> 
+```
+He put the books in a box.
 
-<span id="mot:place" label="mot:place">\[mot:place\]</span> She is sitting on the couch.
+(p / put  
+	:actor (h / he)  
+	:theme (b1 / books)  
+	:goal (b2 / box))  
 
-<span id="mot:remove" label="mot:remove">\[mot:remove\]</span> He picked some berries from the bush.
+```
+<span id="mot:place" label="mot:place">\[mot:place\]</span> 
+```
+She is sitting on the couch.
 
-`(f / fall ` <br />
-`:theme (l / leaf)  ` <br />
-`:goal (g / ground))  ` <br />
+(s1 / sit  
+	:actor (s2 / she)  
+	:place (c / couch))  
+```
+<span id="mot:remove" label="mot:remove">\[mot:remove\]</span> 
+```
+He picked some berries from the bush.
 
-`(w / walk `  <br />
-`:actor (s1 / she)  ` <br />
-`:goal (h / home)  ` <br />
-`:start (s2 / store))  ` <br />
-
-`(p / put  ` <br />
-`:actor (h / he)  ` <br />
-`:theme (b1 / books)  ` <br />
-`:goal (b2 / box))  ` <br />
-
-`(s1 / sit  ` <br />
-`:actor (s2 / she)  ` <br />
-`:place (c / couch))  ` <br />
-
-`(p / pick`  <br />
-`:actor</span> (h / he)  ` <br />
-`:theme</span> (b1 / berries)  ` <br />
-`:source</span> (b2 / bush)) ` <br />
-
+(p / pick
+	:actor (h / he) 
+	:theme (b1 / berries)  
+	:source (b2 / bush)) 
+```
 The `recipient` role only occurs with
 transfer events, or metaphorical transfer events like communication.
 With these events, the initiator of the transfer is an
@@ -1099,36 +1122,46 @@ annotated as `affectee`, as in
 
 <span id="transfer" label="transfer">\[transfer\]</span>
 
-<span id="trans:poss" label="trans:poss">\[trans:poss\]</span> He gave
-the cat some wet food.
+<span id="trans:poss" label="trans:poss">\[trans:poss\]</span> 
+```
+He gave the cat some wet food.
 
-<span id="trans:mental" label="trans:mental">\[trans:mental\]</span> I
-showed the pictures to her.
+(g / give  
+	:actor (h / he)  
+	:theme (w / wet food)  
+	:recipient (c / cat))
+```
 
-<span id="trans:comm" label="trans:comm">\[trans:comm\]</span> She told me that they they’re attending.
+<span id="trans:mental" label="trans:mental">\[trans:mental\]</span> 
+```
+I showed the pictures to her.
 
-<span id="tras:rem" label="tras:rem">\[tras:rem\]</span> She stole the information from a competitor.
+(s / show  
+	:actor (i / I)  
+	:theme (p / picture)
+	:recipient (h / her)) 
+```
 
-`(g / give  ` <br />
-`:actor (h / he)  ` <br />
-`:theme (w / wet food)  ` <br />
-`:recipient (c / cat))` <br />
+<span id="trans:comm" label="trans:comm">\[trans:comm\]</span> 
+```
+She told me that they they’re attending.
 
-`(s / show  ` <br />
-`:actor (i / I)  ` <br />
-`:theme (p / picture)`   <br />
-`:recipient (h / her)) ` <br />
+(t1 / tell`  
+	:actor (s / she)  
+	:recipient (m / me)  
+	:theme ( a / attend  
+	:actor (t2 / they))) 
+```
 
-`(t1 / tell`  <br />
-`:actor (s / she)  ` <br />
-`:recipient (m / me)  ` <br />
-`:theme ( a / attend  ` <br />
-`:actor (t2 / they))) ` <br />
+<span id="tras:rem" label="tras:rem">\[tras:rem\]</span> 
+```
+She stole the information from a competitor.
 
-`(s1 / steal`  <br />
-`:actor (s2 / she)`  <br />
-`:theme (i / information)  ` <br />
-`:source (c / competitor)) ` <br />
+(s1 / steal
+	:actor (s2 / she)
+	:theme (i / information) 
+	:source (c / competitor)) 
+```
 
 The other participant roles can occur pretty much freely with any semantic class of event. The external cause roles are used to annotate entities that bring about the central event. The
 `actor` role is used for “active”
@@ -1172,54 +1205,68 @@ initiator in some causative constructions, see [4.1.2](#pr0:alts).
 <span id="excaus" label="excaus">\[excaus\]</span>
 
 <span id="excaus:intrans" label="excaus:intrans">\[excaus:intrans\]</span>
+```
 He winked.
 
-<span id="excaus:com" label="excaus:com">\[excaus:com\]</span> Jane
-wrote the paper with Chris.
+(w / wink
+	:actor (h / he))
+```
 
-<span id="excaus:pl" label="excaus:pl">\[excaus:pl\]</span> They wrote
-the paper.
+<span id="excaus:com" label="excaus:com">\[excaus:com\]</span> 
+```
+Jane wrote the paper with Chris.
 
-<span id="excaus:and" label="excaus:and">\[excaus:and\]</span> Jane and
-Chris wrote the paper.
+(w / write 
+	:actor (J / Jane)  
+	:companion (C / Chris)  
+	:undergoer (p / paper)) 
+```
 
-<span id="excaus:ins" label="excaus:ins">\[excaus:ins\]</span> She
-slicked the bread with a knife.
+<span id="excaus:pl" label="excaus:pl">\[excaus:pl\]</span> 
+```
+They wrote the paper.
+
+(w / write  
+	:actor (t / they)
+	:undergoer (p / paper))
+```
+
+<span id="excaus:and" label="excaus:and">\[excaus:and\]</span> 
+```
+Jane and Chris wrote the paper.
+
+(w / write
+	:actor (J / Jane and Chris) 
+	:undergoer (p / paper))  
+```
+
+<span id="excaus:ins" label="excaus:ins">\[excaus:ins\]</span> 
+```
+She sliced the bread with a knife.
+
+(s / slice
+	:actor (s / she) 
+	:instrument (k / knife) 
+	:undergoer (b / bread))
+```
 
 <span id="excaus:inssubj" label="excaus:inssubj">\[excaus:inssubj\]</span>
+```
 The knife sliced through the bread.
 
-<span id="excaus:frc" label="excaus:frc">\[excaus:frc\]</span> The storm
-damaged the power lines.
+(s / slice 
+	:instrument (k / knife)  
+	:undergoer (b / bread)) 
+```
 
-`(w / wink ` <br />
-`:actor (h / he))`<br />
+<span id="excaus:frc" label="excaus:frc">\[excaus:frc\]</span> 
+```
+The storm damaged the power lines.
 
-`(w / write `  <br />
-`:actor (J / Jane)  `<br />
-`:companion</span> (C / Chris)  `<br />
-`:undergoer</span> (p / paper))  `<br />
-
-`(w / write  `<br />
-`:actor (t / they)`  <br />
-`:undergoer (p / paper))`<br />
-
-`(w / write`  <br />
-`:actor (J / Jane and Chris) ` <br />
-`:undergoer (p / paper))  `<br />
-
-`(s / slice`  <br />
-`:actor (s / she)  `<br />
-`:instrument (k / knife) `<br />
-`:undergoer (b / bread)) `<br />
-
-`(s / slice ` <br />
-`:instrument (k / knife)  `<br />
-`:undergoer (b / bread)) ` <br />
-
-`(d / damage ` <br />
-`:actor (s / storm)  `<br />
-`:undergoer (p / power lines)) ` <br />
+(d / damage 
+	:actor (s / storm)  
+	:undergoer (p / power lines)) 
+```
 
 See Table 5 for examples of the circumstantial
 roles. In addition, there is an `other`
@@ -1229,11 +1276,14 @@ At Stage 1, participant roles that aren’t explicitly expressed in the clause d
 `goal` is left implicit; at Stage 1, this
 role may be left out of the annotation.
 
-<span id="trans:implicit" label="trans:implicit">\[trans:implicit\]</span> They loaded the boxes.
+<span id="trans:implicit" label="trans:implicit">\[trans:implicit\]</span> 
+```
+They loaded the boxes.
 
-`(l  load  ` <br />
-`:actor (t / they)  `<br />
-`:theme (b / boxes)) ` <br />
+(l  load  
+	:actor (t / they)  
+	:theme (b / boxes)) 
+```
 
 ###### 3-2-1-1-1. Nonverbal clauses
 
@@ -1266,69 +1316,79 @@ annotations will be the same at every stage of the road map.
 
 <span id="thetposs" label="thetposs">\[thetposs\]</span>
 Thetic/presentational Possession - Kukama <br />
-Mijiri-tin &#x268;ara-yara  
-Miguel-<span class="smallcaps">cer</span> canoe-owner  
+
+```
+Mijiri-tin  ɨara-yara  
+Miguel-cer  canoe-owner  
 ‘Miguel does have a canoe.’ (Lit. ‘Miguel is a canoe-owner’)
 
-`(e /` &#x268;`ara-yara ‘has canoe’`  <br />
-`:ARG0 (m / Mijiri ‘Miguel’) ` <br />
-`:ARG1 (i / ara ‘canoe’))  `
+(e / ɨara-yara ‘has canoe’ 
+	:ARG0 (m / Mijiri ‘Miguel’) 
+	:ARG1 (i / ara ‘canoe’)) 
+```
 
 <span id="predposs" label="predposs">\[predposs\]</span> Predicative
 Possession - English <br />
+```
 The dog belongs to the teacher.  
   
-
-`(b / belong-01`  <br />
-`:ARG0 (d / dog) ` <br />
-`:ARG1 (t / teacher))  `<br />
+(b / belong-01
+	:ARG0 (d / dog) 
+	:ARG1 (t / teacher)) 
+```
 
 <span id="thetloc" label="thetloc">\[thetloc\]</span> Thetic/presentational Location - English <br />
+```
 On the rock was a symbol.  
   
-
-`(e / exist-91`  <br />
-`:ARG0 (r / rock) ` <br />
-`:ARG1 (s / symbol))  `<br />
+(e / exist-91
+	:ARG0 (r / rock)
+	:ARG1 (s / symbol))  
+```
 
 <span id="predloc" label="predloc">\[predloc\]</span> Predicative
 Location - Yabem (Dempwolff 1939) <br />
-àndu kê-kô malac  
-house <span class="smallcaps">3sg</span>-be.at village  
+```
+àndu  kê-kô 	malac  
+house 3sg-be.at village  
 ‘The house is in the village.’
 
-`(h / have-location-91`  <br />
-`:ARG0 (a / àndu ‘house’)`  <br />
-`:ARG1 (m / malac ‘village’))`  <br />
+(h / have-location-91
+	:ARG0 (a / àndu ‘house’)
+	:ARG1 (m / malac ‘village’))
+```
 
 <span id="proppred" label="proppred">\[proppred\]</span> Property
 Predication - English <br />
+```
 The cat is black.  
   
+(h / have-mod-91
+	:ARG0 (c / cat) 
+	:ARG1 (b / black))  
 
-`(h / have-mod-91`  <br />
-`:ARG0 (c / cat)  ` <br />
-`:ARG1 (b / black)) ` <br /> 
-
-
+```
 
 <span id="objpred" label="objpred">\[objpred\]</span> Object Predication - Kukama <br />
-ajan kunumi tsumi  
-this young.man shaman  
+
+```
+ajan kunumi 	tsumi  
+this young.man 	shaman  
 ‘This young man is a shaman.’
 
-`(h / have-role-91`  <br />
-`:ARG0 (k / kunumi ‘young man’)` <br />
-`:ARG1 (t / tsumi ‘shaman’))  ` <br />
-
+(h / have-role-91
+	:ARG0 (k / kunumi ‘young man’)
+	:ARG1 (t / tsumi ‘shaman’))  
+```
 
 <span id="objeq" label="objeq">\[objeq\]</span> Object Equational - English <br />
+```
 She is the winner.  
   
-
-`(h / identity-91`  <br />
-`:ARG0 (s / s)`  <br />
-`:ARG1 (w / winner))`  <br />
+(h / identity-91
+:ARG0 (s / s)` 
+:ARG1 (w / winner))
+```
 
 ###### 3-2-1-1-2. Valency alternations
  
@@ -1340,23 +1400,26 @@ in the language. If a participant is omitted, for example the agent in a passive
 <span id="ber:passive" label="ber:passive">\[ber:passive\]</span>
 
 <span id="ber:basic" label="ber:basic">\[ber:basic\]</span> <br />
-Y-usy wrba tafirast.  
-<span class="smallcaps">3ms</span>-pick.up
-boy:<span class="smallcaps">cst</span> pear  
+```
+Y-usy 		wrba 	tafirast.  
+3ms-pick.up 	boy:cst pear  
 ‘The boy picked up the pear.’
 
+(u / usy ‘pick up’  
+	:actor (w / wrba ‘boy’) 
+	:undergoer (t / tafirast ‘pear’))
+```
+
 <span id="ber:pass" label="ber:pass">\[ber:pass\]</span> <br />
+```
 T-ttw-asy
 tfirast.  
-<span class="smallcaps">3fs-detr</span>-pick.up pear  
+3fs-detr-pick.up pear  
 ‘The pear was picked up.’
 
-`(u / usy ‘pick up’  ` <br />
-`:actor (w / wrba ‘boy’) `  <br />
-`:undergoer (t / tafirast ‘pear’))`  <br />
-
-`(t / ttw-asy ‘pick up’  ` <br />
-`:undergoer (t / tafirast ‘pear’)) ` 
+(t / ttw-asy ‘pick up’  
+	:undergoer (t / tafirast ‘pear’)) 
+```
 
 **Causatives.** There are a few different types of causatives that
 require different annotation solutions. For most causatives of
@@ -1370,17 +1433,16 @@ the causee *churan* ‘kid’ is annotated as
 `actor`, and *uni* ‘water’ as `undergoer`.
 
 <span id="bicausative" label="bicausative">\[bicausative\]</span>
-
-nai kurata-ta churan=ui uni=pu  
-grandmother drink-<span class="smallcaps">cau</span>
-kid=<span class="smallcaps">pst</span>
-water=<span class="smallcaps">ins</span>  
+```
+nai 		kurata-ta churan=ui u	ni=pu  
+grandmother 	drink-cau kid=pst 	water=ins  
 ‘Grandmother made the kid drink the water.’
 
-`(k / kuratata ‘make drink’  ` <br />
-`:causer (n / nai ‘grandmother’)  ` <br />
-`:actor (c / churan ‘kid’)  ` <br />
-`:undergoer (u / uni ‘water’))  ` <br />
+(k / kuratata ‘make drink’  
+	:causer (n / nai ‘grandmother’)  
+	:actor (c / churan ‘kid’)  
+	:undergoer (u / uni ‘water’))  
+```
 
 There are certain causatives of transitives which do not use the `causer` role. These are constructions which express transfer events, including mental/cognitive transfer. Some
 languages express these types of events with monomorphemic verbs, like English, but other languages use causatives of transitive verbs.
@@ -1390,28 +1452,28 @@ Languages may differ in terms of which types of causative constructions are cons
 <span id="bez:causative" label="bez:causative">\[bez:causative\]</span>
 
 <span id="bez:basic" label="bez:basic">\[bez:basic\]</span> <br />
-hogco-l ra&#620;ad b-egā-yo  
-he.<span class="smallcaps">obl-lat</span>
-sea(<span class="smallcaps">iii</span>)
-<span class="smallcaps">iii</span>-see-<span class="smallcaps">pst</span>  
-‘He saw the sea.’  
+```
+hogco-l 	raɬad 		b-egā-yo  
+he.obl-lat 	sea(iii) 	iii-see-pst  
+‘He saw the sea.’ 
+
+(b / b-egā ‘see’
+	:experiencer (h / hogco ‘he’)
+	:stimulus (r / raɬad ‘sea’))
+
+```
 
 <span id="bez:caus" label="bez:caus">\[bez:caus\]</span>
-hogco kibba-l ra&#620;ad b-ega-l-lo  
-he.<span class="smallcaps">obl</span>(<span class="smallcaps">erg</span>)
-girl.<span class="smallcaps">obl-lat</span>
-sea(<span class="smallcaps">iii</span>)
-<span class="smallcaps">iii</span>-see-<span class="smallcaps">caus</span>-<span class="smallcaps">pst</span>  
+```
+hogco 		kibba-l 	raɬad 		b-ega-l-lo  
+he.obl(erg) 	girl.obl-lat 	sea(iii) 	iii-see-caus-pst  
 ‘He showed the sea to the girl.’
 
-`(b / b-egā ‘see’`  <br />
-`:experiencer (h / hogco ‘he’)` <br />
-`:stimulus (r / ra`&#620;`ad ‘sea’))` <br />
-
-`(b / b-ega-l ‘show’`  <br />
-`:actor (h / hogco ‘he’)`  <br />
-`:theme (r / ra`&#620;`ad ‘sea’)`  <br />
-`:recipient (k / kibba ‘girl’))`  <br />
+(b / b-ega-l ‘show’
+	:actor (h / hogco ‘he’)
+	:theme (r / ra`&#620;`ad ‘sea’)
+	:recipient (k / kibba ‘girl’))
+```
 
 For causatives of ditransitives, the causer receives the
 `causer` role, the causee the `actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in [\[sk:tricausative\]](#sk:tricausative) from Shipibo-Konibo
@@ -1419,22 +1481,18 @@ For causatives of ditransitives, the causer receives the
 
 
 <span id="sk:tricausative" label="sk:tricausative">\[sk:tricausative\]</span> <br />
-Ja-tian ja xontako jawen tita-n xoi meni-ma-\[a\]i
-keen-yama-\[a\]i-bi...  
-that-<span class="smallcaps">temp</span> that
-unmarried.girl:<span class="smallcaps">abs</span>
-<span class="smallcaps">pos3</span>
-mother-<span class="smallcaps">erg</span>
-roasted.meat/fish:<span class="smallcaps">abs</span>
-give-<span class="smallcaps">caus</span>-<span class="smallcaps">inc</span>
-want-<span class="smallcaps">neg</span>-<span class="smallcaps">sds</span>-<span class="smallcaps">em</span>  
+```
+Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-bi...  
+that-temp 	that 	unmarried.girl:abs 	pos3 	mother-erg 	roasted.meat/fish:abs 	give-caus-inc 	want-neg-sds-em  
 ‘Then her mother makes the unmarried girl give roasted meat/fish (to the
 man who had asked her in matrimony) even though she doesn’t want to...’
 
-`(m / meni-ma ‘make give’ ` <br />
-`:causer (t / tita ‘mother’) ` <br />
-`:actor (x1 / xontako ‘unmarried girl’) ` <br />
-`:theme (x2 / xoi ‘roasted meat’))  `<br />
+(m / meni-ma ‘make give’ 
+	:causer (t / tita ‘mother’) 
+	:actor (x1 / xontako ‘unmarried girl’) 
+	:theme (x2 / xoi ‘roasted meat’)) 
+
+```
 
 There are two types of causatives of intransitives, based on the two types of intransitives. For intransitives whose single participant corresponds to an `undergoer` role, such as
 change-of-state verbs in many languages, the causer is annotated as `actor` and the single participant retains
@@ -1444,26 +1502,26 @@ its `undergoer`label. This can be seen in
 
 <span id="fc:coscausative" label="fc:coscausative">\[fc:coscausative\]</span>
 
-<span id="fc:cosbasic" label="fc:cosbasic">\[fc:cosbasic\]</span> <br /> Ka kedam hri a cat.  
-<span class="smallcaps">1sg</span> shoe
-<span class="smallcaps">string</span>
-<span class="smallcaps">3sg.nom</span> broken.1  
-‘My shoelace is broken/broke.’  
+<span id="fc:cosbasic" label="fc:cosbasic">\[fc:cosbasic\]</span> <br /> 
+```
+Ka 	kedam 	hri 	a 	cat.  
+1sg 	shoe 	string 3sg.nom 	broken.1  
+‘My shoelace is broken/broke.’
 
-<span id="fc:coscaus" label="fc:coscaus">\[fc:coscaus\]</span> <br /> Thangte in ka kedam hri a cat-ter.  
-Thangte <span class="smallcaps">erg</span>
-<span class="smallcaps">1sg</span> shoe
-<span class="smallcaps">string</span>
-<span class="smallcaps">3sg.nom</span>
-broken.1-<span class="smallcaps">caus</span>  
+(c / cat ‘broken’ 
+	:undergoer (k / kedam hri ‘shoelace’)) 
+```
+
+<span id="fc:coscaus" label="fc:coscaus">\[fc:coscaus\]</span> <br /> 
+```
+Thangte in 	ka 	kedam 	hri 	a 	cat-ter.  
+Thangte erg 	1sg 	shoe 	string 	3sg.nom broken.1-caus  
 ‘Thangte broke my shoelace.’
 
-`(c / cat ‘broken’ ` <br />
-`:undergoer (k / kedam hri ‘shoelace’)) `<br />
-
-`(c / cat-ter ‘break’  `<br />
-`:actor (t / Thangte)`  <br />
-`:undergoer (k / kedam hri ‘shoelace’))`<br />
+(c / cat-ter ‘break’  
+	:actor (t / Thangte)
+	:undergoer (k / kedam hri ‘shoelace’))
+```
 
 Regardless of whether the causative or anticausative verb is derived (or, neither is derived), the anticausative/intransitive meaning is annotated with a single `undergoer` participant and the causative/transitive meaning is annotated with an
 `actor` and an `undergoer` participant.
@@ -1475,22 +1533,25 @@ can be seen in [\[fc:actcausative\]](#fc:actcausative) from Falam Chin (King 201
 <span id="fc:actcausative" label="fc:actcausative">\[fc:actcausative\]</span>
 
 <span id="fc:actbasic" label="fc:actbasic">\[fc:actbasic\]</span> <br />
-Cinte a hni.  
-Cinte <span class="smallcaps">3sg.nom</span> laugh.1  
+```
+Cinte a 	hni.  
+Cinte 3sg.nom 	laugh.1  
 ‘Cinte laughed.’ 
 
-<span id="fc:actcaus" label="fc:actcaus">\[fc:actcaus\]</span> <br /> Parte in Cinte a hni-ter.  
-Parte <span class="smallcaps">erg</span> Cinte
-<span class="smallcaps">3sg.nom</span>
-laugh.1-<span class="smallcaps">caus</span>  
+(h / hni ‘laugh’
+	:actor (C / Cinte)) 
+```
+
+<span id="fc:actcaus" label="fc:actcaus">\[fc:actcaus\]</span> <br /> 
+```
+Parte 	in 	Cinte a 	hni-ter.  
+Parte 	erg 	Cinte 3sg.nom 	laugh.1-caus  
 ‘Parte made Cinte laugh.’
 
-`(h / hni ‘laugh’`  <br />
-`:actor (C / Cinte))  ` <br />
-
-`(h / hni-ter ‘make laugh’ ` <br />
-`:causer (P / Parte)`  <br />
-`:actor (C / Cinte))  ` <br />
+(h / hni-ter ‘make laugh’ 
+	:causer (P / Parte) 
+	:actor (C / Cinte))  
+```
 
 **Applicatives.**  Peterson (2007) distinguishes between “valency-increasing” applicatives and “valency-rearranging” applicatives. In valency-rearranging applicatives, a participant is expressed as an oblique in the basic construction and expressed as a core argument in the applicative construction; they are generally associated with the increased saliency or topicality of the oblique participant. Therefore, these fit into the category of pragmatic valency alternations, and both the basic and applicative construction receive the same participant role
 annotation. This can be seen in
@@ -1498,29 +1559,29 @@ annotation. This can be seen in
 
 <span id="fc:ipapplicative" label="fc:ipapplicative">\[fc:ipapplicative\]</span>
 
-<span id="fc:appbasic" label="fc:appbasic">\[fc:appbasic\]</span> <br />
-Parte in Thangte hrang=ah hmeh a suang.  
-Parte <span class="smallcaps">erg</span> Thangte
-for=<span class="smallcaps">loc</span> curry
-<span class="smallcaps">3sg.nom</span> cook.1  
-‘Parte cooked some curry for Thangte.’  
+<span id="fc:appbasic" label="fc:appbasic">\[fc:appbasic\]</span>
+```
+Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.  
+Parte erg 	Thangte for=loc 	curry 	3sg.nom cook.1  
+‘Parte cooked some curry for Thangte.’
 
-<span id="fc:ipapp" label="fc:ipapp">\[fc:ipapp\]</span> <br />
-Parte in Thangte hmeh a suan-sak  
-Parte <span class="smallcaps">erg</span> Thangte curry
-<span class="smallcaps">3sg.nom</span>
-cook.2-<span class="smallcaps">ben</span>  
+(s / suang ‘cook’
+	:actor (P / Parte)
+	:undergoer (h / hmeh ‘curry’) 
+	:affectee (T / Thangte))
+```
+
+<span id="fc:ipapp" label="fc:ipapp">\[fc:ipapp\]</span>
+```
+Parte in 	Thangte hmeh 	a 	suan-sak  
+Parte erg 	Thangte curry 	3sg.nom cook.2-ben  
 ‘Parte cooked Thangte some curry.’
 
-`(s / suang ‘cook’`  <br />
-`:actor (P / Parte)`  <br />
-`:undergoer (h / hmeh ‘curry’) ` <br />
-`:affectee (T / Thangte))`<br />
-
-`(s / suang-sak ‘cook for’`  <br />
-`:actor (P / Parte)`  <br />
-`:undergoer (h / hmeh ‘curry’) ` <br />
-`:affectee (T / Thangte))  `<br />
+(s / suang-sak ‘cook for’
+	:actor (P / Parte)
+	:undergoer (h / hmeh ‘curry’) 
+	:affectee (T / Thangte)) 
+```
 
 Whether the beneficiary, *Thangte*, is expressed as an oblique or a core argument, it is annotated as `affectee`. Valency-increasing applicatives involve the addition of a participant, compared to the basic construction. Here, the added participant is
 simply annotated with the appropriate semantic role. This can be seen in ADD EXAMPLE.
@@ -1528,24 +1589,27 @@ simply annotated with the appropriate semantic role. This can be seen in ADD EXA
 **Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be in [\[sup:refl\]](#sup:refl) and [\[sup:recip\]](#sup:recip) from Supyire (Carlson 1994:416-7).
 
 
-<span id="sup:refl" label="sup:refl">\[sup:refl\]</span><br />
-U a ù-yé bánì  
-he <span class="smallcaps">perf</span>
-he-<span class="smallcaps">refl</span> wound  
-‘He has wounded himself.’  
+<span id="sup:refl" label="sup:refl">\[sup:refl\]</span>
+```
+U 	a 	ù-yé 	bánì  
+he 	perf 	he-refl wound  
+‘He has wounded himself.’
 
-<span id="sup:recip" label="sup:recip">\[sup:recip\]</span><br /> Pi a pì-yé kánù  
-they <span class="smallcaps">perf</span>
-they-<span class="smallcaps">refl</span> love  
+(b / bánì ‘wound’ 
+	:actor (u / u ‘he’) 
+	:undergoer (u)) 
+```
+
+<span id="sup:recip" label="sup:recip">\[sup:recip\]</span><br /> 
+```
+Pi 	a 	pì-yé 		kánù  
+they 	perf 	they-refl 	love  
 ‘They loved each other.’
 
-`(b / bánì ‘wound’ ` <br />
-`:actor (u / u ‘he’) ` <br />
-`:undergoer (u)) ` <br />
-
-`(k / kánù ‘love’`  <br />
-`:actor (p / pi ‘they’)`  <br />
-`:undergoer (p))`  <br />
+(k / kánù ‘love’
+	:actor (p / pi ‘they’)
+	:undergoer (p))
+```
 
 ##### 3-2-1-2. Stage 2
 
@@ -1556,35 +1620,43 @@ to its corresponding frame file. The participants dependent on that
 event are annotated with the lexicalized roles, as determined by the
 frame file. This can be seen in [\[engst2\]](#engst2) below.  
 
-`predicate: tease.02`  <br />
-`arguments:`  <br />
-`ARG0: teaser`  <br />
-`ARG1: teased ` <br />
-`ARG2: about what`
+```
+predicate: tease.02
+	roles:
+	ARG0: teaser
+	ARG1: teased 
+	ARG2: about what
+```
 
 <span id="engst2" label="engst2">\[engst2\]</span>
+
+```
 He teased the boy about his hat.
 
-`(h / tease.02`  <br />
-`:ARG0 (h / he)`  <br />
-`:ARG1 (b / boy) ` <br />
-`:ARG2 (h / hat)) ` <br />
+(h / tease.02
+	:ARG0 (h / he)
+	:ARG1 (b / boy)
+	:ARG2 (h / hat))
+```
 
 Since the nonverbal clause functions require the use of lexicalized predicates at Stage 1, these are annotated in the same way at Stage 2 (see 3-2-1-1-1). Unlike Stage 1, implicit participants are
 annotated for their semantic role at Stage 2. This is shown in
 [\[st2:implicit\]](#st2:implicit).
 
-<span id="st2:implicit" label="st2:implicit">\[st2:implicit\]</span> She parked the truck in the driveway. They loaded the boxes.
+<span id="st2:implicit" label="st2:implicit">\[st2:implicit\]</span> 
+```
+She parked the truck in the driveway. They loaded the boxes.
 
-`(h / park.01` <br /> 
-`:ARG0 (s / she)`  <br />
-`:ARG1 (t / truck)`  <br />
-`:ARG2 (d / driveway)) ` <br />
+(h / park.01
+	:ARG0 (s / she)
+	:ARG1 (t / truck)
+	:ARG2 (d / driveway)) 
 
-`(h / load.01` <br /> 
-`:ARG0 (t2 / they)`  <br />
-`:ARG1 (t)  `<br />
-`:ARG2 (b / boxes)) ` <br />
+(h / load.01
+	:ARG0 (t2 / they)
+	:ARG1 (t)  
+	:ARG2 (b / boxes))
+```
 
 The second sentence in [\[st2:implicit\]](#st2:implicit) does not
 include explicit mention of the truck, but it is understood from the
