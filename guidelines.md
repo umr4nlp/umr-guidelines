@@ -14,7 +14,7 @@
       * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
       * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
       * Part 3-1-3. [Word senses](#part-3-1-3-word-senses)
-      * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-event-identification)
+      * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-identification-of-eventive-concepts)
       * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles) (Bill and Martha)
@@ -343,8 +343,6 @@ UMR differs from AMR in a number of ways:
 * UMR is a document-level representation that represents coreference, temporal dependencies, and modal dependencies.
 
 
-
-
 * As a result, some sentence-level AMR concepts are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`)
 
 AMR for `The boy can go`
@@ -364,9 +362,9 @@ UMR
   
 ```
 
-* UMR adds a *scope* concept to represent the relative scope of quantifiers and negations
+* UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
 
-* UMR adds an *aspect* attribute 
+* UMR adds an *aspect* attribute. See [Part 3-3-1](#part-3-3-1-aspect) for details.
 
 
 ## Part 3. Sentence-Level Representation
@@ -428,11 +426,30 @@ Past-  break/remove.stick.like -head -by.blade.Caus   -1s/3s
  
  UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
  
- [English exmaple]
- [Chinese example]
- 
-#### Part 3-1-4. Event identification
+``` 
+The school has approximately 570 pupils.
+(h / have-03
+      :ARG0 (s / school)
+      :ARG1 (p / pupil
+            :quant (a / approximately :op1 570)))
+```
 
+
+ ```
+ 并且 还 有 很多 高层 的 人物 哦 ！
+There will even be many VIPs!
+(x11 / and
+      :op2  (x3 / 有-03
+               :mod (x2 / 还)
+               :arg1  (x7 / 人物
+                         :mod  (x5 / 高层)
+                         :quant (x4 / 很多))
+            :mode  Expressive))
+```
+ 
+#### Part 3-1-4. Identification of eventive concepts
+
+Identification of eventive concepts is important to participant role annotation as well as aspect and modality annotation.
 The criteria used to identify events in UMR are largely based on the
 criteria used in TimeML (Pustejovsky et al. 2005). Event identification is not based on parts of speech or word classes, since these vary greatly across languages. Instead, event identification is based on a combination of semantic type and information packaging (Croft 2001). Semantic type refers to the difference between entities (or, objects), states (or, properties), and processes; this can be thought of as a categorization of things in the real world.
 Information packaging (also called discourse function or information
