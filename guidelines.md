@@ -338,7 +338,35 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 
 **Differences between AMR and UMR**
 
-* modality
+UMR differs from AMR in a number of ways:
+
+* UMR is a document-level representation that represents coreference, temporal dependencies, and modal dependencies.
+
+
+
+
+* As a result, some sentence-level AMR concepts are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`)
+
+AMR for `The boy can go`
+
+```
+(p / possible-01
+   :ARG0 ( g / go-01  
+            :ARG0 boy ))
+```
+UMR
+```
+( g / go-01  
+    :ARG0 boy )
+
+(s0/sentence
+  :modal (s0g :PARTAFF AUTH))
+  
+```
+
+* UMR adds a *scope* concept to represent the relative scope of quantifiers and negations
+
+* UMR adds an *aspect* attribute 
 
 
 ## Part 3. Sentence-Level Representation
