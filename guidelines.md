@@ -518,7 +518,7 @@ by the verb root.
 Grandmother made the kid drink the water.
 
 (d/ drink
-	:Cause (m/ make
+    :Cause (m/ make
     	:Actor (g/ grandmother)
     	:Aspect Performance
     	:Modstr Aff)
@@ -541,12 +541,12 @@ single event. Therefore, only a single predicate is identified
 
 <span id="KukamaCaus" label="KukamaCaus">\[KukamaCaus\]</span> 
 ```
-nai			kurata-ta	churan=ui	uni-pu
+nai		kurata-ta	churan=ui	uni-pu
 grandmother	drink-CAUS	kid=PST		water-INST
 'Grandmother made the kid drink the water.'
 
 (k/ kuratata 'make drink'
-	:Causer (n/ nai 'grandmother')
+    :Causer (n/ nai 'grandmother')
     :Actor (c/ churan 'kid')
     :Undergoer (u/ uni 'water')
     :Aspect Performance
@@ -583,16 +583,16 @@ predication, in this case).
 
 <span id="Aspect" label="Aspect">\[Aspect\]</span> 
 ```
-ce		əsi		mu-re
+ce	əsi	mu-re
 paper	this	black-change
 'This paper has become black.'
 
-(h/ have-mod-91						(h/ have-mod-91
-	:ARG0 (c/ ce 'paper')				:ARG0 (p/ paper)
-    	:mod (s/ əsi 'this')				:mod (t/ this)
-    :ARG1 (m/ mu 'black')				:ARG1 (b/ black)
-    :Aspect Performance					:Aspect Performance
-    :Modstr Aff)						:Modstr Aff)
+(h/ have-mod-91					(h/ have-mod-91
+    :ARG0 (c/ ce 'paper')			    :ARG0 (p/ paper)
+    	:mod (s/ əsi 'this')			        :mod (t/ this)
+    :ARG1 (m/ mu 'black')			    :ARG1 (b/ black)
+    :Aspect Performance				    :Aspect Performance
+    :Modstr Aff)				    :Modstr Aff)
 ```
 
 Similarly, modal and temporal auxiliaries will not be identified
@@ -617,7 +617,7 @@ both *want* and *go*.
 She wants to go to school
 
 (w/ want-01
-	:ARG0 (p/ person :ref 3SGF)
+    :ARG0 (p/ person :ref 3SGF)
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
@@ -664,18 +664,18 @@ en-na'-ten-ek-ant-a'		La	Esperanza
 'We slept in La Esperanza while coming here'
 
 (t/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
-	:Undergoer (p/ person :ref 1PL)					:ARG0 (p/ person :ref 1PL)
-    :Place (l/ location								:Place (l/ location
-    	:name (n/ name									:name (n/ name
-        	:op1 ("La")										:op1 ("La")
-        	:op2 ("Esperanza")))							:op2 ("Esperanza")))
-    :Aspect State									:Temporal (c/ come-01
-    :Modstr Aff)										:ARG1 p
-    													:ARG4 (h/ here)
-                                                        :Aspect Activity
-                                                        :Modstr Aff)
-                                                    :Aspect State
-                                                    :Modstr Aff)
+    :Undergoer (p/ person :ref 1PL)			    :ARG0 (p/ person :ref 1PL)
+    :Place (l/ location					    :Place (l/ location
+    	:name (n/ name					        :name (n/ name
+            :op1 ("La")						    :op1 ("La")
+            :op2 ("Esperanza")))				    :op2 ("Esperanza")))
+    :Aspect State					    :Temporal (c/ come-01
+    :Modstr Aff)					        :ARG1 p
+    								:ARG4 (h/ here)
+                                                        	:Aspect Activity
+                                                        	:Modstr Aff)
+                                                    	    :Aspect State
+                                                   	    :Modstr Aff)
 ```
 
 The English "venitive" construction in the translational equivalent of
@@ -714,13 +714,13 @@ ajan	kunumi		tsumi
 this	young.man	shaman
 'This young man is a shaman.'
 
-(h/ have-role-91								(h/ have-role-91
-	:ARG0 (k/ kunumi 'young man')					:ARG0 (m/ man)
-    	:mod (a/ ajan 'this')							:mod (y/ young)
-    :ARG1 (t/ tsumi 'shaman')							:mod (t/ this)
-    :Aspect State									:ARG1 (s/ shaman)
-    :Modstr Aff)									:Aspect State
-    												:Modstr Aff)
+(h/ have-role-91						(h/ have-role-91
+    :ARG0 (k/ kunumi 'young man')				    :ARG0 (m/ man)
+    	:mod (a/ ajan 'this')					        :mod (y/ young)
+    :ARG1 (t/ tsumi 'shaman')						:mod (t/ this)
+    :Aspect State						    :ARG1 (s/ shaman)
+    :Modstr Aff)						    :Aspect State
+    								    :Modstr Aff)
 ```
 
 <span id="KukamaTheticPossession" label="KukamaTheticPossession">\[KukamaTheticPossession\]</span> 
@@ -729,11 +729,11 @@ Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
 'Miguel does have a canoe.' lit. 'Miguel is a canoe-owner.'
 
-(a/ ɨara-yara 'have canoe'						(h/ have-03
-	:ARG0 (m/ Mijiri 'Miguel')					:ARG0 (m/ Miguel)
-    :ARG1 (a/ ɨara 'canoe')						:ARG1 (c/ canoe)
-    :Aspect State								:Aspect State
-    :Modstr Aff)								:Modstr Aff)
+(a/ ɨara-yara 'have canoe'					(h/ have-03
+    :ARG0 (m/ Mijiri 'Miguel')					    :ARG0 (m/ Miguel)
+    :ARG1 (a/ ɨara 'canoe')					    :ARG1 (c/ canoe)
+    :Aspect State						    :Aspect State
+    :Modstr Aff)						    :Modstr Aff)
 ```
 
 We propose a set of seven abstract concept predicates each corresponding
