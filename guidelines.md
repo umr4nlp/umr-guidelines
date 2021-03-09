@@ -25,6 +25,7 @@
       * Part 3-3-3. [Polarity](#Part-3-3-3-polarity)
       * Part 3-3-4. [Quant](#Part-3-3-4-quant)
       * Part 3-3-5. [Unit](#Part-3-3-5-unit)
+      * Part 3-3-6. [Ref](#part-3-3-6-ref)
       
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
@@ -2605,6 +2606,22 @@ yesterday.*
 
 #### Part 3-3-5. Unit
 
+#### Part 3-3-6. Ref
+The *Ref* attribute is used to represent pronominal features that include person and number. UMR decomposes a pronoun into a concept (e.g., person, thing) with an attribute to facilitate cross-lingual compatability.
+
+```
+He denied any wrongdoing.
+(d / deny-01
+      :Aspect Performance
+      :ARG0 (h / person
+               :ref 3s)
+      :ARG1 (t / thing
+            :ARG1-of (d2 / do-02
+                  :ARG0 h
+                  :ARG1-of (w / wrong-02))))
+```
+
+[Need a table for a complete list of ref attributes]
 
 
 ## Part 4. Document-Level Representation
@@ -2634,7 +2651,8 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 Snt3: He denied any wrongdoing.
 (d / deny-01
       :Aspect Performance
-      :ARG0 (h / he)
+      :ARG0 (h / person
+               :ref 3s)
       :ARG1 (t / thing
             :ARG1-of (d2 / do-02
                   :ARG0 h
