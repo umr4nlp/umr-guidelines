@@ -428,7 +428,7 @@ In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
 noun incorporation, predicates and their arguments can be expressed
 together in a single word. Both issues are illustrated in 
-[Arapaho Noun Incorporation](#ArapahoNounIncorporation) from Arapaho. Here, what is
+[Arapahoe Noun Incorporation](#ArapahoNounIncorporation). Here, what is
 expressed as a multi-word sentence in the English translation takes the
 form of a single Arapaho word. The pronominal suffix *-o'* indicates
 that a first person argument acts on a third person argument. The
@@ -437,7 +437,7 @@ classifier *-s* indicates that the instrument is a blade-like implement.
 So, this single word expresses the predicate, and the Actor, Undergoer,
 Theme, and Instrument arguments of this state of affairs.
 
-<span id="ArapahoNounIncorporation" label="ArapahoNounIncorporation">*Arapaho Noun Incorporation</span> 
+<span id="ArapahoNounIncorporation" label="ArapahoNounIncorporation">**Example**: Arapahoe Noun Incorporation</span> 
 ```
 nih-teb-e'ei-s-o'
 PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
