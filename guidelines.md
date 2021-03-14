@@ -298,7 +298,7 @@ The document-level representation indicates the *say-01* event happened before t
 
 ##  Part 2: From AMR to UMR
 
-UMR inherits the sentence-level representation, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node-labeled and edge-labeled graph. The nodes of this graph are UMR concepts, while edges represent UMR relations. 
+UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph. The nodes of this graph are UMR concepts, while edges represent UMR relations. 
 
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
@@ -319,32 +319,33 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 **UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
 
 * Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
-* word senses: When a dictionary of word senses is available for a language, a sense-disambiguated word can also be a concept. For instance, `taste-01` in the example above refers to the first sense of the word `taste`
+* word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word `taste`
 * Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatnating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a langugage-by-language basis.
-* Named entity type. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
+* Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
 * Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not corrrespond with any particular word in the sentence, hence it is an `abstract` concept.
 
 **UMR relations:** There are also a number of ways relations between concepts are created:
 
-* Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for that (a sense of the ) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3](#part-3-2-umr-relations)
+* Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (a sense of the ) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3](#part-3-2-umr-relations)
 * Semantic relations: Other UMR relations include `:time`, `:org`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3](#part-3-2-umr-relations)
 
 **UMR attrbitues:** UMR currently has three attribute types:
 
-* Aspect: Aspect are annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete of Aspect values with explanations and examples can be found in [Part 3-3-1 Aspect](#part-3-3-1-aspect)
-* Polarity: Polarity is only annotated for negative polarity as indicated by negation marker or an affix indicating negation.
-* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` aand `interrogative`
+* Aspect: Aspect are annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1 Aspect](#part-3-3-1-aspect). 
+* Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation.
+* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` and `interrogative`
 * Quantity: The value of a `:quant` attribute is a numerical number
 * Value: The value of a `:value` attribute is a numerical number. 
+* Reference: The value of a `:ref` attribute is a *bundle* of person and number feature used to represent reference. The bundle of features is used to represent pronouns (e.g., `1s`, `2pl`).
 
 **Differences between AMR and UMR**
 
 UMR differs from AMR in a number of ways:
 
-* UMR is a document-level representation that represents coreference, temporal dependencies, and modal dependencies.
+* UMR is a document-level representation that represents *coreference*, *temporal dependencies*, and *modal dependencies*.
 
 
-* As a result, some sentence-level AMR concepts are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`)
+* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`)
 
 AMR for `The boy can go`
 
@@ -364,8 +365,8 @@ UMR
 ```
 
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
-
-* UMR adds an *aspect* attribute. See [Part 3-3-1](#part-3-3-1-aspect) for details.
+* UMR allows the use of non-predicate-specific participant roles for languages that do not *frame files*
+* UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) for details.
 
 
 ## Part 3. Sentence-Level Representation
@@ -768,7 +769,9 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 | Object Predication  |         have-role-91         |      theme       |     object category      |
 | Equational  |         identity-91         |      theme       |     equated referent      |
  
- #### Part 3-1-3. Word senses
+
+
+#### Part 3-1-3. Word senses
  
  UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
  
