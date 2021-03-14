@@ -24,8 +24,7 @@
       * Part 3-3-2. [Mode](#Part-3-3-2-mode)
       * Part 3-3-3. [Polarity](#Part-3-3-3-polarity)
       * Part 3-3-4. [Quant](#Part-3-3-4-quant)
-      * Part 3-3-5. [Unit](#Part-3-3-5-unit)
-      * Part 3-3-6. [Ref](#part-3-3-6-ref)
+      * Part 3-3-5. [Ref](#part-3-3-5-ref)
       
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
@@ -1129,8 +1128,6 @@ general event possible should be identified.
 
 
 
-
- 
  
  #### Part 3-1-5. Scope for Quantification and negation
 
@@ -2603,15 +2600,73 @@ yesterday.*
   
 #### Part 3-3-2. Mode
 
+UMR adopts the mode attribute for AMR. The four values for the **mode** attribute include
+*expressive*, *imperative*.
+
+<span id="ex-3-3-2-1" label="ex-3-3-2-1">Example 3-3-2-1</span>
+```
+Yup , a couple of hundred dollars is going to save the day !
+(s / save-02 
+      :mode expressive
+      :ARG0 (c / couple
+            :op1 (m / monetary-quantity :quant 100
+                  :unit (d2 / dollar)))
+      :ARG1 (d / day))
+```
+
+<span id="ex-3-3-2-2" label="ex-3-3-2-2">Example 3-3-2-2</span>
+
+```
+Chalk another good one up to the wife .
+
+(c / chalk-up-02 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (o / one
+            :mod (a / another)
+            :ARG1-of (g / good-02))
+      :ARG2 (w / wife))
+```
+
+
 #### Part 3-3-3. Polarity
+
+
+<span id="ex-3-3-3-1" label="ex-3-3-3-1">Example 3-3-3-1</span>
+```
+Most of the time , economic policy and economic theory are not aimed at\
+ individuals .
+
+(a / aim-02 
+      :polarity -
+      :aspect State
+      :ARG1 (a2 / and
+            :op1 (p / policy-01)
+            :op2 (t / theory)
+            :mod (e / economy))
+      :ARG2 (i / individual)
+      :frequency (t2 / time
+            :quant (m / most)))
+```
 
 #### Part 3-3-4. Quant
 
-#### Part 3-3-5. Unit
+<span id="ex-3-3-4-1" label="ex-3-3-4-1">Example 3-3-4-1</span>
 
-#### Part 3-3-6. Ref
+```
+As of now , five million tickets have been sold on the StubHub website .
+(s / sell-01
+      :Aspect Performance
+      :ARG1 (t / ticket :quant 5000000)
+      :location (w / website
+            :mod (c / company :wiki "StubHub" :name (n / name :op1 "StubHub")))
+      :time (a / as-of
+            :op1 (n2 / now)))
+```
+
+#### Part 3-3-5. Ref
 The *Ref* attribute is used to represent pronominal features that include person and number. UMR decomposes a pronoun into a concept (e.g., person, thing) with an attribute to facilitate cross-lingual compatability.
 
+<span id="ex-3-3-5-1" label="ex-3-3-5-1">Example 3-3-5-1</span>
 ```
 He denied any wrongdoing.
 (d / deny-01
@@ -2623,8 +2678,13 @@ He denied any wrongdoing.
                   :ARG0 h
                   :ARG1-of (w / wrong-02))))
 ```
+| prounoun| attribute | pronoun | attribute |
+|---------|-----------|---------|-----------|
+| I       | 1s        | we      | 1pl       |
+|you      | 2s        | you     | 2pl       |
+|he       | 3sm       | they    | 3pl       |
+|she      | 3sf       |her      | 3sf       |
 
-[Need a table for a complete list of ref attributes]
 
 
 ## Part 4. Document-Level Representation
