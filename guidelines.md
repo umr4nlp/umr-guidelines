@@ -768,6 +768,48 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 | Object Predication  |         have-role-91         |      theme       |     object category      |
 | Equational  |         identity-91         |      theme       |     equated referent      |
  
+##### Multi-word concepts
+
+In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
+concatnating the lemmatized words.
+
+```
+So I normally steep it in hot water , then take it out and stir - fry it.
+(c / cause-01
+      :ARG1 (a2 / and
+            :op1 (s / steep-01
+	          :aspect Habitual
+                  :ARG0 (i / i)
+                  :ARG1 (i2 / it)
+                  :ARG2 (w / water
+                        :ARG1-of (h / hot-05)))
+            :op2 (a / and
+                  :op1 (t / take-out-11
+		        :aspect Habitual
+                        :ARG0 i
+                        :ARG1 i2)
+                  :op2 (s2 / stir-01
+		        :aspect Habitual
+                        :ARG0 i
+                        :ARG1 i2)
+                  :op3 (f / fry-01
+		        :aspect Habitual
+                        :ARG0 i
+                        :ARG1 i2)
+                  :time (t3 / then)))
+      :ARG1-of (n / normal-02))
+```
+
+```
+The moral aspects of the movement intrigued him as well :
+(i / intrigue-01
+      :aspect Performance
+      :ARG0 (a / aspect
+            :ARG1-of (m / moral-02)
+            :poss (m2 / movement-07))
+      :ARG1 (h / he)
+      :mod (a2 / as-well))
+```
 
 
 #### Part 3-1-3. Word senses
