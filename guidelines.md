@@ -12,15 +12,15 @@
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
       * Part 3-1-1. [Eventive concepts](#part-3-1-1-eventive-concepts)
-      * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
-      * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
-         * Part 3-1-2-1. [Predicate and argument as one word](#####part-3-1-2-1-predicate-and-argument-as-one-word)
-         * Part 3-1-2-2. [Valency-changing operations](#####part-3-1-2-2-Valency-changing-operations)
-         * Part 3-1-2-3. [TAM categories](#####Part-3-1-2-3-TAM-categories)
-         * Part 3-1-2-4. [Associated Motion](#####Part-3-1-2-4-Associated-Motion)
-         * Part 3-1-2-5. [Non-verbal clauses](#####Part-3-1-2-5-Non-verbal-clauses)
-         * Part 3-1-2-6. [Multi-word concepts](#####part-2-1-2-6-Multi-word-concepts)
-      * Part 3-1-3. [Word senses](#part-3-1-3-word-senses)
+      * Part 3-1-2. [Named entities](#part-3-1-2-named-entities)  (Bert, Andy)
+      * Part 3-1-3. [Concept word mismatches](#part-3-1-3-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
+         * Part 3-1-3-1. [Predicate and argument as one word](#part-3-1-3-1-predicate-and-argument-as-one-word)
+         * Part 3-1-3-2. [Valency-changing operations](#part-3-1-3-2-Valency-changing-operations)
+         * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
+         * Part 3-1-3-4. [Associated Motion](#Part-3-1-3-4-Associated-Motion)
+         * Part 3-1-3-5. [Non-verbal clauses](#Part-3-1-3-5-Non-verbal-clauses)
+         * Part 3-1-3-6. [Multi-word concepts](#part-2-1-3-6-Multi-word-concepts)
+      * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
       * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-identification-of-eventive-concepts)
       * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
@@ -378,473 +378,8 @@ UMR
 ## Part 3. Sentence-Level Representation
 
 ### Part 3-1. UMR Concepts
- #### Part 3-1-1. Named entities
- 
-Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. The following is an example that has a *country* entity and a *person* entity. 
 
-```                    
-Edmond Pope is an American businessman.
-(b2 / businessman
-      :mod (c5 / country :wiki "United_States"
-            :name (n6 / name :op1 "America"))
-      :domain (p / person :wiki "Edmond_Pope"
-            :name (n5 / name :op1 "Pope")))                   
-```        
-The total set of entity types are hierarchically organized 
-
-
-
-<!--organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league-->
-<!--location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation, (landforms and water forms?)-->
-
-
-|Type   |  Subtype (AMR NE Type) |
-|-------|------------------------|
-|       |person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement|
-|*Organization* | commerical_org (company), political_org (political-party), government_org (government_organization), military_org (military), criminal_org (criminal-organization), academic_org (school, university, research-institute), sports_org (team, league), market-sector|
-| *Geographic-entity*   | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest|
-|  *Celestial-body*     |moon, planet, star, constellation|
-| *region*              | local-region, country-region, world-region|
-|  *GPE*     |city, city-district, county, state, province, territory, country| 
-|  *facility*| airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park|
-|  *event*   |  incident, natural-disaster, earthquake, war, conference, game, festival|
-|  *product* |vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program|
-|       |publication (book, newspaper, magazine, journal)|
-|  *Natural-object*| |
-|  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
-|   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
-
- #### Part 3-1-2. Concept-word mismatches
- 
-Cross-linguistically, concepts are not always mapped onto words in the
-same way. Many low-resource languages are morphologically more complex
-than languages like English, and they often express in a single word
-concepts for which English needs multiple words. For a number of
-reasons, UMR does not require the decomposition of morphologically
-complex words into morphemes that individually map to concepts, but
-instead, such words can as a whole map to multiple concepts. How exactly
-this mapping between single, (often) morphologically complex words and
-multiple concepts is achieved depends on which semantic categories are
-involved and how they behave across languages. This section provides
-guidance on the annotation of predicates and arguments in five different
-types of constructions where the mapping between words and concepts is
-not straightforward.
-
- ##### Part 3-1-2-1. Predicate and argument as one word
-
-In languages that make use of verbal argument indexation (i.e.
-pronominal affixes on the verb to cross-reference semantic arguments) or
-noun incorporation, predicates and their arguments can be expressed
-together in a single word. Both issues are illustrated in 
-[Arapahoe Noun Incorporation](#ArapahoNounIncorporation). Here, what is
-expressed as a multi-word sentence in the English translation takes the
-form of a single Arapaho word. The pronominal suffix *-o'* indicates
-that a first person argument acts on a third person argument. The
-lexical item for 'head', *e'ei*, is incorporated in the verb, and the
-classifier *-s* indicates that the instrument is a blade-like implement.
-So, this single word expresses the predicate, and the Actor, Undergoer,
-Theme, and Instrument arguments of this state of affairs.
-
-<span id="ArapahoNounIncorporation" label="ArapahoNounIncorporation">**Example**: Arapahoe Noun Incorporation</span> 
-```
-nih-teb-e'ei-s-o'
-PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
-'I cut his head off with a knife.'
-
-(n / teb-e'ei-s ‘break/remove.stick.like’
-    :Actor (p / person :ref 1SG)
-    :Undergoer (p2 / person :ref 3SG)
-    :Theme (t / thing :ref obviative)
-    :Aspect Performance
-    :Modstrength Aff)
-```
-
-When languages use verbal affixes to index arguments, these arguments
-then may or may not be expressed through independent NPs elsewhere in
-the clause. UMR treats such indexed arguments in the same way as it does
-free pronouns - they are identified as arguments of the verb. So, even
-though there is no overt word in the sentence above referring to a first
-person actor or a third person undergoer, these arguments are
-nevertheless identified and annotated (using a named-entity concept, in
-this case 'person' or 'thing', as they are clearly identifiable to
-native speakers of the language).
-
-Noun incorporation constructions come in different types across
-languages. Some constructions, such as the one illustrated by *-e'ei*
-'head' above, are not very grammaticalized. Here, the incorporated noun
-functions as an argument of the verb, meaning that no overt NP can be
-present in the clause to fill this semantic role. So, while UMR treats
-the whole stem *teb-e'ei-s* as the predicate, it also identifies a
-separate concept for 'head', which has the :Theme participant role as
-seen in the UMR corresponding to example
-[\[ArapahoNounIncorporation\]](#ArapahoNounIncorporation).
-
-On the other hand, in more grammaticalized noun incorporation
-constructions, the incorporated noun does not "replace" one of the
-verbal arguments. Instead, the incorporated noun only denotes a very
-general class of objects, and an independent NP can be present in the
-clause to specify the kind of object at hand. Such noun incorporation
-constructions are often referred to as "verbal classifiers". For
-example, the Arapaho instrumental suffix *-s* indicates that the
-"remove"-event is done by means of a blade-like implement, but still an
-independent NP can appear to specify the instrument. For such
-grammaticalized noun incorporation constructions, no separate concept
-corresponding to the incorporated noun is identified. An participant
-with the :Instrument role is only identified if it is expressed as an
-overt NP in the clause.
-
-This treatment of noun incorporation means that a certain amount of
-linguistic analysis must be done prior to UMR annotation. If the
-language at hand has one or more noun incorporation construction(s),
-annotators need to know for any individual construction whether or not
-it allows the expression of the incorporated participant as an
-independent overt NP. Of course, grammaticalization is a continuous
-process, and therefore noun incorporation constructions are likely to be
-found on a continuum between these two end points. However, we map this
-continuum onto a discrete choice for annotators by taking the ability of
-an incorporated noun to co-occur with an independent NP as criterial.
-
-##### Part 3-1-2-2. Valency-changing operations
-
-Secondly, constructions used to change the valency of verbs (causatives,
-applicatives, reflexives etc.) can cross-linguistically either express
-the two concepts at hand in separate words (e.g. English *I **made** him
-**eat***), or combine the two concepts into a single word (e.g. Sanapaná
-*as-**tav-kes**-ke'* 'I made her/him eat'). In order to assess whether
-one or two concepts should be identified for UMR annotation, unity under
-negation is chosen as a criterion.
-
-In English Causatives, for instance, negation can apply to the causing
-event and to the caused event separately as in
-[\[EnglishCaus\]](#EnglishCaus), indicating that the causing event and the
-caused event are construed as independent predicates. Therefore, a
-"cause"-event is identified in addition to the "drink"-event expressed
-by the verb root.
-
-<span id="EnglishCaus" label="EnglishCaus">\[EnglishCaus\]</span> 
-```
-Grandmother made the kid drink the water.
-
-(d/ drink
-    :Cause (m/ make
-    	:Actor (g/ grandmother)
-    	:Aspect Performance
-    	:Modstr Aff)
-    :Actor (k/ kid)
-    :Undergoer (w/ water)
-    :Aspect Performance
-    :Modstr Aff)
-
-Grandmother did not make the kid drink the water.
-Grandmother made the kid not drink the water.
-```
-
-Kukama, on the other hand, has a morphological causative, as in
-[\[KukamaCaus\]](#KukamaCaus). The caused event and causing event cannot be
-negated independently: if
-[\[KukamaCaus\]](#KukamaCaus) is negated, negation necessarily scopes over
-both, indicating that this form is construed in Kukama as denoting a
-single event. Therefore, only a single predicate is identified
-(corresponding to the whole verb stem *kuratata* 'make drink').
-
-<span id="KukamaCaus" label="KukamaCaus">\[KukamaCaus\]</span> 
-```
-nai		kurata-ta	churan=ui	uni-pu
-grandmother	drink-CAUS	kid=PST		water-INST
-'Grandmother made the kid drink the water.'
-
-(k/ kuratata 'make drink'
-    :Causer (n/ nai 'grandmother')
-    :Actor (c/ churan 'kid')
-    :Undergoer (u/ uni 'water')
-    :Aspect Performance
-    :Modstr Aff)
-```
-
-This criterion will be used for all valency change concepts: if the
-"lexical" concept expressed by the verb root and the valency change
-concept can be negated independently, two events are identified, whereas
-if they cannot be negated independently, only one event is identified
-(corresponding to the derived verb stem). The semantics and valency of
-such derived forms will be inferred from the participant role annotation
-associated with the verb. Which valency changes lead to which argument
-structures is detailed in section 3.2.1 of these guidelines.
-
-##### Part 3-1-2-3. TAM categories
-
-Third, some semantic categories such as (phasal) aspect, temporal
-relations, and modal relations, can be expressed cross-linguistically
-either through bound morphology or through separate words (often called
-"auxiliaries").
-
-Phasal aspectual meanings such as inchoative, completive, and
-continuative, firstly, are never identified as separate events, even if
-they are expressed through independent words. Instead, they will simply
-inform the Aspect attribute label of the event they modify (section
-3.3.1). This principle is illustrated in example
-[\[Aspect\]](#Aspect). In
-Manipuri, the inchoative concept and the "close"-meaning form part of
-the same word, while in the English translation, they are expressed as
-two different words. Nevertheless, in both the English and the Manipuri
-UMR, only one event is identified (corresponding to concept of property
-predication, in this case).
-
-<span id="Aspect" label="Aspect">\[Aspect\]</span> 
-```
-ce	əsi	mu-re
-paper	this	black-change
-'This paper has become black.'
-
-(h/ have-mod-91					(h/ have-mod-91
-    :ARG0 (c/ ce 'paper')			    :ARG0 (p/ paper)
-    	:mod (s/ əsi 'this')			        :mod (t/ this)
-    :ARG1 (m/ mu 'black')			    :ARG1 (b/ black)
-    :Aspect Performance				    :Aspect Performance
-    :Modstr Aff)				    :Modstr Aff)
-```
-
-Similarly, modal and temporal auxiliaries will not be identified
-independently as events, but will instead inform the modal and temporal
-dependency annotation: in English, for example, modal auxiliaries such
-as *might* and *should* in *He **might/should** go to school* are not
-identified as independent events, and neither are temporal auxiliaries
-such as *have* and *be* in *She **has gone/is going** to school*. How
-such meanings exactly inform the temporal and modal annotation is
-detailed in sections 4.2 and 4.3 of these guidelines.
-
-For some semi-modal concepts, there may be language-internal semantic
-evidence that they are construed as independent concepts. For instance,
-in the English desiderative construction in
-[\[Desiderative\]](#Desiderative), the desire-event can be modalized
-independently of the "go"-event, indicating that desires are construed
-as independent events in English. The UMR therefore has predicates for
-both *want* and *go*.
-
-<span id="Desiderative" label="Desiderative">\[Desiderative\]</span> 
-```
-She wants to go to school
-
-(w/ want-01
-    :ARG0 (p/ person :ref 3SGF)
-    :ARG1 (g/ go-01
-    	:ARG1 p
-        :ARG4 (s/ school)
-        :Aspect Performance
-        :MOD w)
-    :Aspect State
-    :Modstr Aff)
-    
-She may want to go to school
-```
-
-However, if in a language the desire-event cannot be modalized
-independently from the desired event, no separate event is identified
-for the desire-semantics. Instead, the desiderative is taken into
-account in the modal annotation, as detailed in section 4.3. For three
-other semi-modal concepts, the same guidelines as to concept-word
-mismatches are used as for desideratives: this is the case for conatives
-('try to'), optatives ('wish that'), and frustratives ('fail to').
-
-##### Part 3-1-2-4. Associated Motion
-
-Associated motion constructions are treated in a similar way to
-semi-modals. If associated motion events can have their own argument
-structure (i.e. if they can co-occur with NPs expressing start points or
-end points of motion events), these motion events are identified as
-separate predicates in the UMR. If they cannot take their own argument
-structure, only one event is identified.
-
-For instance, the Sanapaná associated motion construction in
-[\[Motion\]](#Motion) expresses that the sleeping-event takes place during a motion event
-towards the deictic center: the suffix *-ant* essentially means that the
-event expressed by the verb root happens "while coming here". As shown
-in [\[Motion\]](#Motion), this construction can co-occur with a spatial NP. However, such a spatial NP can only express the location of the sleeping-event rather
-than the goal or the start point of the motion event. It is therefore
-better analyzed as a circumstantial locative belonging to the
-"sleep"-event expressed by the verb root than as an argument of the
-motion event. The motion event itself therefore has no independent
-argument structure, and only one event is identified for UMR annotation.
-
-<span id="Motion" label="Motion">\[Motion\]</span> 
-```
-en-na'-ten-ek-ant-a'		La	Esperanza
-1PL-DSTR-sleep-PST/HAB-NOM	La	Esperanza
-'We slept in La Esperanza while coming here'
-
-(t/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
-    :Undergoer (p/ person :ref 1PL)			    :ARG0 (p/ person :ref 1PL)
-    :Place (l/ location					    :Place (l/ location
-    	:name (n/ name					        :name (n/ name
-            :op1 ("La")						    :op1 ("La")
-            :op2 ("Esperanza")))				    :op2 ("Esperanza")))
-    :Aspect State					    :Temporal (c/ come-01
-    :Modstr Aff)					        :ARG1 p
-    								:ARG4 (h/ here)
-                                                        	:Aspect Activity
-                                                        	:Modstr Aff)
-                                                    	    :Aspect State
-                                                   	    :Modstr Aff)
-```
-
-The English "venitive" construction in the translational equivalent of
-[\[Motion\]](#Motion), however, can co-occur with an NP which is clearly an argument of the "come"-event: one could say, for instance *We slept in La Esperanza
-while coming here **from Puerto Casado***. Therefore, the motion event
-and the "sleep"-event are construed in English as two independent
-events, and are annotated in UMR as two separate predicates.
-
-##### Part 3-1-2-5. Non-verbal clauses
-
-Many types of "non-verbal clauses", such as predicate nominals and
-predication of properties, possession, and location, show different
-mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
-easily identifiable "verbal" predicate with argument NPs, as seen in the
-English translational equivalents of the Kukama examples in
-[\[KukamaObjectPred\]](#KukamaObjectPred) and [\[KukamaTheticPossession\]](#KukamaTheticPossession). In English, these constructions do not pose
-serious problems to the predicate-argument structure of UMR - one could
-simply identify the "have" or "be"-verb as a predicate, and the NPs in
-the clause as its arguments.
-
-In the Kukama object predication construction in
-[\[KukamaObjectPred\]](#KukamaObjectPred), however, the predicate does not map to
-an overt word: object predication is expressed through juxtaposition of
-two NPs, with the predicational meaning implicit but inherent in the
-construction. In the Kukama thetic possession construction in [\[KukamaTheticPossession\]](#KukamaTheticPossession), on the other hand, the possessum
-and the relation of possession are expressed together as a single word
-which functions as a predicate: something that is typically thought of
-as an "argument" is predicativized. Both these structures pose problems
-for the annotation of predicate-argument structure if we want to adhere
-to our position of holistic annotation of words, since there is no
-separate material that can be identified as a predicate.
-
-<span id="KukamaObjectPred" label="KukamaObjectPred">\[KukamaObjectPred\]</span> 
-```
-ajan	kunumi		tsumi
-this	young.man	shaman
-'This young man is a shaman.'
-
-(h/ have-role-91						(h/ have-role-91
-    :ARG0 (k/ kunumi 'young man')				    :ARG0 (m/ man)
-    	:mod (a/ ajan 'this')					        :mod (y/ young)
-    :ARG1 (t/ tsumi 'shaman')						:mod (t/ this)
-    :Aspect State						    :ARG1 (s/ shaman)
-    :Modstr Aff)						    :Aspect State
-    								    :Modstr Aff)
-```
-
-<span id="KukamaTheticPossession" label="KukamaTheticPossession">\[KukamaTheticPossession\]</span> 
-```
-Mijiri-tin	ɨara-yara
-Miguel-CER	canoe-owner
-'Miguel does have a canoe.' lit. 'Miguel is a canoe-owner.'
-
-(a/ ɨara-yara 'have canoe'					(h/ have-03
-    :ARG0 (m/ Mijiri 'Miguel')					    :ARG0 (m/ Miguel)
-    :ARG1 (a/ ɨara 'canoe')					    :ARG1 (c/ canoe)
-    :Aspect State						    :Aspect State
-    :Modstr Aff)						    :Modstr Aff)
-```
-
-We propose a set of seven abstract concept predicates each corresponding
-to a discrete "non-verbal clause" function (table
-[\[tab:nonverbal\]](#tab:nonverbal)). When there is no overt predicate-word, as
-in [\[KukamaObjectPred\]](#KukamaObjectPred), we assume that annotators will be able
-to recognize the type of non-verbal clause function they are dealing
-with. They should use an abstract predicate concept from table
-[\[tab:nonverbal\]](#tab:nonverbal) as predicative core of the graph, and use the :ARG0 and :ARG 1 numbered argument roles to link the arguments to this predicate as specified in
-the table.
-
-In constructions with predicativized arguments, such as
-[\[KukamaTheticPossession\]](#KukamaTheticPossession), UMR takes the same approach as for
-pronominal affixation. Both a predicate concept and an argument concept
-are identified separately, but linked to the same word token in the
-sentence - in this case *ɨara-yara*. As can be seen in the example UMRs
-above, the resulting graphs have similar structures regardless of
-whether a languages uses an overt-predicate strategy, a zero-predicate
-(juxtaposition) strategy, or a predicativized argument strategy for such
-"non-verbal clause" meanings.
-
-
-<span id="tab:nonverbal" label="tab:nonverbal">\[tab:nonverbal\]</span>
-|     Clause Type      |              Predicate               |           ARG0          |         ARG1         |
-| :-------: | :----------------------------------: | :------------------------------: | :-------------------------: |
-| Thetic Possession  |         have-03         |      possessor       |     possessum      |
-|  Predicative Possession   |            belong-01             |       possessum       | possessor |
-|     Thetic Location      |     exist-91    |       location        |      theme      |
-| Predicative Location  |         have-location-91         |      theme       |     location      |
-| Property Predication  |         have-mod-91         |      theme       |     property      |
-| Object Predication  |         have-role-91         |      theme       |     object category      |
-| Equational  |         identity-91         |      theme       |     equated referent      |
- 
-##### Part 3-1-2-6. Multi-word concepts
-
-In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
-concatnating the lemmatized words.
-
-```
-So I normally steep it in hot water , then take it out and stir - fry it.
-(c / cause-01
-      :ARG1 (a2 / and
-            :op1 (s / steep-01
-	          :aspect Habitual
-                  :ARG0 (i / i)
-                  :ARG1 (i2 / it)
-                  :ARG2 (w / water
-                        :ARG1-of (h / hot-05)))
-            :op2 (a / and
-                  :op1 (t / take-out-11
-		        :aspect Habitual
-                        :ARG0 i
-                        :ARG1 i2)
-                  :op2 (s2 / stir-01
-		        :aspect Habitual
-                        :ARG0 i
-                        :ARG1 i2)
-                  :op3 (f / fry-01
-		        :aspect Habitual
-                        :ARG0 i
-                        :ARG1 i2)
-                  :time (t3 / then)))
-      :ARG1-of (n / normal-02))
-```
-
-```
-The moral aspects of the movement intrigued him as well :
-(i / intrigue-01
-      :aspect Performance
-      :ARG0 (a / aspect
-            :ARG1-of (m / moral-02)
-            :poss (m2 / movement-07))
-      :ARG1 (h / he)
-      :mod (a2 / as-well))
-```
-
-
-#### Part 3-1-3. Word senses
- 
- UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
- 
-``` 
-The school has approximately 570 pupils.
-(h / have-03
-      :ARG0 (s / school)
-      :ARG1 (p / pupil
-            :quant (a / approximately :op1 570)))
-```
-
-
- ```
- 并且 还 有 很多 高层 的 人物 哦 ！
-There will even be many VIPs!
-(x11 / and
-      :op2  (x3 / 有-03
-               :mod (x2 / 还)
-               :arg1  (x7 / 人物
-                         :mod  (x5 / 高层)
-                         :quant (x4 / 很多))
-            :mode  Expressive))
-```
- 
-#### Part 3-1-4. Identification of eventive concepts
+#### Part 3-1-1. Identification of eventive concepts
 
 Identification of eventive concepts is important to participant role annotation as well as aspect and modality annotation.
 The criteria used to identify events in UMR are largely based on the
@@ -892,7 +427,7 @@ either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which are identified
 as events in UMR are shown in bold in Table 2.
 
-##### 3-1-4-1. Processes in predication
+##### 3-1-1-1. Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
@@ -913,7 +448,7 @@ in [\[repair\]](#repair), or a dependent clause, like *went* in
 [\[wentrepair\]](#wentrepair), predicated processes are always
 identified as events.
 
-##### 3-1-4-2. Processes in modification and reference
+##### 3-1-1-2. Processes in modification and reference
 
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
@@ -982,7 +517,7 @@ firing squad* without having seen an actual firing event, whereas *I saw
 the floating hospitals* implies that the seer witnessed the floating
 event as well.
 
-##### 3-1-4-3. States and entities
+##### 3-1-1-3. States and entities
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. Two-place statives, such as *love*
@@ -1122,7 +657,7 @@ otherwise, like in [\[causeother\]](#causeother).
 <span id="causeother" label="causeother">\[causeother\]</span> The house
 **collapsed** <u>because</u> of the **explosion**.
 
-##### 3-1-4-4. Implicit events
+##### 3-1-1-4. Implicit events
 
 Since UMR annotates meaning, and not form, there are situations where
 events are identified in the absence of explicit linguistic material.
@@ -1175,6 +710,474 @@ that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
 general event possible should be identified.
 
+
+
+ #### Part 3-1-2. Named entities
+ 
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. The following is an example that has a *country* entity and a *person* entity. 
+
+```                    
+Edmond Pope is an American businessman.
+(b2 / businessman
+      :mod (c5 / country :wiki "United_States"
+            :name (n6 / name :op1 "America"))
+      :domain (p / person :wiki "Edmond_Pope"
+            :name (n5 / name :op1 "Pope")))                   
+```        
+The total set of entity types are hierarchically organized 
+
+
+
+<!--organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league-->
+<!--location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation, (landforms and water forms?)-->
+
+
+|Type   |  Subtype (AMR NE Type) |
+|-------|------------------------|
+|       |person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement|
+|*Organization* | commerical_org (company), political_org (political-party), government_org (government_organization), military_org (military), criminal_org (criminal-organization), academic_org (school, university, research-institute), sports_org (team, league), market-sector|
+| *Geographic-entity*   | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest|
+|  *Celestial-body*     |moon, planet, star, constellation|
+| *region*              | local-region, country-region, world-region|
+|  *GPE*     |city, city-district, county, state, province, territory, country| 
+|  *facility*| airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park|
+|  *event*   |  incident, natural-disaster, earthquake, war, conference, game, festival|
+|  *product* |vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program|
+|       |publication (book, newspaper, magazine, journal)|
+|  *Natural-object*| |
+|  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
+|   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
+
+ #### Part 3-1-3. Concept-word mismatches
+ 
+Cross-linguistically, concepts are not always mapped onto words in the
+same way. Many low-resource languages are morphologically more complex
+than languages like English, and they often express in a single word
+concepts for which English needs multiple words. For a number of
+reasons, UMR does not require the decomposition of morphologically
+complex words into morphemes that individually map to concepts, but
+instead, such words can as a whole map to multiple concepts. How exactly
+this mapping between single, (often) morphologically complex words and
+multiple concepts is achieved depends on which semantic categories are
+involved and how they behave across languages. This section provides
+guidance on the annotation of predicates and arguments in five different
+types of constructions where the mapping between words and concepts is
+not straightforward.
+
+ ##### Part 3-1-3-1. Predicate and argument as one word
+
+In languages that make use of verbal argument indexation (i.e.
+pronominal affixes on the verb to cross-reference semantic arguments) or
+noun incorporation, predicates and their arguments can be expressed
+together in a single word. Both issues are illustrated in 
+[Arapahoe Noun Incorporation](#ArapahoNounIncorporation). Here, what is
+expressed as a multi-word sentence in the English translation takes the
+form of a single Arapaho word. The pronominal suffix *-o'* indicates
+that a first person argument acts on a third person argument. The
+lexical item for 'head', *e'ei*, is incorporated in the verb, and the
+classifier *-s* indicates that the instrument is a blade-like implement.
+So, this single word expresses the predicate, and the Actor, Undergoer,
+Theme, and Instrument arguments of this state of affairs.
+
+<span id="ArapahoNounIncorporation" label="ArapahoNounIncorporation">**Example**: Arapahoe Noun Incorporation</span> 
+```
+nih-teb-e'ei-s-o'
+PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
+'I cut his head off with a knife.'
+
+(n / teb-e'ei-s ‘break/remove.stick.like’
+    :Actor (p / person :ref 1SG)
+    :Undergoer (p2 / person :ref 3SG)
+    :Theme (t / thing :ref obviative)
+    :Aspect Performance
+    :Modstrength Aff)
+```
+
+When languages use verbal affixes to index arguments, these arguments
+then may or may not be expressed through independent NPs elsewhere in
+the clause. UMR treats such indexed arguments in the same way as it does
+free pronouns - they are identified as arguments of the verb. So, even
+though there is no overt word in the sentence above referring to a first
+person actor or a third person undergoer, these arguments are
+nevertheless identified and annotated (using a named-entity concept, in
+this case 'person' or 'thing', as they are clearly identifiable to
+native speakers of the language).
+
+Noun incorporation constructions come in different types across
+languages. Some constructions, such as the one illustrated by *-e'ei*
+'head' above, are not very grammaticalized. Here, the incorporated noun
+functions as an argument of the verb, meaning that no overt NP can be
+present in the clause to fill this semantic role. So, while UMR treats
+the whole stem *teb-e'ei-s* as the predicate, it also identifies a
+separate concept for 'head', which has the :Theme participant role as
+seen in the UMR corresponding to example
+[\[ArapahoNounIncorporation\]](#ArapahoNounIncorporation).
+
+On the other hand, in more grammaticalized noun incorporation
+constructions, the incorporated noun does not "replace" one of the
+verbal arguments. Instead, the incorporated noun only denotes a very
+general class of objects, and an independent NP can be present in the
+clause to specify the kind of object at hand. Such noun incorporation
+constructions are often referred to as "verbal classifiers". For
+example, the Arapaho instrumental suffix *-s* indicates that the
+"remove"-event is done by means of a blade-like implement, but still an
+independent NP can appear to specify the instrument. For such
+grammaticalized noun incorporation constructions, no separate concept
+corresponding to the incorporated noun is identified. An participant
+with the :Instrument role is only identified if it is expressed as an
+overt NP in the clause.
+
+This treatment of noun incorporation means that a certain amount of
+linguistic analysis must be done prior to UMR annotation. If the
+language at hand has one or more noun incorporation construction(s),
+annotators need to know for any individual construction whether or not
+it allows the expression of the incorporated participant as an
+independent overt NP. Of course, grammaticalization is a continuous
+process, and therefore noun incorporation constructions are likely to be
+found on a continuum between these two end points. However, we map this
+continuum onto a discrete choice for annotators by taking the ability of
+an incorporated noun to co-occur with an independent NP as criterial.
+
+##### Part 3-1-3-2. Valency-changing operations
+
+Secondly, constructions used to change the valency of verbs (causatives,
+applicatives, reflexives etc.) can cross-linguistically either express
+the two concepts at hand in separate words (e.g. English *I **made** him
+**eat***), or combine the two concepts into a single word (e.g. Sanapaná
+*as-**tav-kes**-ke'* 'I made her/him eat'). In order to assess whether
+one or two concepts should be identified for UMR annotation, unity under
+negation is chosen as a criterion.
+
+In English Causatives, for instance, negation can apply to the causing
+event and to the caused event separately as in
+[\[EnglishCaus\]](#EnglishCaus), indicating that the causing event and the
+caused event are construed as independent predicates. Therefore, a
+"cause"-event is identified in addition to the "drink"-event expressed
+by the verb root.
+
+<span id="EnglishCaus" label="EnglishCaus">\[EnglishCaus\]</span> 
+```
+Grandmother made the kid drink the water.
+
+(d/ drink
+    :Cause (m/ make
+    	:Actor (g/ grandmother)
+    	:Aspect Performance
+    	:Modstr Aff)
+    :Actor (k/ kid)
+    :Undergoer (w/ water)
+    :Aspect Performance
+    :Modstr Aff)
+
+Grandmother did not make the kid drink the water.
+Grandmother made the kid not drink the water.
+```
+
+Kukama, on the other hand, has a morphological causative, as in
+[\[KukamaCaus\]](#KukamaCaus). The caused event and causing event cannot be
+negated independently: if
+[\[KukamaCaus\]](#KukamaCaus) is negated, negation necessarily scopes over
+both, indicating that this form is construed in Kukama as denoting a
+single event. Therefore, only a single predicate is identified
+(corresponding to the whole verb stem *kuratata* 'make drink').
+
+<span id="KukamaCaus" label="KukamaCaus">\[KukamaCaus\]</span> 
+```
+nai		kurata-ta	churan=ui	uni-pu
+grandmother	drink-CAUS	kid=PST		water-INST
+'Grandmother made the kid drink the water.'
+
+(k/ kuratata 'make drink'
+    :Causer (n/ nai 'grandmother')
+    :Actor (c/ churan 'kid')
+    :Undergoer (u/ uni 'water')
+    :Aspect Performance
+    :Modstr Aff)
+```
+
+This criterion will be used for all valency change concepts: if the
+"lexical" concept expressed by the verb root and the valency change
+concept can be negated independently, two events are identified, whereas
+if they cannot be negated independently, only one event is identified
+(corresponding to the derived verb stem). The semantics and valency of
+such derived forms will be inferred from the participant role annotation
+associated with the verb. Which valency changes lead to which argument
+structures is detailed in section 3.2.1 of these guidelines.
+
+##### Part 3-1-3-3. TAM categories
+
+Third, some semantic categories such as (phasal) aspect, temporal
+relations, and modal relations, can be expressed cross-linguistically
+either through bound morphology or through separate words (often called
+"auxiliaries").
+
+Phasal aspectual meanings such as inchoative, completive, and
+continuative, firstly, are never identified as separate events, even if
+they are expressed through independent words. Instead, they will simply
+inform the Aspect attribute label of the event they modify (section
+3.3.1). This principle is illustrated in example
+[\[Aspect\]](#Aspect). In
+Manipuri, the inchoative concept and the "close"-meaning form part of
+the same word, while in the English translation, they are expressed as
+two different words. Nevertheless, in both the English and the Manipuri
+UMR, only one event is identified (corresponding to concept of property
+predication, in this case).
+
+<span id="Aspect" label="Aspect">\[Aspect\]</span> 
+```
+ce	əsi	mu-re
+paper	this	black-change
+'This paper has become black.'
+
+(h/ have-mod-91					(h/ have-mod-91
+    :ARG0 (c/ ce 'paper')			    :ARG0 (p/ paper)
+    	:mod (s/ əsi 'this')			        :mod (t/ this)
+    :ARG1 (m/ mu 'black')			    :ARG1 (b/ black)
+    :Aspect Performance				    :Aspect Performance
+    :Modstr Aff)				    :Modstr Aff)
+```
+
+Similarly, modal and temporal auxiliaries will not be identified
+independently as events, but will instead inform the modal and temporal
+dependency annotation: in English, for example, modal auxiliaries such
+as *might* and *should* in *He **might/should** go to school* are not
+identified as independent events, and neither are temporal auxiliaries
+such as *have* and *be* in *She **has gone/is going** to school*. How
+such meanings exactly inform the temporal and modal annotation is
+detailed in sections 4.2 and 4.3 of these guidelines.
+
+For some semi-modal concepts, there may be language-internal semantic
+evidence that they are construed as independent concepts. For instance,
+in the English desiderative construction in
+[\[Desiderative\]](#Desiderative), the desire-event can be modalized
+independently of the "go"-event, indicating that desires are construed
+as independent events in English. The UMR therefore has predicates for
+both *want* and *go*.
+
+<span id="Desiderative" label="Desiderative">\[Desiderative\]</span> 
+```
+She wants to go to school
+
+(w/ want-01
+    :ARG0 (p/ person :ref 3SGF)
+    :ARG1 (g/ go-01
+    	:ARG1 p
+        :ARG4 (s/ school)
+        :Aspect Performance
+        :MOD w)
+    :Aspect State
+    :Modstr Aff)
+    
+She may want to go to school
+```
+
+However, if in a language the desire-event cannot be modalized
+independently from the desired event, no separate event is identified
+for the desire-semantics. Instead, the desiderative is taken into
+account in the modal annotation, as detailed in section 4.3. For three
+other semi-modal concepts, the same guidelines as to concept-word
+mismatches are used as for desideratives: this is the case for conatives
+('try to'), optatives ('wish that'), and frustratives ('fail to').
+
+##### Part 3-1-3-4. Associated Motion
+
+Associated motion constructions are treated in a similar way to
+semi-modals. If associated motion events can have their own argument
+structure (i.e. if they can co-occur with NPs expressing start points or
+end points of motion events), these motion events are identified as
+separate predicates in the UMR. If they cannot take their own argument
+structure, only one event is identified.
+
+For instance, the Sanapaná associated motion construction in
+[\[Motion\]](#Motion) expresses that the sleeping-event takes place during a motion event
+towards the deictic center: the suffix *-ant* essentially means that the
+event expressed by the verb root happens "while coming here". As shown
+in [\[Motion\]](#Motion), this construction can co-occur with a spatial NP. However, such a spatial NP can only express the location of the sleeping-event rather
+than the goal or the start point of the motion event. It is therefore
+better analyzed as a circumstantial locative belonging to the
+"sleep"-event expressed by the verb root than as an argument of the
+motion event. The motion event itself therefore has no independent
+argument structure, and only one event is identified for UMR annotation.
+
+<span id="Motion" label="Motion">\[Motion\]</span> 
+```
+en-na'-ten-ek-ant-a'		La	Esperanza
+1PL-DSTR-sleep-PST/HAB-NOM	La	Esperanza
+'We slept in La Esperanza while coming here'
+
+(t/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
+    :Undergoer (p/ person :ref 1PL)			    :ARG0 (p/ person :ref 1PL)
+    :Place (l/ location					    :Place (l/ location
+    	:name (n/ name					        :name (n/ name
+            :op1 ("La")						    :op1 ("La")
+            :op2 ("Esperanza")))				    :op2 ("Esperanza")))
+    :Aspect State					    :Temporal (c/ come-01
+    :Modstr Aff)					        :ARG1 p
+    								:ARG4 (h/ here)
+                                                        	:Aspect Activity
+                                                        	:Modstr Aff)
+                                                    	    :Aspect State
+                                                   	    :Modstr Aff)
+```
+
+The English "venitive" construction in the translational equivalent of
+[\[Motion\]](#Motion), however, can co-occur with an NP which is clearly an argument of the "come"-event: one could say, for instance *We slept in La Esperanza
+while coming here **from Puerto Casado***. Therefore, the motion event
+and the "sleep"-event are construed in English as two independent
+events, and are annotated in UMR as two separate predicates.
+
+##### Part 3-1-3-5. Non-verbal clauses
+
+Many types of "non-verbal clauses", such as predicate nominals and
+predication of properties, possession, and location, show different
+mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
+easily identifiable "verbal" predicate with argument NPs, as seen in the
+English translational equivalents of the Kukama examples in
+[\[KukamaObjectPred\]](#KukamaObjectPred) and [\[KukamaTheticPossession\]](#KukamaTheticPossession). In English, these constructions do not pose
+serious problems to the predicate-argument structure of UMR - one could
+simply identify the "have" or "be"-verb as a predicate, and the NPs in
+the clause as its arguments.
+
+In the Kukama object predication construction in
+[\[KukamaObjectPred\]](#KukamaObjectPred), however, the predicate does not map to
+an overt word: object predication is expressed through juxtaposition of
+two NPs, with the predicational meaning implicit but inherent in the
+construction. In the Kukama thetic possession construction in [\[KukamaTheticPossession\]](#KukamaTheticPossession), on the other hand, the possessum
+and the relation of possession are expressed together as a single word
+which functions as a predicate: something that is typically thought of
+as an "argument" is predicativized. Both these structures pose problems
+for the annotation of predicate-argument structure if we want to adhere
+to our position of holistic annotation of words, since there is no
+separate material that can be identified as a predicate.
+
+<span id="KukamaObjectPred" label="KukamaObjectPred">\[KukamaObjectPred\]</span> 
+```
+ajan	kunumi		tsumi
+this	young.man	shaman
+'This young man is a shaman.'
+
+(h/ have-role-91						(h/ have-role-91
+    :ARG0 (k/ kunumi 'young man')				    :ARG0 (m/ man)
+    	:mod (a/ ajan 'this')					        :mod (y/ young)
+    :ARG1 (t/ tsumi 'shaman')						:mod (t/ this)
+    :Aspect State						    :ARG1 (s/ shaman)
+    :Modstr Aff)						    :Aspect State
+    								    :Modstr Aff)
+```
+
+<span id="KukamaTheticPossession" label="KukamaTheticPossession">\[KukamaTheticPossession\]</span> 
+```
+Mijiri-tin	ɨara-yara
+Miguel-CER	canoe-owner
+'Miguel does have a canoe.' lit. 'Miguel is a canoe-owner.'
+
+(a/ ɨara-yara 'have canoe'					(h/ have-03
+    :ARG0 (m/ Mijiri 'Miguel')					    :ARG0 (m/ Miguel)
+    :ARG1 (a/ ɨara 'canoe')					    :ARG1 (c/ canoe)
+    :Aspect State						    :Aspect State
+    :Modstr Aff)						    :Modstr Aff)
+```
+
+We propose a set of seven abstract concept predicates each corresponding
+to a discrete "non-verbal clause" function (table
+[\[tab:nonverbal\]](#tab:nonverbal)). When there is no overt predicate-word, as
+in [\[KukamaObjectPred\]](#KukamaObjectPred), we assume that annotators will be able
+to recognize the type of non-verbal clause function they are dealing
+with. They should use an abstract predicate concept from table
+[\[tab:nonverbal\]](#tab:nonverbal) as predicative core of the graph, and use the :ARG0 and :ARG 1 numbered argument roles to link the arguments to this predicate as specified in
+the table.
+
+In constructions with predicativized arguments, such as
+[\[KukamaTheticPossession\]](#KukamaTheticPossession), UMR takes the same approach as for
+pronominal affixation. Both a predicate concept and an argument concept
+are identified separately, but linked to the same word token in the
+sentence - in this case *ɨara-yara*. As can be seen in the example UMRs
+above, the resulting graphs have similar structures regardless of
+whether a languages uses an overt-predicate strategy, a zero-predicate
+(juxtaposition) strategy, or a predicativized argument strategy for such
+"non-verbal clause" meanings.
+
+
+<span id="tab:nonverbal" label="tab:nonverbal">\[tab:nonverbal\]</span>
+|     Clause Type      |              Predicate               |           ARG0          |         ARG1         |
+| :-------: | :----------------------------------: | :------------------------------: | :-------------------------: |
+| Thetic Possession  |         have-03         |      possessor       |     possessum      |
+|  Predicative Possession   |            belong-01             |       possessum       | possessor |
+|     Thetic Location      |     exist-91    |       location        |      theme      |
+| Predicative Location  |         have-location-91         |      theme       |     location      |
+| Property Predication  |         have-mod-91         |      theme       |     property      |
+| Object Predication  |         have-role-91         |      theme       |     object category      |
+| Equational  |         identity-91         |      theme       |     equated referent      |
+ 
+##### Part 3-1-2-6. Multi-word concepts
+
+In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
+concatnating the lemmatized words.
+
+```
+So I normally steep it in hot water , then take it out and stir - fry it.
+(c / cause-01
+      :ARG1 (a2 / and
+            :op1 (s / steep-01
+	          :aspect Habitual
+                  :ARG0 (i / i)
+                  :ARG1 (i2 / it)
+                  :ARG2 (w / water
+                        :ARG1-of (h / hot-05)))
+            :op2 (a / and
+                  :op1 (t / take-out-11
+		        :aspect Habitual
+                        :ARG0 i
+                        :ARG1 i2)
+                  :op2 (s2 / stir-01
+		        :aspect Habitual
+                        :ARG0 i
+                        :ARG1 i2)
+                  :op3 (f / fry-01
+		        :aspect Habitual
+                        :ARG0 i
+                        :ARG1 i2)
+                  :time (t3 / then)))
+      :ARG1-of (n / normal-02))
+```
+
+```
+The moral aspects of the movement intrigued him as well :
+(i / intrigue-01
+      :aspect Performance
+      :ARG0 (a / aspect
+            :ARG1-of (m / moral-02)
+            :poss (m2 / movement-07))
+      :ARG1 (h / he)
+      :mod (a2 / as-well))
+```
+
+
+#### Part 3-1-4. Word senses
+ 
+ UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
+ 
+``` 
+The school has approximately 570 pupils.
+(h / have-03
+      :ARG0 (s / school)
+      :ARG1 (p / pupil
+            :quant (a / approximately :op1 570)))
+```
+
+
+ ```
+ 并且 还 有 很多 高层 的 人物 哦 ！
+There will even be many VIPs!
+(x11 / and
+      :op2  (x3 / 有-03
+               :mod (x2 / 还)
+               :arg1  (x7 / 人物
+                         :mod  (x5 / 高层)
+                         :quant (x4 / 很多))
+            :mode  Expressive))
+```
+ 
 
 
  
