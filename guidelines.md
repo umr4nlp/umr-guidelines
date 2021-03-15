@@ -36,6 +36,7 @@
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
     * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
     * Part 4-3. [Modality Dependency](#part-4-3-modal-dependency) (Meagan, Bill)
+    * Part 4-5. [Discourse relations](#part-4-4-discourse-relations)
 * Part 5. Integrated examples
 
 
