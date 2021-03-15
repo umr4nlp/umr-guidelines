@@ -430,7 +430,7 @@ guidance on the annotation of predicates and arguments in five different
 types of constructions where the mapping between words and concepts is
 not straightforward.
 
-##### Part 3-1-2-1: Predicate and argument as one word
+ ##### Part 3-1-2-1. Predicate and argument as one word
 
 In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
