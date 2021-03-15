@@ -11,9 +11,15 @@
 * Part 2. [From AMR to UMR](#part-2-from-amr-to-umr) (Bert)
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
-      * Part 3-1-1. [Eventive concepts]()
+      * Part 3-1-1. [Eventive concepts](#part-3-1-1-eventive-concepts)
       * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
       * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
+         * Part 3-1-2-1. [Predicate and argument as one word](#####Predicate-and-argument-as-one-word)
+         * Part 3-1-2-2. [Valency-changing operations](#####part-3-1-2-2-Valency-changing-operations)
+         * Part 3-1-2-3. [TAM categories](#####-Part-3-1-2-3-TAM-categories)
+         * Part 3-1-2-4. [Associated Motion](#####Part-3-1-2-4-Associated-Motion)
+         * Part 3-1-2-5. [Non-verbal clauses](#####Part-3-1-2-5-Non-verbal-clauses)
+         * Part 3-1-2-6. [Multi-word concepts](#####part-2-1-2-6-Multi-word concepts)
       * Part 3-1-3. [Word senses](#part-3-1-3-word-senses)
       * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-identification-of-eventive-concepts)
       * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
@@ -424,7 +430,7 @@ guidance on the annotation of predicates and arguments in five different
 types of constructions where the mapping between words and concepts is
 not straightforward.
 
-##### Predicate and argument(s) as one word
+##### Part 3-1-2-1. Predicate and argument as one word
 
 In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
@@ -498,7 +504,7 @@ found on a continuum between these two end points. However, we map this
 continuum onto a discrete choice for annotators by taking the ability of
 an incorporated noun to co-occur with an independent NP as criterial.
 
-##### Valency-changing operations
+##### Part 3-1-2-2. Valency-changing operations
 
 Secondly, constructions used to change the valency of verbs (causatives,
 applicatives, reflexives etc.) can cross-linguistically either express
@@ -564,7 +570,7 @@ such derived forms will be inferred from the participant role annotation
 associated with the verb. Which valency changes lead to which argument
 structures is detailed in section 3.2.1 of these guidelines.
 
-##### TAM categories
+##### Part 3-1-2-3. TAM categories
 
 Third, some semantic categories such as (phasal) aspect, temporal
 relations, and modal relations, can be expressed cross-linguistically
@@ -639,7 +645,7 @@ other semi-modal concepts, the same guidelines as to concept-word
 mismatches are used as for desideratives: this is the case for conatives
 ('try to'), optatives ('wish that'), and frustratives ('fail to').
 
-##### Associated Motion
+##### Part 3-1-2-4. Associated Motion
 
 Associated motion constructions are treated in a similar way to
 semi-modals. If associated motion events can have their own argument
@@ -686,7 +692,7 @@ while coming here **from Puerto Casado***. Therefore, the motion event
 and the "sleep"-event are construed in English as two independent
 events, and are annotated in UMR as two separate predicates.
 
-##### [Abstract concepts?] from Non-verbal clauses
+##### Part 3-1-2-5. Non-verbal clauses
 
 Many types of "non-verbal clauses", such as predicate nominals and
 predication of properties, possession, and location, show different
@@ -769,7 +775,7 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 | Object Predication  |         have-role-91         |      theme       |     object category      |
 | Equational  |         identity-91         |      theme       |     equated referent      |
  
-##### Multi-word concepts
+##### Part 3-1-2-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
 concatnating the lemmatized words.
