@@ -7,7 +7,7 @@
 
 **Table of Contents**
 
-* Part 1. [Introduction](#part-1-introduction) (Bert)
+* Part 1. [Introduction](#part-1-introduction) (Bert) 
 * Part 2. [From AMR to UMR](#part-2-from-amr-to-umr) (Bert)
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
