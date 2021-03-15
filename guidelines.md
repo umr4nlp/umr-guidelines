@@ -685,7 +685,7 @@ while coming here **from Puerto Casado***. Therefore, the motion event
 and the "sleep"-event are construed in English as two independent
 events, and are annotated in UMR as two separate predicates.
 
-##### Non-verbal clauses
+##### [Abstract concepts?] from Non-verbal clauses
 
 Many types of "non-verbal clauses", such as predicate nominals and
 predication of properties, possession, and location, show different
