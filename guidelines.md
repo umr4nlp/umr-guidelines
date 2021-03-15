@@ -14,7 +14,7 @@
       * Part 3-1-1. [Eventive concepts](#part-3-1-1-eventive-concepts)
       * Part 3-1-1. [Named entities](#part-3-1-1-named-entities)  (Bert, Andy)
       * Part 3-1-2. [Concept word mismatches](#part-3-1-2-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
-         * Part 3-1-2-1. [Predicate and argument as one word](#####Part-3-1-2-1-Predicate-and-argument-as-one-word)
+         * Part 3-1-2-1. [Predicate and argument as one word](#####part-3-1-2-1-predicate-and-argument-as-one-word)
          * Part 3-1-2-2. [Valency-changing operations](#####part-3-1-2-2-Valency-changing-operations)
          * Part 3-1-2-3. [TAM categories](#####Part-3-1-2-3-TAM-categories)
          * Part 3-1-2-4. [Associated Motion](#####Part-3-1-2-4-Associated-Motion)
@@ -430,7 +430,7 @@ guidance on the annotation of predicates and arguments in five different
 types of constructions where the mapping between words and concepts is
 not straightforward.
 
-##### Part 3-1-2-1. Predicate and argument as one word
+##### Part 3-1-2-1: Predicate and argument as one word
 
 In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
