@@ -1058,7 +1058,7 @@ predication, it is always the object category participant that looks a
 predicate with this strategy (and never the theme).
 
 For these nonverbal clause categories, the event identified is labelled
-with a special UMR predicate that indicates the relevant combination of
+with a special [Abstract?] UMR predicate that indicates the relevant combination of
 semantics and information-packaging. These are shown below in Table 4. For the labelling of participants with these
 nonverbal clause predicates, see §[4](#participantroles).FIX HYPERLINK
 
