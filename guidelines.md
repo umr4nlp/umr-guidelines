@@ -19,7 +19,7 @@
          * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
          * Part 3-1-3-4. [Associated Motion](#Part-3-1-3-4-Associated-Motion)
          * Part 3-1-3-5. [Non-verbal clauses](#Part-3-1-3-5-Non-verbal-clauses)
-         * Part 3-1-3-6. [Multi-word concepts](#part-2-1-3-6-multi-word-concepts)
+         * Part 3-1-3-6. [Multi-word concepts](#part-3-1-3-6-multi-word-concepts)
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
       * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
@@ -378,7 +378,7 @@ UMR
 
 ### Part 3-1. UMR Concepts
 
-#### Part 3-1-1. Identification of eventive concepts
+#### Part 3-1-1. Eventive concepts
 
 Identification of eventive concepts is important to participant role annotation as well as aspect and modality annotation.
 The criteria used to identify events in UMR are largely based on the
