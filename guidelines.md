@@ -19,9 +19,8 @@
          * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
          * Part 3-1-3-4. [Associated Motion](#Part-3-1-3-4-Associated-Motion)
          * Part 3-1-3-5. [Non-verbal clauses](#Part-3-1-3-5-Non-verbal-clauses)
-         * Part 3-1-3-6. [Multi-word concepts](#part-2-1-3-6-Multi-word-concepts)
+         * Part 3-1-3-6. [Multi-word concepts](#part-2-1-3-6-multi-word-concepts)
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
-      * Part 3-1-4. [Identification of eventive concepts](#part-3-1-4-identification-of-eventive-concepts)
       * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles) (Bill and Martha)
@@ -1109,7 +1108,7 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 | Object Predication  |         have-role-91         |      theme       |     object category      |
 | Equational  |         identity-91         |      theme       |     equated referent      |
  
-##### Part 3-1-2-6. Multi-word concepts
+##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
 concatnating the lemmatized words.
