@@ -22,6 +22,7 @@
          * Part 3-1-3-6. [Multi-word concepts](#part-3-1-3-6-multi-word-concepts)
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
       * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
+      * Part 3-1-6. [Discourse relations](#part-3-1-6-discourse-relations)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles) (Bill and Martha)
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-UMR-relations)
@@ -32,11 +33,12 @@
       * Part 3-3-4. [Quant](#Part-3-3-4-quant)
       * Part 3-3-5. [Ref](#part-3-3-5-ref)
       
+      
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
     * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
     * Part 4-3. [Modality Dependency](#part-4-3-modal-dependency) (Meagan, Bill)
-    * Part 4-5. [Discourse relations](#part-4-4-discourse-relations)
+    
 * Part 5. Integrated examples
 
 
@@ -1199,6 +1201,8 @@ Someone didn't answer all the questions
                 :ARG0 p
                 :ARG1 q))
 ```
+
+#### Part 3-1-6. Discourse-relations
  
 ### Part 3-2. UMR relations 
 
