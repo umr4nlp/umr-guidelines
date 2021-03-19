@@ -434,20 +434,20 @@ as events in UMR are shown in bold in Table 2.
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
 therefore always be identified as events. This is shown in
-[\[predprocess\]](#predprocess) below. (Throughout this section, words
+[\[3-1-1-1 (1)\]](#3-1-1-1 (1)) below. (Throughout this section, words
 that are identified as events will be shown in bold; the relevant
 phenomenon under discussion will be underlined.)
 
-<span id="predprocess" label="predprocess">\[predprocess\]</span>
+<span id="3-1-1-1 (1)" label="3-1-1-1 (1)">\[3-1-1-1 (1)\]</span>
 
-<span id="repair" label="repair">\[repair\]</span> She
+<span id="3-1-1-1 (1a)" label="3-1-1-1 (1a)">\[3-1-1-1 (1a)\]</span> She
 <u>**repaired**</u> her bike.  
-<span id="wentrepair" label="wentrepair">\[wentrepair\]</span> Before
+<span id="3-1-1-1 (1b)" label="3-1-1-1 (1b)">\[3-1-1-1 (1b)\]</span> Before
 she <u>**went**</u> to school, she **repaired** my bike.  
 
 Regardless of whether they are in an independent clause, like *repaired*
-in [\[repair\]](#repair), or a dependent clause, like *went* in
-[\[wentrepair\]](#wentrepair), predicated processes are always
+in [\[3-1-1-1 (1a)\]](#3-1-1-1 (1a)), or a dependent clause, like *went* in
+[\[3-1-1-1 (1b)\]](#3-1-1-1 (1b)), predicated processes are always
 identified as events.
 
 ##### 3-1-1-2. Processes in modification and reference
@@ -455,23 +455,23 @@ identified as events.
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
 morphosyntactic forms, such as event nominals (as in
-[\[eventnom\]](#eventnom)), non-finite complements (as in
-[\[complement\]](#complement)), participles (as in
-[\[participle\]](#participle)), or relative clauses (as in
-[\[relclause\]](#relclause)).
+[\[3-1-1-2 (1a)\]](#3-1-1-2 (1a))), non-finite complements (as in
+[\[3-1-1-2 (1b)\]](#3-1-1-2 (1b))), participles (as in
+[\[3-1-1-2 (1c)\]](#3-1-1-2 (1c))), or relative clauses (as in
+[\[3-1-1-2 (1d)\]](#3-1-1-2 (1d))).
 
-<span id="refprocess" label="refprocess">\[refprocess\]</span>
+<span id="3-1-1-2 (1)" label="3-1-1-2 (1)">\[3-1-1-2 (1)\]</span>
 
-<span id="eventnom" label="eventnom">\[eventnom\]</span> The
+<span id="3-1-1-2 (1a)" label="3-1-1-2 (1a)">\[3-1-1-2 (1a)\]</span> The
 **<u>storm</u> damaged** the roads.
 
-<span id="complement" label="complement">\[complement\]</span> She
+<span id="3-1-1-2 (1b)" label="3-1-1-2 (1b)">\[3-1-1-2 (1b)\]</span> She
 **wanted <u>to go</u>** to school.
 
-<span id="participle" label="participle">\[participle\]</span> The
+<span id="3-1-1-2 (1c)" label="3-1-1-2 (1c)">\[3-1-1-2 (1c)\]</span> The
 student **<u>playing</u>** the violin **likes** Bach.
 
-<span id="relclause" label="relclause">\[relclause\]</span> The student,
+<span id="3-1-1-2 (1d)" label="3-1-1-2 (1d)">\[3-1-1-2 (1d)\]</span> The student,
 who is **<u>playing</u>** the violin, **likes** Bach.
 
 The combination of semantic type and information packaging determines
@@ -479,33 +479,33 @@ whether or not a particular word in a particular context is identified
 as an event. The morphological structure of a word (i.e., whether or not
 it derives from a verb) doesn’t factor into whether or not it is
 identified as an event. For example, not all event nominals are derived
-from verbs, as in [\[eventnom2\]](#eventnom2); and, not all words
+from verbs, as in [\[3-1-1-2 (2a)\]](#3-1-1-2 (2a)); and, not all words
 derived from verbs actually refer to processes, as in
-[\[nominalization\]](#nominalization).
+[\[3-1-1-2 (2b)\]](#3-1-1-2 (2b)).
 
-<span id="refprocess2" label="refprocess2">\[refprocess2\]</span>
+<span id="3-1-1-2 (2)" label="3-1-1-2 (2)">\[3-1-1-2 (2)\]</span>
 
-<span id="eventnom2" label="eventnom2">\[eventnom2\]</span> He is
+<span id="3-1-1-2 (2a)" label="3-1-1-2 (2a)">\[3-1-1-2 (2a)\]</span> He is
 **planning** a **<u>ceremony</u>** for Saturday.
 
-<span id="nominalization" label="nominalization">\[nominalization\]</span>
+<span id="3-1-1-2 (2b)" label="3-1-1-2 (2b)">\[3-1-1-2 (2b)\]</span>
 The bus <u>driver</u> **turned** the corner too sharply.
 
 Even the same lexical item may or may not refer to a process, depending
-on context as in ([\[nominal\]](#nominal)) below.
+on context as in ([\[3-1-1-2 (3)\]](#3-1-1-2 (3))) below.
 
-<span id="nominal" label="nominal">\[nominal\]</span>
+<span id="3-1-1-2 (3)" label="3-1-1-2 (3)">\[3-1-1-2 (3)\]</span>
 
-<span id="event" label="event">\[event\]</span>
+<span id="3-1-1-2 (3a)" label="3-1-1-2 (3a)">\[3-1-1-2 (3a)\]</span>
 
 The <u>**final exam**</u> began at 8:00.
 
-<span id="nonevent" label="nonevent">\[nonevent\]</span>
+<span id="3-1-1-2 (3b)" label="3-1-1-2 (3b)">\[3-1-1-2 (3b)\]</span>
 
 One student **threw** their <u>final exam</u> in the trash.
 
-In ([\[event\]](#event)), *final exam* refers to a process and therefore
-is identified as an event. In ([\[nonevent\]](#nonevent)), however,
+In ([\[3-1-1-2 (3a)\]](#3-1-1-2 (3a))), *final exam* refers to a process and therefore
+is identified as an event. In ([\[3-1-1-2 (3b)\]](#3-1-1-2 (3b))), however,
 *final exam* refers to a physical object and therefore is not identified
 as an event.
 
@@ -523,11 +523,11 @@ event as well.
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. Two-place statives, such as *love*
-in [\[love\]](#love), are annotated in the same way as predicated
+in [\[3-1-1-3 (1)\]](#3-1-1-3 (1)), are annotated in the same way as predicated
 processes, i.e. an event is identified and labelled with the predicate
 in the language.
 
-<span id="love" label="love">\[love\]</span>
+<span id="3-1-1-3 (1)" label="3-1-1-3 (1)">\[3-1-1-3 (1)\]</span>
 
 My cat <u>**loves**</u> wet food.
 
@@ -569,32 +569,32 @@ referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
 According to the cross-linguistic studies in Stassen (1997, 2009), Heine (1997), and Creissels (2019) languages tend to use
 three general strategies for these nonverbal clause types, shown below
-in [\[nonvs\]](#nonvs) for object predication.
+in [\[3-1-1-3 (2)\]](#3-1-1-3 (2)) for object predication.
 
-<span id="nonvs" label="nonvs">\[nonvs\]</span>
+<span id="3-1-1-3 (2)" label="3-1-1-3 (2)">\[3-1-1-3 (2)\]</span>
 
-<span id="zero" label="zero">\[zero\]</span> Juxtaposition (“zero
+<span id="3-1-1-3 (2a)" label="3-1-1-3 (2a)">\[3-1-1-3 (2a)\]</span> Juxtaposition (“zero
 copula”) - Kukama <br />
 ajan kunumi 	tsumi  
 this young.man 	shaman  
 ‘This young man is a shaman.’ 
 
-<span id="pred" label="pred">\[pred\]</span> Separate Predication -
+<span id="3-1-1-3 (2b)" label="3-1-1-3 (2b)">\[3-1-1-3 (2b)\]</span> Separate Predication -
 English  
 Panda is a cat.  
 
-<span id="predarg" label="predarg">\[predarg\]</span> Participant
+<span id="3-1-1-3 (2c)" label="3-1-1-3 (2c)">\[3-1-1-3 (2c)\]</span> Participant
 Predicativization - Náhuatl (Launey 1994) <br />
 ni-t̄īcitl  
 <span class="smallcaps">1SG</span>-doctor  
 ‘I am a doctor’
 
-The first strategy, shown in [\[zero\]](#zero) from Kukama, juxtaposes
+The first strategy, shown in [\[3-1-1-3 (2a)\]](#3-1-1-3 (2a)) from Kukama, juxtaposes
 the two participants, here the theme and object category, but does not
 overtly express the predication. The second strategy, shown in
-[\[pred\]](#pred) from English, has a predicative element (here, the
+[\[3-1-1-3 (2b)\]](#3-1-1-3 (2b)) from English, has a predicative element (here, the
 copula) that is separate from either participant. Finally, some
-languages, like Náhuatl in [\[predarg\]](#predarg), treat the object
+languages, like Náhuatl in [\[3-1-1-3 (2c)\]](#3-1-1-3 (2c)), treat the object
 category participant (*t̄īcitl* ‘doctor’) as the predicate. For all of
 the nonverbal clause categories, there is only one of the participants
 which can act as the predicate cross-linguistically; that is, for object
@@ -621,42 +621,44 @@ nonverbal clause predicates, see §[4](#participantroles).FIX HYPERLINK
 
 </div>
 
-States in modification, as in [\[statemod1\]](#statemod1) and
-[\[statemod2\]](#statemod2), and states in reference, as in
-[\[stateref\]](#stateref), are not identified as events.
+States in modification, as in [\[3-1-1-3 (3a)\]](#3-1-1-3 (3a)) and
+[\[3-1-1-3 (3b)\]](#3-1-1-3 (3b)), and states in reference, as in
+[\[3-1-1-3 (3c)\]](#3-1-1-3 (3c)), are not identified as events.
 
-<span id="states" label="states">\[states\]</span>
+<span id="3-1-1-3 (3)" label="3-1-1-3 (3)">\[3-1-1-3 (3)\]</span>
 
-<span id="statemod1" label="statemod1">\[statemod1\]</span> The
+<span id="3-1-1-3 (3a)" label="3-1-1-3 (3a)">\[3-1-1-3 (3a)\]</span> The
 <u>tall</u> man...
 
-<span id="statemod2" label="statemod2">\[statemod2\]</span> The man,
+<span id="3-1-1-3 (3b)" label="3-1-1-3 (3b)">\[3-1-1-3 (3b)\]</span> The man,
 <u>who is tall</u>...
 
-<span id="stateref" label="stateref">\[stateref\]</span> His
+<span id="3-1-1-3 (3c)" label="3-1-1-3 (3c)">\[3-1-1-3 (3c)\]</span> His
 <u>happiness</u>...
 
-Similarly, entities in modification, as in [\[entitymod\]](#entitymod),
-and entities in reference, as in [\[entityref\]](#entityref), are not
+Similarly, entities in modification, as in [\[3-1-1-3 (4a)\]](#3-1-1-3 (4a)),
+and entities in reference, as in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)), are not
 identified as events.
 
-<span id="entities" label="entities">\[entities\]</span>
+<span id="3-1-1-3 (4)" label="3-1-1-3 (4)">\[3-1-1-3 (4)\]</span>
 
-<span id="entitymod" label="entitymod">\[entitymod\]</span> The man,
+<span id="3-1-1-3 (4a)" label="3-1-1-3 (4a)">\[3-1-1-3 (4a)\]</span> The man,
 <u>who is a doctor</u>...
 
-<span id="entityref" label="entityref">\[entityref\]</span> The
+<span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The
 <u>doctor</u>
 
 Causal relationships follow the same rules as states and entities. They
 are identified as events when they are predicated, as in
-[\[causepred\]](#causepred), but they are not identified as events
-otherwise, like in [\[causeother\]](#causeother).
+[\[3-1-1-3 (5a)\]](#3-1-1-3 (5a)), but they are not identified as events
+otherwise, like in [\[3-1-1-3 (5b)\]](#3-1-1-3 (5b)).
 
-<span id="causepred" label="causepred">\[causepred\]</span> The
+<span id="3-1-1-3 (5)" label="3-1-1-3 (5)">\[3-1-1-3 (5)\]</span>
+
+<span id="3-1-1-3 (5a)" label="3-1-1-3 (5a)">\[3-1-1-3 (5a)\]</span> The
 **explosion <u>caused</u>** the house **to collapse**.
 
-<span id="causeother" label="causeother">\[causeother\]</span> The house
+<span id="3-1-1-3 (5b)" label="3-1-1-3 (5b)">\[3-1-1-3 (5b)\]</span> The house
 **collapsed** <u>because</u> of the **explosion**.
 
 ##### 3-1-1-4. Implicit events
