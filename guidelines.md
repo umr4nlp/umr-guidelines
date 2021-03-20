@@ -774,7 +774,7 @@ In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
 noun incorporation, predicates and their arguments can be expressed
 together in a single word. Both issues are illustrated in 
-[Arapahoe Noun Incorporation](#ArapahoNounIncorporation). Here, what is
+[3-1-3-1 (1)](#3-1-3-1 (1)) from Arapaho. Here, what is
 expressed as a multi-word sentence in the English translation takes the
 form of a single Arapaho word. The pronominal suffix *-o'* indicates
 that a first person argument acts on a third person argument. The
@@ -783,7 +783,7 @@ classifier *-s* indicates that the instrument is a blade-like implement.
 So, this single word expresses the predicate, and the Actor, Undergoer,
 Theme, and Instrument arguments of this state of affairs.
 
-<span id="ArapahoNounIncorporation" label="ArapahoNounIncorporation">**Example**: Arapahoe Noun Incorporation</span> 
+<span id="3-1-3-1 (1)" label="3-1-3-1 (1)">\[3-1-3-1 (1)\]</span>
 ```
 nih-teb-e'ei-s-o'
 PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
@@ -815,7 +815,7 @@ present in the clause to fill this semantic role. So, while UMR treats
 the whole stem *teb-e'ei-s* as the predicate, it also identifies a
 separate concept for 'head', which has the :Theme participant role as
 seen in the UMR corresponding to example
-[\[ArapahoNounIncorporation\]](#ArapahoNounIncorporation).
+[\[3-1-3-1 (1)\]](#3-1-3-1 (1)).
 
 On the other hand, in more grammaticalized noun incorporation
 constructions, the incorporated noun does not "replace" one of the
@@ -854,15 +854,15 @@ negation is chosen as a criterion.
 
 In English Causatives, for instance, negation can apply to the causing
 event and to the caused event separately as in
-[\[EnglishCaus\]](#EnglishCaus), indicating that the causing event and the
+[\[3-1-3-2 (1)\]](#3-1-3-2 (1)), indicating that the causing event and the
 caused event are construed as independent predicates. Therefore, a
 "cause"-event is identified in addition to the "drink"-event expressed
 by the verb root.
 
-<span id="EnglishCaus" label="EnglishCaus">\[EnglishCaus\]</span> 
-```
-Grandmother made the kid drink the water.
+<span id="3-1-3-2 (1)" label="3-1-3-2 (1)">\[3-1-3-2 (1)\]</span> 
 
+<span id="3-1-3-2 (1a)" label="3-1-3-2 (1a)">\[3-1-3-2 (1a)\]</span> Grandmother made the kid drink the water.
+```
 (d/ drink
     :Cause (m/ make
     	:Actor (g/ grandmother)
@@ -876,16 +876,19 @@ Grandmother made the kid drink the water.
 Grandmother did not make the kid drink the water.
 Grandmother made the kid not drink the water.
 ```
+<span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span> Grandmother did not make the kid drink the water.
+
+<span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span> Grandmother made the kid not drink the water.
 
 Kukama, on the other hand, has a morphological causative, as in
-[\[KukamaCaus\]](#KukamaCaus). The caused event and causing event cannot be
+[\[3-1-3-2 (2)\]](#3-1-3-2 (2)). The caused event and causing event cannot be
 negated independently: if
-[\[KukamaCaus\]](#KukamaCaus) is negated, negation necessarily scopes over
+[\[3-1-3-2 (2)\]](#3-1-3-2 (2)) is negated, negation necessarily scopes over
 both, indicating that this form is construed in Kukama as denoting a
 single event. Therefore, only a single predicate is identified
 (corresponding to the whole verb stem *kuratata* 'make drink').
 
-<span id="KukamaCaus" label="KukamaCaus">\[KukamaCaus\]</span> 
+<span id="3-1-3-2 (2)" label="3-1-3-2 (2)">\[3-1-3-2 (2)\]</span> 
 ```
 nai		kurata-ta	churan=ui	uni-pu
 grandmother	drink-CAUS	kid=PST		water-INST
@@ -920,14 +923,14 @@ continuative, firstly, are never identified as separate events, even if
 they are expressed through independent words. Instead, they will simply
 inform the Aspect attribute label of the event they modify (section
 3.3.1). This principle is illustrated in example
-[\[Aspect\]](#Aspect). In
+[\[3-1-3-3 (1)\]](#3-1-3-3 (1)). In
 Manipuri, the inchoative concept and the "close"-meaning form part of
 the same word, while in the English translation, they are expressed as
 two different words. Nevertheless, in both the English and the Manipuri
 UMR, only one event is identified (corresponding to concept of property
 predication, in this case).
 
-<span id="Aspect" label="Aspect">\[Aspect\]</span> 
+<span id="3-1-3-3 (1)" label="3-1-3-3 (1)">\[3-1-3-3 (1)\]</span> 
 ```
 ce	əsi	mu-re
 paper	this	black-change
@@ -953,15 +956,14 @@ detailed in sections 4.2 and 4.3 of these guidelines.
 For some semi-modal concepts, there may be language-internal semantic
 evidence that they are construed as independent concepts. For instance,
 in the English desiderative construction in
-[\[Desiderative\]](#Desiderative), the desire-event can be modalized
+[\[3-1-3-3 (2)\]](#3-1-3-3 (2)), the desire-event can be modalized
 independently of the "go"-event, indicating that desires are construed
 as independent events in English. The UMR therefore has predicates for
 both *want* and *go*.
 
-<span id="Desiderative" label="Desiderative">\[Desiderative\]</span> 
+<span id="3-1-3-3 (2)" label="3-1-3-3 (2)">\[3-1-3-3 (2)\]</span> 
+<span id="3-1-3-3 (2a)" label="3-1-3-3 (2a)">\[3-1-3-3 (2a)\]</span> She wants to go to school.
 ```
-She wants to go to school
-
 (w/ want-01
     :ARG0 (p/ person :ref 3SGF)
     :ARG1 (g/ go-01
@@ -971,9 +973,9 @@ She wants to go to school
         :MOD w)
     :Aspect State
     :Modstr Aff)
-    
-She may want to go to school
 ```
+
+<span id="3-1-3-3 (2b)" label="3-1-3-3 (2b)">\[3-1-3-3 (2b)\]</span> She may want to go to school.
 
 However, if in a language the desire-event cannot be modalized
 independently from the desired event, no separate event is identified
@@ -993,17 +995,17 @@ separate predicates in the UMR. If they cannot take their own argument
 structure, only one event is identified.
 
 For instance, the Sanapaná associated motion construction in
-[\[Motion\]](#Motion) expresses that the sleeping-event takes place during a motion event
+[\[3-1-3-4 (1)\]](#3-1-3-4 (1)) expresses that the sleeping-event takes place during a motion event
 towards the deictic center: the suffix *-ant* essentially means that the
 event expressed by the verb root happens "while coming here". As shown
-in [\[Motion\]](#Motion), this construction can co-occur with a spatial NP. However, such a spatial NP can only express the location of the sleeping-event rather
+in [\[3-1-3-4 (1)\]](#3-1-3-4 (1)), this construction can co-occur with a spatial NP. However, such a spatial NP can only express the location of the sleeping-event rather
 than the goal or the start point of the motion event. It is therefore
 better analyzed as a circumstantial locative belonging to the
 "sleep"-event expressed by the verb root than as an argument of the
 motion event. The motion event itself therefore has no independent
 argument structure, and only one event is identified for UMR annotation.
 
-<span id="Motion" label="Motion">\[Motion\]</span> 
+<span id="3-1-3-4 (1)" label="3-1-3-4 (1)">\[3-1-3-4 (1)\]</span> 
 ```
 en-na'-ten-ek-ant-a'		La	Esperanza
 1PL-DSTR-sleep-PST/HAB-NOM	La	Esperanza
@@ -1025,7 +1027,7 @@ en-na'-ten-ek-ant-a'		La	Esperanza
 ```
 
 The English "venitive" construction in the translational equivalent of
-[\[Motion\]](#Motion), however, can co-occur with an NP which is clearly an argument of the "come"-event: one could say, for instance *We slept in La Esperanza
+[\[3-1-3-4 (1)\]](#3-1-3-4 (1)), however, can co-occur with an NP which is clearly an argument of the "come"-event: one could say, for instance *We slept in La Esperanza
 while coming here **from Puerto Casado***. Therefore, the motion event
 and the "sleep"-event are construed in English as two independent
 events, and are annotated in UMR as two separate predicates.
@@ -1037,16 +1039,16 @@ predication of properties, possession, and location, show different
 mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
 easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
-[\[KukamaObjectPred\]](#KukamaObjectPred) and [\[KukamaTheticPossession\]](#KukamaTheticPossession). In English, these constructions do not pose
+[\[3-1-3-5 (1)\]](#3-1-3-5 (1)) and [\[3-1-3-5 (2)\]](#3-1-3-5 (2)). In English, these constructions do not pose
 serious problems to the predicate-argument structure of UMR - one could
 simply identify the "have" or "be"-verb as a predicate, and the NPs in
 the clause as its arguments.
 
 In the Kukama object predication construction in
-[\[KukamaObjectPred\]](#KukamaObjectPred), however, the predicate does not map to
+[\[3-1-3-5 (1)\]](#3-1-3-5 (1)), however, the predicate does not map to
 an overt word: object predication is expressed through juxtaposition of
 two NPs, with the predicational meaning implicit but inherent in the
-construction. In the Kukama thetic possession construction in [\[KukamaTheticPossession\]](#KukamaTheticPossession), on the other hand, the possessum
+construction. In the Kukama thetic possession construction in [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), on the other hand, the possessum
 and the relation of possession are expressed together as a single word
 which functions as a predicate: something that is typically thought of
 as an "argument" is predicativized. Both these structures pose problems
@@ -1054,7 +1056,7 @@ for the annotation of predicate-argument structure if we want to adhere
 to our position of holistic annotation of words, since there is no
 separate material that can be identified as a predicate.
 
-<span id="KukamaObjectPred" label="KukamaObjectPred">\[KukamaObjectPred\]</span> 
+<span id="3-1-3-5 (1)" label="3-1-3-5 (1)">\[3-1-3-5 (1)\]</span> 
 ```
 ajan	kunumi		tsumi
 this	young.man	shaman
@@ -1069,7 +1071,7 @@ this	young.man	shaman
     								    :Modstr Aff)
 ```
 
-<span id="KukamaTheticPossession" label="KukamaTheticPossession">\[KukamaTheticPossession\]</span> 
+<span id="3-1-3-5 (2)" label="3-1-3-5 (2)">\[3-1-3-5 (2)\]</span> 
 ```
 Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
@@ -1085,14 +1087,14 @@ Miguel-CER	canoe-owner
 We propose a set of seven abstract concept predicates each corresponding
 to a discrete "non-verbal clause" function (table
 [\[tab:nonverbal\]](#tab:nonverbal)). When there is no overt predicate-word, as
-in [\[KukamaObjectPred\]](#KukamaObjectPred), we assume that annotators will be able
+in [\[3-1-3-5 (1)\]](#3-1-3-5 (1)), we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
 with. They should use an abstract predicate concept from table
 [\[tab:nonverbal\]](#tab:nonverbal) as predicative core of the graph, and use the :ARG0 and :ARG 1 numbered argument roles to link the arguments to this predicate as specified in
 the table.
 
 In constructions with predicativized arguments, such as
-[\[KukamaTheticPossession\]](#KukamaTheticPossession), UMR takes the same approach as for
+[\[3-1-3-5 (2)\]](#3-1-3-5 (2)), UMR takes the same approach as for
 pronominal affixation. Both a predicate concept and an argument concept
 are identified separately, but linked to the same word token in the
 sentence - in this case *ɨara-yara*. As can be seen in the example UMRs
@@ -1116,10 +1118,12 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 ##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
-concatnating the lemmatized words.
+concatnating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 
+<span id="3-1-3-6 (1)" label="3-1-3-6 (1)">\[3-1-3-6 (1)\]</span>
+
+<span id="3-1-3-6 (1a)" label="3-1-3-6 (1a)">\[3-1-3-6 (1a)\]</span> So I normally steep it in hot water , then take it out and stir - fry it.
 ```
-So I normally steep it in hot water , then take it out and stir - fry it.
 (c / cause-01
       :ARG1 (a2 / and
             :op1 (s / steep-01
@@ -1145,8 +1149,8 @@ So I normally steep it in hot water , then take it out and stir - fry it.
       :ARG1-of (n / normal-02))
 ```
 
+<span id="3-1-3-6 (1b)" label="3-1-3-6 (1b)">\[3-1-3-6 (1b)\]</span> The moral aspects of the movement intrigued him as well
 ```
-The moral aspects of the movement intrigued him as well :
 (i / intrigue-01
       :aspect Performance
       :ARG0 (a / aspect
@@ -1159,17 +1163,17 @@ The moral aspects of the movement intrigued him as well :
 
 #### Part 3-1-4. Word senses
  
- UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English and Chinese, where word senses are defined for predicates together with their arguments in *frame files*.
- 
+ UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English [\[3-1-4 (1)\]](#3-1-4 (1)) and Chinese [\[3-1-4 (2)\]](#3-1-4 (2)), where word senses are defined for predicates together with their arguments in *frame files*.
+
+<span id="3-1-4 (1)" label="3-1-4 (1)">\[3-1-4 (1)\]</span> The school has approximately 570 pupils.
 ``` 
-The school has approximately 570 pupils.
 (h / have-03
       :ARG0 (s / school)
       :ARG1 (p / pupil
             :quant (a / approximately :op1 570)))
 ```
 
-
+<span id="3-1-4 (2)" label="3-1-4 (2)">\[3-1-4 (2)\]</span>
  ```
  并且 还 有 很多 高层 的 人物 哦 ！
 There will even be many VIPs!
@@ -1190,8 +1194,9 @@ There will even be many VIPs!
 To facilitate the translation of UMR into first-order expressions to support logical inference,
 we add a **scope** concept to represent the relative order of the predicate, quantified concept and negated concept.
 In most cases, the order of these elements are interpreted in textual order, and do not need an over scope annotation.
-The scope annotation is only needed when these elements are interpreted "out-of-order".
+The scope annotation is only needed when these elements are interpreted "out-of-order", as in [\[3-1-5 (1)\]](#3-1-5 (1)).
 
+<span id="3-1-5 (1)" label="3-1-5 (1)">\[3-1-5 (1)\]</span>
 ```
 Someone didn't answer all the questions
 (a answer-01
