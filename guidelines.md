@@ -671,44 +671,44 @@ this front; when in doubt, don’t add an implicit event.
 
 We’ve identified two types implicit events: those where the implicit
 event corresponds to an event mentioned earlier in the text (as in
-[\[specific\]](#specific)), and those where it does not (as in
-[\[nonspecific\]](#nonspecific)).
+[\[3-1-1-4 (1)\]](#3-1-1-4 (1))), and those where it does not (as in
+[\[3-1-1-4 (2)\]](#3-1-1-4 (2))).
 
-<span id="specific" label="specific">\[specific\]</span>
+<span id="3-1-1-4 (1)" label="3-1-1-4 (1)">\[3-1-1-4 (1)\]</span>
 
-<span id="smoke" label="smoke">\[smoke\]</span> John was **smoking** on
+<span id="3-1-1-4 (1a)" label="3-1-1-4 (1a)">\[3-1-1-4 (1a)\]</span> John was **smoking** on
 the corner of the street, but when he **saw** me, he stopped <u>
 **\[smoking\]**</u>.
 
-<span id="leave" label="leave">\[leave\]</span> They **told** me “a card
+<span id="3-1-1-4 (1b)" label="3-1-1-4 (1b)">\[3-1-1-4 (1b)\]</span> They **told** me “a card
 was **left** on Tuesday” (no it wasn’t <u>**\[left\]**</u> *of
 course)...*
 
-In [\[smoke\]](#smoke), there is an implicit second *smoking* event and
-in [\[leave\]](#leave), there is an implicit second *leave* event. These
+In [\[3-1-1-4 (1a)\]](#3-1-1-4 (1a)), there is an implicit second *smoking* event and
+in [\[3-1-1-4 (1b)\]](#3-1-1-4 (1b)), there is an implicit second *leave* event. These
 implicit events should be annotated as co-referential with the event
 mentioned earlier in the text (see §[3](#coref)).
 
-In [\[nonspecific\]](#nonspecific), however, the implicit events don’t
+In [\[3-1-1-4 (2)\]](#3-1-1-4 (2)), however, the implicit events don’t
 have a relationship with an event previously mentioned in the text;
 instead, they refer to generic events which can be filled in from
 context.
 
-<span id="nonspecific" label="nonspecific">\[nonspecific\]</span>
+<span id="3-1-1-4 (2)" label="3-1-1-4 (2)">\[3-1-1-4 (2)\]</span>
 
-<span id="say" label="say">\[say\]</span> **Phoned** Amtrak on
+<span id="3-1-1-4 (2a)" label="3-1-1-4 (2a)">\[3-1-1-4 (2a)\]</span> **Phoned** Amtrak on
 Wednesday, <u>**\[they said\]**</u> *“We **need** a consignment
 number”.*
 
-<span id="go" label="go">\[go\]</span> “I have **ordered** the Coast
+<span id="3-1-1-4 (2b)" label="3-1-1-4 (2b)">\[3-1-1-4 (2b)\]</span> “I have **ordered** the Coast
 Guard and our entire naval force in the (Central Philippines) region
 <u>**\[to go\]**</u> to the area,” she **said**.
 
-In [\[say\]](#say), the quotation marks make it clear that there is an
-implicit *say* event. In [\[go\]](#go), we can identify a very general
+In [\[3-1-1-4 (2a)\]](#3-1-1-4 (2a)), the quotation marks make it clear that there is an
+implicit *say* event. In [\[3-1-1-4 (2b)\]](#3-1-1-4 (2b)), we can identify a very general
 *go* event, since *ordered...to the area* implies a motion event. For
 these types of implicit events, the most abstract, least specific event
-should be identified. For example in [\[go\]](#go), we could make an
+should be identified. For example in [\[3-1-1-4 (2b)\]](#3-1-1-4 (2b)), we could make an
 assumption based on context clues (e.g., *Coast Guard, naval force*),
 that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
@@ -718,10 +718,10 @@ general event possible should be identified.
 
  #### Part 3-1-2. Named entities
  
-Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. The following is an example that has a *country* entity and a *person* entity. 
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a *country* entity and a *person* entity. 
 
+<span id="3-1-2 (1)" label="3-1-2 (1)">\[3-1-2 (1)\]</span> Edmond Pope is an American businessman.
 ```                    
-Edmond Pope is an American businessman.
 (b2 / businessman
       :mod (c5 / country :wiki "United_States"
             :name (n6 / name :op1 "America"))
