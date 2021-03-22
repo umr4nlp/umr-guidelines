@@ -46,11 +46,12 @@
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
 the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
-from **Abstract Meaning Representation** (AMR), which focuses on **predicte-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation
-that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document, and then describe in more detail each component of UMR in the next few sections. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations. 
+from **Abstract Meaning Representation** (AMR), which focuses on **predicate-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation
+that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document as in [\[1 (1)\]](#1 (1)) - [\[1 (9)\]](#1 (9)), and then describe in more detail each component of UMR in the next few sections. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations. 
 
 Operationally, for both sentence-level and document-level annotation, we assume an annotation procedure in which a document is processed sentence by sentence. The sentence-level representation is annotated first, so that the document-level annotation can make reference to the concepts in the sentence-level representation.
 
+<span id="1 (1)" label="1 (1)">\[1 (1)\]</span>
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
@@ -76,7 +77,7 @@ The document-level representation includes a list of **temporal and modal depend
 
 The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant that indicates that the *taste-01* event definitely happened, and is thus positive (as indicated by the *POS* label) from the author's perspective.
 
-
+<span id="1 (2)" label="1 (2)">\[1 (2)\]</span>
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
@@ -116,7 +117,7 @@ For this sentence, the temporal relations represent the fact that the *convictio
 happened *last week*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
 *sentence* event definitely happened. 
 
-
+<span id="1 (3)" label="1 (3)">\[1 (3)\]</span>
 ```
 Snt3: He denied any wrongdoing.
 (d / deny-01 
@@ -135,14 +136,13 @@ Snt3: He denied any wrongdoing.
 ```
 
 For this sentence, the coreference annotation indicates that *he* is the same person as *Alexander Pope* mentioned in
-Sentence 1. 
+[\[1 (1)\]](#1 (1)). 
 
 The temporal annotation indicates that the document creation time is after his denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear the denying event happened before or after the conviction and sentencing events, so the reference time is determined to be the document creation time.
 
 The modal relation indicates that the denying event definitely happened according to the author, and wrongdoing did not happen according to Alexander Pope, based on the author's account.
 
-
-
+<span id="1 (4)" label="1 (4)">\[1 (4)\]</span>
 ```
 Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 (p3 / pardon-01
@@ -164,9 +164,9 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
     :modal ( (s4p3 :AFF AUTH)) )
 ```
 
-In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is done by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positve from the point of view of the author.
+In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is done by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positive from the point of view of the author.
 
-
+<span id="1 (5)" label="1 (5)">\[1 (5)\]</span>
 ```
 Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
  
@@ -187,10 +187,11 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
     :temporal((s5f :after s4p3))
     :modal ((s5f :AFF AUTH) )
 ```
-In the document-level annotation of this sentence, *pardon-01* from the previous sentence is chosen as the
+In the document-level annotation of this sentence, *pardon-01* from [\[1 (4)\]](#1 (4)) is chosen as the
 reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is positive that the *fly-01* 
 event happened.
 
+<span id="1 (6)" label="1 (6)">\[1 (6)\]</span>
 ```
 Snt6: He will spend the next several days at the medical center there before he returns home with his wife Sherry
 
@@ -221,9 +222,9 @@ Snt6: He will spend the next several days at the medical center there before he 
          (s6r :AFF AUTH))
   :coref (s6h2 :same-entity s1p)))
 ```
-In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* actually happened according to the author. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in sentence 1. 
+In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* actually happened according to the author. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in [\[1 (1)\]](#1 (1)). 
 
-
+<span id="1 (7)" label="1 (7)">\[1 (7)\]</span>
  ```
 Snt7: Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
 
@@ -246,9 +247,9 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
   :modal ((s7a :AFF AUTH)
          (s7r :AFF AUTH)))
 ```
-For Sentence 7, the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-2* happened.
+For [\[1 (7)\]](#1 (7)), the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-2* happened.
 
-
+<span id="1 (8)" label="1 (8)">\[1 (8)\]</span>
 ```
 Snt8: Doctors will examine him for signs that the cancer may have come back while he awaiting trial in a Russian jail.
 
@@ -279,6 +280,8 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 
 The *examine-01* event will happen after the DCT. According to the author, the *examine-01* event definitely happened.
 The author is neutral about whether the cancer has come back. *he* is annotated as being the same person as Alexander Pope.
+
+<span id="1 (9)" label="1 (9)">\[1 (9)\]</span>
 ```
 Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
 (s / say-01
@@ -306,8 +309,9 @@ The document-level representation indicates the *say-01* event happened before t
 
 ##  Part 2: From AMR to UMR
 
-UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph. The nodes of this graph are UMR concepts, while edges represent UMR relations. 
+UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph, as in [\[2 (1)\]](#2 (1)). The nodes of this graph are UMR concepts, while edges represent UMR relations. 
 
+<span id="2 (1)" label="2 (1)">\[2 (1)\]</span>
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
@@ -337,7 +341,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 * Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (a sense of the ) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3](#part-3-2-umr-relations)
 * Semantic relations: Other UMR relations include `:time`, `:org`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3](#part-3-2-umr-relations)
 
-**UMR attrbitues:** UMR currently has three attribute types:
+**UMR attributes:** UMR currently has three attribute types:
 
 * Aspect: Aspect are annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1 Aspect](#part-3-3-1-aspect). 
 * Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation.
@@ -352,17 +356,16 @@ UMR differs from AMR in a number of ways:
 
 * UMR is a document-level representation that represents *coreference*, *temporal dependencies*, and *modal dependencies*.
 
+* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`) - see the AMR and the UMR for `The boy can go` in [\[2 (2a)\]](#2 (2a)) and [\[2 (2b)\]](#2 (2b)), respectively.
 
-* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`)
-
-AMR for `The boy can go`
+<span id="2 (2a)" label="2 (2a)">\[2 (2a)\]</span>
 
 ```
 (p / possible-01
    :ARG0 ( g / go-01  
             :ARG0 boy ))
 ```
-UMR
+<span id="2 (2b)" label="2 (2b)">\[2 (2b)\]</span>
 ```
 ( g / go-01  
     :ARG0 boy )
@@ -1221,8 +1224,9 @@ participant role label. The participant role annotation looks rather
 different at the different stages of the road map. The factor which
 determines where a language begins on the road map is whether there is
 an existing PropBank-style lexicon (frame files) for the language, which defines predicate-specific roles. An English PropBank
-frame file is shown below:  
+frame file is shown in [\[3-2-1 (1)\]](#3-2-1 (1)).
 
+<span id="3-2-1 (1)" label="3-2-1 (1)">\[3-2-1 (1)\]</span>
 ```
 
 Predicate: give.01  
@@ -1249,11 +1253,11 @@ alternations. In semantic alternations, the basic and non-basic
 constructions differ in terms of the semantic content that they express,
 i.e., they don’t refer to the same “real-world” event. Reciprocals are
 an example of a semantic alternation, seen below in
-[\[reciprocal\]](#reciprocal) from Torau (Parkinson 2018:53).
+[\[3-2-1 (2)\]](#3-2-1 (2)) from Torau (Parkinson 2018:53).
 
-<span id="reciprocal" label="reciprocal">\[reciprocal\]</span>
+<span id="3-2-1 (2)" label="3-2-1 (2)">\[3-2-1 (2)\]</span>
 
-<span id="tor:basic" label="tor:basic">\[tor:basic\]</span>
+<span id="3-2-1 (2a)" label="3-2-1 (2a)">\[3-2-1 (2a)\]</span>
 
 ta-di=lo daki-a tioni arimi ta besu  
 <span class="smallcaps">pfv</span>-3<span class="smallcaps">pl.</span>S=go
@@ -1261,7 +1265,7 @@ find-3<span class="smallcaps">sg</span>O man feel.sorry
 3<span class="smallcaps">sg.pfv</span> be.hungry  
 ‘When they found him, the poor many was hungry.’
 
-<span id="tor:recip" label="tor:recip">\[tor:recip\]</span>
+<span id="3-2-1 (2b)" label="3-2-1 (2b)">\[3-2-1 (2b)\]</span>
 
 ta-di=lama ari da-daki uua=i  
 <span class="smallcaps">pfv</span>-3<span class="smallcaps">pl</span>S=<span class="smallcaps">tam</span>
@@ -1270,26 +1274,26 @@ ta-di=lama ari da-daki uua=i
 in.that.direction=<span class="smallcaps">loc</span>  
 ‘They had found each other.’
 
-The event described in [\[tor:basic\]](#tor:basic) is different than the
-event described in [\[tor:recip\]](#tor:recip). This is in contrast to
+The event described in [\[3-2-1 (2a)\]](#3-2-1 (2a)) is different than the
+event described in [\[3-2-1 (2b)\]](#3-2-1 (2b)). This is in contrast to
 valency alternations which reflect a pragmatic difference between the
 basic and non-basic construction. With pragmatic alternations, both
 constructions refer to the same “real-world” event, but they package
 that information differently, often in terms of the topicality (or,
 discourse salience) of participants. Passive constructions are an
 example of a pragmatic valency alternation, as seen in
-[\[passive\]](#passive) from Balinese (Shibatani and Artawa 2013).
+[\[3-2-1 (3)\]](#3-2-1 (3)) from Balinese (Shibatani and Artawa 2013).
 
-<span id="passive" label="passive">\[passive\]</span>
+<span id="3-2-1 (3)" label="3-2-1 (3)">\[3-2-1 (3)\]</span>
 
-<span id="bal:basic" label="bal:basic">\[bal:basic\]</span> Anake muani
+<span id="3-2-1 (3a)" label="3-2-1 (3a)">\[3-2-1 (3a)\]</span> Anake muani
 cenik ento ngajeng buahe ento. anak=e muani cenik ento ngajeng buah=e
 ento  
 person=<span class="smallcaps">def</span> male small that eat
 fruit=<span class="smallcaps">def</span> that  
 ‘The boy ate the fruit.’
 
-<span id="bal:pass" label="bal:pass">\[bal:pass\]</span> Buahe ento
+<span id="3-2-1 (3b)" label="3-2-1 (3b)">\[3-2-1 (3b)\]</span> Buahe ento
 ajenga teken anake muani cenik ento. buah=e ento ajeng=a teken anak=e
 muani cenik ento  
 fruit=<span class="smallcaps">def</span> that
@@ -1297,16 +1301,16 @@ eat=<span class="smallcaps">pass</span> by
 person=<span class="smallcaps">def</span> male small that  
 ‘The fruit was eaten by the boy.’
 
-Here, [\[bal:basic\]](#bal:basic) and [\[bal:pass\]](#bal:pass) could
+Here, [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) could
 refer to the same event, with the main difference being the saliency or
 topicality of *anak=e muani cenik* ‘the boy’.
 
 Broadly, UMR indicates semantic valency alternations with the
 participant role annotation, while pragmatic alternations are not
 reflected in the UMR. This means that the participant role annotations
-for [\[tor:basic\]](#tor:basic) and [\[tor:recip\]](#tor:recip) would be
+for [\[3-2-1 (2a)\]](#3-2-1 (2a)) and [\[3-2-1 (2b)\]](#3-2-1 (2b)) would be
 different, where as the participant role annotation for
-[\[bal:basic\]](#bal:basic) and [\[bal:pass\]](#bal:pass) would be the
+[\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) would be the
 same. The annotations for valency alternations also depend on the stage
 of the road map, so that will be detailed below.
 
@@ -1381,21 +1385,21 @@ change-of-state events, construed broadly to include creation and
 contact events as well. The <span class="smallcaps">`undergoer`</span>
 role is used for the entity that undergoes the change-of-state, is the
 endpoint of force in a contact event, or is created in a creation event,
-as seen in [\[cos\]](#cos). The <span class="smallcaps">`material`</span>
+as seen in [\[3-2-1-1 (1)\]](#3-2-1-1 (1)). The <span class="smallcaps">`material`</span>
 role only occurs with creation events, as in
-[\[cos:creation\]](#cos:creation), and is used for the raw materials
+[\[3-2-1-1 (1c)\]](#3-2-1-1 (1c)), and is used for the raw materials
 that are transformed into the created object.
 
-<span id="cos" label="cos">\[cos\]</span>
+<span id="3-2-1-1 (1)" label="3-2-1-1 (1)">\[3-2-1-1 (1)\]</span>
 
-<span id="cos:cosintr" label="cos:cosintr">\[cos:cosintr\]</span>
+<span id="3-2-1-1 (1a)" label="3-2-1-1 (1a)">\[3-2-1-1 (1a)\]</span>
 ```
 The ice cube melted.  
 
 (m / melt  
 	:undergoer (i / ice cube))
 ```
-<span id="cos:costr" label="cos:costr">\[cos:costr\]</span> 
+<span id="3-2-1-1 (1b)" label="3-2-1-1 (1b)">\[3-2-1-1 (1b)\]</span> 
 ```
 The enemy sank the ship. 
 
@@ -1404,7 +1408,7 @@ The enemy sank the ship.
 	:undergoer (s2 / ship))
 
 ```
-<span id="cos:creation" label="cos:creation">\[cos:creation\]</span> 
+<span id="#3-2-1-1 (1c)" label="#3-2-1-1 (1c)">\[#3-2-1-1 (1c)\]</span> 
 ```
 She built a house out of wood. 
 
@@ -1413,7 +1417,7 @@ She built a house out of wood.
 	:undergoer (h / house) 
 	:source (w / wood))
 ```
-<span id="cos:contact" label="cos:contact">\[cos:contact\]</span> 
+<span id="#3-2-1-1 (1d)" label="#3-2-1-1 (1d)">\[#3-2-1-1 (1d)\]</span> 
 ```
 He hit the stick against the fence.  
 
@@ -1425,14 +1429,14 @@ He hit the stick against the fence.
 
 The <span class="smallcaps">experiencer</span> and
 <span class="smallcaps">stimulus</span> roles always occur with
-experiential events, as seen in [\[exp\]](#exp). The
+experiential events, as seen in [\[3-2-1-1 (4)\]](#3-2-1-1 (4)). The
 <span class="smallcaps">experiencer</span> role is used for the
 mental-level entity which attends to, reacts to, or passively
 experiences the <span class="smallcaps">stimulus</span> role.
 
-<span id="exp" label="exp">\[exp\]</span>
+<span id="3-2-1-1 (4)" label="3-2-1-1 (4)">\[3-2-1-1 (4)\]</span>
 
-<span id="exp:attend" label="exp:attend">\[exp:attend\]</span>
+<span id="3-2-1-1 (4a)" label="3-2-1-1 (4a)">\[3-2-1-1 (4a)\]</span>
 ```
 The audience listened to the concerto.  
 
@@ -1440,7 +1444,7 @@ The audience listened to the concerto.
 	:experiencer (a / audience) 
 	:stimulus (c / concerto))
 ```
-<span id="exp:experience" label="exp:experience">\[exp:experience\]</span>
+<span id="3-2-1-1 (4b)" label="3-2-1-1 (4b)">\[3-2-1-1 (4b)\]</span>
 ```
 The cat startled me.
 
@@ -1458,22 +1462,22 @@ with Motion/Location events and one with other event classes.
 `goal`, and
 `place` are used for locations –
 `start` is the location from which motion
-originates, as in [\[mot:actor\]](#mot:actor),
+originates, as in [\[3-2-1-1 (5a)\]](#[3-2-1-1 (5a)),
 `goal` is the location in which motion
-ends, as in [\[mot:theme\]](#mot:theme) and [\[mot:apply\]](#mot:apply),
+ends, as in [\[[3-2-1-1 (5b)\]](#3-2-1-1 (5b)) and [\[3-2-1-1 (5c)\]](#3-2-1-1 (5c)),
 and `place` is used for static locations,
-as in [\[mot:place\]](#mot:place). The
+as in [\[3-2-1-1 (5d)\]](#3-2-1-1 (5d)). The
 `source` role is in the removal subclass of
 motion events; it is used for the entity from which the
 `theme` is removed, as in
-[\[mot:remove\]](#mot:remove). With motion events, the
+[\[3-2-1-1 (5e)\]](#3-2-1-1 (5e)). With motion events, the
 `theme` role is used for the entity that
 moves (unless the motion is volitional), as in
-[\[mot:actor\]](#mot:actor).
+[\[3-2-1-1 (5a)\]](#3-2-1-1 (5a)).
 
-<span id="motion" label="motion">\[motion\]</span>
+<span id="3-2-1-1 (5)" label="3-2-1-1 (5)">\[3-2-1-1 (5)\]</span>
 
-<span id="mot:actor" label="mot:actor">\[mot:actor\]</span> 
+<span id="[3-2-1-1 (5a)" label="[3-2-1-1 (5a)">\[[3-2-1-1 (5a)\]</span> 
 ```
 She walked home from the store.
 
@@ -1481,7 +1485,7 @@ She walked home from the store.
 	:theme (l / leaf)  
 	:goal (g / ground))  
 ```
-<span id="mot:theme" label="mot:theme">\[mot:theme\]</span> 
+<span id="3-2-1-1 (5b)" label="3-2-1-1 (5b)">\[3-2-1-1 (5b)\]</span> 
 ```
 The leaf fell to the ground.
 
@@ -1490,7 +1494,7 @@ The leaf fell to the ground.
 	:goal (h / home)  
 	:start (s2 / store))  
 ```
-<span id="mot:apply" label="mot:apply">\[mot:apply\]</span> 
+<span id="3-2-1-1 (5c)" label="3-2-1-1 (5c)">\[3-2-1-1 (5c)\]</span> 
 ```
 He put the books in a box.
 
@@ -1500,7 +1504,7 @@ He put the books in a box.
 	:goal (b2 / box))  
 
 ```
-<span id="mot:place" label="mot:place">\[mot:place\]</span> 
+<span id="3-2-1-1 (5d)" label="3-2-1-1 (5d)">\[3-2-1-1 (5d)\]</span> 
 ```
 She is sitting on the couch.
 
@@ -1508,7 +1512,7 @@ She is sitting on the couch.
 	:actor (s2 / she)  
 	:place (c / couch))  
 ```
-<span id="mot:remove" label="mot:remove">\[mot:remove\]</span> 
+<span id="3-2-1-1 (5e)" label="3-2-1-1 (5e)">\[3-2-1-1 (5e)\]</span> 
 ```
 He picked some berries from the bush.
 
@@ -1527,11 +1531,11 @@ the `recipient`. For transfer of possession
 events that express the original possessor of the
 `theme`, the original possessor is
 annotated as `affectee`, as in
-[\[tras:rem\]](#tras:rem).
+[\[3-2-1-1 (6d)\]](#3-2-1-1 (6d)).
 
-<span id="transfer" label="transfer">\[transfer\]</span>
+<span id="3-2-1-1 (6)" label="3-2-1-1 (6)">\[3-2-1-1 (6)\]</span>
 
-<span id="trans:poss" label="trans:poss">\[trans:poss\]</span> 
+<span id="3-2-1-1 (6a)" label="3-2-1-1 (6a)">\[3-2-1-1 (6a)\]</span> 
 ```
 He gave the cat some wet food.
 
@@ -1541,7 +1545,7 @@ He gave the cat some wet food.
 	:recipient (c / cat))
 ```
 
-<span id="trans:mental" label="trans:mental">\[trans:mental\]</span> 
+<span id="3-2-1-1 (6b)" label="3-2-1-1 (6b)">\[3-2-1-1 (6b)\]</span> 
 ```
 I showed the pictures to her.
 
@@ -1551,7 +1555,7 @@ I showed the pictures to her.
 	:recipient (h / her)) 
 ```
 
-<span id="trans:comm" label="trans:comm">\[trans:comm\]</span> 
+<span id="3-2-1-1 (6c)" label="3-2-1-1 (6c)">\[3-2-1-1 (6c)\]</span> 
 ```
 She told me that they they’re attending.
 
@@ -1562,7 +1566,7 @@ She told me that they they’re attending.
 	:actor (t2 / they))) 
 ```
 
-<span id="tras:rem" label="tras:rem">\[tras:rem\]</span> 
+<span id="3-2-1-1 (6d)" label="3-2-1-1 (6d)">\[3-2-1-1 (6d)\]</span> 
 ```
 She stole the information from a competitor.
 
@@ -1576,22 +1580,22 @@ The other participant roles can occur pretty much freely with any semantic class
 `actor` role is used for “active”
 single-participant events, in which the single participant acts
 volitionally to bring about the event, as in
-[\[excaus:intrans\]](#excaus:intrans). This contrasts with “inactive”
+[\[3-2-1-1 (7a)\]](#3-2-1-1 (7a)). This contrasts with “inactive”
 single-participant events, in which the single participant undergoes a
-change outside of its control, as in [\[cos:cosintr\]](#cos:cosintr)
+change outside of its control, as in [\[3-2-1-1 (1a)\]](#3-2-1-1 (1a))
 above. See Appendix [8](#ap:verbspr) for examples of single-participant
 verbs and their participant role annotation. The
 <span class="smallcaps">actor</span> role is also used for animate
-entities that initiate an action, as in [\[cos:costr\]](#cos:costr)
+entities that initiate an action, as in [\[3-2-1-1 (1b)\]](#3-2-1-1 (1b))
 above.
 
 The `companion` role is used for the entity
 that helps the `actor` bring about the
-action, as in [\[excaus:com\]](#excaus:com). Note that this role is only annotated when the `companion`
+action, as in [\[3-2-1-1 (7b)\]](#3-2-1-1 (7b)). Note that this role is only annotated when the `companion`
 participant is expressed separately from the
 `actor`. Plural participants and conjoined
-participants, as in [\[excaus:pl\]](#excaus:pl) and
-[\[excaus:and\]](#excaus:and), are annotated with a single
+participants, as in [\[3-2-1-1 (7c)\]](#3-2-1-1 (7c)) and
+[\[3-2-1-1 (7d)\]](#3-2-1-1 (7d)), are annotated with a single
 `actor` role. In some languages, a marker
 may be ambiguous between a comitative marker and a conjunction. When the two participants are expressed separately in the clause, they should be treated as separate participants, annotated with`actor` and `companion`. When they are expressed
 together, they are treated as a single
@@ -1601,19 +1605,19 @@ The `instrument` role is used for an entity
 that is manipulated by one of the other external cause roles, often an `actor`, in order to initiate the action.
 The entity which manipulates the
 `instrument` may or may not be present in
-the clause; see [\[excaus:ins\]](#excaus:ins) and
-[\[excaus:inssubj\]](#excaus:inssubj).
+the clause; see [\[3-2-1-1 (7e)\]](#3-2-1-1 (7e)) and
+[\[3-2-1-1 (7f)\]](#3-2-1-1 (7f)).
 
 The `force` role is used for physical
 entities which initiate an action, or cause another entity to undergo a
-change, as in [\[excaus:frc\]](#excaus:frc). Finally, the
+change, as in [\[3-2-1-1 (7g)\]](#3-2-1-1 (7g)). Finally, the
 `causer` role is used for the external
 initiator in some causative constructions, see [4.1.2](#pr0:alts).
 
 
-<span id="excaus" label="excaus">\[excaus\]</span>
+<span id="3-2-1-1 (7)" label="3-2-1-1 (7)">\[3-2-1-1 (7)\]</span>
 
-<span id="excaus:intrans" label="excaus:intrans">\[excaus:intrans\]</span>
+<span id="3-2-1-1 (7a)" label="3-2-1-1 (7a)">\[3-2-1-1 (7a)\]</span>
 ```
 He winked.
 
@@ -1621,7 +1625,7 @@ He winked.
 	:actor (h / he))
 ```
 
-<span id="excaus:com" label="excaus:com">\[excaus:com\]</span> 
+<span id="3-2-1-1 (7b)" label="3-2-1-1 (7b)">\[3-2-1-1 (7b)\]</span> 
 ```
 Jane wrote the paper with Chris.
 
@@ -1631,7 +1635,7 @@ Jane wrote the paper with Chris.
 	:undergoer (p / paper)) 
 ```
 
-<span id="excaus:pl" label="excaus:pl">\[excaus:pl\]</span> 
+<span id="3-2-1-1 (7c)" label="3-2-1-1 (7c)">\[3-2-1-1 (7c)\]</span> 
 ```
 They wrote the paper.
 
@@ -1640,7 +1644,7 @@ They wrote the paper.
 	:undergoer (p / paper))
 ```
 
-<span id="excaus:and" label="excaus:and">\[excaus:and\]</span> 
+<span id="3-2-1-1 (7d)" label="3-2-1-1 (7d)">\[3-2-1-1 (7d)\]</span> 
 ```
 Jane and Chris wrote the paper.
 
@@ -1649,7 +1653,7 @@ Jane and Chris wrote the paper.
 	:undergoer (p / paper))  
 ```
 
-<span id="excaus:ins" label="excaus:ins">\[excaus:ins\]</span> 
+<span id="3-2-1-1 (7e)" label="3-2-1-1 (7e)">\[3-2-1-1 (7e)\]</span> 
 ```
 She sliced the bread with a knife.
 
@@ -1659,7 +1663,7 @@ She sliced the bread with a knife.
 	:undergoer (b / bread))
 ```
 
-<span id="excaus:inssubj" label="excaus:inssubj">\[excaus:inssubj\]</span>
+<span id="3-2-1-1 (7f)" label="3-2-1-1 (7f)">\[3-2-1-1 (7f)\]</span>
 ```
 The knife sliced through the bread.
 
@@ -1668,7 +1672,7 @@ The knife sliced through the bread.
 	:undergoer (b / bread)) 
 ```
 
-<span id="excaus:frc" label="excaus:frc">\[excaus:frc\]</span> 
+<span id="3-2-1-1 (7g)" label="3-2-1-1 (7g)">\[3-2-1-1 (7g)\]</span> 
 ```
 The storm damaged the power lines.
 
@@ -1681,11 +1685,11 @@ See Table 5 for examples of the circumstantial
 roles. In addition, there is an `other`
 placeholder role that can be used when annotators are unsure of which participant role annotation is accurate for a particular participant. Also see Appendix [8](#ap:verbspr) for a list of verbs and how their microroles are annotated.
 
-At Stage 1, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in [\[trans:implicit\]](#trans:implicit), the
+At Stage 1, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in [\[3-2-1-1 (8)\]](#3-2-1-1 (8)), the
 `goal` is left implicit; at Stage 1, this
 role may be left out of the annotation.
 
-<span id="trans:implicit" label="trans:implicit">\[trans:implicit\]</span> 
+<span id="3-2-1-1 (8)" label="3-2-1-1 (8)">\[3-2-1-1 (8)\]</span> 
 ```
 They loaded the boxes.
 
@@ -1718,12 +1722,13 @@ Table 7: Nonverbal clause predicates
 </div>
 
 The argument that can be predicativized in some languages is always
-`ARG1`. Examples [\[thetposs\]](#thetposs)-[\[objeq\]](#objeq) show how
+`ARG1`. The examples in [\[3-2-1-1-1 (1)\]](#3-2-1-1-1 (1)) show how
 nonverbal clauses are annotated with participant roles. Note that these
 annotations will be the same at every stage of the road map.
 
+<span id="3-2-1-1-1 (1)" label="3-2-1-1-1 (1)">\[3-2-1-1-1 (1)\]</span>
 
-<span id="thetposs" label="thetposs">\[thetposs\]</span>
+<span id="3-2-1-1-1 (1a)" label="3-2-1-1-1 (1a)">\[3-2-1-1-1 (1a)\]</span>
 Thetic/presentational Possession - Kukama <br />
 
 ```
@@ -1736,7 +1741,7 @@ Miguel-cer  canoe-owner
 	:ARG1 (i / ara ‘canoe’)) 
 ```
 
-<span id="predposs" label="predposs">\[predposs\]</span> Predicative
+<span id="3-2-1-1-1 (1b)" label="3-2-1-1-1 (1b)">\[3-2-1-1-1 (1b)\]</span> Predicative
 Possession - English <br />
 ```
 The dog belongs to the teacher.  
@@ -1746,7 +1751,7 @@ The dog belongs to the teacher.
 	:ARG1 (t / teacher)) 
 ```
 
-<span id="thetloc" label="thetloc">\[thetloc\]</span> Thetic/presentational Location - English <br />
+<span id="3-2-1-1-1 (1c)" label="3-2-1-1-1 (1c)">\[3-2-1-1-1 (1c)\]</span> Thetic/presentational Location - English <br />
 ```
 On the rock was a symbol.  
   
@@ -1755,7 +1760,7 @@ On the rock was a symbol.
 	:ARG1 (s / symbol))  
 ```
 
-<span id="predloc" label="predloc">\[predloc\]</span> Predicative
+<span id="3-2-1-1-1 (1d)" label="3-2-1-1-1 (1d)">\[3-2-1-1-1 (1d)\]</span> Predicative
 Location - Yabem (Dempwolff 1939) <br />
 ```
 àndu  kê-kô 	malac  
@@ -1767,7 +1772,7 @@ house 3sg-be.at village
 	:ARG1 (m / malac ‘village’))
 ```
 
-<span id="proppred" label="proppred">\[proppred\]</span> Property
+<span id="3-2-1-1-1 (1e)" label="3-2-1-1-1 (1e)">\[3-2-1-1-1 (1e)\]</span> Property
 Predication - English <br />
 ```
 The cat is black.  
@@ -1778,7 +1783,7 @@ The cat is black.
 
 ```
 
-<span id="objpred" label="objpred">\[objpred\]</span> Object Predication - Kukama <br />
+<span id="3-2-1-1-1 (1f)" label="3-2-1-1-1 (1f)">\[3-2-1-1-1 (1f)\]</span> Object Predication - Kukama <br />
 
 ```
 ajan kunumi 	tsumi  
@@ -1790,7 +1795,7 @@ this young.man 	shaman
 	:ARG1 (t / tsumi ‘shaman’))  
 ```
 
-<span id="objeq" label="objeq">\[objeq\]</span> Object Equational - English <br />
+<span id="3-2-1-1-1 (1g)" label="3-2-1-1-1 (1g)">\[3-2-1-1-1 (1g)\]</span> Object Equational - English <br />
 ```
 She is the winner.  
   
@@ -1804,11 +1809,11 @@ She is the winner.
 Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 1, these alternations influence the choice of general participant role labels. For information-packaging alternations, such as
 passives, antipassives, or valency-rearranging applicatives,
 participants are annotated in the same way as in the basic construction
-in the language. If a participant is omitted, for example the agent in a passive construction as in [\[ber:passive\]](#ber:passive) from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 1. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 1. 
+in the language. If a participant is omitted, for example the agent in a passive construction as in [\[3-2-1-1-2 (1)\]](#3-2-1-1-2 (1)) from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 1. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 1. 
 
-<span id="ber:passive" label="ber:passive">\[ber:passive\]</span>
+<span id="3-2-1-1-2 (1)" label="3-2-1-1-2 (1)">\[3-2-1-1-2 (1)\]</span>
 
-<span id="ber:basic" label="ber:basic">\[ber:basic\]</span> <br />
+<span id="3-2-1-1-2 (1a)" label="3-2-1-1-2 (1a)">\[3-2-1-1-2 (1a)\]</span> <br />
 ```
 Y-usy 		wrba 	tafirast.  
 3ms-pick.up 	boy:cst pear  
@@ -1819,7 +1824,7 @@ Y-usy 		wrba 	tafirast.
 	:undergoer (t / tafirast ‘pear’))
 ```
 
-<span id="ber:pass" label="ber:pass">\[ber:pass\]</span> <br />
+<span id="3-2-1-1-2 (1b)" label="3-2-1-1-2 (1b)">\[3-2-1-1-2 (1b)\]</span> <br />
 ```
 T-ttw-asy
 tfirast.  
@@ -1836,12 +1841,12 @@ transitives, the causer is annotated as
 `causer`, the causee as
 `actor`, and the rest of the participants
 receive the same annotation labels that they would in a a non-causative
-construction. In [\[bicausative\]](#bicausative) from Kukama, *nai*
+construction. In [\[3-2-1-1-2 (2)\]](#3-2-1-1-2 (2)) from Kukama, *nai*
 ‘grandmother’ is annotated as `causer`,
 the causee *churan* ‘kid’ is annotated as
 `actor`, and *uni* ‘water’ as `undergoer`.
 
-<span id="bicausative" label="bicausative">\[bicausative\]</span>
+<span id="3-2-1-1-2 (2)" label="3-2-1-1-2 (2)">\[3-2-1-1-2 (2)\]</span>
 ```
 nai 		kurata-ta churan=ui u	ni=pu  
 grandmother 	drink-cau kid=pst 	water=ins  
@@ -1855,12 +1860,12 @@ grandmother 	drink-cau kid=pst 	water=ins
 
 There are certain causatives of transitives which do not use the `causer` role. These are constructions which express transfer events, including mental/cognitive transfer. Some
 languages express these types of events with monomorphemic verbs, like English, but other languages use causatives of transitive verbs.
-Languages may differ in terms of which types of causative constructions are construed as transfer; in order to annotate the same semantic events in the same way across languages, the `actor, theme, recipient` roles are used for transfer of possession	(giving), sending, and mental transfer, which includes showing and communication. Bezhta in [\[bez:caus\]](#bez:caus) (Comrie, Khalilov, Khalilova 2015:560) uses the causative of *b-egā-yo* ‘see’ as equivalent to English *show*.
+Languages may differ in terms of which types of causative constructions are construed as transfer; in order to annotate the same semantic events in the same way across languages, the `actor, theme, recipient` roles are used for transfer of possession	(giving), sending, and mental transfer, which includes showing and communication. Bezhta in [\[3-2-1-1-2 (3b)\]](#3-2-1-1-2 (3b)) (Comrie, Khalilov, Khalilova 2015:560) uses the causative of *b-egā-yo* ‘see’ as equivalent to English *show*.
 
 
-<span id="bez:causative" label="bez:causative">\[bez:causative\]</span>
+<span id="3-2-1-1-2 (3)" label="3-2-1-1-2 (3)">\[3-2-1-1-2 (3)\]</span>
 
-<span id="bez:basic" label="bez:basic">\[bez:basic\]</span> <br />
+<span id="3-2-1-1-2 (3a)" label="3-2-1-1-2 (3a)">\[3-2-1-1-2 (3a)\]</span> <br />
 ```
 hogco-l 	raɬad 		b-egā-yo  
 he.obl-lat 	sea(iii) 	iii-see-pst  
@@ -1872,7 +1877,7 @@ he.obl-lat 	sea(iii) 	iii-see-pst
 
 ```
 
-<span id="bez:caus" label="bez:caus">\[bez:caus\]</span>
+<span id="3-2-1-1-2 (3b)" label="3-2-1-1-2 (3b)">\[3-2-1-1-2 (3b)\]</span>
 ```
 hogco 		kibba-l 	raɬad 		b-ega-l-lo  
 he.obl(erg) 	girl.obl-lat 	sea(iii) 	iii-see-caus-pst  
@@ -1885,11 +1890,11 @@ he.obl(erg) 	girl.obl-lat 	sea(iii) 	iii-see-caus-pst
 ```
 
 For causatives of ditransitives, the causer receives the
-`causer` role, the causee the `actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in [\[sk:tricausative\]](#sk:tricausative) from Shipibo-Konibo
+`causer` role, the causee the `actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in [\[3-2-1-1-2 (4)\]](#3-2-1-1-2 (4)) from Shipibo-Konibo
 (Valenzuela 2003:612). If ‘the man’ was expressed in the clause, that participant would be annotated as `recipient`.
 
 
-<span id="sk:tricausative" label="sk:tricausative">\[sk:tricausative\]</span> <br />
+<span id="3-2-1-1-2 (4)" label="3-2-1-1-2 (4)">\[3-2-1-1-2 (4)\]</span> <br />
 ```
 Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-bi...  
 that-temp 	that 	unmarried.girl:abs 	pos3 	mother-erg 	roasted.meat/fish:abs 	give-caus-inc 	want-neg-sds-em  
@@ -1906,12 +1911,12 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 There are two types of causatives of intransitives, based on the two types of intransitives. For intransitives whose single participant corresponds to an `undergoer` role, such as
 change-of-state verbs in many languages, the causer is annotated as `actor` and the single participant retains
 its `undergoer`label. This can be seen in
-[\[fc:coscausative\]](#fc:coscausative) from Falam Chin (King 2011:195) below.
+[\[3-2-1-1-2 (5)\]](#3-2-1-1-2 (5)) from Falam Chin (King 2011:195) below.
 
 
-<span id="fc:coscausative" label="fc:coscausative">\[fc:coscausative\]</span>
+<span id="3-2-1-1-2 (5)" label="3-2-1-1-2 (5)">\[3-2-1-1-2 (5)\]</span>
 
-<span id="fc:cosbasic" label="fc:cosbasic">\[fc:cosbasic\]</span> <br /> 
+<span id="3-2-1-1-2 (5a)" label="3-2-1-1-2 (5a)">\[3-2-1-1-2 (5a)\]</span> <br /> 
 ```
 Ka 	kedam 	hri 	a 	cat.  
 1sg 	shoe 	string 3sg.nom 	broken.1  
@@ -1921,7 +1926,7 @@ Ka 	kedam 	hri 	a 	cat.
 	:undergoer (k / kedam hri ‘shoelace’)) 
 ```
 
-<span id="fc:coscaus" label="fc:coscaus">\[fc:coscaus\]</span> <br /> 
+<span id="3-2-1-1-2 (5b)" label="3-2-1-1-2 (5b)">\[3-2-1-1-2 (5b)\]</span> <br /> 
 ```
 Thangte in 	ka 	kedam 	hri 	a 	cat-ter.  
 Thangte erg 	1sg 	shoe 	string 	3sg.nom broken.1-caus  
@@ -1937,11 +1942,11 @@ Regardless of whether the causative or anticausative verb is derived (or, neithe
 
 When the single participant of the intransitive corresponds to the
 `actor` role, then the causer receives the `causer` annotation and the single participant retains its `actor` label. This
-can be seen in [\[fc:actcausative\]](#fc:actcausative) from Falam Chin (King 2011:195) below.
+can be seen in [\[3-2-1-1-2 (6)\]](#3-2-1-1-2 (6)) from Falam Chin (King 2011:195) below.
 
-<span id="fc:actcausative" label="fc:actcausative">\[fc:actcausative\]</span>
+<span id="3-2-1-1-2 (6)" label="3-2-1-1-2 (6)">\[3-2-1-1-2 (6)\]</span>
 
-<span id="fc:actbasic" label="fc:actbasic">\[fc:actbasic\]</span> <br />
+<span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br />
 ```
 Cinte a 	hni.  
 Cinte 3sg.nom 	laugh.1  
@@ -1951,7 +1956,7 @@ Cinte 3sg.nom 	laugh.1
 	:actor (C / Cinte)) 
 ```
 
-<span id="fc:actcaus" label="fc:actcaus">\[fc:actcaus\]</span> <br /> 
+<span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br /> 
 ```
 Parte 	in 	Cinte a 	hni-ter.  
 Parte 	erg 	Cinte 3sg.nom 	laugh.1-caus  
@@ -1964,11 +1969,11 @@ Parte 	erg 	Cinte 3sg.nom 	laugh.1-caus
 
 **Applicatives.**  Peterson (2007) distinguishes between “valency-increasing” applicatives and “valency-rearranging” applicatives. In valency-rearranging applicatives, a participant is expressed as an oblique in the basic construction and expressed as a core argument in the applicative construction; they are generally associated with the increased saliency or topicality of the oblique participant. Therefore, these fit into the category of pragmatic valency alternations, and both the basic and applicative construction receive the same participant role
 annotation. This can be seen in
-[\[fc:ipapplicative\]](#fc:ipapplicative) from Falam Chin (King 2011:240).
+[\[3-2-1-1-2 (7)\]](#3-2-1-1-2 (7)) from Falam Chin (King 2011:240).
 
-<span id="fc:ipapplicative" label="fc:ipapplicative">\[fc:ipapplicative\]</span>
+<span id="3-2-1-1-2 (7)" label="3-2-1-1-2 (7)">\[3-2-1-1-2 (7)\]</span>
 
-<span id="fc:appbasic" label="fc:appbasic">\[fc:appbasic\]</span>
+<span id="3-2-1-1-2 (7a)" label="3-2-1-1-2 (7a)">\[3-2-1-1-2 (7a)\]</span>
 ```
 Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.  
 Parte erg 	Thangte for=loc 	curry 	3sg.nom cook.1  
@@ -1980,7 +1985,7 @@ Parte erg 	Thangte for=loc 	curry 	3sg.nom cook.1
 	:affectee (T / Thangte))
 ```
 
-<span id="fc:ipapp" label="fc:ipapp">\[fc:ipapp\]</span>
+<span id="3-2-1-1-2 (7b)" label="3-2-1-1-2 (7b)">\[3-2-1-1-2 (7b)\]</span>
 ```
 Parte in 	Thangte hmeh 	a 	suan-sak  
 Parte erg 	Thangte curry 	3sg.nom cook.2-ben  
@@ -1995,10 +2000,11 @@ Parte erg 	Thangte curry 	3sg.nom cook.2-ben
 Whether the beneficiary, *Thangte*, is expressed as an oblique or a core argument, it is annotated as `affectee`. Valency-increasing applicatives involve the addition of a participant, compared to the basic construction. Here, the added participant is
 simply annotated with the appropriate semantic role. This can be seen in ADD EXAMPLE.
 
-**Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be in [\[sup:refl\]](#sup:refl) and [\[sup:recip\]](#sup:recip) from Supyire (Carlson 1994:416-7).
+**Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be in [\[3-2-1-1-2 (8a)\]](#3-2-1-1-2 (8a)) and [\[3-2-1-1-2 (8b)\]](#3-2-1-1-2 (8b)) from Supyire (Carlson 1994:416-7).
 
+<span id="3-2-1-1-2 (8)" label="3-2-1-1-2 (8)">\[3-2-1-1-2 (8)\]</span>
 
-<span id="sup:refl" label="sup:refl">\[sup:refl\]</span>
+<span id="3-2-1-1-2 (8a)" label="3-2-1-1-2 (8a)">\[3-2-1-1-2 (8a)\]</span>
 ```
 U 	a 	ù-yé 	bánì  
 he 	perf 	he-refl wound  
@@ -2009,7 +2015,7 @@ he 	perf 	he-refl wound
 	:undergoer (u)) 
 ```
 
-<span id="sup:recip" label="sup:recip">\[sup:recip\]</span><br /> 
+<span id="3-2-1-1-2 (8b)" label="3-2-1-1-2 (8b)">\[3-2-1-1-2 (8b)\]</span><br /> 
 ```
 Pi 	a 	pì-yé 		kánù  
 they 	perf 	they-refl 	love  
@@ -2027,7 +2033,7 @@ PropBank-style frame files in the language for a large number of
 predicates. At this stage, each predicate identified as event is linked
 to its corresponding frame file. The participants dependent on that
 event are annotated with the lexicalized roles, as determined by the
-frame file. This can be seen in [\[engst2\]](#engst2) below.  
+frame file. This can be seen in [\[3-2-1-2 (1)\]](#3-2-1-2 (1)) below.  
 
 ```
 predicate: tease.02
@@ -2037,7 +2043,7 @@ predicate: tease.02
 	ARG2: about what
 ```
 
-<span id="engst2" label="engst2">\[engst2\]</span>
+<span id="3-2-1-2 (1)" label="3-2-1-2 (1)">\[3-2-1-2 (1)\]</span>
 
 ```
 He teased the boy about his hat.
@@ -2050,9 +2056,9 @@ He teased the boy about his hat.
 
 Since the nonverbal clause functions require the use of lexicalized predicates at Stage 1, these are annotated in the same way at Stage 2 (see 3-2-1-1-1). Unlike Stage 1, implicit participants are
 annotated for their semantic role at Stage 2. This is shown in
-[\[st2:implicit\]](#st2:implicit).
+[\[3-2-1-2 (2)\]](#3-2-1-2 (2)).
 
-<span id="st2:implicit" label="st2:implicit">\[st2:implicit\]</span> 
+<span id="3-2-1-2 (2)" label="3-2-1-2 (2)">\[3-2-1-2 (2)\]</span> 
 ```
 She parked the truck in the driveway. They loaded the boxes.
 
@@ -2067,7 +2073,7 @@ She parked the truck in the driveway. They loaded the boxes.
 	:ARG2 (b / boxes))
 ```
 
-The second sentence in [\[st2:implicit\]](#st2:implicit) does not
+The second sentence in [\[3-2-1-2 (2)\]](#3-2-1-2 (2)) does not
 include explicit mention of the truck, but it is understood from the
 context that the truck is the goal participant of the loading event.
 Therefore, at Stage 2, these implicit roles receive participant role
@@ -2138,54 +2144,54 @@ The first point in the decision tree concerns the morphosyntactic
 expression of the event. Events expressed as nominals often lack any
 grammatical clues as to their aspectual structure. This makes
 determining an aspectual annotation value difficult. Therefore, events
-expressed as event nominals, as in [\[26\]](#eventnoms), are
+expressed as event nominals, as in [\[3-3-1-1 (1)\]](#3-3-1-1 (1)), are
 annotated as <span>NA</span>.
 
-<span id="eventnoms" label="eventnoms">\[26\]</span>
+<span id="3-3-1-1 (1)" label="3-3-1-1 (1)">\[3-3-1-1 (1)\]</span>
 
-<span id="meeting" label="meeting">\[a\]</span> *He presented his
+<span id="3-3-1-1 (1a)" label="3-3-1-1 (1a)">\[3-3-1-1 (1a)\]</span> *He presented his
 research at **the meeting** yesterday.*  
 <span>meeting: NA</span>
 
-<span id="game" label="game">\[b\]</span> *After **the game**, she
+<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">\[3-3-1-1 (1b)\]</span> *After **the game**, she
 went home.*  
 <span>game: NA</span>
 
-<span id="operation" label="operation">\[c\]</span> *The surgeon
+<span id="3-3-1-1 (1c)" label="3-3-1-1 (1c)">\[3-3-1-1 (1c)\]</span> *The surgeon
 finished **the operation** at 3pm.*  
 <span>operation: NA</span>
 
 Any event packaged in a referring expression is considered an event
 nominal and annotated with <span>NA</span>. This includes underived
-nominals, nominalizations, and gerunds, as in [\[27\]](#gerund).
+nominals, nominalizations, and gerunds, as in [\[3-3-1-1 (2)\]](#3-3-1-1 (2)).
 
-<span id="gerund" label="gerund">\[27\]</span>
+<span id="3-3-1-1 (2)" label="3-3-1-1 (2)">\[3-3-1-1 (2)\]</span>
 
-<span id="training" label="training">\[a\]</span> ***The second
+<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">\[3-3-1-1 (2a)\]</span> ***The second
 training** was cancelled yesterday.*  
 <span>training: NA</span>
 
-<span id="barking" label="barking">\[b\]</span> *The dog
+<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">\[3-3-1-1 (2b)\]</span> *The dog
 interrupted the meeting with **his barking**.*  
 <span>barking: NA</span>
 
 Note that *-ing* forms in English can occur in a variety of
 constructions; they should only be treated as event nominals when they
-are used in referring expressions (as in [\[27a\]](#training) and
-[\[27b\]](#barking) above). When they occur in other types of
-constructions, as in [\[28\]](#stopbarking), they should not
+are used in referring expressions (as in [\[3-3-1-1 (2a)\]](#3-3-1-1 (2a)) and
+[\[3-3-1-1 (2b)\]](#3-3-1-1 (2b)) above). When they occur in other types of
+constructions, as in [\[3-3-1-1 (3)\]](#3-3-1-1 (3)), they should not
 receive an aspect annotation at this point and should continue on to the
 next step.
 
-<span id="stopbarking" label="stopbarking">\[28\]</span> *The
+<span id="3-3-1-1 (3)" label="3-3-1-1 (3)">\[3-3-1-1 (3)\]</span> *The
 dog stopped **barking** for a few seconds.*
 
 Event nominals that occur in predicate nominal constructions, as in
-[\[29\]](#earthquake), are also not annotated at this point;
+[\[3-3-1-1 (4)\]](#3-3-1-1 (4)), are also not annotated at this point;
 these are treated like other predicate nominal constructions (see step
 \#5 below).
 
-<span id="earthquake" label="earthquake">\[29\]</span>
+<span id="3-3-1-1 (4)" label="3-3-1-1 (4)">\[3-3-1-1 (4)\]</span>
 
 *It was **an earthquake**.*
 
@@ -2200,35 +2206,35 @@ internal temporal structure of events which have not actually occurred,
 or are not actually occurring.
 
 Negative polarity events are often signalled by negative morphemes, as
-in [\[30\]](#negpol). The negative polarity of an event may also be
+in [\[3-3-1-2 (1)\]](#3-3-1-2 (1)). The negative polarity of an event may also be
 signalled by complement-taking predicates which indicate that their
-complement did not occur, as in [\[30e\]](#told), or counterfactual
-constructions, as in [\[30f\]](#counterfact). All negative
+complement did not occur, as in [\[3-3-1-2 (1e)\]](#3-3-1-2 (1e)), or counterfactual
+constructions, as in [\[3-3-1-2 (1f)\]](#3-3-1-2 (1f)). All negative
 polarity events are annotated as <span>NA</span>.
 
-<span id="negpol" label="negpol">\[30\]</span>
+<span id="3-3-1-2 (1)" label="3-3-1-2 (1)">\[3-3-1-2 (1)\]</span>
 
-<span id="eat" label="eat">\[a\]</span> *She <u>didn’t</u> **eat**
+<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">\[3-3-1-2 (1a)\]</span> *She <u>didn’t</u> **eat**
 pizza for dinner last night.*  
 <span>eat: NA</span>
 
-<span id="attend" label="attend">\[b\]</span> *He <u>never</u>
+<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">\[3-3-1-2 (1b)\]</span> *He <u>never</u>
 **arrived** at the party.*  
 <span>arrive: NA</span>
 
-<span id="doctor" label="doctor">\[c\]</span> *He **is** <u>not</u>
+<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">\[3-3-1-2 (1c)\]</span> *He **is** <u>not</u>
 **a doctor**.*  
 <span>be-doctor: NA</span>
 
-<span id="bw" label="bw">\[d\]</span> *That cat **<u>wasn’t</u> black
+<span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">\[3-3-1-2 (1d)\]</span> *That cat **<u>wasn’t</u> black
 and white.***  
 <span>be-black-and-white: NA</span>
 
-<span id="told" label="told">\[e\]</span> *I <u>wish</u> she had
+<span id="3-3-1-2 (1e)" label="3-3-1-2 (1e)">\[3-3-1-2 (1e)\]</span> *I <u>wish</u> she had
 **told** me about it.*  
 <span>tell: NA</span>
 
-<span id="counterfact" label="counterfact">\[f\]</span> *If it
+<span id="3-3-1-2 (1f)" label="3-3-1-2 (1f)">\[3-3-1-2 (1f)\]</span> *If it
 had **rained**, I would have **stayed** home.*  
 <span>rain: NA</span>  
 <span>stay: NA</span>
@@ -2247,19 +2253,19 @@ modal strength dependency, only the epistemic strength value of the
 single link between the event and <span>AUTHOR</span> needs to be taken
 into account. If this link has a value other than <span>Aff</span>, then
 the event should receive the <span>NA</span> aspect annotation; see
-[\[31\]](#nonfull).
+[\[3-3-1-2 (2)\]](#3-3-1-2 (2)).
 
-<span id="nonfull" label="nonfull">\[31\]</span>
+<span id="3-3-1-2 (2)" label="3-3-1-2 (2)">\[3-3-1-2 (2)\]</span>
 
-<span id="hike" label="hike">\[a\]</span> *He <u>might</u> have
+<span id="3-3-1-2 (2a)" label="3-3-1-2 (2a)">\[3-3-1-2 (2a)\]</span> *He <u>might</u> have
 **hiked** this trail yesterday.*  
 <span>hike: NA</span>
 
-<span id="leave" label="leave">\[b\]</span> *It’s <u>likely</u> that
+<span id="3-3-1-2 (2b)" label="3-3-1-2 (2b)">\[3-3-1-2 (2b)\]</span> *It’s <u>likely</u> that
 she already **left**.*  
 <span>leave: NA</span>
 
-<span id="prepare" label="prepare">\[c\]</span> *She left early,
+<span id="3-3-1-2 (2c)" label="3-3-1-2 (2c)">\[3-3-1-2 (2c)\]</span> *She left early,
 <u>in order to</u> **prepare** dinner.*  
 <span>prepare: NA</span>
 
@@ -2269,21 +2275,21 @@ up to the <span>AUTHOR</span>, in order for an event to be considered
 ‘real’. If any link between the event and the document’s
 <span>AUTHOR</span> node has a value other than <span>Aff</span>, the
 event should be annotated as <span>NA</span>. Example
-[\[32\]](#multlinks) shows events that are annotated as
+[\[3-3-1-2 (3)\]](#3-3-1-2 (3)) shows events that are annotated as
 <span>NA</span> because one the links between the event node and the
 <span>AUTHOR</span> node has non-full epistemic strength.
 
-<span id="multlinks" label="multlinks">\[32\]</span>
+<span id="3-3-1-2 (3)" label="3-3-1-2 (3)">\[3-3-1-2 (3)\]</span>
 
-<span id="fly" label="fly">\[a\]</span> *He <u>wants</u> **to fly** to
+<span id="3-3-1-2 (3a)" label="3-3-1-2 (3a)">\[3-3-1-2 (3a)\]</span> *He <u>wants</u> **to fly** to
 New York.*  
 <span>fly: NA</span>
 
-<span id="buy" label="buy">\[b\]</span> *She <u>hopes</u> **to buy** a
+<span id="3-3-1-2 (3b)" label="3-3-1-2 (3b)">\[3-3-1-2 (3b)\]</span> *She <u>hopes</u> **to buy** a
 house.*  
 <span>buy: NA</span>
 
-<span id="cond" label="cond">\[c\]</span> *If she **left** early, she
+<span id="3-3-1-2 (3c)" label="3-3-1-2 (3c)">\[3-3-1-2 (3c)\]</span> *If she **left** early, she
 would **be home** by now.*  
 <span>leave: NA</span>  
 <span>be-home: NA</span>
@@ -2295,20 +2301,20 @@ dependency; therefore, they are not yet given an aspect annotation
 value.
 
 When a conceiver’s thoughts or speech are presented with certainty by
-the author, as in [\[33\]](#allpos), there are <span>Aff</span>
+the author, as in [\[3-3-1-2 (4)\]](#3-3-1-2 (4)), there are <span>Aff</span>
 values on all of the links between the event and the
 <span>AUTHOR</span>.
 
-<span id="allpos" label="allpos">\[33\]</span>
+<span id="3-3-1-2 (4)" label="3-3-1-2 (4)">\[3-3-1-2 (4)\]</span>
 
-<span id="saypos" label="saypos">\[a\]</span> *Mary <u>said</u>
+<span id="3-3-1-2 (4a)" label="3-3-1-2 (4a)">\[3-3-1-2 (4a)\]</span> *Mary <u>said</u>
 that she **went** to Santa Fe.*
 
-<span id="reportpos" label="reportpos">\[b\]</span> *The New
+<span id="3-3-1-2 (4b)" label="3-3-1-2 (4b)">\[3-3-1-2 (4b)\]</span> *The New
 York Times <u>reported</u> that Congress **voted** on the bill this
 afternoon.*
 
-<span id="believe" label="believe">\[c\]</span> *She <u>thinks</u>
+<span id="3-3-1-2 (4c)" label="3-3-1-2 (4c)">\[3-3-1-2 (4c)\]</span> *She <u>thinks</u>
 that the cat **stole** the dog’s food.*
 
 Therefore, these types of events are not annotated for aspect at this
@@ -2319,15 +2325,15 @@ point, and move on to the next step.
 Events that are predicted to occur in the future are also difficult to
 annotate for aspect, since the event has not yet occurred. Therefore,
 future events are also annotated with the <span>NA</span> value, as in
-[\[34\]](#fut).
+[\[3-3-1-3 (1)\]](#3-3-1-3 (1)).
 
-<span id="fut" label="fut">\[34\]</span>
+<span id="3-3-1-3 (1)" label="3-3-1-3 (1)">\[3-3-1-3 (1)\]</span>
 
-<span id="come" label="come">\[a\]</span> *He’<u>ll</u> **come**
+<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">\[3-3-1-3 (1a)\]</span> *He’<u>ll</u> **come**
 around tomorrow.*  
 <span>come: NA</span>
 
-<span id="write" label="write">\[b\]</span> *She <u>is going to</u>
+<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">\[3-3-1-3 (1b)\]</span> *She <u>is going to</u>
 **write** the paper tomorrow.*  
 <span>write: NA</span>
 
@@ -2344,28 +2350,28 @@ between states and processes is necessary for event identification (as
 states are only identified as events when predicated). According to ,
 states are those events which are stative—that is, no change takes place
 over the course of the event. There are various ways to express states
-in predication, shown in [\[35\]](#statepred); note that entities
-and locations in predication (as in [\[35d\]](#nompred) and
-[\[35c\]](#locpred), are also annotated as <span>STATE</span>).
+in predication, shown in [\[3-3-1-4 (1)\]](#3-3-1-4 (1)); note that entities
+and locations in predication (as in [\[3-3-1-4 (1d)\]](#3-3-1-4 (1d)) and
+[\[3-3-1-4 (1c)\]](#3-3-1-4 (1c)), are also annotated as <span>STATE</span>).
 
-<span id="statepred" label="statepred">\[35\]</span>
+<span id="3-3-1-4 (1)" label="3-3-1-4 (1)">\[3-3-1-4 (1)\]</span>
 
-<span id="verb" label="verb">\[a\]</span> *My cat **loves** tuna.*  
+<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">\[3-3-1-4 (1a)\]</span> *My cat **loves** tuna.*  
 <span>love: STATE</span>
 
-<span id="adjpred" label="adjpred">\[b\]</span> *The doctor **is
+<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">\[3-3-1-4 (1b)\]</span> *The doctor **is
 tall**.*  
 <span>be-tall: STATE</span>
 
-<span id="locpred" label="locpred">\[c\]</span> *The book **is on
+<span id="3-3-1-4 (1c)" label="3-3-1-4 (1c)">\[3-3-1-4 (1c)\]</span> *The book **is on
 the table**.*  
 <span>be-on-the-table: STATE</span>
 
-<span id="nompred" label="nompred">\[d\]</span> *She **is an
+<span id="3-3-1-4 (1d)" label="3-3-1-4 (1d)">\[3-3-1-4 (1d)\]</span> *She **is an
 architect**.*  
 <span>be-architect: STATE</span>
 
-<span id="locpred" label="locpred">\[e\]</span> *Your glass **is
+<span id="3-3-1-4 (1e)" label="3-3-1-4 (1e)">\[3-3-1-4 (1e)\]</span> *Your glass **is
 in the kitchen**.*  
 <span>be-in-the-kitchen: STATE</span>
 
@@ -2374,77 +2380,77 @@ States can be expressed as verbs (e.g. *love*), adjectival predicates
 predicates (*be an architect*).
 
 There are different types of states, shown in
-[\[36\]](#statetypes), however the UMR annotation does not
+[\[3-3-1-4 (2)\]](#3-3-1-4 (2)), however the UMR annotation does not
 distinguish these: they are all annotated as <span>STATE</span>.
 
-<span id="statetypes" label="statetypes">\[36\]</span>
+<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span>
 
-<span id="temp" label="temp">\[a\]</span> *My cat **is hungry**.*  
+<span id="3-3-1-4 (2a)" label="3-3-1-4 (2a)">\[3-3-1-4 (2a)\]</span> *My cat **is hungry**.*  
 <span>be-hungry: STATE</span>
 
-<span id="inherent" label="inherent">\[b\]</span> *My cat **is
+<span id="3-3-1-4 (2b)" label="3-3-1-4 (2b)">\[3-3-1-4 (2b)\]</span> *My cat **is
 black and white**.*  
 <span>be-black-and-white: STATE</span>
 
-<span id="end" label="end">\[c\]</span> *He **was sick** this weekend,
+<span id="3-3-1-4 (2c)" label="3-3-1-4 (2c)">\[3-3-1-4 (2c)\]</span> *He **was sick** this weekend,
 but recovered by Monday.*  
 <span>be-sick: STATE</span>
 
-<span id="ongoingstate" label="ongoingstate">\[d\]</span>
+<span id="3-3-1-4 (2d)" label="3-3-1-4 (2d)">\[3-3-1-4 (2d)\]</span>
 *She **is nervous** today.*  
 <span>be-nervous: STATE</span>
 
-<span id="ambig" label="ambig">\[e\]</span> *She **was sick**
+<span id="3-3-1-4 (2e)" label="3-3-1-4 (2e)">\[3-3-1-4 (2e)\]</span> *She **was sick**
 yesterday.*  
 <span>be-sick: STATE</span>
 
-Both temporary states ([\[36a\]](#temp)) and stable (inherent or
-permanent) states ([\[36b\]](#inherent)) are annotated as
+Both temporary states ([\[3-3-1-4 (2a)\]](#3-3-1-4 (2a))) and stable (inherent or
+permanent) states ([\[3-3-1-4 (2b)\]](#3-3-1-4 (2b))) are annotated as
 <span>STATE</span>. Likewise, states that have come to an end
-([\[36c\]](#end)), states that are ongoing
-([\[36d\]](#ongoingstate)), and states where it is unclear
-whether or not they are ongoing ([\[36e\]](#ambig)), are all annotated
+([\[3-3-1-4 (2c)\]](#3-3-1-4 (2c))), states that are ongoing
+([\[3-3-1-4 (2d)\]](#3-3-1-4 (2d))), and states where it is unclear
+whether or not they are ongoing ([\[3-3-1-4 (2e)\]](#3-3-1-4 (2e))), are all annotated
 <span>STATE</span>.
 
-Modal verbs, as in [\[37\]](#mod), are also annotated as
+Modal verbs, as in [\[3-3-1-4 (3)\]](#3-3-1-4 (3)), are also annotated as
 <span>STATE</span>.
 
-<span id="mod" label="mod">\[37\]</span>
+<span id="3-3-1-4 (3)" label="3-3-1-4 (3)">\[3-3-1-4 (3)\]</span>
 
-<span id="want" label="want">\[a\]</span> *He **wants** to travel to
+<span id="3-3-1-4 (3a)" label="3-3-1-4 (3a)">\[3-3-1-4 (3a)\]</span> *He **wants** to travel to
 Albuquerque.*  
 <span>want: STATE</span>
 
-<span id="need" label="need">\[b\]</span> *The cat **needs** to be
+<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">\[3-3-1-4 (3b)\]</span> *The cat **needs** to be
 fed.*  
 <span>need: STATE</span>
 
-<span id="dread" label="dread">\[c\]</span> *He**’s dreading** their
+<span id="3-3-1-4 (3c)" label="3-3-1-4 (3c)">\[3-3-1-4 (3c)\]</span> *He**’s dreading** their
 decision.*  
 <span>dread: STATE</span>
 
-Ability modals, as in [\[38\]](#ability), are also annotated with
+Ability modals, as in [\[3-3-1-4 (4)\]](#3-3-1-4 (4)), are also annotated with
 <span>STATE</span>.
 
-<span id="ability" label="ability">\[38\]</span>
+<span id="3-3-1-4 (4)" label="3-3-1-4 (4)">\[3-3-1-4 (4)\]</span>
 
-<span id="able" label="able">\[a\]</span> *She <u>is able to</u>
+<span id="3-3-1-4 (4a)" label="3-3-1-4 (4a)">\[3-3-1-4 (4a)\]</span> *She <u>is able to</u>
 **sing** that aria.*  
 <span>sing: STATE</span>
 
-<span id="can" label="can">\[b\]</span> *This car <u>can</u> **go** up
+<span id="3-3-1-4 (4b)" label="3-3-1-4 (4b)">\[3-3-1-4 (4b)\]</span> *This car <u>can</u> **go** up
 to 150 mph.*  
 <span>go: STATE</span>
 
 In this analysis, ability modals refer to a static state of affairs,
 i.e. an entity possesses the relevant ability. For examples like
-[\[38a\]](#able), ability modals may look more like event
+[\[3-3-1-4 (4a)\]](#3-3-1-4 (4a)), ability modals may look more like event
 quantification. That is, there are probably multiple singing events that
-this example is generalizing over. Examples like [\[38b\]](#can),
+this example is generalizing over. Examples like [\[3-3-1-4 (4b)\]](#3-3-1-4 (4b)),
 however, show how ability modals are more like states. It is possible
 that the car has never actually gone as fast as 150 mph; the car just
 has the parts and (theoretical) ability to do so. Therefore, all types
-of ability modals, both [\[38a\]](#able) and [\[38b\]](#can), are
+of ability modals, both [\[3-3-1-4 (4a)\]](#3-3-1-4 (4a)) and [\[3-3-1-4 (4b)\]](#3-3-1-4 (4b)), are
 analyzed as states and annotated as such.
 
 There is a type of event, called “inactive actions” by , which is
@@ -2473,22 +2479,22 @@ different types of processes.
 The next step in the decision tree concerns the application of the
 <span>HABITUAL</span> aspect value. This value should be applied to all
 events that are presented as occurring usually or habitually, as in
-[\[39\]](#hab).
+[\[3-3-1-5 (1)\]](#3-3-1-5 (1)).
 
-<span id="hab" label="hab">\[39\]</span>
+<span id="3-3-1-5 (1)" label="3-3-1-5 (1)">\[3-3-1-5 (1)\]</span>
 
-<span id="bake" label="bake">\[a\]</span> *He **bakes** pies.*  
+<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">\[3-3-1-5 (1a)\]</span> *He **bakes** pies.*  
 <span>bake: HABITUAL</span>
 
-<span id="ride" label="ride">\[b\]</span> *She **rides** her bike to
+<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">\[3-3-1-5 (1b)\]</span> *She **rides** her bike to
 work.*  
 <span>ride: HABITUAL</span>
 
-<span id="vacation" label="vacation">\[c\]</span> *They
+<span id="3-3-1-5 (1c)" label="3-3-1-5 (1c)">\[3-3-1-5 (1c)\]</span> *They
 **vacation** in Taos every winter.*  
 <span>vacation: HABITUAL</span>
 
-<span id="vacationpst" label="vacationpst">\[d\]</span> *They
+<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">\[3-3-1-5 (1d)\]</span> *They
 **used to vacation** in Taos every winter.*  
 <span>vacation: HABITUAL</span>
 
@@ -2500,44 +2506,44 @@ continue on to the next step.
 ##### Part 3-3-1-6. Evidence that event ended?
 
 The <span>ACTIVITY</span> label applies when there is no evidence that
-the event has come to an end, as in [\[40\]](#activity).
+the event has come to an end, as in [\[3-3-1-6 (1)\]](#3-3-1-6 (1)).
 
-<span id="activity" label="activity">\[40\]</span>
+<span id="3-3-1-6 (1)" label="3-3-1-6 (1)">\[3-3-1-6 (1)\]</span>
 
-<span id="ongoing" label="ongoing">\[a\]</span> *He is still
+<span id="3-3-1-6 (1a)" label="3-3-1-6 (1a)">\[3-3-1-6 (1a)\]</span> *He is still
 **writing** his paper.*  
 <span>write: ACTIVITY</span>
 
-<span id="ambiguous" label="ambiguous">\[b\]</span> *He was
+<span id="3-3-1-6 (1b)" label="3-3-1-6 (1b)">\[3-3-1-6 (1b)\]</span> *He was
 **writing** his paper yesterday.*  
 <span>write: ACTIVITY</span>
 
 This covers cases where it is clear that the process is still ongoing at
-document creation time, as in [\[40a\]](#ongoing), but also cases
+document creation time, as in [\[3-3-1-6 (1a)\]](#3-3-1-6 (1a)), but also cases
 where it is ambiguous whether or not the process continues, as in
-[\[40b\]](#ambiguous).
+[\[3-3-1-6 (1b)\]](#3-3-1-6 (1b)).
 
 This step is largely dependent on context and real world knowledge,
 however there are some grammatical cues that can help at this point in
 the decision tree. Events in the present tense, as in
-[\[41\]](#playact), will always be annotated as
+[\[3-3-1-6 (2)\]](#3-3-1-6 (2)), will always be annotated as
 <span>ACTIVITY</span>.
 
-<span id="playact" label="playact">\[41\]</span> *He **is playing**
+<span id="3-3-1-6 (2)" label="3-3-1-6 (2)">\[3-3-1-6 (2)\]</span> *He **is playing**
 the violin.*  
 <span>play: ACTIVITY</span>
 
 Inceptive and continuative aspectual auxiliaries, as in
-[\[42\]](#incon), also do not imply that an event has (necessarily)
+[\[3-3-1-6 (3)\]](#3-3-1-6 (3)), also do not imply that an event has (necessarily)
 ended.
 
-<span id="incon" label="incon">\[42\]</span>
+<span id="3-3-1-6 (3)" label="3-3-1-6 (3)">\[3-3-1-6 (3)\]</span>
 
-<span id="playstart" label="playstart">\[a\]</span> *He
+<span id="3-3-1-6 (3a)" label="3-3-1-6 (3a)">\[3-3-1-6 (3a)\]</span> *He
 <u>started</u> **playing** the violin.*  
 <span>play: ACTIVITY</span>
 
-<span id="playkeep" label="playkeep">\[b\]</span> *He <u>kept
+<span id="3-3-1-6 (3b)" label="3-3-1-6 (3b)">\[3-3-1-6 (3b)\]</span> *He <u>kept
 on</u> **playing** the violin.*  
 <span>play: ACTIVITY</span>
 
@@ -2561,15 +2567,15 @@ ends, but does not reach a distinct result state.
 The strongest piece of evidence for this decision are aspectual
 constructions that distinguish between completive and terminative
 events. In English, these are expressed by aspectual auxiliary verbs,
-shown in [\[43\]](#aspectaux).
+shown in [\[3-3-1-7 (1)\]](#3-3-1-7 (1)).
 
-<span id="aspectaux" label="aspectaux">\[43\]</span>
+<span id="3-3-1-7 (1)" label="3-3-1-7 (1)">\[3-3-1-7 (1)\]</span>
 
-<span id="completiveaux" label="completiveaux">\[a\]</span>
+<span id="3-3-1-7 (1a)" label="3-3-1-7 (1a)">\[3-3-1-7 (1a)\]</span>
 *Mary <u>finished</u> **mowing** the lawn.*  
 <span>mow: PERFORMANCE</span>
 
-<span id="terminativeaux" label="terminativeaux">\[b\]</span>
+<span id="3-3-1-7 (1b)" label="3-3-1-7 (1b)">\[3-3-1-7 (1b)\]</span>
 *Mary <u>stopped</u> **mowing** the lawn.*  
 <span>mow: ENDEAVOR</span>
 
@@ -2591,26 +2597,26 @@ moves on to the next step.
 The second strongest piece of evidence for the
 <span>ENDEAVOR/PERFORMANCE</span> distinction is the presence of a
 temporal adverbial. Clauses with container adverbials, as in
-[\[44a\]](#container), are annotated with the
+[\[3-3-1-8 (1a)\]](#3-3-1-8 (1a)), are annotated with the
 <span>PERFORMANCE</span> value; clauses with durative adverbials, as in
-[\[44b\]](#durative), are annotated with the <span>ENDEAVOR</span>
+[\[3-3-1-8 (1b)\]](#3-3-1-8 (1b)), are annotated with the <span>ENDEAVOR</span>
 value.
 
-<span id="adverbial" label="adverbial">\[44\]</span>
+<span id="3-3-1-8 (1)" label="3-3-1-8 (1)">\[3-3-1-8 (1)\]</span>
 
-<span id="container" label="container">\[a\]</span>
+<span id="3-3-1-8 (1a)" label="3-3-1-8 (1a)">\[3-3-1-8 (1a)\]</span>
 
 *Mary **mowed** the lawn <u>in thirty minutes</u>.*  
 <span>mow: PERFORMANCE</span>
 
-<span id="durative" label="durative">\[b\]</span>
+<span id="3-3-1-8 (1b)" label="3-3-1-8 (1b)">\[3-3-1-8 (1b)\]</span>
 
 *Mary **mowed** the lawn <u>for thirty minutes</u>.*  
 <span>mow: ENDEAVOR</span>
 
-Example [\[44a\]](#container) implies that Mary finished mowing
+Example [\[3-3-1-8 (1a)\]](#3-3-1-8 (1a)) implies that Mary finished mowing
 the lawn; therefore the event is annotated with the
-<span>PERFORMANCE</span> value. Example [\[44b\]](#durative)
+<span>PERFORMANCE</span> value. Example [\[3-3-1-8 (1b)\]](#3-3-1-8 (1b))
 doesn’t imply that Mary has finished mowing the lawn; therefore the
 event is annotated with the <span>ENDEAVOR</span> value.
 
@@ -2621,19 +2627,19 @@ event moves on to the final step.
 
 Certain types of path expressions indicate that an event did not reach a
 specific result state; these are called non-result paths. Examples of
-non-result paths are show below in [\[45\]](#nonresult).
+non-result paths are show below in [\[3-3-1-9 (1)\]](#3-3-1-9 (1)).
 
-<span id="nonresult" label="nonresult">\[45\]</span>
+<span id="3-3-1-9 (1)" label="3-3-1-9 (1)">\[3-3-1-9 (1)\]</span>
 
-<span id="wander" label="wander">\[a\]</span> *They **wandered**
+<span id="3-3-1-9 (1a)" label="3-3-1-9 (1a)">\[3-3-1-9 (1a)\]</span> *They **wandered**
 <u>around the city</u>.*  
 <span>wander: ENDEAVOR</span>
 
-<span id="walk" label="walk">\[b\]</span> *He **walked** <u>along the
+<span id="3-3-1-9 (1b)" label="3-3-1-9 (1b)">\[3-3-1-9 (1b)\]</span> *He **walked** <u>along the
 river</u>.*  
 <span>walk: ENDEAVOR</span>
 
-<span id="drive" label="drive">\[c\]</span> *They **drove** <u>past
+<span id="3-3-1-9 (1c)" label="3-3-1-9 (1c)">\[3-3-1-9 (1c)\]</span> *They **drove** <u>past
 the junction</u>.*  
 <span>drive: ENDEAVOR</span>
 
@@ -2642,31 +2648,33 @@ Events with non-result paths are annotated as <span>ENDEAVOR</span>.
 At this point, every event that is left without an aspect annotation is
 annotated as <span>PERFORMANCE</span>. These will include processes that
 have ended and reached a result state, as shown below in
-[\[46\]](#result).
+[\[3-3-1-9 (2)\]](#3-3-1-9 (2)).
 
-<span id="result" label="result">\[46\]</span>
+<span id="3-3-1-9 (2)" label="3-3-1-9 (2)">\[3-3-1-9 (2)\]</span>
 
-<span id="atecookies" label="atecookies">\[a\]</span> *The dog
+<span id="3-3-1-9 (2a)" label="3-3-1-9 (2a)">\[3-3-1-9 (2a)\]</span> *The dog
 **ate** all the cookies.*  
 <span>eat: PERFORMANCE</span>
 
-<span id="walkto" label="walkto">\[b\]</span> *She **walked** to
+<span id="3-3-1-9 (2b)" label="3-3-1-9 (2b)">\[3-3-1-9 (2b)\]</span> *She **walked** to
 the grocery store.*  
 <span>walk: PERFORMANCE</span>
 
-<span id="jump" label="jump">\[c\]</span> *The horse **jumped**.*  
+<span id="3-3-1-9 (2c)" label="3-3-1-9 (2c)">\[3-3-1-9 (2c)\]</span> *The horse **jumped**.*  
 <span>jump: PERFORMANCE</span>
 
-<span id="play" label="play">\[d\]</span> *We **played** video games
+<span id="3-3-1-9 (2d)" label="3-3-1-9 (2d)">\[3-3-1-9 (2d)\]</span> *We **played** video games
 yesterday.*  
 <span>play: PERFORMANCE</span>
   
 #### Part 3-3-2. Mode
 
 UMR adopts the mode attribute for AMR. The four values for the **mode** attribute include
-*expressive*, *imperative*.
+*expressive*, *imperative*, as in [\[3-3-2 (1)\]](#3-3-2 (1)).
 
-<span id="ex-3-3-2-1" label="ex-3-3-2-1">Example 3-3-2-1</span>
+<span id="3-3-2 (1)" label="3-3-2 (1)">3-3-2 (1)</span>
+
+<span id="3-3-2 (1a)" label="3-3-2 (1a)">3-3-2 (1a)</span>
 ```
 Yup , a couple of hundred dollars is going to save the day !
 (s / save-02 
@@ -2677,7 +2685,7 @@ Yup , a couple of hundred dollars is going to save the day !
       :ARG1 (d / day))
 ```
 
-<span id="ex-3-3-2-2" label="ex-3-3-2-2">Example 3-3-2-2</span>
+<span id="3-3-2 (1b)" label="3-3-2 (1b)">3-3-2 (1b)</span>
 
 ```
 Chalk another good one up to the wife .
@@ -2694,7 +2702,7 @@ Chalk another good one up to the wife .
 #### Part 3-3-3. Polarity
 
 
-<span id="ex-3-3-3-1" label="ex-3-3-3-1">Example 3-3-3-1</span>
+<span id="3-3-3 (1)" label="3-3-3 (1)">3-3-3 (1)</span>
 ```
 Most of the time , economic policy and economic theory are not aimed at\
  individuals .
@@ -2713,7 +2721,7 @@ Most of the time , economic policy and economic theory are not aimed at\
 
 #### Part 3-3-4. Quant
 
-<span id="ex-3-3-4-1" label="ex-3-3-4-1">Example 3-3-4-1</span>
+<span id="3-3-4 (1)" label="3-3-4 (1)">3-3-4 (1)</span>
 
 ```
 As of now , five million tickets have been sold on the StubHub website .
@@ -2727,9 +2735,9 @@ As of now , five million tickets have been sold on the StubHub website .
 ```
 
 #### Part 3-3-5. Ref
-The *Ref* attribute is used to represent pronominal features that include person and number. UMR decomposes a pronoun into a concept (e.g., person, thing) with an attribute to facilitate cross-lingual compatability.
+The *Ref* attribute is used to represent pronominal features that include person and number. UMR decomposes a pronoun into a concept (e.g., person, thing) with an attribute to facilitate cross-lingual compatability, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
 
-<span id="ex-3-3-5-1" label="ex-3-3-5-1">Example 3-3-5-1</span>
+<span id="3-3-5 (1)" label="3-3-5 (1)">3-3-5 (1)</span>
 ```
 He denied any wrongdoing.
 (d / deny-01
@@ -2756,7 +2764,9 @@ He denied any wrongdoing.
 
 Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
 
-For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In the example below, *he* refers to the same person as the person whose name is "Edmond Pope":
+For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1 (1)\]](#4-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope":
+
+<span id="4-1 (1)" label="4-1 (1)">4-1 (1)</span>
 
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
@@ -2790,6 +2800,7 @@ Snt3: He denied any wrongdoing.
 
 Subset relation:
 
+<span id="4-1 (2)" label="4-1 (2)">4-1 (2)</span>
 ```
 # ::snt He is very possesive and controlling but he has no right to be as we are not together.
 (c / contrast-01
@@ -2812,13 +2823,16 @@ Subset relation:
   :coref ((s4h2 :subset-of s4w)))
 ```
 
-#### Event coreference
+#### Part 4-1-2 Event coreference
  
 	
  - Event identity
 
- We use *same-event* to represent cases where two event mentions refer to  the same event.
+ We use *same-event* to represent cases where two event mentions refer to  the same event, as in [\[4-1-2 (1)\]](#4-1-2 (1)).
  
+ <span id="4-1-2 (1)" label="4-1-2 (1)">4-1-2 (1)</span>
+ 
+  <span id="4-1-2 (1a)" label="4-1-2 (1a)">4-1-2 (1a)</span>
 ::id PROXY_APW_ENG_20080415_1054.19 ::date 2013-07-19T04:50:53 ::snt-type body ::annotator SDL-AMR-09 ::preferred
 ::snt El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
  ::save-date Wed Jan 20, 2016 ::file PROXY_APW_ENG_20080415_1054_19.txt
@@ -2839,6 +2853,7 @@ Subset relation:
                               :unit (d / dollar))))))
 ```
 
+ <span id="4-1-2 (1b)" label="4-1-2 (1b)">4-1-2 (1b)</span>
  ::id PROXY_APW_ENG_20080415_1054.20 ::date 2013-07-19T04:57:55 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial bases.
  ::save-date Thu May 28, 2015 ::file PROXY_APW_ENG_20080415_1054_20.txt
@@ -2856,10 +2871,11 @@ Subset relation:
   :coref ((s2c :same-event s1c)))
 ```
 
-Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide**.
- 
-	
+Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide** in [\[4-1-2 (2)\]](#4-1-2 (2)).
 
+ <span id="4-1-2 (2)" label="4-1-2 (2)">4-1-2 (2)</span>
+
+<span id="4-1-2 (2a)" label="4-1-2 (2a)">4-1-2 (2a)</span>
  ::id nw.chtb_0021.2 ::date 2012-11-01T15:15:42 ::annotator SDL-AMR-09 ::preferred
  ::snt The Three Gorges project on the Yangtze River has recently **introduced*** the first foreign capital .
  ::save-date Fri Oct 24, 2014 ::file nw_chtb_0021_2.txt
@@ -2872,6 +2888,8 @@ Event identity also includes cases where the same underlying event is referred t
             :ord (o / ordinal-entity :value 1))
       :time (r2 / recent))
 ```
+
+<span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
  ::id nw.chtb_0021.3 ::date 2012-11-01T15:29:23 ::annotator SDL-AMR-09 ::preferred
  ::snt The loan , a sum of 12.5 million US dollars , is an export credit **provided** to the Three Gorges project by the Canadian government , which will be used mainly for the management system of the Three Gorges project .
  ::save-date Thu Dec 19, 2013 ::file nw_chtb_0021_3.txt
@@ -2903,9 +2921,11 @@ Event identity also includes cases where the same underlying event is referred t
 
 - subset
 
-*subset* is also used to annotate the subset relations between two event mentions, with one referring to a subset of another.
+*subset* is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-2 (3)\]](#4-1-2 (3)).
 
+<span id="4-1-2 (3)" label="4-1-2 (3)">4-1-2 (3)</span>
 
+<span id="4-1-2 (3a)" label="4-1-2 (3a)">4-1-2 (3a)</span>
 ::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt 1 arrest took place in the Netherlands and another in Germany.
  ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
@@ -2921,7 +2941,8 @@ Event identity also includes cases where the same underlying event is referred t
             :location (c2 / country :wiki "Germany"
                   :name (n2 / name :op1 "Germany"))
             :mod (a4 / another)))
-```	    
+```	   
+<span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
  ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt The arrests were ordered by anti-terrorism judge fragnoli.
  ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
@@ -2952,12 +2973,11 @@ For now UMR does not annotate cases where one event is a subevent of another eve
 
 ### Part 4-2. Temporal Dependency
 
-The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In the sentence below, the time expression 
-*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In the example below, the temporal relation between *sign* and the DCT is annotated as `:time (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
+The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the time expression 
+*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the temporal relation between *sign* and the DCT is annotated as `:time (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
 
 
-
-
+<span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
 ```
 ::id PROXY_AFP_ENG_20020105_0162.15 ::date 2013-05-08T13:37:04 ::snt-type body ::annotator LDC-AMR-14 ::preferred
 ::snt In April 1998 Arab countries signed an anti-terrorism agreement that binds the signatories to coordinate to fight terrorism.
@@ -3197,9 +3217,9 @@ least one temporal annotation.
     event, then link it to a tense metanode.
 
 In order to demonstrate how these rules work, let’s look at the
-annotation of ([\[leriassaid\]](#leriassaid)) below.
+annotation of ([\[4-2 (2)\]](#4-2 (2))) below.
 
-<span id="leriassaid" label="leriassaid">\[leriassaid\]</span> *Lerias
+<span id="4-2 (2)" label="4-2 (2)">\[4-2 (2)\]</span> *Lerias
 **said** that many Guinsaugon residents had been **evacuated** after
 **landslides** had **killed** more than 20 people on Leyte, but that
 many had **returned** because the **rains** had **stopped** and the sun
@@ -3394,9 +3414,9 @@ adding the <span>have-condition</span> node if applicable, and creating
 the dependency structure using those nodes and the events identified in
 the first pass. This is done in a single pass through the document.
 
-#### Part 3-3-1. Identifying conceivers
+#### Part 4-3-1. Identifying conceivers
 
-##### Part 3-3-1-1. Author(s)
+##### Part 4-3-1-1. Author(s)
 
 Every text will have at least one <span>AUTH</span> node, used for the
 author(s) of the document. When there are multiple authors (for example,
@@ -3405,7 +3425,7 @@ will get their own node. It is necessary to add a node for each author
 because all of the content in a document is filtered through an author’s
 (or speaker’s) perspective.
 
-##### Part 3-3-1-2. Conceivers other than author(s)
+##### Part 4-3-1-2. Conceivers other than author(s)
 
 Aside from authors, there are nodes in the modal strength dependency for
 conceivers mentioned in the document; these correspond to sources in
@@ -3417,44 +3437,44 @@ Conceiver nodes are added when another entity’s mental attitude or point
 of view towards an event is expressed in the text. Certain types of
 predicates inherently involve conceivers/sources: report, knowledge,
 belief, opinion, doubt, perception, and inference. The examples below
-in [\[47\]](#conceivers) show some of the types of predicates
+in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)) show some of the types of predicates
 that require the introduction of a conceiver node into the modal
 strength dependency structure.
 
-<span id="conceivers" label="conceivers">\[47\]</span>
+<span id="4-3-1-2 (1)" label="4-3-1-2 (1)">\[4-3-1-2 (1)\]</span>
 
-<span id="Marythinks" label="Marythinks">\[a\]</span> *Mary
+<span id="4-3-1-2 (1a)" label="4-3-1-2 (1a)">\[4-3-1-2 (1a)\]</span> *Mary
 <u>thinks</u> that John **mowed** the lawn.*  
 <span>AUTH</span>  
 <span>MARY</span>
 
-<span id="NYTreportedinquiry" label="NYTreportedinquiry">\[b\]</span>
+<span id="4-3-1-2 (1b)" label="4-3-1-2 (1b)">\[4-3-1-2 (1b)\]</span>
 *The New York Times <u>**reported**</u> that the impeachment **inquiry**
 has begun.*  
 <span>AUTH</span>  
 <span>NEW\_YORK\_TIMES</span>
 
-<span id="perception" label="perception">\[c\]</span> *John
+<span id="4-3-1-2 (1c)" label="4-3-1-2 (1c)">\[4-3-1-2 (1c)\]</span> *John
 <u>**saw**</u> the cat **eat** breakfast.*  
 <span>AUTH</span>  
 <span>JOHN</span>
 
-<span id="deonticevent" label="deonticevent">\[d\]</span>
+<span id="4-3-1-2 (1d)" label="4-3-1-2 (1d)">\[4-3-1-2 (1d)\]</span>
 *Mary <u>**hopes**</u> to **leave** early.*  
 <span>AUTH</span>  
 <span>MARY</span>
 
-<span id="deonticnominal" label="deonticnominal">\[e\]</span>
+<span id="4-3-1-2 (1e)" label="4-3-1-2 (1e)">\[4-3-1-2 (1e)\]</span>
 *John really <u>**wanted**</u> a boat.*  
 <span>AUTH</span>  
 <span>JOHN</span>
 
-<span id="deonticoblig" label="deonticoblig">\[f\]</span>
+<span id="4-3-1-2 (1f)" label="4-3-1-2 (1f)">\[4-3-1-2 (1f)\]</span>
 *The university <u>**requires**</u> Mary to **register** by Monday.*  
 <span>AUTH</span>  
 <span>UNIVERSITY</span>
 
-<span id="purpclausecon" label="purpclausecon">\[g\]</span>
+<span id="4-3-1-2 (1g)" label="4-3-1-2 (1g)">\[4-3-1-2 (1g)\]</span>
 *Mary is **going** to California <u>in order to</u> **see** the
 beach.*  
 <span>AUTH</span>  
@@ -3462,37 +3482,37 @@ beach.*
 
 As mentioned above, every example (or document) requires the
 introduction of an <span>AUTH</span> node. Predicates of belief, as in
-[\[47a\]](#Marythinks), also require the addition of a conceiver
+[\[4-3-1-2 (1a)\]](#4-3-1-2 (1a)), also require the addition of a conceiver
 node for the believer, here <span>MARY</span>. This is necessary in
 order to capture the fact that the modal strength of the
 <span>mow</span> event is provided by Mary and the author may or may not
 agree with Mary’s perspective. Similarly, predicates of reporting, as in
-[\[47b\]](#NYTreportedinquiry), and perception, as in
-[\[47c\]](#perception), require the introduction of conceiver
+[\[4-3-1-2 (1b)\]](#4-3-1-2 (1b)), and perception, as in
+[\[4-3-1-2 (1c)\]](#4-3-1-2 (1c)), require the introduction of conceiver
 nodes for the reporter (<span>NEW\_YORK\_TIMES</span>) and the perceiver
 (<span>JOHN</span>).
 
 Certain deontic events, such as those in
-[\[47d\]](#deonticevent) and
-[\[47e\]](#deonticnominal) also require the addition of a
+[\[4-3-1-2 (1d)\]](#4-3-1-2 (1d)) and
+[\[4-3-1-2 (1e)\]](#4-3-1-2 (1e)) also require the addition of a
 conceiver node to the dependency structure. Hopes, wishes, desires, and
 fears all model the mental content of a conceiver in the text – these
 are based on a conceiver’s beliefs or perspective about the world.
 Conceiver nodes should be added, even when the complement of the deontic
-predicate isn’t an event, as in [\[47e\]](#deonticnominal).
-Obligation deontics, as in [\[47f\]](#deonticoblig), require
+predicate isn’t an event, as in [\[4-3-1-2 (1e)\]](#4-3-1-2 (1e)).
+Obligation deontics, as in [\[4-3-1-2 (1f)\]](#4-3-1-2 (1f)), require
 the introduction of a conceiver node for the source of the obligation
 (here, <span>JOHN</span>), but not the endpoint of the obligation
 (<span>MARY</span>). This is because, in
-[\[47f\]](#deonticoblig), nothing is asserted about Mary’s
+[\[4-3-1-2 (1f)\]](#4-3-1-2 (1f)), nothing is asserted about Mary’s
 beliefs, desires, attitude or perspective.
 
-Purpose clauses, as in [\[47g\]](#purpclausecon), require the
+Purpose clauses, as in [\[4-3-1-2 (1g)\]](#4-3-1-2 (1g)), require the
 introduction of a conceiver node for the subject of the sentence; this
 is because the author is expressing the intentions of the subject of the
 sentence.
 
-As shown by [\[47b\]](#NYTreportedinquiry), conceivers
+As shown by [\[4-3-1-2 (1b)\]](#4-3-1-2 (1b)), conceivers
 can be inanimate entities when they metonymically refer to a volitional
 entity (or volitional entities); that is, the
 <span>NEW\_YORK\_TIMES</span> node stands for the people who contribute
@@ -3506,13 +3526,13 @@ presented by the author of the text. This means that there may be
 multiple conceiver nodes for a single individual’s beliefs. This occurs
 under two different circumstances: when the conceiver nodes are nested
 underneath different other conceiver nodes in the dependency structure
-as in [\[48a\]](#diffcon), and when they’re nested underneath the
+as in [\[4-3-1-2 (2a)\]](#4-3-1-2 (2a)), and when they’re nested underneath the
 same conceiver node, but with a different modal strength value as in
-[\[48b\]](#diffstrength).
+[\[4-3-1-2 (2b)\]](#4-3-1-2 (2b)).
 
-<span id="multconnodes" label="multconnodes">\[48\]</span>
+<span id="4-3-1-2 (2)" label="4-3-1-2 (2)">\[4-3-1-2 (2)\]</span>
 
-<span id="diffcon" label="diffcon">\[a\]</span> *John
+<span id="4-3-1-2 (2a)" label="4-3-1-2 (2a)">\[4-3-1-2 (2a)\]</span> *John
 <u>**said**</u> Mary <u>**wants**</u> to **visit** Italy, but I
 <u>think</u> she <u>**wants**</u> to **visit** France.*  
 <span>AUTH</span>  
@@ -3520,19 +3540,19 @@ same conceiver node, but with a different modal strength value as in
 <span>MARY\_1</span>  
 <span>MARY\_2</span>
 
-<span id="diffstrength" label="diffstrength">\[b\]</span>
+<span id="4-3-1-2 (2b)" label="4-3-1-2 (2b)">\[4-3-1-2 (2b)\]</span>
 *Mary <u>**wants**</u> to **visit** Italy and she <u>might **want**</u>
 to **visit** France as well.*  
 <span>AUTH</span>  
 <span>MARY\_1</span>  
 <span>MARY\_2</span>
 
-In [\[48a\]](#diffcon), we need two separate <span>MARY</span>
+In [\[4-3-1-2 (2a)\]](#4-3-1-2 (2a)), we need two separate <span>MARY</span>
 nodes: one which is dependent on the <span>JOHN</span> node to represent
 John’s beliefs about Mary’s beliefs (really, the author’s beliefs about
 John’s beliefs about Mary’s beliefs) and one which is nested directly
 underneath the <span>AUTH</span> node to represent the author’s beliefs
-about Mary’s beliefs. In [\[48b\]](#diffstrength), there are
+about Mary’s beliefs. In [\[4-3-1-2 (2b)\]](#4-3-1-2 (2b)), there are
 two separate <span>MARY</span> nodes that correspond to the author’s
 different levels of certainty about Mary’s sets of beliefs. One of the
 <span>MARY</span> nodes represents Mary’s set of beliefs that the author
@@ -3540,14 +3560,14 @@ is certain of (her desire to visit Italy) and the other
 <span>MARY</span> node represents Mary’s beliefs that the author is
 unsure of (her desire to visit France).
 
-##### Part 3-3-1-3. Shared beliefs
+##### Part 4-3-1-3. Shared beliefs
 
 Authors may also attribute beliefs to groups of individuals. In these
 cases, separate conceiver nodes should be created for each unique group
 of individuals; these groups may (or may not) include the author. This
-can be seen below in ([\[49\]](#sharedconceivers)).
+can be seen below in ([\[4-3-1-3 (1)\]](#4-3-1-3 (1))).
 
-<span id="sharedconceivers" label="sharedconceivers">\[49\]</span>
+<span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span>
 
 *Mary and I <u>think</u> that John **left** early. Mary was
 <u>**surprised**</u> that John **left** because they had
@@ -3567,16 +3587,16 @@ Mary and John’s shared belief about their pizza plans.
 ##### Part 4-3-1-4. Generic and unspecified conceivers
 
 Sometimes, conceivers need to be identified even when they aren’t
-explicitly mentioned in the text, as in [\[50\]](#genericcon).
+explicitly mentioned in the text, as in [\[4-3-1-4 (1)\]](#4-3-1-4 (1)).
 
-<span id="genericcon" label="genericcon">\[50\]</span>
+<span id="4-3-1-4 (1)" label="4-3-1-4 (1)">\[4-3-1-4 (1)\]</span>
 
-<span id="prohibit" label="prohibit">\[a\]</span> *My **request**
+<span id="4-3-1-4 (1a)" label="4-3-1-4 (1a)">\[4-3-1-4 (1a)\]</span> *My **request**
 was <u>**heard**</u>.*  
 <span>AUTH</span>  
 <span>NULL\_HEARER</span>
 
-<span id="report" label="report">\[b\]</span> *It has been
+<span id="4-3-1-4 (1b)" label="4-3-1-4 (1b)">\[4-3-1-4 (1b)\]</span> *It has been
 <u>**reported**</u> that multiple roads are **closed**.*  
 <span>AUTH</span>  
 <span>NULL\_REPORTER</span>
@@ -3587,15 +3607,15 @@ represents the conceivers, they should still be identified as nodes in
 the dependency structure.
 
 Unlike perception events and reporting events, obligation deontics, as
-in [\[51\]](#deonticnocon), don’t require the introduction of
+in [\[4-3-1-4 (2)\]](#4-3-1-4 (2)), don’t require the introduction of
 a null conceiver node.
 
-<span id="deonticnocon" label="deonticnocon">\[51\]</span>
+<span id="4-3-1-4 (2)" label="4-3-1-4 (2)">\[4-3-1-4 (2)\]</span>
 *Mary <u>has</u> to **register** by Monday.*  
 <span>AUTH</span>
 
 When the source of obligation is expressed (as shown above in
-[\[47f\]](#deonticoblig)), a conceiver node is introduced for
+[\[4-3-1-2 (1f)\]](#4-3-1-2 (1f))), a conceiver node is introduced for
 the source of the obligation. It is not always clear, however, that an
 external source is present when it is not overtly expressed. Therefore,
 null conceivers are not identified for obligation deontics.
@@ -3606,9 +3626,9 @@ The <span>have-condition</span> node is a special node that is required
 in the modal strength dependency structure for linguistic material that
 expresses hypothetical situations contingent on certain conditions. The
 canonical English conditional construction is shown below in
-[\[52\]](#canoncond).
+[\[4-3-2 (1)\]](#4-3-2 (1)).
 
-<span id="canoncond" label="canoncond">\[52\]</span>
+<span id="4-3-2 (1)" label="4-3-2 (1)">\[4-3-2 (1)\]</span>
 
 *If it **rains**, Mary will **stay** home.*  
 <span>have-condition</span>
@@ -3629,15 +3649,15 @@ Conditional constructions may take a variety of morphosyntactic forms,
 both across languages and within a language. Although the canonical
 English conditional construction takes the *if.., then...* form, there
 are are other ways to express conditional semantics, such as those in
-[\[53\]](#otherconds) below.
+[\[4-3-2 (2)\]](#4-3-2 (2)) below.
 
-<span id="otherconds" label="otherconds">\[53\]</span>
+<span id="4-3-2 (2)" label="4-3-2 (2)">\[4-3-2 (2)\]</span>
 
-<span id="longas" label="longas">\[a\]</span> *As long as it
+<span id="4-3-2 (2a)" label="4-3-2 (2a)">\[4-3-2 (2a)\]</span> *As long as it
 **rains**, Mary will **stay** home.*  
 <span>have-condition</span>
 
-<span id="casethat" label="casethat">\[b\]</span> *Mary will
+<span id="4-3-2 (2b)" label="4-3-2 (2b)">\[4-3-2 (2b)\]</span> *Mary will
 **stay** home, in (the) case (that) it **rains**.*  
 <span>have-condition</span>
 
@@ -3647,16 +3667,16 @@ introduction of the <span>have-condition</span> node.
 The <span>have-condition</span> node is also used for different types of
 conditionals and constructions related to conditionals. The
 <span>have-condition</span> node is also required for counterfactuals,
-as in [\[54a\]](#counterfactualrain), and concessive
-conditionals, as in [\[54b\]](#concess).
+as in [\[4-3-2 (3a)\]](#4-3-2 (3a)), and concessive
+conditionals, as in [\[4-3-3 (3b)\]](#4-3-3 (3b)).
 
-<span id="otherconds" label="otherconds">\[54\]</span>
+<span id="4-3-2 (3)" label="4-3-2 (3)">\[4-3-2 (3)\]</span>
 
-<span id="counterfactualrain" label="counterfactualrain">\[a\]</span>
+<span id="4-3-2 (3a)" label="4-3-2 (3a)">\[4-3-2 (3a)\]</span>
 *If it had **rained**, Mary would have **stayed** home.*  
 <span>have-condition</span>
 
-<span id="concess" label="concess">\[b\]</span>
+<span id="4-3-3 (3b)" label="4-3-3 (3b)">\[4-3-3 (3b)\]</span>
 *Even if it had **rained**, Mary would have **stayed** home.*  
 <span>have-condition</span>
 
@@ -3704,28 +3724,28 @@ world, or certainty about another conceiver’s mental content. Based on ,
 a typological study of modal systems across languages, and following
 FactBank (), the UMR annotation distinguishes three levels of modal
 strength: Full, Partial, and Neutral, illustrated in
-[\[55\]](#modalvalues).
+[\[4-3-3-1 (1)\]](#4-3-3-1 (1)).
 
-<span id="modalvalues" label="modalvalues">\[55\]</span>
+<span id="4-3-3-1 (1)" label="4-3-3-1 (1)">\[4-3-3-1 (1)\]</span>
 
-<span id="full" label="full">\[a\]</span> Full:  
+<span id="4-3-3-1 (1a)" label="4-3-3-1 (1a)">\[4-3-3-1 (1a)\]</span> Full:  
 *The cat already **ate** breakfast.*
 
-<span id="partial" label="partial">\[b\]</span>
+<span id="4-3-3-1 (1b)" label="4-3-3-1 (1b)">\[4-3-3-1 (1b)\]</span>
 Partial:  
 *The cat <u>probably</u> already **ate** breakfast.*
 
-<span id="neutral" label="neutral">\[c\]</span>
+<span id="4-3-3-1 (1c)" label="4-3-3-1 (1c)">\[4-3-3-1 (1c)\]</span>
 Neutral:  
 *The cat <u>might</u> have already **eaten** breakfast.*
 
-The Full modal strength value, as in [\[55a\]](#full), corresponds to
+The Full modal strength value, as in [\[4-3-3-1 (1a)\]](#4-3-3-1 (1a)), corresponds to
 complete certainty; that is, the conceiver is 100% certain that the
 event occurs in the real world. The Neutral modal strength value, shown
-in [\[55c\]](#neutral), indicates the possibility of the event;
+in [\[4-3-3-1 (1c)\]](#4-3-3-1 (1c)), indicates the possibility of the event;
 essentially, this corresponds to 50/50 certainty that the event occurs
 in the real world. The Partial modal strength value, as in
-[\[55b\]](#partial), falls between the Full and Neutral values; the
+[\[4-3-3-1 (1b)\]](#4-3-3-1 (1b)), falls between the Full and Neutral values; the
 conceiver believes that more likely than not, the event occurs in the
 real world.
 
@@ -3765,7 +3785,7 @@ of confidence a conceiver has in modelling the contents of another
 conceiver’s set of beliefs. That is, the author (or another conceiver)
 may have different levels of confidence about whether or not a
 particular individual holds the set of beliefs represented by a
-conceiver node. Examples for each of the six possible edges values is
+conceiver node. Examples for each of the six possible edges values are
 shown below.
 
 <div id="conceiveredge">
@@ -3791,22 +3811,22 @@ certainty about the set of beliefs of the child conceiver node. That is,
 it is not capturing the child conceiver’s certainty about the event in
 question. Generally, when a predicate that introduces a conceiver is
 modalized, the strength indicated by the modal is annotated between the
-conceiver nodes, as in [\[56\]](#deonticcon).
+conceiver nodes, as in [\[4-3-3-2 (1)\]](#4-3-3-2 (1)).
 
-<span id="deonticcon" label="deonticcon">\[56\]</span>
+<span id="4-3-3-2 (1)" label="4-3-3-2 (1)">\[4-3-3-2 (1)\]</span>
 
-<span id="think" label="think">\[a\]</span> *Mary thinks the cat
+<span id="4-3-3-2 (1a)" label="4-3-3-2 (1a)">\[4-3-3-2 (1a)\]</span> *Mary thinks the cat
 might have **eaten** breakfast.*  
 <span>Aff(MARY,AUTH)</span>
 
-<span id="doubt" label="doubt">\[b\]</span> *Mary probably doubts
+<span id="4-3-3-2 (1b)" label="4-3-3-2 (1b)">\[4-3-3-2 (1b)\]</span> *Mary probably doubts
 that the cat **ate** breakfast.*  
 <span>Prt(MARY,AUTH)</span>
 
-In [\[56a\]](#think), Mary is uncertain about the eating event, but
+In [\[4-3-3-2 (1a)\]](#4-3-3-2 (1a)), Mary is uncertain about the eating event, but
 there is a <span>Aff</span> edge between the <span>AUTH</span> and
 <span>MARY</span> nodes because the author is sure of Mary’s beliefs.
-In [\[56b\]](#doubt), the author only has probable certainty about
+In [\[4-3-3-2 (1b)\]](#4-3-3-2 (1b)), the author only has probable certainty about
 Mary’s beliefs, annotated with the <span>Prt</span> edge between the
 <span>AUTH</span> and <span>MARY</span> nodes.
 
@@ -3865,31 +3885,31 @@ event is annotated as neutral (<span>Neut</span> or
 expression). This system of annotation is why predicates such as *think*
 or *believe* are not annotated as event nodes: they correspond exactly
 to the edges between conceivers and events. These strength values are
-exemplified in ([\[57\]](#episodic)).
+exemplified in ([\[4-3-3-3-1 (1)\]](#4-3-3-3-1 (1))).
 
-<span id="episodic" label="episodic">\[57\]</span>
+<span id="4-3-3-3-1 (1)" label="4-3-3-3-1 (1)">\[4-3-3-3-1 (1)\]</span>
 
-<span id="anaphora" label="anaphora">\[a\]</span> *The dog
+<span id="4-3-3-3-1 (1a)" label="4-3-3-3-1 (1a)">\[4-3-3-3-1 (1a)\]</span> *The dog
 **barked** last night*.  
 <span>Aff(bark,AUTH)</span>
 
-<span id="anaphora" label="anaphora">\[b\]</span> *The dog
+<span id="4-3-3-3-1 (1b)" label="4-3-3-3-1 (1b)">\[4-3-3-3-1 (1b)\]</span> *The dog
 <u>probably</u> **barked** last night.*  
 <span>Prt(bark,AUTH)</span>
 
-<span id="anaphora" label="anaphora">\[c\]</span> *The dog
+<span id="4-3-3-3-1 (1c)" label="4-3-3-3-1 (1c)">\[4-3-3-3-1 (1c)\]</span> *The dog
 <u>may</u> have **barked** last night.*  
 <span>Neut(bark,AUTH)</span>
 
-<span id="anaphora" label="anaphora">\[d\]</span> *The dog <u>may
+<span id="4-3-3-3-1 (1d)" label="4-3-3-3-1 (1d)">\[4-3-3-3-1 (1d)\]</span> *The dog <u>may
 not</u> have **barked** last night.*  
 <span>NeutNeg(bark,AUTH)</span>
 
-<span id="anaphora" label="anaphora">\[e\]</span> *The dog
+<span id="4-3-3-3-1 (1e)" label="4-3-3-3-1 (1e)">\[4-3-3-3-1 (1e)\]</span> *The dog
 <u>probably didn’t</u> **bark** last night.*  
 <span>PrtNeg(bark,AUTH)</span>
 
-<span id="anaphora" label="anaphora">\[f\]</span> *The dog
+<span id="4-3-3-3-1 (1f)" label="4-3-3-3-1 (1f)">\[4-3-3-3-1 (1f)\]</span> *The dog
 <u>didn’t</u> **bark** last night.*  
 <span>Neg(bark,AUTH)</span>
 
@@ -3903,75 +3923,75 @@ conceiver. Predictive future has full strength (<span>Aff</span> or
 to partial strength (<span>Prt</span> or <span>NegPrt</span>); and
 desire and permission correspond to neutral (<span>Neut</span> or
 <span>NeutNeg</span>) strength. This is illustrated in
-([\[58\]](#futurestrength)).
+([\[4-3-3-3-2 (1)\]](#4-3-3-3-2 (1))).
 
-<span id="futurestrength" label="futurestrength">\[58\]</span>
+<span id="4-3-3-3-2 (1)" label="4-3-3-3-2 (1)">\[4-3-3-3-2 (1)\]</span>
 
-<span id="futpos" label="futpos">\[a\]</span> *I <u>will</u> **go**
+<span id="4-3-3-3-2 (1a)" label="4-3-3-3-2 (1a)">\[4-3-3-3-2 (1a)\]</span> *I <u>will</u> **go**
 to Santa Fe*.  
 <span>Aff(go,AUTH)</span>
 
-<span id="futprt" label="futprt">\[b\]</span> *I <u>**intend**</u>
+<span id="4-3-3-3-2 (1b)" label="4-3-3-3-2 (1b)">\[4-3-3-3-2 (1b)\]</span> *I <u>**intend**</u>
 to **go** to Santa Fe. / You <u>must</u> **go** to Santa Fe.* / *I’m
 getting my car **fixed** <u>in order to</u> **go** to Santa Fe.*  
 <span>Prt(go,AUTH)</span>
 
-<span id="futneut" label="futneut">\[c\]</span> *I <u>**want**</u>
+<span id="4-3-3-3-2 (1c)" label="4-3-3-3-2 (1c)">\[4-3-3-3-2 (1c)\]</span> *I <u>**want**</u>
 to **go** to Santa Fe. / You are <u>**allowed**</u> to **go** to Santa
 Fe.*  
 <span>Neut(go,AUTH)</span>
 
-The predictive future, as in [\[58a\]](#futpos), is annotated with
+The predictive future, as in [\[4-3-3-3-2 (1a)\]](#4-3-3-3-2 (1a)), is annotated with
 full modal strength because it presents the future event as a certainty
 (i.e., it is as certain as is possible for future events). Intentions,
-commands, and purpose clauses, as in [\[58b\]](#futprt), are
+commands, and purpose clauses, as in [\[4-3-3-3-2 (1b)\]](#4-3-3-3-2 (1b)), are
 annotated with partial modal strength because they present the future
 event as less likely than the predictive future, but more likely to
 happen than the neutral strength deontics. Finally, desire and
-permission, as in [\[58c\]](#futneut), are annotated as neutral
+permission, as in [\[4-3-3-3-2 (1c)\]](#4-3-3-3-2 (1c)), are annotated as neutral
 strength.
 
-Examples like [\[59\]](#futuretests) demonstrate how the
+Examples like [\[4-3-3-3-2 (2)\]](#4-3-3-3-2 (2)) demonstrate how the
 predictive future, intention, and desire present events with different
 future likelihoods, based on whether or not they’re compatible with
 different strength negatives of the same event.
 
-<span id="futuretests" label="futuretests">\[59\]</span>
+<span id="4-3-3-3-2 (2)" label="4-3-3-3-2 (2)">\[4-3-3-3-2 (2)\]</span>
 
-<span id="futtestpos" label="futtestpos">\[a\]</span> *\*I will
+<span id="4-3-3-3-2 (2a)" label="4-3-3-3-2 (2a)">\[4-3-3-3-2 (2a)\]</span> *\*I will
 go to Santa Fe, but I won’t go.*  
 *\*I will go to Santa Fe, but I probably won’t go.*  
 *\*I will go to Santa Fe, but I might not go.*
 
-<span id="futtestprt" label="futtestprt">\[b\]</span> *\*I
+<span id="4-3-3-3-2 (2b)" label="4-3-3-3-2 (2b)">\[4-3-3-3-2 (2b)\]</span> *\*I
 intend to go to Santa Fe, but I won’t go.*  
 *\*I intend to go to Santa Fe, but I probably won’t go.*  
 *I intend to go to Santa Fe, but I might not go.*
 
-<span id="futtestneut" label="futtestneut">\[c\]</span> *I
+<span id="4-3-3-3-2 (2c)" label="4-3-3-3-2 (2c)">\[4-3-3-3-2 (2c)\]</span> *I
 want to go to Santa Fe, but I won’t go.*  
 *I want to go to Santa Fe, but I probably won’t go.*  
 *I want to go to Santa Fe, but I might not go.*
 
-The predictive future, as in [\[59a\]](#futtestpos), can’t
+The predictive future, as in [\[4-3-3-3-2 (2a)\]](#4-3-3-3-2 (2a)), can’t
 combine with any strength of negative. This is because full affirmative
 strength doesn’t allow for any uncertainty, or any possibility that the
 event does not occur. The partial strength future/deontic events, like
-intention as in [\[59b\]](#futtestprt), are only compatible with
+intention as in [\[4-3-3-3-2 (2b)\]](#4-3-3-3-2 (2b)), are only compatible with
 a neutral strength negative of the same event. Partial strength allows
 for the possibility that the event won’t occur in the future, but can’t
 occur with the partial (or full) strength negative of the event. Neutral
 strength future/deontics, like desires as in
-[\[59c\]](#futtestneut), can occur with any strength negative of
+[\[4-3-3-3-2 (2c)\]](#4-3-3-3-2 (2c)), can occur with any strength negative of
 the same event, since the event is only presented as a possibility.
 
 Modalized deontic predicates capture
 the modal value with the link between the <span>AUTH</span> and the
 conceiver node. This means that the link between a conceiver and the
 node for the deontic predicate is very often a default <span>Aff</span>
-value; see example ([\[60\]](#defaultpos)).
+value; see example ([\[4-3-3-3-2 (3)\]](#4-3-3-3-2 (3))).
 
-<span id="defaultpos" label="defaultpos">\[60\]</span> *Mary
+<span id="4-3-3-3-2 (3)" label="4-3-3-3-2 (3)">\[4-3-3-3-2 (3)\]</span> *Mary
 <u>might</u> **want** to **visit** France.*  
 <span>Neut(MARY,AUTH)</span>  
 <span>Aff(want,MARY)</span>  
@@ -3985,9 +4005,9 @@ desires.
 
 When the conceiver is unsure of their own beliefs, desires, etc., this
 is represented with the link between the conceiver and the deontic
-predicate, as in ([\[61\]](#mightwant)).
+predicate, as in ([\[4-3-3-3-2 (4)\]](#4-3-3-3-2 (4))).
 
-<span id="mightwant" label="mightwant">\[61\]</span>
+<span id="4-3-3-3-2 (4)" label="4-3-3-3-2 (4)">\[4-3-3-3-2 (4)\]</span>
 
 *Mary <u>thinks</u> that she <u>might</u> **want** to **visit**
 France.*  
@@ -4009,37 +4029,37 @@ within a construction requires further annotation guidelines. As is the
 case with the UMR annotation scheme in general, it is important to
 annotate the meaning of the text, regardless of its morphosyntactic
 form. For example, certain constructions in English exhibit what is
-often called neg-raising, as in [\[62a\]](#negraise1).
+often called neg-raising, as in [\[4-3-3-3-3 (1a)\]](#4-3-3-3-3 (1a)).
 
-<span id="negraisethink" label="negraisethink">\[62\]</span>
+<span id="4-3-3-3-3 (1)" label="4-3-3-3-3 (1)">\[4-3-3-3-3 (1)\]</span>
 
-<span id="negraise1" label="negraise1">\[a\]</span> *Mary
+<span id="4-3-3-3-3 (1a)" label="4-3-3-3-3 (1a)">\[4-3-3-3-3 (1a)\]</span> *Mary
 <u>doesn’t think</u> John **is in** his office.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Neg(be-in,MARY)</span>
 
-<span id="negraise2" label="negraise2">\[b\]</span> *Mary
+<span id="4-3-3-3-3 (1b)" label="4-3-3-3-3 (1b)">\[4-3-3-3-3 (1b)\]</span> *Mary
 <u>thinks</u> John **isn’t in** his office.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Neg(be-in,MARY)</span>
 
-Although the negation in [\[62a\]](#negraise1) is syntactically on
-*think*, the meaning of [\[62a\]](#negraise1) and
-[\[62b\]](#negraise2) is the same. That is, that Mary has a belief
+Although the negation in [\[4-3-3-3-3 (1a)\]](#4-3-3-3-3 (1a)) is syntactically on
+*think*, the meaning of [\[4-3-3-3-3 (1a)\]](#4-3-3-3-3 (1a)) and
+[\[4-3-3-3-3 (1b)\]](#4-3-3-3-3 (1b)) is the same. That is, that Mary has a belief
 that John is in not in his office. Therefore, both of these have the
 same annotation, with the negation represented between the
 <span>MARY</span> node and the <span>be-in</span> node. Further examples
-of this can be seen below in [\[63\]](#negraise).
+of this can be seen below in [\[4-3-3-3-3 (2)\]](#4-3-3-3-3 (2)).
 
-<span id="negraise" label="negraise">\[63\]</span>
+<span id="4-3-3-3-3 (2)" label="4-3-3-3-3 (2)">\[4-3-3-3-3 (2)\]</span>
 
-<span id="POS" label="POS">\[a\]</span> *Mary <u>doesn’t</u> **want**
+<span id="4-3-3-3-3 (2a)" label="4-3-3-3-3 (2a)">\[4-3-3-3-3 (2a)\]</span> *Mary <u>doesn’t</u> **want**
 to **go**. / Mary **wants** <u>not</u> to **go**.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(want,MARY)</span>  
 <span>NeutNeg(go,want)</span>
 
-<span id="NEUT" label="NEUT">\[b\]</span> *Mary <u>isn’t</u>
+<span id="4-3-3-3-3 (2b)" label="4-3-3-3-3 (2b)">\[4-3-3-3-3 (2b)\]</span> *Mary <u>isn’t</u>
 **planning** on **going**. / Mary is **planning** to <u>not</u>
 **go**.*  
 <span>Aff(MARY,AUTH)</span>  
@@ -4058,37 +4078,37 @@ node), the strength of the grammaticalized modal and the negation must
 be annotated with a single edge. This amounts to combining the strength
 of the modal (i.e., partial or neutral) with the negative polarity
 (<span>PrtNeg</span> or <span>NeutNeg</span>). This can be seen in
-example ([\[64\]](#combo)) below.
+example ([\[4-3-3-3-3 (3)\]](#4-3-3-3-3 (3))) below.
 
-<span id="combo" label="combo">\[64\]</span>
+<span id="4-3-3-3-3 (3)" label="4-3-3-3-3 (3)">\[4-3-3-3-3 (3)\]</span>
 
-<span id="POS" label="POS">\[a\]</span> *Mary <u>doesn’t have</u> to
+<span id="4-3-3-3-3 (3a)" label="4-3-3-3-3 (3a)">\[4-3-3-3-3 (3a)\]</span> *Mary <u>doesn’t have</u> to
 **go**. / Mary <u>could</u> (choose to) <u>not</u> **go**.*  
 <span>NeutNeg(go,AUTH)</span>
 
-<span id="NEUT" label="NEUT">\[b\]</span> *Mary is <u>unlikely</u> to
+<span id="4-3-3-3-3 (3b)" label="4-3-3-3-3 (3b)">\[4-3-3-3-3 (3b)\]</span> *Mary is <u>unlikely</u> to
 **go**. / Mary is <u>likely not</u> to **go**.*  
 <span>NegPrt(go,AUTH)</span>
 
-<span id="NEUT" label="NEUT">\[c\]</span> *Mary <u>mustn’t/shouldn’t</u> **open** the box. / <u>It is required</u>
+<span id="4-3-3-3-3 (3c)" label="4-3-3-3-3 (3c)">\[4-3-3-3-3 (3c)\]</span> *Mary <u>mustn’t/shouldn’t</u> **open** the box. / <u>It is required</u>
 that Mary <u>not</u> **open** the box.*  
 <span>NegPrt(open,AUTH)</span>
 
-<span id="NEUT" label="NEUT">\[d\]</span> *He <u>might not</u> **be in** his office. / <u>It is possible</u> that
+<span id="4-3-3-3-3 (3d)" label="4-3-3-3-3 (3d)">\[4-3-3-3-3 (3d)\]</span> *He <u>might not</u> **be in** his office. / <u>It is possible</u> that
 he **is** <u>not</u> **in** his office.*  
 <span>NeutNeg(be-in,AUTH)</span>
 
 There are also cases where the modal strength value of the edge is not a
 straightforward combination of the modal strength and negation. Examples
-of these can be seen below in ([\[65\]](#notcombo)).
+of these can be seen below in ([\[4-3-3-3-3 (4)\]](#4-3-3-3-3 (4))).
 
-<span id="notcombo" label="notcombo">\[65\]</span>
+<span id="4-3-3-3-3 (4)" label="4-3-3-3-3 (4)">\[4-3-3-3-3 (4)\]</span>
 
-<span id="POS" label="POS">\[a\]</span> *<u>It is not possible</u> for
+<span id="4-3-3-3-3 (4a)" label="4-3-3-3-3 (4a)">\[4-3-3-3-3 (4a)\]</span> *<u>It is not possible</u> for
 Mary **to be** in France already.*  
 <span>Neg(be-in,AUTH)</span>
 
-<span id="NEUT" label="NEUT">\[b\]</span> *You <u>may not</u>
+<span id="4-3-3-3-3 (4b)" label="4-3-3-3-3 (4b)">\[4-3-3-3-3 (4b)\]</span> *You <u>may not</u>
 **enter**. / <u>It is not allowed</u> for you **to enter**.*  
 <span>NegPrt(enter,AUTH)</span>
 
@@ -4103,77 +4123,77 @@ value and a parent node must be selected. In the majority of cases, it
 is rather straightforward which node should be selected as the parent of
 an event in question.
 
-<span id="clearparent" label="clearparent">\[66\]</span>
+<span id="4-3-3-3-4 (1)" label="4-3-3-3-4 (1)">\[4-3-3-3-4 (1)\]</span>
 
-<span id="travel" label="travel">\[a\]</span> *Mary **travelled**
+<span id="4-3-3-3-4 (1a)" label="4-3-3-3-4 (1a)">\[4-3-3-3-4 (1a)\]</span> *Mary **travelled**
 to France.*  
 <span>Aff(travel,AUTH)</span>
 
-<span id="grammodal" label="grammodal">\[b\]</span> *Mary might
+<span id="4-3-3-3-4 (1b)" label="4-3-3-3-4 (1b)">\[4-3-3-3-4 (1b)\]</span> *Mary might
 **travel** this summer.*  
 <span>Neut(travel,AUTH)</span>
 
-<span id="purpclause" label="purpclause">\[c\]</span> *Mary
+<span id="4-3-3-3-4 (1c)" label="4-3-3-3-4 (1c)">\[4-3-3-3-4 (1c)\]</span> *Mary
 will **travel** to France in order to **see** the Louvre.*  
 <span>Aff(travel,AUTH)</span>  
 <span>Aff(MARY,AUTH)</span>  
 <span>Prt(see,MARY)</span>
 
-<span id="belief" label="belief">\[d\]</span> *Mary thinks she will
+<span id="4-3-3-3-4 (1d)" label="4-3-3-3-4 (1d)">\[4-3-3-3-4 (1d)\]</span> *Mary thinks she will
 **travel** to France.*  
 <span>Aff(MARY, AUTH)</span>  
 <span>Aff(travel,MARY)</span>
 
-For the events in examples like [\[66a\]](#travel) and
-[\[66b\]](#grammodal), <span>AUTH</span> is the parent node of the
+For the events in examples like [\[4-3-3-3-4 (1a)\]](#4-3-3-3-4 (1a)) and
+[\[4-3-3-3-4 (1b)\]](#4-3-3-3-4 (1b)), <span>AUTH</span> is the parent node of the
 event. Grammaticalized modals aren’t annotated as their own nodes,
 therefore events under the scope of their modality are annotated
 directly underneath the relevant conceiver node, such as the author in
-[\[66b\]](#grammodal). The events in purpose clauses, as in
-[\[66c\]](#purpclause), are also represented as direct children
+[\[4-3-3-3-4 (1b)\]](#4-3-3-3-4 (1b)). The events in purpose clauses, as in
+[\[4-3-3-3-4 (1c)\]](#4-3-3-3-4 (1c)), are also represented as direct children
 of the conceiver node (here, <span>MARY</span>). Since belief predicates
 also aren’t represented as nodes in the annotation, the complements of
 belief predicates will be linked directly to the relevant conceiver, as
-in ([\[66d\]](#belief)).
+in ([\[4-3-3-3-4 (1d)\]](#4-3-3-3-4 (1d))).
 
 There are also cases where there may be a choice between selecting a
 conceiver or another event as the parent node. This is specifically the
 case when modal predicates are represented as their own events (nodes)
-in the annotation, as in ([\[67\]](#modalevent)).
+in the annotation, as in ([\[4-3-3-3-4 (2)\]](#4-3-3-3-4 (2))).
 
-<span id="modalevent" label="modalevent">\[67\]</span>
+<span id="4-3-3-3-4 (2)" label="4-3-3-3-4 (2)">\[4-3-3-3-4 (2)\]</span>
 
-<span id="wants" label="wants">\[a\]</span> *Mary **wants** to
+<span id="4-3-3-3-4 (2a)" label="4-3-3-3-4 (2a)">\[4-3-3-3-4 (2a)\]</span> *Mary **wants** to
 **travel** this summer.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(want,MARY)</span>  
 <span>Neut(travel,want)</span>
 
-<span id="decided" label="decided">\[b\]</span> *Mary **decided**
+<span id="4-3-3-3-4 (2b)" label="4-3-3-3-4 (2b)">\[4-3-3-3-4 (2b)\]</span> *Mary **decided**
 to **travel** this summer.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(decide,MARY)</span>  
 <span>Prt(travel,decide)</span>
 
-<span id="expects" label="expects">\[c\]</span> *Mary **expects**
+<span id="4-3-3-3-4 (2c)" label="4-3-3-3-4 (2c)">\[4-3-3-3-4 (2c)\]</span> *Mary **expects**
 to **travel** this summer.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(expect,MARY)</span>  
 <span>Prt(travel,expect)</span>
 
-<span id="allows" label="allows">\[d\]</span> *This bar **allows
+<span id="4-3-3-3-4 (2d)" label="4-3-3-3-4 (2d)">\[4-3-3-3-4 (2d)\]</span> *This bar **allows
 smoking**.*  
 <span>Aff(BAR,AUTH)</span>  
 <span>Aff(allow,BAR)</span>  
 <span>Neut(smoke,allow)</span>
 
-<span id="allows" label="allows">\[e\]</span> *We are **required**
+<span id="4-3-3-3-4 (2e)" label="4-3-3-3-4 (2e)">\[4-3-3-3-4 (2e)\]</span> *We are **required**
 to **order** two drinks.*  
 <span>Aff(require,AUTH)</span>  
 <span>Neut(order,require)</span>
 
 In these cases, it may not be clear whether the node for the modalized
-event (e.g., <span>travel</span> in [\[67a\]](#wants)) should be a
+event (e.g., <span>travel</span> in [\[4-3-3-3-4 (2a)\]](#4-3-3-3-4 (2a))) should be a
 direct child of the relevant conceiver (<span>MARY</span>) or the modal
 predicate event node (<span>want</span>). In all clauses with modal
 predicates, the modalized event (e.g., <span>travel</span>) should be
@@ -4188,25 +4208,25 @@ If multiple events are presented with the same modal strength, they
 should be linked to the same parent node with the appropriate modal
 strength value; they should not be linked to each other.
 
-<span id="samespace" label="samespace">\[68\]</span>
+<span id="4-3-3-3-4 (3)" label="4-3-3-3-4 (3)">\[4-3-3-3-4 (3)\]</span>
 
-<span id="mighttravelwork" label="mighttravelwork">\[a\]</span>
+<span id="4-3-3-3-4 (3a)" label="4-3-3-3-4 (3a)">\[4-3-3-3-4 (3a)\]</span>
 *Mary might **travel** and **work** on a paper this summer.*  
 <span>Neut(travel,AUTH)</span>  
 <span>Neut(work,AUTH</span>
 
-<span id="wanttravelwork" label="wanttravelwork">\[b\]</span>
+<span id="4-3-3-3-4 (3b)" label="4-3-3-3-4 (3b)">\[4-3-3-3-4 (3b)\]</span>
 *Mary **wants** to **travel** and **work** on a paper this summer*.  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(want,MARY)</span>  
 <span>Neut(travel,want)</span>  
 <span>Neut(work,want)</span>
 
-In [\[68a\]](#mighttravelwork), the author has a neutral
+In [\[4-3-3-3-4 (3a)\]](#4-3-3-3-4 (3a)), the author has a neutral
 epistemic stance towards both the *travel* and *work* events; these
 events are annotated separately as children of the <span>AUTH</span>
 node and not directly linked to each other. Similarly, in
-[\[68b\]](#wanttravelwork), both *travel* and *work* are
+[\[4-3-3-3-4 (3b)\]](#4-3-3-3-4 (3b)), both *travel* and *work* are
 Mary’s desires; they are both annotated as children of
 <span>want</span> and not linked to each other.
 
@@ -4216,21 +4236,21 @@ The main way in which this annotation differs from FactBank is that it
 allows for the nesting of modal strengths; that is, events can be
 annotated as the children of other (possibly modalized) events in the
 dependency structure. This is especially often the case when dealing
-with deontic modals, as in [\[69\]](#nesting).
+with deontic modals, as in [\[4-3-3-3-5 (1)\]](#4-3-3-3-5 (1)).
 
-<span id="nesting" label="nesting">\[69\]</span>
+<span id="4-3-3-3-5 (1)" label="4-3-3-3-5 (1)">\[4-3-3-3-5 (1)\]</span>
 
-<span id="mayneed" label="mayneed">\[a\]</span> *I <u>may</u>
+<span id="4-3-3-3-5 (1a)" label="4-3-3-3-5 (1a)">\[4-3-3-3-5 (1a)\]</span> *I <u>may</u>
 **need** to **bring** a rain coat*.  
 <span>Neut(need-01,AUTH)</span>  
 <span>Prt(bring-01,need-01)</span>
 
-<span id="probablywant" label="probablywant">\[b\]</span>
+<span id="4-3-3-3-5 (1b)" label="4-3-3-3-5 (1b)">\[4-3-3-3-5 (1b)\]</span>
 *I’ll <u>probably</u> **want** to **leave** early*.  
 <span>Prt(want,AUTH)</span>  
 <span>Neut(leave,want)</span>
 
-In [\[69a\]](#mayneed), the partial strength deontic *need* is
+In [\[4-3-3-3-5 (1a)\]](#4-3-3-3-5 (1a)), the partial strength deontic *need* is
 embedded within the neutral epistemic modal *may*. In an annotation
 scheme which does not allow nesting, it is not clear whether *bring*
 should be annotated as neutral or partial strength. Here, however, we
@@ -4240,7 +4260,7 @@ directly on the author, and *bring* as partial strength depending on
 annotated as children of the modal predicate: by annotating
 <span>leave</span> as dependent on <span>want</span>, we can capture the
 nested modal strengths in an example like
-[\[69b\]](#probablywant).
+[\[4-3-3-3-5 (1b)\]](#4-3-3-3-5 (1b)).
 
 ###### Part 4-3-3-3-6. Conditionals
 
@@ -4252,30 +4272,30 @@ conditionals, the <span>have-condition</span> node is linked to the
 relevant conceiver with a <span>Neut</span> edge label; the protasis and
 apodosis are linked to the <span>have-condition</span> node with their
 appropriate modal strength. Examples are shown in
-[\[70\]](#basicconds).
+[\[4-3-3-3-6 (1)\]](#4-3-3-3-6 (1)).
 
-<span id="basicconds" label="basicconds">\[70\]</span>
+<span id="4-3-3-3-6 (1)" label="4-3-3-3-6 (1)">\[4-3-3-3-6 (1)\]</span>
 
-<span id="posposcond" label="posposcond">\[a\]</span> *If it
+<span id="4-3-3-3-6 (1a)" label="4-3-3-3-6 (1a)">\[4-3-3-3-6 (1a)\]</span> *If it
 **rains**, I’ll **stay** home.*  
 <span>Neut(have-condition,AUTH)</span>  
 <span>Aff(rain,have-condition)</span>  
 <span>Aff(stay,have-condition)</span>
 
-<span id="posneutcond" label="posneutcond">\[b\]</span> *If it
+<span id="4-3-3-3-6 (1b)" label="4-3-3-3-6 (1b)">\[4-3-3-3-6 (1b)\]</span> *If it
 **rains**, I <u>might</u> **stay** home.*  
 <span>Neut(have-condition,AUTH)</span>  
 <span>Aff(rain,have-condition)</span>  
 <span>Neut(stay,have-condition)</span>
 
-<span id="neutnegcond" label="neutnegcond">\[c\]</span> *As
+<span id="4-3-3-3-6 (1c)" label="4-3-3-3-6 (1c)">\[4-3-3-3-6 (1c)\]</span> *As
 long as it <u>doesn’t</u> **rain**, I’ll <u>probably</u> **go** to
 school.*  
 <span>Neut(have-condition,AUTH)</span>  
 <span>Neg(rain,have-condition)</span>  
 <span>Prt(go,have-condition)</span>
 
-<span id="multpros" label="multpros">\[d\]</span> *If it
+<span id="4-3-3-3-6 (1d)" label="4-3-3-3-6 (1d)">\[4-3-3-3-6 (1d)\]</span> *If it
 <u>doesn’t</u> **rain** and if I **find** a ride, I’ll <u>probably</u>
 **go** to school and **take** the test.*  
 <span>Neut(have-condition,AUTH)</span>  
@@ -4298,37 +4318,37 @@ whose value is annotated in the link between the
 
 The modal strength edge value between an event and the
 <span>have-condition</span> node reflects the event’s modal strength
-value within the conditional. In [\[70a\]](#posposcond), where
+value within the conditional. In [\[4-3-3-3-6 (1a)\]](#4-3-3-3-6 (1a)), where
 there’s no negation or modals, both events have a <span>Aff</span>
 relation to the <span>have-condition</span> node. In
-[\[70b\]](#posneutcond), the apodosis includes the modal *might*
+[\[4-3-3-3-6 (1b)\]](#4-3-3-3-6 (1b)), the apodosis includes the modal *might*
 and therefore there is a <span>Neut</span> edge between the
 <span>stay</span> event and the <span>have-condition</span> node.
-Example [\[70c\]](#neutnegcond) has a negative in the protasis
+Example [\[4-3-3-3-6 (1c)\]](#4-3-3-3-6 (1c)) has a negative in the protasis
 and the partial strength *probably* in the apodosis. This is annotated
 with a <span>Neg</span> edge between <span>rain</span> and
 <span>have-condition</span> and a <span>Prt</span> edge between
 <span>go</span> and <span>have-condition</span>.
 
-As is shown in [\[70d\]](#multpros), there may be multiple events
+As is shown in [\[4-3-3-3-6 (1d)\]](#4-3-3-3-6 (1d)), there may be multiple events
 in the protasis and/or apodosis. All events are linked to the
 <span>have-condition</span> node with the appropriate modal strength
 edge value.
 
 As mentioned in [4.2](#havecondnode), the <span>have-condition</span>
 node is also used for counterfactuals, as in
-[\[71a\]](#counterfactual), and in concessive conditionals,
-as in [\[71b\]](#concessive).
+[\[4-3-3-3-6 (2a)\]](#4-3-3-3-6 (2a)), and in concessive conditionals,
+as in [\[4-3-3-3-6 (2b)\]](#4-3-3-3-6 (2b)).
 
-<span id="otherconds" label="otherconds">\[71\]</span>
+<span id="4-3-3-3-6 (2)" label="4-3-3-3-6 (2)">\[4-3-3-3-6 (2)\]</span>
 
-<span id="counterfactual" label="counterfactual">\[a\]</span>
+<span id="4-3-3-3-6 (2a)" label="4-3-3-3-6 (2a)">\[4-3-3-3-6 (2a)\]</span>
 *If it had **rained**, I would have **stayed** home.*  
 <span>Neg(have-condition,AUTH)</span>  
 <span>Aff(rain,have-condition)</span>  
 <span>Aff(go,have-condition)</span>  
 
-<span id="concessive" label="concessive">\[b\]</span> *Even if
+<span id="4-3-3-3-6 (2b)" label="4-3-3-3-6 (2b)">\[4-3-3-3-6 (2b)\]</span> *Even if
 it is **raining**, I will **go** to school.*  
 <span>Neut(have-condition,AUTH)</span>  
 <span>Aff(rain,have-concession)</span>  
@@ -4338,22 +4358,22 @@ The structure of the dependency is the same for counterfactuals and
 concessive conditionals as it is for hypothetical conditionals: that is,
 the events in the protasis and apodosis are children of the
 <span>have-condition</span> node. For counterfactuals, as in
-[\[71a\]](#counterfactual), the edge value between the
+[\[4-3-3-3-6 (2a)\]](#4-3-3-3-6 (2a)), the edge value between the
 conceiver and the <span>have-condition</span> node is full negative
 (<span>Neg</span>). This is because counterfactuals present the events
 in both the protasis and apodosis as (certaintly) not occurring.
-Concessive conditionals, as in [\[71b\]](#concessive), are
+Concessive conditionals, as in [\[4-3-3-3-6 (2b)\]](#4-3-3-3-6 (2b)), are
 annotated with a <span>Neut</span> link between the conceiver and the
 <span>have-condition</span> node.
 
 Like hypothetical conditionals, the events in the protasis and apodosis
 of counterfactuals and concessive conditionals may be negated or
 modalized; there also may be multiple events in the protasis or
-apodosis. These are shown in [\[72\]](#othercondmods).
+apodosis. These are shown in [\[4-3-3-3-6 (3)\]](#4-3-3-3-6 (3)).
 
-<span id="othercondmods" label="othercondmods">\[72\]</span>
+<span id="4-3-3-3-6 (3)" label="4-3-3-3-6 (3)">\[4-3-3-3-6 (3)\]</span>
 
-<span id="negneutcond" label="negneutcond">\[a\]</span> *I
+<span id="4-3-3-3-6 (3a)" label="4-3-3-3-6 (3a)">\[4-3-3-3-6 (3a)\]</span> *I
 <u>might</u> have **gone** to school, if it <u>hadn’t</u> **rained** and
 if I had **woken** up on time.*  
 <span>Neg(have-condition,AUTH)</span>  
@@ -4361,7 +4381,7 @@ if I had **woken** up on time.*
 <span>Neg(rain,have-condition)</span>  
 <span>Aff(wake,have-condition)</span>
 
-<span id="concessivenegneut" label="concessivenegneut">\[b\]</span>
+<span id="4-3-3-3-6 (3b)" label="4-3-3-3-6 (3b)">\[4-3-3-3-6 (3b)\]</span>
 *Even if it <u>isn’t</u> **raining**, I <u>might not</u> **go** to
 school.*  
 <span>Neut(have-condition,AUTH)</span>  
@@ -4372,7 +4392,7 @@ school.*
 
 Reporting or saying events (e.g., *say, tell, shout, report*) also
 require special guidelines. These types of events, as in
-[\[72\]](#basicreports), express both an event in the
+[\[4-3-3-3-7 (1)\]](#4-3-3-3-7 (1)), express both an event in the
 (author’s) ‘real-world’ and the mental content of the agent of the
 reporting predicate. This means that the agents of reporting predicates
 should be identified as conceivers. The conceiver node represents the
@@ -4380,22 +4400,22 @@ fact that what a person (or a group of people) says is on some level
 based on their beliefs - either they report their beliefs accurately, or
 they lie, pretend, or otherwise misrepresent their beliefs. Therefore,
 the reporting predicate (like <span>say</span> in
-[\[72a\]](#Marysaid) and <span>report</span> in
-[\[72b\]](#NYTreported)) are annotated as a child of the
+[\[4-3-3-3-7 (1a)\]](#4-3-3-3-7 (1a)) and <span>report</span> in
+[\[4-3-3-3-7 (1b)\]](#4-3-3-3-7 (1b))) are annotated as a child of the
 <span>AUTH</span> node; the events that are reported are annotated as
 children of the reporter conceiver node (<span>MARY</span> in
-[\[72a\]](#Marysaid) and <span>NEW\_YORK\_TIMES</span> in
-[\[72b\]](#NYTreported).
+[\[4-3-3-3-7 (1a)\]](#4-3-3-3-7 (1a)) and <span>NEW\_YORK\_TIMES</span> in
+[\[4-3-3-3-7 (1b)\]](#4-3-3-3-7 (1b)).
 
-<span id="basicreports" label="basicreports">\[72\]</span>
+<span id="4-3-3-3-7 (1)" label="4-3-3-3-7 (1)">\[4-3-3-3-7 (1)\]</span>
 
-<span id="Marysaid" label="Marysaid">\[a\]</span> *Mary **said**
+<span id="4-3-3-3-7 (1a)" label="4-3-3-3-7 (1a)">\[4-3-3-3-7 (1a)\]</span> *Mary **said**
 that she **went** to Santa Fe.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(say,AUTH)</span>  
 <span>Aff(go,MARY)</span>
 
-<span id="NYTreported" label="NYTreported">\[b\]</span> *The
+<span id="4-3-3-3-7 (1b)" label="4-3-3-3-7 (1b)">\[4-3-3-3-7 (1b)\]</span> *The
 New York Times **reported** that Congress **voted** on the bill this
 afternoon.*  
 <span>Aff(NEW\_YORK\_TIMES,AUTH)</span>  
@@ -4409,7 +4429,7 @@ occurs in the real world. The reported events, however, do not
 content of the agent of the reporting predicate.
 
 When the author is certain that the reporting event occurs, as in
-[\[72a\]](#Marysaid) and [\[72b\]](#NYTreported), this is
+[\[4-3-3-3-7 (1a)\]](#4-3-3-3-7 (1a)) and [\[4-3-3-3-7 (1b)\]](#4-3-3-3-7 (1b)), this is
 annotated with a <span>Aff</span> value between the author node and the
 reporting event; this is also annotated in the link between the author
 node and the conceiver node for the agent of the reporting predicate.
@@ -4421,11 +4441,11 @@ node and the reporting event node and the edge between the author node
 and the reporting conceiver node will always have the same modal
 strength value.
 
-For example, in [\[72a\]](#Marysaid), the author is certain that
+For example, in [\[4-3-3-3-7 (1a)\]](#4-3-3-3-7 (1a)), the author is certain that
 the reporting event occurred and therefore the author is certain about
 Mary’s set of of beliefs. Note that this annotation doesn’t capture the
 author’s certainty about the reported events, i.e. in
-[\[72a\]](#Marysaid) the author doesn’t have a perspective on
+[\[4-3-3-3-7 (1a)\]](#4-3-3-3-7 (1a)) the author doesn’t have a perspective on
 whether or not Mary actually went to Santa Fe. This faithfully
 represents the semantics of reporting constructions; the author doesn’t
 express an opinion on the reality of the reported events.
@@ -4433,57 +4453,57 @@ express an opinion on the reality of the reported events.
 When the author is uncertain about the occurrence of the reporting
 event, this is also reflected in both the edge between the author and
 the reporting predicate and the edge between the author and the
-reporting conceiver; see [\[73a\]](#mightsay) and
-[\[73b\]](#notsay).
+reporting conceiver; see [\[4-3-3-3-7 (2a)\]](#4-3-3-3-7 (2a)) and
+[\[4-3-3-3-7 (2b)\]](#4-3-3-3-7 (2b)).
 
-<span id="reportsuncertain" label="reportsuncertain">\[73\]</span>
+<span id="4-3-3-3-7 (2)" label="4-3-3-3-7 (2)">\[4-3-3-3-7 (2)\]</span>
 
-<span id="mightsay" label="mightsay">\[a\]</span>
+<span id="4-3-3-3-7 (2a)" label="4-3-3-3-7 (2a)">\[4-3-3-3-7 (2a)\]</span>
 
 *Mary <u>might</u> have **said** that she **went** to Santa Fe.*  
 <span>Neut(MARY,AUTH)</span>  
 <span>Neut(say,AUTH)</span>  
 <span>Aff(go,MARY)</span>
 
-<span id="notsay" label="notsay">\[b\]</span> *Mary <u>didn’t</u>
+<span id="4-3-3-3-7 (2b)" label="4-3-3-3-7 (2b)">\[4-3-3-3-7 (2b)\]</span> *Mary <u>didn’t</u>
 **say** that she **went** to Santa Fe.*  
 <span>Neg(MARY,AUTH)</span>  
 <span>Neg(say,AUTH)</span>  
 <span>Aff(go,MARY)</span>
 
-In [\[73a\]](#mightsay), the neutral modal strength indicated by
+In [\[4-3-3-3-7 (2a)\]](#4-3-3-3-7 (2a)), the neutral modal strength indicated by
 *might* corresponds to both the <span>Neut</span> edge between the
 <span>AUTH</span> and <span>MARY</span> nodes and the <span>Neut</span>
 edge between the <span>AUTH</span> and <span>say</span> nodes. As
 explained above, if the author is uncertain about whether the saying
 event occurs, the author must also be uncertain about Mary’s beliefs (as
 expressed in the saying event). Similarly, if the author believes that
-the saying event did not occur, as in [\[73b\]](#notsay), there is a
+the saying event did not occur, as in [\[4-3-3-3-7 (2b)\]](#4-3-3-3-7 (2b)), there is a
 <span>Neg</span> edge between both the <span>AUTH</span> and
 <span>MARY</span> nodes and between the <span>AUTH</span> and
 <span>say</span> nodes.
 
 Finally, the edge between the reporting event and the reported event(s)
 reflects the modal strength of the reported events, as in
-[\[74\]](#reportnest).
+[\[4-3-3-3-7 (3)\]](#4-3-3-3-7 (3)).
 
-<span id="reportnest" label="reportnest">\[74\]</span>
+<span id="4-3-3-3-7 (3)" label="4-3-3-3-7 (3)">\[4-3-3-3-7 (3)\]</span>
 
-<span id="sayneut" label="sayneut">\[a\]</span> *Mary **said**
+<span id="4-3-3-3-7 (3a)" label="4-3-3-3-7 (3a)">\[4-3-3-3-7 (3a)\]</span> *Mary **said**
 that John <u>might</u> have **gone** to Santa Fe.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(say,AUTH)</span>  
 <span>Neut(go,MARY)</span>
 
-<span id="sayprt" label="sayprt">\[b\]</span> *Mary **said** that
+<span id="4-3-3-3-7 (3b)" label="4-3-3-3-7 (3b)">\[4-3-3-3-7 (3b)\]</span> *Mary **said** that
 John <u>probably didn’t</u> **go** to Santa Fe.*  
 <span>Aff(MARY,AUTH)</span>  
 <span>Aff(say,AUTH)</span>  
 <span>NegPrt(go,MARY)</span>
 
-In [\[74a\]](#sayneut), Mary reports the *go* event with only
+In [\[4-3-3-3-7 (3a)\]](#4-3-3-3-7 (3a)), Mary reports the *go* event with only
 neutral certainty; this is reflected in the edge between the
-<span>say</span> and <span>go</span> events. In [\[74b\]](#sayprt),
+<span>say</span> and <span>go</span> events. In [\[4-3-3-3-7 (3b)\]](#4-3-3-3-7 (3b)),
 Mary reports the *go* event with negative partial certainty; this is
 also reflected in the edge between the <span>say</span> and
 <span>go</span> events.
