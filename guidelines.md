@@ -570,40 +570,6 @@ the theme is part of a category of objects (i.e., *Panda* fits within
 the category of *cat*), whereas equational sentences indicate that two
 referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
-According to the cross-linguistic studies in Stassen (1997, 2009), Heine (1997), and Creissels (2019) languages tend to use
-three general strategies for these nonverbal clause types, shown below
-in [\[3-1-1-3 (2)\]](#3-1-1-3 (2)) for object predication.
-
-<span id="3-1-1-3 (2)" label="3-1-1-3 (2)">\[3-1-1-3 (2)\]</span>
-
-<span id="3-1-1-3 (2a)" label="3-1-1-3 (2a)">\[3-1-1-3 (2a)\]</span> Juxtaposition (“zero
-copula”) - Kukama <br />
-ajan kunumi 	tsumi  
-this young.man 	shaman  
-‘This young man is a shaman.’ 
-
-<span id="3-1-1-3 (2b)" label="3-1-1-3 (2b)">\[3-1-1-3 (2b)\]</span> Separate Predication -
-English  
-Panda is a cat.  
-
-<span id="3-1-1-3 (2c)" label="3-1-1-3 (2c)">\[3-1-1-3 (2c)\]</span> Participant
-Predicativization - Náhuatl (Launey 1994) <br />
-ni-t̄īcitl  
-<span class="smallcaps">1SG</span>-doctor  
-‘I am a doctor’
-
-The first strategy, shown in [\[3-1-1-3 (2a)\]](#3-1-1-3 (2a)) from Kukama, juxtaposes
-the two participants, here the theme and object category, but does not
-overtly express the predication. The second strategy, shown in
-[\[3-1-1-3 (2b)\]](#3-1-1-3 (2b)) from English, has a predicative element (here, the
-copula) that is separate from either participant. Finally, some
-languages, like Náhuatl in [\[3-1-1-3 (2c)\]](#3-1-1-3 (2c)), treat the object
-category participant (*t̄īcitl* ‘doctor’) as the predicate. For all of
-the nonverbal clause categories, there is only one of the participants
-which can act as the predicate cross-linguistically; that is, for object
-predication, it is always the object category participant that looks a
-predicate with this strategy (and never the theme).
-
 For these nonverbal clause categories, the event identified is labelled
 with a special [Abstract?] UMR predicate that indicates the relevant combination of
 semantics and information-packaging. These are shown below in Table 4. For the labelling of participants with these
@@ -624,44 +590,44 @@ nonverbal clause predicates, see §[4](#participantroles).FIX HYPERLINK
 
 </div>
 
-States in modification, as in [\[3-1-1-3 (3a)\]](#3-1-1-3 (3a)) and
-[\[3-1-1-3 (3b)\]](#3-1-1-3 (3b)), and states in reference, as in
-[\[3-1-1-3 (3c)\]](#3-1-1-3 (3c)), are not identified as events.
+States in modification, as in [\[3-1-1-3 (2a)\]](#3-1-1-3 (2a)) and
+[\[3-1-1-3 (2b)\]](#3-1-1-3 (2b)), and states in reference, as in
+[\[3-1-1-3 (2c)\]](#3-1-1-3 (2c)), are not identified as events.
+
+<span id="3-1-1-3 (2)" label="3-1-1-3 (2)">\[3-1-1-3 (2)\]</span>
+
+<span id="3-1-1-3 (2a)" label="3-1-1-3 (2a)">\[3-1-1-3 (2a)\]</span> The
+<u>tall</u> man...
+
+<span id="3-1-1-3 (2b)" label="3-1-1-3 (2b)">\[3-1-1-3 (2b)\]</span> The man,
+<u>who is tall</u>...
+
+<span id="3-1-1-3 (2c)" label="3-1-1-3 (2c)">\[3-1-1-3 (2c)\]</span> His
+<u>happiness</u>...
+
+Similarly, entities in modification, as in [\[3-1-1-3 (3a)\]](#3-1-1-3 (3a)),
+and entities in reference, as in [\[3-1-1-3 (3b)\]](#3-1-1-3 (3b)), are not
+identified as events.
 
 <span id="3-1-1-3 (3)" label="3-1-1-3 (3)">\[3-1-1-3 (3)\]</span>
 
-<span id="3-1-1-3 (3a)" label="3-1-1-3 (3a)">\[3-1-1-3 (3a)\]</span> The
-<u>tall</u> man...
-
-<span id="3-1-1-3 (3b)" label="3-1-1-3 (3b)">\[3-1-1-3 (3b)\]</span> The man,
-<u>who is tall</u>...
-
-<span id="3-1-1-3 (3c)" label="3-1-1-3 (3c)">\[3-1-1-3 (3c)\]</span> His
-<u>happiness</u>...
-
-Similarly, entities in modification, as in [\[3-1-1-3 (4a)\]](#3-1-1-3 (4a)),
-and entities in reference, as in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)), are not
-identified as events.
-
-<span id="3-1-1-3 (4)" label="3-1-1-3 (4)">\[3-1-1-3 (4)\]</span>
-
-<span id="3-1-1-3 (4a)" label="3-1-1-3 (4a)">\[3-1-1-3 (4a)\]</span> The man,
+<span id="3-1-1-3 (3a)" label="3-1-1-3 (3a)">\[3-1-1-3 (3a)\]</span> The man,
 <u>who is a doctor</u>...
 
-<span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The
+<span id="3-1-1-3 (3b)" label="3-1-1-3 (3b)">\[3-1-1-3 (3b)\]</span> The
 <u>doctor</u>
 
 Causal relationships follow the same rules as states and entities. They
 are identified as events when they are predicated, as in
-[\[3-1-1-3 (5a)\]](#3-1-1-3 (5a)), but they are not identified as events
-otherwise, like in [\[3-1-1-3 (5b)\]](#3-1-1-3 (5b)).
+[\[3-1-1-3 (4a)\]](#3-1-1-3 (4a)), but they are not identified as events
+otherwise, like in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)).
 
-<span id="3-1-1-3 (5)" label="3-1-1-3 (5)">\[3-1-1-3 (5)\]</span>
+<span id="3-1-1-3 (4)" label="3-1-1-3 (4)">\[3-1-1-3 (4)\]</span>
 
-<span id="3-1-1-3 (5a)" label="3-1-1-3 (5a)">\[3-1-1-3 (5a)\]</span> The
+<span id="3-1-1-3 (4a)" label="3-1-1-3 (4a)">\[3-1-1-3 (4a)\]</span> The
 **explosion <u>caused</u>** the house **to collapse**.
 
-<span id="3-1-1-3 (5b)" label="3-1-1-3 (5b)">\[3-1-1-3 (5b)\]</span> The house
+<span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The house
 **collapsed** <u>because</u> of the **explosion**.
 
 ##### 3-1-1-4. Implicit events
@@ -811,7 +777,7 @@ this case 'person' or 'thing', as they are clearly identifiable to
 native speakers of the language).
 
 Noun incorporation constructions come in different types across
-languages. Some constructions, such as the one illustrated by *-e'ei*
+languages (Mithun 1984). Some constructions, such as the one illustrated by *-e'ei*
 'head' above, are not very grammaticalized. Here, the incorporated noun
 functions as an argument of the verb, meaning that no overt NP can be
 present in the clause to fill this semantic role. So, while UMR treats
@@ -830,7 +796,7 @@ example, the Arapaho instrumental suffix *-s* indicates that the
 "remove"-event is done by means of a blade-like implement, but still an
 independent NP can appear to specify the instrument. For such
 grammaticalized noun incorporation constructions, no separate concept
-corresponding to the incorporated noun is identified. An participant
+corresponding to the incorporated noun is identified. A participant
 with the :Instrument role is only identified if it is expressed as an
 overt NP in the clause.
 
@@ -864,7 +830,9 @@ by the verb root.
 
 <span id="3-1-3-2 (1)" label="3-1-3-2 (1)">\[3-1-3-2 (1)\]</span> 
 
-<span id="3-1-3-2 (1a)" label="3-1-3-2 (1a)">\[3-1-3-2 (1a)\]</span> Grandmother made the kid drink the water.
+<span id="3-1-3-2 (1a)" label="3-1-3-2 (1a)">\[3-1-3-2 (1a)\]</span>
+
+Grandmother made the kid drink the water.
 ```
 (d/ drink
     :Cause (m/ make
@@ -876,12 +844,14 @@ by the verb root.
     :Aspect Performance
     :Modstr Aff)
 
-Grandmother did not make the kid drink the water.
-Grandmother made the kid not drink the water.
 ```
-<span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span> Grandmother did not make the kid drink the water.
+<span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span>
 
-<span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span> Grandmother made the kid not drink the water.
+Grandmother did not make the kid drink the water.
+
+<span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span>
+
+Grandmother made the kid not drink the water.
 
 Kukama, on the other hand, has a morphological causative, as in
 [\[3-1-3-2 (2)\]](#3-1-3-2 (2)). The caused event and causing event cannot be
@@ -929,7 +899,7 @@ inform the Aspect attribute label of the event they modify (section
 [\[3-1-3-3 (1)\]](#3-1-3-3 (1)). In
 Manipuri, the inchoative concept and the "close"-meaning form part of
 the same word, while in the English translation, they are expressed as
-two different words. Nevertheless, in both the English and the Manipuri
+two different words (example from Bhat 1999). Nevertheless, in both the English and the Manipuri
 UMR, only one event is identified (corresponding to concept of property
 predication, in this case).
 
@@ -1038,7 +1008,7 @@ events, and are annotated in UMR as two separate predicates.
 ##### Part 3-1-3-5. Non-verbal clauses
 
 Many types of "non-verbal clauses", such as predicate nominals and
-predication of properties, possession, and location, show different
+predication of properties, possession, and location (see section 3-1-1-3 for the predicates UMR predicates that are used to annotate these meanings), show different
 mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
 easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
@@ -1054,7 +1024,7 @@ two NPs, with the predicational meaning implicit but inherent in the
 construction. In the Kukama thetic possession construction in [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), on the other hand, the possessum
 and the relation of possession are expressed together as a single word
 which functions as a predicate: something that is typically thought of
-as an "argument" is predicativized. Both these structures pose problems
+as an "argument" is predicativized. In languages that use the construction type exemplified in [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a [\[3-1-3-5 (2)\]](#3-1-3-5 (2))-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
 for the annotation of predicate-argument structure if we want to adhere
 to our position of holistic annotation of words, since there is no
 separate material that can be identified as a predicate.
@@ -1094,7 +1064,7 @@ in [\[3-1-3-5 (1)\]](#3-1-3-5 (1)), we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
 with. They should use an abstract predicate concept from table
 [\[tab:nonverbal\]](#tab:nonverbal) as predicative core of the graph, and use the :ARG0 and :ARG 1 numbered argument roles to link the arguments to this predicate as specified in
-the table.
+the table (see also section 3-2-1-1-1 for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
 [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), UMR takes the same approach as for
@@ -1121,7 +1091,7 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 ##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
-concatnating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
+concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 
 <span id="3-1-3-6 (1)" label="3-1-3-6 (1)">\[3-1-3-6 (1)\]</span>
 
@@ -2089,7 +2059,96 @@ participant roles for valency alternations is the same as that for other
 types of predicates. The predicate is matched with its frame files and
 the participants are annotated accordingly.
 
+##### 3-2-1-3. Inverse participant roles
+
+AMR, the predecessor of UMR, makes use of ``inverse`` participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see section 3-1-1), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the :ARG1-of relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role :ARG1, allows us to maintain a single-rooted graph structure by embedding the ``seeing``-event underneath the participant it modifies (``sweater``). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating ``runner`` in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as (p / person :ARG0-of r / run.02), we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node (r / runner) or something similar.
+
+<span id="3-2-1-3 (1)" label="3-2-1-3 (1)">\[3-2-1-3 (1)\]</span>
+
+<span id="3-2-1-3 (1a)" label="3-2-1-3 (1a)">\[3-2-1-3 (1a)\]</span> 
+I bought the sweater that you saw.
+```
+(b / buy.01
+	:ARG0 (i / I)
+	:ARG1 (s / sweater
+		:ARG1-of (s2 / see.01
+			:ARG0 (y/ you)
+			:Aspect State))
+	:Aspect Performance)
+```
+
+<span id="3-2-1-3 (1b)" label="3-2-1-3 (1b)">\[3-2-1-3 (1b)\]</span> 
+I didn't see whether he bought the sweater.
+```
+(s / see.01
+	:ARG0 (i / I)
+	:ARG1 (t / truth-value
+		:polarity-of (b/ buy.01
+			:ARG0 (h/ he)
+			:ARG1 (s/ sweater)
+			:Aspect Performance))
+	:Aspect State
+	:Polarity -)
+```
+
+<span id="3-2-1-3 (1c)" label="3-2-1-3 (1c)">\[3-2-1-3 (1c)\]</span> 
+The runner was wearing a sweater.
+```
+(w / wear.01
+	:ARG0 (p / person
+		:ARG0-of (r / run.02))
+	:ARG1 (s / sweater)
+	:Aspect State)
+```
+
+UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 1 of the road map. So, in addition to having inverses of numbered participant roles, there are now also :Actor-of and :Undergoer-of roles, and analogues for each of the general participant roles described in table 5 in section 3-2-1-1. Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse :Stimulus-of role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
+
+<span id="3-2-1-3 (2)" label="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
+I bought the sweater that you saw.
+```
+(b / buy.01
+	:Actor (i / I)
+	:Theme (s / sweater)
+		:Stimulus-of (s2 / see.01
+			:Experiencer (y/ you)
+			:Aspect State)
+	:Aspect Performance)
+```
+
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like ``my father``, or ``the President of the University of New Mexico``, UMR uses a (p / person) concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is have-role-91, although more specific predicates for frequently encountered concrete relation types are also available (FLESH OUT AND CREATE ROLESETS FOR PREDICATES). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3))
   
+<span id="3-2-1-3 (3)" label="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
+
+<span id="3-2-1-3 (3a)" label="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
+I met my father.
+```
+(m / meet.03
+	:Arg0 (i / I)
+	:Arg1 (p / person
+		:ARG0-of (k / kinship-91
+			:ARG1 i
+			:ARG2 (f / father)))
+	:Aspect Performance)
+```
+
+<span id="3-2-1-3 (3a)" label="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
+I met the President of the University of New Mexico.
+```
+(m / meet.03
+	:Arg0 (i / I)
+	:Arg1 (p / person
+		:ARG0-of (h / have-org-role-91
+			:ARG1 (a / academic_org
+				:name (n / name
+					:op1 "University
+					:op2 "of"
+					:op3 "New"
+					:op4 "Mexico"
+					:wiki "University_of_New_Mexico"))
+			:ARG2 (p / president)))
+	:Aspect Performance)
+```
+
   #### Part 3-2-2. Non-participant UMR relations
    
    
