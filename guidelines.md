@@ -2115,7 +2115,7 @@ I bought the sweater that you saw.
 	:Aspect Performance)
 ```
 
-One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like ``my father``, or ``the President of the University of New Mexico``, UMR uses a (p / person) concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is have-role-91, although more specific predicates for frequently encountered concrete relation types are also available (FLESH OUT AND CREATE ROLESETS FOR PREDICATES). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3))
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like ``my father``, or ``the President of the University of New Mexico``, UMR uses a (p / person) concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is have-role-91, although more specific predicates for frequently encountered concrete relation types are also available (FLESH OUT AND CREATE ROLESETS FOR PREDICATES). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3)).
   
 <span id="3-2-1-3 (3)" label="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
 
@@ -2149,9 +2149,297 @@ I met the President of the University of New Mexico.
 	:Aspect Performance)
 ```
 
-  #### Part 3-2-2. Non-participant UMR relations
-   
-   
+  #### Part 3-2-2. Non-participant role UMR relations
+  
+Apart from predicate-specific and general participant roles, UMR also has a set of relations that are mainly used to mark NP-internal relations, to mark some types of modifiers of predicates, and to make the meanings of certain natural language expressions computationally tractable. Most of those relations are inherited from AMR, but for some of them, there are some changes in their use.
+
+Some relations are used to describe entities in a standard, canonical form. This is the case, for example, for temporal relations such as :calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year, and :year2. The use of these relations is exemplified in [\[3-2-2 (1)\]](#3-2-2 (1)).
+
+<span id="3-2-2 (1)" label="3-2-2 (1)">\[3-2-2 (1)\]</span> 
+
+<span id="3-2-2 (1a)" label="3-2-2 (1a)">\[3-2-2 (1a)\]</span> 
+March 23rd, 2021
+```
+(d / date-entity
+	:year 2021
+	:month 3
+	:day 23)
+```
+
+<span id="3-2-2 (1b)" label="3-2-2 (1b)">\[3-2-2 (1b)\]</span> 
+Friday the 13th
+```
+(d / date-entity
+	:weekday (f / Friday)
+	:day 13)
+```
+
+<span id="3-2-2 (1c)" label="3-2-2 (1c)">\[3-2-2 (1c)\]</span> 
+3.30 pm Albuquerque time
+```
+(d / date-entity
+	:time 15:30
+	:timezone (z / MST))
+```
+
+Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers within an NP of some sort. Semantically, modification relations in referring expressions come in two kinds: anchoring and typefying (Croft in prep.). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to it). As described in section 3-2-1-3, kinship relations are annotated through the ``kinship-91``, predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses :poss and :part-of relations with the possessum or part as the parent and the possessor or whole as the daughter, as in [\[3-2-2 (2)\]](#3-2-2 (2)).
+
+<span id="3-2-2 (2)" label="3-2-2 (2)">\[3-2-2 (2)\]</span> 
+
+<span id="3-2-2 (2a)" label="3-2-2 (2a)">\[3-2-2 (2a)\]</span> 
+John's car
+```
+(c / car
+	:poss (p / person
+		:name (n / name
+			:op1 "John")))
+```
+
+<span id="3-2-2 (2b)" label="3-2-2 (2b)">\[3-2-2 (2b)\]</span> 
+Guitar strings
+```
+(s / string
+	:part-of (g / guitar)
+	:ref Plural)
+```
+
+Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
+category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation :mod is available. For example, in [\[3-2-2 (3a)\]](#3-2-2 (3a)), the modifier ``women`` does not narrow down the reference of ``magazine`` to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the :mod relation, as opposed to a phrase like "that woman's magazine", where ``woman`` would be annotated with the :poss relation. A number of more fine-grained subtypes of the :mod relation are also available - :age, for indicating the age of referents as in [\[3-2-2 (3b)\]](#3-2-2 (3b)); :consist-of, for indicating the membership of groups [\[3-2-2 (3c)\]](#3-2-2 (3c)); and :topic, for indicating what a referent is about as in [\[3-2-2 (3d)\]](#3-2-2 (3d)).
+
+<span id="3-2-2 (3)" label="3-2-2 (3)">\[3-2-2 (3)\]</span> 
+
+<span id="3-2-2 (3a)" label="3-2-2 (3a)">\[3-2-2 (3a)\]</span> 
+John's car
+```
+(c / car
+	:poss (p / person
+		:name (n / name
+			:op1 "John")))
+```
+
+<span id="3-2-2 (3b)" label="3-2-2 (3b)">\[3-2-2 (3b)\]</span> 
+The thirty year-old man
+```
+(m / man
+	:age (t / temporal-quantity
+		:quant 30
+		:unit (y / year)))
+```
+
+<span id="3-2-2 (3c)" label="3-2-2 (3c)">\[3-2-2 (3c)\]</span> 
+A swarm of bees
+```
+(s / swarm
+	:consist-of (b / bee
+		:ref Plural))
+```
+
+<span id="3-2-2 (3d)" label="3-2-2 (3d)">\[3-2-2 (3d)\]</span> 
+Information about the case
+```
+(i / information
+	:topic (c / case))
+```
+
+A number of relations serve to modify events rather than objects - they are used to annotate circumstantial locative and temporal information rather than participants. The :direction and :path relations are used to annotate cardinal directions and extended spatial paths, respectively, as in [\[3-2-2 (4a)\]](#3-2-2 (4a)) and [\[3-2-2 (4b)\]](#3-2-2 (4b)). The :duration and :frequency relations, illustrated in [\[3-2-2 (4c)\]](#3-2-2 (4c)) - [\[3-2-2 (4e)\]](#3-2-2 (4e)) are optionally used to annotate aspectual information that may be overtly present but that cannot be captured in the :Aspect attribute - as clarified in section 3-3-1, the latter abstracts away from duration and frequency information.
+
+<span id="3-2-2 (4)" label="3-2-2 (4)">\[3-2-2 (4)\]</span> 
+
+<span id="3-2-2 (4a)" label="3-2-2 (4a)">\[3-2-2 (4a)\]</span> 
+He drove west.
+```
+(d / drive.01
+	:ARG0 (h / he)
+	:direction (w / west))
+```
+
+<span id="3-2-2 (4b)" label="3-2-2 (4b)">\[3-2-2 (4b)\]</span> 
+He drove through the tunnel.
+```
+(d / drive.01
+	:ARG0 (h / he)
+	:path (t / tunnel))
+```
+
+<span id="3-2-2 (4c)" label="3-2-2 (4c)">\[3-2-2 (4c)\]</span> 
+I visited New York City for a week.
+```
+(v / visit.01
+	:ARG0 (i / I)
+	:ARG1 (c / city
+		:name (n / name
+			:op1 "New"
+			:op2 "York"
+			:op3 "City"
+			:wiki "New_York_City"))
+	:duration (t / temporal-quantity
+		:quant 1
+		:unit (w / week))
+	:Aspect Endeavor)
+```
+
+<span id="3-2-2 (4d)" label="3-2-2 (4d)">\[3-2-2 (4d)\]</span> 
+I visited New York City twice.
+```
+(v / visit.01
+	:ARG0 (i / I)
+	:ARG1 (c / city
+		:name (n / name
+			:op1 "New"
+			:op2 "York"
+			:op3 "City"
+			:wiki "New_York_City"))
+	:frequency 2
+	:Aspect Performance)
+```
+
+<span id="3-2-2 (4e)" label="3-2-2 (4e)">\[3-2-2 (4e)\]</span> 
+I visit New York City every December.
+```
+(v / visit.01
+	:ARG0 (i / I)
+	:ARG1 (c / city
+		:name (n / name
+			:op1 "New"
+			:op2 "York"
+			:op3 "City"
+			:wiki "New_York_City"))
+	:frequency (r / rate-entity-91
+		:ARG4 (d / date-entity
+			:month 12))
+	:Aspect Habitual)
+```
+
+The relations :name, :wiki, and :op are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a :name relation, whose daughter is an (n / name) node. This node then has as many numbered :opX relations as the number of words this name consists of, each of which taking one of these words as their daughter. In [\[3-2-2 (4e)\]](#3-2-2 (4e)) above, for example, the (n / name) concept corresponding to "New York City" takes an :op1, :op1, and :op3 relation, one for each orthographic word. Named entities can also take a :wiki relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered :op relations are also used in coordination, as in [\[3-2-2 (5)\]](#3-2-2 (5)).
+
+<span id="3-2-2 (5)" label="3-2-2 (5)">\[3-2-2 (5)\]</span> 
+
+I saw a spider and a snake.
+```
+(s / see.01
+	:ARG0 (i / I)
+	:ARG1 (a / and
+		:op1 (s2 / spider)
+		:op2 (s3 / snake))
+	:Aspect State)
+```
+
+The :ord, :quant, :range, :scale, :unit, and :value examples are used to annotate semantics of quantification, as illustrated in [\[3-2-2 (6)\]](#3-2-2 (6)). The :ord role is used to express ordinals. It always takes an (o / ordinal-entity) concept as its daughter, which in turn takes a :value relation to express the ordinal position, as in [\[3-2-2 (6a)\]](#3-2-2 (6a)). It may furthermore take a :range relation to indicate a specific time period in which the relevant ordinal position holds, as in [\[3-2-2 (6b)\]](#3-2-2 (6b)). The :value relation is, apart from ordinals, used for annotating percentages, phone numbers, e-mail addresses, and urls, as illustrated in [\[3-2-2 (6c)\]](#3-2-2 (6c)) adn [\[3-2-2 (6d)\]](#3-2-2 (6d)). The :quant relation is used for annotating both exact and approximate cardinalities of sets of countable objects as in [\[3-2-2 (6e)\]](#3-2-2 (6e)) and [\[3-2-2 (6f)\]](#3-2-2 (6f)), as well as for the number of "units" of non-countable substances, as in [\[3-2-2 (6g)\]](#3-2-2 (6g)). This latter use includes temporal durations and spatial distances, as in [\[3-2-2 (4c)\]](#3-2-2 (4c)) above. The :unit relation is used for both standardized, well-established units such as dollars in [\[3-3-2 (1a)\]](#3-3-2 (1a)) below or weeks in [\[3-2-2 (4c)\]](#3-2-2 (4c)) above, and for ad-hoc mensural constructions, such as cups in [\[3-2-2 (6g)\]](#3-2-2 (6g)). Lastly, the :scale relation is used for quantities where a :quant 0 value does not actually represent a 0-quantity, such as on the Richter or Decibel scale, as in [\[3-2-2 (6h)\]](#3-2-2 (6h))
+
+<span id="3-2-2 (6)" label="3-2-2 (6)">\[3-2-2 (6)\]</span> 
+
+<span id="3-2-2 (6a)" label="3-2-2 (6a)">\[3-2-2 (6a)\]</span> 
+I visited New York for the third time.
+```
+(v / visit.01
+	:ARG0 (i / I)
+	:ARG1 (c / city
+		:name (n / name
+			:op1 "New"
+			:op2 "York"
+			:op3 "City"
+			:wiki "New_York_City"))
+	:ord (o / ordinal-entity
+		:value 3)
+	:Aspect Performance)
+```
+
+<span id="3-2-2 (6b)" label="3-2-2 (6b)">\[3-2-2 (6b)\]</span> 
+I visited New York for the third time in six months.
+```
+(v / visit.01
+	:ARG0 (i / I)
+	:ARG1 (c / city
+		:name (n / name
+			:op1 "New"
+			:op2 "York"
+			:op3 "City"
+			:wiki "New_York_City"))
+	:ord (o / ordinal-entity
+		:value 3
+		:range (t / temporal-quantity
+			:quant 6
+			:unit (m / month)))
+	:Aspect Performance)
+```
+
+<span id="3-2-2 (6c)" label="3-2-2 (6c)">\[3-2-2 (6c)\]</span> 
+30 percent
+```
+(p / percentage-entity
+	:value 30)
+```
+
+<span id="3-2-2 (6d)" label="3-2-2 (6d)">\[3-2-2 (6d)\]</span> 
+http://umr-tool.cs.brandeis.edu/display_post
+```
+(u / url-entity
+	:value "http://umr-tool.cs.brandeis.edu/display_post")
+```
+
+<span id="3-2-2 (6e)" label="3-2-2 (6e)">\[3-2-2 (6e)\]</span> 
+Three houses
+```
+(h / house
+	:quant 3)
+```
+
+<span id="3-2-2 (6f)" label="3-2-2 (6f)">\[3-2-2 (6f)\]</span> 
+More than three houses
+```
+(h / house
+	:quant (m / more-than
+		:op1 3))
+```
+
+<span id="3-2-2 (6g)" label="3-2-2 (6g)">\[3-2-2 (6g)\]</span> 
+Three cups of milk
+```
+(m / milk
+	:quant 3
+	:unit (c / cup))
+```
+
+<span id="3-2-2 (6h)" label="3-2-2 (6h)">\[3-2-2 (6h)\]</span> 
+6.5 on the Richter scale
+```
+(s / seismic-quantity
+	:quant 6.5
+	:scale (r / richter))
+```
+
+The :example relation, illustrated in [\[3-2-2 (7a)\]](#3-2-2 (7a)) is used to annotate illustrative examples of object categories. The :polite relation is used to indicate that an utterance (often a command) is marked for deference with respect to the interlocutor, as in [\[3-2-2 (7b)\]](#3-2-2 (7b)). 
+
+<span id="3-2-2 (7)" label="3-2-2 (7)">\[3-2-2 (7)\]</span> 
+
+<span id="3-2-2 (7a)" label="3-2-2 (7a)">\[3-2-2 (7a)\]</span> 
+Countries like Germany and France
+```
+(c / country
+	:example (a/ and
+		:op1 (c / country
+			:name (n / name
+				:op1 "Germany"
+				:wiki "Germany"))
+		:op2 (c / country
+			:name (n / name
+				:op1 "France"
+				:wiki "France"))))
+```
+
+<span id="3-2-2 (7b)" label="3-2-2 (7b)">\[3-2-2 (7b)\]</span> 
+Could you close the window?
+```
+(c / close.01
+	:ARG0 (y / you)
+	:ARG1 (w / window)
+	:Aspect Performance
+	:Mode Imperative
+	:polite +)
+```
+
+The :condition and :concession relations, lastly, are alternative ways of annotating the have-condition-91 and have-concession-91 predicates - their use is detailed in section 4.3.
+
 ### Part 3-3. UMR attributes
   
   #### Part 3-3-1. Aspect
