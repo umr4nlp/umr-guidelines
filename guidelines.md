@@ -2442,577 +2442,578 @@ The :condition and :concession relations, lastly, are alternative ways of annota
 
 ### Part 3-3. UMR attributes
   
-  #### Part 3-3-1. Aspect
-   
-The aspect annotation captures the internal temporal and qualitative
-structure of each event. This aspect annotation does not correspond to
-specific verbs or grammatical constructions in a language, but
-characterizes the nature of the event in context. As will be seen, this
-will involve taking aspectual constructions, temporal expressions, and
-noun phrases into account in order to determine the aspect annotation of
-the event. Each event will be annotated with one of six aspectual
-values:
+#### Part 3-3-1. Aspect
+
+The aspect annotation consists of a single value that is annotated for
+every event identified in [3.1.1](##part-3-1-1-eventive-concepts). The aspect annotation doesn’t
+have distinct annotation stages, unlike modality and participant roles.
+Instead it relies on a typological lattice which ranges from very
+coarse-grained to very fine-grained aspectual values. It’s expected that
+languages at an earlier stage of semantic analysis or annotation will
+tend to use more coarse-grained values, and languages at later stages of
+annotation will tend to use more fine-grained values.
+
+This is also heavily dependent on the aspectual distinctions that are
+grammaticalized and/or obligatory in the language. For example, although
+English has a long history of semantic analysis and many computational
+resources, it has very little overt aspectual marking in its grammar and
+therefore the most fine-grained aspect distinctions are very difficult
+to judge in annotation. This aspect lattice is shown below. 
+
+![Aspect lattice](aspect-lattice.png)
+
+Below are the aspect values with a brief definition.
+
+```habitual```: occurs/occurred usually or habitually  
+```imperfective```: ambiguous between state and process  
+```process```: unspecified type of process  
+```atelic process```: process that does not reach a result state  
+```perfective```: process that comes to an end  
+```state```: unspecified type of state  
+```reversible state```: acquired state that is not permanent  
+```irreversible state```: acquired state that is permanent  
+```inherent state```: state that is notacquired and permanent  
+```point state```: state that is acquired and reversed at a single point in time  
+```activity```: process that does not end  
+```undirected activity```: process that does not end and does not progress linearly along a scale  
+```directed activity```: process that does not end and does progress linearly along a scale  
+```endeavor```: process that ends without reaching a result state  
+```semelfactive```: process that ends without reaching a result state and happens at a single point in time  
+```undirected endeavor```: process that ends without reaching a result state and does not progress linearly along a scale  
+```directed endeavor```: process that ends without reaching a result state and progresses linearly along a scale  
+```performance```: process that ends and  reaches a result state  
+```incremental accomplishment```: process that ends and reaches a result state, and progresses linearly along a scale  
+```nonincremental accomplishment```: process that ends and reaches a result state, and does not progress linearly along a scale  
+```directed achievement```: process that ends and reaches a result state within a single point in time, and progresses linearly along a scale  
+```reversible directed achievement```: process that ends and reaches a result state, which is not permanent, within a single point in time, and progresses linearly along a scale  
+```irreversible directed achievement```: process that ends and reaches a result state, which is permanent, within a single point in time, and progresses linearly along a scale  
+
+In order to select the appropriate annotation value for each event,
+annotators proceed through a series of decisions.
+
+##### Part 3-3-1-1. Event Nominals
+
+The first decision concerns the morphosyntactic expression of the event. Events expressed as nominals often lack any grammatical clues as to their aspectual structure. This makes determining an aspectual
+annotation value difficult. We do, however, know that these events are
+processes, and not states, since nominals expressing states are not
+identified as events. On the lattice,
+```process``` is the aspectual value that includes all types of processes. Therefore, events expressed as event
+nominals, as in [\[3-3-1-1 (1)\]](#3-3-1-1 (1)), are annotated as
+```process```.
 
 
-  - <span>Not Applicable (NA)</span>
+<span id="3-3-1-1 (1)" label="3-3-1-1 (1)">\[3-3-1 (1)\]</span>
 
-  - <span>HABITUAL</span>
+<span id="3-3-1-1 (1a)" label="3-3-1-1 (1a)">\[3-3-1-1 (1a)\]</span> He presented his
+research at **the meeting** yesterday.
+```
+(m / meeting  
+	Aspect: process)  
+```
 
-  - <span>STATE</span>
+<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">\[3-3-1-1 (1b)\]</span> After **the game**, she
+went home.  
+```
+(g / game  
+	Aspect: process)  
+```
+<span id="3-3-1-1 (1c)" label="3-3-1-1 (1c)">\[3-3-1-1 (1c)\]</span> He had **the operation** on Tuesday.  
 
-  - <span>ACTIVITY</span>
-
-  - <span>ENDEAVOR</span>
-
-  - <span>PERFORMANCE</span>
- 
- 
- 
-Certain types of events are not annotated for aspect; these will receive
-the <span>Not Applicable</span> annotation. Events that occur habitually
-are annotated as <span>HABITUAL</span>. All states are simply annotated
-as <span>STATE</span>, while for processes, annotators choose between
-<span>ACTIVITY</span>, <span>ENDEAVOR</span>, and
-<span>PERFORMANCE</span>. Annotators proceed through a series of
-decisions, in order to select the appropriate
-aspect annotation for each event.
-
-Steps \#1, \#2, and \#3 in the decision tree concern the <span>Not
-Applicable</span> annotation. Step \#4 selects events for the
-<span>HABITUAL</span> annotation. Step \#5 distinguishes
-<span>STATE</span>s from processes. Step \#6 identifies events for the
-<span>ACTIVITY</span> annotation. Steps \#7, \#8, and \#9 concern the
-distinction between the <span>ENDEAVOR</span> and
-<span>PERFORMANCE</span> annotations.
-
-##### Part 3-3-1-1. Event Nominal?
-
-The first point in the decision tree concerns the morphosyntactic
-expression of the event. Events expressed as nominals often lack any
-grammatical clues as to their aspectual structure. This makes
-determining an aspectual annotation value difficult. Therefore, events
-expressed as event nominals, as in [\[3-3-1-1 (1)\]](#3-3-1-1 (1)), are
-annotated as <span>NA</span>.
-
-<span id="3-3-1-1 (1)" label="3-3-1-1 (1)">\[3-3-1-1 (1)\]</span>
-
-<span id="3-3-1-1 (1a)" label="3-3-1-1 (1a)">\[3-3-1-1 (1a)\]</span> *He presented his
-research at **the meeting** yesterday.*  
-<span>meeting: NA</span>
-
-<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">\[3-3-1-1 (1b)\]</span> *After **the game**, she
-went home.*  
-<span>game: NA</span>
-
-<span id="3-3-1-1 (1c)" label="3-3-1-1 (1c)">\[3-3-1-1 (1c)\]</span> *The surgeon
-finished **the operation** at 3pm.*  
-<span>operation: NA</span>
+```
+(o / operation  
+	Aspect: process)  
+```
 
 Any event packaged in a referring expression is considered an event
-nominal and annotated with <span>NA</span>. This includes underived
-nominals, nominalizations, and gerunds, as in [\[3-3-1-1 (2)\]](#3-3-1-1 (2)).
+nominal and annotated with <span class="smallcaps">procecss</span>. This
+includes underived nominals, nominalizations, and gerunds, as in
+[\[3-3-1-1 (2)\]](#3-3-1-1 (2)).
 
 <span id="3-3-1-1 (2)" label="3-3-1-1 (2)">\[3-3-1-1 (2)\]</span>
 
-<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">\[3-3-1-1 (2a)\]</span> ***The second
-training** was cancelled yesterday.*  
-<span>training: NA</span>
+<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">\[3-3-1-1 (2a)\]</span> **The second training** was cancelled yesterday.  
+```
+(t / training  
+	Aspect: process)  
+```
 
-<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">\[3-3-1-1 (2b)\]</span> *The dog
-interrupted the meeting with **his barking**.*  
-<span>barking: NA</span>
+<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">\[3-3-1-1 (2b)\]</span> The dog
+interrupted the meeting with **his barking**.  
+```
+(b / barking  
+	Aspect: process)  
+```
 
 Note that *-ing* forms in English can occur in a variety of
 constructions; they should only be treated as event nominals when they
 are used in referring expressions (as in [\[3-3-1-1 (2a)\]](#3-3-1-1 (2a)) and
 [\[3-3-1-1 (2b)\]](#3-3-1-1 (2b)) above). When they occur in other types of
 constructions, as in [\[3-3-1-1 (3)\]](#3-3-1-1 (3)), they should not
-receive an aspect annotation at this point and should continue on to the
-next step.
+receive an aspect annotation at this point and annotators should
+continue on to the next step.
 
-<span id="3-3-1-1 (3)" label="3-3-1-1 (3)">\[3-3-1-1 (3)\]</span> *The
-dog stopped **barking** for a few seconds.*
+<span id="3-3-1-1 (3)" label="3-3-1-1 (3)">\[3-3-1-1 (3)\]</span> The
+dog stopped **barking** for a few seconds.
 
 Event nominals that occur in predicate nominal constructions, as in
 [\[3-3-1-1 (4)\]](#3-3-1-1 (4)), are also not annotated at this point;
-these are treated like other predicate nominal constructions (see step
-\#5 below).
+these are treated like other predicate nominal constructions.
 
 <span id="3-3-1-1 (4)" label="3-3-1-1 (4)">\[3-3-1-1 (4)\]</span>
 
-*It was **an earthquake**.*
+It was **an earthquake**.
 
-##### Part 3-3-1-2. Non-real event?
+##### Part 3-3-1-2. Habitual
 
-The next step in the decision tree involves the polarity and epistemic
-strength of the event (i.e., the values annotated in the modal strength
-dependency in the second pass). Events which have negative polarity
-and/or non-full epistemic strength are annotated as <span>NA</span>.
-This is because it is difficult to assess (and therefore annotate) the
-internal temporal structure of events which have not actually occurred,
-or are not actually occurring.
+The next step concerns the application of the
+```habitual``` aspect value. This value should
+be applied to all events that are presented as occurring usually or
+habitually, as in [\[3-3-1-2 (1)\]](#3-3-1-2 (1)).
 
-Negative polarity events are often signalled by negative morphemes, as
-in [\[3-3-1-2 (1)\]](#3-3-1-2 (1)). The negative polarity of an event may also be
-signalled by complement-taking predicates which indicate that their
-complement did not occur, as in [\[3-3-1-2 (1e)\]](#3-3-1-2 (1e)), or counterfactual
-constructions, as in [\[3-3-1-2 (1f)\]](#3-3-1-2 (1f)). All negative
-polarity events are annotated as <span>NA</span>.
 
 <span id="3-3-1-2 (1)" label="3-3-1-2 (1)">\[3-3-1-2 (1)\]</span>
 
-<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">\[3-3-1-2 (1a)\]</span> *She <u>didn’t</u> **eat**
-pizza for dinner last night.*  
-<span>eat: NA</span>
+<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">\[3-3-1-2 (1a)\]</span> He **bakes** pies.
+```
+(b / bake  
+	Aspect: habitual) 
+```
+<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">\[3-3-1-2 (1b)\]</span> She **rides** her bike to work. 
+```
+(r / ride  
+	Aspect: habitual)  
+```
+<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">\[3-3-1-2 (1c)\]</span> They
+**vacation** in Taos every winter.  
+```
+(v / vacation  
+	Aspect: habitual)  
+```
+<span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">\[3-3-1-2 (1d)\]</span> They
+**used to vacation** in Taos every winter.  
+```
+(v / vacation  
+	Aspect: habitual)  
+```
 
-<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">\[3-3-1-2 (1b)\]</span> *He <u>never</u>
-**arrived** at the party.*  
-<span>arrive: NA</span>
+In English, present habitual events are signalled by the Simple Present
+construction; past tense habitual events are expressed with the *used
+to* construction. Note that the ```habitual```
+annotation is not used for ability modals (e.g., *he can bake apple
+pie*); these events should continue on to the next step.
 
-<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">\[3-3-1-2 (1c)\]</span> *He **is** <u>not</u>
-**a doctor**.*  
-<span>be-doctor: NA</span>
+##### Part 3-3-1-3. State
 
-<span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">\[3-3-1-2 (1d)\]</span> *That cat **<u>wasn’t</u> black
-and white.***  
-<span>be-black-and-white: NA</span>
+The next step assesses whether the event is a
+```state```. The distinction between states and
+processes is necessary for event identification (as states are only
+identified as events when predicated). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in [\[3-3-1-3 (1)\]](#3-3-1-3 (1)); note that all of the nonverbal clause types identified in [3.1.1](##part-3-1-1-eventive-concepts) and annotated with UMR predicates are annotated as ```state```.
 
-<span id="3-3-1-2 (1e)" label="3-3-1-2 (1e)">\[3-3-1-2 (1e)\]</span> *I <u>wish</u> she had
-**told** me about it.*  
-<span>tell: NA</span>
-
-<span id="3-3-1-2 (1f)" label="3-3-1-2 (1f)">\[3-3-1-2 (1f)\]</span> *If it
-had **rained**, I would have **stayed** home.*  
-<span>rain: NA</span>  
-<span>stay: NA</span>
-
-Another way in which an event may be considered ‘non-real’ is if it has
-non-full epistemic strength. Events which are annotated with non-full
-epistemic strength in the modal strength annotation also receive the
-<span>NA</span> aspect value. The modal strength annotation, however,
-does not apply a single epistemic strength value to each event; instead,
-the modal strength annotation takes the form of a dependency structure,
-with epistemic strength values characterizing the links between events
-and conceivers/sources.
-
-When the event is a direct child of the <span>AUTHOR</span> node in the
-modal strength dependency, only the epistemic strength value of the
-single link between the event and <span>AUTHOR</span> needs to be taken
-into account. If this link has a value other than <span>Aff</span>, then
-the event should receive the <span>NA</span> aspect annotation; see
-[\[3-3-1-2 (2)\]](#3-3-1-2 (2)).
-
-<span id="3-3-1-2 (2)" label="3-3-1-2 (2)">\[3-3-1-2 (2)\]</span>
-
-<span id="3-3-1-2 (2a)" label="3-3-1-2 (2a)">\[3-3-1-2 (2a)\]</span> *He <u>might</u> have
-**hiked** this trail yesterday.*  
-<span>hike: NA</span>
-
-<span id="3-3-1-2 (2b)" label="3-3-1-2 (2b)">\[3-3-1-2 (2b)\]</span> *It’s <u>likely</u> that
-she already **left**.*  
-<span>leave: NA</span>
-
-<span id="3-3-1-2 (2c)" label="3-3-1-2 (2c)">\[3-3-1-2 (2c)\]</span> *She left early,
-<u>in order to</u> **prepare** dinner.*  
-<span>prepare: NA</span>
-
-When events are embedded underneath non-<span>AUTHOR</span> conceivers,
-there must be <span>Aff</span> values on every link from the event back
-up to the <span>AUTHOR</span>, in order for an event to be considered
-‘real’. If any link between the event and the document’s
-<span>AUTHOR</span> node has a value other than <span>Aff</span>, the
-event should be annotated as <span>NA</span>. Example
-[\[3-3-1-2 (3)\]](#3-3-1-2 (3)) shows events that are annotated as
-<span>NA</span> because one the links between the event node and the
-<span>AUTHOR</span> node has non-full epistemic strength.
-
-<span id="3-3-1-2 (3)" label="3-3-1-2 (3)">\[3-3-1-2 (3)\]</span>
-
-<span id="3-3-1-2 (3a)" label="3-3-1-2 (3a)">\[3-3-1-2 (3a)\]</span> *He <u>wants</u> **to fly** to
-New York.*  
-<span>fly: NA</span>
-
-<span id="3-3-1-2 (3b)" label="3-3-1-2 (3b)">\[3-3-1-2 (3b)\]</span> *She <u>hopes</u> **to buy** a
-house.*  
-<span>buy: NA</span>
-
-<span id="3-3-1-2 (3c)" label="3-3-1-2 (3c)">\[3-3-1-2 (3c)\]</span> *If she **left** early, she
-would **be home** by now.*  
-<span>leave: NA</span>  
-<span>be-home: NA</span>
-
-Note that it is only the event expressed in the complement that receives
-the <span>NA</span> annotation. The modal verbs themselves (*want*,
-*hope*) are underneath <span>Aff</span> links in the modal strength
-dependency; therefore, they are not yet given an aspect annotation
-value.
-
-When a conceiver’s thoughts or speech are presented with certainty by
-the author, as in [\[3-3-1-2 (4)\]](#3-3-1-2 (4)), there are <span>Aff</span>
-values on all of the links between the event and the
-<span>AUTHOR</span>.
-
-<span id="3-3-1-2 (4)" label="3-3-1-2 (4)">\[3-3-1-2 (4)\]</span>
-
-<span id="3-3-1-2 (4a)" label="3-3-1-2 (4a)">\[3-3-1-2 (4a)\]</span> *Mary <u>said</u>
-that she **went** to Santa Fe.*
-
-<span id="3-3-1-2 (4b)" label="3-3-1-2 (4b)">\[3-3-1-2 (4b)\]</span> *The New
-York Times <u>reported</u> that Congress **voted** on the bill this
-afternoon.*
-
-<span id="3-3-1-2 (4c)" label="3-3-1-2 (4c)">\[3-3-1-2 (4c)\]</span> *She <u>thinks</u>
-that the cat **stole** the dog’s food.*
-
-Therefore, these types of events are not annotated for aspect at this
-point, and move on to the next step.
-
-##### Part 3-3-1-3. Future event?
-
-Events that are predicted to occur in the future are also difficult to
-annotate for aspect, since the event has not yet occurred. Therefore,
-future events are also annotated with the <span>NA</span> value, as in
-[\[3-3-1-3 (1)\]](#3-3-1-3 (1)).
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">\[3-3-1-3 (1)\]</span>
 
-<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">\[3-3-1-3 (1a)\]</span> *He’<u>ll</u> **come**
-around tomorrow.*  
-<span>come: NA</span>
+<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">\[3-3-1-3 (1a)\]</span> My cat **loves** tuna. 
+```
+(l / love  
+	Aspect: state)  
+```
+<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">\[3-3-1-3 (1b)\]</span> The doctor **is tall**.  
+```
+(h / have-mod-91  
+	Aspect: state) 
+```
+<span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">\[3-3-1-3 (1c)\]</span> The book **is on the table**.  
+```
+(h / have-location-91  
+	Aspect: state)  
+```
+<span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">\[3-3-1-3 (1d)\]</span> She **is an architect**.  
+```
+(h / have-role-91  
+	Aspect: state) 
+```
+<span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">\[3-3-1-3 (1e)\]</span> Your glass **is in
+the kitchen**.  
+```
+(h / have-location-91  
+	Aspect: state) 
+```
 
-<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">\[3-3-1-3 (1b)\]</span> *She <u>is going to</u>
-**write** the paper tomorrow.*  
-<span>write: NA</span>
+Modal verbs, as in [\[3-3-1-3 (2)\]](#3-3-1-3 (2)), and events under the scope of
+ability modals, as in [\[3-3-1-3 (3)\]](#3-3-1-3 (3)), are also annotated as
+```state```.
 
-Events in the future may also have negative polarity or non-full
-epistemic stance; these events have already been annotated as
-<span>NA</span> in Step \#2.
+<span id="3-3-1-3 (2)" label="3-3-1-3 (2)">\[3-3-1-3 (2)\]</span>
 
-##### Part 3-3-1-4. Stative?
+<span id="3-3-1-3 (2a)" label="3-3-1-3 (2a)">\[3-3-1-3 (2a)\]</span> He **wants** to travel to Albuquerque.  
+```
+(w / want  
+	Aspect: state)  
+```
+<span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">\[3-3-1-3 (2b)\]</span> The cat **needs** to be fed. 
+```
+(n / need  
+	Aspect: state)  
+```
+<span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">\[3-3-1-3 (2c)\]</span> He’s **dreading** their decision.  
+```
+(d / dread  
+	Aspect: state)  
+```
+<span id="3-3-1-3 (3)" label="3-3-1-3 (3)">\[3-3-1-3 (3)\]</span>
 
-The next step in the decision tree assesses whether the event is a
-<span>STATE</span> or a process (either <span>ACTIVITY</span>,
-<span>ENDEAVOR</span>, or <span>PERFORMANCE</span>). The distinction
-between states and processes is necessary for event identification (as
-states are only identified as events when predicated). According to ,
-states are those events which are stative—that is, no change takes place
-over the course of the event. There are various ways to express states
-in predication, shown in [\[3-3-1-4 (1)\]](#3-3-1-4 (1)); note that entities
-and locations in predication (as in [\[3-3-1-4 (1d)\]](#3-3-1-4 (1d)) and
-[\[3-3-1-4 (1c)\]](#3-3-1-4 (1c)), are also annotated as <span>STATE</span>).
-
-<span id="3-3-1-4 (1)" label="3-3-1-4 (1)">\[3-3-1-4 (1)\]</span>
-
-<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">\[3-3-1-4 (1a)\]</span> *My cat **loves** tuna.*  
-<span>love: STATE</span>
-
-<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">\[3-3-1-4 (1b)\]</span> *The doctor **is
-tall**.*  
-<span>be-tall: STATE</span>
-
-<span id="3-3-1-4 (1c)" label="3-3-1-4 (1c)">\[3-3-1-4 (1c)\]</span> *The book **is on
-the table**.*  
-<span>be-on-the-table: STATE</span>
-
-<span id="3-3-1-4 (1d)" label="3-3-1-4 (1d)">\[3-3-1-4 (1d)\]</span> *She **is an
-architect**.*  
-<span>be-architect: STATE</span>
-
-<span id="3-3-1-4 (1e)" label="3-3-1-4 (1e)">\[3-3-1-4 (1e)\]</span> *Your glass **is
-in the kitchen**.*  
-<span>be-in-the-kitchen: STATE</span>
-
-States can be expressed as verbs (e.g. *love*), adjectival predicates
-(*be tall*), locative constructions (*be on the table*), and nominal
-predicates (*be an architect*).
-
-There are different types of states, shown in
-[\[3-3-1-4 (2)\]](#3-3-1-4 (2)), however the UMR annotation does not
-distinguish these: they are all annotated as <span>STATE</span>.
-
-<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span>
-
-<span id="3-3-1-4 (2a)" label="3-3-1-4 (2a)">\[3-3-1-4 (2a)\]</span> *My cat **is hungry**.*  
-<span>be-hungry: STATE</span>
-
-<span id="3-3-1-4 (2b)" label="3-3-1-4 (2b)">\[3-3-1-4 (2b)\]</span> *My cat **is
-black and white**.*  
-<span>be-black-and-white: STATE</span>
-
-<span id="3-3-1-4 (2c)" label="3-3-1-4 (2c)">\[3-3-1-4 (2c)\]</span> *He **was sick** this weekend,
-but recovered by Monday.*  
-<span>be-sick: STATE</span>
-
-<span id="3-3-1-4 (2d)" label="3-3-1-4 (2d)">\[3-3-1-4 (2d)\]</span>
-*She **is nervous** today.*  
-<span>be-nervous: STATE</span>
-
-<span id="3-3-1-4 (2e)" label="3-3-1-4 (2e)">\[3-3-1-4 (2e)\]</span> *She **was sick**
-yesterday.*  
-<span>be-sick: STATE</span>
-
-Both temporary states ([\[3-3-1-4 (2a)\]](#3-3-1-4 (2a))) and stable (inherent or
-permanent) states ([\[3-3-1-4 (2b)\]](#3-3-1-4 (2b))) are annotated as
-<span>STATE</span>. Likewise, states that have come to an end
-([\[3-3-1-4 (2c)\]](#3-3-1-4 (2c))), states that are ongoing
-([\[3-3-1-4 (2d)\]](#3-3-1-4 (2d))), and states where it is unclear
-whether or not they are ongoing ([\[3-3-1-4 (2e)\]](#3-3-1-4 (2e))), are all annotated
-<span>STATE</span>.
-
-Modal verbs, as in [\[3-3-1-4 (3)\]](#3-3-1-4 (3)), are also annotated as
-<span>STATE</span>.
-
-<span id="3-3-1-4 (3)" label="3-3-1-4 (3)">\[3-3-1-4 (3)\]</span>
-
-<span id="3-3-1-4 (3a)" label="3-3-1-4 (3a)">\[3-3-1-4 (3a)\]</span> *He **wants** to travel to
-Albuquerque.*  
-<span>want: STATE</span>
-
-<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">\[3-3-1-4 (3b)\]</span> *The cat **needs** to be
-fed.*  
-<span>need: STATE</span>
-
-<span id="3-3-1-4 (3c)" label="3-3-1-4 (3c)">\[3-3-1-4 (3c)\]</span> *He**’s dreading** their
-decision.*  
-<span>dread: STATE</span>
-
-Ability modals, as in [\[3-3-1-4 (4)\]](#3-3-1-4 (4)), are also annotated with
-<span>STATE</span>.
-
-<span id="3-3-1-4 (4)" label="3-3-1-4 (4)">\[3-3-1-4 (4)\]</span>
-
-<span id="3-3-1-4 (4a)" label="3-3-1-4 (4a)">\[3-3-1-4 (4a)\]</span> *She <u>is able to</u>
-**sing** that aria.*  
-<span>sing: STATE</span>
-
-<span id="3-3-1-4 (4b)" label="3-3-1-4 (4b)">\[3-3-1-4 (4b)\]</span> *This car <u>can</u> **go** up
-to 150 mph.*  
-<span>go: STATE</span>
-
+<span id="3-3-1-3 (3a)" label="3-3-1-3 (3a)">\[3-3-1-3 (3a)\]</span> She <u>is able to</u> **sing** that aria.  
+```
+(s / sing  
+	Aspect: state) 
+```
+<span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">\[3-3-1-3 (3b)\]</span> This car <u>can</u> **go** up to 150 mph.  
+```
+(g / go  
+	Aspect: state)  
+```
 In this analysis, ability modals refer to a static state of affairs,
 i.e. an entity possesses the relevant ability. For examples like
-[\[3-3-1-4 (4a)\]](#3-3-1-4 (4a)), ability modals may look more like event
-quantification. That is, there are probably multiple singing events that
-this example is generalizing over. Examples like [\[3-3-1-4 (4b)\]](#3-3-1-4 (4b)),
-however, show how ability modals are more like states. It is possible
+[\[3-3-1-3 (3a)\]](#3-3-1-3 (3a)), ability modals may look more like event
+quantification. That is, there are probably multiple singing events that this example is generalizing over. Examples like [\[3-3-1-3 (3b)\]](#3-3-1-3 (3b)), however, show how ability modals are more like states. It is possible
 that the car has never actually gone as fast as 150 mph; the car just
 has the parts and (theoretical) ability to do so. Therefore, all types
-of ability modals, both [\[3-3-1-4 (4a)\]](#3-3-1-4 (4a)) and [\[3-3-1-4 (4b)\]](#3-3-1-4 (4b)), are
+of ability modals, both [\[3-3-1-3 (3a)\]](#3-3-1-3 (3a)) and [\[3-3-1-3 (3b)\]](#3-3-3 (3b)), are
 analyzed as states and annotated as such.
 
-There is a type of event, called “inactive actions” by , which is
-semantically intermediate between states and processes. In many
-languages, they can be construed either way. For example, English *lie*
-can occur in the Progressive (*Bill **is lying** on the bed*) or the
-Simple Present (*The Sandias **lie** to the east of Albuquerque*). And
-across languages there is variation as to the default construal of
+There is a type of event, called “inactive actions” by Croft (2012), which is semantically intermediate between states and processes. In many languages, they can be construed either way. For example, English *lie* can occur in the Progressive (*Bill **is lying** on the bed*) or the Simple Present (*The Sandias **lie** to the east of Albuquerque*). And across languages there is variation as to the default construal of
 inactive actions. The most frequent inactive actions are posture verbs
 (*sit, stand, lie, hang*), perception verbs (*see/look at, watch,
 hear/listen to, feel*), some sensation verbs (*ache*), mental activity
 verbs (*think, understand*), and verbs of operation/function (*work* in
 *This washing machine **works/is working***). For the UMR annotation,
 inactive actions in all constructions are annotated as
-<span>STATE</span>.
+```state```. If it is unclear whether an event
+refers to a ```state``` or an
+```atelic process```, then the
+```imperfective``` annotation value is used.
 
-At this point, all events that have not yet received an aspect
-annotation are processes. Processes are annotated as either
-<span>ACTIVITY, ENDEAVOR</span>, or <span>PERFORMANCE</span>. These
-values differ in the boundedness of the event both in terms of temporal
-progression and qualitative state. Steps \#6-\#9 distinguish between
-different types of processes.
+There are different types of states, shown in
+[\[3-3-1-3 (4)\]](#3-3-1-3 (4)), which can optionally be distinguished in
+the aspect annotation.
 
-##### Part 3-3-1-5. Habitual?
 
-The next step in the decision tree concerns the application of the
-<span>HABITUAL</span> aspect value. This value should be applied to all
-events that are presented as occurring usually or habitually, as in
-[\[3-3-1-5 (1)\]](#3-3-1-5 (1)).
+<span id="3-3-1-3 (4)" label="3-3-1-3 (4)">\[3-3-1-3 (4)\]</span>
+
+<span id="3-3-1-3 (4a)" label="3-3-1-3 (4a)">\[3-3-1-3 (4a)\]</span> My cat **is black and white**.
+```
+(h / have-mod-91  
+	Aspect: inherent state)  
+```
+<span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">\[3-3-1-3 (4b)\]</span> My cat **is hungry**.  
+```
+(h / have-mod-91  
+	Aspect: reversible state)  
+```
+<span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">\[3-3-1-3 (4c)\]</span> The wine glass **is shattered**.  
+```
+(h / have-mod-91  
+	Aspect: irreversible state)  
+```
+<span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">\[3-3-1-3 (4d)\]</span> It **is 2:30pm**. 
+```
+(h / have-mod-91  
+	Aspect: point state)  
+```
+
+Events that are annotated as ```inherent
+state```, as in [\[3-3-1-3 (4a)\]](#3-3-1-3 (4a)), refer to states that are
+an inherent property of the entity, i.e. they did not ‘start’ at any
+particular point in the entity’s history and are not changeable in the
+future. Events annotated as ```reversible
+state```, as in [\[3-3-1-3 (4b)\]](#3-3-1-3 (4b)), refer to properties of entities
+that are not inherent, meaning they have come into existence at some
+point during the entity’s history; these states are reversible, meaning
+the entity likely will revert back to its base state in the future.
+Events annotated as ```irreversible state```,
+as in [\[3-3-1-3 (4c)\]](#3-3-1-3 (4c)), refer to properties of entities that are not
+inherent, but cannot be reversed in the future; once acquired, these
+states are permanent. Finally, events that are annotated as
+```point state```, as in [\[3-3-1-3 (4d)\]](#3-3-1-3 (4d)),
+refer to states that come into and out of existence over a single point
+in time (what is considered a ‘point’ is open to construal); these
+states necessarily do not persist into the future.
+
+Events that are not annotated as a type of
+```state``` move on to the next step.
+
+##### Part 3-3-1-4. Activity
+
+The ```activity``` label applies to processes
+when there is no evidence that the event has come to an end, as in
+[\[3-3-1-4 (1)\]](#3-3-1-4 (1)).
+
+<span id="3-3-1-4 (1)" label="3-3-1-4(1)">\[3-3-1-4 (1)\]</span>
+
+<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">\[3-3-1-4 (1a)\]</span> He is still **writing** his paper.  
+```
+(w / write  
+	Aspect: activity) 
+```
+<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">\[3-3-1-4 (1b)\]</span> He was
+**writing** his paper yesterday.  
+```
+(w / write  
+	Aspect: activity) 
+```
+
+This covers cases where it is clear that the process is still ongoing at
+document creation time, as in [\[3-3-1-4 (1a)\]](#3-3-1-4 (1a)), but also cases
+where it is ambiguous whether or not the process continues, as in
+[\[3-3-1-4 (1b)\]](#3-3-1-4 (1b)).
+
+This step is largely dependent on context and real world knowledge,
+however there are some grammatical cues that can help. Events in the
+present tense, as in [\[3-3-1-4 (2)\]](#3-3-1-4 (2)), are annotated as
+```activity```.
+
+<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span> He **is playing** the violin.  
+```
+(p / play  
+	Aspect: activity)  
+```
+
+Inceptive and continuative aspectual marking, as in [\[3-3-1-4 (3)\]](#3-3-1-4 (3)),
+also do not imply that an event has (necessarily) ended.
+
+<span id="3-3-1-4 (3)" label="3-3-1-4 (3)">\[3-3-1-4 (3)\]</span>
+
+<span id="3-3-1-4 (3a)" label="3-3-1-4 (3a)">\[3-3-1-4 (3a)\]</span> He
+<u>started</u> **playing** the violin.  
+```
+(p / play  
+	Aspect: activity) 
+```
+<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">\[3-3-1-4 (3b)\]</span> He <u>kept on</u> **playing** the violin.  
+```
+(p / play  
+	Aspect: activity)  
+```
+If an annotator is unsure about whether the text indicates that an event has ended or not, the ```atelic process```
+label can be used.
+
+There are two finer-grained ```activity```
+categories which can optionally be distinguished. Certain type of
+activities describe directed change, as in
+[\[3-3-1-4 (4)\]](#3-3-1-4 (4)), whereas other activities describe
+undirected change, as in [\[3-3-1-4 (5)\]](#3-3-1-4 (5));
+these are annotated as ```directed activity```
+and ```undirected activity``` respectively.
+
+
+<span id="3-3-1-4 (4)" label="3-3-1-4 (4)">\[3-3-1-4 (4)\]</span>
+The soup was **cooling** on the counter.
+```
+(c / cool  
+	Aspect: directed activity)  
+```
+
+<span id="3-3-1-4 (5)" label="3-3-1-4 (5)">\[3-3-1-4 (5)\]</span>
+The cat was **meowing** outside the door.
+```
+(m / meow  
+	Aspect: undirected activity)  
+```
+
+Events annotated as ```directed activity```
+refer to change that occurs gradually along a qualitative scale. In
+[\[3-3-1-4 (4)\]](#3-3-1-4 (4)), the temperature of the soup
+continues to decrease in a linear fashion. Events annotated as
+```undirected activity``` refer to change that
+does not progress incrementally along a scale; in
+[\[3-3-1-4 (5)\]](#3-3-1-4 (5)), there is no scale or gradual
+change.
+
+Events that have ended prior to document creation time and have not yet
+received an annotation move on to the next step.
+
+##### Part 3-3-1-5. Endeavor and Performance
+
+At this point, only ```perfective``` events are
+left: ```endeavor``` and
+```performance```. Both the
+```endeavor``` and
+```performance``` aspectual types entail that
+the process has come to an end; they are distinguished by the
+boundedness of the event in terms of qualitative state. The
+```performance``` value is used when the event
+reaches a result state distinct from the base (start) state, that is, a specific “natural” endpoint. The ```endeavor```
+value is used when the events ends, but does not reach a distinct result
+state. The ```performance``` value can be seen
+as the ‘default’ value for events at this step; the
+```endeavor``` value is only annotated in the
+presence of explicit marking, which may come in several forms detailed
+below. If it’s not clear which category an event fits into, it can be
+annotated as ```perfective```.
+
+The explicit aspectual markings which suggest an
+```endeavor``` annotation are terminative
+aspect marking, durative adverbials, and non-result paths. These are
+illustrated for English below.
 
 <span id="3-3-1-5 (1)" label="3-3-1-5 (1)">\[3-3-1-5 (1)\]</span>
 
-<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">\[3-3-1-5 (1a)\]</span> *He **bakes** pies.*  
-<span>bake: HABITUAL</span>
+<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">\[3-3-1-5 (1a)\]</span> Mary
+<u>stopped</u> **mowing** the lawn.  
+```
+(m / mow  
+	Aspect: endeavor)  
+```
+<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">\[3-3-1-5 (1b)\]</span> Mary **mowed** the lawn <u>for thirty minutes</u>.  
+```
+(m / mow  
+	Aspect: endeavor) 
+```
+<span id="3-3-1-5 (1c)" label="3-3-1-5 (1c)">\[3-3-1-5 (1c)\]</span> \*Mary
+<u>finished</u> **mowing** the lawn <u>for thirty minutes</u>.  
 
-<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">\[3-3-1-5 (1b)\]</span> *She **rides** her bike to
-work.*  
-<span>ride: HABITUAL</span>
+<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">\[3-3-1-5 (1d)\]</span> They **walked** <u>along the river</u>.  
+```
+(w / walk  
+	Aspect: endeavor)
+```
+<span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">\[3-3-1-5 (1e)\]</span> They
+<u>finished</u> **walking** <u>along the river</u>. 
+```
+(w / walk  
+	Aspect: performance) 
+```
+<span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">\[3-3-1-5 (1f)\]</span> They
+**walked** <u>along the river</u> <u>in 3 hours</u>.  
+```
+(w / walk  
+	Aspect: performance) 
+```
 
-<span id="3-3-1-5 (1c)" label="3-3-1-5 (1c)">\[3-3-1-5 (1c)\]</span> *They
-**vacation** in Taos every winter.*  
-<span>vacation: HABITUAL</span>
+Terminative aspectual marking, such as *stop* in English, is the
+strongest evidence that an event has ended without reaching a result
+state and should therefore be annotated as
+```endeavor```. Durative adverbials, such as in
+[\[3-3-1-5 (1b)\]](#3-3-1-5 (1b)), are the second strongest evidence for an
+```endeavor``` annotation: they indicate that
+the event took place for a defined period of time and then ended, likely
+without completion. At least in English, durative adverbials cannot
+co-occur with completive aspectual marking; see
+[\[3-3-1-5 (1c)\]](#3-3-1-5 (1c)). A non-result path is the weakest evidence
+for an ```endeavor``` annotation; in the
+absence of other aspectual indicators, a non-result path requires an
+```endeavor``` annotation, as in
+[\[3-3-1-5 (1d)\]](#3-3-1-5 (1d)). But, if there is a completive aspectual marker,
+as in [\[3-3-1-5 (1e)\]](#3-3-1-5 (1e)), or a container adverbial, as in
+[\[3-3-1-5 (1f)\]](#3-3-1-5 (1f)), both indicators that an event has reached
+a distinct result state, then the event is annotated as
+```performance```.
 
-<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">\[3-3-1-5 (1d)\]</span> *They
-**used to vacation** in Taos every winter.*  
-<span>vacation: HABITUAL</span>
+In the absence of any of the aspectual indicators listed above, events
+that have made it to this point in the decision tree are annotated as
+```performance```.
 
-In English, habitual events are signalled by the Simple Present
-construction. Note that the <span>HABITUAL</span> annotation is not used
-for ability modals (e.g., *he can bake apple pie*); these events should
-continue on to the next step.
+Both ```endeavor``` and
+```performance``` have more fine-grained
+aspectual distinctions which may optionally be annotated. Endeavors may
+be specified with ```undirected endeavor```,
+```directed endeavor```, and
+```semelfactive```. The
+```undirected endeavor``` and
+```directed endeavor``` values correspond to
+```undirected activity``` and
+```directed activity```; they differ in that
+the event has come to an end. Semelfactives refer to punctual events
+that happen once before reverting back to the base state (these are
+similar to ```point state```, but refer to a
+process), as in [\[3-3-1-5 (2c)\]](#3-3-1-5 (2c)).
 
-##### Part 3-3-1-6. Evidence that event ended?
+<span id="3-3-1-5 (2)" label="3-3-1-5 (2)">\[3-3-1-5 (2)\]</span>
 
-The <span>ACTIVITY</span> label applies when there is no evidence that
-the event has come to an end, as in [\[3-3-1-6 (1)\]](#3-3-1-6 (1)).
+<span id="3-3-1-5 (2a)" label="3-3-1-5 (2a)">\[3-3-1-5 (2a)\]</span> The cat
+**meowed** for two hours until I woke up.
+```
+(m / meow  
+	Aspect: undirected endeavor)  
+```
+<span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">\[3-3-1-5 (2b)\]</span> The soup **cooled**
+for an hour before we ate it.
+```
+(c / cool  
+	Aspect: directed endeavor) 
+```
 
-<span id="3-3-1-6 (1)" label="3-3-1-6 (1)">\[3-3-1-6 (1)\]</span>
+<span id="3-3-1-5 (2c)" label="3-3-1-5 (2c)">\[3-3-1-5 (2c)\]</span> The
+cat **meowed** (once).
+```
+(m / meow  
+	Aspect: semelfactive)  
+```
 
-<span id="3-3-1-6 (1a)" label="3-3-1-6 (1a)">\[3-3-1-6 (1a)\]</span> *He is still
-**writing** his paper.*  
-<span>write: ACTIVITY</span>
+The finer-grained annotations for
+```performance``` distinguish between punctual
+events (```direct achievement```) and durative
+events (```incremental accomplishment```,
+```nonincremental accomplishment```), with even
+finer-grained categories based on the type of change.
 
-<span id="3-3-1-6 (1b)" label="3-3-1-6 (1b)">\[3-3-1-6 (1b)\]</span> *He was
-**writing** his paper yesterday.*  
-<span>write: ACTIVITY</span>
+Achievements are punctual events, meaning that are conceptualized as
+occurring at a single point in time (like ```point
+state``` and ```semelfactive```). Unlike
+```point state``` and
+```semelfactive```, achievements don’t revert
+back to the base state, which is why they’re considered a finer-grained
+type of ```performance```. The
+```directed achievement``` annotation can be
+further specified based on whether the change is reversible or
+irreversible. In [\[3-3-1-5 (3a)\]](#3-3-1-5 (3a)), the change that the door
+undergoes can be reversed in that the door can be closed; therefore this
+is annotated as ```reversible directed
+achievement```. In [\[3-3-1-5 (3b)\]](#3-3-1-5 (3b)), the change that the
+window undergoes cannot be reversed; therefore this is annotated as
+```irreversible directed achievement```.
 
-This covers cases where it is clear that the process is still ongoing at
-document creation time, as in [\[3-3-1-6 (1a)\]](#3-3-1-6 (1a)), but also cases
-where it is ambiguous whether or not the process continues, as in
-[\[3-3-1-6 (1b)\]](#3-3-1-6 (1b)).
+Accomplishments are durative events that can be categorized based on
+whether the change occurs incrementally or nonincrementally; this is
+similar to the difference between directed and undirected activities and
+endeavors. With ```incremental
+accomplishment```, the change occurs incrementally along the
+qualitative dimension; in [\[3-3-1-5 (3c)\]](#3-3-1-5 (3c)), the pancake
+is eaten piece-by-piece and each subsequent bite brings the event closer
+to completion. With ```nonincremental
+accomplishment```, the change ends up at a distinct result state (as
+with all types of Performances), but it may not get there in a
+linear/incremental fashion. In [\[3-3-1-5 (3d)\]](#3-3-1-5 (3d)),
+the computer does not necessarily get progressively more repaired with
+each action. Harry may try one tactic unsuccessfully to fix the
+computer; he may even make the problem worse at some point, but
+eventually succeeds in repairing the computer.
 
-This step is largely dependent on context and real world knowledge,
-however there are some grammatical cues that can help at this point in
-the decision tree. Events in the present tense, as in
-[\[3-3-1-6 (2)\]](#3-3-1-6 (2)), will always be annotated as
-<span>ACTIVITY</span>.
+<span id="3-3-1-5 (3)" label="3-3-1-5 (3)">\[3-3-1-5 (2)\]</span>
 
-<span id="3-3-1-6 (2)" label="3-3-1-6 (2)">\[3-3-1-6 (2)\]</span> *He **is playing**
-the violin.*  
-<span>play: ACTIVITY</span>
-
-Inceptive and continuative aspectual auxiliaries, as in
-[\[3-3-1-6 (3)\]](#3-3-1-6 (3)), also do not imply that an event has (necessarily)
-ended.
-
-<span id="3-3-1-6 (3)" label="3-3-1-6 (3)">\[3-3-1-6 (3)\]</span>
-
-<span id="3-3-1-6 (3a)" label="3-3-1-6 (3a)">\[3-3-1-6 (3a)\]</span> *He
-<u>started</u> **playing** the violin.*  
-<span>play: ACTIVITY</span>
-
-<span id="3-3-1-6 (3b)" label="3-3-1-6 (3b)">\[3-3-1-6 (3b)\]</span> *He <u>kept
-on</u> **playing** the violin.*  
-<span>play: ACTIVITY</span>
-
-If there is clear evidence that the event has come to an end prior to
-Document Creation Time (DCT), it moves on to the next step.
-
-##### Part 3-3-1-7. Aspectual marking?
-
-Steps \#7, \#8, and \#9 distinguish between the <span>ENDEAVOR</span>
-and <span>PERFORMANCE</span> aspect annotations. Both the
-<span>ENDEAVOR</span> and <span>PERFORMANCE</span> aspectual types
-entail that the process has come to an end; they are distinguished by
-the boundedness of the event in terms of qualitative state. The
-<span>PERFORMANCE</span> value is used when the event reaches a result
-state distinct from the base (start) state, that is, a specific
-“natural” endpoint. The <span>PERFORMANCE</span> value lumps
-together Vendler’s achievements (punctual) and accomplishments
-(durative). The <span>ENDEAVOR</span> value is used when the events
-ends, but does not reach a distinct result state.
-
-The strongest piece of evidence for this decision are aspectual
-constructions that distinguish between completive and terminative
-events. In English, these are expressed by aspectual auxiliary verbs,
-shown in [\[3-3-1-7 (1)\]](#3-3-1-7 (1)).
-
-<span id="3-3-1-7 (1)" label="3-3-1-7 (1)">\[3-3-1-7 (1)\]</span>
-
-<span id="3-3-1-7 (1a)" label="3-3-1-7 (1a)">\[3-3-1-7 (1a)\]</span>
-*Mary <u>finished</u> **mowing** the lawn.*  
-<span>mow: PERFORMANCE</span>
-
-<span id="3-3-1-7 (1b)" label="3-3-1-7 (1b)">\[3-3-1-7 (1b)\]</span>
-*Mary <u>stopped</u> **mowing** the lawn.*  
-<span>mow: ENDEAVOR</span>
-
-Completive aspectual auxiliaries, like *finish* or *complete*, indicate
-that the event expressed by the main verb has reached a distinct result
-state and therefore should be annotated as <span>PERFORMANCE</span>.
-Terminative aspectual auxiliaries, like *stop* or *cease*, indicate that
-the event has ended without reaching a distinct result state, and
-therefore the event is annotated as <span>ENDEAVOR</span>. In languages
-that have grammaticalized aspect systems, the <span>PERFORMANCE</span>
-value corresponds to perfective categories and the <span>ENDEAVOR</span>
-value corresponds to the imperfective and/or progressive categories.
-
-If there isn’t an aspectual auxiliary in the clause, then the event
-moves on to the next step.
-
-##### Part 3-3-1-8. Temporal adverbial?
-
-The second strongest piece of evidence for the
-<span>ENDEAVOR/PERFORMANCE</span> distinction is the presence of a
-temporal adverbial. Clauses with container adverbials, as in
-[\[3-3-1-8 (1a)\]](#3-3-1-8 (1a)), are annotated with the
-<span>PERFORMANCE</span> value; clauses with durative adverbials, as in
-[\[3-3-1-8 (1b)\]](#3-3-1-8 (1b)), are annotated with the <span>ENDEAVOR</span>
-value.
-
-<span id="3-3-1-8 (1)" label="3-3-1-8 (1)">\[3-3-1-8 (1)\]</span>
-
-<span id="3-3-1-8 (1a)" label="3-3-1-8 (1a)">\[3-3-1-8 (1a)\]</span>
-
-*Mary **mowed** the lawn <u>in thirty minutes</u>.*  
-<span>mow: PERFORMANCE</span>
-
-<span id="3-3-1-8 (1b)" label="3-3-1-8 (1b)">\[3-3-1-8 (1b)\]</span>
-
-*Mary **mowed** the lawn <u>for thirty minutes</u>.*  
-<span>mow: ENDEAVOR</span>
-
-Example [\[3-3-1-8 (1a)\]](#3-3-1-8 (1a)) implies that Mary finished mowing
-the lawn; therefore the event is annotated with the
-<span>PERFORMANCE</span> value. Example [\[3-3-1-8 (1b)\]](#3-3-1-8 (1b))
-doesn’t imply that Mary has finished mowing the lawn; therefore the
-event is annotated with the <span>ENDEAVOR</span> value.
-
-If there isn’t a durative or container adverbial in the clause, then the
-event moves on to the final step.
-
-##### Part 3-3-1-9. Non-result Path?
-
-Certain types of path expressions indicate that an event did not reach a
-specific result state; these are called non-result paths. Examples of
-non-result paths are show below in [\[3-3-1-9 (1)\]](#3-3-1-9 (1)).
-
-<span id="3-3-1-9 (1)" label="3-3-1-9 (1)">\[3-3-1-9 (1)\]</span>
-
-<span id="3-3-1-9 (1a)" label="3-3-1-9 (1a)">\[3-3-1-9 (1a)\]</span> *They **wandered**
-<u>around the city</u>.*  
-<span>wander: ENDEAVOR</span>
-
-<span id="3-3-1-9 (1b)" label="3-3-1-9 (1b)">\[3-3-1-9 (1b)\]</span> *He **walked** <u>along the
-river</u>.*  
-<span>walk: ENDEAVOR</span>
-
-<span id="3-3-1-9 (1c)" label="3-3-1-9 (1c)">\[3-3-1-9 (1c)\]</span> *They **drove** <u>past
-the junction</u>.*  
-<span>drive: ENDEAVOR</span>
-
-Events with non-result paths are annotated as <span>ENDEAVOR</span>.
-
-At this point, every event that is left without an aspect annotation is
-annotated as <span>PERFORMANCE</span>. These will include processes that
-have ended and reached a result state, as shown below in
-[\[3-3-1-9 (2)\]](#3-3-1-9 (2)).
-
-<span id="3-3-1-9 (2)" label="3-3-1-9 (2)">\[3-3-1-9 (2)\]</span>
-
-<span id="3-3-1-9 (2a)" label="3-3-1-9 (2a)">\[3-3-1-9 (2a)\]</span> *The dog
-**ate** all the cookies.*  
-<span>eat: PERFORMANCE</span>
-
-<span id="3-3-1-9 (2b)" label="3-3-1-9 (2b)">\[3-3-1-9 (2b)\]</span> *She **walked** to
-the grocery store.*  
-<span>walk: PERFORMANCE</span>
-
-<span id="3-3-1-9 (2c)" label="3-3-1-9 (2c)">\[3-3-1-9 (2c)\]</span> *The horse **jumped**.*  
-<span>jump: PERFORMANCE</span>
-
-<span id="3-3-1-9 (2d)" label="3-3-1-9 (2d)">\[3-3-1-9 (2d)\]</span> *We **played** video games
-yesterday.*  
-<span>play: PERFORMANCE</span>
+<span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">\[3-3-1-5 (3a)\]</span> The door **opened**.
+```
+(o / open  
+	Aspect: reversible directed achievement)
+```
+<span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">\[3-3-1-5 (3b)\]</span> The window
+**shattered**.
+```
+(s / shatter  
+	Aspect: irreversible directed achievement)  
+```
+<span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">\[3-3-1-5 (3c)\]</span> I
+**ate** an apple pancake.
+```
+(a / ate  
+	Aspect: incremental accomplishment)
+```
+<span id="3-3-1-5 (3d)" label="3-3-1-5 (3d)">\[3-3-1-5 (3d)\]</span>
+Harry **repaired** the computer.
+```
+(r / repair  
+	Aspect: nonincremental accomplishment) 
+```
   
 #### Part 3-3-2. Mode
 
