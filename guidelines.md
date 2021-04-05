@@ -309,6 +309,8 @@ The document-level representation indicates the *say-01* event happened before t
 
 ##  Part 2: From AMR to UMR
 
+### Part 2-1. Introduction
+
 UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph, as in [\[2 (1)\]](#2 (1)). The nodes of this graph are UMR concepts, while edges represent UMR relations. 
 
 <span id="2 (1)" label="2 (1)">\[2 (1)\]</span>
@@ -378,6 +380,305 @@ UMR differs from AMR in a number of ways:
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
 * UMR allows the use of non-predicate-specific participant roles for languages that do not *frame files*
 * UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) for details.
+
+### Part 2-2: Introduction for field linguists.
+
+The annotation scheme detailed in these guidelines, Uniform Meaning
+Representation (UMR), intends to allow for annotation of temporal,
+aspectual, modal, and quantification semantics, as well as semantic
+argument structure, in a cross-linguistically motivated and portable
+way. Some semantic domains, specifically co-reference, temporal
+relations, and modal relations, are annotated in a document-level
+structure. Other domains, such as predicate-argument structure, aspect,
+and quantification, are annotated in a sentence-level structure.
+
+This UMR sentence-level structure builds on a sentence-level representation
+that is adapted from the Abstract Meaning Representation (AMR)
+annotation scheme, which was originally designed for the annotation of
+English, and has since been extended to Chinese and Arabic, amongst
+others. This means that, before getting to the cross-linguistically
+motivated parts of UMR annotation, annotators for new languages need to
+do some AMR-based annotation of their texts, specifically regarding
+predicate-argument structure. This section of the guidelines discusses
+which parts of AMR annotation are required before the UMR annotation
+procedure detailed in the rest of these guidelines can be applied.
+
+The core of AMR is that it represents natural language sentences as
+single-rooted, directed, node-labelled and edge-labelled graphs.
+Semantic concepts expressed in such natural language sentences are
+represented in two ways. Some of them are represented as *concepts*,
+which means that they function as nodes in the AMR graphs. This is the
+case for predicates and (heads of) referring expressions, for instance.
+Other meanings are represented as *relations* in AMR, which means that
+they function as edges in the AMR graphs. This is the case for argument
+roles and modifiers of nouns, amongst others.
+
+The annotation of predicate-argument structure is the main domain in
+which AMR annotation conventions are inherited. First and foremost,
+predicated events are represented in the graph as nodes, as are
+predicated states, events that are being referred to or used as
+modifiers, and various other kinds of "non-verbal predicates" (see
+section 3.1.5 on event identification). For annotation of English texts,
+sense-disambiguated predicates from PropBank are used to label predicate
+nodes. Since for most languages, no equivalent of PropBank is available,
+we recommend labelling nodes with a citation form of the verb
+supplemented with a -00 suffix. In this way, annotations can be used for
+the development of digital lexicons in the future.
+
+The semantic arguments of such predicate nodes are represented in the
+graph as daughter nodes of the relevant predicate (see section 3.1.6 on
+participant identification). The edge that connects parent and daughter
+nodes in these structures carries a participant role label. For English,
+these participant role labels are predicate-specific, numbered argument
+roles drawn once again from PropBank. For languages without comparable
+lexical databases, we use an inventory of general argument roles such as
+Actor, Undergoer, and Theme. In the long run, annotations can be used to
+create language-specific and predicate-specific frame files detailing
+argument structure of individual predicates, and the predicate-specific
+argument roles can be linked to predicate-general participant roles for
+commensurability (see section 3.2.1 on argument structure annotation).
+This AMR-based predicate-argument annotation is shown in its most basic
+form in [\[2-2-1 (1)\]](#2-2-1 (1)) below.
+
+<span id="2-2-1 (1)" label="2-2-1 (1)">\[2-2-1 (1)\]</span>
+```
+ap-hle-am-ke'				nenhlet
+2M-travel-PST/HAB-V1.NFUT	person
+'A man travelled.'
+
+(e / enhleama-00 'travel'
+	:Actor (n / nenhlet 'person))
+(t / travel-01
+	:ARG0 (m/ man))
+```
+
+The basic, AMR-inspired graph structures for simple sentences in
+languages like English and Sanapaná then look very similar, as shown
+above: they both have a predicate corresponding to the main event of the
+sentence as the top of the graph - the English one has a reference to a
+numbered PropBank frame file for the predicate *travel*, the Sanapaná
+one just has the citation form of the *travel*-verb with a -00 suffix.
+In both cases, the semantic argument 'person/man' is a daughter of this
+predicate, linked with a participant role edge. In English, this is a
+numbered participant role taken from this same PropBank frame file,
+while in Sanapaná it is a predicate-general participant role.
+
+AMR and UMR concepts are underspecified for morphosyntactic
+representation: the same concept (for example, *travel-01*) can be used
+to annotate a verb (as seen above), a noun (e.g. *his travels* in [\[2-2-1 (2)\]](#2-2-1 (2))), or any other relevant part of speech conveying the same semantic meaning. Section 3.1.1 discusses how AMR and UMR deal with the
+information-packaging differences which are conveyed by packaging such
+content in different parts of speech.
+
+<span id="2-2-1 (2)" label="2-2-1 (2)">\[2-2-1 (2)\]</span>
+```
+I heard about his travels.
+
+(h / hear-01
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (t / travel-01
+		:ARG0 (p2 / person
+			:ref-person 3rd
+				:ref-number Singular))
+```
+
+UMR inherits annotation conventions from AMR in domains other than
+predicate-argument structure. With regard to concepts, UMR treats
+multi-word expressions in essentially the same way as AMR. Specifically,
+it allows annotators to select multiple words in a sentence and annotate
+them as a single concept. This is necessary, for example, to annotate
+idiomatic expressions which cannot be semantically decomposed
+felicitously. In [\[2-2-1 (3)\]](#2-2-1 (3)), for instance,
+*elvongkeskama tayep* is a multi-word expression which literally and
+compositionally means "cause (someone) to be just across", but its
+idiomatic meaning is "rescue". The two words are therefore annotated
+together as a multi-word expression with a single meaning. Some further
+specifications are made in UMR with regards to the annotation of
+multi-word expressions such as serial verb constructions and
+periphrastic TAM constructions. More information about the annotation of
+multi-word expressions is given throughout section 3.1.3, and
+specifically in section 3-1-3-6.
+
+<span id="2-2-1 (3)" label="2-2-1 (3)">\[2-2-1 (3)\]</span>
+```
+apk-el-vongk-es-akp-e'				tayep	ayko<'o>k
+2/3M-DISTR-be.just-CAUS-PAS-V1.NFUT	across	child<PL>
+'The children were rescued.'
+
+(e / elvongkeskama-tayep-00 'rescue'
+	:Undergoer (a/ aykok 'child'
+		:ref-number Plural))
+```
+
+AMR conventions are also largely inherited with regards to the use of
+abstract concepts. Abstract concepts are concepts that are identified
+and annotated even though they do not (consistently) correspond to any
+overt word in the sentence. There are typically two main reasons for
+which AMR and UMR use abstract concepts. Firstly, there are concepts
+where AMR and UMR use abstract concepts rather than language-specific
+concepts corresponding to specific words with the goal of making
+annotations cross-linguistically comparable. For example, even though
+the Sanapaná thetic possession construction in [\[2-2-1 (4)\]](#2-2-1 (4)) makes use of a verb
+that literally means *exist*, an abstract concept predicate node
+"have-03" is introduced rather than a language specific "enyetnema-00"
+concept. This way, possessive constructions across the world's languages
+can be annotated in consistent and comparable ways regardless of the
+morphosyntactic strategies they use (see section 3-1-3-5 for more
+information on such "non-verbal clauses").
+
+<span id="2-2-1 (4)" label="2-2-1 (4)">\[2-2-1 (4)\]</span>
+```
+an-yetn-eye'			ko'o	vakka-hak	ah-ahangkok
+2/3F-exist-V1.NFUT		1SG:PRO	cow-old		1SG-POS
+'I have a book.' lit. 'My book exists.'
+
+(h/ have-03
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (v/ vakkahak 'book'))
+```
+
+Secondly, abstract concept conventions are inherited from AMR in a
+variety of domains where information expressed in natural language text
+needs to be standardized for computational tractability. This applies
+to, for example, the annotation of different types of quantities (which
+use abstract concepts such as *distance-quantity*,
+*temporal-quantity* and *monetary-quantity*, as
+illustrated in [\[2-2-1 (5a)\]](#2-2-1 (5a)) )-[\[2-2-1 (5b)\]](#2-2-1 (5b)), and the annotation of dates and times (which use abstract concepts such as *date-entity*, as illustrated in [\[2-2-1 (5c)\]](#2-2-1 (5c)). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic
+phenomena for which they are needed.
+
+<span id="2-2-1 (5)" label="2-2-1 (5)">\[2-2-1 (5)\]</span>
+
+<span id="2-2-1 (5a)" label="2-2-1 (5a)">\[2-2-1 (5a)\]</span>
+```
+cinco,	seis	meses	apk-ehl-ta'mehl-kes-kam-a
+five	six		months	2/3M-DSTR-be.good-CAUS-PST/HAB-NOM
+'They used to preserve it for five or six months.'
+
+(e/ enta'mehlkeskama-00 'preserve'
+	:Actor (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:Undergoer (t/ thing)
+	:Duration (o/ or
+		:op1 (t2/ temporal-quantity
+			:quant 5
+			:unit (m/ mes 'month'))
+		:op2 (t3/ temporal-quantity
+			:quant 6
+			:unit (m/ mes 'month'))))
+```
+<span id="2-2-1 (5b)" label="2-2-1 (5b)">\[2-2-1 (5b)\]</span>
+```
+escuela	agrícola		seis	millón	cada	año		on-yanmong-kes-ek
+school	agricultural	six		million	each	year	1PL.IRR-exchange-CAUS-FUT
+'For the agricultural school, we would pay six million (guaranies) per year.'
+
+(e/ enyanmongkeskama-00 'pay'
+	:Actor (p/ person
+		:ref-person 1st
+		:ref-number Plural)
+	:Recipient (e2/ escuela 'school'
+		:mod (a/ agrícola 'agricultural'))
+	:Theme (m/ monetary-quantity
+		:quant 6,000,000
+		:unit (g/ guaraní
+			:mod (c/ country
+				:wiki "Paraguay"
+				:name (n/ name :op1 "Paraguay"))))
+	:Frequency (r/ rate-entity
+		:ARG1 1
+		:ARG2 (t/ temporal-quantity
+			:quant 1
+			:unit (a2/ año 'year))))
+```
+<span id="2-2-1 (5c)" label="2-2-1 (5c)">\[2-2-1 (5c)\]</span>
+```
+apk-el-v-ayk-akh-a'					Venancio	el-eyv-om-akha'				mil			novecientos		sesenta	y	seis=anehla
+2/3M-DSTR-arrive-PST/HAB-REP-NOM	Venancio	1PL-live-PST/HAB-NOM.LOC	thousand	nine-hundred	sixty	and	six=DUB
+'Venancio and his companions arrived where we lived in ninteen sixty-six, maybe.'
+
+(e/ elvay'a-00 'arrive'
+	:Actor (p/ person
+		:name (n/ name "Venancio")
+		:Companion (p2/ person))
+	:Goal (p3/ place
+		:Place-of (e2/ eleyvoma-00 'live'
+			:Actor (p4/ person
+				:ref-person 1st
+				:ref-number Plural)))
+	:Temporal (d/ date-entity
+		:year 1966))
+```
+Another domain in which AMR conventions are inherited by UMR is the
+annotation of non-participant role relations. Such relations are used to
+annotate a wide range of meanings. Many of them, such as :medium,
+:topic, and :mod (the latter of which is illustrated in [\[2-2-1 (5b)\]](#2-2-1 (5b)) are used to
+annotate modifiers of referring expressions. Other relations are used
+with specific abstract concepts: whenever a *date-entity*
+concept is present, one of the temporal relations :month, :year, :date
+etc. will be used, for example. The use of these relations is treated
+more in detail in section 3-2-2 of this document.
+
+Even though many of these relations are straightforwardly inherited by
+UMR, some changes are made to their use for the sake of cross-linguistic
+comparability. Firstly, UMR adjusts the use of the :mod relation to
+cover all *typifying* modifiers - i.e. modifiers which subcategorize the
+reference of a referring expression rather than narrowing it down to a
+specific entity (e.g. *women* in *women's magazine*). In AMR, this
+semantic domain was shared between the :mod relation and a number of
+other relations such as :medium, :topic, and :consist-of. In UMR, these
+other relations still exist, but they are treated as more fine-grained
+values on a lattice underneath the more general :mod relation. Whereas
+AMR used the :frequency and :duration relations as the main ways of
+annotating Aspect, UMR does this through a dedicated :Aspect attribute.
+However, UMR maintains the :duration and :frequency relations so that
+annotators can use them to indicate more fine-grained aspectual
+information beyond the aspect categories offered in the corresponding
+attribute, as in [\[2-2-1 (5b)\]](#2-2-1 (5b)). UMR also adds a new non-participant role relation: the :other relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
+
+The last area in which AMR conventions are inherited by UMR is that of
+*attribute* annotations. Attributes are relations which attach one of a
+closed, pre-defined list of values to a concept node: for example, the
+:Aspect attribute allows annotators to hang a *state, habitual,
+activity, endeavor*, or *performance* value off
+of a predicate node. Attributes inherited from AMR are :polarity, :mode,
+:quant, and :value (discussed in more depth in section 3-2-2). The use
+of the :quant relation was changed in that a more fine-grained
+annotation scheme for quantification is now available (see sections
+3-1-5 and 3-3-4). The :quant relation is mainly what annotators with
+less training or for languages with less available linguistic analysis
+will use to flag concepts that are of interest with regards to
+quantification (i.e. in stage 0 annotation). More confident annotators
+and annotators for well-documented languages will apply the full
+fine-grained quantification and scope scheme (stage 1 annotation). One
+specific change is that, whereas in mensural constructions (e.g. *three
+cups of milk*, AMR varies between having the substance or the mensural
+term as the head depending on morphosyntactic expression, UMR always
+annotates the substance as the head for greater cross-linguistic
+comparability. This means that even less conventionalized measure terms,
+like English *cup* or *bag*, are annotated as modifiers, even though
+they look like morphosyntactic heads. This is illustrated in [\[2-2-1 (6)\]](#2-2-1 (6)). The use of the :polarity value is constrained to the sentence level.
+Propositional negation is annotated in the modal section of the document
+level annotation. The :polarity value is used to indicate any overt
+morphosyntactic exponents of negation at the sentence level, flagging
+such concepts as interesting for the modal or scope negation. This
+includes e.g. morphologically negated adjectives, even though in the
+document-level modal annotation, these will not be annotated as negated.
+
+<span id="2-2-1 (6)" label="2-2-1 (6)">\[2-2-1 (6)\]</span>
+```
+Three bottles of water
+
+(w/ water
+	:quant 3
+	:unit (b/ bottle)
+```
+
+UMR introduces three new attributes: :Aspect (see section 3-3-1), and
+:ref-person and :ref-number (see section 3-3-5).
 
 
 ## Part 3. Sentence-Level Representation
