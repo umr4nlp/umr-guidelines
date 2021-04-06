@@ -2739,7 +2739,9 @@ Could you close the window?
 	:polite +)
 ```
 
-The :condition and :concession relations, lastly, are alternative ways of annotating the have-condition-91 and have-concession-91 predicates - their use is detailed in section 4.3.
+The :condition and :concession relations are alternative ways of annotating the have-condition-91 and have-concession-91 predicates - their use is detailed in section 4.3.
+
+Lastly, annotators have at their disposal an :other relation. If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this :other relation, linking it to the concept node that seems appropriate.
 
 ### Part 3-3. UMR attributes
   
@@ -3319,7 +3321,7 @@ Harry **repaired** the computer.
 #### Part 3-3-2. Mode
 
 UMR adopts the mode attribute for AMR. The four values for the **mode** attribute include
-*expressive*, *imperative*, as in [\[3-3-2 (1)\]](#3-3-2 (1)).
+*expressive*, *imperative*, and *interrogative* as in [\[3-3-2 (1)\]](#3-3-2 (1)). 
 
 <span id="3-3-2 (1)" label="3-3-2 (1)">3-3-2 (1)</span>
 
@@ -3349,9 +3351,11 @@ Chalk another good one up to the wife .
 
 
 #### Part 3-3-3. Polarity
-
+UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute :polarity is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in [\[3-3-3 (1)\]](#3-3-3 (1)). These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
 
 <span id="3-3-3 (1)" label="3-3-3 (1)">3-3-3 (1)</span>
+
+<span id="3-3-3 (1a)" label="3-3-3 (1a)">3-3-3 (1a)</span>
 ```
 Most of the time , economic policy and economic theory are not aimed at\
  individuals .
@@ -3366,6 +3370,16 @@ Most of the time , economic policy and economic theory are not aimed at\
       :ARG2 (i / individual)
       :frequency (t2 / time
             :quant (m / most)))
+```
+
+<span id="3-3-3 (1b)" label="3-3-3 (1b)">3-3-3 (1b)</span>
+```
+Unhealthy food.
+
+(t / thing
+	:ARG1-of (e/ eat-01)
+	:mod (h/ healthy
+		:polarity -))
 ```
 
 #### Part 3-3-4. Quant
@@ -3384,28 +3398,83 @@ As of now , five million tickets have been sold on the StubHub website .
 ```
 
 #### Part 3-3-5. Ref
-The *Ref* attribute is used to represent pronominal features that include person and number. UMR decomposes a pronoun into a concept (e.g., person, thing) with an attribute to facilitate cross-lingual compatability, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
+As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically based way. It annotates person and number through two attributes - :ref-person, for grammatical person information, and :ref-number for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
 
 <span id="3-3-5 (1)" label="3-3-5 (1)">3-3-5 (1)</span>
+
+<span id="3-3-5 (1a)" label="3-3-5 (1a)">3-3-5 (1a)</span>
 ```
-He denied any wrongdoing.
-(d / deny-01
-      :Aspect Performance
-      :ARG0 (h / person
-               :ref 3s)
-      :ARG1 (t / thing
-            :ARG1-of (d2 / do-02
-                  :ARG0 h
-                  :ARG1-of (w / wrong-02))))
+Bill saw rare birds today.
+(s / see-01
+	:ARG0 (p/ person
+		:name (n/ name	:op1 "Bill"))
+	:ARG1 (b/ bird
+		:mod (r/ rare)
+		:ref-number Plural))
 ```
-| prounoun| attribute | pronoun | attribute |
+
+<span id="3-3-5 (1b)" label="3-3-5 (1b)">3-3-5 (1b)</span>
+```
+áine	ŋara-di-a-ru.
+woman	that-3PL-EP-DU
+'Those two women'
+
+(w/ woman
+	:ref-number Dual
+	:mod (a/ ŋara))
+```
+
+For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both :ref-person and :ref-number can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (e.g., person, thing) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the :Actor argument of the eat-verb is third person plural. Therefore, we annotate this argument with a (p/ person) concept, which in turn takes :ref-person and :ref-number attributes with the relevant values. The :Undergoer of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offere by the Paraguayans. We therefore annotate it with a (t/ thing) concept which takes a :ref-number Plural attribute. No :ref-number attribute is needed here, since the Thing concept implies third person rather than a speech act participant.
+
+<span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
+```
+m-e-hl-t-om-o=hlta
+NEG-2/3M.IRR-DSTR-eat-PST/HAB-SBJ=PHOD
+'They did not eat it.'
+
+(e/ entoma-00 'eat'
+	:Actor (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:Undergoer (t/ thing
+		:ref-number Singular)
+	:polarity -)
+```
+
+The possible values for the :refer-person attribute are based on Cysouw's (2003) cross-linguistic study of person-marking system in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar first, second, and third person values. Some languages have more fine-grained person systems, distinguishing a first person exclusive from a first person inclusive value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
+
+```
+|         | coarse-gr | default | fine-gr   |
 |---------|-----------|---------|-----------|
-| I       | 1s        | we      | 1pl       |
-|you      | 2s        | you     | 2pl       |
-|he       | 3sm       | they    | 3pl       |
-|she      | 3sf       |her      | 3sf       |
+|         |           | 1st     | excl.     |
+|         | non-3rd   |         | incl.     |
+| pers.   |           | 2nd     |           |
+|         | non-1st   |         |           |
+|         |           | 3rd     |           |
 
+```
 
+The possible number values for the :refer-number attribute are based on Corbett (2000). The default level here consists simply of singular vs. non-singular. Languages with more fine-grained categories in their system may have Duals, Trials, and Paucals, and Greater Plurals, which fit together as shown in the figure below (add lattice image).
+
+#### Part 3-3-6. Degree
+In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a :degree relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat :degree as an attribute, with three possible values: _intensifier_, _downtoner_, and _equal_. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná
+
+<span id="3-3-6 (1)" label="3-3-6 (1)">3-3-6 (1)</span>
+```
+ak-yav-ay'-a=ngkoye	yamet
+2/3F-be.large-PST/HAB-NOM=INTNS
+'The tree is very large.'
+
+(h / have-mod-91
+	:ARG0 (y/ yamet 'tree')
+	:ARG1 (e/ enyavay'a-00 'large'
+		:degree Intensifier))
+(h/ have-mod-91
+	:ARG0 (t/ tree)
+	:ARG1 (l/ large
+		:degree (v/ very)))
+Lexicon: Very - _Intensifier_
+```
 
 ## Part 4. Document-Level Representation
 ### Part 4-1. Coreference
