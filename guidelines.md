@@ -1,43 +1,77 @@
 # Uniform Meaning Representation (UMR) 0.1 Specification
 =======================================================
 
-**November 4, 2019**
+**April 17, 2021**
 
 -AUTHORS-
 
 **Table of Contents**
 
-* Part 1. [Introduction](#part-1-introduction) (Bert) 
-* Part 2. [From AMR to UMR](#part-2-from-amr-to-umr) (Bert)
+* Part 1. [Introduction](#part-1-introduction)
+* Part 2. [From AMR to UMR](#part-2-from-amr-to-umr)
+	* Part 2-1. [Introduction](#part-2-1-introduction)
+	* Part 2-2. [Introduction for field linguists](#part-2-2-introduction-for-field-linguists)
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
       * Part 3-1-1. [Eventive concepts](#part-3-1-1-eventive-concepts)
-      * Part 3-1-2. [Named entities](#part-3-1-2-named-entities)  (Bert, Andy)
-      * Part 3-1-3. [Concept word mismatches](#part-3-1-3-concept-word-mismatches)  [reflexives,causatives, inchoatives, noun incorporation, identify what counts as light verbs] (Bill et al, Andy)]
+      	* Part 3-1-1-1. [Processes in predication](#part-3-1-1-1-processes-in-predication)
+      	* Part 3-1-1-2. [Processes in modification and reference](#part-3-1-1-2-processes-in-modification-and-reference)
+      	* Part 3-1-1-3. [States and entities](#part-3-1-1-3-states-and-entities)
+      	* Part 3-1-1-4. [Implicit events](#part-3-1-1-4-implicit-events)  	
+      * Part 3-1-2. [Named entities](#part-3-1-2-named-entities)  
+      * Part 3-1-3. [Concept-word mismatches](#part-3-1-3-concept-word-mismatches) 
          * Part 3-1-3-1. [Predicate and argument as one word](#part-3-1-3-1-predicate-and-argument-as-one-word)
          * Part 3-1-3-2. [Valency-changing operations](#part-3-1-3-2-Valency-changing-operations)
          * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
-         * Part 3-1-3-4. [Associated Motion](#Part-3-1-3-4-Associated-Motion)
+         * Part 3-1-3-4. [Associated motion](#Part-3-1-3-4-Associated-Motion)
          * Part 3-1-3-5. [Non-verbal clauses](#Part-3-1-3-5-Non-verbal-clauses)
          * Part 3-1-3-6. [Multi-word concepts](#part-3-1-3-6-multi-word-concepts)
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
-      * Part 3-1-5. [Scope for Quantification and negation](#part-3-1-5-scope-for-quantification-and-negation) (James)
+      * Part 3-1-5. [Scope for quantification and negation](#part-3-1-5-scope-for-quantification-and-negation)
       * Part 3-1-6. [Discourse relations](#part-3-1-6-discourse-relations)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
-      * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles) (Bill and Martha)
+      * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles)
+      	* Part 3-2-1-1. [Stage 1](#part-3-2-1-1-stage-1) 
+      		* Part 3-2-1-1-1. [Nonverbal clauses](#part-3-2-1-1-1-nonverbal-clauses)
+      		* Part 3-2-1-1-2. [Valency alternations](#part-3-2-1-1-2-valency-alternations)
+      	* Part 3-2-1-2. [Stage 2](#part-3-2-1-2-stage-2)
+      		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
+      	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)   
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-UMR-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
-      * Part 3-3-1. [Aspect](#Part-3-3-1-Aspect) 
-      * Part 3-3-2. [Mode](#Part-3-3-2-mode)
-      * Part 3-3-3. [Polarity](#Part-3-3-3-polarity)
-      * Part 3-3-4. [Quant](#Part-3-3-4-quant)
+      * Part 3-3-1. [Aspect](#part-3-3-1-Aspect) 
+      	* Part 3-3-1-1. [Event nominals](#part-3-3-1-1-event-nominals)
+      	* Part 3-3-1-2. [Habitual](#part-3-3-1-2-habitual)
+      	* Part 3-3-1-3. [State](#part-3-3-1-3-state)
+      	* Part 3-3-1-4. [Activity](#part-3-3-1-4-activity)
+      	* Part 3-3-1-5. [Endeavor and Performance](#part-3-3-1-5-endeavor-and-performance) 
+      * Part 3-3-2. [Mode](#part-3-3-2-mode)
+      * Part 3-3-3. [Polarity](#part-3-3-3-polarity)
+      * Part 3-3-4. [Quant](#part-3-3-4-quant)
       * Part 3-3-5. [Ref](#part-3-3-5-ref)
+      * Part 3-3-6. [Degree](#part-3-3-6-degree)
       
       
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
-    * Part 4-1. [Coreference](#part-4-1-coreference) (Jayeol, Bert) 
-    * Part 4-2. [Temporal Dependency](#part-4-2-temporal-dependency) (Bert, Jiarui)
-    * Part 4-3. [Modality Dependency](#part-4-3-modal-dependency) (Meagan, Bill)
+    * Part 4-1. [Coreference](#part-4-1-coreference)
+    	* Part 4-1-1. [Event coreference](#part-4-1-1-event-coreference)  
+    * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
+    	* Part 4-2-1. [Temporal relations](#part-4-2-1-temporal-relations)
+    		* Part 4-2-1-1. [Contained or Overlap](#part-4-2-1-1-contained-or-overlap)
+    		* Part 4-2-1-2. [Causally-related events](#part-4-2-1--2causally-related-events)
+    		* Part 4-2-1-3. [Deontic modal events](#part-4-2-1-3)  
+    * Part 4-3. [Modality dependency](#part-4-3-modal-dependency) 
+    	* Part 4-3-1. [Stage 1](#part-4-3-1-stage-1) 
+    		* Part 4-3-1-1. [```modstr``` values](#part-4-3-1-1-modstr-values)
+    			* Part 4-3-1-1-1. [Non-future events](#part-4-3-1-1-1-non-future-events)
+    			* Part 4-3-1-1-2. [Evidential justification](#part-4-3-1-1-2-evidential-justification)
+    			* Part 4-3-1-1-3. [Future events and deontic modality](#part-4-3-1-1-3-future-events-and-deontic-modality)
+    		* Part 4-3-1-2. [```mod``` relation](#part-4-3-1-2-mod-relation)
+    		* Part 4-3-1-3. [```quot``` relation](#part-4-3-1-3-quot-relation)
+    		* Part 4-3-1-4. [```purp``` relation](#part-4-3-1-4-purp-relation)
+    		* Part 4-3-1-5. [```cond``` relation](#part-4-3-1-5-cond-relation)
+    		* Part 4-3-1-6. [Modal dependency structure](#part-4-3-1-6-modal-dependency-structure)
+    	* Part 4-3-2. [English modals](#part-4-3-2-english-modals)  
     
 * Part 5. Integrated examples
 
@@ -3541,16 +3575,16 @@ Subset relation:
   :coref ((s4h2 :subset-of s4w)))
 ```
 
-#### Part 4-1-2 Event coreference
+#### Part 4-1-1. Event coreference
  
 	
  - Event identity
 
- We use *same-event* to represent cases where two event mentions refer to  the same event, as in [\[4-1-2 (1)\]](#4-1-2 (1)).
+ We use *same-event* to represent cases where two event mentions refer to  the same event, as in [\[4-1-1 (1)\]](#4-1-1 (1)).
  
- <span id="4-1-2 (1)" label="4-1-2 (1)">4-1-2 (1)</span>
+ <span id="4-1-1 (1)" label="4-1-1 (1)">4-1-1 (1)</span>
  
-  <span id="4-1-2 (1a)" label="4-1-2 (1a)">4-1-2 (1a)</span>
+  <span id="4-1-1 (1a)" label="4-1-1 (1a)">4-1-1 (1a)</span>
 ::id PROXY_APW_ENG_20080415_1054.19 ::date 2013-07-19T04:50:53 ::snt-type body ::annotator SDL-AMR-09 ::preferred
 ::snt El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
  ::save-date Wed Jan 20, 2016 ::file PROXY_APW_ENG_20080415_1054_19.txt
@@ -3571,7 +3605,7 @@ Subset relation:
                               :unit (d / dollar))))))
 ```
 
- <span id="4-1-2 (1b)" label="4-1-2 (1b)">4-1-2 (1b)</span>
+ <span id="4-1-1 (1b)" label="4-1-1 (1b)">4-1-1 (1b)</span>
  ::id PROXY_APW_ENG_20080415_1054.20 ::date 2013-07-19T04:57:55 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial bases.
  ::save-date Thu May 28, 2015 ::file PROXY_APW_ENG_20080415_1054_20.txt
@@ -3589,11 +3623,11 @@ Subset relation:
   :coref ((s2c :same-event s1c)))
 ```
 
-Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide** in [\[4-1-2 (2)\]](#4-1-2 (2)).
+Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide** in [\[4-1-1 (2)\]](#4-1-1 (2)).
 
- <span id="4-1-2 (2)" label="4-1-2 (2)">4-1-2 (2)</span>
+ <span id="4-1-1 (2)" label="4-1-1 (2)">4-1-1 (2)</span>
 
-<span id="4-1-2 (2a)" label="4-1-2 (2a)">4-1-2 (2a)</span>
+<span id="4-1-1 (2a)" label="4-1-1 (2a)">4-1-1 (2a)</span>
  ::id nw.chtb_0021.2 ::date 2012-11-01T15:15:42 ::annotator SDL-AMR-09 ::preferred
  ::snt The Three Gorges project on the Yangtze River has recently **introduced*** the first foreign capital .
  ::save-date Fri Oct 24, 2014 ::file nw_chtb_0021_2.txt
@@ -3607,7 +3641,7 @@ Event identity also includes cases where the same underlying event is referred t
       :time (r2 / recent))
 ```
 
-<span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
+<span id="4-1-1 (2b)" label="4-1-1 (2b)">4-1-1 (2b)</span>
  ::id nw.chtb_0021.3 ::date 2012-11-01T15:29:23 ::annotator SDL-AMR-09 ::preferred
  ::snt The loan , a sum of 12.5 million US dollars , is an export credit **provided** to the Three Gorges project by the Canadian government , which will be used mainly for the management system of the Three Gorges project .
  ::save-date Thu Dec 19, 2013 ::file nw_chtb_0021_3.txt
@@ -3639,11 +3673,11 @@ Event identity also includes cases where the same underlying event is referred t
 
 - subset
 
-*subset* is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-2 (3)\]](#4-1-2 (3)).
+*subset* is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-1 (3)\]](#4-1-1 (3)).
 
-<span id="4-1-2 (3)" label="4-1-2 (3)">4-1-2 (3)</span>
+<span id="4-1-1 (3)" label="4-1-1 (3)">4-1-1 (3)</span>
 
-<span id="4-1-2 (3a)" label="4-1-2 (3a)">4-1-2 (3a)</span>
+<span id="4-1-1 (3a)" label="4-1-1 (3a)">4-1-1 (3a)</span>
 ::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt 1 arrest took place in the Netherlands and another in Germany.
  ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
@@ -3660,7 +3694,7 @@ Event identity also includes cases where the same underlying event is referred t
                   :name (n2 / name :op1 "Germany"))
             :mod (a4 / another)))
 ```	   
-<span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
+<span id="4-1-1 (3b)" label="4-1-1 (3b)">4-1-1 (3b)</span>
  ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt The arrests were ordered by anti-terrorism judge fragnoli.
  ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
@@ -3842,7 +3876,7 @@ key event should be added to the superstructure, with a relation to the
 timex which most specifically locates it in time.
 -->
 
-#### Temporal relations
+#### Part 4-2-1. Temporal relations
 
 The second pass in the temporal annotation involves placing events on to the
 temporal dependency structure based on their temporal relations with
@@ -4067,7 +4101,7 @@ below.
 | stop      | Pos(stop,say)      | Overlap(stop,rain)                 |
 | come-out  | Pos(come-out,say)  | Overlap(come-out,stop)             |
 
-##### Contained or Overlap
+##### Part 4-2-1-1. Contained or Overlap
 
 Following the definition of the <span>Contained</span> and the
 <span>Overlap</span> relations, <span>Overlap</span> must be used rather
@@ -4079,7 +4113,7 @@ temporal duration of a second event - this includes subevent structure
 and also events which have a purely temporal (and not causal or
 conceptual) relation between them.
 
-##### Causally related events
+##### Part 4-2-1-2. Causally related events
 
 Causal relations between events are always annotated as
 <span>After</span> relations. This means that in examples such as *the
@@ -4092,7 +4126,7 @@ annotated as following it. Therefore, *the opening of the food can
 prompted my cat to meow* is annotated as <span>After(prompt,open)</span>
 and <span>After(meow,prompt)</span>.
 
-##### Deontic modal events
+##### Part 4-2-1-3. Deontic modal events
 
 For deontics and purpose clauses, the deontic or purpose complement
 (e.g., *go* in *Mary wants to go*) is annotated with with an
