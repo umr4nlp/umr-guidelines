@@ -525,7 +525,7 @@ them as a single concept. This is necessary, for example, to annotate
 idiomatic expressions which cannot be semantically decomposed
 felicitously. In [\[2-2-1 (3)\]](#2-2-1 (3)), for instance,
 *elvongkeskama tayep* is a multi-word expression which literally and
-compositionally means "cause (someone) to be just across", but its
+compositionally means "cause (someone) to arrive across", but its
 idiomatic meaning is "rescue". The two words are therefore annotated
 together as a multi-word expression with a single meaning. Some further
 specifications are made in UMR with regards to the annotation of
