@@ -72,8 +72,10 @@
     		* Part 4-3-1-5. [```cond``` relation](#part-4-3-1-5-cond-relation)
     		* Part 4-3-1-6. [Modal dependency structure](#part-4-3-1-6-modal-dependency-structure)
     	* Part 4-3-2. [English modals](#part-4-3-2-english-modals)  
+
+* Part 5. [Annotation Cheat Sheet](#part-5-annotation-cheat-sheet)
     
-* Part 5. Integrated examples
+* Part 6. Integrated examples
 
 
 ##  Part 1: Introduction
@@ -4735,7 +4737,56 @@ complement event node in the full dependency structure.
 
   - Wishes: *wish*
   
-  
+ ## Part 5. Annotation Cheat Sheet
+ 
+ * Sentence-level Annotation
+ 	* Choose the **top node** of the graph for the sentence you are annotating.
+ 		* If the sentence contains **one main event** (typically a lexical verb), **annotate it** as the **top of the graph** (see 3-1-3 on how to decide what counts as one event).
+ 		* If the sentence contains **multiple events** expressed in multiple clauses, decide what the top node is **based on the logical relation** between the events:
+ 			* If they are **coordinated**, choose the **relevant coordinator** (_and_, _or_, _contrast-01_, _either_, _neither_) as the top node (3-1-6).
+			* If one event is a **subevent** of the other, choose _have-subevent-91_ as the top node.
+ 			* If one event is an **argument** or **circumstantial participant** in the other, choose the **main event** as the top node.
+ 		* If the sentence contains a **"non-verbal clause"** concept, choose the relevant **non-verbal clause predicate** as the top node (3-1-1-3, 3-1-3-5).
+ 	* Annotate the **participants** of the top node.
+ 		* Select the correct **role/relation**:
+ 			* If the top node is an **abstract concept predicate**, use **numbered argument roles** or **:opX** roles (3-2-1-1-1 for non-verbal clause predicates, 3-1-6 for discourse relations).
+ 			* If the top node is a **sense-disambiguated lexicalized concept** with frame files, use the relevant **numbered argument roles** (3-1-4).
+ 			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** (3-2-1-1).
+ 			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (3-2-1-1).
+ 		* Select the correct **concept** (3-1-3 for identification of participants expressed as part of the same word of the event):
+ 			* If the participant is overtly expressed as a **nominal**, add the **nominal word from the sentence** to the graph.
+ 			* If the participant is overtly expressed as a **verb** (e.g. complement clause, adverbial), add the **verbal word from the sentence** to the graph.
+ 			* If the participant is expressed **pronominally**, is **impersonal**, is a **named entity**, or is **not expressed overtly**, add the correct **named entity concept label** (e.g. _person_, _thing_, _river_ etc.) to the graph (3-1-2).
+ 			* If the participant is expressed as a **participant nominalization**, choose either of the following options:
+ 				* Add the word **directly from the sentence**.
+ 				* Add the correct **named entity concept label** to the graph and modify it with an **inverse argument role** to the relevant event concept (3-2-1-3).
+ 		* **Repeat** these steps for every node you have added that corresponds to an **event concept**.
+ 	* Annote the **modifiers** of each participant.
+ 		* If a participant is modified by a **property concept**, annotate it with an **inverse numbered participant role** to the _have-mod-91_ predicate, and complete the argument structure of this predicate (3-2-1-1-1, 3-2-1-3).
+ 		* If a participant is modified by an **event concept** (e.g. relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (3-2-1-3).
+ 		* If a participant is modified by an **object concept**:
+ 			* Annotate it with the _:mod_ relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (3-2-2).
+ 			* Annotate it with the _:poss_, _:part-of_, or _:ARG0-of (k/ kinship-91)_ relations if it is an **anchoring modifier** (3-2-2, 3-2-1-3).
+ 		* If a participant is modified by a **quantifier**, annotate it with the _:quant_ relation or otherwise follow the guidelines for quantification (3-1-5, 3-2-2, 3-3-4).
+ 		* If a participant is a **named entity**, apply the _:name_ and _:wiki_ relations as appropriate (3-1-2).
+ 	* Annotate **attributes** of participants and events.
+ 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a _:ref-number_ attribute with the relevant value (3-3-5).
+ 		* Give "person" nodes (e.g. from pronouns, verbal indexation, implicit participants) a _:ref-person_ attribute with the relevant value (3-3-5).
+ 		* Give concepts identified as **events** (3-1-1 for Event ID guidelines), an _:aspect_ attribute with the relevant value (3-3-1).
+ 		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a _:mode_ attribute with the relevant value (3-3-2).
+ 		* Give constituents that are **morphosyntactically negated** or that are **questioned** a _:polarity_ attribute with the relevant value (3-3-3).
+ 		* Give concepts that are modified with a **downtoner** or **intensifier** a _:degree_ attribute with the relevant value (3-3-6).
+ 
+ * Document-level Annotation
+ 	* For any **event concept** or **object concept**:
+ 		* Assess whether it is **co-referential** with, or a **subset/subevent** of, a previously mentioned event or object concept.
+ 		* If so, choose the relevant **co-reference relation**, with the previous mention as the head and the current mention as the child (4-1).
+ 	* Give every concept **identified as an event** (3-1-1 for Event ID guidelines) a **modal annotation**, except for purpose clauses, conditionals, and concessives (4-3).
+ 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a _:modal_ relation with the space-building predicate as the parent.
+ 		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
+ 		* Give **all other events** a _:modstr_ annotation with the relevant strength.
+ 	* Give every concept **identified as an event** (3-1-1 for Event ID guidelines) and each **time expression** in the text a temporal annotation (4-2).
+   
  ## Part 5: Integrated examples
 
 PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
