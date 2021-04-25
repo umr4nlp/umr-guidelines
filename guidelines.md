@@ -4771,7 +4771,7 @@ complement event node in the full dependency structure.
  		* If a participant is a **named entity**, apply the _:name_ and _:wiki_ relations to the appropriate named entity category concept node (3-1-2).
  	* Annotate **attributes** of participants and events.
  		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a _:ref-number_ attribute with the relevant value (3-3-5).
- 		* Give "person" nodes (e.g. from pronouns, verbal indexation, implicit participants) a _:ref-person_ attribute with the relevant value (3-3-5).
+ 		* Give "person" nodes from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:ref-person_ attribute with the relevant value (3-3-5).
  		* Give concepts identified as **events** (3-1-1 for Event ID guidelines), an _:aspect_ attribute with the relevant value (3-3-1).
  		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a _:mode_ attribute with the relevant value (3-3-2).
  		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a _:polarity_ attribute with the relevant value (3-3-3).
