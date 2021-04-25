@@ -58,8 +58,8 @@
     * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
     	* Part 4-2-1. [Temporal relations](#part-4-2-1-temporal-relations)
     		* Part 4-2-1-1. [Contained or Overlap](#part-4-2-1-1-contained-or-overlap)
-    		* Part 4-2-1-2. [Causally-related events](#part-4-2-1--2causally-related-events)
-    		* Part 4-2-1-3. [Deontic modal events](#part-4-2-1-3)  
+    		* Part 4-2-1-2. [Causally-related events](#part-4-2-1-2causally-related-events)
+    		* Part 4-2-1-3. [Deontic modal events](#part-4-2-1-3-deontic-modal-events)  
     * Part 4-3. [Modality dependency](#part-4-3-modal-dependency) 
     	* Part 4-3-1. [Stage 1](#part-4-3-1-stage-1) 
     		* Part 4-3-1-1. [```modstr``` values](#part-4-3-1-1-modstr-values)
@@ -769,7 +769,7 @@ either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which are identified
 as events in UMR are shown in bold in Table 2.
 
-##### 3-1-1-1. Processes in predication
+##### Part 3-1-1-1. Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
@@ -790,7 +790,7 @@ in [\[3-1-1-1 (1a)\]](#3-1-1-1 (1a)), or a dependent clause, like *went* in
 [\[3-1-1-1 (1b)\]](#3-1-1-1 (1b)), predicated processes are always
 identified as events.
 
-##### 3-1-1-2. Processes in modification and reference
+##### Part 3-1-1-2. Processes in modification and reference
 
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
@@ -859,7 +859,7 @@ firing squad* without having seen an actual firing event, whereas *I saw
 the floating hospitals* implies that the seer witnessed the floating
 event as well.
 
-##### 3-1-1-3. States and entities
+##### Part 3-1-1-3. States and entities
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. Two-place statives, such as *love*
@@ -967,7 +967,7 @@ otherwise, like in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)).
 <span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The house
 **collapsed** <u>because</u> of the **explosion**.
 
-##### 3-1-1-4. Implicit events
+##### Part 3-1-1-4. Implicit events
 
 Since UMR annotates meaning, and not form, there are situations where
 events are identified in the absence of explicit linguistic material.
@@ -1621,7 +1621,7 @@ different, where as the participant role annotation for
 same. The annotations for valency alternations also depend on the stage
 of the road map, so that will be detailed below.
 
-##### 3-2-1-1. Stage 1
+##### Part 3-2-1-1. Stage 1
 
 At Stage 1, a set of general (i.e., non-lexicalized) semantic roles are
 used. These certainly will not map exactly to the grammatical marking of
@@ -2005,7 +2005,7 @@ They loaded the boxes.
 	:theme (b / boxes)) 
 ```
 
-###### 3-2-1-1-1. Nonverbal clauses
+###### Part 3-2-1-1-1. Nonverbal clauses
 
 There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 1 annotation. These are the nonverbal clause predicates shown in Table 7. These are repeated below with their participant role annotation.
 
@@ -2111,7 +2111,7 @@ She is the winner.
 :ARG1 (w / winner))
 ```
 
-###### 3-2-1-1-2. Valency alternations
+###### Part 3-2-1-1-2. Valency alternations
  
 Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 1, these alternations influence the choice of general participant role labels. For information-packaging alternations, such as
 passives, antipassives, or valency-rearranging applicatives,
@@ -2333,7 +2333,7 @@ they 	perf 	they-refl 	love
 	:undergoer (p))
 ```
 
-##### 3-2-1-2. Stage 2
+##### Part 3-2-1-2. Stage 2
 
 The Stage 2 participant role annotation requires access to
 PropBank-style frame files in the language for a large number of
@@ -2386,7 +2386,7 @@ context that the truck is the goal participant of the loading event.
 Therefore, at Stage 2, these implicit roles receive participant role
 annotation.
 
-###### 3-2-1-2-1.Valency alternations
+###### Part 3-2-1-2-1.Valency alternations
 
 The approach to valency alternations at Stage 2 is largely the same as
 that detailed for Stage 1 in 3-2-1-1-2. However, at Stage 2,
@@ -2396,7 +2396,7 @@ participant roles for valency alternations is the same as that for other
 types of predicates. The predicate is matched with its frame files and
 the participants are annotated accordingly.
 
-##### 3-2-1-3. Inverse participant roles
+##### Part 3-2-1-3. Inverse participant roles
 
 AMR, the predecessor of UMR, makes use of ``inverse`` participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see section 3-1-1), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the :ARG1-of relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role :ARG1, allows us to maintain a single-rooted graph structure by embedding the ``seeing``-event underneath the participant it modifies (``sweater``). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating ``runner`` in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as (p / person :ARG0-of r / run.02), we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node (r / runner) or something similar.
 
@@ -4115,7 +4115,7 @@ temporal duration of a second event - this includes subevent structure
 and also events which have a purely temporal (and not causal or
 conceptual) relation between them.
 
-##### Part 4-2-1-2. Causally related events
+##### Part 4-2-1-2. Causally-related events
 
 Causal relations between events are always annotated as
 <span>After</span> relations. This means that in examples such as *the
@@ -4655,7 +4655,7 @@ or *wish*. These are annotated with the
 ```PrtNeg```, and
 ```Neg``` values, respectively.
 
-#### 4.3.2 English modals
+#### Part 4.3.2 English modals
 
 This list gives the modal strength value associated with common English
 modal constructions (this is certaintly not an exhaustive list). For
