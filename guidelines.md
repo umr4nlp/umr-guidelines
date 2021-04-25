@@ -37,7 +37,7 @@
       	* Part 3-2-1-2. [Stage 2](#part-3-2-1-2-stage-2)
       		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
       	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)   
-      * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-UMR-relations)
+      * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-role-UMR-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#part-3-3-1-Aspect) 
       	* Part 3-3-1-1. [Event nominals](#part-3-3-1-1-event-nominals)
@@ -58,7 +58,7 @@
     * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
     	* Part 4-2-1. [Temporal relations](#part-4-2-1-temporal-relations)
     		* Part 4-2-1-1. [Contained or Overlap](#part-4-2-1-1-contained-or-overlap)
-    		* Part 4-2-1-2. [Causally-related events](#part-4-2-1-2causally-related-events)
+    		* Part 4-2-1-2. [Causally-related events](#part-4-2-1-2-causally-related-events)
     		* Part 4-2-1-3. [Deontic modal events](#part-4-2-1-3-deontic-modal-events)  
     * Part 4-3. [Modality dependency](#part-4-3-modal-dependency) 
     	* Part 4-3-1. [Stage 1](#part-4-3-1-stage-1) 
@@ -2386,7 +2386,7 @@ context that the truck is the goal participant of the loading event.
 Therefore, at Stage 2, these implicit roles receive participant role
 annotation.
 
-###### Part 3-2-1-2-1.Valency alternations
+###### Part 3-2-1-2-1. Valency alternations
 
 The approach to valency alternations at Stage 2 is largely the same as
 that detailed for Stage 1 in 3-2-1-1-2. However, at Stage 2,
@@ -4655,7 +4655,7 @@ or *wish*. These are annotated with the
 ```PrtNeg```, and
 ```Neg``` values, respectively.
 
-#### Part 4.3.2 English modals
+#### Part 4-3-2. English modals
 
 This list gives the modal strength value associated with common English
 modal constructions (this is certaintly not an exhaustive list). For
