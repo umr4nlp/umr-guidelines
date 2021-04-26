@@ -418,6 +418,8 @@ UMR differs from AMR in a number of ways:
 * UMR allows the use of non-predicate-specific participant roles for languages that do not *frame files*
 * UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) for details.
 
+[Back to Table of Contents](#toc)
+
 ### Part 2-2: Introduction for field linguists.
 
 The annotation scheme detailed in these guidelines, Uniform Meaning
@@ -861,6 +863,8 @@ firing squad* without having seen an actual firing event, whereas *I saw
 the floating hospitals* implies that the seer witnessed the floating
 event as well.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-1-1-3. States and entities
 
 As mentioned above, anything that is predicated is identified as an
@@ -969,6 +973,8 @@ otherwise, like in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)).
 <span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The house
 **collapsed** <u>because</u> of the **explosion**.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-1-1-4. Implicit events
 
 Since UMR annotates meaning, and not form, there are situations where
@@ -1023,6 +1029,7 @@ accurate (and may not be shared amongst annotators); therefore, the most
 general event possible should be identified.
 
 
+[Back to Table of Contents](#toc)
 
  #### Part 3-1-2. Named entities
  
@@ -1150,6 +1157,8 @@ found on a continuum between these two end points. However, we map this
 continuum onto a discrete choice for annotators by taking the ability of
 an incorporated noun to co-occur with an independent NP as criterial.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-1-3-2. Valency-changing operations
 
 Secondly, constructions used to change the valency of verbs (causatives,
@@ -1222,6 +1231,8 @@ if they cannot be negated independently, only one event is identified
 such derived forms will be inferred from the participant role annotation
 associated with the verb. Which valency changes lead to which argument
 structures is detailed in section 3.2.1 of these guidelines.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-1-3-3. TAM categories
 
@@ -1297,6 +1308,8 @@ other semi-modal concepts, the same guidelines as to concept-word
 mismatches are used as for desideratives: this is the case for conatives
 ('try to'), optatives ('wish that'), and frustratives ('fail to').
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-1-3-4. Associated Motion
 
 Associated motion constructions are treated in a similar way to
@@ -1343,6 +1356,8 @@ The English "venitive" construction in the translational equivalent of
 while coming here **from Puerto Casado***. Therefore, the motion event
 and the "sleep"-event are construed in English as two independent
 events, and are annotated in UMR as two separate predicates.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-1-3-5. Non-verbal clauses
 
@@ -1427,6 +1442,7 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 | Object Predication  |         have-role-91         |      theme       |     object category      |
 | Equational  |         identity-91         |      theme       |     equated referent      |
  
+[Back to Table of Contents](#toc)
 ##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
@@ -1472,7 +1488,7 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
       :mod (a2 / as-well))
 ```
 
-
+[Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
  
  UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English [\[3-1-4 (1)\]](#3-1-4 (1)) and Chinese [\[3-1-4 (2)\]](#3-1-4 (2)), where word senses are defined for predicates together with their arguments in *frame files*.
@@ -1500,7 +1516,7 @@ There will even be many VIPs!
  
 
 
- 
+ [Back to Table of Contents](#toc)
  #### Part 3-1-5. Scope for Quantification and negation
 
 To facilitate the translation of UMR into first-order expressions to support logical inference,
@@ -1521,8 +1537,13 @@ Someone didn't answer all the questions
                 :ARG1 q))
 ```
 
+[Back to Table of Contents](#toc)
+
 #### Part 3-1-6. Discourse-relations
  
+
+[Back to Table of Contents](#toc)
+
 ### Part 3-2. UMR relations 
 
    #### Part 3-2-1. Participant roles 
@@ -1622,6 +1643,8 @@ different, where as the participant role annotation for
 [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) would be the
 same. The annotations for valency alternations also depend on the stage
 of the road map, so that will be detailed below.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-2-1-1. Stage 1
 
@@ -2007,6 +2030,8 @@ They loaded the boxes.
 	:theme (b / boxes)) 
 ```
 
+[Back to Table of Contents](#toc)
+
 ###### Part 3-2-1-1-1. Nonverbal clauses
 
 There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 1 annotation. These are the nonverbal clause predicates shown in Table 7. These are repeated below with their participant role annotation.
@@ -2112,6 +2137,7 @@ She is the winner.
 :ARG0 (s / s)` 
 :ARG1 (w / winner))
 ```
+[Back to Table of Contents](#toc)
 
 ###### Part 3-2-1-1-2. Valency alternations
  
@@ -2389,6 +2415,8 @@ context that the truck is the goal participant of the loading event.
 Therefore, at Stage 2, these implicit roles receive participant role
 annotation.
 
+[Back to Table of Contents](#toc)
+
 ###### Part 3-2-1-2-1. Valency alternations
 
 The approach to valency alternations at Stage 2 is largely the same as
@@ -2398,6 +2426,9 @@ files with lexicalized arguments. Therefore, the annotation of
 participant roles for valency alternations is the same as that for other
 types of predicates. The predicate is matched with its frame files and
 the participants are annotated accordingly.
+
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-2-1-3. Inverse participant roles
 
@@ -2836,6 +2867,8 @@ Below are the aspect values with a brief definition.
 In order to select the appropriate annotation value for each event,
 annotators proceed through a series of decisions.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-3-1-1. Event Nominals
 
 The first decision concerns the morphosyntactic expression of the event. Events expressed as nominals often lack any grammatical clues as to their aspectual structure. This makes determining an aspectual
@@ -2908,6 +2941,8 @@ these are treated like other predicate nominal constructions.
 
 It was **an earthquake**.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-3-1-2. Habitual
 
 The next step concerns the application of the
@@ -2947,6 +2982,7 @@ to* construction. Note that the ```habitual```
 annotation is not used for ability modals (e.g., *he can bake apple
 pie*); these events should continue on to the next step.
 
+[Back to Table of Contents](#toc)
 ##### Part 3-3-1-3. State
 
 The next step assesses whether the event is a
@@ -3087,6 +3123,8 @@ states necessarily do not persist into the future.
 Events that are not annotated as a type of
 ```state``` move on to the next step.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-3-1-4. Activity
 
 The ```activity``` label applies to processes
@@ -3176,6 +3214,8 @@ change.
 
 Events that have ended prior to document creation time and have not yet
 received an annotation move on to the next step.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-3-1-5. Endeavor and Performance
 
@@ -4212,6 +4252,8 @@ automatically select the conceiver for the reported event(s), here,
 The road map stages build on each other to end up at a fully specified
 modal dependency structure. This means that Stage 2 annotation involves first doing the Stage 1 modality annotations. (This contrasts with participant roles, where annotators can largely ignore Stage 1 if the annotation language has existing frame files.)
 
+[Back to Table of Contents](#toc)
+
 #### Part 4-3-1. Stage 1
 
 There are two types of modal annotations at Stage 1: a
@@ -4236,6 +4278,8 @@ Events under the scope of reporting events: ```modstr``` annotation;
 Events in purpose clauses: ```modstr``` annotation; ```purp``` relation  
 Events in conditionals: ```modstr``` annotation; ```cond``` relation  
 All other events: ```modstr``` annotation
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-1. ```modstr``` values
 
@@ -4548,6 +4592,8 @@ so it is annotated with ```Aff```; but Mary is
 unsure about the reality of the going event, and therefore it is
 annotated with ```Neut``` modal strength.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 4-3-1-4. ```purp``` relation
 
 Events in purpose clauses are annotated with both a
@@ -4622,6 +4668,8 @@ itself; it corresponds to any negation or modals which are expressed
 inside of the conditional construction. The modal value of the
 conditional construction is captured by the
 ```cond``` value.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-6. Modal dependency structure
 
