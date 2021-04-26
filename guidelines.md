@@ -717,6 +717,7 @@ Three bottles of water
 UMR introduces three new attributes: :Aspect (see section 3-3-1), and
 :ref-person and :ref-number (see section 3-3-5).
 
+[Back to Table of Contents](#toc)
 
 ## Part 3. Sentence-Level Representation
 
@@ -2333,6 +2334,7 @@ they 	perf 	they-refl 	love
 	:actor (p / pi ‘they’)
 	:undergoer (p))
 ```
+[Back to Table of Contents](#toc)
 
 ##### Part 3-2-1-2. Stage 2
 
@@ -2486,6 +2488,7 @@ I met the President of the University of New Mexico.
 			:ARG2 (p / president)))
 	:Aspect Performance)
 ```
+[Back to Table of Contents](#toc)
 
   #### Part 3-2-2. Non-participant role UMR relations
   
@@ -2779,6 +2782,8 @@ Could you close the window?
 The :condition and :concession relations are alternative ways of annotating the have-condition-91 and have-concession-91 predicates - their use is detailed in section 4.3.
 
 Lastly, annotators have at their disposal an :other relation. If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this :other relation, linking it to the concept node that seems appropriate.
+
+[Back to Table of Contents](#toc)
 
 ### Part 3-3. UMR attributes
   
@@ -3354,7 +3359,8 @@ Harry **repaired** the computer.
 (r / repair  
 	Aspect: nonincremental accomplishment) 
 ```
-  
+[Back to Table of Contents](#toc)
+
 #### Part 3-3-2. Mode
 
 UMR adopts the mode attribute for AMR. The four values for the **mode** attribute include
@@ -3386,6 +3392,7 @@ Chalk another good one up to the wife .
       :ARG2 (w / wife))
 ```
 
+[Back to Table of Contents](#toc)
 
 #### Part 3-3-3. Polarity
 UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute :polarity is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in [\[3-3-3 (1)\]](#3-3-3 (1)). These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
@@ -3419,6 +3426,8 @@ Unhealthy food.
 		:polarity -))
 ```
 
+[Back to Table of Contents](#toc)
+
 #### Part 3-3-4. Quant
 
 <span id="3-3-4 (1)" label="3-3-4 (1)">3-3-4 (1)</span>
@@ -3433,6 +3442,8 @@ As of now , five million tickets have been sold on the StubHub website .
       :time (a / as-of
             :op1 (n2 / now)))
 ```
+
+[Back to Table of Contents](#toc)
 
 #### Part 3-3-5. Ref
 As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically based way. It annotates person and number through two attributes - :ref-person, for grammatical person information, and :ref-number for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
@@ -3493,6 +3504,8 @@ The possible values for the :refer-person attribute are based on Cysouw's (2003)
 
 The possible number values for the :refer-number attribute are based on Corbett (2000). The default level here consists simply of singular vs. non-singular. Languages with more fine-grained categories in their system may have Duals, Trials, and Paucals, and Greater Plurals, which fit together as shown in the figure below (add lattice image).
 
+[Back to Table of Contents](#toc)
+
 #### Part 3-3-6. Degree
 In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a :degree relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat :degree as an attribute, with three possible values: _intensifier_, _downtoner_, and _equal_. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná
 
@@ -3512,6 +3525,8 @@ ak-yav-ay'-a=ngkoye	yamet
 		:degree (v/ very)))
 Lexicon: Very - _Intensifier_
 ```
+
+[Back to Table of Contents](#toc)
 
 ## Part 4. Document-Level Representation
 ### Part 4-1. Coreference
@@ -3577,6 +3592,8 @@ Subset relation:
 (s / sentence
   :coref ((s4h2 :subset-of s4w)))
 ```
+
+[Back to Table of Contents](#toc)
 
 #### Part 4-1-1. Event coreference
  
@@ -3724,6 +3741,7 @@ For now UMR does not annotate cases where one event is a subevent of another eve
   
   
   
+[Back to Table of Contents](#toc)
 
 
 ### Part 4-2. Temporal Dependency
@@ -4150,6 +4168,8 @@ provide for this.
     (see §[3](#aspectannotation)). 2.  We are considering using the <span>NA</span> value for non-real
     events as well, but for now, these types of events should receive
     one of the other aspect values. -->
+
+[Back to Table of Contents](#toc)
 
 ### Part 4-3. Modal Dependency
 
@@ -4931,4 +4951,5 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 ```
 The above segment illustrates many of the issues with Arapaho: lack of overt noun phrases in a sentence; noun incorporation; and a mismatch between syntactic argument structure and semantic argument structure. Also, the actual arguments are really the pronominal affixes on the verb, Marianne Mithun would argue, and the overt nominals are just there as adjuncts for clarification where necessary.
 
+[Back to Table of Contents](#toc)
 
