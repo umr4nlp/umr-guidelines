@@ -1540,7 +1540,230 @@ Someone didn't answer all the questions
 [Back to Table of Contents](#toc)
 
 #### Part 3-1-6. Discourse-relations
- 
+
+When multiple events are expressed in a complex sentence, a variety of semantic relations can hold between them. UMR provides annotators with a lattice of category values to annotate such discourse-level event-event relations. This lattice is based partly on existing typological research (Malchukov 2004; Thompson & Longacre 1985), and partly on patterns of expression through adverbial subordination or coordination in English. This lattice covers event-event relations that are typically overtly and obligatorily expressed in languages through either (coordinating or subordinating) conjunctions or dedicated (“deranked”) verb forms. In other words, it does not cover relations typically expressed through optional “discourse adverbs”.
+
+![Discourse Lattice](Discourse-lattice.jpg)
+
+As with Aspect, annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination. In the examples below, both options are illustrated wherever possible.
+
+Each discourse relation on the lattice is defined below, based on Croft (to appear, ch. 15, ch. 17).
+
+```Disjunctive```: Construes two (or more) events as being alternatives of each other in some way. Roughly corresponds to the range of meanings expressed by English _(either) or_, as in [\[3-1-6 (1)\]](#3-1-6 (1)).
+
+<span id="3-1-6 (1)" label="3-1-6 (1)">\[3-1-6 (1)\]</span>
+```
+I will go for a walk **or** play some soccer.
+(o / or
+   :op1 (w / walk-01
+   	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:Aspect Process)
+   :op2 (p2 / play-01
+   	:ARG0 p
+	:ARG1 (s/ soccer)
+	:Aspect Process))
+```
+
+There are two more fine-grained subtypes of disjunctive relations:
+
+```Inclusive Disjunctive```: also known as “non-exhaustive”. Indicates that either any of the construed alternatives can be “chosen” individually, or any combination of the construed alternatives. This is illustrated in [\[3-1-6 (2a)\]](#3-1-6 (2a)) from Hua (Haiman 1978:7-8). Here, _-ve_ indicates that bashing pandanus, husking and eating corn, and planting bananas are not mutually exclusive alternatives. Performing any or all of these actions equally violates a sexual taboo.
+```Exclusive Disjunctive```: also known as “exhaustive”. Indicates that the construed alternatives are presented as mutually exclusive options. This is illustrated in [\[3-1-6 (2b)\]](#3-1-6 (2b)) from Hua (Haiman 1980:271). Here, _ito_ indicates that his being here and his not being here are mutually exclusive alternatives.
+
+<span id="3-1-6 (2)" label="3-1-6 (2)">\[3-1-6 (2)\]</span>
+
+<span id="3-1-6 (2a)" label="3-1-6 (2a)">\[3-1-6 (2a)\]</span>
+```
+mnu'bo		hatai-supi'ba**-ve**	kire'bo	kro-de-supi'ba**-ve**	egemo	bre-supi'ba**-ve**	degi	kiko-pi'	rmi-supamo	a-ki'		a'-vo-g-une
+pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-NONEX	crazy	place-in	go_down-if.1PL	woman-with	not-sleep-fut-1PL.IND
+'If we go down to a 'crazy place' to bash pandanus, husk and eat corn, or plant bananas, we don't sleep with women.'
+(h / have-condition-91
+   :ARG1 (v / a'vogune-00 'sleep'
+   	:Actor (p / person
+		:ref-person 1st
+		:ref-number Plural)
+	:Companion (a / aki' 'woman')
+	:polarity -
+	:aspect Habitual)
+   :ARG2 (r / rmisupamo-00 'go down'
+   	:Actor p
+	:Goal (k / kikopi' 'place'
+		:mod (d / degi 'crazy')
+		:ref-number Singular)
+	:Purpose (o / or-incl
+		:op1 (h2 / hataisupi'bave-00 'bash'
+			:Actor p
+			:Undergoer (m / mnu'bo 'pandanus')
+			:aspect Process)
+		:op2 (k2 / krodesupi'bave-00 'husk and eat'
+			:Actor p
+			:Undergoer (k3 / kire'bo 'corn')
+			:aspect Process)
+		:op3 (b / bresupi'bave-00 'plant
+			:Actor p
+			:Undergoer (e / egemo 'banana')
+			:aspect Process)
+	:aspect Performance
+   :aspect State)
+	
+```
+
+<span id="3-1-6 (2b)" label="3-1-6 (2b)">\[3-1-6 (2b)\]</span>
+```
+bai-ve		**ito**	'a'-bai-e
+be.3SG-INTERR	EX	NEG-be.3SG-IND
+'Is he here or isn't he?'
+(o / or-excl
+   :op1 (b / be-located-at-91
+   	:ARG1 (p / person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG2 (p2 / place)
+	:aspect State)
+   :op2 (b / be-located-at-91
+   	:ARG1 p 
+	:ARG2 p2
+	:aspect State
+	:polarity -)
+   :mode Interrogative)
+```
+
+The exclusive disjunction relation has one further, more specific subtype:
+
+```Apprehensional```: expresses that two events are mutually exclusive alternatives, but more specifically, that one event is carried out with the intention of preventing the other event from happening. It is in a way a negated counterpart of the “purpose” relation discussed below. In [\[3-1-6 (3)\]](#3-1-6 (3)), the implication is that if the addressee of the imperative grabs a stick, they will not be attacked - the grab-event and the attack-event are mutually exclusive alternatives. As illustrated in [\[3-1-6 (3)\]](#3-1-6 (3)), English has a dedicated subordinator to express apprehensional relations, but may also draw on its polysemous disjunctive coordinator, which has apprehensional as one of its functions. In the latter case, annotators may either use the higher-level category in the lattice, or if they are confident, the lower-level category. The same holds for many of the other fine-grained meanings discussed below - illustrative annotations will not be provided for all of them.
+
+<span id="3-1-6 (3)" label="3-1-6 (3)">\[3-1-6 (3)\]</span>
+
+<span id="3-1-6 (3a)" label="3-1-6 (3a)">\[3-1-6 (3a)\]</span>
+```
+Grab a stick **lest** he attack you!
+(a / apprehensional
+   :op1 (g / grab-01
+   	:ARG0 (p / person
+		:ref-person 2nd
+		:ref-number Singular)
+	:ARG1 (s / stick
+		:ref-number Singular)
+	:mode Imperative
+	:aspect Performance)
+   :op2 (a2 / attack-01
+   	:ARG0 (p2 / person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 p
+	:aspect Process))
+```
+
+<span id="3-1-6 (3b)" label="3-1-6 (3b)">\[3-1-6 (3b)\]</span>
+```
+Grab a stick **or** he will he attack you!
+(a / apprehensional					Or	(o / or	
+   :op1 (g / grab-01							:op1 (g / grab-01
+   	:ARG0 (p / person							:ARG0 (p / person
+		:ref-person 2nd								:ref-person 2nd
+		:ref-number Singular)							:ref-number Singular)
+	:ARG1 (s / stick							:ARG1 (s / stick
+		:ref-number Singular)							:ref-number Singular)
+	:mode Imperative							:mode Imperative
+	:aspect Performance)							:aspect Performance)
+   :op2 (a2 / attack-01							:op2 (a2 / attack-01
+   	:ARG0 (p2 / person							:ARG0 (p2 / person
+		:ref-person 3rd								:ref-person 3rd
+		:ref-number Singular)							:ref-number Singular)
+	:ARG1 p									:ARG1 p
+	:aspect Process))							:aspect Process))
+```
+
+```Additive```: expresses the addition of one “figure” (foregrounded participant or event) to another one in order to form a complex figure. The additive function has a number of more fine-grained subfunctions:
+````Simultaneous````: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level, using the :temporal participant role relation (see section 3-2-1-1), and at the document level (see section 4-2-1).
+````(pure) Addition````: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In [\[3-1-6 (4b)\]](#3-1-6 (4b)), having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary.
+````Substitution````: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement for the other – this is typically expressed through the negation of one of the two coordinands, as in [\[3-1-6 (4c)\]](#3-1-6 (4c)). The acceptability of both “and” and “but” here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract _substitute-01_ predicate.
+
+<span id="3-1-6 (4)" label="3-1-6 (4)">\[3-1-6 (4)\]</span>
+
+<span id="3-1-6 (4a)" label="3-1-6 (4a)">\[3-1-6 (4a)\]</span>
+```
+I read a book **while** I listened to music. / I read a book **while** listening to music. / I read a book **and** listened to music.
+(r / read-01
+   :ARG0 (p / person
+   	:ref-person 1st
+	:ref-number Singular)
+   :ARG1 (b / book
+   	:ref-number Singular)
+   :temporal (listen
+   	:ARG0 p
+	:ARG1 (m / music)
+	:aspect State)
+   :aspect Performance)
+```
+
+<span id="3-1-6 (4b)" label="3-1-6 (4b)">\[3-1-6 (4b)\]</span>
+```
+**In addition to** having your hand stamped, you have to show your ticket to get into the concert. / You have to have your hand stamped **and** show your ticket stub to get into the concert.
+(a / and
+   :op1 (h / have-04
+   	:ARG0 (p / person
+		:ref-person 2nd
+		:ref-number Singular)
+	:ARG1 (s / stamp-01
+		:ARG0 (p2 / person)
+		:ARG1 (h2 / hand
+			:part-of p)
+		:aspect Performance)
+	:aspect Performance)
+   :op2 (s2 / show-01
+   	:ARG0 p
+	:ARG1 (t / ticket
+		:poss p
+		:ref-number Singular)
+	:ARG2 (p3 / person)
+   	:aspect Performance)
+   :purpose (g / get-05
+   	:ARG0 p
+	:ARG2 (c / concert
+		:ref-number Singular)
+	:aspect Performance)
+```
+
+<span id="3-1-6 (4c)" label="3-1-6 (4c)">\[3-1-6 (4c)\]</span>
+```
+**Instead of** going out to eat, we barbecued chicken at home. / We didn’t go out to eat **and/but** barbecued chicken at home.
+(s / substitute-01
+   :ARG1 (b / barbecue-01
+   	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Plural)
+	:ARG1 (c / chicken)
+	:location (h / home)
+	:aspect Performance)
+   :ARG2 (g / go_out-17
+   	:ARG0 p
+	:purpose (e / eat-01
+		:ARG0 p
+		:aspect Endeavor)
+	:aspect Performance)
+```
+
+```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. More fine-grained sub-functions of the consecutive function are the following:
+````Purpose````: expresses the intention on the part of the agent of one event towards bringing about another event, as in [\[3-1-6 (5a)\]](#3-1-6 (5a)). This relation is annotated using the :purpose participant role relation (see section 3-2-1-1).
+````Means````: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in [\[3-1-6 (5b)\]](#3-1-6 (5b)). This relation has also been called “positive circumstantial”. This relation is annotated using the :manner participant role relation (see section 3-2-1-1).
+````Causal````: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the cause-01 predicate or the :cause participant role relation (see section 3-2-1-1).
+````Conditional````: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the have-condition-91 predicate or the :condition participant role relation (see section 3-2-1-1, 4-3).
+````Anterior````: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the :temporal participant role relation (see section 3-2-1-1), and at the document level (see section 4-2-1).
+````Posterior````: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in [\[3-1-6 (5f)\]](#3-1-6 (5f)). This relation is annotated at the sentence level, using the :temporal participant role relation (see section 3-2-1-1), and at the document level (see section 4-2-1).
+
+<span id="3-1-6 (5a)" label="3-1-6 (5a)">\[3-1-6 (5a)\]</span> I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** defended myself.
+<span id="3-1-6 (5b)" label="3-1-6 (5b)">\[3-1-6 (5b)\]</span> He got into the army **by** lying about his age. / He lied about his age **and** got into the army.
+<span id="3-1-6 (5c)" label="3-1-6 (5c)">\[3-1-6 (5c)\]</span> Sarah moved back to California **because** she couldn't find a job in Washington. / Sarah couldn't find a job in Washington **and (so)** she moved back to California.
+<span id="3-1-6 (5d)" label="3-1-6 (5d)">\[3-1-6 (5d)\]</span> **If** you touch it, it explodes. / Touch it, **and** it explodes.
+<span id="3-1-6 (5e)" label="3-1-6 (5e)">\[3-1-6 (5e)\]</span> I went home **before** paying the check. / I went home **and** paid the check.
+<span id="3-1-6 (5f)" label="3-1-6 (5f)">\[3-1-6 (5f)\]</span> I went home **after** paying the check. / I paid the check **and** went home.
+
+Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
+
+
+
 
 [Back to Table of Contents](#toc)
 
