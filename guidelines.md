@@ -613,7 +613,7 @@ needs to be standardized for computational tractability. This applies
 to, for example, the annotation of different types of quantities (which
 use abstract concepts such as `distance-quantity`,
 `temporal-quantity` and `monetary-quantity`, as
-illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a)) )-[\[2-2-3 (2b)\]](#2-2-3 (2b)), and the annotation of dates and times (which use abstract concepts such as *date-entity*, as illustrated in [\[2-2-3 (2c)\]](#2-2-3 (2c)) (all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
+illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a)) )-[\[2-2-3 (2b)\]](#2-2-3 (2b)), and the annotation of dates and times (which use abstract concepts such as `date-entity`, as illustrated in [\[2-2-3 (2c)\]](#2-2-3 (2c)) (all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
 
 <span id="2-2-3 (2)" label="2-2-3 (2)">\[2-2-3 (2)\]</span>
 
