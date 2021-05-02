@@ -1613,30 +1613,29 @@ I will go for a walk or play some soccer.
 
 There are two more fine-grained subtypes of disjunctive relations:
 
-```Inclusive Disjunctive```: also known as “non-exhaustive”. Indicates that either any of the construed alternatives can be “chosen” individually, or any combination of the construed alternatives. This is illustrated in [\[3-1-6 (2a)\]](#3-1-6 (2a)) from Hua (Haiman 1978:7-8). Here, _-ve_ indicates that bashing pandanus, husking and eating corn, and planting bananas are not mutually exclusive alternatives. Performing any or all of these actions equally violates a sexual taboo.
+```Inclusive Disjunctive```: also known as “non-exhaustive disjunction”. Indicates that either any of the construed alternatives can be “chosen” individually, or any combination of the construed alternatives. This is illustrated in [\[3-1-6 (2a)\]](#3-1-6 (2a)) from Hua (Haiman 1978:7-8). Here, _-ve_ indicates that bashing pandanus, husking and eating corn, and planting bananas are not mutually exclusive alternatives. Performing any or all of these actions equally violates a sexual taboo.
 
-```Exclusive Disjunctive```: also known as “exhaustive”. Indicates that the construed alternatives are presented as mutually exclusive options. This is illustrated in [\[3-1-6 (2b)\]](#3-1-6 (2b)) from Hua (Haiman 1980:271). Here, _ito_ indicates that his being here and his not being here are mutually exclusive alternatives.
+```Exclusive Disjunctive```: also known as “exhaustive disjunction”. Indicates that the construed alternatives are presented as mutually exclusive options. This is illustrated in [\[3-1-6 (2b)\]](#3-1-6 (2b)) from Hua (Haiman 1980:271). Here, _ito_ indicates that his being here and his not being here are mutually exclusive alternatives.
 
 <span id="3-1-6 (2)" label="3-1-6 (2)">\[3-1-6 (2)\]</span>
 
 <span id="3-1-6 (2a)" label="3-1-6 (2a)">\[3-1-6 (2a)\]</span>
 ```
-mnu'bo		hatai-supi'ba**-ve**	kire'bo	kro-de-supi'ba**-ve**	egemo	bre-supi'ba**-ve**	degi	kiko-pi'	rmi-supamo	a-ki'		a'-vo-g-une
+mnu'bo		hatai-supi'ba-ve	kire'bo	kro-de-supi'ba-ve	egemo	bre-supi'ba-ve		degi	kiko-pi'	rmi-supamo	a-ki'		a'-vo-g-une
 pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-NONEX	crazy	place-in	go_down-if.1PL	woman-with	not-sleep-fut-1PL.IND
 'If we go down to a 'crazy place' to bash pandanus, husk and eat corn, or plant bananas, we don't sleep with women.'
 (h / have-condition-91
-   :ARG1 (v / a'vogune-00 'sleep'
+   :ARG1 (a / a'vogune-00 'sleep'
    	:Actor (p / person
 		:ref-person 1st
 		:ref-number Plural)
-	:Companion (a / aki' 'woman')
+	:Companion (a2 / aki' 'woman')
 	:polarity -
 	:aspect Habitual)
    :ARG2 (r / rmisupamo-00 'go down'
    	:Actor p
 	:Goal (k / kikopi' 'place'
-		:mod (d / degi 'crazy')
-		:ref-number Singular)
+		:mod (d / degi 'crazy'))
 	:Purpose (o / or-incl
 		:op1 (h2 / hataisupi'bave-00 'bash'
 			:Actor p
@@ -1646,7 +1645,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 			:Actor p
 			:Undergoer (k3 / kire'bo 'corn')
 			:aspect Process)
-		:op3 (b / bresupi'bave-00 'plant
+		:op3 (b / bresupi'bave-00 'plant'
 			:Actor p
 			:Undergoer (e / egemo 'banana')
 			:aspect Process)
@@ -1657,7 +1656,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 
 <span id="3-1-6 (2b)" label="3-1-6 (2b)">\[3-1-6 (2b)\]</span>
 ```
-bai-ve		**ito**	'a'-bai-e
+bai-ve		ito	'a'-bai-e
 be.3SG-INTERR	EX	NEG-be.3SG-IND
 'Is he here or isn't he?'
 (o / or-excl
@@ -1677,13 +1676,13 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 
 The exclusive disjunction relation has one further, more specific subtype:
 
-```Apprehensional```: expresses that two events are mutually exclusive alternatives, but more specifically, that one event is carried out with the intention of preventing the other event from happening. It is in a way a negated counterpart of the “purpose” relation discussed below. In [\[3-1-6 (3)\]](#3-1-6 (3)), the implication is that if the addressee of the imperative grabs a stick, they will not be attacked - the grab-event and the attack-event are mutually exclusive alternatives. As illustrated in [\[3-1-6 (3)\]](#3-1-6 (3)), English has a dedicated subordinator to express apprehensional relations, but may also draw on its polysemous disjunctive coordinator, which has apprehensional as one of its functions. In the latter case, annotators may either use the higher-level category in the lattice, or if they are confident, the lower-level category. The same holds for many of the other fine-grained meanings discussed below - illustrative annotations will not be provided for all of them.
+```Apprehensional```: expresses that two events are mutually exclusive alternatives, but more specifically, that one event is carried out with the intention of preventing the other event from happening. It is in a way a negated counterpart of the `purpose` relation discussed below. In [\[3-1-6 (3)\]](#3-1-6 (3)), the implication is that if the addressee of the imperative grabs a stick, they will not be attacked - the grab-event and the attack-event are mutually exclusive alternatives. As illustrated in [\[3-1-6 (3)\]](#3-1-6 (3)), English has a dedicated subordinator to express apprehensional relations, but may also draw on its polysemous disjunctive coordinator, which has apprehensional as one of its functions. In the latter case, annotators may either use the higher-level category in the lattice, or if they are confident, the lower-level category. The same holds for many of the other fine-grained meanings discussed below - illustrative annotations will not be provided for all of them.
 
 <span id="3-1-6 (3)" label="3-1-6 (3)">\[3-1-6 (3)\]</span>
 
 <span id="3-1-6 (3a)" label="3-1-6 (3a)">\[3-1-6 (3a)\]</span>
 ```
-Grab a stick **lest** he attack you!
+Grab a stick lest he attack you!
 (a / apprehensional
    :op1 (g / grab-01
    	:ARG0 (p / person
@@ -1698,12 +1697,12 @@ Grab a stick **lest** he attack you!
 		:ref-person 3rd
 		:ref-number Singular)
 	:ARG1 p
-	:aspect Process))
+	:aspect Perfective))
 ```
 
 <span id="3-1-6 (3b)" label="3-1-6 (3b)">\[3-1-6 (3b)\]</span>
 ```
-Grab a stick **or** he will he attack you!
+Grab a stick or he will he attack you!
 (a / apprehensional					Or	(o / or	
    :op1 (g / grab-01							:op1 (g / grab-01
    	:ARG0 (p / person							:ARG0 (p / person
@@ -1718,19 +1717,22 @@ Grab a stick **or** he will he attack you!
 		:ref-person 3rd								:ref-person 3rd
 		:ref-number Singular)							:ref-number Singular)
 	:ARG1 p									:ARG1 p
-	:aspect Process))							:aspect Process))
+	:aspect Perfective))							:aspect Perfective))
 ```
 
 ```Additive```: expresses the addition of one “figure” (foregrounded participant or event) to another one in order to form a complex figure. The additive function has a number of more fine-grained subfunctions:
-```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level, using the :temporal participant role relation (see section 3-2-1-1), and at the document level (see section 4-2-1).
+
+```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
+
 ```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In [\[3-1-6 (4b)\]](#3-1-6 (4b)), having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary.
-```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement for the other – this is typically expressed through the negation of one of the two coordinands, as in [\[3-1-6 (4c)\]](#3-1-6 (4c)). The acceptability of both “and” and “but” here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract _substitute-01_ predicate.
+
+```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in [\[3-1-6 (4c)\]](#3-1-6 (4c)). The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract `substitute-01` predicate.
 
 <span id="3-1-6 (4)" label="3-1-6 (4)">\[3-1-6 (4)\]</span>
 
 <span id="3-1-6 (4a)" label="3-1-6 (4a)">\[3-1-6 (4a)\]</span>
 ```
-I read a book **while** I listened to music. / I read a book **while** listening to music. / I read a book **and** listened to music.
+I read a book while I listened to music. / I read a book while listening to music. / I read a book and listened to music.
 (r / read-01
    :ARG0 (p / person
    	:ref-person 1st
@@ -1746,7 +1748,7 @@ I read a book **while** I listened to music. / I read a book **while** listening
 
 <span id="3-1-6 (4b)" label="3-1-6 (4b)">\[3-1-6 (4b)\]</span>
 ```
-**In addition to** having your hand stamped, you have to show your ticket to get into the concert. / You have to have your hand stamped **and** show your ticket stub to get into the concert.
+In addition to having your hand stamped, you have to show your ticket to get into the concert. / You have to have your hand stamped and show your ticket stub to get into the concert.
 (a / and
    :op1 (h / have-04
    	:ARG0 (p / person
@@ -1774,7 +1776,7 @@ I read a book **while** I listened to music. / I read a book **while** listening
 
 <span id="3-1-6 (4c)" label="3-1-6 (4c)">\[3-1-6 (4c)\]</span>
 ```
-**Instead of** going out to eat, we barbecued chicken at home. / We didn’t go out to eat **and/but** barbecued chicken at home.
+Instead of going out to eat, we barbecued chicken at home. / We didn’t go out to eat and/but barbecued chicken at home.
 (s / substitute-01
    :ARG1 (b / barbecue-01
    	:ARG0 (p / person
@@ -1792,47 +1794,60 @@ I read a book **while** I listened to music. / I read a book **while** listening
 ```
 
 ```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. More fine-grained sub-functions of the consecutive function are the following:
-```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in [\[3-1-6 (5a)\]](#3-1-6 (5a)). This relation is annotated using the :purpose participant role relation (see section 3-2-1-1).
-```Means```: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in [\[3-1-6 (5b)\]](#3-1-6 (5b)). This relation has also been called “positive circumstantial”. This relation is annotated using the :manner participant role relation (see section 3-2-1-1).
-```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the cause-01 predicate or the :cause participant role relation (see section 3-2-1-1).
-```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the have-condition-91 predicate or the :condition participant role relation (see section 3-2-1-1, 4-3).
-```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the :temporal participant role relation (see section 3-2-1-1), and at the document level (see section 4-2-1).
-```Posterior```: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in [\[3-1-6 (5f)\]](#3-1-6 (5f)). This relation is annotated at the sentence level, using the :temporal participant role relation (see section 3-2-1-1), and at the document level (see section 4-2-1).
+
+```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in [\[3-1-6 (5a)\]](#3-1-6 (5a)). This relation is annotated using the `:purpose` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+
+```Means```: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in [\[3-1-6 (5b)\]](#3-1-6 (5b)). This relation has also been called “positive circumstantial”. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+
+```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the `cause-01` predicate or the `:cause` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+
+```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1), [Part 4-3-1-5](#part-4-3-1-5-cond-relation)).
+
+```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
+
+```Posterior```: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in [\[3-1-6 (5f)\]](#3-1-6 (5f)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
 
 <span id="3-1-6 (5a)" label="3-1-6 (5a)">\[3-1-6 (5a)\]</span> I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** defended myself.
+
 <span id="3-1-6 (5b)" label="3-1-6 (5b)">\[3-1-6 (5b)\]</span> He got into the army **by** lying about his age. / He lied about his age **and** got into the army.
+
 <span id="3-1-6 (5c)" label="3-1-6 (5c)">\[3-1-6 (5c)\]</span> Sarah moved back to California **because** she couldn't find a job in Washington. / Sarah couldn't find a job in Washington **and (so)** she moved back to California.
+
 <span id="3-1-6 (5d)" label="3-1-6 (5d)">\[3-1-6 (5d)\]</span> **If** you touch it, it explodes. / Touch it, **and** it explodes.
+
 <span id="3-1-6 (5e)" label="3-1-6 (5e)">\[3-1-6 (5e)\]</span> I went home **before** paying the check. / I went home **and** paid the check.
+
 <span id="3-1-6 (5f)" label="3-1-6 (5f)">\[3-1-6 (5f)\]</span> I went home **after** paying the check. / I paid the check **and** went home.
 
 Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
 
-```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In [3-1-6 (6a)\]](#3-1-6 (6a)), properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy.
+```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In [3-1-6 (6a)\]](#3-1-6 (6a)), properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy
+
 ```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in [3-1-6 (6b)\]](#3-1-6 (6b)) from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school.
 
 <span id="3-1-6 (6)" label="3-1-6 (6)">\[3-1-6 (6)\]</span>
+
 <span id="3-1-6 (6a)" label="3-1-6 (6a)">\[3-1-6 (6a)\]</span>
 ```
-Petja	staratel'nyi,	**a**	Vanja	lenivyj
+Petja	staratel'nyi,	a	Vanja	lenivyj
 Peter	diligent	CONJ	Vanja	lazy
 'Peter is diligent, but [contrast] Vanja is lazy.'
 (c / contrast-01
    :ARG1 (h / have-mod-91
    	:ARG0 (p / person
-		:name (n / name "Peter"))
+		:name (n / name :op1 "Peter"))
 	:ARG1 (s / staratel'nyi 'diligent')
 	:aspect State)
    :ARG2 (h2 / have-mod-91
    	:ARG0 (p2 / person
-		:name (n2 / name "Vanja))
+		:name (n2 / name :op1 "Vanja))
 	:ARG1 (l / lenivyj 'lazy')
 	:aspect State))
 ```
 
 <span id="3-1-6 (6b)" label="3-1-6 (6b)">\[3-1-6 (6b)\]</span>
 ```
-Vanja	prostudilsja,	**no**	poshël	v	shkolu
+Vanja	prostudilsja,	no	poshël	v	shkolu
 Vanja	caught_cold	CONJ	went	to	school
 'Vanja caught a cold, but [unexpected] went to school.'
 (c / contrast-01
@@ -1848,21 +1863,26 @@ Vanja	caught_cold	CONJ	went	to	school
 
 There are three subtypes of unexpected co-occurrence relations that confident annotators, or annotators for languages which have overt grammatical mechanisms of disambiguating them, may distinguish:
 
-```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the “means” relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): The former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a summersault whenever she carries bowls of punch. This relation is annotated using the :manner participant role relation (see section 3-2-1-1), and a negative polarity attribute (see section 3-3-3).
-```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. THe concessive _even though_ specifies that typically when one is broke, one does not buy new guitars. This relation is annotated using the have-concession-91 predicate or the shortcut :concession relation (see section 3-2-1-1, 4-3). 
-```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in [3-1-6 (7d)\]](#3-1-6 (7d)), there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the have-condition-91/have-condition-91 predicate. [??]
+```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a summersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
+
+```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. THe concessive _even though_ specifies that typically when one is broke, one does not buy new guitars. This relation is annotated using the `have-concession-91` predicate or the shortcut `:concession` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1), [Part 4-3](#part-4-3-modal-dependency)).
+
+```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in [3-1-6 (7d)\]](#3-1-6 (7d)), there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the **have-condition-91/have-condition-91 predicate. [??]**
 
 <span id="3-1-6 (7a)" label="3-1-6 (7a)">\[3-1-6 (7a)\]</span> Sarah carried the bowl of punch into the living room **without** spilling a drop. / Sarah carried the bowl of punch into the living room **and/but** didn't spill a drop.
+
 <span id="3-1-6 (7b)" label="3-1-6 (7b)">\[3-1-6 (7b)\]</span> Sarah carried the bowl of punch into the living room **without** doing a summersault. / Sarah carried the bowl of punch into the living room **and/but** didn't do a summersault.
+
 <span id="3-1-6 (7c)" label="3-1-6 (7c)">\[3-1-6 (7c)\]</span> **Even though** he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
+
 <span id="3-1-6 (7d)" label="3-1-6 (7d)">\[3-1-6 (7d)\]</span> **Even if** you arrive only five minutes late, you will be fired.
 
-```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In [3-1-6 (8)\]](#3-1-6 (8)), 
-
-Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence meaning”, using the same form to express both. These two meanings are therefore subsumed under the “adversative” category on the lattice. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
+Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
 
 ```And + unexpected```:  may be used if a language does not formally distinguish conjuctive relations from unexpected co-occurrence relations. The language may still have a distinct form to express pure contrast.
+
 ```And + contrast```:  may be used if a language does not formally distinguish conjunctive relations from pure contrast relations. The language may still have a distinct form for expressing unexpected cooccurrence.
+
 ```And + but```:  may be used if a language does not formally distinguish between conjunctive relations and adversative relations at all.
 
 [Back to Table of Contents](#toc)
