@@ -461,7 +461,7 @@ Other meanings are represented as *relations* in AMR, which means that
 they function as edges in the AMR graphs. This is the case for argument
 roles and modifiers of nouns, amongst others.
 
-### Part 2-2-1: Predicate-argument relations.
+#### Part 2-2-1: Predicate-argument relations.
 
 The annotation of predicate-argument structure is the main domain in
 which AMR annotation conventions are inherited. First and foremost,
@@ -544,7 +544,7 @@ I heard about his travels.
 				:ref-number Singular))
 ```
 
-### Part 2-2-2: Multi-word expressions.
+#### Part 2-2-2: Multi-word expressions.
 
 UMR inherits annotation conventions from AMR in domains other than
 predicate-argument structure. With regard to concepts, UMR treats
@@ -575,7 +575,7 @@ apk-el-vongk-es-akp-e'			tayep	ayko<'o>k
 	:aspect Performance)
 ```
 
-### Part 2-2-3: Abstract concepts.
+#### Part 2-2-3: Abstract concepts.
 
 AMR conventions are also largely inherited with regards to the use of
 abstract concepts. Abstract concepts are concepts that are identified
@@ -682,7 +682,7 @@ apk-el-v-ayk-akh-a'			Venancio	el-eyv-om-akha'			mil		novecientos	sesenta	y	seis
 	:aspect Performance)
 ```
 
-### Part 2-2-4: Non-participant role relations.
+#### Part 2-2-4: Non-participant role relations.
 
 Another domain in which AMR conventions are inherited by UMR is the
 annotation of non-participant role relations. Such relations are used to
@@ -711,7 +711,7 @@ annotators can use them to indicate more fine-grained aspectual
 information beyond the aspect categories offered in the corresponding
 attribute, as in [\[2-2-3 (2b)\]](#2-2-3 (2b)). UMR also adds a new non-participant role relation: the `:other` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
 
-### Part 2-2-5: Attributes.
+#### Part 2-2-5: Attributes.
 
 The last area in which AMR conventions are inherited by UMR is that of
 *attribute* annotations. Attributes are relations which attach one of a
