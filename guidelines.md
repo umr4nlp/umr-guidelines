@@ -7,10 +7,16 @@
 
 **<span id="toc" label="toc">Table of Contents</span>**  
 
-* Part 1. [Introduction](#part-1-introduction)
+* Part 1. [Introduction: What is UMR and what does UMR annotation look like?](#part-1-introduction-what-is-UMR-and-what-does-UMR-annotation-look-like)
 * Part 2. [From AMR to UMR](#part-2-from-amr-to-umr)
 	* Part 2-1. [Introduction](#part-2-1-introduction)
 	* Part 2-2. [Introduction for field linguists](#part-2-2-introduction-for-field-linguists)
+     		* Part 2-2-1. [Predicate-argument relations](#part-2-2-1-predicate-argument-relations)
+     		* Part 2-2-2. [Multi-word expressions](#part-2-2-2-multi-word-expressions)
+     		* Part 2-2-3. [Abstract concepts](#part-2-2-3-abstract-concepts)
+     		* Part 2-2-4. [Non-participant role relations](#part-2-2-4-non-participant-role-relations)
+     		* Part 2-2-5. [Attributes](#part-2-2-5-attributes)
+
 * Part 3. [Sentence-Level Representation](#part-3-sentence-level-representation)
     * Part 3-1. [UMR Concepts](#part-3-1-umr-concepts)
       * Part 3-1-1. [Eventive concepts](#part-3-1-1-eventive-concepts)
@@ -77,8 +83,10 @@
     
 * Part 6. Integrated examples
 
+* Part 7. [Alphabetical Index of UMR Annotation Categories](#part-7-alphabetical-index-of-UMR-annotation-categories)
 
-##  Part 1: Introduction
+
+##  Part 1: Introduction: What is UMR and what does UMR annotation look like?
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
 the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
@@ -109,7 +117,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
     :modal( (s1t2 :AFF AUTH) ) )
         
 ```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in Section 3-2.  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in [Part 3-2](#part-3-2-umr-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
 
 The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant that indicates that the *taste-01* event definitely happened, and is thus positive (as indicated by the *POS* label) from the author's perspective.
 
@@ -283,7 +291,7 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
   :modal ((s7a :AFF AUTH)
          (s7r :AFF AUTH)))
 ```
-For [\[1 (7)\]](#1 (7)), the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-2* happened.
+For [\[1 (7)\]](#1 (7)), the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-02* happened.
 
 <span id="1 (8)" label="1 (8)">\[1 (8)\]</span>
 ```
@@ -370,24 +378,25 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 **UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
 
 * Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
-* word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word `taste`
-* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatnating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a langugage-by-language basis.
+* Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word `taste`
+* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a language-by-language basis.
 * Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
 * Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not corrrespond with any particular word in the sentence, hence it is an `abstract` concept.
 
 **UMR relations:** There are also a number of ways relations between concepts are created:
 
-* Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (a sense of the ) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3](#part-3-2-umr-relations)
-* Semantic relations: Other UMR relations include `:time`, `:org`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3](#part-3-2-umr-relations)
+* Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (sense of the) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3-2-1](#part-3-2-1-participant-roles).
+* Semantic relations: Other UMR relations include `:temporal`, `:org`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations).
 
-**UMR attributes:** UMR currently has three attribute types:
+**UMR attributes:** UMR currently has seven attribute types:
 
-* Aspect: Aspect are annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1 Aspect](#part-3-3-1-aspect). 
-* Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation.
-* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` and `interrogative`
-* Quantity: The value of a `:quant` attribute is a numerical number
-* Value: The value of a `:value` attribute is a numerical number. 
-* Reference: The value of a `:ref` attribute is a *bundle* of person and number feature used to represent reference. The bundle of features is used to represent pronouns (e.g., `1s`, `2pl`).
+* Aspect: Aspect is annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1](#part-3-3-1-aspect). 
+* Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation (see [Part 3-3-3](#part-3-3-3-polarity)).
+* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` and `interrogative` (see [Part 3-3-2](#part-3-3-2-mode)).
+* Quantity: The value of a `:quant` attribute is a numerical number (see [Part 3-3-4](#part-3-3-4-quant)).
+* Value: The value of a `:value` attribute is a numerical number (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
+* Degree: The value of a `:degree` attribute is either `intensifier` or `downtoner` (see [Part 3-3-6](#part-3-3-6-degree)).
+* Reference: The value of a `:ref` attribute is a *bundle* of person and number feature used to represent reference. The bundle of features is used to represent pronouns (e.g., `1s`, `2pl`, see [Part 3-3-5](#part-3-3-5-ref)).
 
 **Differences between AMR and UMR**
 
@@ -415,7 +424,7 @@ UMR differs from AMR in a number of ways:
 ```
 
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
-* UMR allows the use of non-predicate-specific participant roles for languages that do not *frame files*
+* UMR allows the use of non-predicate-specific participant roles for languages that do not have *frame files* with lexicalized argument structure information. See [Part 3-2-1](#part-3-2-1-participant-roles) for details.
 * UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) for details.
 
 [Back to Table of Contents](#toc)
@@ -452,36 +461,49 @@ Other meanings are represented as *relations* in AMR, which means that
 they function as edges in the AMR graphs. This is the case for argument
 roles and modifiers of nouns, amongst others.
 
+### Part 2-2-1: Predicate-argument relations.
+
 The annotation of predicate-argument structure is the main domain in
 which AMR annotation conventions are inherited. First and foremost,
 predicated events are represented in the graph as nodes, as are
 predicated states, events that are being referred to or used as
 modifiers, and various other kinds of "non-verbal predicates" (see
-section 3.1.5 on event identification). For annotation of English texts,
-sense-disambiguated predicates from PropBank are used to label predicate
+[Part 3-1-1](#part-3-1-1-eventive-concepts) on event identification). For annotation of English texts,
+sense-disambiguated predicates from PropBank, such as the one presented below for English _taste_ are used to label predicate
 nodes. Since for most languages, no equivalent of PropBank is available,
 we recommend labelling nodes with a citation form of the verb
 supplemented with a -00 suffix. In this way, annotations can be used for
 the development of digital lexicons in the future.
 
+```
+Roleset id: taste.01, use one's tastebuds, active perception of flavor.
+Roles:
+	ARG0: _taster_
+	ARG1: _food_
+	
+Roleset id: taste.02, possess a flavor.
+Roles
+	ARG1: _thing with flavor_
+	ARG2: _description of flavor_
+```
+
 The semantic arguments of such predicate nodes are represented in the
-graph as daughter nodes of the relevant predicate (see section 3.1.6 on
-participant identification). The edge that connects parent and daughter
+graph as daughter nodes of the relevant predicate. The edge that connects parent and daughter
 nodes in these structures carries a participant role label. For English,
 these participant role labels are predicate-specific, numbered argument
 roles drawn once again from PropBank. For languages without comparable
 lexical databases, we use an inventory of general argument roles such as
-Actor, Undergoer, and Theme. In the long run, annotations can be used to
+`:Actor`, `:Undergoer`, and `:Theme`. In the long run, annotations can be used to
 create language-specific and predicate-specific frame files detailing
 argument structure of individual predicates, and the predicate-specific
 argument roles can be linked to predicate-general participant roles for
-commensurability (see section 3.2.1 on argument structure annotation).
+commensurability (see [Part 3-2-1](#part-3-2-1-participant-roles) on argument structure annotation).
 This AMR-based predicate-argument annotation is shown in its most basic
-form in [\[2-2-1 (1)\]](#2-2-1 (1)) below.
+form in [\[2-2-1 (1)\]](#2-2-1 (1)) from Sanapaná (Enlhet-Enenlhet) below.
 
 <span id="2-2-1 (1)" label="2-2-1 (1)">\[2-2-1 (1)\]</span>
 ```
-ap-hle-am-ke'				nenhlet
+ap-hle-am-ke'			nenhlet
 2M-travel-PST/HAB-V1.NFUT	person
 'A man travelled.'
 
@@ -496,15 +518,15 @@ languages like English and Sanapaná then look very similar, as shown
 above: they both have a predicate corresponding to the main event of the
 sentence as the top of the graph - the English one has a reference to a
 numbered PropBank frame file for the predicate *travel*, the Sanapaná
-one just has the citation form of the *travel*-verb with a -00 suffix.
+one just has the citation form of the *travel*-verb with a `-00` suffix.
 In both cases, the semantic argument 'person/man' is a daughter of this
 predicate, linked with a participant role edge. In English, this is a
 numbered participant role taken from this same PropBank frame file,
 while in Sanapaná it is a predicate-general participant role.
 
 AMR and UMR concepts are underspecified for morphosyntactic
-representation: the same concept (for example, *travel-01*) can be used
-to annotate a verb (as seen above), a noun (e.g. *his travels* in [\[2-2-1 (2)\]](#2-2-1 (2))), or any other relevant part of speech conveying the same semantic meaning. Section 3.1.1 discusses how AMR and UMR deal with the
+representation: the same concept (for example, `travel-01`) can be used
+to annotate a verb (as seen above), a noun (e.g. *his travels* in [\[2-2-1 (2)\]](#2-2-1 (2))), or any other relevant part of speech conveying the same semantics. [Part 3-1-1](#part-3-1-1-eventive-concepts) discusses how AMR and UMR deal with the
 information-packaging differences which are conveyed by packaging such
 content in different parts of speech.
 
@@ -522,33 +544,38 @@ I heard about his travels.
 				:ref-number Singular))
 ```
 
+### Part 2-2-2: Multi-word expressions.
+
 UMR inherits annotation conventions from AMR in domains other than
 predicate-argument structure. With regard to concepts, UMR treats
 multi-word expressions in essentially the same way as AMR. Specifically,
 it allows annotators to select multiple words in a sentence and annotate
 them as a single concept. This is necessary, for example, to annotate
 idiomatic expressions which cannot be semantically decomposed
-felicitously. In [\[2-2-1 (3)\]](#2-2-1 (3)), for instance,
+felicitously. In [\[2-2-2 (1)\]](#2-2-2 (1)) from Sanapaná, for instance,
 *elvongkeskama tayep* is a multi-word expression which literally and
-compositionally means "cause (someone) to be just across", but its
-idiomatic meaning is "rescue". The two words are therefore annotated
+compositionally means 'cause (someone) to be just across', but its
+idiomatic meaning is 'rescue'. The two words are therefore annotated
 together as a multi-word expression with a single meaning. Some further
 specifications are made in UMR with regards to the annotation of
 multi-word expressions such as serial verb constructions and
 periphrastic TAM constructions. More information about the annotation of
-multi-word expressions is given throughout section 3.1.3, and
-specifically in section 3-1-3-6.
+multi-word expressions is given throughout [Part 3-1-3](#part-3-1-3-concept-word-mismatches), and
+specifically in section [Part 3-1-3-6](#part-3-1-3-6-multi-word-concepts).
 
-<span id="2-2-1 (3)" label="2-2-1 (3)">\[2-2-1 (3)\]</span>
+<span id="2-2-2 (1)" label="2-2-2 (1)">\[2-2-2 (1)\]</span>
 ```
-apk-el-vongk-es-akp-e'				tayep	ayko<'o>k
+apk-el-vongk-es-akp-e'			tayep	ayko<'o>k
 2/3M-DISTR-be.just-CAUS-PAS-V1.NFUT	across	child<PL>
 'The children were rescued.'
 
 (e / elvongkeskama-tayep-00 'rescue'
 	:Undergoer (a/ aykok 'child'
-		:ref-number Plural))
+		:ref-number Plural)
+	:aspect Performance)
 ```
+
+### Part 2-2-3: Abstract concepts.
 
 AMR conventions are also largely inherited with regards to the use of
 abstract concepts. Abstract concepts are concepts that are identified
@@ -558,43 +585,43 @@ which AMR and UMR use abstract concepts. Firstly, there are concepts
 where AMR and UMR use abstract concepts rather than language-specific
 concepts corresponding to specific words with the goal of making
 annotations cross-linguistically comparable. For example, even though
-the Sanapaná thetic possession construction in [\[2-2-1 (4)\]](#2-2-1 (4)) makes use of a verb
+the Sanapaná thetic possession construction in [\[2-2-3 (1)\]](#2-2-3 (1)) makes use of a verb
 that literally means *exist*, an abstract concept predicate node
-"have-03" is introduced rather than a language specific "enyetnema-00"
+`have-03` is introduced rather than a language specific `enyetnema-00`
 concept. This way, possessive constructions across the world's languages
 can be annotated in consistent and comparable ways regardless of the
-morphosyntactic strategies they use (see section 3-1-3-5 for more
+morphosyntactic strategies they use (see [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses) for more
 information on such "non-verbal clauses").
 
-<span id="2-2-1 (4)" label="2-2-1 (4)">\[2-2-1 (4)\]</span>
+<span id="2-2-3 (1)" label="2-2-3 (1)">\[2-2-3 (1)\]</span>
 ```
-an-yetn-eye'			ko'o	vakka-hak	ah-ahangkok
-2/3F-exist-V1.NFUT		1SG:PRO	cow-old		1SG-POS
+an-yetn-eye'			ko'o	vakka-hak	ah-angkok
+2/3F-exist-V1.NFUT		1SG:PRO	cow-old;broken	1SG-POS
 'I have a book.' lit. 'My book exists.'
 
 (h/ have-03
 	:ARG0 (p / person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (v/ vakkahak 'book'))
+	:ARG1 (v/ vakkahak 'book')
+	:aspect State)
 ```
 
 Secondly, abstract concept conventions are inherited from AMR in a
 variety of domains where information expressed in natural language text
 needs to be standardized for computational tractability. This applies
 to, for example, the annotation of different types of quantities (which
-use abstract concepts such as *distance-quantity*,
-*temporal-quantity* and *monetary-quantity*, as
-illustrated in [\[2-2-1 (5a)\]](#2-2-1 (5a)) )-[\[2-2-1 (5b)\]](#2-2-1 (5b)), and the annotation of dates and times (which use abstract concepts such as *date-entity*, as illustrated in [\[2-2-1 (5c)\]](#2-2-1 (5c)). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic
-phenomena for which they are needed.
+use abstract concepts such as `distance-quantity`,
+`temporal-quantity` and `monetary-quantity`, as
+illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a)) )-[\[2-2-3 (2b)\]](#2-2-3 (2b)), and the annotation of dates and times (which use abstract concepts such as *date-entity*, as illustrated in [\[2-2-3 (2c)\]](#2-2-3 (2c)) (all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
 
-<span id="2-2-1 (5)" label="2-2-1 (5)">\[2-2-1 (5)\]</span>
+<span id="2-2-3 (2)" label="2-2-3 (2)">\[2-2-3 (2)\]</span>
 
-<span id="2-2-1 (5a)" label="2-2-1 (5a)">\[2-2-1 (5a)\]</span>
+<span id="2-2-3 (2a)" label="2-2-3 (2a)">\[2-2-3 (2a)\]</span>
 ```
 cinco,	seis	meses	apk-ehl-ta'mehl-kes-kam-a
-five	six		months	2/3M-DSTR-be.good-CAUS-PST/HAB-NOM
-'They used to preserve it for five or six months.'
+five	six	months	2/3M-DSTR-be.good-CAUS-PST/HAB-NOM
+'They would preserve it for five or six months.'
 
 (e/ enta'mehlkeskama-00 'preserve'
 	:Actor (p/ person
@@ -607,12 +634,13 @@ five	six		months	2/3M-DSTR-be.good-CAUS-PST/HAB-NOM
 			:unit (m/ mes 'month'))
 		:op2 (t3/ temporal-quantity
 			:quant 6
-			:unit (m/ mes 'month'))))
+			:unit (m/ mes 'month')))
+	:aspect Habitual)
 ```
-<span id="2-2-1 (5b)" label="2-2-1 (5b)">\[2-2-1 (5b)\]</span>
+<span id="2-2-3 (2b)" label="2-2-3 (2b)">\[2-2-3 (2b)\]</span>
 ```
-escuela	agrícola		seis	millón	cada	año		on-yanmong-kes-ek
-school	agricultural	six		million	each	year	1PL.IRR-exchange-CAUS-FUT
+escuela	agrícola	seis	millón	cada	año	on-yanmong-kes-ek
+school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 'For the agricultural school, we would pay six million (guaranies) per year.'
 
 (e/ enyanmongkeskama-00 'pay'
@@ -631,83 +659,91 @@ school	agricultural	six		million	each	year	1PL.IRR-exchange-CAUS-FUT
 		:ARG1 1
 		:ARG2 (t/ temporal-quantity
 			:quant 1
-			:unit (a2/ año 'year))))
+			:unit (a2/ año 'year)))
+	:aspect Habitual)
 ```
-<span id="2-2-1 (5c)" label="2-2-1 (5c)">\[2-2-1 (5c)\]</span>
+<span id="2-2-3 (2c)" label="2-2-3 (2c)">\[2-2-3 (2c)\]</span>
 ```
-apk-el-v-ayk-akh-a'					Venancio	el-eyv-om-akha'				mil			novecientos		sesenta	y	seis=anehla
+apk-el-v-ayk-akh-a'			Venancio	el-eyv-om-akha'			mil		novecientos	sesenta	y	seis=anehla
 2/3M-DSTR-arrive-PST/HAB-REP-NOM	Venancio	1PL-live-PST/HAB-NOM.LOC	thousand	nine-hundred	sixty	and	six=DUB
 'Venancio and his companions arrived where we lived in ninteen sixty-six, maybe.'
 
 (e/ elvay'a-00 'arrive'
 	:Actor (p/ person
 		:name (n/ name "Venancio")
-		:Companion (p2/ person))
+	:Companion (p2/ person))
 	:Goal (p3/ place
 		:Place-of (e2/ eleyvoma-00 'live'
 			:Actor (p4/ person
 				:ref-person 1st
 				:ref-number Plural)))
 	:Temporal (d/ date-entity
-		:year 1966))
+		:year 1966)
+	:aspect Performance)
 ```
+
+### Part 2-2-4: Non-participant role relations.
+
 Another domain in which AMR conventions are inherited by UMR is the
 annotation of non-participant role relations. Such relations are used to
-annotate a wide range of meanings. Many of them, such as :medium,
-:topic, and :mod (the latter of which is illustrated in [\[2-2-1 (5b)\]](#2-2-1 (5b)) are used to
+annotate a wide range of meanings. Many of them, such as `:medium`,
+`:topic`, and `:mod` (the latter of which is illustrated in [\[2-2-3 (2b)\]](#2-2-3 (2b))) are used to
 annotate modifiers of referring expressions. Other relations are used
-with specific abstract concepts: whenever a *date-entity*
-concept is present, one of the temporal relations :month, :year, :date
+with specific abstract concepts: whenever a `date-entity`
+concept is present, one of the temporal relations `:month`, `:year`, `:date`
 etc. will be used, for example. The use of these relations is treated
-more in detail in section 3-2-2 of this document.
+more in detail in [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations) of this document.
 
 Even though many of these relations are straightforwardly inherited by
 UMR, some changes are made to their use for the sake of cross-linguistic
-comparability. Firstly, UMR adjusts the use of the :mod relation to
+comparability. Firstly, UMR adjusts the use of the `:mod` relation to
 cover all *typifying* modifiers - i.e. modifiers which subcategorize the
 reference of a referring expression rather than narrowing it down to a
 specific entity (e.g. *women* in *women's magazine*). In AMR, this
-semantic domain was shared between the :mod relation and a number of
-other relations such as :medium, :topic, and :consist-of. In UMR, these
+semantic domain was shared between the `:mod` relation and a number of
+other relations such as `:medium`, `:topic`, and `:consist-of`. In UMR, these
 other relations still exist, but they are treated as more fine-grained
-values on a lattice underneath the more general :mod relation. Whereas
-AMR used the :frequency and :duration relations as the main ways of
-annotating Aspect, UMR does this through a dedicated :Aspect attribute.
-However, UMR maintains the :duration and :frequency relations so that
+values on a lattice underneath the more general `:mod` relation. Whereas
+AMR used the `:frequency` and `:duration` relations as the main ways of
+annotating Aspect, UMR does this through a dedicated `:Aspect` attribute.
+However, UMR maintains the `:duration` and `:frequency` relations so that
 annotators can use them to indicate more fine-grained aspectual
 information beyond the aspect categories offered in the corresponding
-attribute, as in [\[2-2-1 (5b)\]](#2-2-1 (5b)). UMR also adds a new non-participant role relation: the :other relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
+attribute, as in [\[2-2-3 (2b)\]](#2-2-3 (2b)). UMR also adds a new non-participant role relation: the `:other` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
+
+### Part 2-2-5: Attributes.
 
 The last area in which AMR conventions are inherited by UMR is that of
 *attribute* annotations. Attributes are relations which attach one of a
 closed, pre-defined list of values to a concept node: for example, the
-:Aspect attribute allows annotators to hang a *state, habitual,
-activity, endeavor*, or *performance* value off
-of a predicate node. Attributes inherited from AMR are :polarity, :mode,
-:quant, and :value (discussed in more depth in section 3-2-2). The use
-of the :quant relation was changed in that a more fine-grained
-annotation scheme for quantification is now available (see sections
-3-1-5 and 3-3-4). The :quant relation is mainly what annotators with
+`:Aspect` attribute allows annotators to hang a `state`, `habitual`,
+`activity`, `endeavor`, or `performance` value off
+of a predicate node.
+
+Attributes inherited from AMR are `:polarity`, `:mode`,
+`:quant`, and `:value` ([Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3](#part-3-3-UMR-attributes). The use
+of the `:quant` relation was changed in that a more fine-grained
+annotation scheme for quantification is now available (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-3-4](#part-3-3-4-quant)). The `:quant` relation is mainly what annotators with
 less training or for languages with less available linguistic analysis
 will use to flag concepts that are of interest with regards to
-quantification (i.e. in stage 0 annotation). More confident annotators
+quantification. More confident annotators
 and annotators for well-documented languages will apply the full
-fine-grained quantification and scope scheme (stage 1 annotation). One
+fine-grained quantification and scope scheme. One
 specific change is that, whereas in mensural constructions (e.g. *three
-cups of milk*, AMR varies between having the substance or the mensural
+cups of milk*), AMR varies between having the substance or the mensural
 term as the head depending on morphosyntactic expression, UMR always
 annotates the substance as the head for greater cross-linguistic
 comparability. This means that even less conventionalized measure terms,
 like English *cup* or *bag*, are annotated as modifiers, even though
-they look like morphosyntactic heads. This is illustrated in [\[2-2-1 (6)\]](#2-2-1 (6)). The use of the :polarity value is constrained to the sentence level.
+they look like morphosyntactic heads. This is illustrated in [\[2-2-5 (1)\]](#2-2-5 (1)). The use of the `:polarity` value is constrained to the sentence level.
 Propositional negation is annotated in the modal section of the document
-level annotation. The :polarity value is used to indicate any overt
+level annotation. The `:polarity` value is used to indicate any overt
 morphosyntactic exponents of negation at the sentence level, flagging
 such concepts as interesting for the modal or scope negation. This
-includes e.g. morphologically negated adjectives, even though in the
+includes e.g. morphologically negated adjectives like _unhappy_, even though in the
 document-level modal annotation, these will not be annotated as negated.
 
-<span id="2-2-1 (6)" label="2-2-1 (6)">\[2-2-1 (6)\]</span>
+<span id="2-2-5 (1)" label="2-2-5 (1)">\[2-2-5 (1)\]</span>
 ```
 Three bottles of water
 
@@ -716,8 +752,8 @@ Three bottles of water
 	:unit (b/ bottle)
 ```
 
-UMR introduces three new attributes: :Aspect (see section 3-3-1), and
-:ref-person and :ref-number (see section 3-3-5).
+UMR introduces four new attributes: `:aspect` (see [Part 3-3-1](#part-3-3-1-Aspect)), `:degree` (see [Part 3-3-6](#part-3-3-6-degree)), and
+`:ref-person` and `:ref-number` (see [Part 3-3-5](#part-3-3-5-ref)).
 
 [Back to Table of Contents](#toc)
 
@@ -734,7 +770,7 @@ Information packaging (also called discourse function or information
 structure), on the other hand, characterizes how a particular linguistic
 expression “packages” the semantic content. There are three fundamental
 information packaging functions: reference, modification, and
-predication. Croft (in preparation)  defines them as:
+predication. Croft (to appear)  defines them as:
 
 **reference**: what the speaker is talking about  
 **modification**: additional information provided about the referent  
@@ -914,9 +950,9 @@ the category of *cat*), whereas equational sentences indicate that two
 referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
 For these nonverbal clause categories, the event identified is labelled
-with a special [Abstract?] UMR predicate that indicates the relevant combination of
+with a special abstract UMR predicate that indicates the relevant combination of
 semantics and information-packaging. These are shown below in Table 4. For the labelling of participants with these
-nonverbal clause predicates, see §[4](#participantroles).FIX HYPERLINK
+nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses).
 
 <div id="tab:nonverbalpreds">
 
@@ -1001,7 +1037,7 @@ course)...*
 In [\[3-1-1-4 (1a)\]](#3-1-1-4 (1a)), there is an implicit second *smoking* event and
 in [\[3-1-1-4 (1b)\]](#3-1-1-4 (1b)), there is an implicit second *leave* event. These
 implicit events should be annotated as co-referential with the event
-mentioned earlier in the text (see §[3](#coref)).
+mentioned earlier in the text (see [Part 4-1](#part-4-1-coreference)).
 
 In [\[3-1-1-4 (2)\]](#3-1-1-4 (2)), however, the implicit events don’t
 have a relationship with an event previously mentioned in the text;
@@ -1033,7 +1069,7 @@ general event possible should be identified.
 
  #### Part 3-1-2. Named entities
  
-Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adpated from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a *country* entity and a *person* entity. 
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a `country` entity and a `person` entity. 
 
 <span id="3-1-2 (1)" label="3-1-2 (1)">\[3-1-2 (1)\]</span> Edmond Pope is an American businessman.
 ```                    
@@ -1105,11 +1141,15 @@ PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 'I cut his head off with a knife.'
 
 (n / teb-e'ei-s ‘break/remove.stick.like’
-    :Actor (p / person :ref 1SG)
-    :Undergoer (p2 / person :ref 3SG)
-    :Theme (t / thing :ref obviative)
-    :Aspect Performance
-    :Modstrength Aff)
+    :Actor (p / person
+    	:ref-person 1st
+	:ref-number Singular)
+    :Undergoer (p2 / person
+    	:ref-person 3rd
+	:ref-number Singular)
+    :Theme (t / thing
+    	:ref-person Obviative)
+    :Aspect Performance)
 ```
 
 When languages use verbal affixes to index arguments, these arguments
@@ -1119,8 +1159,8 @@ free pronouns - they are identified as arguments of the verb. So, even
 though there is no overt word in the sentence above referring to a first
 person actor or a third person undergoer, these arguments are
 nevertheless identified and annotated (using a named-entity concept, in
-this case 'person' or 'thing', as they are clearly identifiable to
-native speakers of the language).
+this case `person` or `thing`), as they are clearly identifiable to
+native speakers of the language.
 
 Noun incorporation constructions come in different types across
 languages (Mithun 1984). Some constructions, such as the one illustrated by *-e'ei*
@@ -1128,7 +1168,7 @@ languages (Mithun 1984). Some constructions, such as the one illustrated by *-e'
 functions as an argument of the verb, meaning that no overt NP can be
 present in the clause to fill this semantic role. So, while UMR treats
 the whole stem *teb-e'ei-s* as the predicate, it also identifies a
-separate concept for 'head', which has the :Theme participant role as
+separate concept for 'head', which has the `:Theme` participant role as
 seen in the UMR corresponding to example
 [\[3-1-3-1 (1)\]](#3-1-3-1 (1)).
 
@@ -1143,7 +1183,7 @@ example, the Arapaho instrumental suffix *-s* indicates that the
 independent NP can appear to specify the instrument. For such
 grammaticalized noun incorporation constructions, no separate concept
 corresponding to the incorporated noun is identified. A participant
-with the :Instrument role is only identified if it is expressed as an
+with the `:Instrument` role is only identified if it is expressed as an
 overt NP in the clause.
 
 This treatment of noun incorporation means that a certain amount of
@@ -1155,7 +1195,14 @@ independent overt NP. Of course, grammaticalization is a continuous
 process, and therefore noun incorporation constructions are likely to be
 found on a continuum between these two end points. However, we map this
 continuum onto a discrete choice for annotators by taking the ability of
-an incorporated noun to co-occur with an independent NP as criterial.
+an incorporated noun to co-occur with an independent NP as criterial. This treatment of single words containing predicates and arguments is summarized in the table below.
+
+| **Construction type** | **Construction definition/diagnostic** | **UMR Treatment** |
+| :------------------------------- | :----------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------|
+| Pronominal affixes | Verbal affixes expressing person/number values of arguments | If co-referential with overtly expressed nominal argument: don't annotate |
+| | | If no overt nominal is present: annotate as argument with relevant named-entity concept |
+| Incorporated nouns | No nominal expression co-referential with the incorporated noun can occur in the clause | Annotate separate concept for incorporated noun as argument |
+| Verbal classifier | Nominal expression specifying type of object denoted by incorporated noun can occur in the clause | Do not annotate separate concept for incorporated noun |
 
 [Back to Table of Contents](#toc)
 
@@ -1185,12 +1232,10 @@ Grandmother made the kid drink the water.
 (d/ drink
     :Cause (m/ make
     	:Actor (g/ grandmother)
-    	:Aspect Performance
-    	:Modstr Aff)
+    	:Aspect Performance)
     :Actor (k/ kid)
     :Undergoer (w/ water)
-    :Aspect Performance
-    :Modstr Aff)
+    :Aspect Performance)
 
 ```
 <span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span>
@@ -1201,7 +1246,7 @@ Grandmother did not make the kid drink the water.
 
 Grandmother made the kid not drink the water.
 
-Kukama, on the other hand, has a morphological causative, as in
+Kukama (Tupían), on the other hand, has a morphological causative, as in
 [\[3-1-3-2 (2)\]](#3-1-3-2 (2)). The caused event and causing event cannot be
 negated independently: if
 [\[3-1-3-2 (2)\]](#3-1-3-2 (2)) is negated, negation necessarily scopes over
@@ -1219,8 +1264,7 @@ grandmother	drink-CAUS	kid=PST		water-INST
     :Causer (n/ nai 'grandmother')
     :Actor (c/ churan 'kid')
     :Undergoer (u/ uni 'water')
-    :Aspect Performance
-    :Modstr Aff)
+    :Aspect Performance)
 ```
 
 This criterion will be used for all valency change concepts: if the
@@ -1230,7 +1274,13 @@ if they cannot be negated independently, only one event is identified
 (corresponding to the derived verb stem). The semantics and valency of
 such derived forms will be inferred from the participant role annotation
 associated with the verb. Which valency changes lead to which argument
-structures is detailed in section 3.2.1 of these guidelines.
+structures is detailed in [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
+
+| **IF** | **THEN** |
+| :---------------------------------------------------------------------- |:------------------------------------------------|
+| Event and valency-changing category can be negated independently | Identify and annotate them as separate events |
+| Event and valency-changing category cannot be negated independently | Identify a single event |
+
 
 [Back to Table of Contents](#toc)
 
@@ -1244,8 +1294,7 @@ either through bound morphology or through separate words (often called
 Phasal aspectual meanings such as inchoative, completive, and
 continuative, firstly, are never identified as separate events, even if
 they are expressed through independent words. Instead, they will simply
-inform the Aspect attribute label of the event they modify (section
-3.3.1). This principle is illustrated in example
+inform the Aspect attribute label of the event they modify ([Part 3-3-1](#part-3-3-1-Aspect)). This principle is illustrated in example
 [\[3-1-3-3 (1)\]](#3-1-3-3 (1)). In
 Manipuri, the inchoative concept and the "close"-meaning form part of
 the same word, while in the English translation, they are expressed as
@@ -1263,8 +1312,7 @@ paper	this	black-change
     :ARG0 (c/ ce 'paper')			    :ARG0 (p/ paper)
     	:mod (s/ əsi 'this')			        :mod (t/ this)
     :ARG1 (m/ mu 'black')			    :ARG1 (b/ black)
-    :Aspect Performance				    :Aspect Performance
-    :Modstr Aff)				    :Modstr Aff)
+    :Aspect Performance)				    :Aspect Performance)
 ```
 
 Similarly, modal and temporal auxiliaries will not be identified
@@ -1274,7 +1322,7 @@ as *might* and *should* in *He **might/should** go to school* are not
 identified as independent events, and neither are temporal auxiliaries
 such as *have* and *be* in *She **has gone/is going** to school*. How
 such meanings exactly inform the temporal and modal annotation is
-detailed in sections 4.2 and 4.3 of these guidelines.
+detailed in [Part 4-2](#part-4-2-temporal-dependency) and [Part 4-3](#part-4-3-modal-dependency).
 
 For some semi-modal concepts, there may be language-internal semantic
 evidence that they are construed as independent concepts. For instance,
@@ -1288,14 +1336,14 @@ both *want* and *go*.
 <span id="3-1-3-3 (2a)" label="3-1-3-3 (2a)">\[3-1-3-3 (2a)\]</span> She wants to go to school.
 ```
 (w/ want-01
-    :ARG0 (p/ person :ref 3SGF)
+    :ARG0 (p/ person
+    	:ref-person 3rd
+	:ref-number Singular)
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
-        :Aspect Performance
-        :MOD w)
-    :Aspect State
-    :Modstr Aff)
+        :Aspect Performance)
+    :Aspect State)
 ```
 
 <span id="3-1-3-3 (2b)" label="3-1-3-3 (2b)">\[3-1-3-3 (2b)\]</span> She may want to go to school.
@@ -1303,7 +1351,7 @@ both *want* and *go*.
 However, if in a language the desire-event cannot be modalized
 independently from the desired event, no separate event is identified
 for the desire-semantics. Instead, the desiderative is taken into
-account in the modal annotation, as detailed in section 4.3. For three
+account in the modal annotation, as detailed in [Part 4-3](#part-4-3-modal-dependency). For three
 other semi-modal concepts, the same guidelines as to concept-word
 mismatches are used as for desideratives: this is the case for conatives
 ('try to'), optatives ('wish that'), and frustratives ('fail to').
@@ -1362,13 +1410,13 @@ events, and are annotated in UMR as two separate predicates.
 ##### Part 3-1-3-5. Non-verbal clauses
 
 Many types of "non-verbal clauses", such as predicate nominals and
-predication of properties, possession, and location (see section 3-1-1-3 for the predicates UMR predicates that are used to annotate these meanings), show different
+predication of properties, possession, and location (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) for the predicates UMR predicates that are used to annotate these meanings), show different
 mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
 easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
 [\[3-1-3-5 (1)\]](#3-1-3-5 (1)) and [\[3-1-3-5 (2)\]](#3-1-3-5 (2)). In English, these constructions do not pose
 serious problems to the predicate-argument structure of UMR - one could
-simply identify the "have" or "be"-verb as a predicate, and the NPs in
+simply identify the 'have' or 'be'-verb as a predicate, and the NPs in
 the clause as its arguments.
 
 In the Kukama object predication construction in
@@ -1379,8 +1427,7 @@ construction. In the Kukama thetic possession construction in [\[3-1-3-5 (2)\]](
 and the relation of possession are expressed together as a single word
 which functions as a predicate: something that is typically thought of
 as an "argument" is predicativized. In languages that use the construction type exemplified in [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a [\[3-1-3-5 (2)\]](#3-1-3-5 (2))-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
-for the annotation of predicate-argument structure if we want to adhere
-to our position of holistic annotation of words, since there is no
+for the annotation of predicate-argument structure, since there is no
 separate material that can be identified as a predicate.
 
 <span id="3-1-3-5 (1)" label="3-1-3-5 (1)">\[3-1-3-5 (1)\]</span> 
@@ -1412,13 +1459,11 @@ Miguel-CER	canoe-owner
 ```
 
 We propose a set of seven abstract concept predicates each corresponding
-to a discrete "non-verbal clause" function (table
-[\[tab:nonverbal\]](#tab:nonverbal)). When there is no overt predicate-word, as
+to a discrete "non-verbal clause" function, listed in the table below. When there is no overt predicate-word, as
 in [\[3-1-3-5 (1)\]](#3-1-3-5 (1)), we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
-with. They should use an abstract predicate concept from table
-[\[tab:nonverbal\]](#tab:nonverbal) as predicative core of the graph, and use the :ARG0 and :ARG 1 numbered argument roles to link the arguments to this predicate as specified in
-the table (see also section 3-2-1-1-1 for more in-depth treatment of the argument structure annotation with these predicates).
+with. They should use such an abstract predicate concept as predicative core of the graph, and use the :ARG0 and :ARG1 numbered argument roles to link the arguments to this predicate as specified in
+the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
 [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), UMR takes the same approach as for
@@ -1491,7 +1536,7 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
  
- UMR allows concepts to be word senses. In order to annotate word sense, it is necessary to first have a sense inventory for all words that need to be sense disambiguated. For languages that do not have a sense inventory, the concept can simply be lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English [\[3-1-4 (1)\]](#3-1-4 (1)) and Chinese [\[3-1-4 (2)\]](#3-1-4 (2)), where word senses are defined for predicates together with their arguments in *frame files*.
+ UMR allows concepts to be word senses. In order to annotate word senses, it is necessary to first have a sense inventory for all words that need to be sense-disambiguated. For languages that do not have a sense inventory, concepts can simply be represented by lemmas. For predicate concepts which the annotator wants to flag for later inclusion in a lexicon, the suffix -00 can be added to such lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English [\[3-1-4 (1)\]](#3-1-4 (1)) and Chinese [\[3-1-4 (2)\]](#3-1-4 (2)), where word senses are defined for predicates together with their arguments in *frame files*.
 
 <span id="3-1-4 (1)" label="3-1-4 (1)">\[3-1-4 (1)\]</span> The school has approximately 570 pupils.
 ``` 
@@ -1545,7 +1590,7 @@ When multiple events are expressed in a complex sentence, a variety of semantic 
 
 ![Discourse Lattice](Discourse-lattice.jpg)
 
-As with Aspect, annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination. In the examples below, both options are illustrated wherever possible.
+Annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination. In the examples below, both options are illustrated wherever possible.
 
 Each discourse relation on the lattice is defined below, based on Croft (to appear, ch. 15, ch. 17).
 
@@ -1553,7 +1598,7 @@ Each discourse relation on the lattice is defined below, based on Croft (to appe
 
 <span id="3-1-6 (1)" label="3-1-6 (1)">\[3-1-6 (1)\]</span>
 ```
-I will go for a walk **or** play some soccer.
+I will go for a walk or play some soccer.
 (o / or
    :op1 (w / walk-01
    	:ARG0 (p/ person
@@ -1569,6 +1614,7 @@ I will go for a walk **or** play some soccer.
 There are two more fine-grained subtypes of disjunctive relations:
 
 ```Inclusive Disjunctive```: also known as “non-exhaustive”. Indicates that either any of the construed alternatives can be “chosen” individually, or any combination of the construed alternatives. This is illustrated in [\[3-1-6 (2a)\]](#3-1-6 (2a)) from Hua (Haiman 1978:7-8). Here, _-ve_ indicates that bashing pandanus, husking and eating corn, and planting bananas are not mutually exclusive alternatives. Performing any or all of these actions equally violates a sexual taboo.
+
 ```Exclusive Disjunctive```: also known as “exhaustive”. Indicates that the construed alternatives are presented as mutually exclusive options. This is illustrated in [\[3-1-6 (2b)\]](#3-1-6 (2b)) from Hua (Haiman 1980:271). Here, _ito_ indicates that his being here and his not being here are mutually exclusive alternatives.
 
 <span id="3-1-6 (2)" label="3-1-6 (2)">\[3-1-6 (2)\]</span>
@@ -5132,7 +5178,7 @@ complement event node in the full dependency structure.
  		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
  		* Give **all other events** a _:modstr_ annotation with the relevant strength.
  	* Give every concept **identified as an event** (3-1-1 for Event ID guidelines) and each **time expression** in the text a temporal annotation (4-2).
-   
+
  ## Part 5: Integrated examples
 
 PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
@@ -5274,7 +5320,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
        :aspect Endeavor)
 
 ```
-The above segment illustrates many of the issues with Arapaho: lack of overt noun phrases in a sentence; noun incorporation; and a mismatch between syntactic argument structure and semantic argument structure. Also, the actual arguments are really the pronominal affixes on the verb, Marianne Mithun would argue, and the overt nominals are just there as adjuncts for clarification where necessary.
 
 [Back to Table of Contents](#toc)
+
+##  Part 7: Alphabetical Index of UMR Annotation Categories
 
