@@ -44,6 +44,12 @@
       		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
       	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)   
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-role-UMR-relations)
+      	* Part 3-2-2-1 [Temporal relations](#part-3-2-2-1-temporal-relations)
+     	* Part 3-2-2-2 [Modifiers](#part-3-2-2-2-modifiers)
+     	* Part 3-2-2-3 [Circumstantial temporals and locatives](#part-3-2-2-3-circumstantial-temporals-and-locatives)
+     	* Part 3-2-2-4 [Named entities](#part-3-2-2-4-named-entities)
+     	* Part 3-2-2-5 [Quantification](#part-3-2-2-5-quantification)
+     	* Part 3-2-2-6 [Other relations](#part-3-2-2-6-other-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#part-3-3-1-Aspect) 
       	* Part 3-3-1-1. [Event nominals](#part-3-3-1-1-event-nominals)
@@ -781,12 +787,16 @@ information packaging functions, as shown in Table
 1 from Croft (in preparation).
 
 
+<div id="tab:information_packaging">
 
 |           |              Reference               |           Modification           |         Predication         |
 | :-------: | :----------------------------------: | :------------------------------: | :-------------------------: |
 | Entities  |         the sharp **thorns**         |      the **bush’s** thorns       |     It **is a thorn.**      |
 |  States   |            **sharpness**             |       the **sharp** thorns       | Those thorns **are sharp.** |
 |     Processes      |     I said \[**that** the thorns **scratched** me\]. / <br />      the \[**scratching** of the thorns\]    |       the thorns **that** \[**scratched** me\] / <br /> the thorns \[**scratching** me\]        |      The sharp thorns **scratched** me.      |
+
+Table 1: Semantic types expressed in different information packaging constructions
+</div>
 
 Cross-linguistically, certain types of morphosyntactic constructions
 tend to express specific combinations of semantic type and information
@@ -797,11 +807,16 @@ well-known part-of-speech classes across languages: entities in
 reference correspond to nouns, states in modification to adjectives, and
 processes in predication to verbs.
 
+<div id="tab:eventive_concepts">
+	
 |               |                   Reference                   |                    Modification                    |                  **Predication**                  |
 | :-----------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: |
 |   Entities    | UNMARKED NOUNS |                 relative clauses, PPs on nouns                  |              **predicate nominals,** **complements**             |
 |    States     |              deadjectival nouns               | UNMARKED ADJECTIVES |             **predicate adjectives,** **complements**           |
 | **Processes** |       **event nominals, complements,** **infinitives, gerunds**        |         **participles, relative clauses**          | **UNMARKED VERBS** |
+
+Table 2: Constructions identified as events
+</div>
 
 The most prototypical expression for an event is a process in
 predication, therefore we identify a word/phrase as an event if it has
@@ -930,6 +945,7 @@ functional types of nonverbal clauses are shown below in Table 3.
 | object        | predicational             | Panda is a cat.                 |
 | object        | equational                | Panda is my cat.                |
 
+Table 3: Non-verbal clause types
 </div>
 
 There are four semantic types of nonverbal clauses: possession,
@@ -966,7 +982,7 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 | object predication               | have-role-91      |
 | equational                       | identity-91       |
 
-
+Table 4: Non-verbal clause predicates
 </div>
 
 States in modification, as in [\[3-1-1-3 (2a)\]](#3-1-1-3 (2a)) and
@@ -1079,13 +1095,14 @@ Following AMR, each named entity in a text is annotated with a type. However, th
       :domain (p / person :wiki "Edmond_Pope"
             :name (n5 / name :op1 "Pope")))                   
 ```        
-The total set of entity types are hierarchically organized 
+The total set of entity types are hierarchically organized, as listed in Table 5 below.
 
 
 
 <!--organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league-->
 <!--location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation, (landforms and water forms?)-->
 
+<div id="tab:named_entity_types">
 
 |Type   |  Subtype (AMR NE Type) |
 |-------|------------------------|
@@ -1102,6 +1119,9 @@ The total set of entity types are hierarchically organized
 |  *Natural-object*| |
 |  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
 |   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
+
+Table 5: Named entity types
+</div>
 
  #### Part 3-1-3. Concept-word mismatches
  
@@ -1195,7 +1215,9 @@ independent overt NP. Of course, grammaticalization is a continuous
 process, and therefore noun incorporation constructions are likely to be
 found on a continuum between these two end points. However, we map this
 continuum onto a discrete choice for annotators by taking the ability of
-an incorporated noun to co-occur with an independent NP as criterial. This treatment of single words containing predicates and arguments is summarized in the table below.
+an incorporated noun to co-occur with an independent NP as criterial. This treatment of single words containing predicates and arguments is summarized in table 6 below.
+
+<div id="tab:noun_incorporation">
 
 | **Construction type** | **Construction definition/diagnostic** | **UMR Treatment** |
 | :------------------------------- | :----------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------|
@@ -1203,6 +1225,9 @@ an incorporated noun to co-occur with an independent NP as criterial. This treat
 | | | If no overt nominal is present: annotate as argument with relevant named-entity concept |
 | Incorporated nouns | No nominal expression co-referential with the incorporated noun can occur in the clause | Annotate separate concept for incorporated noun as argument |
 | Verbal classifier | Nominal expression specifying type of object denoted by incorporated noun can occur in the clause | Do not annotate separate concept for incorporated noun |
+
+Table 6: Treatment of pronominal affixes and noun incorporation
+</div>
 
 [Back to Table of Contents](#toc)
 
@@ -1271,16 +1296,20 @@ This criterion will be used for all valency change concepts: if the
 "lexical" concept expressed by the verb root and the valency change
 concept can be negated independently, two events are identified, whereas
 if they cannot be negated independently, only one event is identified
-(corresponding to the derived verb stem). The semantics and valency of
+corresponding to the derived verb stem (see table 7). The semantics and valency of
 such derived forms will be inferred from the participant role annotation
 associated with the verb. Which valency changes lead to which argument
 structures is detailed in [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
 
+<div id="tab:valency_changes">
+	
 | **IF** | **THEN** |
 | :---------------------------------------------------------------------- |:------------------------------------------------|
 | Event and valency-changing category can be negated independently | Identify and annotate them as separate events |
 | Event and valency-changing category cannot be negated independently | Identify a single event |
 
+Table 7: Treatment of valency-changing categories
+</div>
 
 [Back to Table of Contents](#toc)
 
@@ -1476,7 +1505,7 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 "non-verbal clause" meanings.
 
 
-<span id="tab:nonverbal" label="tab:nonverbal">\[tab:nonverbal\]</span>
+<div id="tab:nonverbal_arguments">
 |     Clause Type      |              Predicate               |           ARG0          |         ARG1         |
 | :-------: | :----------------------------------: | :------------------------------: | :-------------------------: |
 | Thetic Possession  |         have-03         |      possessor       |     possessum      |
@@ -1486,7 +1515,10 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 | Property Predication  |         have-mod-91         |      theme       |     property      |
 | Object Predication  |         have-role-91         |      theme       |     object category      |
 | Equational  |         identity-91         |      theme       |     equated referent      |
- 
+
+Table 8: Argument structure of non-verbal clause predicates
+</div>
+
 [Back to Table of Contents](#toc)
 ##### Part 3-1-3-6. Multi-word concepts
 
@@ -1913,7 +1945,7 @@ Predicate: give.01
 Following AMR, UMR uses PropBank frame files to annotate lexicalized
 participant roles. But, this only works for languages which have
 PropBank-style frame files. This is considered the ‘Stage 2’ participant
-role annotation (see §[3-2-1-2](#3-2-1-2)). The Stage 1 annotation involves
+role annotation (see [Part 3-2-1-2](#part-3-2-1-2-stage-2)). The Stage 1 annotation involves
 using a set of general participant roles, while building a lexicon of
 PropBank-style frame files in order to move towards Stage 2 annotation.
 
@@ -1931,21 +1963,18 @@ an example of a semantic alternation, seen below in
 <span id="3-2-1 (2)" label="3-2-1 (2)">\[3-2-1 (2)\]</span>
 
 <span id="3-2-1 (2a)" label="3-2-1 (2a)">\[3-2-1 (2a)\]</span>
-
-ta-di=lo daki-a tioni arimi ta besu  
-<span class="smallcaps">pfv</span>-3<span class="smallcaps">pl.</span>S=go
-find-3<span class="smallcaps">sg</span>O man feel.sorry
-3<span class="smallcaps">sg.pfv</span> be.hungry  
+```
+ta-di=lo	daki-a		tioni	arimi 		ta 	besu  
+PFV-3PL.S=go	find-3SG.O	man	feel.sorry	3SG.PFV	be.hungry
 ‘When they found him, the poor many was hungry.’
+```
 
 <span id="3-2-1 (2b)" label="3-2-1 (2b)">\[3-2-1 (2b)\]</span>
-
-ta-di=lama ari da-daki uua=i  
-<span class="smallcaps">pfv</span>-3<span class="smallcaps">pl</span>S=<span class="smallcaps">tam</span>
-<span class="smallcaps">recp</span>
-<span class="smallcaps">rdp</span>-find
-in.that.direction=<span class="smallcaps">loc</span>  
+```
+ta-di=lama 	ari 	da-daki 	uua=i
+PFV-3PL.S-TAM	REC	RDP-find	in.that.direction=LOC
 ‘They had found each other.’
+```
 
 The event described in [\[3-2-1 (2a)\]](#3-2-1 (2a)) is different than the
 event described in [\[3-2-1 (2b)\]](#3-2-1 (2b)). This is in contrast to
@@ -1959,19 +1988,14 @@ example of a pragmatic valency alternation, as seen in
 
 <span id="3-2-1 (3)" label="3-2-1 (3)">\[3-2-1 (3)\]</span>
 
-<span id="3-2-1 (3a)" label="3-2-1 (3a)">\[3-2-1 (3a)\]</span> Anake muani
-cenik ento ngajeng buahe ento. anak=e muani cenik ento ngajeng buah=e
-ento  
-person=<span class="smallcaps">def</span> male small that eat
-fruit=<span class="smallcaps">def</span> that  
+<span id="3-2-1 (3a)" label="3-2-1 (3a)">\[3-2-1 (3a)\]</span> 
+anak=e 		muani	cenik	ento 	ngajeng buah=e 		ento 
+person=DEF	male	small	that	eat	fruit=DEF	that
 ‘The boy ate the fruit.’
 
-<span id="3-2-1 (3b)" label="3-2-1 (3b)">\[3-2-1 (3b)\]</span> Buahe ento
-ajenga teken anake muani cenik ento. buah=e ento ajeng=a teken anak=e
-muani cenik ento  
-fruit=<span class="smallcaps">def</span> that
-eat=<span class="smallcaps">pass</span> by
-person=<span class="smallcaps">def</span> male small that  
+<span id="3-2-1 (3b)" label="3-2-1 (3b)">\[3-2-1 (3b)\]</span>
+buah=e 		ento 	ajeng=a 	teken 	anak=e 		muani 	cenik	ento
+fruit=DEF	that	eat=PASS	by	person=DEF	male	small	that
 ‘The fruit was eaten by the boy.’
 
 Here, [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) could
@@ -1985,7 +2009,7 @@ for [\[3-2-1 (2a)\]](#3-2-1 (2a)) and [\[3-2-1 (2b)\]](#3-2-1 (2b)) would be
 different, where as the participant role annotation for
 [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) would be the
 same. The annotations for valency alternations also depend on the stage
-of the road map, so that will be detailed below.
+of the road map, so that will be detailed in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations) and [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
 
 [Back to Table of Contents](#toc)
 
@@ -1996,7 +2020,7 @@ used. These certainly will not map exactly to the grammatical marking of
 argument phrases in any language, but this set of roles was selected
 based on cross-linguistic patterns of argument marking. The set of
 participant role labels, a brief description for each label, and
-examples are shown below in Table 5.
+examples are shown below in Table 9.
 
 <div id="tab:generalroles">
 
@@ -2026,11 +2050,11 @@ examples are shown below in Table 5.
 | <span class="smallcaps">`extent`</span>      | measurement phrase                                                                                             | he ran **seven miles**                                                                                                     |
 | <span class="smallcaps">`other`</span>       | this role can be used when an annotator is unsure of which role is appropriate                                 |                                                                                                                            |
 
-Table 5: UMR Non-lexicalized roles
+Table 9: UMR non-lexicalized roles
 </div>
 
 These general semantic roles can be categorized based on the types of
-events with which they occur, shown in Table 6. Some
+events with which they occur, shown in Table 10. Some
 participant roles express the external cause of an event; these can
 occur with many semantic classes of events. Similarly, the
 “circumstantial” type semantic roles can occur with a wide range of
@@ -2049,18 +2073,18 @@ semantic event classes.
 |                                           |                          EXPERIENTIAL:                           | <span class="smallcaps">`temporal`</span> |
 |                                           |       <span class="smallcaps">`experiencer, stimulus`</span>       |  <span class="smallcaps">`extent`</span>  |
 
-Table 6: Categorization of UMR non-lexicalized roles
+Table 10: Categorization of UMR non-lexicalized roles
 </div>
 
 For the roles that characterize the central participant(s) in the event,
 the best way to decide which participant role label a given participant
 should receive is to consider the semantic class of the event. The
-<span class="smallcaps">`undergoer`</span> role only occurs with
+`undergoer` role only occurs with
 change-of-state events, construed broadly to include creation and
-contact events as well. The <span class="smallcaps">`undergoer`</span>
+contact events as well. The `undergoer`
 role is used for the entity that undergoes the change-of-state, is the
 endpoint of force in a contact event, or is created in a creation event,
-as seen in [\[3-2-1-1 (1)\]](#3-2-1-1 (1)). The <span class="smallcaps">`material`</span>
+as seen in [\[3-2-1-1 (1)\]](#3-2-1-1 (1)). The `material`
 role only occurs with creation events, as in
 [\[3-2-1-1 (1c)\]](#3-2-1-1 (1c)), and is used for the raw materials
 that are transformed into the created object.
@@ -2102,12 +2126,12 @@ He hit the stick against the fence.
 	:undergoer (f / fence)) 
 ```
 
-The <span class="smallcaps">experiencer</span> and
-<span class="smallcaps">stimulus</span> roles always occur with
+The `experiencer` and
+`stimulus` roles always occur with
 experiential events, as seen in [\[3-2-1-1 (4)\]](#3-2-1-1 (4)). The
-<span class="smallcaps">experiencer</span> role is used for the
+`experiencer` role is used for the
 mental-level entity which attends to, reacts to, or passively
-experiences the <span class="smallcaps">stimulus</span> role.
+experiences the `stimulus` role.
 
 <span id="3-2-1-1 (4)" label="3-2-1-1 (4)">\[3-2-1-1 (4)\]</span>
 
@@ -2156,18 +2180,18 @@ moves (unless the motion is volitional), as in
 ```
 She walked home from the store.
 
-(f / fall 
-	:theme (l / leaf)  
-	:goal (g / ground))  
+(w / walk 
+	:actor (s / she)  
+	:goal (h / home)
+	:start (s2 / store))  
 ```
 <span id="3-2-1-1 (5b)" label="3-2-1-1 (5b)">\[3-2-1-1 (5b)\]</span> 
 ```
 The leaf fell to the ground.
 
-(w / walk 
-	:actor (s1 / she) 
-	:goal (h / home)  
-	:start (s2 / store))  
+(f / fall 
+	:theme (l / leaf) 
+	:goal (g / ground))  
 ```
 <span id="3-2-1-1 (5c)" label="3-2-1-1 (5c)">\[3-2-1-1 (5c)\]</span> 
 ```
@@ -2238,7 +2262,7 @@ She told me that they they’re attending.
 	:actor (s / she)  
 	:recipient (m / me)  
 	:theme ( a / attend  
-	:actor (t2 / they))) 
+		:actor (t2 / they))) 
 ```
 
 <span id="3-2-1-1 (6d)" label="3-2-1-1 (6d)">\[3-2-1-1 (6d)\]</span> 
@@ -2260,7 +2284,7 @@ single-participant events, in which the single participant undergoes a
 change outside of its control, as in [\[3-2-1-1 (1a)\]](#3-2-1-1 (1a))
 above. See Appendix [8](#ap:verbspr) for examples of single-participant
 verbs and their participant role annotation. The
-<span class="smallcaps">actor</span> role is also used for animate
+`actor` role is also used for animate
 entities that initiate an action, as in [\[3-2-1-1 (1b)\]](#3-2-1-1 (1b))
 above.
 
@@ -2283,7 +2307,7 @@ The entity which manipulates the
 the clause; see [\[3-2-1-1 (7e)\]](#3-2-1-1 (7e)) and
 [\[3-2-1-1 (7f)\]](#3-2-1-1 (7f)).
 
-The `force` role is used for physical
+The `force` role is used for inanimate physical
 entities which initiate an action, or cause another entity to undergo a
 change, as in [\[3-2-1-1 (7g)\]](#3-2-1-1 (7g)). Finally, the
 `causer` role is used for the external
@@ -2352,11 +2376,11 @@ The knife sliced through the bread.
 The storm damaged the power lines.
 
 (d / damage 
-	:actor (s / storm)  
+	:force (s / storm)  
 	:undergoer (p / power lines)) 
 ```
 
-See Table 5 for examples of the circumstantial
+See Table 9 above for examples of the circumstantial
 roles. In addition, there is an `other`
 placeholder role that can be used when annotators are unsure of which participant role annotation is accurate for a particular participant. Also see Appendix [8](#ap:verbspr) for a list of verbs and how their microroles are annotated.
 
@@ -2377,10 +2401,10 @@ They loaded the boxes.
 
 ###### Part 3-2-1-1-1. Nonverbal clauses
 
-There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 1 annotation. These are the nonverbal clause predicates shown in Table 7. These are repeated below with their participant role annotation.
+There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 1 annotation. These are the nonverbal clause predicates shown in Table 11 (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). These are repeated below with their participant role annotation.
 
 Each nonverbal clause predicate has an `ARG0` and an `ARG1`; these map
-to the semantic roles as shown in Table 7.
+to the semantic roles as shown in Table 11.
 
 <div id="tab:nonverbalprs">
 
@@ -2394,11 +2418,10 @@ to the semantic roles as shown in Table 7.
 | object predication               | `have-role-91`      | *theme*      | *object category*  |
 | equational                       | `identity-91`       | *theme*      | *equated referent* |
 
-Table 7: Nonverbal clause predicates
-
+Table 11: Nonverbal clause predicates
 </div>
 
-The argument that can be predicativized in some languages is always
+The argument that can be predicativized in languages using the  is always
 `ARG1`. The examples in [\[3-2-1-1-1 (1)\]](#3-2-1-1-1 (1)) show how
 nonverbal clauses are annotated with participant roles. Note that these
 annotations will be the same at every stage of the road map.
@@ -2410,11 +2433,12 @@ Thetic/presentational Possession - Kukama <br />
 
 ```
 Mijiri-tin  ɨara-yara  
-Miguel-cer  canoe-owner  
+Miguel-CER  canoe-owner  
 ‘Miguel does have a canoe.’ (Lit. ‘Miguel is a canoe-owner’)
 
-(e / ɨara-yara ‘has canoe’ 
-	:ARG0 (m / Mijiri ‘Miguel’) 
+(e / ɨara-yara ‘have-canoe’ 
+	:ARG0 (p / person
+		:name (n / name :op1 "Mijiri" ‘Miguel’)) 
 	:ARG1 (i / ara ‘canoe’)) 
 ```
 
@@ -2441,7 +2465,7 @@ On the rock was a symbol.
 Location - Yabem (Dempwolff 1939) <br />
 ```
 àndu  kê-kô 	malac  
-house 3sg-be.at village  
+house 3SG-be.at village  
 ‘The house is in the village.’
 
 (h / have-location-91
@@ -2477,9 +2501,10 @@ this young.man 	shaman
 She is the winner.  
   
 (h / identity-91
-:ARG0 (s / s)` 
-:ARG1 (w / winner))
+	:ARG0 (s / she)` 
+	:ARG1 (w / winner))
 ```
+
 [Back to Table of Contents](#toc)
 
 ###### Part 3-2-1-1-2. Valency alternations
@@ -2494,7 +2519,7 @@ in the language. If a participant is omitted, for example the agent in a passive
 <span id="3-2-1-1-2 (1a)" label="3-2-1-1-2 (1a)">\[3-2-1-1-2 (1a)\]</span> <br />
 ```
 Y-usy 		wrba 	tafirast.  
-3ms-pick.up 	boy:cst pear  
+3M.SG-pick.up 	boy:CST	pear  
 ‘The boy picked up the pear.’
 
 (u / usy ‘pick up’  
@@ -2504,9 +2529,8 @@ Y-usy 		wrba 	tafirast.
 
 <span id="3-2-1-1-2 (1b)" label="3-2-1-1-2 (1b)">\[3-2-1-1-2 (1b)\]</span> <br />
 ```
-T-ttw-asy
-tfirast.  
-3fs-detr-pick.up pear  
+T-ttw-asy		tfirast.  
+3F.SG-DETR-pick.up	pear  
 ‘The pear was picked up.’
 
 (t / ttw-asy ‘pick up’  
@@ -2526,8 +2550,8 @@ the causee *churan* ‘kid’ is annotated as
 
 <span id="3-2-1-1-2 (2)" label="3-2-1-1-2 (2)">\[3-2-1-1-2 (2)\]</span>
 ```
-nai 		kurata-ta churan=ui u	ni=pu  
-grandmother 	drink-cau kid=pst 	water=ins  
+nai 		kurata-ta	churan=ui	uni=pu  
+grandmother 	drink-CAUS	kid=PST 	water=INS 
 ‘Grandmother made the kid drink the water.’
 
 (k / kuratata ‘make drink’  
@@ -2546,7 +2570,7 @@ Languages may differ in terms of which types of causative constructions are cons
 <span id="3-2-1-1-2 (3a)" label="3-2-1-1-2 (3a)">\[3-2-1-1-2 (3a)\]</span> <br />
 ```
 hogco-l 	raɬad 		b-egā-yo  
-he.obl-lat 	sea(iii) 	iii-see-pst  
+he.OBL-LAT 	sea(iii) 	iii-see-PST  
 ‘He saw the sea.’ 
 
 (b / b-egā ‘see’
@@ -2558,12 +2582,12 @@ he.obl-lat 	sea(iii) 	iii-see-pst
 <span id="3-2-1-1-2 (3b)" label="3-2-1-1-2 (3b)">\[3-2-1-1-2 (3b)\]</span>
 ```
 hogco 		kibba-l 	raɬad 		b-ega-l-lo  
-he.obl(erg) 	girl.obl-lat 	sea(iii) 	iii-see-caus-pst  
+he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST 
 ‘He showed the sea to the girl.’
 
 (b / b-ega-l ‘show’
 	:actor (h / hogco ‘he’)
-	:theme (r / ra`&#620;`ad ‘sea’)
+	:theme (r / raɬad ‘sea’)
 	:recipient (k / kibba ‘girl’))
 ```
 
@@ -2575,7 +2599,7 @@ For causatives of ditransitives, the causer receives the
 <span id="3-2-1-1-2 (4)" label="3-2-1-1-2 (4)">\[3-2-1-1-2 (4)\]</span> <br />
 ```
 Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-bi...  
-that-temp 	that 	unmarried.girl:abs 	pos3 	mother-erg 	roasted.meat/fish:abs 	give-caus-inc 	want-neg-sds-em  
+that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	give-CAUS-INC 	want-NEG-SDS-EM  
 ‘Then her mother makes the unmarried girl give roasted meat/fish (to the
 man who had asked her in matrimony) even though she doesn’t want to...’
 
@@ -2596,8 +2620,8 @@ its `undergoer`label. This can be seen in
 
 <span id="3-2-1-1-2 (5a)" label="3-2-1-1-2 (5a)">\[3-2-1-1-2 (5a)\]</span> <br /> 
 ```
-Ka 	kedam 	hri 	a 	cat.  
-1sg 	shoe 	string 3sg.nom 	broken.1  
+Ka 	kedam 	hri	a 	cat.  
+1SG 	shoe 	string	3SG.NOM	broken.1  
 ‘My shoelace is broken/broke.’
 
 (c / cat ‘broken’ 
@@ -2607,7 +2631,7 @@ Ka 	kedam 	hri 	a 	cat.
 <span id="3-2-1-1-2 (5b)" label="3-2-1-1-2 (5b)">\[3-2-1-1-2 (5b)\]</span> <br /> 
 ```
 Thangte in 	ka 	kedam 	hri 	a 	cat-ter.  
-Thangte erg 	1sg 	shoe 	string 	3sg.nom broken.1-caus  
+Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS  
 ‘Thangte broke my shoelace.’
 
 (c / cat-ter ‘break’  
@@ -2627,7 +2651,7 @@ can be seen in [\[3-2-1-1-2 (6)\]](#3-2-1-1-2 (6)) from Falam Chin (King 2011:19
 <span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br />
 ```
 Cinte a 	hni.  
-Cinte 3sg.nom 	laugh.1  
+Cinte 3SG.NOM 	laugh.1  
 ‘Cinte laughed.’ 
 
 (h / hni ‘laugh’
@@ -2637,7 +2661,7 @@ Cinte 3sg.nom 	laugh.1
 <span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br /> 
 ```
 Parte 	in 	Cinte a 	hni-ter.  
-Parte 	erg 	Cinte 3sg.nom 	laugh.1-caus  
+Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS  
 ‘Parte made Cinte laugh.’
 
 (h / hni-ter ‘make laugh’ 
@@ -2654,7 +2678,7 @@ annotation. This can be seen in
 <span id="3-2-1-1-2 (7a)" label="3-2-1-1-2 (7a)">\[3-2-1-1-2 (7a)\]</span>
 ```
 Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.  
-Parte erg 	Thangte for=loc 	curry 	3sg.nom cook.1  
+Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1  
 ‘Parte cooked some curry for Thangte.’
 
 (s / suang ‘cook’
@@ -2666,7 +2690,7 @@ Parte erg 	Thangte for=loc 	curry 	3sg.nom cook.1
 <span id="3-2-1-1-2 (7b)" label="3-2-1-1-2 (7b)">\[3-2-1-1-2 (7b)\]</span>
 ```
 Parte in 	Thangte hmeh 	a 	suan-sak  
-Parte erg 	Thangte curry 	3sg.nom cook.2-ben  
+Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN  
 ‘Parte cooked Thangte some curry.’
 
 (s / suang-sak ‘cook for’
@@ -2685,7 +2709,7 @@ simply annotated with the appropriate semantic role. This can be seen in ADD EXA
 <span id="3-2-1-1-2 (8a)" label="3-2-1-1-2 (8a)">\[3-2-1-1-2 (8a)\]</span>
 ```
 U 	a 	ù-yé 	bánì  
-he 	perf 	he-refl wound  
+he 	PERF 	he-REFL wound  
 ‘He has wounded himself.’
 
 (b / bánì ‘wound’ 
@@ -2696,13 +2720,35 @@ he 	perf 	he-refl wound
 <span id="3-2-1-1-2 (8b)" label="3-2-1-1-2 (8b)">\[3-2-1-1-2 (8b)\]</span><br /> 
 ```
 Pi 	a 	pì-yé 		kánù  
-they 	perf 	they-refl 	love  
+they 	PERF	they-REFL 	love  
 ‘They loved each other.’
 
 (k / kánù ‘love’
 	:actor (p / pi ‘they’)
 	:undergoer (p))
 ```
+
+The annotation of participant roles for valency alternations in Step 1 of the road map is summarized in table 12 below.
+
+<div id="tab:valency_alternations">
+
+| **Valency Alternation**                  | **Which participants to annotate** | **Which participant roles**     |
+| :----------------------------------------- | :------------------------------------ | :------------------------------------------------------------------------ |
+| Passives | Every overt participant | Same as in basic construction |
+| Anticausatives | Every overt participant | Same as in basic construction |
+| Valency-rearranging applicatives | Every overt participant | Same as in basic construction |
+| Causatives of transitives | Every overt participant | `causer`, `actor`, other participants same as in basic construction |
+| Transfer events expressed as causatives | Every overt participant | `actor`, `theme`, `recipient` |
+| Causatives of ditransitives | Every overt participant | `causer`, `actor`, `theme`, `recipient` |
+| Causatives of inactive intransitives | Every overt participant | `actor`, `theme` |
+| Causatives of active intransitives | Every overt participant | `causer`, `actor` |
+| Valency-increasing applicatives | Every overt participant | Same as in basic construction, appropriate role for new participant |
+| Reflexives | A single participant with two roles | Both roles the participant fulfills in the construction |
+| Reciprocals | A single participant with two roles | Both roles the participant fulfills in the construction |
+
+Table 2: Argument structure of valency alternations
+</div>
+
 [Back to Table of Contents](#toc)
 
 ##### Part 3-2-1-2. Stage 2
@@ -2727,13 +2773,13 @@ predicate: tease.02
 ```
 He teased the boy about his hat.
 
-(h / tease.02
+(t / tease.02
 	:ARG0 (h / he)
 	:ARG1 (b / boy)
-	:ARG2 (h / hat))
+	:ARG2 (h2 / hat))
 ```
 
-Since the nonverbal clause functions require the use of lexicalized predicates at Stage 1, these are annotated in the same way at Stage 2 (see 3-2-1-1-1). Unlike Stage 1, implicit participants are
+Since the nonverbal clause functions require the use of lexicalized predicates at Stage 1, these are annotated in the same way at Stage 2 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses)). Unlike Stage 1, implicit participants are
 annotated for their semantic role at Stage 2. This is shown in
 [\[3-2-1-2 (2)\]](#3-2-1-2 (2)).
 
@@ -2763,19 +2809,19 @@ annotation.
 ###### Part 3-2-1-2-1. Valency alternations
 
 The approach to valency alternations at Stage 2 is largely the same as
-that detailed for Stage 1 in 3-2-1-1-2. However, at Stage 2,
+that detailed for Stage 1 in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations). However, at Stage 2,
 predicates with valency-changing morphology should have their own frame
 files with lexicalized arguments. Therefore, the annotation of
 participant roles for valency alternations is the same as that for other
 types of predicates. The predicate is matched with its frame files and
-the participants are annotated accordingly.
+the participants are annotated accordingly with numbered argument roles rather than predicate-general ones.
 
 
 [Back to Table of Contents](#toc)
 
 ##### Part 3-2-1-3. Inverse participant roles
 
-AMR, the predecessor of UMR, makes use of ``inverse`` participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see section 3-1-1), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the :ARG1-of relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role :ARG1, allows us to maintain a single-rooted graph structure by embedding the ``seeing``-event underneath the participant it modifies (``sweater``). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating ``runner`` in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as (p / person :ARG0-of r / run.02), we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node (r / runner) or something similar.
+AMR, the predecessor of UMR, makes use of **inverse** participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see [Part 3-1-1-2](#part-3-1-1-2-processes-in-modification-and-reference)), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the `:ARG1-of` relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role `:ARG1`, allows us to maintain a single-rooted graph structure by embedding the *see*-event underneath the participant it modifies (*sweater*). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating *runner* in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as `(p / person :ARG0-of r / run.02)`, we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node `(r / runner)` or something similar.
 
 <span id="3-2-1-3 (1)" label="3-2-1-3 (1)">\[3-2-1-3 (1)\]</span>
 
@@ -2783,11 +2829,16 @@ AMR, the predecessor of UMR, makes use of ``inverse`` participant roles for a nu
 I bought the sweater that you saw.
 ```
 (b / buy.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (s / sweater
 		:ARG1-of (s2 / see.01
-			:ARG0 (y/ you)
-			:Aspect State))
+			:ARG0 (p2/ person
+				:ref-person 2nd
+				:ref-number Singular)
+			:Aspect State)
+		:ref-number Singular)
 	:Aspect Performance)
 ```
 
@@ -2795,11 +2846,16 @@ I bought the sweater that you saw.
 I didn't see whether he bought the sweater.
 ```
 (s / see.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (t / truth-value
 		:polarity-of (b/ buy.01
-			:ARG0 (h/ he)
-			:ARG1 (s/ sweater)
+			:ARG0 (p / person
+				:ref-person 3rd
+				:ref-number Singular)
+			:ARG1 (s/ sweater
+				:ref-number Singular)
 			:Aspect Performance))
 	:Aspect State
 	:Polarity -)
@@ -2810,26 +2866,33 @@ The runner was wearing a sweater.
 ```
 (w / wear.01
 	:ARG0 (p / person
-		:ARG0-of (r / run.02))
-	:ARG1 (s / sweater)
+		:ARG0-of (r / run.02)
+		:ref-number Singular)
+	:ARG1 (s / sweater
+		:ref-number Singular)
 	:Aspect State)
 ```
 
-UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 1 of the road map. So, in addition to having inverses of numbered participant roles, there are now also :Actor-of and :Undergoer-of roles, and analogues for each of the general participant roles described in table 5 in section 3-2-1-1. Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse :Stimulus-of role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
+UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 1 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:Actor-of` and `:Undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-1)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:Stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
 
 <span id="3-2-1-3 (2)" label="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
 I bought the sweater that you saw.
 ```
 (b / buy.01
-	:Actor (i / I)
-	:Theme (s / sweater)
+	:Actor (p / person
+		:ref-person 1st
+		:ref-number Singular)
+	:Theme (s / sweater
 		:Stimulus-of (s2 / see.01
-			:Experiencer (y/ you)
+			:Experiencer (p2 / person
+				:ref-person 2nd
+				:ref-number Singular)
 			:Aspect State)
+		:ref-number Singular)
 	:Aspect Performance)
 ```
 
-One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like ``my father``, or ``the President of the University of New Mexico``, UMR uses a (p / person) concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is have-role-91, although more specific predicates for frequently encountered concrete relation types are also available (FLESH OUT AND CREATE ROLESETS FOR PREDICATES). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3)).
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p / person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `kinship-91`) for frequently encountered concrete relation types are also available (FLESH OUT AND CREATE ROLESETS FOR PREDICATES). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3)).
   
 <span id="3-2-1-3 (3)" label="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
 
@@ -2837,10 +2900,12 @@ One more context in which inverse participant roles are used is in the annotatio
 I met my father.
 ```
 (m / meet.03
-	:Arg0 (i / I)
-	:Arg1 (p / person
+	:Arg0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
+	:Arg1 (p2 / person
 		:ARG0-of (k / kinship-91
-			:ARG1 i
+			:ARG1 p
 			:ARG2 (f / father)))
 	:Aspect Performance)
 ```
@@ -2849,8 +2914,10 @@ I met my father.
 I met the President of the University of New Mexico.
 ```
 (m / meet.03
-	:Arg0 (i / I)
-	:Arg1 (p / person
+	:Arg0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
+	:Arg1 (p2 / person
 		:ARG0-of (h / have-org-role-91
 			:ARG1 (a / academic_org
 				:name (n / name
@@ -2868,11 +2935,13 @@ I met the President of the University of New Mexico.
   
 Apart from predicate-specific and general participant roles, UMR also has a set of relations that are mainly used to mark NP-internal relations, to mark some types of modifiers of predicates, and to make the meanings of certain natural language expressions computationally tractable. Most of those relations are inherited from AMR, but for some of them, there are some changes in their use.
 
-Some relations are used to describe entities in a standard, canonical form. This is the case, for example, for temporal relations such as :calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year, and :year2. The use of these relations is exemplified in [\[3-2-2 (1)\]](#3-2-2 (1)).
+  ##### Part 3-2-2-1. Temporal relations
 
-<span id="3-2-2 (1)" label="3-2-2 (1)">\[3-2-2 (1)\]</span> 
+Some relations are used to describe entities in a standard, canonical form. This is the case for :calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year, and :year2. The use of these relations is exemplified in [\[3-2-2-1 (1)\]](#3-2-2-1 (1)).
 
-<span id="3-2-2 (1a)" label="3-2-2 (1a)">\[3-2-2 (1a)\]</span> 
+<span id="3-2-2-1 (1)" label="3-2-2-1 (1)">\[3-2-2-1 (1)\]</span> 
+
+<span id="3-2-2-1 (1a)" label="3-2-2-1 (1a)">\[3-2-2-1 (1a)\]</span> 
 March 23rd, 2021
 ```
 (d / date-entity
@@ -2881,7 +2950,7 @@ March 23rd, 2021
 	:day 23)
 ```
 
-<span id="3-2-2 (1b)" label="3-2-2 (1b)">\[3-2-2 (1b)\]</span> 
+<span id="3-2-2-1 (1b)" label="3-2-2-1 (1b)">\[3-2-2-1 (1b)\]</span> 
 Friday the 13th
 ```
 (d / date-entity
@@ -2889,7 +2958,7 @@ Friday the 13th
 	:day 13)
 ```
 
-<span id="3-2-2 (1c)" label="3-2-2 (1c)">\[3-2-2 (1c)\]</span> 
+<span id="3-2-2-1 (1c)" label="3-2-2-1 (1c)">\[3-2-2-1 (1c)\]</span> 
 3.30 pm Albuquerque time
 ```
 (d / date-entity
@@ -2897,90 +2966,102 @@ Friday the 13th
 	:timezone (z / MST))
 ```
 
-Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers within an NP of some sort. Semantically, modification relations in referring expressions come in two kinds: anchoring and typefying (Croft in prep.). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to it). As described in section 3-2-1-3, kinship relations are annotated through the ``kinship-91``, predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses :poss and :part-of relations with the possessum or part as the parent and the possessor or whole as the daughter, as in [\[3-2-2 (2)\]](#3-2-2 (2)).
+  ##### Part 3-2-2-2. Modifiers
 
-<span id="3-2-2 (2)" label="3-2-2 (2)">\[3-2-2 (2)\]</span> 
+Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers of some sort within an NP. Semantically, modification relations in referring expressions come in two kinds: anchoring and typifying (Croft, to appear). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to them). As described in [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles), kinship relations are annotated through the `kinship-91` predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses `:poss` and `:part-of` relations with the possessum or part as the parent and the possessor or whole as the daughter, as in [\[3-2-2-2 (1)\]](#3-2-2-1 (1)).
 
-<span id="3-2-2 (2a)" label="3-2-2 (2a)">\[3-2-2 (2a)\]</span> 
+<span id="3-2-2-2 (1)" label="3-2-2-2 (1)">\[3-2-2-2 (1)\]</span> 
+
+<span id="3-2-2-2 (1a)" label="3-2-2-2 (1a)">\[3-2-2-2 (1a)\]</span> 
 John's car
 ```
 (c / car
 	:poss (p / person
-		:name (n / name
-			:op1 "John")))
+		:name (n / name	:op1 "John"))
+	:ref-number Singular)
 ```
 
-<span id="3-2-2 (2b)" label="3-2-2 (2b)">\[3-2-2 (2b)\]</span> 
+<span id="3-2-2-2 (1b)" label="3-2-2-2 (1b)">\[3-2-2-2 (1b)\]</span> 
 Guitar strings
 ```
 (s / string
 	:part-of (g / guitar)
-	:ref Plural)
+	:ref-number Plural)
 ```
 
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
-category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation :mod is available. For example, in [\[3-2-2 (3a)\]](#3-2-2 (3a)), the modifier ``women`` does not narrow down the reference of ``magazine`` to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the :mod relation, as opposed to a phrase like "that woman's magazine", where ``woman`` would be annotated with the :poss relation. A number of more fine-grained subtypes of the :mod relation are also available - :age, for indicating the age of referents as in [\[3-2-2 (3b)\]](#3-2-2 (3b)); :consist-of, for indicating the membership of groups [\[3-2-2 (3c)\]](#3-2-2 (3c)); and :topic, for indicating what a referent is about as in [\[3-2-2 (3d)\]](#3-2-2 (3d)).
+category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in [\[3-2-2-2 (2a)\]](#3-2-2-2 (2a)), the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in [\[3-2-2-2 (2b)\]](#3-2-2-2 (2b)); `:consist-of`, for indicating the membership of groups [\[3-2-2-2 (2c)\]](#3-2-2-2 (2c)); and `:topic`, for indicating what a referent is about as in [\[3-2-2-2 (2d)\]](#3-2-2-2 (2d)).
 
-<span id="3-2-2 (3)" label="3-2-2 (3)">\[3-2-2 (3)\]</span> 
+<span id="3-2-2-2 (2)" label="3-2-2-2 (2)">\[3-2-2-2 (2)\]</span> 
 
-<span id="3-2-2 (3a)" label="3-2-2 (3a)">\[3-2-2 (3a)\]</span> 
-John's car
+<span id="3-2-2-2 (2a)" label="3-2-2-2 (2a)">\[3-2-2-2 (2a)\]</span> 
+a women's magazine
 ```
-(c / car
-	:poss (p / person
-		:name (n / name
-			:op1 "John")))
+(m / magazine
+	:mod (w / woman)
+	:ref-number Singular)
 ```
 
-<span id="3-2-2 (3b)" label="3-2-2 (3b)">\[3-2-2 (3b)\]</span> 
+<span id="3-2-2-2 (2b)" label="3-2-2-2 (2b)">\[3-2-2-2 (2b)\]</span> 
 The thirty year-old man
 ```
 (m / man
 	:age (t / temporal-quantity
 		:quant 30
-		:unit (y / year)))
+		:unit (y / year))
+	:ref-number Singular)
 ```
 
-<span id="3-2-2 (3c)" label="3-2-2 (3c)">\[3-2-2 (3c)\]</span> 
+<span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">\[3-2-2-2 (2c)\]</span> 
 A swarm of bees
 ```
 (s / swarm
 	:consist-of (b / bee
-		:ref Plural))
+		:ref-number Plural))
 ```
 
-<span id="3-2-2 (3d)" label="3-2-2 (3d)">\[3-2-2 (3d)\]</span> 
+<span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">\[3-2-2-2 (2d)\]</span> 
 Information about the case
 ```
 (i / information
 	:topic (c / case))
 ```
 
-A number of relations serve to modify events rather than objects - they are used to annotate circumstantial locative and temporal information rather than participants. The :direction and :path relations are used to annotate cardinal directions and extended spatial paths, respectively, as in [\[3-2-2 (4a)\]](#3-2-2 (4a)) and [\[3-2-2 (4b)\]](#3-2-2 (4b)). The :duration and :frequency relations, illustrated in [\[3-2-2 (4c)\]](#3-2-2 (4c)) - [\[3-2-2 (4e)\]](#3-2-2 (4e)) are optionally used to annotate aspectual information that may be overtly present but that cannot be captured in the :Aspect attribute - as clarified in section 3-3-1, the latter abstracts away from duration and frequency information.
+  ##### Part 3-2-2-3. Circumstantial temporals and locatives
 
-<span id="3-2-2 (4)" label="3-2-2 (4)">\[3-2-2 (4)\]</span> 
+A number of relations serve to modify events rather than objects - they are used to annotate circumstantial locative and temporal information rather than participants. The `:direction` and `:path` relations are used to annotate cardinal directions and extended spatial paths, respectively, as in [\[3-2-2-3 (1a)\]](#3-2-2-3 (1a)) and [\[3-2-2-3 (1b)\]](#3-2-2-3 (1b)). The `:duration` and `:frequency` relations, illustrated in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) - [\[3-2-2-3 (1e)\]](#3-2-2-3 (1e)), are optionally used to annotate aspectual information that may be overtly present but that cannot be captured in the `:aspect` attribute - as clarified in [Part 3-3-1](#part-3-3-1-Aspect), the latter abstracts away from duration and frequency information.
 
-<span id="3-2-2 (4a)" label="3-2-2 (4a)">\[3-2-2 (4a)\]</span> 
+<span id="3-2-2-3 (1)" label="3-2-2=3 (1)">\[3-2-2-3 (1)\]</span> 
+
+<span id="3-2-2-3 (1a)" label="3-2-2-3 (1a)">\[3-2-2-3 (1a)\]</span> 
 He drove west.
 ```
 (d / drive.01
-	:ARG0 (h / he)
-	:direction (w / west))
+	:ARG0 (p / person
+		:ref-person 3rd
+		:ref-number Singular)
+	:direction (w / west)
+	:aspect Activity)
 ```
 
-<span id="3-2-2 (4b)" label="3-2-2 (4b)">\[3-2-2 (4b)\]</span> 
+<span id="3-2-2-3 (1b)" label="3-2-2-3 (1b)">\[3-2-2-3 (1b)\]</span> 
 He drove through the tunnel.
 ```
 (d / drive.01
-	:ARG0 (h / he)
-	:path (t / tunnel))
+	:ARG0 (p / person
+		:ref-person 3rd
+		:ref-number Singular)
+	:path (t / tunnel)
+	:aspect Performance)
 ```
 
-<span id="3-2-2 (4c)" label="3-2-2 (4c)">\[3-2-2 (4c)\]</span> 
+<span id="3-2-2-3 (1c)" label="3-2-2-3 (1c)">\[3-2-2-3 (1c)\]</span> 
 I visited New York City for a week.
 ```
 (v / visit.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (c / city
 		:name (n / name
 			:op1 "New"
@@ -2993,11 +3074,13 @@ I visited New York City for a week.
 	:Aspect Endeavor)
 ```
 
-<span id="3-2-2 (4d)" label="3-2-2 (4d)">\[3-2-2 (4d)\]</span> 
+<span id="3-2-2-3 (1d)" label="3-2-2-3 (1d)">\[3-2-2-3 (1d)\]</span> 
 I visited New York City twice.
 ```
 (v / visit.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (c / city
 		:name (n / name
 			:op1 "New"
@@ -3008,11 +3091,13 @@ I visited New York City twice.
 	:Aspect Performance)
 ```
 
-<span id="3-2-2 (4e)" label="3-2-2 (4e)">\[3-2-2 (4e)\]</span> 
+<span id="3-2-2-3 (1e)" label="3-2-2-3 (1e)">\[3-2-2-3(1e)\]</span> 
 I visit New York City every December.
 ```
 (v / visit.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (c / city
 		:name (n / name
 			:op1 "New"
@@ -3025,9 +3110,11 @@ I visit New York City every December.
 	:Aspect Habitual)
 ```
 
-The relations :name, :wiki, and :op are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a :name relation, whose daughter is an (n / name) node. This node then has as many numbered :opX relations as the number of words this name consists of, each of which taking one of these words as their daughter. In [\[3-2-2 (4e)\]](#3-2-2 (4e)) above, for example, the (n / name) concept corresponding to "New York City" takes an :op1, :op1, and :op3 relation, one for each orthographic word. Named entities can also take a :wiki relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered :op relations are also used in coordination, as in [\[3-2-2 (5)\]](#3-2-2 (5)).
+  ##### Part 3-2-2-4. Named entities
 
-<span id="3-2-2 (5)" label="3-2-2 (5)">\[3-2-2 (5)\]</span> 
+The relations `:name`, `:wiki`, and `:opX` are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a `:name` relation, whose daughter is an `(n / name)` node. This node then has as many numbered `:opX` relations as the number of words this name consists of, each of which takes one of these words as their daughter. In [\[3-2-2-3 (1e)\]](#3-2-2-3 (1e)) above, for example, the `(n / name)` concept corresponding to *New York City* takes an `:op1`, `:op1`, and `:op3` relation, one for each orthographic word. Named entities can also take a `:wiki` relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered `:op` relations are also used in coordination, as in [\[3-2-2-4 (1)\]](#3-2-2-4 (1)).
+
+<span id="3-2-2-4 (1)" label="3-2-2 (5)">\[3-2-2-4 (1)\]</span> 
 
 I saw a spider and a snake.
 ```
@@ -3039,36 +3126,40 @@ I saw a spider and a snake.
 	:Aspect State)
 ```
 
-The :ord, :quant, :range, :scale, :unit, and :value examples are used to annotate semantics of quantification, as illustrated in [\[3-2-2 (6)\]](#3-2-2 (6)). The :ord role is used to express ordinals. It always takes an (o / ordinal-entity) concept as its daughter, which in turn takes a :value relation to express the ordinal position, as in [\[3-2-2 (6a)\]](#3-2-2 (6a)). It may furthermore take a :range relation to indicate a specific time period in which the relevant ordinal position holds, as in [\[3-2-2 (6b)\]](#3-2-2 (6b)). The :value relation is, apart from ordinals, used for annotating percentages, phone numbers, e-mail addresses, and urls, as illustrated in [\[3-2-2 (6c)\]](#3-2-2 (6c)) adn [\[3-2-2 (6d)\]](#3-2-2 (6d)). The :quant relation is used for annotating both exact and approximate cardinalities of sets of countable objects as in [\[3-2-2 (6e)\]](#3-2-2 (6e)) and [\[3-2-2 (6f)\]](#3-2-2 (6f)), as well as for the number of "units" of non-countable substances, as in [\[3-2-2 (6g)\]](#3-2-2 (6g)). This latter use includes temporal durations and spatial distances, as in [\[3-2-2 (4c)\]](#3-2-2 (4c)) above. The :unit relation is used for both standardized, well-established units such as dollars in [\[3-3-2 (1a)\]](#3-3-2 (1a)) below or weeks in [\[3-2-2 (4c)\]](#3-2-2 (4c)) above, and for ad-hoc mensural constructions, such as cups in [\[3-2-2 (6g)\]](#3-2-2 (6g)). Lastly, the :scale relation is used for quantities where a :quant 0 value does not actually represent a 0-quantity, such as on the Richter or Decibel scale, as in [\[3-2-2 (6h)\]](#3-2-2 (6h))
+  ##### Part 3-2-2-5. Quantification
 
-<span id="3-2-2 (6)" label="3-2-2 (6)">\[3-2-2 (6)\]</span> 
+The `:ord`, `:quant`, `:range`, `:scale`, `:unit`, and `:value` relations are used to annotate semantics of quantification, as illustrated in [\[3-2-2-5 (1)\]](#3-2-2-5 (1)). The `:ord` role is used to express ordinals. It always takes an `(o / ordinal-entity)` concept as its daughter, which in turn takes a `:value` relation to express the ordinal position, as in [\[3-2-2-5 (1a)\]](#3-2-2-5 (1a)). It may furthermore take a `:range` relation to indicate a specific time period in which the relevant ordinal position holds, as in [\[3-2-2-5 (1b)\]](#3-2-2-5 (1b)). The `:value` relation is, apart from ordinals, used for annotating percentages, phone numbers, e-mail addresses, and urls, as illustrated in [\[3-2-2-5 (1c)\]](#3-2-2-5 (1c)) and [\[3-2-2-5 (1d)\]](#3-2-2-5 (1d)). The `:quant` relation is used for annotating both exact and approximate cardinalities of sets of countable objects as in [\[3-2-2-5 (1e)\]](#3-2-2-5 (1e)) and [\[3-2-2-5 (1f)\]](#3-2-2-5 (1f)), as well as for the number of "units" of non-countable substances, as in [\[3-2-2-5 (1g)\]](#3-2-2-5 (1g)). This latter use includes temporal durations and spatial distances, as in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) above. The `:unit` relation is used for both standardized, well-established units such as dollars in [\[3-3-2 (1a)\]](#3-3-2 (1a)) below or weeks in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) above, and for ad-hoc mensural constructions, such as cups in [\[3-2-2-5 (1g)\]](#3-2-2-5 (1g)). Lastly, the `:scale` relation is used for quantities where a `:quant 0` value does not actually represent a 0-quantity, such as on the Richter or Decibel scale, as in [\[3-2-2-5 (1h)\]](#3-2-2-5 (1h))
 
-<span id="3-2-2 (6a)" label="3-2-2 (6a)">\[3-2-2 (6a)\]</span> 
+<span id="3-2-2-5 (1)" label="3-2-2-5 (1)">\[3-2-2-5 (1)\]</span> 
+
+<span id="3-2-2-5 (1a)" label="3-2-2-5 (1a)">\[3-2-2-5 (1a)\]</span> 
 I visited New York for the third time.
 ```
 (v / visit.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (c / city
 		:name (n / name
 			:op1 "New"
 			:op2 "York"
-			:op3 "City"
 			:wiki "New_York_City"))
 	:ord (o / ordinal-entity
 		:value 3)
 	:Aspect Performance)
 ```
 
-<span id="3-2-2 (6b)" label="3-2-2 (6b)">\[3-2-2 (6b)\]</span> 
+<span id="3-2-2-5 (1b)" label="3-2-2-5 (1b)">\[3-2-2-5 (1b)\]</span> 
 I visited New York for the third time in six months.
 ```
 (v / visit.01
-	:ARG0 (i / I)
+	:ARG0 (p / person
+		:ref-person 1st
+		:ref-number Singular)
 	:ARG1 (c / city
 		:name (n / name
 			:op1 "New"
 			:op2 "York"
-			:op3 "City"
 			:wiki "New_York_City"))
 	:ord (o / ordinal-entity
 		:value 3
@@ -3078,36 +3169,35 @@ I visited New York for the third time in six months.
 	:Aspect Performance)
 ```
 
-<span id="3-2-2 (6c)" label="3-2-2 (6c)">\[3-2-2 (6c)\]</span> 
+<span id="3-2-2-5 (1c)" label="3-2-2 (6c)">\[3-2-2 (6c)\]</span> 
 30 percent
 ```
 (p / percentage-entity
 	:value 30)
 ```
 
-<span id="3-2-2 (6d)" label="3-2-2 (6d)">\[3-2-2 (6d)\]</span> 
+<span id="3-2-2-5 (1d)" label="3-2-2-5 (1d)">\[3-2-2-5 (1d)\]</span> 
 http://umr-tool.cs.brandeis.edu/display_post
 ```
 (u / url-entity
 	:value "http://umr-tool.cs.brandeis.edu/display_post")
 ```
 
-<span id="3-2-2 (6e)" label="3-2-2 (6e)">\[3-2-2 (6e)\]</span> 
+<span id="3-2-2-5 (1e)" label="3-2-2-5 (1e)">\[3-2-2-5 (1e)\]</span> 
 Three houses
 ```
 (h / house
 	:quant 3)
 ```
 
-<span id="3-2-2 (6f)" label="3-2-2 (6f)">\[3-2-2 (6f)\]</span> 
+<span id="3-2-2-5 (1f)" label="3-2-2-5 (1f)">\[3-2-2-5 (1f)\]</span> 
 More than three houses
 ```
 (h / house
-	:quant (m / more-than
-		:op1 3))
+	:quant (m / more-than	:op1 3))
 ```
 
-<span id="3-2-2 (6g)" label="3-2-2 (6g)">\[3-2-2 (6g)\]</span> 
+<span id="3-2-2-5 (1g)" label="3-2-2-5 (1g)">\[3-2-2-5 (1g)\]</span> 
 Three cups of milk
 ```
 (m / milk
@@ -3115,7 +3205,7 @@ Three cups of milk
 	:unit (c / cup))
 ```
 
-<span id="3-2-2 (6h)" label="3-2-2 (6h)">\[3-2-2 (6h)\]</span> 
+<span id="3-2-2-5 (1h)" label="3-2-2-5 (1h)">\[3-2-2-5 (1h)\]</span> 
 6.5 on the Richter scale
 ```
 (s / seismic-quantity
@@ -3123,39 +3213,41 @@ Three cups of milk
 	:scale (r / richter))
 ```
 
-The :example relation, illustrated in [\[3-2-2 (7a)\]](#3-2-2 (7a)) is used to annotate illustrative examples of object categories. The :polite relation is used to indicate that an utterance (often a command) is marked for deference with respect to the interlocutor, as in [\[3-2-2 (7b)\]](#3-2-2 (7b)). 
+  ##### Part 3-2-2-6. Other relations
 
-<span id="3-2-2 (7)" label="3-2-2 (7)">\[3-2-2 (7)\]</span> 
+The `:example` relation, illustrated in [\[3-2-2-6 (1a)\]](#3-2-2-6 (1a)), is used to annotate illustrative examples of object categories. The `:polite` relation is used to indicate that an utterance (often a command) is marked for deference with respect to the interlocutor, as in [\[3-2-2-6 (1b)\]](#3-2-2-6 (1b)). 
 
-<span id="3-2-2 (7a)" label="3-2-2 (7a)">\[3-2-2 (7a)\]</span> 
+<span id="3-2-2-6 (1)" label="3-2-2-6 (1)">\[3-2-2-6 (1)\]</span> 
+
+<span id="3-2-2-6 (1a)" label="3-2-2-6 (1a)">\[3-2-2-6 (1a)\]</span> 
 Countries like Germany and France
 ```
 (c / country
 	:example (a/ and
 		:op1 (c / country
-			:name (n / name
-				:op1 "Germany"
+			:name (n / name	:op1 "Germany"
 				:wiki "Germany"))
 		:op2 (c / country
-			:name (n / name
-				:op1 "France"
+			:name (n / name	:op1 "France"
 				:wiki "France"))))
 ```
 
-<span id="3-2-2 (7b)" label="3-2-2 (7b)">\[3-2-2 (7b)\]</span> 
+<span id="3-2-2-6 (1b)" label="3-2-2-6 (1b)">\[3-2-2-6 (1b)\]</span> 
 Could you close the window?
 ```
 (c / close.01
-	:ARG0 (y / you)
+	:ARG0 (p / person
+		:ref-person 2nd
+		:ref-number Singular)
 	:ARG1 (w / window)
 	:Aspect Performance
 	:Mode Imperative
 	:polite +)
 ```
 
-The :condition and :concession relations are alternative ways of annotating the have-condition-91 and have-concession-91 predicates - their use is detailed in section 4.3.
+The `:condition` and `:concession` relations are alternative ways of annotating the `have-condition-91` and `have-concession-91` predicates - their use is detailed in [Part 4-3](#part-4-3-modal-dependency).
 
-Lastly, annotators have at their disposal an :other relation. If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this :other relation, linking it to the concept node that seems appropriate.
+Lastly, annotators have at their disposal an `:other` relation, as already mentioned in table 5 in [Part 3-2-1-1](#part-3-2-1-1-stage-1). If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this `:other` relation, linking it to the concept node that seems appropriate.
 
 [Back to Table of Contents](#toc)
 
@@ -3164,7 +3256,7 @@ Lastly, annotators have at their disposal an :other relation. If they encounter 
 #### Part 3-3-1. Aspect
 
 The aspect annotation consists of a single value that is annotated for
-every event identified in [3.1.1](##part-3-1-1-eventive-concepts). The aspect annotation doesn’t
+every event identified in [Part 3-1-1](#part-3-1-1-eventive-concepts). The aspect annotation doesn’t
 have distinct annotation stages, unlike modality and participant roles.
 Instead it relies on a typological lattice which ranges from very
 coarse-grained to very fine-grained aspectual values. It’s expected that
@@ -3191,7 +3283,7 @@ Below are the aspect values with a brief definition.
 ```state```: unspecified type of state  
 ```reversible state```: acquired state that is not permanent  
 ```irreversible state```: acquired state that is permanent  
-```inherent state```: state that is notacquired and permanent  
+```inherent state```: state that is not acquired and permanent  
 ```point state```: state that is acquired and reversed at a single point in time  
 ```activity```: process that does not end  
 ```undirected activity```: process that does not end and does not progress linearly along a scale  
@@ -3246,7 +3338,7 @@ went home.
 ```
 
 Any event packaged in a referring expression is considered an event
-nominal and annotated with <span class="smallcaps">procecss</span>. This
+nominal and annotated with `process`. This
 includes underived nominals, nominalizations, and gerunds, as in
 [\[3-3-1-1 (2)\]](#3-3-1-1 (2)).
 
@@ -3331,7 +3423,7 @@ pie*); these events should continue on to the next step.
 The next step assesses whether the event is a
 ```state```. The distinction between states and
 processes is necessary for event identification (as states are only
-identified as events when predicated). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in [\[3-3-1-3 (1)\]](#3-3-1-3 (1)); note that all of the nonverbal clause types identified in [3.1.1](##part-3-1-1-eventive-concepts) and annotated with UMR predicates are annotated as ```state```.
+identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in [\[3-3-1-3 (1)\]](#3-3-1-3 (1)); note that all of the nonverbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
 
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">\[3-3-1-3 (1)\]</span>
