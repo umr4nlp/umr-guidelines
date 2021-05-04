@@ -3772,12 +3772,12 @@ cat **meowed** (once).
 
 The finer-grained annotations for
 ```performance``` distinguish between punctual
-events (```direct achievement```) and durative
+events (```directed achievement```) and durative
 events (```incremental accomplishment```,
 ```nonincremental accomplishment```), with even
 finer-grained categories based on the type of change.
 
-Achievements are punctual events, meaning that are conceptualized as
+Achievements are punctual events, meaning that they are conceptualized as
 occurring at a single point in time (like ```point
 state``` and ```semelfactive```). Unlike
 ```point state``` and
@@ -3809,7 +3809,7 @@ each action. Harry may try one tactic unsuccessfully to fix the
 computer; he may even make the problem worse at some point, but
 eventually succeeds in repairing the computer.
 
-<span id="3-3-1-5 (3)" label="3-3-1-5 (3)">\[3-3-1-5 (2)\]</span>
+<span id="3-3-1-5 (3)" label="3-3-1-5 (3)">\[3-3-1-5 (3)\]</span>
 
 <span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">\[3-3-1-5 (3a)\]</span> The door **opened**.
 ```
@@ -3838,8 +3838,13 @@ Harry **repaired** the computer.
 
 #### Part 3-3-2. Mode
 
-UMR adopts the mode attribute for AMR. The four values for the **mode** attribute include
-*expressive*, *imperative*, and *interrogative* as in [\[3-3-2 (1)\]](#3-3-2 (1)). 
+UMR adopts the `:mode` attribute from AMR. The values for the `:mode` attribute include:
+
+```expressive```: used for exclamational words such as _hmm_, _wow_, _yup_ etc., which express emotion but don't clearly refer to events, objects or properties, as in [\[3-3-2 (1a)\]](#3-3-2 (1a)). This value is not used for mere emphasis, or for exclamation marks.
+
+```imperative```: used for commands, as in [\[3-3-2 (1b)\]](#3-3-2 (1b)).
+
+```interrogative```: used for both polar questions and content questions, as in [\[3-3-2 (1c)\]](#3-3-2 (1c)).
 
 <span id="3-3-2 (1)" label="3-3-2 (1)">3-3-2 (1)</span>
 
@@ -3855,7 +3860,6 @@ Yup , a couple of hundred dollars is going to save the day !
 ```
 
 <span id="3-3-2 (1b)" label="3-3-2 (1b)">3-3-2 (1b)</span>
-
 ```
 Chalk another good one up to the wife .
 
@@ -3867,17 +3871,26 @@ Chalk another good one up to the wife .
       :ARG2 (w / wife))
 ```
 
+<span id="3-3-2 (1c)" label="3-3-2 (1c)">3-3-2 (1c)</span>
+```
+Did you see that?
+(s / see-01 :mode interrogative
+      :ARG0 (y / you)
+      :ARG1 (t / that)
+      :polarity amr-unknown
+      :aspect State)
+```
+
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-3. Polarity
-UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute :polarity is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in [\[3-3-3 (1)\]](#3-3-3 (1)). These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
+UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute `:polarity` is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in [\[3-3-3 (1)\]](#3-3-3 (1)). These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
 
 <span id="3-3-3 (1)" label="3-3-3 (1)">3-3-3 (1)</span>
 
 <span id="3-3-3 (1a)" label="3-3-3 (1a)">3-3-3 (1a)</span>
 ```
-Most of the time , economic policy and economic theory are not aimed at\
- individuals .
+Most of the time, economic policy and economic theory are not aimed at individuals.
 
 (a / aim-02 
       :polarity -
