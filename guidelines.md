@@ -44,12 +44,12 @@
       		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
       	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)   
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-role-UMR-relations)
-      	* Part 3-2-2-1 [Temporal relations](#part-3-2-2-1-temporal-relations)
-     	* Part 3-2-2-2 [Modifiers](#part-3-2-2-2-modifiers)
-     	* Part 3-2-2-3 [Circumstantial temporals and locatives](#part-3-2-2-3-circumstantial-temporals-and-locatives)
-     	* Part 3-2-2-4 [Named entities](#part-3-2-2-4-named-entities)
-     	* Part 3-2-2-5 [Quantification](#part-3-2-2-5-quantification)
-     	* Part 3-2-2-6 [Other relations](#part-3-2-2-6-other-relations)
+      	* Part 3-2-2-1. [Temporal relations](#part-3-2-2-1-temporal-relations)
+     	* Part 3-2-2-2. [Modifiers](#part-3-2-2-2-modifiers)
+     	* Part 3-2-2-3. [Circumstantial temporals and locatives](#part-3-2-2-3-circumstantial-temporals-and-locatives)
+     	* Part 3-2-2-4. [Named entities](#part-3-2-2-4-named-entities)
+     	* Part 3-2-2-5. [Quantification](#part-3-2-2-5-quantification)
+     	* Part 3-2-2-6. [Other relations](#part-3-2-2-6-other-relations)
     * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
       * Part 3-3-1. [Aspect](#part-3-3-1-Aspect) 
       	* Part 3-3-1-1. [Event nominals](#part-3-3-1-1-event-nominals)
@@ -66,7 +66,8 @@
       
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference)
-    	* Part 4-1-1. [Event coreference](#part-4-1-1-event-coreference)  
+    	* Part 4-1-1. [Entity coreference](#part-4-1-1-entity-coreference)
+    	* Part 4-1-2  [Event coreference](#part-4-1-2-event-coreference)
     * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
     	* Part 4-2-1. [Temporal relations](#part-4-2-1-temporal-relations)
     		* Part 4-2-1-1. [Contained or Overlap](#part-4-2-1-1-contained-or-overlap)
@@ -484,13 +485,13 @@ the development of digital lexicons in the future.
 ```
 Roleset id: taste.01, use one's tastebuds, active perception of flavor.
 Roles:
-	ARG0: _taster_
-	ARG1: _food_
+	ARG0: taster
+	ARG1: food
 	
 Roleset id: taste.02, possess a flavor.
 Roles
-	ARG1: _thing with flavor_
-	ARG2: _description of flavor_
+	ARG1: thing with flavor
+	ARG2: description of flavor
 ```
 
 The semantic arguments of such predicate nodes are represented in the
@@ -514,7 +515,7 @@ ap-hle-am-ke'			nenhlet
 'A man travelled.'
 
 (e / enhleama-00 'travel'
-	:Actor (n / nenhlet 'person))
+	:Actor (n / nenhlet 'person'))
 (t / travel-01
 	:ARG0 (m/ man))
 ```
@@ -547,7 +548,7 @@ I heard about his travels.
 	:ARG1 (t / travel-01
 		:ARG0 (p2 / person
 			:ref-person 3rd
-				:ref-number Singular))
+			:ref-number Singular))
 ```
 
 #### Part 2-2-2: Multi-word expressions.
@@ -3934,7 +3935,7 @@ As of now , five million tickets have been sold on the StubHub website .
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-5. Ref
-As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically based way. It annotates person and number through two attributes - :ref-person, for grammatical person information, and :ref-number for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
+As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically motivated way. It annotates person and number through two attributes - `:ref-person` for grammatical person information, and `:ref-number` for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
 
 <span id="3-3-5 (1)" label="3-3-5 (1)">3-3-5 (1)</span>
 
@@ -3960,7 +3961,7 @@ woman	that-3PL-EP-DU
 	:mod (a/ ŋara))
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both :ref-person and :ref-number can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (e.g., person, thing) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the :Actor argument of the eat-verb is third person plural. Therefore, we annotate this argument with a (p/ person) concept, which in turn takes :ref-person and :ref-number attributes with the relevant values. The :Undergoer of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offere by the Paraguayans. We therefore annotate it with a (t/ thing) concept which takes a :ref-number Plural attribute. No :ref-number attribute is needed here, since the Thing concept implies third person rather than a speech act participant.
+For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept which takes a `:ref-number Singular` attribute. No `:ref-person` attribute is needed here, since the `thing` concept implies third person rather than a speech act participant.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
@@ -3974,10 +3975,13 @@ NEG-2/3M.IRR-DSTR-eat-PST/HAB-SBJ=PHOD
 		:ref-number Plural)
 	:Undergoer (t/ thing
 		:ref-number Singular)
+	:aspect Performance
 	:polarity -)
 ```
 
-The possible values for the :refer-person attribute are based on Cysouw's (2003) cross-linguistic study of person-marking system in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar first, second, and third person values. Some languages have more fine-grained person systems, distinguishing a first person exclusive from a first person inclusive value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
+The possible values for the `:refer-person` attribute are based on Cysouw's (2003) cross-linguistic study of person-marking systems in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar `1st`, `2nd`, and `3rd` person values. Some languages have more fine-grained person systems, distinguishing a first person `exclusive` from a first person `inclusive` value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
+
+![Person lattice](person-lattice.png)
 
 ```
 |         | coarse-gr | default | fine-gr   |
@@ -3990,17 +3994,19 @@ The possible values for the :refer-person attribute are based on Cysouw's (2003)
 
 ```
 
-The possible number values for the :refer-number attribute are based on Corbett (2000). The default level here consists simply of singular vs. non-singular. Languages with more fine-grained categories in their system may have Duals, Trials, and Paucals, and Greater Plurals, which fit together as shown in the figure below (add lattice image).
+The possible number values for the `:refer-number` attribute are based on Corbett (2000). The default level here consists simply of `singular` vs. `non-singular`. Languages with more fine-grained categories in their system may have more fine-grained `dual`, `trial`, `paucal`, and `greater plural` categories, which fit together as shown in the figure below.
+
+![Number lattice](number-lattice.png)
 
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-6. Degree
-In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a :degree relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat :degree as an attribute, with three possible values: _intensifier_, _downtoner_, and _equal_. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná
+In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a `:degree` relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat `:degree` as an attribute, with three possible values: `intensifier`, `downtoner`, and `equal`. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná.
 
 <span id="3-3-6 (1)" label="3-3-6 (1)">3-3-6 (1)</span>
 ```
-ak-yav-ay'-a=ngkoye	yamet
-2/3F-be.large-PST/HAB-NOM=INTNS
+ak-yav-ay'-a=ngkoye		yamet
+2/3F-be.large-PST/HAB-NOM=INTNS	tree
 'The tree is very large.'
 
 (h / have-mod-91
@@ -4011,7 +4017,7 @@ ak-yav-ay'-a=ngkoye	yamet
 	:ARG0 (t/ tree)
 	:ARG1 (l/ large
 		:degree (v/ very)))
-Lexicon: Very - _Intensifier_
+Lexicon: Very - Intensifier
 ```
 
 [Back to Table of Contents](#toc)
@@ -4020,11 +4026,13 @@ Lexicon: Very - _Intensifier_
 ### Part 4-1. Coreference
 
 
-Anaphorical expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphorical expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
+Anaphoric expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphoric expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
 
-For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1 (1)\]](#4-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope":
+#### Part 4-1-1. Entity coreference
 
-<span id="4-1 (1)" label="4-1 (1)">4-1 (1)</span>
+For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1-1 (1)\]](#4-1-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s1p` node.
+
+<span id="4-1-1 (1)" label="4-1-1 (1)">4-1 (1)</span>
 
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
@@ -4056,43 +4064,44 @@ Snt3: He denied any wrongdoing.
     :coref((s3h :same-entity s1p)) )
 ```
 
-Subset relation:
+The example in [\[4-1-1 (2)\]](#4-1-1 (2)) shows how the `:subset-of` relation is used to relate mentions of sets of entities to later mentions of entities belonging to such a set. For example, _we_ (`p3`) includes reference to two entities - the author/speaker of the sentence, and the person who is described as *possessive and controlling*. The pronoun _he_, given the constant `p2`, refers to one of these two entities. Therefore, in the document-level annotation, `p2` is annotated with a `:subset-of` relation to the `p3` node.
 
-<span id="4-1 (2)" label="4-1 (2)">4-1 (2)</span>
+<span id="4-1-1 (2)" label="4-1-1 (2)">4-1-1 (2)</span>
 ```
 # ::snt He is very possesive and controlling but he has no right to be as we are not together.
 (c / contrast-01
       :ARG1 (a / and
             :op1 (p / possessive-03
 	          :Aspect Stative
-                  :ARG0 (h2 / he)
+                  :ARG0 (p2 / person
+		  	:ref-person 3rd
+			:ref-number Singular)
                   :degree (v2 / very))
             :op2 (c3 / control-01
-                  :ARG0 h2
+                  :ARG0 p2
                   :degree (v / very)))
       :ARG2 (r / right-05 :polarity -
-            :ARG1 h2
+            :ARG1 p2
             :ARG2 a
             :ARG1-of (c2 / cause-01
                   :ARG0 (t / together
 		        :Aspect Stative
-                        :domain (w / we)))))
+                        :domain (p3 / person
+				:ref-person 1st
+				:ref-number Plural)))))
 (s / sentence
-  :coref ((s4h2 :subset-of s4w)))
+  :coref ((s4p2 :subset-of s4p3)))
 ```
 
 [Back to Table of Contents](#toc)
 
-#### Part 4-1-1. Event coreference
+#### Part 4-1-2. Event coreference
  
-	
- - Event identity
-
- We use *same-event* to represent cases where two event mentions refer to  the same event, as in [\[4-1-1 (1)\]](#4-1-1 (1)).
+UMR uses the `:same-event` relation to represent cases where two event mentions refer to  the same event, as in [\[4-1-1 (1)\]](#4-1-1 (1)).
  
- <span id="4-1-1 (1)" label="4-1-1 (1)">4-1-1 (1)</span>
+ <span id="4-1-2 (1)" label="4-1-2 (1)">4-1-2 (1)</span>
  
-  <span id="4-1-1 (1a)" label="4-1-1 (1a)">4-1-1 (1a)</span>
+  <span id="4-1-2 (1a)" label="4-1-2 (1a)">4-1-2 (1a)</span>
 ::id PROXY_APW_ENG_20080415_1054.19 ::date 2013-07-19T04:50:53 ::snt-type body ::annotator SDL-AMR-09 ::preferred
 ::snt El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
  ::save-date Wed Jan 20, 2016 ::file PROXY_APW_ENG_20080415_1054_19.txt
@@ -4113,7 +4122,7 @@ Subset relation:
                               :unit (d / dollar))))))
 ```
 
- <span id="4-1-1 (1b)" label="4-1-1 (1b)">4-1-1 (1b)</span>
+ <span id="4-1-2 (1b)" label="4-1-2 (1b)">4-1-2 (1b)</span>
  ::id PROXY_APW_ENG_20080415_1054.20 ::date 2013-07-19T04:57:55 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial bases.
  ::save-date Thu May 28, 2015 ::file PROXY_APW_ENG_20080415_1054_20.txt
@@ -4131,11 +4140,11 @@ Subset relation:
   :coref ((s2c :same-event s1c)))
 ```
 
-Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for **introduced** and **provide** in [\[4-1-1 (2)\]](#4-1-1 (2)).
+Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for *introduced* and *provide* in [\[4-1-2 (2)\]](#4-1-2 (2)).
 
- <span id="4-1-1 (2)" label="4-1-1 (2)">4-1-1 (2)</span>
+ <span id="4-1-2 (2)" label="4-1-2 (2)">4-1-2 (2)</span>
 
-<span id="4-1-1 (2a)" label="4-1-1 (2a)">4-1-1 (2a)</span>
+<span id="4-1-2 (2a)" label="4-1-2 (2a)">4-1-2 (2a)</span>
  ::id nw.chtb_0021.2 ::date 2012-11-01T15:15:42 ::annotator SDL-AMR-09 ::preferred
  ::snt The Three Gorges project on the Yangtze River has recently **introduced*** the first foreign capital .
  ::save-date Fri Oct 24, 2014 ::file nw_chtb_0021_2.txt
@@ -4149,7 +4158,7 @@ Event identity also includes cases where the same underlying event is referred t
       :time (r2 / recent))
 ```
 
-<span id="4-1-1 (2b)" label="4-1-1 (2b)">4-1-1 (2b)</span>
+<span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
  ::id nw.chtb_0021.3 ::date 2012-11-01T15:29:23 ::annotator SDL-AMR-09 ::preferred
  ::snt The loan , a sum of 12.5 million US dollars , is an export credit **provided** to the Three Gorges project by the Canadian government , which will be used mainly for the management system of the Three Gorges project .
  ::save-date Thu Dec 19, 2013 ::file nw_chtb_0021_3.txt
@@ -4177,15 +4186,13 @@ Event identity also includes cases where the same underlying event is referred t
 	    
 (s / sentence
    :coref ((s2p :same-event s1i)))
-```	 
+```
 
-- subset
+The `:subset-of` relation is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-2 (3)\]](#4-1-2 (3)). Both the _arrest_ made in Germany and the one made in the Netherlands are subevents of the _arrests_ that were ordered by judge Fragnoli. Therefore, both the `s1a2` node and the `s1a3` node are annotated with a `:subset-of` relation to `s2a`.
 
-*subset* is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-1 (3)\]](#4-1-1 (3)).
+<span id="4-1-2 (3)" label="4-1-2 (3)">4-1-2 (3)</span>
 
-<span id="4-1-1 (3)" label="4-1-1 (3)">4-1-1 (3)</span>
-
-<span id="4-1-1 (3a)" label="4-1-1 (3a)">4-1-1 (3a)</span>
+<span id="4-1-2 (3a)" label="4-1-2 (3a)">4-1-2 (3a)</span>
 ::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt 1 arrest took place in the Netherlands and another in Germany.
  ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
@@ -4201,8 +4208,9 @@ Event identity also includes cases where the same underlying event is referred t
             :location (c2 / country :wiki "Germany"
                   :name (n2 / name :op1 "Germany"))
             :mod (a4 / another)))
-```	   
-<span id="4-1-1 (3b)" label="4-1-1 (3b)">4-1-1 (3b)</span>
+```
+
+<span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
  ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
  ::snt The arrests were ordered by anti-terrorism judge fragnoli.
  ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
@@ -4223,10 +4231,11 @@ Event identity also includes cases where the same underlying event is referred t
 
 - Script / subevent?
 
-For now UMR does not annotate cases where one event is a subevent of another event, or when an event is part of a `script'. These will be annotated under temporal relations.
+For now UMR does not annotate cases where one event is a subevent of another event, or when an event is part of a "script". These will be annotated under temporal relations.
 
- Reports suggest that the group of nine were having a **picnic** on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners **ventured** outside the city of Saada without the required police escorts due to the heightened security situation in the area.
-  
+```
+ Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
+```
   
   
 [Back to Table of Contents](#toc)
@@ -4264,40 +4273,38 @@ The temporal annotation in UMR is done at both the sentence level and the docume
 
 In addition to temporal relations at the sentence level, we also annotate temporal relations at the document level.
 The document-level temporal relations focus on event-event and time-time relations. Time-time relations are annotated when 
-a relative time depends on another time expression for its interpretation
+a relative time depends on another time expression for its interpretation.
 
 
 Event-event relations are annotated only when the temporal relations are clearly supported by morpho-syntactic clues or when there is a clear temporal sequence can be inferred. 
 
-
-<!--
 The temporal dependency is divided into two passes: the first pass involves setting up the temporal
 superstructure – the top levels of the dependency structure and the fourth
 pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined meta nodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
 
-#### Temporal superstructure
+#### Part 4-2-1. Temporal superstructure
 
 The highest level of the temporal
-dependency is always a single <span>ROOT</span> node. The temporal
+dependency is always a single `ROOT` node. The temporal
 superstructure consists of two types of nodes: time expressions and
-pre-defined metanodes. For now at least, <span>Temp</span> is the
+pre-defined metanodes. For now at least, `:Temp` is the
 relation that is used to link all nodes in the superstructure.
 
-##### Pre-defined metanodes
+##### Part 4-2-1-1. Pre-defined metanodes
 
 The first type of node in the temporal superstructure are the
-pre-defined metanodes: <span>Past\_Ref, Present\_Ref,
-Future\_Ref</span>, and <span>DCT</span> (document creation time).
+pre-defined metanodes: `Past_Ref`, `Present_Ref`,
+`Future_Ref`, and `DCT` (document creation time).
 Unlike time expressions, the pre-defined metanodes don’t correspond to
 linguistic material in the text. All four of the pre-defined metanodes
 should be added at the top of every temporal dependency structure.
 Whether or not they are actually used in the annotation will be
 determined when events are annotated in the next pass. As mentioned
-above, there is a generic <span>Temp</span> relation between all nodes
+above, there is a generic `:Temp` relation between all nodes
 in the temporal superstructure; this is shown in Figure
 [\[tempsuper\]](#tempsuper).
 
-##### Time expressions
+##### Part 4-2-1-2. Time expressions
 
 The other type of node in the temporal superstructure are time
 expressions. Time expressions are broken down into a taxonomy that
@@ -4356,26 +4363,25 @@ First, time expressions are distinguished based on whether they are
 locatable on a timeline or not. Unlocatable time expressions are time
 expressions which refer to the duration (*for three hours*) or
 quantification (*every day*) of an event. Unlocatable time expressions
-are not represented in the temporal dependency structure at any level.
--->
+are not represented in the temporal dependency structure at any level. They do influence the aspect annotation, however (see [Part 3-3-1](#part-3-3-1-Aspect)).
+
 
 <!-- (they do influence the aspect annotation; see §[3](#aspectannotation)) -->
 
-<!--
 All locatable time expressions are represented in the temporal
 superstructure. Locatable time expressions are divided between concrete
 and vague time expressions. Vague time expressions (e.g. *nowadays, in
-the old days*) are represented as the children of <span>Present\_Ref,
-Past\_Ref,</span> or <span>Future\_Ref</span>. Concrete time expressions
+the old days*) are represented as the children of `Present_Ref`,
+`Past_Ref`, or `Future_Ref`. Concrete time expressions
 are divided into relative and absolute time expressions. Relative
 concrete time expressions (*yesterday, the week before*) are represented
-as the children of either <span>DCT</span> (as in *yesterday*) or
+as the children of either `DCT` (as in *yesterday*) or
 another concrete time expression on which they depend for their
 interpretation (as in *the week before*). Finally, absolute concrete
 time expressions (*in 2019*) are represented as children of
-<span>ROOT</span>.
+`ROOT`.
 
-##### Key events
+##### Part 4-2-1-3. Key events
 
 For news stories only, the temporal superstructure includes the “key
 event” in the text. The key event is the main event around which the
@@ -4383,17 +4389,18 @@ news story is centered. It is often mentioned in the title or first
 sentence of the news story and referred to many times in the text. The
 key event should be added to the superstructure, with a relation to the
 timex which most specifically locates it in time.
--->
 
-#### Part 4-2-1. Temporal relations
+#### Part 4-2-2. Temporal relations
+
+#### Part 4-2-2-1. Choosing the right temporal relation
 
 The second pass in the temporal annotation involves placing events on to the
 temporal dependency structure based on their temporal relations with
 other events and time expressions. Unlike the modal dependency structure
-which includes all of the events identified in the first pass, the
+which includes all of the events identified in the first pass (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines), the
 temporal dependency structure only includes events whose aspect
-annotation is NOT <span>State</span>. That is, events annotated with the
-aspect value <span>State</span> are not annotated for temporal location.
+annotation is NOT `State`. That is, events annotated with the
+aspect value `State` are not annotated for temporal location.
 This is because states, by definition, don’t involve change; therefore,
 they generally cannot be located on a timeline in the same way as
 non-stative events.
@@ -4403,13 +4410,13 @@ expression in the superstructure or another event (or both). The set of
 temporal relations are shown below. Note that the labels characterize
 the relation from child to parent.
 
-> <span>Contained</span>: child is entirely contained within the parent;
-> parent begins before child and parent ends after child (Note: this is
-> called ‘Includes’ in Zhang & Xue 2018)  
-> <span>After</span>: child is after parent  
-> <span>Before</span>: child is before parent  
-> <span>Overlap</span>: child and parent overlap (either partially or
-> fully)  
+`:contained`: child is entirely contained within the parent; parent begins before child and parent ends after child (Note: this is called ‘Includes’ in Zhang & Xue 2018).
+
+`:after`: child is after parent.  
+
+`:before`: child is before parent.
+
+`:overlap`: child and parent overlap (either partially or fully).  
 
 The goal of this temporal annotation scheme is to give each event the
 most precise temporal location possible. We also want to avoid adding
@@ -4419,21 +4426,21 @@ should proceed through the steps below for each event until it has at
 least one temporal annotation.
 
 1.  The most specific location for any event will be a
-    <span>Contained</span> relation to a timex (although see the
+    `:contained` relation to a timex (although see the
     exception below). If possible, link the event to a time expression
     (timex). This can be any timex in the superstructure, but most of
     the time it will be in the same clause as the event. If the event
     cannot be related to a timex, proceed to 2. If the event is related
     to a timex, proceed to 3.
     
-      - **Exception:** The only scenario in which an event, which has a clear temporal
-        relation with a timex, doesn’t need to have this relation
+      - **Exception:** The only scenario in which an event which has a clear temporal
+        relation with a timex doesn’t need to have this relation
         annotated is when the relation logically falls out from other
         annotations. This is the case when an event is a subevent of an
-        event that is <span>Contained</span> in a timex. That is, if
-        event A is <span>Contained</span> within event B (i.e., a
-        subevent) and event B is <span>Contained</span> within a timex,
-        then logically, event A must also be <span>Contained</span>
+        event that is `:contained` in a timex. That is, if
+        event A is `:contained` within event B (i.e., a
+        subevent) and event B is `:contained` within a timex,
+        then logically, event A must also be `:contained`
         within the timex and therefore this relation doesn’t need to be
         annotated.
 
@@ -4447,27 +4454,23 @@ least one temporal annotation.
     
       - It has a clear temporal relation to the child event AND
     
-      - It has a <span>Pos</span> relation to the same conceiver as the
-        child event OR
+      - It has a `:modstr Aff` relation to the same conceiver as the
+        child event in the modal annotation OR
     
       - It has the same modal relation to the same conceiver/event as
-        the child event OR
+        the child event in the modal annotation OR
     
       - It is either the parent or the child of the event in the modal
         dependency.
-    
-      - **Exception:** With reporting constructions, the reporting event
-        and reported events can be linked in the temporal dependency
-        (even though they are not linked in the modal dependency).
 
 3.  Even if the event can be related to a timex, its temporal location
     may be made more precise by specifying a second relation to an
     event. Only add an event-event relation if it makes the temporal
     location of the child event more specific. In practice, this means
-    that events which are <span>Contained</span> within a timex will
-    only be related to events <span>Contained</span> within the same
+    that events which are `:contained` within a timex will
+    only be related to events `:contained` within the same
     timex or events which are not contained within any timex. (That is,
-    two events <span>Contained</span> within different timexs should not
+    two events `:contained` within different timexs should not
     be related to each other.) Aside from that, follow the same rules as
     in 2 for selecting a good parent event.
 
@@ -4478,9 +4481,9 @@ least one temporal annotation.
     event, then link it to a tense metanode.
 
 In order to demonstrate how these rules work, let’s look at the
-annotation of ([\[4-2 (2)\]](#4-2 (2))) below.
+annotation of ([\[4-2-2-1 (1)\]](#4-2-2-1 (1))) below.
 
-<span id="4-2 (2)" label="4-2 (2)">\[4-2 (2)\]</span> *Lerias
+<span id="4-2-2-1 (1)" label="4-2-2-1 (1)">\[4-2-2-1 (1)\]</span> *Lerias
 **said** that many Guinsaugon residents had been **evacuated** after
 **landslides** had **killed** more than 20 people on Leyte, but that
 many had **returned** because the **rains** had **stopped** and the sun
@@ -4535,65 +4538,65 @@ Key event: landslide\_KEY
 | stop      | Pos(stop,LERIAS)      |                     |
 | come-out  | Pos(come-out,LERIAS)  |                     |
 
-For *say*, it does not have a **Contained** relation
+For *say*, it does not have a `:contained` relation
 with either of the time expressions in the example, so we move to step
 2. It’s also the first event in the sentence, so (assuming it can’t be
 linked to any of the events in the previous sentence), we move to step
 4. We do know that *say* occurred after the key event in the
-text, therefore we can add *After(say,landslide\_KEY)* and
+text, therefore we can add `:after(say,landslide_KEY)` and
 move on to the next event.
 
-*Evacuate* is not necessarily **Contained** within
+*Evacuate* is not necessarily `:contained` within
 either of the timexs, so we move to step 2. Since *evacuate*
 is a reported event, the reporting event, *say*, is an
 appropriate parent in the temporal dependency; we can add
-*Before(evacuate,say).*
+`:before(evacuate,say)`.
 
 Next, we have *landslide*. Following step 1,
-*landslide* is **Contained** within the timex
+*landslide* is `:contained` within the timex
 *earlier in the week*, so we add
-*Contained(landslide,earlier\_week)*. Then, we move to step 3
+`:contained(landslide,earlier_week)`. Then, we move to step 3
 and see if the temporal location of *landslide* can be made
 more specific by adding an event relation. The immediately preceding
 event in the text, *evacuate*, has a clear temporal relation
 and the same modal annotation as *landslide* and is therefore
-a good parent. We can add *Before(landslide,evacuate)*.
+a good parent. We can add `:before(landslide,evacuate)`.
 
 Then, we move on to *kill*. Like *landslide*,
-*kill* is **Contained** within the timex *earlier in
-the week*, so we can add *Contained(kill,earlier\_week)*.
+*kill* is `:contained` within the timex *earlier in
+the week*, so we can add `:contained(kill,earlier_week)`.
 Then we move to step 3 and can add a relation to *landslide*:
-*Overlap(kill,landslide)*.
+`:overlap(kill,landslide)`.
 
 *Return* can be linked to the timex *Friday*:
-*Contained(return,Friday)*. Moving to step 3, we look earlier
+`:contained(return,Friday)`. Moving to step 3, we look earlier
 in the sentence for a parent event. Both *kill* and
-*landslide* are Contained within a different timex, so they
+*landslide* are `:contained` within a different timex, so they
 don’t make good parents. That is, by virtue of the fact that
-*return* is **Contained** on *Friday* and
-*kill* and *landslide* are **Contained**
+*return* is `:contained` on *Friday* and
+*kill* and *landslide* are `:contained`
 in *earlier in the week*, it logically falls out that
 *return* happened after both *kill* and
 *landslide*; therefore, we don’t need to annotate this
-relation. *Evacuate*, however, is not **Contained**
+relation. *Evacuate*, however, is not `:contained`
 within a timex and has the same modal annotation as *return*;
-so, we can add *After(return,evacuate)*.
+so, we can add `:after(return,evacuate)`.
 
-*Rain* does not have a **Contained** relation with a
+*Rain* does not have a `:contained` relation with a
 timex, so we move to step 2. *Return* makes a good parent for
 *rain* since it has the same modal annotation, so we can
 add  
-*Before(rain,return)*.
+`:before(rain,return)`.
 
-*Stop* also does not have a **Contained** relation
+*Stop* also does not have a `:contained` relation
 with a timex. The preceding event, *rain*, makes a good
 parent, since it has the same modal annotation; we can add
-*Overlap(stop,rain)*.
+`:overlap(stop,rain)`.
 
 Finally, *come-out* also does not have a
-<span>Contained</span> relation with a timex. *Stop* makes a
+`:contained` relation with a timex. *Stop* makes a
 good parent, since it has the same modal annotation, so we can add
-*Overlap(come-out,stop)*. This gives us the full annotation
+`:overlap(come-out,stop)`. This gives us the full annotation
 below.
 
 | Events    | Modal annotation   | Temporal annotation                |
@@ -4610,36 +4613,36 @@ below.
 | stop      | Pos(stop,say)      | Overlap(stop,rain)                 |
 | come-out  | Pos(come-out,say)  | Overlap(come-out,stop)             |
 
-##### Part 4-2-1-1. Contained or Overlap
+##### Part 4-2-1-2. Contained or Overlap
 
-Following the definition of the <span>Contained</span> and the
-<span>Overlap</span> relations, <span>Overlap</span> must be used rather
-than <span>Contained</span> for events that are perfectly simultaneous
+Following the definition of the `:contained` and the
+`:overlap` relations, `:overlap` must be used rather
+than `:contained` for events that are perfectly simultaneous
 (beginning and ending at the exact same time point). The
-<span>Contained</span> relation will instead be used for all relations
+`:contained` relation will instead be used for all relations
 where both the beginning and ending of one event are included within the
 temporal duration of a second event - this includes subevent structure
 and also events which have a purely temporal (and not causal or
 conceptual) relation between them.
 
-##### Part 4-2-1-2. Causally-related events
+##### Part 4-2-1-3. Causally-related events
 
 Causal relations between events are always annotated as
-<span>After</span> relations. This means that in examples such as *the
-crops grew well because it rained enough*, <span>After(grow,rain)</span>
+`:after` relations. This means that in examples such as *the
+crops grew well because it rained enough*, `:after(grow,rain)`
 is annotated even though the causing event (raining) and the caused
 event (growing) partly overlap. If the causal relationship is explicitly
 predicated, it is identified as a separate event. It is then annotated
-as <span>After</span> the causing event, and the caused event is
+as `:after` the causing event, and the caused event is
 annotated as following it. Therefore, *the opening of the food can
-prompted my cat to meow* is annotated as <span>After(prompt,open)</span>
-and <span>After(meow,prompt)</span>.
+prompted my cat to meow* is annotated as `:after(prompt,open)`
+and `:after(meow,prompt)`.
 
-##### Part 4-2-1-3. Deontic modal events
+##### Part 4-2-1-4. Deontic modal events
 
 For deontics and purpose clauses, the deontic or purpose complement
 (e.g., *go* in *Mary wants to go*) is annotated with with an
-<span>After</span> relation to the deontic predicate (here, *want*).
+`:after` relation to the deontic predicate (here, *want*).
 This is important because it makes sure that events can be interpreted
 as deontically modalized - the modal annotation scheme itself does not
 provide for this.
@@ -4673,7 +4676,6 @@ lattice of annotation values that differ in terms of granularity. An
 example of the UMR annotation and the underlying modal dependency
 structure is shown below in [\[4-3 (1)\]](#4-3 (1)).
 
-
 <span id="4-3 (1)" label="4-3 (1)">\[4-3 (1)\]</span>
 
 ![Modal dependency structure](modal-dependency.png)
@@ -4690,9 +4692,9 @@ Martin **said** that the package has probably already **arrived**.
 	modstr: Aff)  
 ```
 
-The saying-event and the arriving-event each get a modal strength value (```modstr```), which can then be represented
+The *say*-event and the *arrive*-event each get a modal strength value (`:modstr`), which can then be represented
 in the dependency as shown on the right. The
-```quot``` value indicates than an event is
+`:quot` value indicates than an event is
 being reported, and the participant role annotation can be used to
 automatically select the conceiver for the reported event(s), here,
 *Martin*.
@@ -4705,34 +4707,27 @@ modal dependency structure. This means that Stage 2 annotation involves first do
 #### Part 4-3-1. Stage 1
 
 There are two types of modal annotations at Stage 1: a
-```modstr``` annotation that consists of a
-single epistemic strength/polarity value and a dependency annotation
-that indicates a relation between two events. There are four dependency
-relations, ```mod``` for the link between a
-modal event and the event(s) that it modalizes,
-```quot``` for the link between a reporting
-event and the event(s) that it reports,
-```purp``` for the link between a main clause
-event and an event in a purpose clause, and
-```cond``` for the relation between the
-apodasis and protasis in a conditional construction. The
-```modstr``` annotation applies to all events,
-except for those under the scope of a modal identified as its own event (i.e., events with ```mod``` relations). This
+`:modstr` annotation that consists of a
+single epistemic strength/polarity value, and a dependency annotation
+that indicates a relation between two events. There are two dependency
+relations: `:mod` for the link between a
+modal event and the event(s) that it modalizes, and
+`:quot` for the link between a reporting
+event and the event(s) that it reports. Additionally, events in purpose clauses and events in conditional constructions must be taken up in the modal dependency tree. The right structure of the modal dependency graph for these events will be extrapolated from the sentence-level annotation: events in purpose clauses are daughters of events in the main clause they depend on, and are connected to them with the `:purpose` participant role. This can be leveraged to embed the purpose-event underneath the correct parent in the modal dependency graph as well. For conditionals, similarly, the protasis event will be embedded under the apodosis event with a `:condition` relation, or the protasis and apodosis events will both be `:ARG1` and `:ARG2` of a `have-condition-91` node. Again, this information will be taken up in the eventual modal dependency graph without annotators needing to indicate it a second time in the document-level modal annotation workflow.
+The `:modstr` annotation applies to all events, except for those under the scope of a modal identified as its own event (i.e., events with `:mod` relations). This
 is summarized below.
 
-Events under the scope of modal events: ```mod``` relation  
-Events under the scope of reporting events: ```modstr``` annotation;
-```quot``` relation  
-Events in purpose clauses: ```modstr``` annotation; ```purp``` relation  
-Events in conditionals: ```modstr``` annotation; ```cond``` relation  
-All other events: ```modstr``` annotation
+Events under the scope of modal events: `mod` relation  
+Events under the scope of reporting events: `modstr` annotation;
+`quot` relation  
+All other events: `modstr` annotation
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-1. ```modstr``` values
+##### Part 4-3-1-1. `modstr` values
 
 The modal strength values correspond to epistemic strength, i.e. the
-author or conceiver’s certainty about the occurrence of the event in the real world, or certainty about another conceiver’s mental content. Based on Boye (2012), a typological study of modal systems across languages, and following FactBank (Pustejovsky et al. 2005), the UMR annotation is based around three levels of modal strength: Full, Partial, and Neutral, illustrated in [\[4-3-1-1 (1)\]](#4-3-1-1 (1)).
+author or conceiver’s certainty about the occurrence of the event in the real world, or certainty about another conceiver’s mental content. Based on Boye (2012), a typological study of modal systems across languages, and following FactBank (Pustejovsky et al. 2005), the UMR annotation is based around three levels of modal strength: `Full`, `Partial`, and `Neutral`, illustrated in [\[4-3-1-1 (1)\]](#4-3-1-1 (1)).
 
 <span id="4-3-1-1 (1)" label="4-3-1-1 (1)">\[4-3-1-1 (1)\]</span>
 
@@ -4747,24 +4742,24 @@ The cat <u>probably</u> already **ate** breakfast.
 Neutral:  
 The cat <u>might</u> have already **eaten** breakfast.
 
-The Full modal strength value, as in [\[4-3-1-1 (1a)\]](#4-3-1-1 (1a)), corresponds to complete certainty; that is, the conceiver is 100% certain that the event occurs in the real world. The Neutral modal strength value, shown in [\[4-3-1-1 (1c)\]](#4-3-1-1 (1c)), indicates the possibility of the event; essentially, this corresponds to 50/50 certainty that the event occurs in the real world. The Partial modal strength value, as in [\[4-3-1-1 (1b)\]](#4-3-1-1 (1b)), falls between the Full and Neutral values; the conceiver believes that more likely than not, the event occurs in the real world.
+The `Full` modal strength value, as in [\[4-3-1-1 (1a)\]](#4-3-1-1 (1a)), corresponds to complete certainty; that is, the conceiver is 100% certain that the event occurs in the real world. The `Neutral` modal strength value, shown in [\[4-3-1-1 (1c)\]](#4-3-1-1 (1c)), indicates the possibility of the event; essentially, this corresponds to 50/50 certainty that the event occurs in the real world. The `Partial` modal strength value, as in [\[4-3-1-1 (1b)\]](#4-3-1-1 (1b)), falls between the `Full` and `Neutral` values; the conceiver believes that more likely than not, the event occurs in the real world.
 
-But, Full, Partial, and Neutral aren’t the only possible modal strength annotation values. Languages differ in the modal strength distinctions that are conventionalized in their grammar. In order to accommodate these differences, we use a typological lattice of annotation values, constructed based on the structure of the annotation categories across languages (Van Gysel et al. 2019).
+But, `Full`, `Partial`, and `Neutral` aren’t the only possible modal strength annotation values. Languages differ in the modal strength distinctions that are conventionalized in their grammar. In order to accommodate these differences, we use a typological lattice of annotation values, constructed based on the structure of the annotation categories across languages (Van Gysel et al. 2019).
 
 One level of granularity in the lattice is designated as the “base
 level”: annotators are encouraged to use categories from this level as
 the default. These values are selected as the base level because these
-distinctions occur the most frequently across languages. The higher and lower levels, respectively, contain equally typologically-motivated coarser-grained and finer-grained categories, which can be used when a language conventionalizes these distinctions in its grammar. Such lattices capture the idea that many semantic categories are structured as hierarchical scales, where the middle values can group together with either end, but the extremes of the scale are highly unlikely to be categorized together in any language. For example, no language has a grammatical form that is used for both Full and Neutral epistemic strength, but not Partial. The typological lattice for epistemic strength is shown below.
+distinctions occur the most frequently across languages. The higher and lower levels, respectively, contain equally typologically-motivated coarser-grained and finer-grained categories, which can be used when a language conventionalizes these distinctions in its grammar. Such lattices capture the idea that many semantic categories are structured as hierarchical scales, where the middle values can group together with either end, but the extremes of the scale are highly unlikely to be categorized together in any language. For example, no language has a grammatical form that is used for both `Full` and `Neutral` epistemic strength, but not `Partial`. The typological lattice for epistemic strength is shown below.
 
 ![Modal strength lattice](modal-lattice.png)
 
-This lattice is based around the base level of Full vs. Partial vs.
-Neutral, but also allows for the annotation of more coarse-grained
+This lattice is based around the base level of `Full` vs. `Partial` vs.
+`Neutral`, but also allows for the annotation of more coarse-grained
 values that lump together the distinctions in the base level, and more
-fine-grained annotation values. For contexts where it is unclear if the modal strength is Full or Partial, the Non-neutral value can be used; if it is unclear whether the modal strength is Partial or Neutral, then the Non-full value can be used. The most fine-grained modal strength values are generally used with languages that have grammatical forms that encode the relevant distinction.
+fine-grained annotation values. For contexts where it is unclear if the modal strength is `Full` or `Partial`, the `Non-neutral` value can be used; if it is unclear whether the modal strength is `Partial` or `Neutral`, then the `Non-full` value can be used. The most fine-grained modal strength values are generally used with languages that have grammatical forms that encode the relevant distinction.
 
-Also following FactBank (Pustejovsky et al. 2006), the ```modstr```
-annotation combines the epistemic strength values with a binary polarity distinction (Affirmative, Negative). This results in six modal strength/polarity values for the default level, shown below.
+Also following FactBank (Pustejovsky et al. 2006), the `modstr`
+annotation combines the epistemic strength values with a binary polarity distinction (`Affirmative`, `Negative`). This results in six modal strength/polarity values for the default level, shown below.
 
 <div>
 
@@ -4789,20 +4784,20 @@ These values and their interpretation are shown below; the corresponding FactBan
 ```Neg```: full negative support; complete certainty that the event does not occur (CT-)
 
 Degree of certainty corresponds most straightforwardly to the degree of confidence of a conceiver (often, the author) in the occurrence of an episodic event, i.e. the epistemic continuum from certainty to
-possibility. We use these same values for the evidential continuum from direct evidence to second-hand (reported or inferred) evidence; see [\[evidentialjust\]](#evidentialjust) below. And these values are
+possibility. We use these same values for the evidential continuum from direct evidence to second-hand (reported or inferred) evidence; see [Part 4-3-1-1-2](#part-4-3-1-1-2-evidential-justification) below. And these values are
 interpreted into the domain of future-oriented or deontic modality, as
-explained in [\[futureevents\]](#futureevents). The interpretation of
+explained in [Part 4-3-1-1-3](#part-4-3-1-1-3-future-events-and-deontic-modality). The interpretation of
 the value - as epistemic, evidential or deontic - is not reflected in
 the modal strength annotation.
 
 ##### Part 4-3-1-1-1. Non-future events
 
-For non-future (non-deontic) events, the ```modstr``` values correspond to the author’s level of certainty towards the occurrence of the event in the real world. Events presented as fact are annotated with
-```Aff```, while events for which the author categorically denies their occurrence are annotated ```Neg```. When the author doesn’t present the
+For non-future (non-deontic) events, the `modstr` values correspond to the author’s level of certainty towards the occurrence of the event in the real world. Events presented as fact are annotated with
+`Aff`, while events for which the author categorically denies their occurrence are annotated `Neg`. When the author doesn’t present the
 event as fact, but has a higher level of certainty towards the event
 either being true or not true, this is annotated as
-```Prt``` or, when the polarity is negative, ```PrtNeg```. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as ```Neut``` or
-```NeutNeg```, depending on the polarity of the
+`Prt` or, when the polarity is negative, `PrtNeg`. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as `Neut` or
+`NeutNeg`, depending on the polarity of the
 linguistic expression. These strength values are exemplified in
 ([\[4-3-1-1-1 (1)\]](#4-3-1-1-1 (1))).
 
@@ -4862,20 +4857,19 @@ Example [\[4-3-1-1-2 (1)\]](#4-3-1-1-2 (1)) shows how direct and indirect justif
 	modstr: Prt) 
 ```
 
-In [\[4-3-1-1-2 (1a)\]](#4-3-1-1-2 (1a)), the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with ```Aff``` modal strength. In
-[\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)), however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)) is annotated with ```Prt``` modal strength.
+In [\[4-3-1-1-2 (1a)\]](#4-3-1-1-2 (1a)), the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)), however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)) is annotated with `Prt` modal strength.
 
 ##### Part 4-3-1-1-3. Future events and deontic modality
 
 For events presented as (potentially) happening in the future,
-```modstr``` refers to the predictability of
+`:modstr` refers to the predictability of
 the occurrence of the event in the future, as presented by the author.
-Predictive future has full strength (```Aff```
-or ```Neg```); intentions and commands
-correspond to partial strength (```Prt``` or
-```NegPrt```); and desire and permission
-correspond to neutral (```Neut``` or
-```NeutNeg```) strength. Keep in mind that events under the scope of modals identified as their own event don't receive any ```modstr``` value at all. This section refers to deontic meanings indicated by grammaticalized modals that don't fit the criteria to be identified as events.
+Predictive future has full strength (`Aff`
+or `Neg`); intentions and commands
+correspond to partial strength (`Prt` or
+`NegPrt`); and desire and permission
+correspond to neutral (`Neut` or
+`NeutNeg`) strength. Keep in mind that events under the scope of modals identified as their own event don't receive any `:modstr` value at all. This section refers to deontic meanings indicated by grammaticalized modals that don't fit the criteria to be identified as events.
 
 This is illustrated in ([\[4-3-1-1-3 (1)\]](#4-3-1-1-3 (1))).
 
@@ -4893,7 +4887,7 @@ This is illustrated in ([\[4-3-1-1-3 (1)\]](#4-3-1-1-3 (1))).
 	modstr: Prt)  
 ```
 
-<span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">\[4-3-1-1-3 (1c)\]</span> You can go to Santa Fe.  
+<span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">\[4-3-1-1-3 (1c)\]</span> You can **go** to Santa Fe.  
 ```
 (g / go  
 	modstr: Neut)  
@@ -4906,12 +4900,12 @@ in [\[4-3-1-1-3 (1b)\]](#4-3-1-1-3 (1b)), are annotated with partial modal stren
 because they present the future event as less likely than the predictive
 future, but more likely to happen than the neutral strength deontics.
 Finally, permission, as in [\[4-3-1-1-3 (1c)\]](#4-3-1-1-3 (1c)), is annotated as
-neutral strength.
+neutral strength, since even if someone has permission to do something, there is no guarantee they will.
 
-##### Part 4-3-1-2. ```mod``` relation
+##### Part 4-3-1-2. `:mod` relation
 
 Events under the scope of a modal identified as its own event are only
-annotated with a ```mod``` relation to the
+annotated with a `:mod` relation to the
 relevant modal. This is shown below in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)).
 
 <span id="4-3-1-2 (1)" label="4-3-1-2 (1)">\[4-3-1-2 (1)\]</span>
@@ -4953,19 +4947,18 @@ the dog **escaped** through the fence.
 ```
 
 Note that the modal itself is annotated with a
-```modstr``` value (if it is not under the
+`:modstr` value (if it is not under the
 scope of another modal). The actual modal value imparted by the modal
 event is not annotated at Stage 1.
 
-##### Part 4-3-1-3. ```quot``` relation
+##### Part 4-3-1-3. `:quot` relation
 
 Events under the scope of a reporting predicate or a speech predicate
-are annotated with a ```quot``` relation to the
+are annotated with a `:quot` relation to the
 reporting or speech predicate. Unlike events under the scope of modals,
 these events are also annotated with a
-```modstr``` value.
-
-
+`:modstr` value.
+vh 
 <span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span>
 
 <span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span> Mary <u>**said**</u>
@@ -5029,31 +5022,30 @@ that John <u>probably didn’t</u> **go** to Santa Fe.
 ```
 
 As can be seen above, both the reporting predicate and the reported
-events are annotated with a ```modstr``` value.
-The ```modstr``` value of the reporting
+events are annotated with a `:modstr` value.
+The `:modstr` value of the reporting
 predicate corresponds to the author’s certainty that the reporting event
-happened. The ```modstr``` value associated
+happened. The `:modstr` value associated
 with the reported events corresponds to the certainty with which the
 sayer/reporter reports the events. For example, in
 [\[4-3-1-3 (1d)\]](#4-3-1-3 (1d)), the author is certain about the saying event,
-so it is annotated with ```Aff```; but Mary is
+so it is annotated with `Aff`; but Mary is
 unsure about the reality of the going event, and therefore it is
-annotated with ```Neut``` modal strength.
+annotated with `Neut` modal strength.
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-4. ```purp``` relation
+##### Part 4-3-1-4. `:purpose` relation
 
 Events in purpose clauses are annotated with both a
-```modstr``` value and ```purp``` relation to the main clause event.
+`:modstr` value in the document-level annotation, and with the `:purpose` participant role relation to the main clause event in the sentence-level annotation.
 
 
 <span id="4-3-1-4 (1)" label="4-3-1-4 (1)">\[4-3-1-4 (1)\]</span>
 They **dropped** water <u>in order to</u> **fight** the fire.
 ```
 (d / drop  
-	(f / fight  
-		purp: d  
+	:purpose (f / fight 
 		modstr: Aff)  
 	modstr: Aff) 
 ```
@@ -5062,60 +5054,59 @@ They **dropped** water <u>in order to</u> **fight** the fire.
 He **walked** quickly <u>in order to</u> not **arrive** late.
 ```
 (w / walked  
-	(a / arrive  
-		purp: w  
+	:purpose (a / arrive   
 		modstr: Neg)  
 	modstr: Aff)  
 ```
 
-The ```modstr``` value represents any modals or
+The `:modstr` value represents any modals or
 negation that are present within the purpose clause. That is, this value
 doesn’t capture the fact that the purpose clause itself imparts a
 non-full epistemic stance on its events; that is captured by the
-```purp``` relation.
+`:purpose` relation.
 
-##### Part 4-3-1-5. ```cond``` relation
+##### Part 4-3-1-5. `:condition` relation
 
-The ```cond``` relation indicates the relationship between events in conditional constructions. These events
-also receive a ```modstr``` annotation. As can
-be seen in [\[4-3-1-5 (1)\]](#4-3-1-5 (1)), the event in the apodasis is annotated with a ```cond``` relation to the event in the
-protasis.
+The `:condition` relation in the sentence-level annotation indicates the relationship between events in conditional constructions. These events
+also receive a `:modstr` annotation. As can
+be seen in [\[4-3-1-5 (1)\]](#4-3-1-5 (1)), the event in the protasis is annotated with a `:condition` relation to the event in the
+apodosis.
 
 <span id="4-3-1-5 (1)" label="4-3-1-5 (1)">\[4-3-1-5 (1)\]</span>
 
 <span id="4-3-1-5 (1a)" label="4-3-1-5 (1a)">\[4-3-1-5 (1a)\]</span> If she’s **hungry**, I’ll **feed** her dinner.
 ```
-(h / have-mod-91  
-	modstr: Aff)  
 (f / feed  
-	modstr: Aff  
-	:cond h)
+	  
+	:condition (h / have-mod-91
+		modstr: Aff)
+	modstr: Aff)
 ```
 
 <span id="4-3-1-5 (1b)" label="4-3-1-5 (1b)">\[4-3-1-5 (1b)\]</span> If she’s **hungry**, maybe I’ll **cook** pasta.
 ```
-(h / have-mod-91  
-	modstr: Aff)  
-(f / feed  
-	modstr: Prt  
-	:cond h)
+(c / cook  
+	:condition (h / have-mod-91
+		modstr Aff)
+	modstr: Prt)
 ```
 
 <span id="4-3-1-5 (1c)" label="4-3-1-5 (1c)">\[4-3-1-5 (1c)\]</span> If she **isn’t hungry**, we’ll just **watch** a movie.
 ```
 (h / have-mod-91  
 	modstr: Neg)  
-(f / feed  
-	modstr: Aff 
-	:cond h)  
+(w / watch
+	:condition (h / have-mod-91
+		modstr: Neg)
+	modstr: Aff)  
 ```
 
-As with purpose clauses, the ```modstr``` value
+As with purpose clauses, the `:modstr` value
 doesn’t capture the uncertainty imparted by the conditional construction
 itself; it corresponds to any negation or modals which are expressed
 inside of the conditional construction. The modal value of the
 conditional construction is captured by the
-```cond``` value.
+`cond` value.
 
 [Back to Table of Contents](#toc)
 
@@ -5126,7 +5117,7 @@ are unspecified. The modal strength that a modal verb imparts on its
 complement is one of these pieces. As the modal annotation progresses,
 this information is added to the frame files for modal verbs. For
 example, the complements of English *want* have a
-```Neut``` ```modstr``` value; this will be indicated
+`:modstr Neut` value; this will be indicated
 in the frame file as shown below.
 
 ```
@@ -5138,50 +5129,50 @@ Predicate: want.01
 	Arg3: in-exchange-for  
 	Arg4: from 
 
-modstr of complement: Neut  
+:modstr of complement: Neut  
 ```
 
-For the complements of modals, the ```modstr```
+For the complements of modals, the `:modstr`
 values work largely the same way that they do for other events; however,
 they reflect the beliefs of the
-```experiencer``` participant of the modal
+`:experiencer` participant of the modal
 event, who is often not the author. For example, in
 [\[4-3-1-6 (1)\]](#4-3-1-6 (1)), Mary believes that the visit event may take
-place in the future (```Neut``` strength), but
+place in the future (`Neut` strength), but
 the author disagrees.
 
 <span id="4-3-1-6 (1)" label="4-3-1-6 (1)">\[4-3-1-6 (1)\]</span> Mary wants
 to visit France next month, but I don’t think that’s possible.
 
 The value associated with the modal event in its frame file corresponds
-to Mary’s beliefs, as the ```experiencer``` of
+to Mary’s beliefs, as the `:experiencer` of
 the wanting event.
 
 Some predicates impart full, positive
-(```Aff```) strength on their complements,
+(`Aff`) strength on their complements,
 often called factive predicates (e.g., *manage to*). Strong epistemic
 modals (e.g., *expect that, deduce*) and strong deontic modals,
 including intention modals (e.g., *plan to, decide to*) and obligation
-modals (e.g., *need, demand*), impart ```Prt```
+modals (e.g., *need, demand*), impart `Prt`
 strength on their complements. Weak deontic modals, including desire
 (e.g., *want*) and permission (e.g., *allow*), impart
-```Neut``` strength on their complements.
+`Neut` strength on their complements.
 Certain modals may also lexicalize negation, such as *doubt*, *forbid*,
 or *wish*. These are annotated with the
-```NeutNeg```,
-```PrtNeg```, and
-```Neg``` values, respectively.
+`NeutNeg`,
+`PrtNeg`, and
+`Neg` values, respectively.
 
 #### Part 4-3-2. English modals
 
 This list gives the modal strength value associated with common English
 modal constructions (this is certaintly not an exhaustive list). For
 modal predicates that are identified as their own event (e.g.,
-deontic predicates), the modal strength value characterizes the dependency link between the modal predicate node and its child event. For example, *want* is in the ```Neut``` list, which indicates that there
-is a ```Neut``` link between the ```want``` node and its
+deontic predicates), the modal strength value characterizes the dependency link between the modal predicate node and its child event. For example, *want* is in the `Neut` list, which indicates that there
+is a `Neut` link between the `want` node and its
 complement event node in the full dependency structure.   
 
-```Aff``` (full affirmative)
+`Aff` (full affirmative)
 
   - Simple assertions: declarative sentences
 
@@ -5191,7 +5182,7 @@ complement event node in the full dependency structure.
 
   - Factual predicates: *manage to, finished*
 
-```Prt``` (partial affirmative)
+`Prt` (partial affirmative)
 
   - Strong epistemic modals: *must/must have, have to, expect that,
     deduce*
@@ -5210,7 +5201,7 @@ complement event node in the full dependency structure.
       - Purpose clauses/purposive event nominals: *(in order) to* VERB,
         *for* EVENT.NOM
 
-```Neut``` (neutral affirmative)
+`Neut` (neutral affirmative)
 
   - Weak epistemic modals: *may, might/might have, could have*
 
@@ -5227,14 +5218,14 @@ complement event node in the full dependency structure.
     
       - Permission: *let, permit, allow*
 
-```NeutNeg``` (neutral negative)
+`NeutNeg` (neutral negative)
 
   - Doubt: *doubt, call into question, be dubious that, be skeptical
     that*
 
   - Combination of (some) <span>Neut</span> lexical items with negation
 
-```PrtNeg``` (partial negative)
+`PrtNeg` (partial negative)
 
   - Strong negative deontics: *forbid, ban, disallow*
 
@@ -5242,7 +5233,7 @@ complement event node in the full dependency structure.
 
   - Combination of (some) <span>Prt</span> lexical items with negation
 
-```Neg``` (full negative)
+`Neg` (full negative)
 
   - Negation: *not, never, no* + noun phrase
 
@@ -5258,51 +5249,51 @@ complement event node in the full dependency structure.
  
  * Sentence-level Annotation
  	* Choose the **top node** of the graph for the sentence you are annotating.
- 		* If the sentence contains **one main event** (typically a lexical verb), **annotate it** as the **top of the graph** (see 3-1-3 on how to decide what counts as one event).
+ 		* If the sentence contains **one main event** (typically a lexical verb), **annotate it** as the **top of the graph** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) and [Part 3-1-3](#part-3-1-3-concept-word-mismatches) on how to decide what counts as one event).
  		* If the sentence contains **multiple events** expressed in multiple clauses, decide what the top node is **based on the logical relation** between the events:
- 			* If they are **coordinated**, choose the **relevant coordinator** (_and_, _or_, _contrast-01_, _either_, _neither_) as the top node (3-1-6).
+ 			* If they are **coordinated**, choose the **relevant coordinator** as the top node (see [Part 3-1-6](#part-3-1-6-discourse-relations)).
 			* If one event is a **subevent** of the other, choose _have-subevent-91_ as the top node.
  			* If one event is an **argument**, **circumstantial participant**, or **adverbial** in the other, choose the **main event** as the top node.
- 		* If the sentence contains a **"non-verbal clause"** concept, choose the relevant **non-verbal clause predicate** as the top node (3-1-1-3, 3-1-3-5).
+ 		* If the sentence contains a **"non-verbal clause"** concept, choose the relevant **non-verbal clause predicate** as the top node (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities), [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)).
  	* Annotate the **participants** of the top node.
  		* Select the correct **role/relation**:
- 			* If the top node is an **abstract concept predicate**, use **numbered argument roles** or **:opX** roles (3-2-1-1-1 for non-verbal clause predicates, 3-1-6 for discourse relations).
- 			* If the top node is a **sense-disambiguated lexicalized concept** with frame files, use the relevant **numbered argument roles** (3-1-4).
- 			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** (3-2-1-1).
- 			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (3-2-1-1).
- 		* Select the correct **concept** (3-1-3 for identification of participants expressed as part of the same word of the event):
+ 			* If the top node is an **abstract concept predicate**, use **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
+ 			* If the top node is a **sense-disambiguated lexicalized concept** with frame files, use the relevant **numbered argument roles** (see [Part 3-1-4](#part-3-1-4-word-senses)).
+ 			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** ([Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+ 			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+ 		* Select the correct **concept** (see [Part 3-1-3](#part-3-1-3-concept-word-mismatches) for identification of participants expressed as part of the same word of the event):
  			* If the participant is overtly expressed as a **nominal**, add the **nominal word from the sentence** to the graph.
  			* If the participant is overtly expressed as a **verb** (e.g. complement clause, adverbial), add the **verbal word from the sentence** to the graph.
- 			* If the participant is expressed **pronominally**, is **impersonal**, is a **proper noun**, or is **not expressed overtly**, add the correct **named entity concept label** (e.g. _person_, _thing_, _river_ etc.) to the graph (3-1-2).
+ 			* If the participant is expressed **pronominally**, is **impersonal**, is a **proper noun**, or is **not expressed overtly**, add the correct **named entity concept label** (e.g. _person_, _thing_, _river_ etc.) to the graph ([Part 3-1-2](#part-3-1-2-named-entities)).
  			* If the participant is expressed as a **participant nominalization**, choose either of the following options:
  				* Add the word **directly from the sentence**.
- 				* Add the correct **named entity concept label** to the graph and modify it with an **inverse argument role** to the relevant event concept (3-2-1-3).
+ 				* Add the correct **named entity concept label** to the graph and modify it with an **inverse argument role** to the relevant event concept (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* **Repeat** these steps for every node you have added that corresponds to an **event concept**.
  	* Annote the **modifiers** of each participant.
- 		* If a participant is modified by a **property concept**, annotate it with an **inverse numbered participant role** to the _have-mod-91_ predicate, and complete the argument structure of this predicate (3-2-1-1-1, 3-2-1-3).
- 		* If a participant is modified by an **event concept** (e.g. relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (3-2-1-3).
+ 		* If a participant is modified by a **property concept**, annotate it with an **inverse numbered participant role** to the _have-mod-91_ predicate, and complete the argument structure of this predicate (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 		* If a participant is modified by an **event concept** (e.g. relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by an **object concept**:
- 			* Annotate it with the _:mod_ relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (3-2-2).
- 			* Annotate it with the _:poss_, _:part-of_, or _:ARG0-of (k/ kinship-91)_ relations if it is an **anchoring modifier** (3-2-2, 3-2-1-3).
- 		* If a participant is modified by a **quantifier**, annotate it with the _:quant_ relation or otherwise follow the guidelines for quantification (3-1-5, 3-2-2, 3-3-4).
- 		* If a participant is a **named entity**, apply the _:name_ and _:wiki_ relations to the appropriate named entity category concept node (3-1-2).
+ 			* Annotate it with the _:mod_ relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
+ 			* Annotate it with the _:poss_, _:part-of_, or _:ARG0-of (k/ kinship-91)_ relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 		* If a participant is modified by a **quantifier**, annotate it with the _:quant_ relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
+ 		* If a participant is a **named entity**, apply the _:name_ and _:wiki_ relations to the appropriate named entity category concept node (see [Part 3-1-2](#part-3-1-2-named-entities)).
  	* Annotate **attributes** of participants and events.
- 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a _:ref-number_ attribute with the relevant value (3-3-5).
- 		* Give "person" nodes from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:ref-person_ attribute with the relevant value (3-3-5).
- 		* Give concepts identified as **events** (3-1-1 for Event ID guidelines), an _:aspect_ attribute with the relevant value (3-3-1).
- 		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a _:mode_ attribute with the relevant value (3-3-2).
- 		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a _:polarity_ attribute with the relevant value (3-3-3).
- 		* Give concepts that are modified with a **downtoner** or **intensifier** a _:degree_ attribute with the relevant value (3-3-6).
+ 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a _:ref-number_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give "person" nodes from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:ref-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines), an _:aspect_ attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
+ 		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a _:mode_ attribute with the relevant value (see [Part 3-3-2](#part-3-3-2-mode)).
+ 		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a _:polarity_ attribute with the relevant value (see [Part 3-3-3](#part-3-3-3-polarity)).
+ 		* Give concepts that are modified with a **downtoner** or **intensifier** a _:degree_ attribute with the relevant value ([Part 3-3-6](#part-3-3-6-degree)).
  
  * Document-level Annotation
  	* For any **event concept** or **object concept**:
  		* Assess whether it is **co-referential** with, or a **subset/subevent** of, a previously mentioned event or object concept.
- 		* If so, choose the relevant **co-reference relation**, with the previous mention as the head and the current mention as the child (4-1).
- 	* Give every concept **identified as an event** (3-1-1 for Event ID guidelines) a **modal annotation**, except for purpose clauses, conditionals, and concessives (4-3).
+ 		* If so, choose the relevant **co-reference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
+ 	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) a **modal annotation**, except for purpose clauses, conditionals, and concessives (see [Part 4-3](#part-4-3-modal-dependency)).
  		* Give events **under the scope of a modal event** (e.g. a wanting-event) a _:modal_ relation with the space-building complement-taking predicate as the parent.
  		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
  		* Give **all other events** a _:modstr_ annotation with the relevant strength.
- 	* Give every concept **identified as an event** (3-1-1 for Event ID guidelines) and each **time expression** in the text a temporal annotation (4-2).
+ 	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
 
  ## Part 5: Integrated examples
 
