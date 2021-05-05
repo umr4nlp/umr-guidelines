@@ -387,10 +387,10 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 **UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
 
 * Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
-* Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word `taste`
+* Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word *taste*
 * Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a language-by-language basis.
 * Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
-* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not corrrespond with any particular word in the sentence, hence it is an `abstract` concept.
+* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond with any particular word in the sentence, hence it is an *abstract* concept.
 
 **UMR relations:** There are also a number of ways relations between concepts are created:
 
