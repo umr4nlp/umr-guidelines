@@ -66,10 +66,15 @@
     	* Part 4-1-1. [Entity coreference](#part-4-1-1-entity-coreference)
     	* Part 4-1-2  [Event coreference](#part-4-1-2-event-coreference)
     * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
-    	* Part 4-2-1. [Temporal relations](#part-4-2-1-temporal-relations)
-    		* Part 4-2-1-1. [Contained or Overlap](#part-4-2-1-1-contained-or-overlap)
-    		* Part 4-2-1-2. [Causally-related events](#part-4-2-1-2-causally-related-events)
-    		* Part 4-2-1-3. [Deontic modal events](#part-4-2-1-3-deontic-modal-events)  
+    	* Part 4-2-1. [Temporal superstructure](#part-4-2-1-temporal-superstructure)
+    		* Part 4-2-1-1. [Pre-defined Metanodes](#part-4-2-1-1-pre-defined-metanodes)
+    		* Part 4-2-1-2. [Time expressions](#part-4-2-1-2-time-expressions)
+    		* Part 4-2-1-3. [Key events](#part-4-2-1-3-key-events)
+    	* Part 4-2-2. [Temporal relations](#part-4-2-2-temporal-relations)
+    		* Part 4-2-2-1. [Choosing the right temporal relation](#part-4-2-2-1-choosing-the-right-temporal-relation)
+    		* Part 4-2-2-2. [Contained or Overlap](#part-4-2-2-2-contained-or-overlap)
+    		* Part 4-2-2-3. [Causally-related events](#part-4-2-2-3-causally-related-events)
+    		* Part 4-2-2-4. [Deontic modal events](#part-4-2-2-4-deontic-modal-events)  
     * Part 4-3. [Modality dependency](#part-4-3-modal-dependency) 
     	* Part 4-3-1. [Stage 1](#part-4-3-1-stage-1) 
     		* Part 4-3-1-1. [```modstr``` values](#part-4-3-1-1-modstr-values)
@@ -4610,7 +4615,7 @@ below.
 | stop      | Pos(stop,say)      | Overlap(stop,rain)                 |
 | come-out  | Pos(come-out,say)  | Overlap(come-out,stop)             |
 
-##### Part 4-2-1-2. Contained or Overlap
+##### Part 4-2-2-2. Contained or Overlap
 
 Following the definition of the `:contained` and the
 `:overlap` relations, `:overlap` must be used rather
@@ -4622,7 +4627,7 @@ temporal duration of a second event - this includes subevent structure
 and also events which have a purely temporal (and not causal or
 conceptual) relation between them.
 
-##### Part 4-2-1-3. Causally-related events
+##### Part 4-2-2-3. Causally-related events
 
 Causal relations between events are always annotated as
 `:after` relations. This means that in examples such as *the
@@ -4635,7 +4640,7 @@ annotated as following it. Therefore, *the opening of the food can
 prompted my cat to meow* is annotated as `:after(prompt,open)`
 and `:after(meow,prompt)`.
 
-##### Part 4-2-1-4. Deontic modal events
+##### Part 4-2-2-4. Deontic modal events
 
 For deontics and purpose clauses, the deontic or purpose complement
 (e.g., *go* in *Mary wants to go*) is annotated with with an
