@@ -401,7 +401,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 
 * Aspect: Aspect is annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1](#part-3-3-1-aspect). 
 * Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation (see [Part 3-3-3](#part-3-3-3-polarity)).
-* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative` and `interrogative` (see [Part 3-3-2](#part-3-3-2-mode)).
+* Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative`, `expressive`, and `interrogative` (see [Part 3-3-2](#part-3-3-2-mode)).
 * Quantity: The value of a `:quant` attribute is a numerical number (see [Part 3-3-4](#part-3-3-4-quant)).
 * Value: The value of a `:value` attribute is a numerical number (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
 * Degree: The value of a `:degree` attribute is either `intensifier` or `downtoner` (see [Part 3-3-6](#part-3-3-6-degree)).
