@@ -405,7 +405,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 * Quantity: The value of a `:quant` attribute is a numerical number (see [Part 3-3-4](#part-3-3-4-quant)).
 * Value: The value of a `:value` attribute is a numerical number (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
 * Degree: The value of a `:degree` attribute is either `intensifier` or `downtoner` (see [Part 3-3-6](#part-3-3-6-degree)).
-* Reference: The value of a `:ref` attribute is a *bundle* of person and number feature used to represent reference. The bundle of features is used to represent pronouns (e.g., `1s`, `2pl`, see [Part 3-3-5](#part-3-3-5-ref)).
+* Reference: The value of a `:ref-person` or `:ref-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`) or a number feature (e.g. `Singular`, `Dual`, `Paucal`, `Plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
 
 **Differences between AMR and UMR**
 
