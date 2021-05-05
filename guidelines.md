@@ -67,7 +67,7 @@
     	* Part 4-1-2  [Event coreference](#part-4-1-2-event-coreference)
     * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
     	* Part 4-2-1. [Temporal superstructure](#part-4-2-1-temporal-superstructure)
-    		* Part 4-2-1-1. [Pre-defined Metanodes](#part-4-2-1-1-pre-defined-metanodes)
+    		* Part 4-2-1-1. [Pre-defined metanodes](#part-4-2-1-1-pre-defined-metanodes)
     		* Part 4-2-1-2. [Time expressions](#part-4-2-1-2-time-expressions)
     		* Part 4-2-1-3. [Key events](#part-4-2-1-3-key-events)
     	* Part 4-2-2. [Temporal relations](#part-4-2-2-temporal-relations)
@@ -75,16 +75,16 @@
     		* Part 4-2-2-2. [Contained or Overlap](#part-4-2-2-2-contained-or-overlap)
     		* Part 4-2-2-3. [Causally-related events](#part-4-2-2-3-causally-related-events)
     		* Part 4-2-2-4. [Deontic modal events](#part-4-2-2-4-deontic-modal-events)  
-    * Part 4-3. [Modality dependency](#part-4-3-modal-dependency) 
+    * Part 4-3. [Modal dependency](#part-4-3-modal-dependency) 
     	* Part 4-3-1. [Stage 1](#part-4-3-1-stage-1) 
-    		* Part 4-3-1-1. [```modstr``` values](#part-4-3-1-1-modstr-values)
+    		* Part 4-3-1-1. [`:modstr` values](#part-4-3-1-1-modstr-values)
     			* Part 4-3-1-1-1. [Non-future events](#part-4-3-1-1-1-non-future-events)
     			* Part 4-3-1-1-2. [Evidential justification](#part-4-3-1-1-2-evidential-justification)
     			* Part 4-3-1-1-3. [Future events and deontic modality](#part-4-3-1-1-3-future-events-and-deontic-modality)
-    		* Part 4-3-1-2. [```mod``` relation](#part-4-3-1-2-mod-relation)
-    		* Part 4-3-1-3. [```quot``` relation](#part-4-3-1-3-quot-relation)
-    		* Part 4-3-1-4. [```purp``` relation](#part-4-3-1-4-purp-relation)
-    		* Part 4-3-1-5. [```cond``` relation](#part-4-3-1-5-cond-relation)
+    		* Part 4-3-1-2. [`:mod` relation](#part-4-3-1-2-:mod-relation)
+    		* Part 4-3-1-3. [`:quot` relation](#part-4-3-1-3-:quot-relation)
+    		* Part 4-3-1-4. [`:purpose` relation](#part-4-3-1-4-:purpose-relation)
+    		* Part 4-3-1-5. [`:conditional` relation](#part-4-3-1-5-:conditional-relation)
     		* Part 4-3-1-6. [Modal dependency structure](#part-4-3-1-6-modal-dependency-structure)
     	* Part 4-3-2. [English modals](#part-4-3-2-english-modals)  
 
@@ -4726,7 +4726,7 @@ All other events: `modstr` annotation
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-1. `modstr` values
+##### Part 4-3-1-1. `:modstr` values
 
 The modal strength values correspond to epistemic strength, i.e. the
 author or conceiver’s certainty about the occurrence of the event in the real world, or certainty about another conceiver’s mental content. Based on Boye (2012), a typological study of modal systems across languages, and following FactBank (Pustejovsky et al. 2005), the UMR annotation is based around three levels of modal strength: `Full`, `Partial`, and `Neutral`, illustrated in [\[4-3-1-1 (1)\]](#4-3-1-1 (1)).
