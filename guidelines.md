@@ -90,7 +90,7 @@
 
 * Part 5. [Annotation Cheat Sheet](#part-5-annotation-cheat-sheet)
     
-* Part 6. Integrated examples
+* Part 6. [Integrated examples](#part-6-integrated-examples)
 
 * Part 7. [Alphabetical Index of UMR Annotation Categories](#part-7-alphabetical-index-of-UMR-annotation-categories)
 
@@ -5297,7 +5297,7 @@ complement event node in the full dependency structure.
  		* Give **all other events** a _:modstr_ annotation with the relevant strength.
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
 
- ## Part 5: Integrated examples
+ ## Part 6: Integrated examples
 
 PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
 
