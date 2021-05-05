@@ -413,7 +413,7 @@ UMR differs from AMR in a number of ways:
 
 * UMR is a document-level representation that represents *coreference*, *temporal dependencies*, and *modal dependencies*.
 
-* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`) - see the AMR and the UMR for `The boy can go` in [\[2 (2a)\]](#2 (2a)) and [\[2 (2b)\]](#2 (2b)), respectively.
+* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`) - see the AMR and the UMR for *The boy can go* in [\[2 (2a)\]](#2 (2a)) and [\[2 (2b)\]](#2 (2b)), respectively.
 
 <span id="2 (2a)" label="2 (2a)">\[2 (2a)\]</span>
 
@@ -434,7 +434,7 @@ UMR differs from AMR in a number of ways:
 
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
 * UMR allows the use of non-predicate-specific participant roles for languages that do not have *frame files* with lexicalized argument structure information. See [Part 3-2-1](#part-3-2-1-participant-roles) for details.
-* UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) for details.
+* UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) and [Part 3-3-5](#part-3-3-5-ref) for details.
 
 [Back to Table of Contents](#toc)
 
@@ -481,7 +481,7 @@ modifiers, and various other kinds of "non-verbal predicates" (see
 sense-disambiguated predicates from PropBank, such as the one presented below for English _taste_ are used to label predicate
 nodes. Since for most languages, no equivalent of PropBank is available,
 we recommend labelling nodes with a citation form of the verb
-supplemented with a -00 suffix. In this way, annotations can be used for
+supplemented with a `-00` suffix. In this way, annotations can be used for
 the development of digital lexicons in the future.
 
 ```
