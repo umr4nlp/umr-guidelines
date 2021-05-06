@@ -1509,15 +1509,16 @@ whether a languages uses an overt-predicate strategy, a zero-predicate
 
 
 <div id="tab:nonverbal_arguments">
-|     Clause Type      |              Predicate               |           ARG0          |         ARG1         |
-| :-------: | :----------------------------------: | :------------------------------: | :-------------------------: |
-| Thetic Possession  |         have-03         |      possessor       |     possessum      |
-|  Predicative Possession   |            belong-01             |       possessum       | possessor |
-|     Thetic Location      |     exist-91    |       location        |      theme      |
-| Predicative Location  |         have-location-91         |      theme       |     location      |
-| Property Predication  |         have-mod-91         |      theme       |     property      |
-| Object Predication  |         have-role-91         |      theme       |     object category      |
-| Equational  |         identity-91         |      theme       |     equated referent      |
+	
+| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         |
+| :--------------------- | :--------------- | :-------- | :--------------- |
+| Thetic Possession      | have-03          | possessor | possessum        |
+| Predicative Possession | belong-01        | possessum | possessor        | 
+| Thetic Location        | exist-91         | location  | theme            |
+| Predicative Location   | have-location-91 | theme     | location         |
+| Property Predication   | have-mod-91      | theme     | property         |
+| Object Predication     | have-role-91     | theme     | object category  |
+| Equational             | identity-91      | theme     | equated referent |
 
 Table 8: Argument structure of non-verbal clause predicates
 </div>
