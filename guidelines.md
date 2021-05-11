@@ -1,4 +1,4 @@
-# Uniform Meaning Representation (UMR) 0.1 Specification
+# Uniform Meaning Representation (UMR) 0.8 Specification
 =======================================================
 
 **April 17, 2021**
