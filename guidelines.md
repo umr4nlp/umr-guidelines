@@ -699,7 +699,7 @@ annotate a wide range of meanings. Many of them, such as `:medium`,
 `:topic`, and `:mod` (the latter of which is illustrated in [\[2-2-3 (2b)\]](#2-2-3 (2b))) are used to
 annotate modifiers of referring expressions. Other relations are used
 with specific abstract concepts: whenever a `date-entity`
-concept is present, one of the temporal relations `:month`, `:year`, `:date`
+concept is present, one of the temporal relations `:month`, `:year`, `:day`
 etc. will be used, for example. The use of these relations is treated
 more in detail in [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations) of this document.
 
