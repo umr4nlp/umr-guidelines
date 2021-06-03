@@ -395,7 +395,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 **UMR relations:** There are also a number of ways relations between concepts are created:
 
 * Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (sense of the) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3-2-1](#part-3-2-1-participant-roles).
-* Semantic relations: Other UMR relations include `:temporal`, `:org`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations).
+* Semantic relations: Other UMR relations include `:temporal`, `:ord`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations).
 
 **UMR attributes:** UMR currently has seven attribute types:
 
