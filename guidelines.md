@@ -36,10 +36,10 @@
       * Part 3-1-6. [Discourse relations](#part-3-1-6-discourse-relations)
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles)
-      	* Part 3-2-1-1. [Stage 1](#part-3-2-1-1-stage-1) 
+      	* Part 3-2-1-1. [Stage 0](#part-3-2-1-1-stage-0) 
       		* Part 3-2-1-1-1. [Nonverbal clauses](#part-3-2-1-1-1-nonverbal-clauses)
       		* Part 3-2-1-1-2. [Valency alternations](#part-3-2-1-1-2-valency-alternations)
-      	* Part 3-2-1-2. [Stage 2](#part-3-2-1-2-stage-2)
+      	* Part 3-2-1-2. [Stage 1](#part-3-2-1-2-stage-1)
       		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
       	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)   
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-role-UMR-relations)
@@ -76,7 +76,7 @@
     		* Part 4-2-2-3. [Causally-related events](#part-4-2-2-3-causally-related-events)
     		* Part 4-2-2-4. [Deontic modal events](#part-4-2-2-4-deontic-modal-events)  
     * Part 4-3. [Modal dependency](#part-4-3-modal-dependency) 
-    	* Part 4-3-1. [Stage 1](#part-4-3-1-stage-1) 
+    	* Part 4-3-1. [Stage 0](#part-4-3-1-stage-0) 
     		* Part 4-3-1-1. [modstr values](#part-4-3-1-1-modstr-values)
     			* Part 4-3-1-1-1. [Non-future events](#part-4-3-1-1-1-non-future-events)
     			* Part 4-3-1-1-2. [Evidential justification](#part-4-3-1-1-2-evidential-justification)
@@ -114,7 +114,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
          :name (n2 / name :op1 "Edmund" :op2 "Pope"))
   :ARG1 (f / free-04
          :ARG1 p)
-  :time (t3 / today)
+  :temporal (t3 / today)
   :ord (o3 / ordinal-entity :value 1
         :range (m / more-than
                 :op1 (t / temporal-quantity :quant 8
@@ -122,11 +122,11 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
                     
 (s1 / sentence
     :temporal(
-          (s1t3 depends-on DCT) )
+          (s1t3 :TEMP DCT) )
     :modal( (s1t2 :AFF AUTH) ) )
         
 ```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *depends-on*. We will define a set of temporal relations we use in UMR in [Part 3-2](#part-3-2-umr-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is included in *today*.
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *TEMP*. We will define a set of temporal relations we use in UMR in [Part 3-2](#part-3-2-umr-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _contained_ in *today*.
 
 The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant that indicates that the *taste-01* event definitely happened, and is thus positive (as indicated by the *POS* label) from the author's perspective.
 
@@ -144,7 +144,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
             :ARG2 (c / charge-05
                   :ARG1 b2
                   :ARG2 (s2 / spy-01 :ARG0 p))
-            :time (w / week
+            :temporal (w / week
                   :mod (l / last)))
       :ARG1-of (s / sentence-01
             :aspect Performance
@@ -158,7 +158,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 (s2 / sentence
     :temporal(
         (s2s :After s2c4)
-	(s2w :depends-on DCT) )
+	(s2w :TEMP DCT) )
     :modal(
       (s2c4 :AFF AUTH)
       (s2s :AFF AUT)
@@ -254,7 +254,7 @@ Snt6: He will spend the next several days at the medical center there before he 
             :op1 (t / temporal-quantity :quant 1
                   :unit (d / day
                         :mod (n2 / next))))
-      :time (b / before
+      :temporal (b / before
             :op1 (r / return-01
                   :ARG1 h2
                   :ARG4 (h3 / home)
@@ -289,7 +289,7 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
              :ARG1 (d / disease :wiki -
                    :name (n / name :op1 "bone" :op2 "cancer")
                    :ARG1-of (r2 / rare-02))
-             :time (a / arrest-01
+             :temporal (a / arrest-01
 	           :aspect Performance
                    :ARG1 p
                    :location (c / country :wiki "Russia"
@@ -315,7 +315,7 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
                          :ARG1 (d2 / disease :wiki "Cancer"
                                :name (n / name :op1 "cancer"))
                          :direction (b2 / back)
-                         :time (a / await-01
+                         :temporal (a / await-01
                                :ARG1 h
                                :ARG2 (t / try-02
                                      :ARG1 h)
@@ -377,7 +377,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
          :name (n2 / name :op1 "Edmund" :op2 "Pope"))
   :ARG1 (f / free-04
          :ARG1 p)
-  :time (t3 / today)
+  :temporal (t3 / today)
   :ord (o3 / ordinal-entity :value 1
         :range (m / more-than
                 :op1 (t / temporal-quantity :quant 8
@@ -1554,7 +1554,7 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 		        :aspect Habitual
                         :ARG0 i
                         :ARG1 i2)
-                  :time (t3 / then)))
+                  :temporal (t3 / then)))
       :ARG1-of (n / normal-02))
 ```
 
@@ -1758,7 +1758,7 @@ Grab a stick or he will he attack you!
 
 ```Additive```: expresses the addition of one “figure” (foregrounded participant or event) to another one in order to form a complex figure. The additive function has a number of more fine-grained subfunctions:
 
-```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
+```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
 
 ```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In [\[3-1-6 (4b)\]](#3-1-6 (4b)), having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary.
 
@@ -1831,17 +1831,17 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
 
 ```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. More fine-grained sub-functions of the consecutive function are the following:
 
-```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in [\[3-1-6 (5a)\]](#3-1-6 (5a)). This relation is annotated using the `:purpose` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in [\[3-1-6 (5a)\]](#3-1-6 (5a)). This relation is annotated using the `:purpose` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Means```: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in [\[3-1-6 (5b)\]](#3-1-6 (5b)). This relation has also been called “positive circumstantial”. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+```Means```: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in [\[3-1-6 (5b)\]](#3-1-6 (5b)). This relation has also been called “positive circumstantial”. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the `cause-01` predicate or the `:cause` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the `cause-01` predicate or the `:cause` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1), [Part 4-3-1-5](#part-4-3-1-5-cond-relation)).
+```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3-1-5](#part-4-3-1-5-cond-relation)).
 
-```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
+```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
 
-```Posterior```: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in [\[3-1-6 (5f)\]](#3-1-6 (5f)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
+```Posterior```: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in [\[3-1-6 (5f)\]](#3-1-6 (5f)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
 
 <span id="3-1-6 (5a)" label="3-1-6 (5a)">\[3-1-6 (5a)\]</span> I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** defended myself.
 
@@ -1899,9 +1899,9 @@ Vanja	caught_cold	CONJ	went	to	school
 
 There are three subtypes of unexpected co-occurrence relations that confident annotators, or annotators for languages which have overt grammatical mechanisms of disambiguating them, may distinguish:
 
-```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a summersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
+```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a summersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
 
-```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. THe concessive _even though_ specifies that typically when one is broke, one does not buy new guitars. This relation is annotated using the `have-concession-91` predicate or the shortcut `:concession` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-1), [Part 4-3](#part-4-3-modal-dependency)).
+```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. THe concessive _even though_ specifies that typically when one is broke, one does not buy new guitars. This relation is annotated using the `have-concession-91` predicate or the shortcut `:concession` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3](#part-4-3-modal-dependency)).
 
 ```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in [3-1-6 (7d)\]](#3-1-6 (7d)), there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the **have-condition-91/have-condition-91 predicate. [??]**
 
@@ -1948,10 +1948,10 @@ Predicate: give.01
 
 Following AMR, UMR uses PropBank frame files to annotate lexicalized
 participant roles. But, this only works for languages which have
-PropBank-style frame files. This is considered the ‘Stage 2’ participant
-role annotation (see [Part 3-2-1-2](#part-3-2-1-2-stage-2)). The Stage 1 annotation involves
+PropBank-style frame files. This is considered the ‘Stage 1’ participant
+role annotation (see [Part 3-2-1-2](#part-3-2-1-2-stage-1)). The Stage 0 annotation involves
 using a set of general participant roles, while building a lexicon of
-PropBank-style frame files in order to move towards Stage 2 annotation.
+PropBank-style frame files in order to move towards Stage 1 annotation.
 
 Some types of valency alternations (or, argument structure alternations)
 are indicated in the participant role annotation; other types of
@@ -2017,9 +2017,9 @@ of the road map, so that will be detailed in [Part 3-2-1-1-2](#part-3-2-1-1-2-va
 
 [Back to Table of Contents](#toc)
 
-##### Part 3-2-1-1. Stage 1
+##### Part 3-2-1-1. Stage 0
 
-At Stage 1, a set of general (i.e., non-lexicalized) semantic roles are
+At Stage 0, a set of general (i.e., non-lexicalized) semantic roles are
 used. These certainly will not map exactly to the grammatical marking of
 argument phrases in any language, but this set of roles was selected
 based on cross-linguistic patterns of argument marking. The set of
@@ -2388,8 +2388,8 @@ See Table 9 above for examples of the circumstantial
 roles. In addition, there is an `other`
 placeholder role that can be used when annotators are unsure of which participant role annotation is accurate for a particular participant. Also see Appendix [8](#ap:verbspr) for a list of verbs and how their microroles are annotated.
 
-At Stage 1, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in [\[3-2-1-1 (8)\]](#3-2-1-1 (8)), the
-`goal` is left implicit; at Stage 1, this
+At Stage 0, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in [\[3-2-1-1 (8)\]](#3-2-1-1 (8)), the
+`goal` is left implicit; at Stage 0, this
 role may be left out of the annotation.
 
 <span id="3-2-1-1 (8)" label="3-2-1-1 (8)">\[3-2-1-1 (8)\]</span> 
@@ -2405,7 +2405,7 @@ They loaded the boxes.
 
 ###### Part 3-2-1-1-1. Nonverbal clauses
 
-There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 1 annotation. These are the nonverbal clause predicates shown in Table 11 (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). These are repeated below with their participant role annotation.
+There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the nonverbal clause predicates shown in Table 11 (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). These are repeated below with their participant role annotation.
 
 Each nonverbal clause predicate has an `ARG0` and an `ARG1`; these map
 to the semantic roles as shown in Table 11.
@@ -2513,10 +2513,10 @@ She is the winner.
 
 ###### Part 3-2-1-1-2. Valency alternations
  
-Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 1, these alternations influence the choice of general participant role labels. For information-packaging alternations, such as
+Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 0, these alternations influence the choice of general participant role labels. For information-packaging alternations, such as
 passives, antipassives, or valency-rearranging applicatives,
 participants are annotated in the same way as in the basic construction
-in the language. If a participant is omitted, for example the agent in a passive construction as in [\[3-2-1-1-2 (1)\]](#3-2-1-1-2 (1)) from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 1. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 1. 
+in the language. If a participant is omitted, for example the agent in a passive construction as in [\[3-2-1-1-2 (1)\]](#3-2-1-1-2 (1)) from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 0. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 0. 
 
 <span id="3-2-1-1-2 (1)" label="3-2-1-1-2 (1)">\[3-2-1-1-2 (1)\]</span>
 
@@ -2755,9 +2755,9 @@ Table 2: Argument structure of valency alternations
 
 [Back to Table of Contents](#toc)
 
-##### Part 3-2-1-2. Stage 2
+##### Part 3-2-1-2. Stage 1
 
-The Stage 2 participant role annotation requires access to
+The Stage 1 participant role annotation requires access to
 PropBank-style frame files in the language for a large number of
 predicates. At this stage, each predicate identified as event is linked
 to its corresponding frame file. The participants dependent on that
@@ -2783,8 +2783,8 @@ He teased the boy about his hat.
 	:ARG2 (h2 / hat))
 ```
 
-Since the nonverbal clause functions require the use of lexicalized predicates at Stage 1, these are annotated in the same way at Stage 2 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses)). Unlike Stage 1, implicit participants are
-annotated for their semantic role at Stage 2. This is shown in
+Since the nonverbal clause functions require the use of lexicalized predicates at Stage 0, these are annotated in the same way at Stage 1 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses)). Unlike Stage 0, implicit participants are
+annotated for their semantic role at Stage 1. This is shown in
 [\[3-2-1-2 (2)\]](#3-2-1-2 (2)).
 
 <span id="3-2-1-2 (2)" label="3-2-1-2 (2)">\[3-2-1-2 (2)\]</span> 
@@ -2805,15 +2805,15 @@ She parked the truck in the driveway. They loaded the boxes.
 The second sentence in [\[3-2-1-2 (2)\]](#3-2-1-2 (2)) does not
 include explicit mention of the truck, but it is understood from the
 context that the truck is the goal participant of the loading event.
-Therefore, at Stage 2, these implicit roles receive participant role
+Therefore, at Stage 1, these implicit roles receive participant role
 annotation.
 
 [Back to Table of Contents](#toc)
 
 ###### Part 3-2-1-2-1. Valency alternations
 
-The approach to valency alternations at Stage 2 is largely the same as
-that detailed for Stage 1 in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations). However, at Stage 2,
+The approach to valency alternations at Stage 1 is largely the same as
+that detailed for Stage 0 in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations). However, at Stage 1,
 predicates with valency-changing morphology should have their own frame
 files with lexicalized arguments. Therefore, the annotation of
 participant roles for valency alternations is the same as that for other
@@ -2994,7 +2994,7 @@ Guitar strings
 ```
 
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
-category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in [\[3-2-2-2 (2a)\]](#3-2-2-2 (2a)), the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in [\[3-2-2-2 (2b)\]](#3-2-2-2 (2b)); `:consist-of`, for indicating the membership of groups [\[3-2-2-2 (2c)\]](#3-2-2-2 (2c)); and `:topic`, for indicating what a referent is about as in [\[3-2-2-2 (2d)\]](#3-2-2-2 (2d)).
+category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in [\[3-2-2-2 (2a)\]](#3-2-2-2 (2a)), the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in [\[3-2-2-2 (2b)\]](#3-2-2-2 (2b)); `:consist-of`, for indicating the membership of groups [\[3-2-2-2 (2c)\]](#3-2-2-2 (2c)); `:topic`, for indicating what a referent is about as in [\[3-2-2-2 (2d)\]](#3-2-2-2 (2d)), and `:medium` for indicating channels of communication, such as languages as in [\[3-2-2-2 (2e)\]](#3-2-2-2 (2e)).
 
 <span id="3-2-2-2 (2)" label="3-2-2-2 (2)">\[3-2-2-2 (2)\]</span> 
 
@@ -3029,6 +3029,16 @@ Information about the case
 ```
 (i / information
 	:topic (c / case))
+```
+
+<span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">\[3-2-2-2 (2e)\]</span> 
+a French song
+```
+(t / thing
+	:ARG1-of (s / sing-01)
+	:medium (l / language
+		:wiki "French_language"
+		:name (n / name :op1 "French")))
 ```
 
   ##### Part 3-2-2-3. Circumstantial temporals and locatives
@@ -3931,7 +3941,7 @@ As of now , five million tickets have been sold on the StubHub website .
       :ARG1 (t / ticket :quant 5000000)
       :location (w / website
             :mod (c / company :wiki "StubHub" :name (n / name :op1 "StubHub")))
-      :time (a / as-of
+      :temporal (a / as-of
             :op1 (n2 / now)))
 ```
 
@@ -4046,7 +4056,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
          :name (n2 / name :op1 "Edmund" :op2 "Pope"))
   :ARG1 (f / free-04
          :ARG1 p)
-  :time (t3 / today)
+  :temporal (t3 / today)
   :ord (o3 / ordinal-entity :value 1
         :range (m / more-than
                 :op1 (t / temporal-quantity :quant 8
@@ -4158,7 +4168,7 @@ Event identity also includes cases where the same underlying event is referred t
       :ARG1 (c2 / capital
             :mod (f2 / foreign)
             :ord (o / ordinal-entity :value 1))
-      :time (r2 / recent))
+      :temporal (r2 / recent))
 ```
 
 <span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
@@ -4247,7 +4257,7 @@ For now UMR does not annotate cases where one event is a subevent of another eve
 ### Part 4-2. Temporal Dependency
 
 The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the time expression 
-*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the temporal relation between *sign* and the DCT is annotated as `:time (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
+*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the temporal relation between *sign* and the DCT is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
 
 
 <span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
@@ -4269,8 +4279,8 @@ The temporal annotation in UMR is done at both the sentence level and the docume
                               :purpose (f / fight-01
                                     :ARG0 c
                                     :ARG1 (t / terrorism))))))
-      :time (d / date-entity :year 1998 :month 4)
-      :time (b2 /before :op (n/now))
+      :temporal (d / date-entity :year 1998 :month 4)
+      :temporal (b2 /before :op (n/now))
       :aspect Performance))
  ```
 
@@ -4507,19 +4517,19 @@ Key event: landslide\_KEY
                         :ARG1 (c / city :wiki "Saint_Bernard,_Southern_Leyte"
                               :name (n2 / name :op1 "Guinsaugon")))
                   :quant (m / many))
-            :time (a / after
+            :temporal (a / after
                   :op1 (k / kill-01
                         :ARG0 (l / landslide)
                         :ARG1 (p3 / person
                               :quant (m2 / more-than :op1 20))
                         :location (i2 / island :wiki "Leyte"
                               :name (n3 / name :op1 "Leyte"))
-                        :time (w / week)
-                        :time (b / before
+                        :temporal (w / week)
+                        :temporal (b / before
                               :op1 s)))
             :concession (r2 / return-01
                   :ARG1 p2
-                  :time (d / date-entity
+                  :temporal (d / date-entity
                         :weekday (f / friday))
                   :ARG1-of (c2 / cause-01
                         :ARG0 (a2 / and
@@ -4703,13 +4713,13 @@ automatically select the conceiver for the reported event(s), here,
 *Martin*.
 
 The road map stages build on each other to end up at a fully specified
-modal dependency structure. This means that Stage 2 annotation involves first doing the Stage 1 modality annotations. (This contrasts with participant roles, where annotators can largely ignore Stage 1 if the annotation language has existing frame files.)
+modal dependency structure. This means that Stage 1 annotation involves first doing the Stage 0 modality annotations. (This contrasts with participant roles, where annotators can largely ignore Stage 0 if the annotation language has existing frame files.)
 
 [Back to Table of Contents](#toc)
 
-#### Part 4-3-1. Stage 1
+#### Part 4-3-1. Stage 0
 
-There are two types of modal annotations at Stage 1: a
+There are two types of modal annotations at Stage 0: a
 `:modstr` annotation that consists of a
 single epistemic strength/polarity value, and a dependency annotation
 that indicates a relation between two events. There are two dependency
@@ -4870,7 +4880,7 @@ the occurrence of the event in the future, as presented by the author.
 Predictive future has full strength (`Aff`
 or `Neg`); intentions and commands
 correspond to partial strength (`Prt` or
-`NegPrt`); and desire and permission
+`PrtNeg`); and desire and permission
 correspond to neutral (`Neut` or
 `NeutNeg`) strength. Keep in mind that events under the scope of modals identified as their own event don't receive any `:modstr` value at all. This section refers to deontic meanings indicated by grammaticalized modals that don't fit the criteria to be identified as events.
 
@@ -4952,7 +4962,7 @@ the dog **escaped** through the fence.
 Note that the modal itself is annotated with a
 `:modstr` value (if it is not under the
 scope of another modal). The actual modal value imparted by the modal
-event is not annotated at Stage 1.
+event is not annotated at Stage 0.
 
 ##### Part 4-3-1-3. quot relation
 
@@ -5115,7 +5125,7 @@ conditional construction is captured by the
 
 ##### Part 4-3-1-6. Modal dependency structure
 
-At Stage 1, there are some pieces of the modal dependency structure that
+At Stage 0, there are some pieces of the modal dependency structure that
 are unspecified. The modal strength that a modal verb imparts on its
 complement is one of these pieces. As the modal annotation progresses,
 this information is added to the frame files for modal verbs. For
@@ -5331,7 +5341,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
               :Arg0 p2
              :Arg1 (t / thing)
              :discmark (w / wohei))
-    :time (b/before :op (n/now))
+    :temporal (b/before :op (n/now))
     :aspect Performance)
 
 \ref	CrowCh(o).097
@@ -5385,7 +5395,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
    :Arg0 (p/person :ref “3pl”)
    :Arg1 (t /thing)
    :manner (w / wo'oe'onoun)
-   :time (b/before :op (n/now))
+   :temporal (b/before :op (n/now))
    :aspect Activity)
 
     
@@ -5400,7 +5410,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 (w / nooko'wuutee
        :Arg0 (t /thing)
-       :time (b/before :op (n/now))
+       :temporal (b/before :op (n/now))
        :aspect State)
 
 \ref	CrowCh(o).101
@@ -5416,7 +5426,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (a/and 
    : op1 ( n /No’uxoo
                    :Arg0 (n2 /  niisootoxuuus)
-                   :time (b/before :op1 (n /now))
+                   :temporal (b/before :op1 (n /now))
 		   :aspect Performance)
    :op2  (n2/ nooxohei
                   :Arg0 (p/person :ref “3pl”)
@@ -5435,7 +5445,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	ARG 1 (implied only) = [find the bullets by digging] [not overt in the sentence, and the verb is syntactically/grammatically intransitive, though semantically transitive]
    (h/ hoo3ontii
        :Arg0 (p  /person :ref “3pl”)
-       :time (b /before :op (n /now))
+       :temporal (b /before :op (n /now))
        :aspect Endeavor)
 
 ```
