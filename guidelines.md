@@ -5482,4 +5482,247 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 | And + contrast | Discourse relation | **3-1-6** |
 | And + unexpected | Discourse relation | **3-1-6** |
 | Anterior | Discourse relation | **3-1-6** |
-
+| Anticausative | Valency-changing category | **3-2-1-1-2** |
+| Antipassive | Valency-changing category | **3-2-1-1-2** |
+| Applicative | Valency-changing category | 3-1-3-2, **3-2-1-1-2** |
+| Apprehensional | Discourse relation | **3-1-6** |
+| Arabic | Language | 2-2 |
+| Arapaho | Language | 3-1-3-1 |
+| *ARG0* | Participant role | 2-1, 2-2-1, 3-1-3-5, 3-2-1, 3-2-1-1-1, **3-2-1-2** |
+| *ARG0-of* | Participant role | **3-2-1-3** |
+| *ARG1* | Participant role | 2-1, 2-2-1, 3-1-3-5, 3-2-1, 3-2-1-1-1, **3-2-1-2**, 3-2-1-2, 4-3-1 |
+| *ARG1-of* | Participant role | **3-2-1-3** |
+| *ARG2* | Participant role | 2-2-1, 3-2-1, **3-2-1-2**, 4-3-1 |
+| Argument | Semantic category | 1, 2-1, 2-2, **2-2-1**, 3-1-3, 3-1-3-1, 3-1-3-4, 3-1-3-5, 3-1-4, 3-2-1, 3-2-1-1, 3-2-1-1-1, 3-2-1-1-2, 3-2-1-2-1, 3-2-1-3, 3-3-5 |
+| Argument structure | UMR annotation category | 1, 2-1, 2-2, 2-2-1, 2-2-2, 3-1-3-2, 3-1-3-4, 3-1-3-5, **3-2-1**, 3-2-1-3 |
+| Aspect | Semantic category, UMR attribute | 1, 2-1, 2-2, 2-2-4, 2-2-5, **3-1-1**, 3-1-3-3, 3-2-1-3, 3-2-2-3, 3-3-1, 3-3-1-1, 3-3-1-2, 3-3-1-3, 3-3-1-4, 3-3-1-5, 4-2-1-2, 4-2-2-1 |
+| Assertion | Modal semantic category | **4-3-2** |
+| Associated motion | Semantic category | **3-1-3-4** |
+| *Atelic Process* | Aspectual semantic category, aspect annotation value | 3-3-1, 3-3-1-3, **3-3-1-4** |
+| Attribute | Category of UMR objects | 2-1, 2-2-4, **2-2-5**, 3-1-3-3, 3-1-6, 3-2-1-3, 3-2-2-3, **3-3**, 3-3-1, 3-3-2, 3-3-3, 3-3-4, 3-3-5, 3-3-6 |
+| *Author/AUTH* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6 |
+| Auxiliary | Strategy | **3-1-3-3** |
+| Balinese | Language | 3-2-1 |
+| Before | Temporal annotation value | 1, 4-2, **4-2-2-1** |
+| Bezhta | Language | 3-2-1-1-2 |
+| Bound morphology | Strategy | 3-1-3, 3-1-3-2, **3-1-3-3**, 3-2-1-2-1, 3-3-6 |
+| *Calendar* | Temporal annotation relation | **3-2-2-1** |
+| Cardinality | Quantification semantic category | 3-2-2-2, **3-2-2-5** |
+| Causal relations | Semantic category | 3-1-1-3, **3-1-6**, 4-2-2-2, 4-2-2-3 |
+| Causative | Valency-changing category | 3-1-3-2, **3-2-1-1-2** |
+| *Cause* | Participant role | 3-1-3-2, 3-1-6, **3-2-1-1** |
+| Caused event | Semantic category | **3-1-3-2**, 3-1-6, **4-2-2-3** |
+| *Causer* | Participant role | **3-2-1-1**, 3-2-1-1-2 |
+| Caused event | Semantic category | **3-1-3-2**, 3-1-6, **4-2-2-3** |
+| *Century* | Temporal annotation relation | **3-2-2-1** |
+| Certainty | Modal semantic category | 4-3, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-3, 4-3-1-5, 4-3-2 |
+| Change of state | Event type | **3-2-1-1**, 3-2-1-1-2 |
+| Chinese | Language | 2-2, 3-1-4 |
+| Circumstantial | Participant role category | **3-2-1-1** |
+| Circumstantial locative | Participant role category | 3-1-3-4, **3-2-2-3** |
+| Circumstantial temporal | Participant role category | **3-2-2-3** |
+| Classifier | Strategy | **3-1-3-1** |
+| Command | Mode semantic category | 3-2-2-6, **3-3-2**, 4-3-1-1-3 |
+| *Companion* | Participant role | **3-2-1-1** |
+| Completive | Aspectual semantic category | 3-1-3-3, **3-3-1-5** |
+| Complex figure construal | Information packaging | **3-1-6** |
+| Complex sentence | Sentence type | **3-1-6**, 4-3-1-4, 4-3-1-5 |
+| Compound | Strategy | **3-1-1-2** |
+| Conative | Modal semantic category | **3-1-3-3** |
+| *Conceiver* | Modal annotation value | 4-2-2-1, 4-3, **4-3-1-1** |
+| Concept | Category of UMR objects | 1, **2-1**, 2-2, 2-2-1, 2-2-2, 2-2-3, 2-2-4, 2-2-5, **3-1**, 3-1-1, 3-1-3, 3-1-3-1, 3-1-3-2, 3-1-3-3, 3-1-3-5, 3-1-3-6, 3-1-4, 3-1-5, 3-2-1-3, 3-2-2-4, 3-2-2-5, 3-2-2-6, 3-3-5, 3-3-6 |
+| Concept-word mismatch | UMR annotation complication | **3-1-3** |
+| *Concession* | Participant role | **3-1-6**, 3-2-2-6 |
+| Concessive | Discourse relation | **3-1-6** |
+| Concessive conditional | Discourse relation | **3-1-6** |
+| Concrete time expression | Temporal semantic category | **4-2-1-2** |
+| *Condition* | Participant role | 3-1-6, 3-2-2-6, 4-3-1, **4-3-1-5**, 4-3-2 |
+| Conditional | Discourse relation | **3-1-6**, 4-3-1, 4-3-1-5 |
+| Conjunctive | Discourse relation | **3-1-6** |
+| *Consist-of* | Non-participant role relation | 2-2-4, **3-2-2-2** |
+| Consecutive | Discourse relation | **3-1-6** |
+| Constant | Category of UMR objects | **1** |
+| Contact | Event type | **3-2-1-1** |
+| *Contained* | Temporal annotation value | 1, **4-2-2-1**, 4-2-2-2 |
+| Container adverbial | Aspectual semantic category | **3-3-1-5** |
+| Continuative | Aspectual semantic category | 3-1-3-3, **3-3-1-4** |
+| (pure) Contrast | Discourse relation | **3-1-6** |
+| Coordination | Strategy | **3-1-6**, 3-2-2-4 |
+| Co-reference | Semantic category | 1, 2-1, 2-2, 3-1-1-4, 3-1-3-1, **4-1**, 4-1-1, 4-1-2 |
+| Co-reference, entities | Co-reference semantic category | 3-1-3-1, **4-1-1** |
+| Co-reference, events | Co-reference semantic category | 3-1-1-4, **4-1-2** |
+| Counterfactual | Modal semantic category | **4-3-2** |
+| *Country* | Named entity type | **3-1-2** |
+| Creation | Event type | **3-2-1-1** |
+| Cross-lingual annotation | UMR annotation practice | **1**, 2-2, 2-2-3, 2-2-4, 2-2-5, 3-1-1, 3-1-1-1, 3-1-1-2, 3-1-3, 3-1-3-2, 3-1-3-3, 3-1-3-5, 3-2-1-1, 3-3-5, 4-3-1-1-2 |
+| *Day* | Temporal annotation relation | 2-2-4, **3-2-2-1** |
+| *Dayperiod* | Temporal annotation relation | **3-2-2-1** |
+| *Decade* | Temporal annotation relation | **3-2-2-1** |
+| Degree | Semantic category, UMR attribute | 2-1, 2-2-5, **3-3-6** |
+| Deontic | Modal semantic category | 4-2-2-4, 4-3, 4-3-1-1, **4-3-1-1-3**, 4-3-1-6, 4-3-2 |
+| Desiderative | Modal semantic category | 3-1-3-3, 4-2-2-4, **4-3-1-1-3**, 4-3-1-2, 4-3-1-6, 4-3-2 |
+| Direct evidence | Evidential semantic category | 4-3-1-1, **4-3-1-1-2** |
+| *Directed achievement* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| *Directed activity* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-4**, 3-3-1-5 |
+| *Directed endeavor* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| *Direction* | Non-participant role relation | **3-2-2-3** |
+| Discourse relations | Semantic category | **3-1-6** |
+| Disjunctive | Discourse relation | **3-1-6** |
+| Document Creation Time (DCT) | Temporal annotation value | 1, 3-3-1-4, 4-2, **4-2-1-1**, 4-2-1-2 |
+| Document-level representation | UMR annotation practice | 1, 2-1, 2-2, 2-2-5, 3-1-6, 3-3-3, **4**, 4-1-1, 4-2, 4-3-1, 4-3-1-4 |
+| Doubt | Modal semantic category | **4-3-1-6**, 4-3-2 |
+| *Downtoner* | Degree semantic category, degree annotation value | 2-1, **3-3-6** |
+| *Dual* | Number semantic category, number annotation value | 2-1, **3-3-5** |
+| *Duration* | Non-participant role relation | 2-2-4, **3-2-2-3** |
+| Durative adverbial | Aspectual semantic category | **3-3-1-5** |
+| Edge | Category of UMR objects | **2-1**, 2-2, 2-2-1, 4-3 |
+| Embedded interrogative | Semantic category | **3-2-1-3** |
+| *Endeavor* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-5, 3-3-1, **3-3-1-5** |
+| English | Language | 1, 2-2, 2-2-1, 2-2-5, 3-1-3, 3-1-3-1, 3-1-3-2, 3-1-3-3, 3-1-3-4, 3-1-3-5, 3-1-4, 3-1-6, 3-2-1, 3-2-1-1-1, 3-2-1-1-2, 3-3-1, 3-3-1-1, 3-3-1-2, 3-3-1-3, 3-3-1-5, 3-3-3, 3-3-5, 3-3-6, 4-3-1-6, 4-3-2 |
+| Epistemic modality | Modal semantic category | 3-1-6, 4-3, 4-3-1, **4-3-1-1**, 4-3-1-1-2, 4-3-1-4, 4-3-1-6, 4-3-2 |
+| *Equal* | Degree semantic category, degree annotation value | **3-3-6** |
+| Equational | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
+| *Era* | Temporal annotation relation | **3-2-2-1** |
+| Event | Semantic category | 1, 2-1, 2-2-1, **3-1-1**, 3-1-1-1, 3-1-1-2, 3-1-1-3, 3-1-1-4, 3-1-3-1, 3-1-3-2, 3-1-3-3, 3-1-3-4, 3-1-6, 3-2-1, 3-2-1-1, 3-2-1-1-2, 3-2-1-2, 3-2-1-3, 3-2-2-3, 3-3-1, 3-3-1-1, 3-3-1-2, 3-3-1-3, 3-3-1-4, 3-3-1-5, 4-1-2, 4-2, 4-2-1-1, 4-2-1-2, 4-2-1-3, 4-2-2-1, 4-2-2-2, 4-2-2-3, 4-2-2-4, 4-3, 4-3-1, 4-3-1-1, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-2, 4-3-1-3, 4-3-1-4, 4-3-1-5, 4-3-1-6, 4-3-2 |
+| Event identification | UMR annotation practice | 2-2-1, **3-1-1**, 3-1-1-1, 3-1-1-2, 3-1-1-3, 3-1-1-4, 3-1-3-2, 3-1-3-3, 3-1-3-4, 3-1-3-5, 3-2-1-2, 3-3-1, 3-3-1-1, 3-3-1-3, 4-2-2-1, 4-2-2-3, 4-3-1, 4-3-1-1-3, 4-3-1-2, 4-3-2 |
+| Event nominal | Strategy | **3-1-1**, 3-1-1-2, **3-3-1-1** |
+| Eventive modifier | Modification semantic category | 2-2-1, **3-1-1-2**, 3-2-1-3 |
+| Evidentiality | Semantic category | 4-3, 4-3-1-1, **4-3-1-1-2** |
+| *Example* | Non-participant role relation | **3-2-2-6** |
+| *Exclusive* | Person semantic category, person annotation value | **3-3-5** |
+| Exclusive disjunctive | Discourse relation | **3-1-6** |
+| Exhaustive disjunction | Discourse relation | **3-1-6** |
+| *Experiencer* | Participant role | 2-1, **3-2-1-1**, 4-3-1-6 |
+| Experiential | Event type | **3-2-1-1** |
+| *Expressive* | Mode annotation value | 2-1, **3-3-2** |
+| External cause | Participant role category | **3-2-1-1** |
+| FactBank | Annotation scheme | **4-3-1-1** |
+| Factive predicate | Event type | **4-3-1-6**, 4-3-2 |
+| Falam Chin | Language | 3-2-1-1-2 |
+| Fear | Modal semantic category | **4-3-2** |
+| Figure-ground construal | Information packaging | **3-1-6** |
+| *Force* | Participant role | **3-2-1-1** |
+| Frame files | Annotation scheme | **3-1-4**, 3-2-1, 3-2-1-1-1, **3-2-1-2**, 3-2-1-2-1, 3-2-1-3, 4-3, 4-3-1-6 |
+| *Frequency* | Non-participant role relation | 2-2-4, **3-2-2-3** |
+| Frustrative | Modal semantic category | **3-1-3-3** |
+| Full support | Modal semantic category | **4-3-1-1***, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| Future-oriented modality | Modal semantic category | 4-3-1-1, **4-3-1-1-3** |
+| *Future_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| General participant roles | Participant role category | 2-1, 2-2-1, 3-2-1, **3-2-1-1**, 3-2-1-1-2, 3-2-1-2-1, 3-2-1-3, 3-2-2 |
+| Generic events | Event type | **3-1-1-4** |
+| Gerund | Strategy | **3-1-1**, 3-3-1-1 |
+| *Goal* | Participant role | 3-1-3-4, **3-2-1-1** |
+| *Greater plural* | Number semantic category, Number annotation value | **3-3-5** |
+| *Habitual* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-5, 3-3-1, **3-3-1-2** |
+| Hope | Modal semantic category | **4-3-2** |
+| Hua | Language | 3-1-6 |
+| Identity | Co-reference semantic category | **4-1-1, 4-1-2** |
+| *Imperative* | Mode annotation value | 2-1, 3-1-6, 3-2-2-6, **3-3-2**, 4-3-2 |
+| *Imperfective* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3** |
+| Implicit event | Event type | **3-1-1-4**, 3-1-3-5 |
+| Implicit participant | Participant type | 2-1, 3-2-1-1, 3-2-1-1-2, **3-2-1-2**, 3-3-5 |
+| Inactive action | Event type | **3-3-1-3** |
+| Inceptive | Aspectual semantic category | **3-3-1-4** |
+| Inchoative | Aspectual semantic category | **3-1-3-3** |
+| *Inclusive* | Person semantic category, person annotation value | **3-3-5** |
+| Inclusive disjunctive | Discourse relation | **3-1-6** |
+| *Incremental accomplishment* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| Independent argument structure | UMR annotation diagnostic | **3-1-3-4** |
+| Indirect evidence | Evidential semantic category | **4-3-1-1-2** |
+| Inferred evidence | Evidential semantic category | **4-3-1-1** |
+| *Inherent state* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3** |
+| *Instrument* | Participant role | 3-1-3-1, **3-2-1-1** |
+| *Intensifier* | Degree semantic category, degree annotation value | 2-1, **3-3-6** |
+| Intention | Modal semantic category | **4-3-1-1-3** |
+| *Interrogative* | Mode annotation value | 2-1, **3-3-2** |
+| Inverse participant roles | Participant role category | **3-2-1-3** |
+| *Irreversible directed achievement* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| *Irreversible state* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3** |
+| Juxtaposition | Strategy | **3-1-3-5** |
+| *Key event* | Temporal annotation value | **4-2-1-3**, 4-2-2-1 |
+| Kinship relations | Semantic category | **3-2-1-3**, 3-2-2-2 |
+| Kukama | Language | 3-1-3-2, 3-1-3-5, 3-2-1-1-1, 3-2-1-1-2 |
+| Lattice | Category of UMR objects | 2-2-4, 3-1-6, 3-3-1, 3-3-1-1, 3-3-5, 4-3, 4-3-1-1 |
+| Lemma | Category of UMR objects | 2-1, 3-1-3-6, **3-1-4** |
+| Lexicon | Category of UMR objects | 2-1, 2-2-1, **3-1-4**, 3-2-1, 3-2-1-1-1, 3-2-1-2, 3-2-1-2-1, 3-2-1-3, 3-3-6 |
+| Locatable time expression | Temporal semantic category | **4-2-1-2** |
+| Manipuri | Language | 3-1-3-3 |
+| *Manner* | Participant role | 3-1-6, **3-2-1-1** |
+| *Material* | Participant role | **3-2-1-1** |
+| Means | Discourse relation | **3-1-6** |
+| *Medium* | Non-participant role relation | 2-2-4, **3-2-2-2** |
+| Mensural constructions | Quantification semantic category | 2-2, **3-2-2-5** |
+| Metanodes | Temporal annotation category | 4-2, 4-2-1, **4-2-1-1**, 4-2-2-1 |
+| *Mod* | Non-participant role relation | 2-2-4, **3-2-2-2** |
+| *Mod* | Modal annotation value | 4-3-1, **4-3-1-2** |
+| Modal dependencies | Category of UMR objects | 1, 2-1, 3-1-3-3, 3-3-3, 4-2-2-1, **4-3**, 4-3-1, 4-3-1-6, 4-3-2 |
+| Modal strength | Modal semantic category | 4-3, 4-3-1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6, 4-3-2 |
+| Modal verbs/auxiliaries | Strategy | **3-1-3-3**, 3-3-1-3, 4-3-1, 4-3-1-1-3, 4-3-1-2, 4-3-1-3, 4-3-1-4, 4-3-1-5, **4-3-1-6**, 4-3-2 |
+| Modality | Semantic category | 1, 2-1, 2-2, 2-2-5, 3-1-1, 3-1-3-3, 3-3-1, 3-3-1-2, 3-3-1-3, 3-3-3, 4-2-2-1, 4-2-2-4, **4-3**, 4-3-1, 4-3-1-1, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-2, 4-3-1-3, 4-3-1-4, 4-3-1-5, 4-3-1-6, 4-3-2 |
+| Mode | UMR attribute | 2-1, 2-2-5, **3-3-2** |
+| Modification | Information packaging | 2-2, 2-2-1, 2-2-4, 2-2-5, **3-1-1**, 3-1-1-2, 3-1-1-3, 3-2-1-3, 3-2-2, 3-2-2-2, 3-2-2-3, 4-2 |
+| *Modstr* | Modal annotation value | 4-2-2-1, 4-3, 4-3-1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-2, 4-3-1-3, 4-3-1-4, 4-3-1-5, 4-3-1-6 |
+| *Month* | Temporal annotation relation | 2-2-4, **3-2-2-1** |
+| Motion | Event type | 3-1-1-4, **3-1-3-4, 3-2-1-1** |
+| Multi-word expression | UMR annotation complication | 1, 2-1, 2-2-2, 3-1-3, **3-1-3-6** |
+| *Name* | Non-participant role relation | 2-1, **3-2-2-4** |
+| Named entity | Category of UMR objects | 1, 2-1, **3-1-2**, 3-1-3-1, 3-2-2-4, 3-3-5, 4-1 |
+| *Neg* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| Negation | Modal semantic category | 2-1, 2-2, 3-1-3-2, 3-1-5, 3-1-6, **3-3-3, 4-3-1-1**, 4-3-1-1-1, 4-3-1-4, 4-3-1-5, 4-3-1-6, 4-3-2 |
+| Negative circumstantial | Discourse relation | **3-1-6** |
+| *Neut* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-3, 4-3-1-6, 4-3-2 |
+| *NeutNeg* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| Neutral support | Modal semantic category | 1, **4-3-1-1**, 4-3-1-1-3, 4-3-2 |
+| Node | Category of UMR objects | 2-1, **2-2**, 2-2-1, 2-2-3, 2-2-5, 3-2-1-3, 3-2-2-4, 3-2-2-6, 3-3-5, 4-1-1, 4-1-2, 4-2, 4-2-1, 4-2-1-1, 4-2-1-2, 4-2-2-1, 4-3, 4-3-1, 4-3-2 |
+| Nominal modification | Modification semantic category | 3-1-1, **3-2-1-3**, **3-2-2-2** |
+| *Non-1st person* | Person semantic category, person annotation value | **3-3-5** |
+| *Non-3rd person* | Person semantic category, person annotation value | **3-3-5** |
+| Non-exhaustive disjunction | Discourse relation | **3-1-6** |
+| Non-finite complement | Strategy | **3-1-1-2** |
+| *Non-full* | Modal semantic category, modal annotation value | **4-3-1-1**, 4-3-1-4 |
+| *Non-incremental accomplishment* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| *Non-neutral* | Modal semantic category, modal annotation value | **4-3-1-1** |
+| Non-participant role relation | Category of UMR relations | 2-2-4, **3-2-2** |
+| Non-result path expression | UMR annotation diagnostic | **3-3-1-5** |
+| *Non-singular* | Number semantic category, Number annotation value | **3-3-5** |
+| Non-verbal clauses | Semantic category | 2-2-1, 2-2-3, 3-1-1-3, **3-1-3-5**, 3-2-1-1-1, 3-2-1-2, 3-2-1-3, 3-3-1-3 |
+| Noun | Part of Speech | 2-2, 2-2-1, **3-3-1**, 3-1-3-1, 3-2-1-3, 3-2-2-2 |
+| Noun incorporation | Strategy | **3-1-3-1** |
+| NP | Strategy | 3-1-3-1, 3-1-3-4, 3-1-3-5, 3-2-1-3, 3-2-2, **3-2-2-2** |
+| Number | Semantic category | 2-1, 2-2-5, 3-1-3-1, **3-3-5** |
+| Numbered/lexicalized participant roles | Participant role category | 2-1, 2-2-1, 3-1-3-5, 3-2-1, 3-2-1-1-1, **3-2-1-2**, 3-2-1-2-1, 3-2-1-3, 3-2-2 |
+| Object concept | Semantic category | **3-1-1**, 3-1-1-2, 3-1-1-3, 3-1-3-5, 3-2-1, 3-2-1-1, 3-2-1-1-1, 3-2-1-3, 3-2-2-2, 3-2-2-3, 3-2-2-5, 3-2-2-6, 3-3-2, 3-3-5, 4-1-1 |
+| Obligation | Modal semantic category | 2-1, **4-3-1-6**, 4-3-2 |
+| Optative | Modal semantic category | **3-1-3-3** |
+| *OpX* | Non-participant role relation | **3-2-2-4**, 4-2 |
+| *Ord* | Non-participant role relation | **3-2-2-5** |
+| Ordinal | Quantification semantic category | **3-2-2-5** |
+| *Other* | Non-participant role relation | 2-2-4, 3-2-1-1, **3-2-2-6** |
+| *Overlap* | Temporal annotation value | 1, **4-2-2-1**, 4-2-2-2 |
+| Partial support | Modal semantic category | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-2 |
+| Participant identification | UMR annotation practice | 2-2-1, **3-1-3-1**, 3-1-3-5, 3-2-1, 3-2-1-1, 3-2-1-1-1, 3-2-1-1-2, 3-2-1-2 |
+| Participant nominalization | Strategy | **3-2-1-3** |
+| Participant roles | Semantic category | 2-1, 2-2-1, 3-1-1, 3-1-3-1, 3-1-3-2, 3-1-6, **3-2-1**, 3-2-1-1, 3-2-1-1-1, 3-2-1-1-2, 3-2-1-2, 3-2-1-2-1, 3-2-1-3, 4-3, 4-3-1, 4-3-1-4 |
+| Participle | Strategy | **3-1-1**, 3-1-1-2, 3-2-1-3 |
+| *Part-of* | Non-participant role relation | **3-2-2-2** |
+| Part-whole relations | Semantic category | **3-2-2-2** |
+| Passive | Valency-changing category | 3-2-1, **3-2-1-1-2** |
+| *Past_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *Path* | Non-participant role relation | **3-2-2-3** |
+| *Paucal* | Number semantic category, Number annotation value | 2-1, **3-3-5** |
+| *Perfective* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| *Performance* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-5, 3-3-1, **3-3-1-5** |
+| Permissive | Modal semantic category | 4-3, **4-3-1-1-3**, 4-3-1-6, 4-3-2 |
+| *Person* | Named entity type | 1, 2-1, **3-1-2**, 3-1-3-1, 3-2-1-3, 3-3-5, 4-1-1 |
+| Person | Semantic category | 2-1, 2-2-5, 3-1-3-1, **3-3-5** |
+| Phasal aspect | Aspectual semantic category | **3-1-3-3** |
+| *Place* | Participant role | **3-2-1-1** |
+| *Plural* | Number semantic category, Number annotation value | 2-1, 3-2-1-1, **3-3-5** |
+| *Point state* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3**, 3-3-1-5 |
+| Polarity | Modal semantic category | 2-1, 2-2-5, 3-1-6, **3-3-3**, 4-3, 4-3-1, **4-3-1-1**, 4-3-1-1-1 |
+| *Polite* | Non-participant role relation | **3-2-2-6** |
+| Positive circumstantial | Discourse relation | **3-1-6** |
+| *Poss* | Non-participant role relation | **3-2-2-2** |
+| Possession | Semantic category | 2-2-3, **3-1-1-3**, 3-1-3-5, 3-2-1-1, 3-2-1-1-1, 3-2-1-1-2, **3-2-2-2** |
+| Possibility | Modal semantic category | 2-1, **4-3-1-1** |
+| Posterior | Discourse relation | **3-1-6** |
