@@ -5726,3 +5726,71 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 | Possession | Semantic category | 2-2-3, **3-1-1-3**, 3-1-3-5, 3-2-1-1, 3-2-1-1-1, 3-2-1-1-2, **3-2-2-2** |
 | Possibility | Modal semantic category | 2-1, **4-3-1-1** |
 | Posterior | Discourse relation | **3-1-6** |
+| Pragmatic valency alternation | Valency-changing category | 3-2-1, **3-2-1-1-2** |
+| Predicate | Category of UMR objects | 1, 2-1, 2-2, **2-2-1**, 2-2-3, 2-2-5, 3-3-1, 3-1-1-1, 3-1-1-3, 3-1-3, 3-1-3-1, 3-1-3-2, 3-1-3-3, 3-1-3-4, 3-1-3-5, 3-1-4, 3-1-5, 3-2-1, 3-2-1-1, 3-2-1-1-1, 3-2-1-2, 3-2-1-2-1, 3-2-1-3, 3-2-2, 3-3-1-3, 4-2, 4-2-2-3, 4-3-1-3, 4-3-1-6, 4-3-2 |
+| Predicate-argument structure | Semantic category | 1, 2-1, 2-2, **2-2-1**, 3-1-3, 3-1-3-1, 3-1-3-5, **3-2-1**, 3-2-1-1, 3-2-1-1-1, 3-2-1-2, 3-2-1-2-1, 3-2-1-3 |
+| Predication | Information packaging | 2-2, **3-1-1**, 3-1-1-1, 3-1-1-3, 3-1-3-5, 3-2-1-1-1, 3-1-3-3, 4-2-2-3 |
+| Predicative location | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
+| Predicative possession | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
+| Predicativization/predicativized argument | Strategy | **3-1-3-5**, 3-2-1-1-1 |
+| *Present_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *Process* | Aspectual semantic category, aspect annotation value | 2-1, 3-3-1, 3-3-1-1 |
+| Pronominal affixes | Strategy | **3-1-3-1**, 3-1-3-5, **3-3-5** |
+| Pronoun | Part of Speech | 2-1, **3-1-3-1, 4-1**, 4-1-1 |
+| PropBank | Annotation scheme | **2-2-1**, 3-2-1, 3-2-1-2, 3-2-1-3 |
+| Property concept | Semantic category | **3-1-1**, 3-1-1-3, 3-1-3-5, 3-1-6, 3-2-1-1-1, 3-3-1-3, 3-3-2, 3-3-6 |
+| Property predication | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
+| *Prt* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| *PrtNeg* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| Purpose | Discourse relation | **3-1-6**, 4-2-2-4, 4-3-1, 4-3-1-4, 4-3-2 |
+| *Purpose* | Participant role | 3-1-6, **3-2-1-1**, 4-3-1, **4-3-1-4** |
+| *Quant* | Quantification annotation value | 2-1, 2-2-5, **3-2-2-5, 3-3-4** |
+| Quantification | Semantic category | 1, 2-1, 2-2, 2-2-5, **3-1-5**, 3-2-2-2, **3-2-2-5**, 3-3-1-3, **3-3-4**, 4-2-1-2 |
+| *Quarter* | Temporal annotation relation | **3-2-2-1** |
+| *Quot* | Modal annotation value | 4-3, 4-3-1, **4-3-1-3** |
+| *Range* | Non-participant role relation | 2-1, **3-2-2-5** |
+| *Recipient* | Participant role | **3-2-1-1**, 3-2-1-1-2 |
+| Reciprocal | Valency-changing category | 3-2-1, **3-2-1-1-2** |
+| Ref-number | UMR attribute | 2-1, 2-2-5, **3-3-5** |
+| Ref-person | UMR attribute | 2-1, 2-2-5, **3-3-5** |
+| Reference | Information packaging | 2-2, 2-2-1, 2-2-4, 2-2-5, **3-1-1**, 3-1-1-2, 3-1-1-3, 3-2-1-3, 3-2-2, 3-2-2-2, 3-2-2-3, 4-2 |
+| Reference time | Temporal annotation value | 1, 3-1-1-2, **4-2-1-2** |
+| Referring expression | Information packaging | 2-2, 2-2-4, 3-2-1-3, 3-2-2-2, 3-3-1-1 |
+| Reflexive | Valency-changing category | 3-1-3-2, **3-2-1-1-2** |
+| Relation | Category of UMR objects | 1, 2-1, **2-2**, 2-2-1, 2-2-4, 2-2-5, 3-1-3-3, 3-1-6, **3-2**, 3-2-1-1, 3-2-1-3, 3-2-2, 3-2-2-1, 3-2-2-2, 3-2-2-3, 3-2-2-4, 3-2-2-5, 3-2-2-6, 4-1-1, 4-1-2, 4-2, 4-2-1, 4-2-1-1, 4-2-2-1, 4-2-2-2, 4-2-2-3, 4-2-2-4, 4-3-1, 4-3-1-1-2, 4-3-1-2, 4-3-1-3, 4-3-1-4, 4-3-1-5 |
+| Relative clause | Strategy | 3-1-1, 3-1-1-2, **3-2-1-3** |
+| Relative time expression | Temporal semantic category | 4-2, **4-2-1-2** |
+| Reported event | Event type | 4-2-2-1, 4-3, 4-3-1, 4-3-1-1, **4-3-1-3** |
+| Reported evidence | Evidential semantic category | **4-3-1-1** |
+| Reported event | Event type | 4-2-2-1, 4-3-1, **4-3-1-3** |
+| *Reversible directed achievement* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| *Reversible state* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3** |
+| Road map | UMR annotation practice | 3-2-1, 3-2-1-1-1, 3-2-1-1-2, 3-2-1-3, 4-3 |
+| *ROOT* | Temporal, modal annotation value | **4-2-1**, 4-2-1-2 |
+| *Same-entity* | Co-reference annotation value | **4-1-1** |
+| *Same-event* | Co-reference annotation value | **4-1-2** |
+| Sanapaná | Language | 2-2-1, 2-2-2, 2-2-3, 3-1-3-2, 3-1-3-4, 3-3-5, 3-3-6 |
+| *Scale* | Non-participant role relation | **3-2-2-5** |
+| Scope | Semantic category | 2-1, 2-2-5, 3-1-3-2, **3-1-5**, 3-3-1-3, 4-3-1, 4-3-1-1-3, 4-3-1-2, 4-3-1-3 |
+| *Season* | Temporal annotation relation | **3-2-2-1** |
+| Second-hand evidence | Evidential semantic category | **4-3-1-1** |
+| Semantic type | Semantic category | **3-1-1**, 3-1-1-2, 3-1-1-3 |
+| Semantic valency alternation | Valency-changing category | 3-2-1, **3-2-1-1-2** |
+| *Semelfactive* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| Semi-modals | Modal semantic category | **3-1-3-3** |
+| Sense disambiguation | UMR annotation practice | 2-1, 2-2-1, **3-1-4** |
+| Sentence-level representation | UMR annotation practice | 1, 2-1, 2-2, 2-2-5, **3**, 3-1-6, 3-3-3, 4-2, 4-3-1, 4-3-1-4, 4-3-1-5 |
+| Serial verb construction | Strategy | **2-2** |
+| Shipibo-konibo | Language | **3-2-1-1-2** |
+| Simultaneous | Discourse relation | **3-1-6** |
+| *Singular* | Number semantic category, Number annotation value | 2-1, **3-3-5** |
+| *Source* | Participant role | **3-2-1-1** |
+| Stage 0 annotation | UMR annotation practice | 3-2-1, 3-2-1-1, 3-2-1-1-1, 3-2-1-1-2, 3-2-1-2, 3-2-1-3, 4-3, 4-3-1, 4-3-1-2, 4-3-1-6 |
+| Stage 1 annotation | UMR annotation practice | 3-2-1, 3-2-1-1-1, 3-2-1-2, 3-2-1-2-1, 4-3 |
+| *Start* | Participant role | **3-2-1-1** |
+| *State* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-1, 2-2-5, 3-1-1, 3-1-1-3, 3-3-1, 3-3-1-1, **3-3-1-3**, 3-3-1-5, 4-2-2-1 |
+| *Stimulus* | Participant role | **3-2-1-1** |
+| *Stimulus-of* | Participant role | **3-2-1-3** |
+| Subevent | Co-reference, temporal semantic category | 4-1-2, 4-2-2-1, **4-2-2-2** |
+| *Subset-of* | Co-reference annotation value | **4-1-1, 4-1-2** |
+| Substitution | Discourse relation | **3-1-6** |
