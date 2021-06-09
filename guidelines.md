@@ -5454,3 +5454,32 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 ##  Part 7: Alphabetical Index of UMR Annotation Categories
 
+| Term           |              Category               |           Sections           |
+| :-------: | :----------------------------------: | :------------------------------: |
+| -00 suffix  | UMR annotation convention | 2-2-1, **3-1-4** |
+| *1st person* | Person semantic category, person annotation value | 2-1, 3-1-3-1, **3-3-5** |
+| *2nd person* | Person semantic category, person annotation value | 2-1, **3-3-5** |
+| *3rd person* | Person semantic category, person annotation value | 2-1, 3-1-3-1, **3-3-5** |
+| Ability | Modal semantic category | 3-3-1-2, **3-3-1-3** |
+| Absolute time expression | Temporal semantic category | **4-2-1-2** |
+| Abstract concept | Category of UMR objects | 1, 2-1, **2-2-3**, 2-2-4, 3-1-1-3, 3-1-3-5, 3-1-6 |
+| Abstract Meaning Representation (AMR) | Annotation scheme | 1, **2-1**, 2-2, 2-2-1, 2-2-2, 2-2-3, 2-2-4, 2-2-5, 3-1-2, 3-2-1, 3-2-1-3, 3-2-2, 3-3-2, 3-3-3, 3-3-5, 3-3-6 |
+| *Activity* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-5, 3-3-1, **3-3-1-4**, 3-3-1-5 |
+| *Actor* | Participant role | 2-1, 2-2-1, 3-1-3-1, **3-2-1-1**, 3-2-1-1-2, 3-3-5 |
+| *Actor-of* | Participant role | **3-2-1-3** |
+| (pure) Addition | Discourse relation | **3-1-6** |
+| Additive | Discourse relation | **3-1-6** |
+| Adjective | Part of Speech | 2-2-5, **3-3-1**, 3-3-3, 4-3-2 |
+| Adverbial subordination | Strategy | **3-1-6** |
+| Adversative | Discourse relation | **3-1-6** |
+| *Aff* | Modal annotation value | 1, 4-2-2-1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6, 4-3-2 |
+| *Affectee* | Participant role | **3-2-1-1**, 3-2-1-1-2 |
+| *After* | Temporal annotation value | 1, **4-2-2-1**, 4-2-2-3, 4-2-2-4 |
+| *Age* | Non-participant role relation | **3-2-2-2** |
+| Anaphoric expression | Co-reference semantic category | 4-1, **4-1-1** |
+| Anchoring modification | Modification semantic category | **3-2-2-2** |
+| And + but | Discourse relation | **3-1-6** |
+| And + contrast | Discourse relation | **3-1-6** |
+| And + unexpected | Discourse relation | **3-1-6** |
+| Anterior | Discourse relation | **3-1-6** |
+
