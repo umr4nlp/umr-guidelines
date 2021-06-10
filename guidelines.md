@@ -5454,6 +5454,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 ##  Part 7: Alphabetical Index of UMR Annotation Categories
 
+In the following alphabetical index, annotation values are distinguished by their italic typeface in the first column. In the last column, the principal section(s) in which each term is defined or discussed is indicated in boldface.
+
 | Term           |              Category               |           Sections           |
 | :-------: | :----------------------------------: | :------------------------------: |
 | -00 suffix  | UMR annotation convention | 2-2-1, **3-1-4** |
@@ -5794,3 +5796,46 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 | Subevent | Co-reference, temporal semantic category | 4-1-2, 4-2-2-1, **4-2-2-2** |
 | *Subset-of* | Co-reference annotation value | **4-1-1, 4-1-2** |
 | Substitution | Discourse relation | **3-1-6** |
+| *Temp* | Temporal annotation value | 4-2-1, **4-2-1-1** |
+| *Temporal* | Participant role | 2-1, **3-1-6, 3-2-1-1**, 4-2 |
+| Temporal dependencies | Category of UMR objects | 1, 2-1, 3-1-3-3, **4-2**, 4-2-1, 4-2-1-1, 4-2-1-2, 4-2-2-1 |
+| Temporal superstructure | UMR annotation procedure | 4-2, **4-2-1**, 4-2-1-1, 4-2-1-2, 4-2-1-3, 4-2-2-1 |
+| Terminative | Aspectual semantic category | **3-3-1-5** |
+| *Theme* | Participant role | 2-2-1, 3-1-3-1, **3-2-1-1**, 3-2-1-1-2 |
+| Thetic location | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
+| Thetic possession | Non-verbal clause category | 2-2-3, **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
+| *Thing* | Named entity type | **3-1-3-1, 3-3-5** |
+| Time expression | Temporal semantic category | 4-2, 4-2-1, 4-2-1-1, **4-2-1-2**, 4-2-1-3, 4-2-2-1 |
+| TimeML | Annotation scheme | **3-1-1** |
+| *Timezone* | Temporal annotation relation | **3-2-2-1** |
+| *Topic* | Non-participant role relation | 2-2-4, **3-2-2-2** |
+| Torau | Language | 3-2-1 |
+| Transfer | Event type | **3-2-1-1, 3-2-1-1-2** |
+| *Trial* | Number semantic category, Number annotation value | **3-3-5** |
+| Typifying modifier | Modification semantic category, Number annotation value | 2-2-4, **3-2-2-2** |
+| *Undergoer* | Participant role | 2-2-1, 3-1-3-1, **3-2-1-1**, 3-2-1-1-2, 3-3-5 |
+| *Undergoer-of* | Participant role | **3-2-1-3** |
+| *Undirected activity* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-4**, 3-3-1-5 |
+| *Undirected endeavor* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
+| Unexpected co-occurrence | Discourse relation | **3-1-6** |
+| Uniform Meaning Representation (UMR) | Annotation scheme | **1**, 2-1, 2-2, 2-2-1, 2-2-2, 2-2-3, 2-2-4, 2-2-5, 3-1-1, 3-1-1-1, 3-1-1-3, 3-1-1-4, 3-1-3, 3-1-3-1, 3-1-3-2, 3-1-3-3, 3-1-3-4, 3-1-3-5, 3-1-4, 3-1-5, 3-1-6, 3-2-1, 3-2-1-1, 3-2-1-1-1, 3-2-1-3, 3-2-2, 3-2-2-2, 3-2-2-6, 3-3, 3-3-1-3, 3-3-2, 3-3-3, 3-3-5, 3-3-6, 4-1, 4-1-1, 4-1-2, 4-2, 4-3, 4-3-1-1 |
+| *Unit* | Non-participant role relation | **3-2-2-5** |
+| Unity under modalization | UMR annotation diagnostic | **3-1-3-3** |
+| Unity under negation | UMR annotation diagnostic | **3-1-3-2** |
+| Unlocatable time expression | Temporal semantic category | **4-2-1-2** |
+| Vague time expression | Temporal semantic category | **4-2-1-2** |
+| Valency-changing operation | Semantic category | **3-1-3-2**, 3-2-1, **3-2-1-1-2**, 3-2-1-2-1 |
+| Valency-increasing applicative | Valency-changing category | **3-2-1-1-2** |
+| Valency-rearranging applicative | Valency-changing category | **3-2-1-1-2** |
+| *Value* | Non-participant role relation | 2-1, 2-2-5, **3-2-2-5** |
+| Venitive | Associated motion semantic category | **3-1-3-4** |
+| Verb | Part of Speech | 2-2-1, 2-2-2, 2-2-3, **3-1-1**, 3-1-1-1, 3-1-1-2, 3-1-3-1, 3-1-3-2, 3-1-3-4, 3-1-3-5, 3-1-6, 3-2-1-1, 3-2-1-1-2, 3-1-3-3, 3-3-5, 4-3-1-6 |
+| Verbal argument indexation | Strategy | **3-1-3-1, 3-3-5** |
+| Verbal predicate | Strategy | **3-1-3-5** |
+| *Weekday* | Temporal annotation relation | **3-2-2-1** |
+| *Wiki* | Non-participant role relation | **3-2-2-4** |
+| Wish | Modal semantic category | **3-1-3-3, 4-3-1-6**, 4-3-2 |
+| Word senses | Category of UMR objects | 1, 2-1, 2-2-1, **3-1-4** |
+| Yabem | Language | 3-2-1-1-1 |
+| *Year* | Temporal annotation relation | 2-2-4, **3-2-2-1** |
+| *Year2* | Temporal annotation relation | **3-2-2-1** |
