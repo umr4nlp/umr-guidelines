@@ -161,7 +161,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	(s2w :TEMP DCT) )
     :modal(
       (s2c4 :AFF AUTH)
-      (s2s :AFF AUT)
+      (s2s :AFF AUTH)
       (s2s2 :AFF AUTH) ) )
 ```
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
