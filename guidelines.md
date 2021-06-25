@@ -122,13 +122,14 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
                     
 (s1 / sentence
     :temporal(
-          (s1t3 :TEMP DCT) )
+          (s1t3 :TEMP DCT)
+	  (s1t2 :Contained s1t3))
     :modal( (s1t2 :AFF AUTH) ) )
         
 ```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *TEMP*. We will define a set of temporal relations we use in UMR in [Part 3-2](#part-3-2-umr-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _contained_ in *today*.
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *TEMP*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-4-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _contained_ in *today*.
 
-The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant that indicates that the *taste-01* event definitely happened, and is thus positive (as indicated by the *AFF* label) from the author's perspective.
+The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *AFF* label.
 
 <span id="1 (2)" label="1 (2)">\[1 (2)\]</span>
 ```
@@ -157,6 +158,8 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
  
 (s2 / sentence
     :temporal(
+    	(s2c4 :Contained s2w)
+    	(s2s :Contained s2w)
         (s2s :After s2c4)
 	(s2w :TEMP DCT) )
     :modal(
@@ -217,7 +220,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
     :modal ( (s4p3 :AFF AUTH)) )
 ```
 
-In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is done by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positive from the point of view of the author.
+In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is indicated by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positive from the point of view of the author.
 
 <span id="1 (5)" label="1 (5)">\[1 (5)\]</span>
 ```
@@ -269,7 +272,7 @@ Snt6: He will spend the next several days at the medical center there before he 
 
 (s6 / sentence
   :temporal(
-     (s6s2 :after s5f)
+     (s6s2 :after DCT)
      (s6r :after s6s2 ))
   :modal (s6s2 :AFF AUTH)
          (s6r :AFF AUTH))
@@ -648,7 +651,7 @@ five	six	months	2/3M-DSTR-be.good-CAUS-PST/HAB-NOM
 ```
 <span id="2-2-3 (2b)" label="2-2-3 (2b)">\[2-2-3 (2b)\]</span>
 ```
-escuela	agrícola	seis	millón	cada	año	on-yanmong-kes-ek
+escuela	agrícola	seis	millón	cada	año	on-yanmong-kes-ek
 school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 'For the agricultural school, we would pay six million (guaranies) per year.'
 
@@ -657,10 +660,10 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 		:ref-person 1st
 		:ref-number Plural)
 	:Recipient (e2/ escuela 'school'
-		:mod (a/ agrícola 'agricultural'))
+		:mod (a/ agrícola 'agricultural'))
 	:Theme (m/ monetary-quantity
 		:quant 6,000,000
-		:unit (g/ guaraní
+		:unit (g/ guaraní
 			:mod (c/ country
 				:wiki "Paraguay"
 				:name (n/ name :op1 "Paraguay"))))
@@ -3965,7 +3968,7 @@ Bill saw rare birds today.
 
 <span id="3-3-5 (1b)" label="3-3-5 (1b)">3-3-5 (1b)</span>
 ```
-áine	ŋara-di-a-ru.
+áine	ŋara-di-a-ru.
 woman	that-3PL-EP-DU
 'Those two women'
 
@@ -3974,7 +3977,7 @@ woman	that-3PL-EP-DU
 	:mod (a/ ŋara))
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept which takes a `:ref-number Singular` attribute. No `:ref-person` attribute is needed here, since the `thing` concept implies third person rather than a speech act participant.
+For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept which takes a `:ref-number Singular` attribute. No `:ref-person` attribute is needed here, since the `thing` concept implies third person rather than a speech act participant.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
@@ -3992,7 +3995,7 @@ NEG-2/3M.IRR-DSTR-eat-PST/HAB-SBJ=PHOD
 	:polarity -)
 ```
 
-The possible values for the `:refer-person` attribute are based on Cysouw's (2003) cross-linguistic study of person-marking systems in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar `1st`, `2nd`, and `3rd` person values. Some languages have more fine-grained person systems, distinguishing a first person `exclusive` from a first person `inclusive` value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
+The possible values for the `:refer-person` attribute are based on Cysouw's (2003) cross-linguistic study of person-marking systems in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar `1st`, `2nd`, and `3rd` person values. Some languages have more fine-grained person systems, distinguishing a first person `exclusive` from a first person `inclusive` value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
 
 ![Person lattice](person-lattice.png)
 
@@ -4014,7 +4017,7 @@ The possible number values for the `:refer-number` attribute are based on Corbet
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-6. Degree
-In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a `:degree` relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat `:degree` as an attribute, with three possible values: `intensifier`, `downtoner`, and `equal`. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná.
+In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a `:degree` relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat `:degree` as an attribute, with three possible values: `intensifier`, `downtoner`, and `equal`. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná.
 
 <span id="3-3-6 (1)" label="3-3-6 (1)">3-3-6 (1)</span>
 ```
