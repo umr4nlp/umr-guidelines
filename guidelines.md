@@ -170,7 +170,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
 
 For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
-happened *last week*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
+happened *last week*, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
 *sentence* event definitely happened. 
 
 <span id="1 (3)" label="1 (3)">\[1 (3)\]</span>
@@ -194,9 +194,9 @@ Snt3: He denied any wrongdoing.
 For this sentence, the coreference annotation indicates that *he* is the same person as *Alexander Pope* mentioned in
 [\[1 (1)\]](#1 (1)). 
 
-The temporal annotation indicates that the document creation time is after his denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear the denying event happened before or after the conviction and sentencing events, so the reference time is determined to be the document creation time.
+The temporal annotation indicates that the document creation time is after his denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
 
-The modal relation indicates that the denying event definitely happened according to the author, and wrongdoing did not happen according to Alexander Pope, based on the author's account.
+The modal relations indicate that the *deny* event definitely happened according to the author, and that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
 
 <span id="1 (4)" label="1 (4)">\[1 (4)\]</span>
 ```
@@ -220,7 +220,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
     :modal ( (s4p3 :AFF AUTH)) )
 ```
 
-In the document-level representation for this sentence, the person that is pardoned by Putin is Alexander Pope, and this is indicated by annotating *he* as the same person as the person whose name is Alexander Pope. In the temporal annotation, the *convict-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as positive from the point of view of the author.
+In the document-level representation for this sentence, the person that is pardoned by Putin is Edmund Pope, and this is indicated by annotating *he* as the same person as the person whose name is Edmund Pope. In the temporal annotation, the *sentence-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as certain from the point of view of the author.
 
 <span id="1 (5)" label="1 (5)">\[1 (5)\]</span>
 ```
@@ -244,7 +244,7 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
     :modal ((s5f :AFF AUTH) )
 ```
 In the document-level annotation of this sentence, *pardon-01* from [\[1 (4)\]](#1 (4)) is chosen as the
-reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is positive that the *fly-01* 
+reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is certain that the *fly-01* 
 event happened.
 
 <span id="1 (6)" label="1 (6)">\[1 (6)\]</span>
@@ -278,7 +278,7 @@ Snt6: He will spend the next several days at the medical center there before he 
          (s6r :AFF AUTH))
   :coref (s6h2 :same-entity s1p)))
 ```
-In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* actually happened according to the author. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in [\[1 (1)\]](#1 (1)). 
+In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in [\[1 (1)\]](#1 (1)). 
 
 <span id="1 (7)" label="1 (7)">\[1 (7)\]</span>
  ```
@@ -303,11 +303,11 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
   :modal ((s7a :AFF AUTH)
          (s7r :AFF AUTH)))
 ```
-For [\[1 (7)\]](#1 (7)), the *remission-02* event happens simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-02* happened.
+For [\[1 (7)\]](#1 (7)), the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-02* happened.
 
 <span id="1 (8)" label="1 (8)">\[1 (8)\]</span>
 ```
-Snt8: Doctors will examine him for signs that the cancer may have come back while he awaiting trial in a Russian jail.
+Snt8: Doctors will examine him for signs that the cancer may have come back while he was awaiting trial in a Russian jail.
 
  (e / examine-01
        :ARG0 (d3 / doctor)
@@ -327,15 +327,17 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
                                            :name (n3 / name :op1 "Russia"))))))
              :ARG2 d3))
 (s8 / sentence
-  :temporal( (s8e :after s6s2))
+  :temporal( (s8e :after DCT)
+  	     (s8a :before s2c4)
+	     (s8c3 :overlap s8a) )
   :modal ((s8e :AFF AUTH)
-          (s8c3 :NEU AUTH)
+          (s8c3 :NEUT AUTH)
           (s8a :AFF AUTH))
   :coref((s8h :same-entity s7p))) 
 ```
 
-The *examine-01* event will happen after the DCT. According to the author, the *examine-01* event definitely happened.
-The author is neutral about whether the cancer has come back. *he* is annotated as being the same person as Alexander Pope.
+The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well.
+The author is uncertain about whether the cancer has come back, indicated with a *Neutral* epistemic strength link. *he* is annotated as being the same person as Edmund Pope.
 
 <span id="1 (9)" label="1 (9)">\[1 (9)\]</span>
 ```
@@ -360,7 +362,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
  :Modal ((s9s :AFF AUTH)
          (s9s3 :AFF (s9p3 :AFF AUTH)))
  ```
-The document-level representation indicates the *say-01* event happened before the *say-01* event, and the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
+The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
 
 [Back to Table of Contents](#toc)
 
@@ -390,31 +392,32 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 **UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
 
 * Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
-* Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word *taste*
+* Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word *taste* in the English PropBank.
 * Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a language-by-language basis.
 * Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
-* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond with any particular word in the sentence, hence it is an *abstract* concept.
+* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond to any particular word in the sentence, hence it is an *abstract* concept.
 
 **UMR relations:** There are also a number of ways relations between concepts are created:
 
-* Participant roles: The partcipant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (sense of the) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant role are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3-2-1](#part-3-2-1-participant-roles).
+* Participant roles: The participant roles characterize the role that a participant plays with respect to the predicate. They can be predicate-specific if a set of *frame files* are defined for a language, where a set of core participant roles are defined for each (sense of the) predicate. For example, `:ARG0` and `:ARG1` are participant roles defined for `taste-01`. For languages that do not have *frame files*, the participant roles are generic (e.g., `Actor`, `Experiencer`), and they are described in [Part 3-2-1](#part-3-2-1-participant-roles).
 * Semantic relations: Other UMR relations include `:temporal`, `:ord`, `:range` etc. that are not normally characterized as participant roles. A complete list of such relations can be found in [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations).
 
 **UMR attributes:** UMR currently has seven attribute types:
 
-* Aspect: Aspect is annotated for eventive concepts only. Non-eventive concepts are not annotated with Aspect and are assigned the default value `Process`. Possible Aspect values include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1](#part-3-3-1-aspect). 
+* Aspect: Aspect is annotated for eventive concepts only (see
+[Part 3-1-1](#part-3-1-1-eventive-concepts) on event identification). Possible Aspect values at the default level of granularity include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1](#part-3-3-1-aspect). 
 * Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation (see [Part 3-3-3](#part-3-3-3-polarity)).
 * Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative`, `expressive`, and `interrogative` (see [Part 3-3-2](#part-3-3-2-mode)).
 * Quantity: The value of a `:quant` attribute is a numerical number (see [Part 3-3-4](#part-3-3-4-quant)).
 * Value: The value of a `:value` attribute is a numerical number (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
-* Degree: The value of a `:degree` attribute is either `intensifier` or `downtoner` (see [Part 3-3-6](#part-3-3-6-degree)).
+* Degree: The value of a `:degree` attribute is either `intensifier`, `downtoner`, or `equal` (see [Part 3-3-6](#part-3-3-6-degree)).
 * Reference: The value of a `:ref-person` or `:ref-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`) or a number feature (e.g. `Singular`, `Dual`, `Paucal`, `Plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
 
 **Differences between AMR and UMR**
 
 UMR differs from AMR in a number of ways:
 
-* UMR is a document-level representation that represents *coreference*, *temporal dependencies*, and *modal dependencies*.
+* UMR has a document-level representation that represents *coreference*, *temporal dependencies*, and *modal dependencies*.
 
 * As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`) - see the AMR and the UMR for *The boy can go* in [\[2 (2a)\]](#2 (2a)) and [\[2 (2b)\]](#2 (2b)), respectively.
 
@@ -431,13 +434,13 @@ UMR differs from AMR in a number of ways:
     :ARG0 boy )
 
 (s0/sentence
-  :modal (s0g :PARTAFF AUTH))
+  :modal (s0g :NEUT AUTH))
   
 ```
 
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
 * UMR allows the use of non-predicate-specific participant roles for languages that do not have *frame files* with lexicalized argument structure information. See [Part 3-2-1](#part-3-2-1-participant-roles) for details.
-* UMR adds  *aspect*  and *ref* attribute to the representation. See [Part 3-3-1](#part-3-3-1-aspect) and [Part 3-3-5](#part-3-3-5-ref) for details.
+* UMR adds *aspect* and *ref* attributes to the representation. See [Part 3-3-1](#part-3-3-1-aspect) and [Part 3-3-5](#part-3-3-5-ref) for details.
 
 [Back to Table of Contents](#toc)
 
@@ -471,7 +474,7 @@ which means that they function as nodes in the AMR graphs. This is the
 case for predicates and (heads of) referring expressions, for instance.
 Other meanings are represented as *relations* in AMR, which means that
 they function as edges in the AMR graphs. This is the case for argument
-roles and modifiers of nouns, amongst others.
+roles and a range of different modification relations, amongst others.
 
 #### Part 2-2-1: Predicate-argument relations.
 
@@ -482,10 +485,7 @@ predicated states, events that are being referred to or used as
 modifiers, and various other kinds of "non-verbal predicates" (see
 [Part 3-1-1](#part-3-1-1-eventive-concepts) on event identification). For annotation of English texts,
 sense-disambiguated predicates from PropBank, such as the one presented below for English _taste_ are used to label predicate
-nodes. Since for most languages, no equivalent of PropBank is available,
-we recommend labelling nodes with a citation form of the verb
-supplemented with a `-00` suffix. In this way, annotations can be used for
-the development of digital lexicons in the future.
+nodes. Since for most languages, no equivalent of PropBank is available, the UMR annotation tool contains a lexicon-building functionality where annotators can either upload a lexicon created in FLEx to support them in their annotation effort, or they can start a lexicon with argument structure information from scratch and essentially build PropBank-style frame files on the fly.
 
 ```
 Roleset id: taste.01, use one's tastebuds, active perception of flavor.
