@@ -1621,6 +1621,28 @@ Someone didn't answer all the questions
                 :ARG1 q))
 ```
 
+Related to scope is the issue of distributive vs. collective interpretations of events. Ambiguities in this realm may arise in a great number of different contexts. They may be triggered by, amongst others, explicit quantifiers or numerals, or events with plural arguments. For example, in [\[3-1-5 (2)\]](#3-1-5 (2)) below, is there a single woman which every man loves, or does every man love a different woman? The latter interpretation is distributive, the former is usually interpreted as collective.
+
+<span id="3-1-5 (2)" label="3-1-5 (2)">\[3-1-5 (2)\]</span>
+
+<span id="3-1-5 (2a)" label="3-1-5 (2a)">\[3-1-5 (2a)\]</span> Each man loves a woman.
+
+However, many cases that are technically ambiguous nevertheless have a strong default reading reading stemming from the lexical semantics of the predicate and its arguments. For example, in [\[3-1-5 (3a)\]](#3-1-5 (3a)), there is a strong default interpretation that every single student ran 5 kilometers rather than that they ran a total of 5 kilometers between them - _run_ is typically an individual activity, so its lexical semantics trigger a default distributive reading. However, in [\[3-1-5 (3b)\]](#3-1-5 (3b)), the equally strong default interpretation is that the students carried the piano together and there was only a single carrying-event - our world knowledge specifies that things as heavy as a piano must typically be carried by multiple people, so the lexical semantics of the predicate here trigger a default collective reading. In yet another set of cases, our "default" feeling is that it does not really matter in what configurations the participants participate in the denoted events. In [\[3-1-5 (3c)\]](#3-1-5 (3c)), all that typically matters is that 6 states were hit by at least one hurricane, and that there was a total of 10 hurricanes. We can't really know how many hurricanes hit each state, and we don't really care - all we know is that 6 states and 10 hurricanes were involved. This kind of default interpretation is called a summation reading.
+					
+<span id="3-1-5 (3)" label="3-1-5 (3)">\[3-1-5 (3)\]</span>
+
+<span id="3-1-5 (3a)" label="3-1-5 (3a)">\[3-1-5 (3a)\]</span> The linguistics students ran 5 kilometers to raise money for charity.
+<span id="3-1-5 (3b)" label="3-1-5 (3b)">\[3-1-5 (3b)\]</span> The linguistics students carried a piano into the theater.
+<span id="3-1-5 (3c)" label="3-1-5 (3c)">\[3-1-5 (3c)\]</span> Ten hurricanes hit six states over the weekend.
+
+Scope will not be annotated for summation readings (as we cannot reliably know it from the text alone), nor is it annotated where a distributive or collective reading can be predictably derived from the lexical semantics. In other words, whenever _run_ is interpreted distributively or _carry a piano_ is interpreted collectively, no scope annotation is needed. The scope annotation only comes into play when some overt linguistic element forces an interpretation that diverges from the lexical default. For example, in [\[3-1-5 (4a)\]](#3-1-5 (4a)), _together_ forces a collective interpretation of _run_, in [\[3-1-5 (4b)\]](#3-1-5 (4b)), _each_ forces a distributive interpretation of _carry a piano_, and in [\[3-1-5 (4c)\]](#3-1-5 (4c)), _each_ similarly forces a distributive interpretation of _hit_. In all these cases, a (s / scope) predicate would appear to clarify the non-canonical scopal relations.
+
+<span id="3-1-5 (4)" label="3-1-5 (4)">\[3-1-5 (4)\]</span>
+
+<span id="3-1-5 (4a)" label="3-1-5 (4a)">\[3-1-5 (4a)\]</span> The linguistics students together ran 200 kilometers to raise money for charity.
+<span id="3-1-5 (4b)" label="3-1-5 (4b)">\[3-1-5 (4b)\]</span> The bodybuilders each carried a piano into the theater.
+<span id="3-1-5 (4c)" label="3-1-5 (4c)">\[3-1-5 (4c)\]</span> Ten hurricanes each hit six states over the weekend.
+
 [Back to Table of Contents](#toc)
 
 #### Part 3-1-6. Discourse-relations
