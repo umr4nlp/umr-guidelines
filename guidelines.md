@@ -1112,7 +1112,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 
 |Type   |  Subtype (AMR NE Type) |
 |-------|------------------------|
-|       |person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement|
+| person  |person, family, animal, language, nationality, ethnic-group, regional-group, religious-group, political-movement|
 |*Organization* | commerical_org (company), political_org (political-party), government_org (government_organization), military_org (military), criminal_org (criminal-organization), academic_org (school, university, research-institute), sports_org (team, league), market-sector|
 | *Geographic-entity*   | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest|
 |  *Celestial-body*     |moon, planet, star, constellation|
