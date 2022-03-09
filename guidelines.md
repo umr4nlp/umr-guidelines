@@ -1121,7 +1121,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 |  *facility*| airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park|
 |  *event*   |  incident, natural-disaster, earthquake, war, conference, game, festival|
 |  *product* |vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program|
-|       |publication (book, newspaper, magazine, journal)|
+|   *publication*    |book, newspaper, magazine, journal|
 |  *Natural-object*| |
 |  *Artifact*      |award, law, court-decision, treaty, music-key, musical-note, food-dish, writing-script, variable, program|
 |   *Biomedical-entity*| molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition|
