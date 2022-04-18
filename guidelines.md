@@ -1108,6 +1108,26 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 <!--organization, company, government-organization, military, criminal-organization, political-party, market-sector, school, university, research-institute, team, league-->
 <!--location, city, city-district, county, state, province, territory, country, local-region, country-region, world-region, continent; ocean, sea, lake, river, gulf, bay, strait, canal; peninsula, mountain, volcano, valley, canyon, island, desert, forest moon, planet, star, constellation, (landforms and water forms?)-->
 
+
+<div id="tab:named_entity_types">
+| Class            |Type                |Subtype           |
+| animal           |                    |                  |
+| plant            |                    |                  |
+| language         |                    |                  |
+| nationality      |                    |                  |
+|individual_person |                    |                  |
+|social_group      |family              |                  | 
+|                  |ethnic-group        |                  |
+|                  |regional-group      |                  |
+|                  |religious-group     |                  |
+|                  |clan              	|                  |
+|                  |organization        |international_organization, business, company, government_organization, 
+	                                 political_organization, criminal_organization,  armed_organization, academic_organization, 
+	                                 association, sports_organization, religious_organization|
+|geographic_entity|ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley,    canyon, island, desert, forest|  |
+|region           |local-region, country-region, world-region|   |
+</div>
+
 <div id="tab:named_entity_types">
 
 |Type   |  Subtype (AMR NE Type) |
