@@ -1130,13 +1130,13 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 |  GPE             |city, city-district, county, state, province, territory, country|  |
 | facility         | airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park |  |
 | vehicle          |  ship, aircraft, aircraft-type, spaceship, car-make | |
-| creative_endeavour | work-of-art| | |
-|                    | picture    | | |
-|                    | music      | | |
-|                    | show       | | |
-|                    | broadcast-program | | |
-|                    | writing-script | | |
-|                    | publication  |book, newspaper, magazine, journal |
+| creative_endeavour | work-of-art |
+|                    |picture      |
+|                    |music        | 
+|                    | show        |
+|                    | broadcast-program |
+|                    | writing-script |
+|                    |publication  |book, newspaper, magazine, journal |
 | event              | incident,  natural-disaster, earthquake, war, conference, game, festival, ceremony | |
 | law                | court-decision, treaty | | 
 | award              |  |   |
