@@ -1110,24 +1110,46 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 
 
 <div id="tab:named_entity_types">
+	
 | Class            |Type                |Subtype           |
+|------------------|--------------------|------------------|
 | animal           |                    |                  |
 | plant            |                    |                  |
 | language         |                    |                  |
 | nationality      |                    |                  |
-|individual_person |                    |                  |
-|social_group      |family              |                  | 
-|                  |ethnic-group        |                  |
-|                  |regional-group      |                  |
-|                  |religious-group     |                  |
-|                  |clan              	|                  |
-|                  |organization        |international_organization, business, company, government_organization, 
-	                                 political_organization, criminal_organization,  armed_organization, academic_organization, 
-	                                 association, sports_organization, religious_organization|
-|geographic_entity|ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley,    canyon, island, desert, forest|  |
-|region           |local-region, country-region, world-region|   |
+| individual_person |                    |                  |
+| social_group      | family              |                  | 
+|                  | ethnic-group        |                  |
+|                  | regional-group      |                  |
+|                  | religious-group     |                  |
+|                  | clan              	|                  |
+|                  | organization        | international_organization, business, company, government_organization, political_organization, criminal_organization,  armed_organization, academic_organization, association, sports_organization, religious_organization |
+| geographic_entity | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley,  canyon, island, desert, forest |  |
+|  Celestial-body   | moon, planet, star, constellation |   |
+| region           | local-region, country-region, world-region |   |
+|  GPE             |city, city-district, county, state, province, territory, country|  |
+| facility         | airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park |  |
+| vehicle          |  ship, aircraft, aircraft-type, spaceship, car-make | |
+| creative_endeavour | work-of-art| | |
+|                    | picture    | | |
+|                    | music      | | |
+|                    | show       | | |
+|                    | broadcast-program | | |
+|                    | writing-script | | |
+|                    | publication  |book, newspaper, magazine, journal |
+| event              | incident,  natural-disaster, earthquake, war, conference, game, festival, ceremony | |
+| law                | court-decision, treaty | | 
+| award              |  |   |
+| food-dish          |  |   |
+| music-key          |  |   |
+| musical-note       |  |   |
+| variable           |   |  |
+| program            |   |   |
+| biomedical-entity | molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition| |
+
 </div>
 
+<!-- 
 <div id="tab:named_entity_types">
 
 |Type   |  Subtype (AMR NE Type) |
@@ -1148,6 +1170,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 
 Table 5: Named entity types
 </div>
+-->
 
  #### Part 3-1-3. Concept-word mismatches
  
