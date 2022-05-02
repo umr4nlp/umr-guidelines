@@ -4293,7 +4293,7 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 
 <span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
 <!--  ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred -->
- ::snt The arrests were ordered by anti-terrorism judge fragnoli.
+ ::snt 2 The arrests were ordered by anti-terrorism judge fragnoli.
 <!-- ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt -->
 ```
 (o / order-01
