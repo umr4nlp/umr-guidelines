@@ -4274,9 +4274,9 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 <span id="4-1-2 (3)" label="4-1-2 (3)">4-1-2 (3)</span>
 
 <span id="4-1-2 (3a)" label="4-1-2 (3a)">4-1-2 (3a)</span>
-::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+<!-- ::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred -->
  ::snt 1 arrest took place in the Netherlands and another in Germany.
- ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt
+<!-- ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt -->
 
 ```
 (a / and
@@ -4292,9 +4292,9 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 ```
 
 <span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
- ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+<!--  ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred -->
  ::snt The arrests were ordered by anti-terrorism judge fragnoli.
- ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt
+<!-- ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt -->
 ```
 (o / order-01
       :Aspect Performance
