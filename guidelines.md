@@ -4307,7 +4307,7 @@ The `:subset-of` relation is also used to annotate the subset relations between 
       :ARG2 (a / arrest-01))
  
  (s / sentence
-  :coref ((s1a3, s2a :subset-of s1a3))
+  :coref ((s1a3, s1a2 :subset-of s2a))
 ```
 
 - Script / subevent?
