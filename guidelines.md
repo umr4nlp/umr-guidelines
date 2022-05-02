@@ -1127,24 +1127,25 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 | geographic_entity | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley,  canyon, island, desert, forest |  |
 |  Celestial-body   | moon, planet, star, constellation |   |
 | region           | local-region, country-region, world-region |   |
-|  GPE             |city, city-district, county, state, province, territory, country|  |
+|  geo-politica-entity             |city, city-district, county, state, province, territory, country|  |
 | facility         | airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park |  |
 | vehicle          |  ship, aircraft, aircraft-type, spaceship, car-make | |
-| creative_endeavour | work-of-art |
+| cultural-artifact | work-of-art |
 |                    |picture      |
 |                    |music        | 
+|                    |literature   |
+|                    |dance        |
 |                    | show        |
 |                    | broadcast-program |
-|                    | writing-script |
 |                    |publication  |book, newspaper, magazine, journal |
+|cultural-activity   |             |       |
 | event              | incident,  natural-disaster, earthquake, war, conference, game, festival, ceremony | |
 | law                | court-decision, treaty | | 
 | award              |  |   |
 | food-dish          |  |   |
-| music-key          |  |   |
-| musical-note       |  |   |
+|notational-system   |writing-script, music-key, musical-note |
 | variable           |   |  |
-| program            |   |   |
+| computer-program   |   |   |
 | biomedical-entity | molecular-physical-entity, small-molecule, protein, protein-family, protein-segment, amino-acid, macro-molecular-complex, enzyme, nucleic-acid, pathway, gene, dna-sequence, cell, cell-line, species, taxon, disease, medical-condition| |
 
 </div>
