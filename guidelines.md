@@ -188,7 +188,7 @@ Snt3: He denied any wrongdoing.
 (d/ deny-01 
       :ARG0 (p/person
          :ref-person 3rd
-	 :ref-number SG)
+	 :ref-number Singular)
       :ARG1 (t/ thing
             :ARG1-of (d2/ do-02
                   :ARG0 p
@@ -225,7 +225,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
                   :ARG2 (p3/ president)))
       :ARG1 (p4/ person
       	    :ref-person 3rd
-	    :ref-number SG)
+	    :ref-number Singular)
       :ARG1-of (c2/ cause-01
             :ARG0 (r/ reason
                   :mod (h2/ health)))
@@ -274,7 +274,7 @@ Snt6: He will spend the next several days at the medical center there before he 
 (s/ spend-02
       :ARG0 (p/ person
          :ref-person 3rd
-	 :ref-number SG)
+	 :ref-number Singular)
       :ARG1 (t/ temporal-quantity
          :quant (s2/ several)
 	 :unit (d/ day
@@ -341,10 +341,10 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 
  (e/ examine-01
        :ARG0 (d/ doctor
-          :ref-number PL)
+          :ref-number Plural)
        :ARG1 (p/ person
           :ref-person 3rd
-	  :ref-number SG)
+	  :ref-number Singular)
        :ARG2 (s/ signal-07
           :ARG1 (c/ come-01
 	     :ARG1 (d2/ disease :wiki "Cancer"
@@ -385,7 +385,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
       :ARG0 (p/ person
             :ARG0-of (h/ have-org-role-91
                   :ARG2 (s2/ spokeswoman))
-	    :ref-number SG)
+	    :ref-number Singular)
       :ARG1 (s3/ suffer-01
             :ARG0 (p2/ person :wiki "Edmond_Pope"
 	          :name (n/ name :op1 "Pope"))
@@ -423,17 +423,18 @@ UMR inherits the sentence-level representation of AMR, with modifications. Like 
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
-(t2 / taste-01
-  :aspect Performance
-  :ARG0 (p / person :wiki "Edmond_Pope"
-         :name (n2 / name :op1 "Edmund" :op2 "Pope"))
-  :ARG1 (f / free-04
+(t/ taste-01
+  :ARG0 (p/ person :wiki "Edmond_Pope"
+         :name (n/ name :op1 "Edmund" :op2 "Pope"))
+  :ARG1 (f/ free-04
          :ARG1 p)
-  :temporal (t3 / today)
-  :ord (o3 / ordinal-entity :value 1
-        :range (m / more-than
-                :op1 (t / temporal-quantity :quant 8
-                    :unit (m2 / month)))))
+  :temporal (t2/ today)
+  :ord (o/ ordinal-entity :value 1
+        :range (m/ more-than
+                :op1 (t3/ temporal-quantity :quant 8
+                    :unit (m2/ month))))
+  :aspect Performance
+  :modstr FullAff)
 ```
 
 **UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
@@ -442,7 +443,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 * Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word *taste* in the English PropBank.
 * Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a language-by-language basis.
 * Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
-* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond to any particular word in the sentence, hence it is an *abstract* concept.
+* Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond to any particular word in the sentence, hence it is an *abstract* concept (e.g. `ordinal-entity`).
 
 **UMR relations:** There are also a number of ways relations between concepts are created:
 
@@ -460,6 +461,12 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 * Degree: The value of a `:degree` attribute is either `intensifier`, `downtoner`, or `equal` (see [Part 3-3-6](#part-3-3-6-degree)).
 * Reference: The value of a `:ref-person` or `:ref-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`) or a number feature (e.g. `Singular`, `Dual`, `Paucal`, `Plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
 
+**UMR modal values:** UMR currently has three modal relations that are annotated at the sentence level, even though the final modal dependency structure functions at the document level:
+
+* Modstr: Indicates the epistemic strength relation (degree of confidence/certainty) between a conceiver and an event or between a conceiver and an embedded conceiver.
+* Modal: Indicates the relation between a modal complement-taking predicate and its complement
+* Quot: Indicates the relation between a speech predicate and its complement
+
 **Differences between AMR and UMR**
 
 UMR differs from AMR in a number of ways:
@@ -471,22 +478,26 @@ UMR differs from AMR in a number of ways:
 <span id="2 (2a)" label="2 (2a)">\[2 (2a)\]</span>
 
 ```
-(p / possible-01
-   :ARG0 ( g / go-01  
-            :ARG0 boy ))
+(p/ possible-01
+   :ARG0 (g/ go-01  
+            :ARG0 (b/ boy
+	       :ref-number Singular)))
 ```
 <span id="2 (2b)" label="2 (2b)">\[2 (2b)\]</span>
 ```
-( g / go-01  
-    :ARG0 boy )
+(g/ go-01  
+    :ARG0 (b/ boy
+    	:ref-number Singular)
+    :aspect State
+    :modstr NeutAff)
 
 (s0/sentence
-  :modal (s0g :NEUT AUTH))
+  :modal (AUTH :NEUT s0g))
   
 ```
 
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
-* UMR allows the use of non-predicate-specific participant roles for languages that do not have *frame files* with lexicalized argument structure information. See [Part 3-2-1](#part-3-2-1-participant-roles) for details.
+* UMR allows the use of non-predicate-specific participant roles for languages that do not have *frame files* with lexicalized argument structure information. See [Part 3-2-1](#part-3-2-1-participant-roles) for details. To further accomodate languages with less advanced grammatical description or resource availability, other annotation domains are structured as *lattices*.
 * UMR adds *aspect* and *ref* attributes to the representation. See [Part 3-3-1](#part-3-3-1-aspect) and [Part 3-3-5](#part-3-3-5-ref) for details.
 
 [Back to Table of Contents](#toc)
@@ -552,7 +563,7 @@ nodes in these structures carries a participant role label. For English,
 these participant role labels are predicate-specific, numbered argument
 roles drawn once again from PropBank. For languages without comparable
 lexical databases, we use an inventory of general argument roles such as
-`:Actor`, `:Undergoer`, and `:Theme`. In the long run, annotations can be used to
+`:actor`, `:undergoer`, and `:theme`. In the long run, annotations can be used to
 create language-specific and predicate-specific frame files detailing
 argument structure of individual predicates, and the predicate-specific
 argument roles can be linked to predicate-general participant roles for
@@ -562,14 +573,20 @@ form in [\[2-2-1 (1)\]](#2-2-1 (1)) from Sanapaná (Enlhet-Enenlhet) below.
 
 <span id="2-2-1 (1)" label="2-2-1 (1)">\[2-2-1 (1)\]</span>
 ```
-ap-hle-am-ke'			nenhlet
-2M-travel-PST/HAB-V1.NFUT	person
+ap-hle-am-ke'		nenhlet
+2/3M-travel-TI-DECL	person
 'A man travelled.'
 
-(e / enhleama-00 'travel'
-	:Actor (n / nenhlet 'person'))
-(t / travel-01
-	:ARG0 (m/ man))
+(e/ enhleama-00 'travel'
+	:actor (n/ nenhlet 'person'
+		:ref-number Singular)
+	:aspect Endeavor
+	:modstr FullAff)
+(t/ travel-01
+	:ARG0 (m/ man
+		:ref-number Singular)
+	:aspect Endeavor
+	:modstr FullAff)
 ```
 
 The basic, AMR-inspired graph structures for simple sentences in
@@ -581,7 +598,7 @@ one just has the citation form of the *travel*-verb with a `-00` suffix.
 In both cases, the semantic argument 'person/man' is a daughter of this
 predicate, linked with a participant role edge. In English, this is a
 numbered participant role taken from this same PropBank frame file,
-while in Sanapaná it is a predicate-general participant role.
+while in Sanapaná it is a predicate-general participant role. In both languages, the participant has a :ref-number Singular attribute.
 
 AMR and UMR concepts are underspecified for morphosyntactic
 representation: the same concept (for example, `travel-01`) can be used
@@ -593,14 +610,18 @@ content in different parts of speech.
 ```
 I heard about his travels.
 
-(h / hear-01
-	:ARG0 (p / person
+(h/ hear-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (t / travel-01
-		:ARG0 (p2 / person
+	:ARG1 (t/ travel-01
+		:ARG0 (p2/ person
 			:ref-person 3rd
-			:ref-number Singular))
+			:ref-number Singular)
+		:aspect Process
+		:modstr FullAff)
+	:aspect State
+	:modstr FullAff)
 ```
 
 #### Part 2-2-2: Multi-word expressions.
@@ -624,14 +645,15 @@ specifically in section [Part 3-1-3-6](#part-3-1-3-6-multi-word-concepts).
 
 <span id="2-2-2 (1)" label="2-2-2 (1)">\[2-2-2 (1)\]</span>
 ```
-apk-el-vongk-es-akp-e'			tayep	ayko<'o>k
-2/3M-DISTR-be.just-CAUS-PAS-V1.NFUT	across	child<PL>
+apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
+2/3M-DSTR-be.just-CAUS-PAS-DECL	across	child<PL>
 'The children were rescued.'
 
-(e / elvongkeskama-tayep-00 'rescue'
-	:Undergoer (a/ aykok 'child'
+(e/ elvongkeskama-tayep-00 'rescue'
+	:Undergoer (a/ ayko'ok 'child'
 		:ref-number Plural)
-	:aspect Performance)
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 #### Part 2-2-3: Abstract concepts.
@@ -654,16 +676,17 @@ information on such "non-verbal clauses").
 
 <span id="2-2-3 (1)" label="2-2-3 (1)">\[2-2-3 (1)\]</span>
 ```
-an-yetn-eye'			ko'o	vakka-hak	ah-angkok
-2/3F-exist-V1.NFUT		1SG:PRO	cow-old;broken	1SG-POS
+an-yetn-eye'		ko'o	vakka-hak	ah-angkok
+2/3F-exist-DECL		1SG:PRO	cow-old		1SG-POS
 'I have a book.' lit. 'My book exists.'
 
 (h/ have-03
-	:ARG0 (p / person
+	:ARG1 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (v/ vakkahak 'book')
-	:aspect State)
+	:ARG2 (v/ vakkahak 'book')
+	:aspect State
+	:modstr FullAff)
 ```
 
 Secondly, abstract concept conventions are inherited from AMR in a
@@ -672,29 +695,30 @@ needs to be standardized for computational tractability. This applies
 to, for example, the annotation of different types of quantities (which
 use abstract concepts such as `distance-quantity`,
 `temporal-quantity` and `monetary-quantity`, as
-illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a)) )-[\[2-2-3 (2b)\]](#2-2-3 (2b)), and the annotation of dates and times (which use abstract concepts such as `date-entity`, as illustrated in [\[2-2-3 (2c)\]](#2-2-3 (2c)) (all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
+illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a))-[\[2-2-3 (2b)\]](#2-2-3 (2b))), and the annotation of dates and times (which use abstract concepts such as `date-entity`, as illustrated in [\[2-2-3 (2c)\]](#2-2-3 (2c)), all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
 
 <span id="2-2-3 (2)" label="2-2-3 (2)">\[2-2-3 (2)\]</span>
 
 <span id="2-2-3 (2a)" label="2-2-3 (2a)">\[2-2-3 (2a)\]</span>
 ```
 cinco,	seis	meses	apk-ehl-ta'mehl-kes-kam-a
-five	six	months	2/3M-DSTR-be.good-CAUS-PST/HAB-NOM
+five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 'They would preserve it for five or six months.'
 
 (e/ enta'mehlkeskama-00 'preserve'
-	:Actor (p/ person
+	:actor (p/ person
 		:ref-person 3rd
 		:ref-number Plural)
-	:Undergoer (t/ thing)
-	:Duration (o/ or
+	:undergoer (t/ thing)
+	:duration (o/ or
 		:op1 (t2/ temporal-quantity
 			:quant 5
 			:unit (m/ mes 'month'))
 		:op2 (t3/ temporal-quantity
 			:quant 6
 			:unit (m/ mes 'month')))
-	:aspect Habitual)
+	:aspect Habitual
+	:modstr FullAff)
 ```
 <span id="2-2-3 (2b)" label="2-2-3 (2b)">\[2-2-3 (2b)\]</span>
 ```
@@ -703,42 +727,44 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 'For the agricultural school, we would pay six million (guaranies) per year.'
 
 (e/ enyanmongkeskama-00 'pay'
-	:Actor (p/ person
+	:actor (p/ person
 		:ref-person 1st
 		:ref-number Plural)
-	:Recipient (e2/ escuela 'school'
+	:recipient (e2/ escuela 'school'
 		:mod (a/ agrícola 'agricultural'))
-	:Theme (m/ monetary-quantity
+	:theme (m/ monetary-quantity
 		:quant 6,000,000
 		:unit (g/ guaraní
 			:mod (c/ country
 				:wiki "Paraguay"
 				:name (n/ name :op1 "Paraguay"))))
-	:Frequency (r/ rate-entity
+	:frequency (r/ rate-entity
 		:ARG1 1
 		:ARG2 (t/ temporal-quantity
 			:quant 1
 			:unit (a2/ año 'year)))
-	:aspect Habitual)
+	:aspect Habitual
+	:modstr FullAff)
 ```
 <span id="2-2-3 (2c)" label="2-2-3 (2c)">\[2-2-3 (2c)\]</span>
 ```
-apk-el-v-ayk-akh-a'			Venancio	el-eyv-om-akha'			mil		novecientos	sesenta	y	seis=anehla
-2/3M-DSTR-arrive-PST/HAB-REP-NOM	Venancio	1PL-live-PST/HAB-NOM.LOC	thousand	nine-hundred	sixty	and	six=DUB
+apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=anehla
+2/3M-DSTR-arrive-TI-DUPL-NOM	Venancio	1PL-live-TI-NOM.LOC	thousand	nine-hundred	sixty	and	six=DUB
 'Venancio and his companions arrived where we lived in ninteen sixty-six, maybe.'
 
 (e/ elvay'a-00 'arrive'
-	:Actor (p/ person
-		:name (n/ name "Venancio")
-	:Companion (p2/ person))
-	:Goal (p3/ place
-		:Place-of (e2/ eleyvoma-00 'live'
-			:Actor (p4/ person
+	:actor (p/ person
+		:name (n/ name :op1 "Venancio")
+	:companion (p2/ person))
+	:goal (p3/ place
+		:place-of (e2/ eleyvoma-00 'live'
+			:actor (p4/ person
 				:ref-person 1st
 				:ref-number Plural)))
-	:Temporal (d/ date-entity
+	:temporal (d/ date-entity
 		:year 1966)
-	:aspect Performance)
+	:aspect Performance
+	:modstr NeutAff)
 ```
 
 #### Part 2-2-4: Non-participant role relations.
@@ -764,7 +790,7 @@ other relations such as `:medium`, `:topic`, and `:consist-of`. In UMR, these
 other relations still exist, but they are treated as more fine-grained
 values on a lattice underneath the more general `:mod` relation. Whereas
 AMR used the `:frequency` and `:duration` relations as the main ways of
-annotating Aspect, UMR does this through a dedicated `:Aspect` attribute.
+annotating aspect, UMR does this through a dedicated `:aspect` attribute.
 However, UMR maintains the `:duration` and `:frequency` relations so that
 annotators can use them to indicate more fine-grained aspectual
 information beyond the aspect categories offered in the corresponding
@@ -775,8 +801,8 @@ attribute, as in [\[2-2-3 (2b)\]](#2-2-3 (2b)). UMR also adds a new non-particip
 The last area in which AMR conventions are inherited by UMR is that of
 *attribute* annotations. Attributes are relations which attach one of a
 closed, pre-defined list of values to a concept node: for example, the
-`:Aspect` attribute allows annotators to hang a `state`, `habitual`,
-`activity`, `endeavor`, or `performance` value off
+`:aspect` attribute allows annotators to hang a `State`, `Habitual`,
+`Activity`, `Endeavor`, or `Performance` value off
 of a predicate node.
 
 Attributes inherited from AMR are `:polarity`, `:mode`,
@@ -796,7 +822,7 @@ comparability. This means that even less conventionalized measure terms,
 like English *cup* or *bag*, are annotated as modifiers, even though
 they look like morphosyntactic heads. This is illustrated in [\[2-2-5 (1)\]](#2-2-5 (1)). The use of the `:polarity` value is constrained to the sentence level.
 Propositional negation is annotated in the modal section of the document
-level annotation. The `:polarity` value is used to indicate any overt
+level annotation and through :modstr relations. The `:polarity` value is used to indicate any overt
 morphosyntactic exponents of negation at the sentence level, flagging
 such concepts as interesting for the modal or scope negation. This
 includes e.g. morphologically negated adjectives like _unhappy_, even though in the
@@ -808,7 +834,7 @@ Three bottles of water
 
 (w/ water
 	:quant 3
-	:unit (b/ bottle)
+	:unit (b/ bottle))
 ```
 
 UMR introduces four new attributes: `:aspect` (see [Part 3-3-1](#part-3-3-1-Aspect)), `:degree` (see [Part 3-3-6](#part-3-3-6-degree)), and
