@@ -1072,13 +1072,13 @@ States in modification, as in [\[3-1-1-3 (2a)\]](#3-1-1-3 (2a)) and
 <span id="3-1-1-3 (2)" label="3-1-1-3 (2)">\[3-1-1-3 (2)\]</span>
 
 <span id="3-1-1-3 (2a)" label="3-1-1-3 (2a)">\[3-1-1-3 (2a)\]</span> The
-<u>tall</u> man...
+<u>_tall_</u> man...
 
 <span id="3-1-1-3 (2b)" label="3-1-1-3 (2b)">\[3-1-1-3 (2b)\]</span> The man,
-<u>who is tall</u>...
+<u>_who is tall_</u>...
 
 <span id="3-1-1-3 (2c)" label="3-1-1-3 (2c)">\[3-1-1-3 (2c)\]</span> His
-<u>happiness</u>...
+<u>_happiness_</u>...
 
 Similarly, entities in modification, as in [\[3-1-1-3 (3a)\]](#3-1-1-3 (3a)),
 and entities in reference, as in [\[3-1-1-3 (3b)\]](#3-1-1-3 (3b)), are not
@@ -1087,10 +1087,10 @@ identified as events.
 <span id="3-1-1-3 (3)" label="3-1-1-3 (3)">\[3-1-1-3 (3)\]</span>
 
 <span id="3-1-1-3 (3a)" label="3-1-1-3 (3a)">\[3-1-1-3 (3a)\]</span> The man,
-<u>who is a doctor</u>...
+<u>_who is a doctor_</u>...
 
 <span id="3-1-1-3 (3b)" label="3-1-1-3 (3b)">\[3-1-1-3 (3b)\]</span> The
-<u>doctor</u>
+<u>_doctor_</u>
 
 Causal relationships follow the same rules as states and entities. They
 are identified as events when they are predicated, as in
@@ -1100,10 +1100,10 @@ otherwise, like in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)).
 <span id="3-1-1-3 (4)" label="3-1-1-3 (4)">\[3-1-1-3 (4)\]</span>
 
 <span id="3-1-1-3 (4a)" label="3-1-1-3 (4a)">\[3-1-1-3 (4a)\]</span> The
-**explosion <u>caused</u>** the house **to collapse**.
+**explosion <u>_caused_</u>** the house **to collapse**.
 
 <span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The house
-**collapsed** <u>because</u> of the **explosion**.
+**collapsed** <u>_because_</u> of the **explosion**.
 
 [Back to Table of Contents](#toc)
 
@@ -1124,7 +1124,7 @@ event corresponds to an event mentioned earlier in the text (as in
 
 <span id="3-1-1-4 (1a)" label="3-1-1-4 (1a)">\[3-1-1-4 (1a)\]</span> John was **smoking** on
 the corner of the street, but when he **saw** me, he stopped <u>
-**\[smoking\]**</u>.
+**\[_smoking_\]**</u>.
 
 <span id="3-1-1-4 (1b)" label="3-1-1-4 (1b)">\[3-1-1-4 (1b)\]</span> They **told** me “a card
 was **left** on Tuesday” (no it wasn’t <u>**\[left\]**</u> *of
