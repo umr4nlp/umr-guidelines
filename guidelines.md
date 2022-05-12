@@ -910,14 +910,14 @@ corresponding cross-linguistically to unmarked verbs. They will
 therefore always be identified as events. This is shown in
 [\[3-1-1-1 (1)\]](#3-1-1-1 (1)) below. (Throughout this section, words
 that are identified as events will be shown in bold; the relevant
-phenomenon under discussion will be underlined.)
+phenomenon under discussion will be italicized.)
 
 <span id="3-1-1-1 (1)" label="3-1-1-1 (1)">\[3-1-1-1 (1)\]</span>
 
 <span id="3-1-1-1 (1a)" label="3-1-1-1 (1a)">\[3-1-1-1 (1a)\]</span> She
-<u>**repaired**</u> her bike.  
+<u>**_repaired_**</u> her bike.  
 <span id="3-1-1-1 (1b)" label="3-1-1-1 (1b)">\[3-1-1-1 (1b)\]</span> Before
-she <u>**went**</u> to school, she **repaired** my bike.  
+she <u>**_went_**</u> to school, she **repaired** my bike.  
 
 Regardless of whether they are in an independent clause, like *repaired*
 in [\[3-1-1-1 (1a)\]](#3-1-1-1 (1a)), or a dependent clause, like *went* in
@@ -937,16 +937,16 @@ morphosyntactic forms, such as event nominals (as in
 <span id="3-1-1-2 (1)" label="3-1-1-2 (1)">\[3-1-1-2 (1)\]</span>
 
 <span id="3-1-1-2 (1a)" label="3-1-1-2 (1a)">\[3-1-1-2 (1a)\]</span> The
-**<u>storm</u> damaged** the roads.
+**<u>_storm_</u> damaged** the roads.
 
 <span id="3-1-1-2 (1b)" label="3-1-1-2 (1b)">\[3-1-1-2 (1b)\]</span> She
-**wanted <u>to go</u>** to school.
+**wanted <u>_to go_</u>** to school.
 
 <span id="3-1-1-2 (1c)" label="3-1-1-2 (1c)">\[3-1-1-2 (1c)\]</span> The
-student **<u>playing</u>** the violin **likes** Bach.
+student **<u>_playing_</u>** the violin **likes** Bach.
 
 <span id="3-1-1-2 (1d)" label="3-1-1-2 (1d)">\[3-1-1-2 (1d)\]</span> The student,
-who is **<u>playing</u>** the violin, **likes** Bach.
+who is **<u>_playing_</u>** the violin, **likes** Bach.
 
 The combination of semantic type and information packaging determines
 whether or not a particular word in a particular context is identified
@@ -960,10 +960,10 @@ derived from verbs actually refer to processes, as in
 <span id="3-1-1-2 (2)" label="3-1-1-2 (2)">\[3-1-1-2 (2)\]</span>
 
 <span id="3-1-1-2 (2a)" label="3-1-1-2 (2a)">\[3-1-1-2 (2a)\]</span> He is
-**planning** a **<u>ceremony</u>** for Saturday.
+**planning** a **<u>_ceremony_</u>** for Saturday.
 
 <span id="3-1-1-2 (2b)" label="3-1-1-2 (2b)">\[3-1-1-2 (2b)\]</span>
-The bus <u>driver</u> **turned** the corner too sharply.
+The bus <u>_driver_</u> **turned** the corner too sharply.
 
 Even the same lexical item may or may not refer to a process, depending
 on context as in ([\[3-1-1-2 (3)\]](#3-1-1-2 (3))) below.
@@ -972,11 +972,11 @@ on context as in ([\[3-1-1-2 (3)\]](#3-1-1-2 (3))) below.
 
 <span id="3-1-1-2 (3a)" label="3-1-1-2 (3a)">\[3-1-1-2 (3a)\]</span>
 
-The <u>**final exam**</u> began at 8:00.
+The <u>**_final exam_**</u> began at 8:00.
 
 <span id="3-1-1-2 (3b)" label="3-1-1-2 (3b)">\[3-1-1-2 (3b)\]</span>
 
-One student **threw** their <u>final exam</u> in the trash.
+One student **threw** their <u>_final exam_</u> in the trash.
 
 In ([\[3-1-1-2 (3a)\]](#3-1-1-2 (3a))), *final exam* refers to a process and therefore
 is identified as an event. In ([\[3-1-1-2 (3b)\]](#3-1-1-2 (3b))), however,
@@ -1005,9 +1005,9 @@ in the language.
 
 <span id="3-1-1-3 (1)" label="3-1-1-3 (1)">\[3-1-1-3 (1)\]</span>
 
-My cat <u>**loves**</u> wet food.
+My cat <u>**_loves_**</u> wet food.
 
-Other types of predicated states and entities require a different
+Other types of predicated states and entities require different
 solutions based on their function and the strategy used to express them
 in a language; we call these “nonverbal clauses”. The different
 functional types of nonverbal clauses are shown below in Table 3.
@@ -1059,6 +1059,7 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 | predicative location             | have-location-91  |
 | property predication             | have-mod-91       |
 | object predication               | have-role-91      |
+| 			 Subtypes: | kinship-91; have-org-role-91; have-rel-role-91 |
 | equational                       | identity-91       |
 
 Table 4: Non-verbal clause predicates
