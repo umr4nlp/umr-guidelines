@@ -1059,7 +1059,7 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 | predicative location             | have-location-91  |
 | property predication             | have-mod-91       |
 | object predication               | have-role-91      |
-| 			 Subtypes: | kinship-91; have-org-role-91; have-rel-role-91 |
+| 			           | (subtypes: kinship-91; have-org-role-91; have-rel-role-91) |
 | equational                       | identity-91       |
 
 Table 4: Non-verbal clause predicates
