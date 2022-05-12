@@ -108,261 +108,308 @@ Operationally, for both sentence-level and document-level annotation, we assume 
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
-(t2 / taste-01
-  :aspect Performance
-  :ARG0 (p / person :wiki "Edmond_Pope"
-         :name (n2 / name :op1 "Edmund" :op2 "Pope"))
-  :ARG1 (f / free-04
+(t/ taste-01
+  :ARG0 (p/ person :wiki "Edmond_Pope"
+         :name (n/ name :op1 "Edmund" :op2 "Pope"))
+  :ARG1 (f/ free-04
          :ARG1 p)
-  :temporal (t3 / today)
-  :ord (o3 / ordinal-entity :value 1
-        :range (m / more-than
-                :op1 (t / temporal-quantity :quant 8
-                    :unit (m2 / month)))))
+  :temporal (t2/ today)
+  :ord (o/ ordinal-entity :value 1
+        :range (m/ more-than
+                :op1 (t3/ temporal-quantity :quant 8
+                    :unit (m2/ month))))
+  :aspect Performance
+  :modstr FullAff)
                     
-(s1 / sentence
-    :temporal(
-          (s1t3 :TEMP DCT)
-	  (s1t2 :Contained s1t3))
-    :modal( (s1t2 :AFF AUTH) ) )
+(s1/ sentence
+    :temporal((DCT :depends-on s1t2)
+	      (s1t2 :contained s1t))
+    :modal(AUTH :FullAff s1t))
         
 ```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *TEMP*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-4-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _contained_ in *today*.
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *:depends-on*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-4-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _:contained_ in *today*.
 
-The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *AFF* label.
+The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:FullAff* label.
 
 <span id="1 (2)" label="1 (2)">\[1 (2)\]</span>
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
-(b2 / businessman
-      :mod (c5 / country :wiki "United_States"
-            :name (n6 / name :op1 "America"))
-      :domain (p / person :wiki "Edmond_Pope"
-            :name (n5 / name :op1 "Pope"))
-      :ARG1-of (c4 / convict-01
-      	    :aspect Performance
-            :ARG2 (c / charge-05
-                  :ARG1 b2
-                  :ARG2 (s2 / spy-01 :ARG0 p))
-            :temporal (w / week
-                  :mod (l / last)))
-      :ARG1-of (s / sentence-01
-            :aspect Performance
-            :ARG2 (p2 / prison
-                  :mod (c3 / country :wiki "Russia"
-                        :name (n4 / name :op1 "Russia"))
-                  :duration (t3 / temporal-quantity :quant 20
-                        :unit (y2 / year)))
-            :ARG3 s2))
+(i/ identity-91
+     :ARG1 (p/ person :wiki "Edmond_Pope"
+     	:name (n/ name "op1 "Pope))
+     :ARG2 (b/ businessman
+	:mod (n2/ nationality :wiki "United_States"
+	   :name (n3/ name :op1 "America")))
+	:ARG1-of (c/ convict-01
+	   :ARG2 (c2/ charge-05
+	      :ARG1 b
+	      :ARG2 (s/ spy-02
+	         :ARG0 b
+		 :modal c2))
+	   :temporal (w/ week
+	      :mod (l/ last))
+	   :aspect Performance
+	   :modstr FullAff)
+	:ARG1-of (s2/ sentence-01
+	   :ARG2 (p2/ prison
+	      :mod (c3/ country :wiki "Russia"
+	         :name (n4/ name :op1 "Russia))
+	      :duration (t/ temporal-quantity
+	         :quant 20
+		 :unit (y/ year)))
+	   :ARG3 s
+	   :aspect Performance
+	   :modstr FullAff)
+     :aspect State
+     :modstr FullAff)
  
-(s2 / sentence
-    :temporal(
-    	(s2c4 :Contained s2w)
-    	(s2s :Contained s2w)
-        (s2s :After s2c4)
-	(s2w :TEMP DCT) )
-    :modal(
-      (s2c4 :AFF AUTH)
-      (s2s :AFF AUTH)
-      (s2s2 :AFF AUTH) ) )
+(s2/ sentence
+    :temporal((DCT :depends-on s2w)
+    	      (s2w :contained s2c)
+	      (s2w :contained s2s2)
+	      (s2c :after s2s))
+    :modal((AUTH :FullAff s2i)
+      	   (AUTH :FullAff s2c)
+      	   (AUTH :FullAff s2s2)
+	   (AUTH :FullAff NULL_CHARGER)
+	   (NULL_CHARGER :FullAff s2s))
+    :coref(s1p :same-entity s2p))
 ```
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
 
 For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
-happened *last week*, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
-*sentence* event definitely happened. 
+happened *last week*, which itself depends on the DCT for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
+*sentence* event definitely happened, and that *Pope* is certainly *the American businessman*. It introduces a *NULL_CHARGER* conceiver to indicate that the authority that charged Pope (which is not explicit in the text) presents the *spying* event as a certainty. The co-reference annotation specifies that *Pope* in sentence 2 and *Edmund Pope* in sentence 1 are the same entity.
 
 <span id="1 (3)" label="1 (3)">\[1 (3)\]</span>
 ```
 Snt3: He denied any wrongdoing.
-(d / deny-01 
+(d/ deny-01 
+      :ARG0 (p/person
+         :ref-person 3rd
+	 :ref-number SG)
+      :ARG1 (t/ thing
+            :ARG1-of (d2/ do-02
+                  :ARG0 p
+                  :ARG1-of (w/ wrong-02)
+		  :modal d))
       :aspect Performance
-      :ARG0 (h / he)
-      :ARG1 (t / thing
-            :ARG1-of (d2 / do-02
-                  :ARG0 h
-                  :ARG1-of (w / wrong-02))))
+      :modstr FullAff)
   
-(s3 / sentence
-    :coref( (s3h :same-entity s1p))
-    :temporal((s3d :before DCT))
-    :modal ( (s3d :AFF AUTH))
-	     (s3d2 :NEG (s2h :AFF AUTH)  )
+(s3/ sentence
+    :temporal((DCT :before s3d)
+              (s3d :before s3d2))
+    :modal((AUTH :FullAff s3d))
+	   (AUTH :FullAff s3p)
+	   (s3p :FullNeg s3d2))
+    :coref(s2p :same-entity s3p))
+
 ```
 
-For this sentence, the coreference annotation indicates that *he* is the same person as *Alexander Pope* mentioned in
-[\[1 (1)\]](#1 (1)). 
+For this sentence, the coreference annotation indicates that *he* is the same person as *Pope* mentioned in [\[1 (2)\]](#1 (2)). Because there is no strict event co-reference or subevent relation between *wrongdoing* and, for example, *spying* in [\[1 (2)\]](#1 (2)), this relation is left unannotated.
 
-The temporal annotation indicates that the document creation time is after his denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
+The temporal annotation indicates that Pope's denial took place before document creation time, and that any *wrongdoing* would have happened before this denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
 
-The modal relations indicate that the *deny* event definitely happened according to the author, and that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
+The modal relations indicate that the *deny* event definitely happened according to the author. The author presents themselves as having certainty about Pope's mental state at the time of the denial (annotated as a :FullAff relation from AUTH to *Pope*), and the :FullNeg relation indicates that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
 
 <span id="1 (4)" label="1 (4)">\[1 (4)\]</span>
 ```
 Snt4: Russian President Vladimir Putin pardoned him for health reasons.
-(p3 / pardon-01
+(p/ pardon-01
+      :ARG0 (p2/ person :wiki "Vladimir_Putin"
+            :name (n/ name :op1 "Vladimir" :op2 "Putin")
+            :ARG0-of (h/ have-org-role-91
+                  :ARG1 (c/ country :wiki "Russia"
+                        :name (n2/ name :op1 "Russia"))
+                  :ARG2 (p3/ president)))
+      :ARG1 (p4/ person
+      	    :ref-person 3rd
+	    :ref-number SG)
+      :ARG1-of (c2/ cause-01
+            :ARG0 (r/ reason
+                  :mod (h2/ health)))
       :aspect Performance
-      :ARG0 (p / person :wiki "Vladimir_Putin"
-            :name (n / name :op1 "Vladimir" :op2 "Putin")
-            :ARG0-of (h / have-org-role-91
-                  :ARG1 (c / country :wiki "Russia"
-                        :name (n2 / name :op1 "Russia"))
-                  :ARG2 (p2 / president)))
-      :ARG1 (h2 / he)
-      :ARG1-of (c2 / cause-01
-            :ARG0 (r2 / reason
-                  :mod (h3 / health))))
+      :modstr FullAff)
 
-(s4 / sentence
-    :coref( (s4h :same-entity s1p))
-    :temporal( (s4p3 :after s2s))
-    :modal ( (s4p3 :AFF AUTH)) )
+(s4/ sentence
+    :temporal(s2s2 :after s4p)
+    :modal (AUTH :FullAff s4p)
+    :coref(s3p :same-entity s4p4))
 ```
 
-In the document-level representation for this sentence, the person that is pardoned by Putin is Edmund Pope, and this is indicated by annotating *he* as the same person as the person whose name is Edmund Pope. In the temporal annotation, the *sentence-01* event is designated as the reference time of *pardon-01* and happens before the *pardon-01* event. In the modal annotation, *pardon-01* is annotated as certain from the point of view of the author.
+In the document-level representation for this sentence, the person that is pardoned by Putin is marked as co-referential with *he* in sentence 3 (and therefore *Edmund Pope*). In the temporal annotation, the *sentence-01* event is designated as the reference time of *pardon-01* - the latter happens after the former. In the modal annotation, *pardon-01* is annotated as certain from the point of view of the author.
 
 <span id="1 (5)" label="1 (5)">\[1 (5)\]</span>
 ```
 Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
  
-(f / fly-01
+(f/ fly-01
+      :ARG1 (p/ person :wiki "Edmond_Pope"
+            :name (n/ name :op1 "Pope"))
+      :goal (b/ base
+            :mod (m/ military
+            :mod (c/ country :wiki "United_States"
+                  :name (n2/ name :op1 "U.S.")))
+            :place (c2/ city :wiki "Ramstein_Air_Base"
+                  :name (n3/ name :op1 "Ramstein")
+                  :place (c3/ country :wiki "Germany"
+                        :name (n4/ name :op1 "Germany"))))
       :aspect Performance
-      :ARG1 (p / person :wiki "Edmond_Pope"
-            :name (n3 / name :op1 "Pope"))
-      :destination (b2 / base
-            :mod (m / military
-                  :mod (c / country :wiki "United_States"
-                        :name (n / name :op1 "U.S.")))
-            :location (c3 / city :wiki "Ramstein_Air_Base"
-                  :name (n4 / name :op1 "Ramstein")
-                  :location (c2 / country :wiki "Germany"
-                        :name (n2 / name :op1 "Germany")))))
+      :modstr FullAff)
 
-(s5 / sentence
-    :temporal((s5f :after s4p3))
-    :modal ((s5f :AFF AUTH) )
+(s5/ sentence
+    :temporal(s4p :after s5f)
+    :modal(AUTH :FullAff s5f)
+    :coref(s4p4 :same-entity s5p))
 ```
 In the document-level annotation of this sentence, *pardon-01* from [\[1 (4)\]](#1 (4)) is chosen as the
 reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is certain that the *fly-01* 
-event happened.
+event happened, and *Pope* in this sentence is the same person as *him* in the previous one.
 
 <span id="1 (6)" label="1 (6)">\[1 (6)\]</span>
 ```
 Snt6: He will spend the next several days at the medical center there before he returns home with his wife Sherry
 
-(s2 / spend-02
-      :ARG0 (h2 / he)
-      :ARG1 (s / several
-            :op1 (t / temporal-quantity :quant 1
-                  :unit (d / day
-                        :mod (n2 / next))))
-      :temporal (b / before
-            :op1 (r / return-01
-                  :ARG1 h2
-                  :ARG4 (h3 / home)
-                  :accompanier (p / person :wiki -
-                        :name (n / name :op1 "Sherry")
-                        :ARG0-of (h / have-rel-role-91
-                              :ARG1 h2
-                              :ARG2 (w / wife)))))
-      :location (c / center
-            :mod (m / medical)
-            :location (t2 / there)))
+(s/ spend-02
+      :ARG0 (p/ person
+         :ref-person 3rd
+	 :ref-number SG)
+      :ARG1 (t/ temporal-quantity
+         :quant (s2/ several)
+	 :unit (d/ day
+	 	:mod (n/ next)))
+      :temporal (b/ before
+         :op2 (r/ return-01
+	    :ARG1 p
+	    :ARG4 (h/ home)
+	    :companion (p2/ person :wiki -
+	       :name (n2/ name :op1 "Sherry")
+	       :ARG0-of (h2/ have-rel-role-91
+	          :ARG1 p
+		  :ARG2 (w/ wife)))
+	    :aspect Performance
+	    :modstr FullAff))
+      :place (c/ center
+          :mod (m/ medical)
+	  :place (t2/ there))
+      :aspect State
+      :modstr FullAff)
 
-(s6 / sentence
-  :temporal(
-     (s6s2 :after DCT)
-     (s6r :after s6s2 ))
-  :modal (s6s2 :AFF AUTH)
-         (s6r :AFF AUTH))
-  :coref (s6h2 :same-entity s1p)))
+(s6/ sentence
+  :temporal((DCT :after s6s)
+            (s6s :after s6r))
+  :modal((AUTH :FullAff s6s)
+         (AUTH :FullAff s6r))
+  :coref((s5p :same-entity s6p)
+         (s5b :same-entity s6t2))
 ```
-In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01*. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Alexander Pope in [\[1 (1)\]](#1 (1)). 
+In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the DCT, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in [\[1 (5)\]](#1 (5)), and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence. 
 
 <span id="1 (7)" label="1 (7)">\[1 (7)\]</span>
  ```
 Snt7: Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
 
-(h / have-mod-91
-       :aspect Stative
-       :ARG1 (p / person :wiki "Edmond_Pope"
-             :name (n3 / name :op1 "Pope"))
-       :ARG2 (r / remission-02
-             :ARG1 (d / disease :wiki -
-                   :name (n / name :op1 "bone" :op2 "cancer")
-                   :ARG1-of (r2 / rare-02))
-             :temporal (a / arrest-01
-	           :aspect Performance
+(h/ have-mod-91
+       :ARG1 (p/ person :wiki "Edmond_Pope"
+             :name (n/ name :op1 "Pope"))
+       :ARG2 (r/ remission-02
+             :ARG1 (d/ disease :wiki -
+                   :name (n2/ name :op1 "bone" :op2 "cancer")
+                   :ARG1-of (r2/ rare-02))
+             :temporal (a/ arrest-01
                    :ARG1 p
-                   :location (c / country :wiki "Russia"
-                         :name (n2 / name :op1 "Russia")))))
+                   :place (c/ country :wiki "Russia"
+                         :name (n3/ name :op1 "Russia")))
+		   :aspect Performance
+		   :modstr FullAff)
+	:aspect State
+	:modstr FullAff)
 
-(s7 / sentence
-  :temporal( (s7a :overlap s7r))
-  :modal ((s7a :AFF AUTH)
-         (s7r :AFF AUTH)))
+(s7/ sentence
+  :temporal((s2c :before s7a)
+            (s7a :overlap s7h))
+  :modal ((AUTH :FullAff s7h)
+         (AUTH :FullAff s7a))
+  :coref (s6p :same-entity s7p))
 ```
-For [\[1 (7)\]](#1 (7)), the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before DCT. According to the author, both *arrest-01* and *remission-02* happened.
+For [\[1 (7)\]](#1 (7)), the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before the *convict-01* event from sentence 2. According to the author, both *arrest-01* and *be in remission* happened. Once again, *Pope* is the same entity as *he* in the previous sentence.
 
 <span id="1 (8)" label="1 (8)">\[1 (8)\]</span>
 ```
 Snt8: Doctors will examine him for signs that the cancer may have come back while he was awaiting trial in a Russian jail.
 
- (e / examine-01
-       :ARG0 (d3 / doctor)
-       :ARG1 (h / he)
-       :ARG2 (s / signal-07
-             :ARG1 (p / possible-01
-                   :ARG1 (c3 / come-01
-                         :ARG1 (d2 / disease :wiki "Cancer"
-                               :name (n / name :op1 "cancer"))
-                         :direction (b2 / back)
-                         :temporal (a / await-01
-                               :ARG1 h
-                               :ARG2 (t / try-02
-                                     :ARG1 h)
-                               :location (j / jail
-                                     :mod (c2 / country :wiki "Russia"
-                                           :name (n3 / name :op1 "Russia"))))))
-             :ARG2 d3))
-(s8 / sentence
-  :temporal( (s8e :after DCT)
-  	     (s8a :before s2c4)
-	     (s8c3 :overlap s8a) )
-  :modal ((s8e :AFF AUTH)
-          (s8c3 :NEUT AUTH)
-          (s8a :AFF AUTH))
-  :coref((s8h :same-entity s7p))) 
+ (e/ examine-01
+       :ARG0 (d/ doctor
+          :ref-number PL)
+       :ARG1 (p/ person
+          :ref-person 3rd
+	  :ref-number SG)
+       :ARG2 (s/ signal-07
+          :ARG1 (c/ come-01
+	     :ARG1 (d2/ disease :wiki "Cancer"
+	        :name (n/ name :op1 "cancer))
+	     :direction (b/ back)
+	     :temporal (a/ await-01
+	        :ARG1 p
+		:ARG2 (t/ try-02
+		   :ARG1 p
+		   :aspect Process)
+		:place (j/ jail
+		   :mod (c2/ country :wiki "Russia
+		      :name (n2/ name :op1 "Russia")))
+		:aspect State
+		:modstr FullAff)
+	     :aspect Performance
+	     :modstr NeutAff)
+	  :ARG2 d)
+	:aspect Endeavor
+	:modstr FullAff)
+  
+(s8/ sentence
+  :temporal((DCT :after s8e)
+  	    (s2c :before s8a)
+	    (s8a :overlap s8c))
+  :modal ((AUTH :FullAff s8e)
+          (AUTH :NeutAff s8c)
+          (AUTH :FullAff s8a))
+  :coref(s7p :same-entity s8p)) 
 ```
 
-The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well.
-The author is uncertain about whether the cancer has come back, indicated with a *Neutral* epistemic strength link. *he* is annotated as being the same person as Edmund Pope.
+The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *Neutral* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
 
 <span id="1 (9)" label="1 (9)">\[1 (9)\]</span>
 ```
 Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
-(s / say-01
+(s/ say-01
+      :ARG0 (p/ person
+            :ARG0-of (h/ have-org-role-91
+                  :ARG2 (s2/ spokeswoman))
+	    :ref-number SG)
+      :ARG1 (s3/ suffer-01
+            :ARG0 (p2/ person :wiki "Edmond_Pope"
+	          :name (n/ name :op1 "Pope"))
+            :ARG1 (a/ and
+                  :op1 (m/ malnourished-01
+                        :ARG1 p2)
+                  :op2 (p3/ pressure-01
+                        :ARG1 (b/ blood
+			   :part-of p2)
+                        :ARG1-of (h2/ high-02)))
+	    :aspect State
+	    :modstr FullAff)
       :aspect Performance
-      :ARG0 (p3 / person
-            :ARG0-of (h2 / have-org-role-91
-                  :ARG2 (s2 / spokeswoman)))
-      :ARG1 (s3 / suffer-01
-            :aspect Stative
-            :ARG0 (p / person :wiki "Edmond_Pope" :name (n / name :op1 "Pope"))
-            :ARG1 (a / and
-                  :op1 (m / malnourished-01
-                        :ARG1 p)
-                  :op2 (p2 / pressure-01
-                        :ARG1 (b2 / blood)
-                        :ARG1-of (h / high-02))))
-(s9/sentence
- :Temporal ((s9s :before DCT)
-            (s9s3 :overlap s9s))
- :Modal ((s9s :AFF AUTH)
-         (s9s3 :AFF (s9p3 :AFF AUTH)))
+      :modstr FullAff)
+      
+(s9/ sentence
+ :temporal ((DCT :before s9s)
+            (s9s :overlap s9s3))
+ :modal ((AUTH :AFF s9s)
+         (AUTH :AFF s9p)
+	 (s9p :AFF s9s3))
+ :coref (s8p :same-entity s9p2))
  ```
-The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson.  
+The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson. Once again, co-reference is indicated between different mentions of *Pope*.  
 
 [Back to Table of Contents](#toc)
 
