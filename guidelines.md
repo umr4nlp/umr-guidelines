@@ -285,7 +285,7 @@ Snt6: He will spend the next several days at the medical center there before he 
 	    :ARG4 (h/ home)
 	    :companion (p2/ person :wiki -
 	       :name (n2/ name :op1 "Sherry")
-	       :ARG0-of (h2/ have-rel-role-91
+	       :ARG0-of (h2/ have-role-91
 	          :ARG1 p
 		  :ARG2 (w/ wife)))
 	    :aspect Performance
@@ -681,10 +681,10 @@ an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 'I have a book.' lit. 'My book exists.'
 
 (h/ have-03
-	:ARG1 (p/ person
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG2 (v/ vakkahak 'book')
+	:ARG1 (v/ vakkahak 'book')
 	:aspect State
 	:modstr FullAff)
 ```
@@ -1170,11 +1170,11 @@ Following AMR, each named entity in a text is annotated with a type. However, th
 <span id="3-1-2 (1)" label="3-1-2 (1)">\[3-1-2 (1)\]</span> Edmond Pope is an American businessman.
 ```                    
 (h/ have-role-91
-      :ARG1 (p/ person :wiki "Edmond_Pope"
+      :ARG0 (p/ person :wiki "Edmond_Pope"
             :name (n/ name :op1 "Edmund" :op2 "Pope"))
       :ARG2 (b/ businessman
       	    :mod (n2/ nationality :wiki "United_States"
-	          (n3/ name :op1 "America")))
+	          :name (n3/ name :op1 "America")))
       :aspect State
       :modstr FullAff)
                  
@@ -1509,9 +1509,9 @@ paper	this	black-change
 'This paper has become black.'
 
 (h/ have-mod-91					(h/ have-mod-91
-    :ARG0 (c/ ce 'paper')			    :ARG0 (p/ paper)
+    :ARG1 (c/ ce 'paper')			    :ARG1 (p/ paper)
     	:mod (s/ əsi 'this')			        :mod (t/ this)
-    :ARG1 (m/ mu 'black')			    :ARG1 (b/ black)
+    :ARG2 (m/ mu 'black')			    :ARG2 (b/ black)
     :aspect Performance)			    :aspect Performance)
 ```
 
@@ -1658,8 +1658,8 @@ this	young.man	shaman
     :ARG0 (k/ kunumi 'young man'				    :ARG0 (m/ man
     	:mod (a/ ajan 'this')						:mod (y/ young)
 	:ref-number Singular)						:mod (t/ this)						
-    :ARG1 (t/ tsumi 'shaman')						:ref-number Singular)	
-    :aspect State						    :ARG1 (s/ shaman)
+    :ARG2 (t/ tsumi 'shaman')						:ref-number Singular)	
+    :aspect State						    :ARG2 (s/ shaman)
     :modstr FullAff)						    :aspect State
     								    :modstr Aff)
 ```
@@ -1702,7 +1702,7 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 | Thetic Location        | exist-91         | location  | theme            | ---              |
 | Predicative Location   | have-location-91 | ---       | theme            | location         |
 | Property Predication   | have-mod-91      | ---       | theme            | property         |
-| Object Predication     | have-role-91     | theme     | ---              | object category  |
+| Object Predication     | have-role-91     | theme     | reference point  | object category  |
 |                        | have-org-role-91 | theme     | organization     | role             |
 |                        | kinship-91       | theme     | family member    | kinship rel.     |
 | Equational             | identity-91      | ---       | theme            | equated referent |
@@ -1789,7 +1789,7 @@ There will even be many VIPs!
 (x/ and
       :op2 (e/ exist-91
             :mod (x2/ 还)
-            :arg1 (x3/ 人物
+            :ARG1 (x3/ 人物
                    :mod (x4/ 高层)
                    :quant (x5/ 很多))
             :mode Expressive
@@ -2009,19 +2009,20 @@ Grab a stick or he will he attack you!
 <span id="3-1-6 (4a)" label="3-1-6 (4a)">\[3-1-6 (4a)\]</span>
 ```
 I read a book while I listened to music. / I read a book while listening to music. / I read a book and listened to music.
-(r/ read-01
-   :ARG0 (p/ person
-   	:ref-person 1st
-	:ref-number Singular)
-   :ARG1 (b/ book
-   	:ref-number Singular)
-   :temporal (listen-01
-   	:ARG0 p
-	:ARG1 (m/ music)
-	:aspect State
-	:modstr FullAff)
-   :aspect Performance
-   :modstr FullAff)
+(r/ read-01				Or		(a/ and
+   :ARG0 (p/ person						:op1 (r/ read-01
+   	:ref-person 1st							:ARG0 (p/ person
+	:ref-number Singular)							:ref-person 1st
+   :ARG1 (b/ book								:ref-number Singular)
+   	:ref-number Singular)						:ARG1 (b/ book
+   :temporal (listen-01								:ref-number Singular)
+   	:ARG0 p								:aspect Performance
+	:ARG1 (m/ music)						:modstr FullAff)
+	:aspect State						:op2 (l/ listen-01
+	:modstr FullAff)						:ARG0 p
+   :aspect Performance							:ARG1 (m/ music)
+   :modstr FullAff)							:aspect State
+   									:modstr FullAff))
 ```
 
 <span id="3-1-6 (4b)" label="3-1-6 (4b)">\[3-1-6 (4b)\]</span>
@@ -2059,23 +2060,23 @@ In addition to having your hand stamped, you have to show your ticket to get int
 <span id="3-1-6 (4c)" label="3-1-6 (4c)">\[3-1-6 (4c)\]</span>
 ```
 Instead of going out to eat, we barbecued chicken at home. / We didn’t go out to eat and/but barbecued chicken at home.
-(s/ substitute-01
-   :ARG1 (b/ barbecue-01
-   	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Plural)
-	:ARG1 (c/ chicken)
-	:location (h/ home)
-	:aspect Performance
-	:modstr FullAff)
-   :ARG2 (g/ go_out-17
-   	:ARG0 p
-	:purpose (e/ eat-01
-		:ARG0 p
-		:aspect Endeavor
-		:modstr FullAff)
-	:aspect Performance
-	:modstr FullNeg))
+(s/ substitute-01				Or		(a/ and
+   :ARG1 (b/ barbecue-01						:op1 (g/ go_out-17
+   	:ARG0 (p/ person							:ARG0 (p/ person
+		:ref-person 1st								:ref-person 1st
+		:ref-number Plural)							:ref-number Plural)
+	:ARG1 (c/ chicken)							:purpose (e/ eat-01
+	:location (h/ home)								:ARG0 p
+	:aspect Performance								:aspect Endeavor
+	:modstr FullAff)								:Modstr FullAff)
+   :ARG2 (g/ go_out-17								:aspect Performance
+   	:ARG0 p									:modstr FullNeg)				
+	:purpose (e/ eat-01						:op2 (b/ barbecue-01
+		:ARG0 p								:ARG0 p
+		:aspect Endeavor						:ARG1 (c/ chicken)
+		:modstr FullAff)						:location (h/ home)
+	:aspect Performance							:aspect Performance
+	:modstr FullNeg))							:modstr FullAff))
 ```
 
 ```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. Just like the ```Additive``` meaning, this is represented in UMR through a ```consecutive``` abstract concept with numbered ```:opX``` relations. The temporal relations holding between the events can then be further specified in the document-level temporal annotation. More fine-grained sub-functions of the consecutive function are the following:
@@ -2200,11 +2201,11 @@ I went home **after** paying the check. / I paid the check **and** went home.
 	:modstr FullAff)
 ```
 
-Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
+Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function, marked in UMR with the ```and``` abstract concept and numbered ```:opX``` roles. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
 
-```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In [3-1-6 (6a)\]](#3-1-6 (6a)), properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy
+```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In [3-1-6 (6a)\]](#3-1-6 (6a)), properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy. This meaning is annotated using the ```contrast-01``` abstract predicate and its numbered argument roles.
 
-```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in [3-1-6 (6b)\]](#3-1-6 (6b)) from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school.
+```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in [3-1-6 (6b)\]](#3-1-6 (6b)) from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school. UMR uses a ``unexpected-co-occurrence``` abstract concept with numbered ```:opX``` roles to represent this meaning.
 
 <span id="3-1-6 (6)" label="3-1-6 (6)">\[3-1-6 (6)\]</span>
 
@@ -2213,17 +2214,19 @@ Together, the additive and consecutive functions and all their subfunctions can 
 Petja	staratel'nyi,	a	Vanja	lenivyj
 Peter	diligent	CONJ	Vanja	lazy
 'Peter is diligent, but [contrast] Vanja is lazy.'
-(c / contrast-01
-   :ARG1 (h / have-mod-91
-   	:ARG0 (p / person
-		:name (n / name :op1 "Peter"))
-	:ARG1 (s / staratel'nyi 'diligent')
-	:aspect State)
-   :ARG2 (h2 / have-mod-91
-   	:ARG0 (p2 / person
-		:name (n2 / name :op1 "Vanja))
-	:ARG1 (l / lenivyj 'lazy')
-	:aspect State))
+(c/ contrast-01
+   :ARG1 (h/ have-mod-91
+   	:ARG1 (p/ person
+		:name (n/ name :op1 "Peter"))
+	:ARG1 (s/ staratel'nyi 'diligent')
+	:aspect State
+	:modstr FullAff)
+   :ARG2 (h2/ have-mod-91
+   	:ARG1 (p2/ person
+		:name (n2/ name :op1 "Vanja"))
+	:ARG2 (l/ lenivyj 'lazy')
+	:aspect State
+	:modstr FullAff))
 ```
 
 <span id="3-1-6 (6b)" label="3-1-6 (6b)">\[3-1-6 (6b)\]</span>
@@ -2231,40 +2234,112 @@ Peter	diligent	CONJ	Vanja	lazy
 Vanja	prostudilsja,	no	poshël	v	shkolu
 Vanja	caught_cold	CONJ	went	to	school
 'Vanja caught a cold, but [unexpected] went to school.'
-(c / contrast-01
-   :ARG1 (p / prostudilsja-00 'catch a cold'
-   	:experiencer (p2 / person
-		:name (n / name :op1 "Vanja"))
-	:aspect Performance)
-   :ARG2 (p3 / poshël-00 'go'
+(u/ unexpected-co-occurrence
+   :op1 (p/ prostudilsja-00 'catch a cold'
+   	:experiencer (p2/ person
+		:name (n/ name :op1 "Vanja"))
+	:aspect Performance
+	:modstr FullAff)
+   :op2 (p3/ poshël-00 'go'
    	:actor p2
-	:goal (s / shkolu 'school)
-	:aspect Performance))
+	:goal (s/ shkolu 'school)
+	:aspect Performance
+	:modstr FullAff))
 ```
 
 There are three subtypes of unexpected co-occurrence relations that confident annotators, or annotators for languages which have overt grammatical mechanisms of disambiguating them, may distinguish:
 
-```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a summersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
+```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a somersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
 
-```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. THe concessive _even though_ specifies that typically when one is broke, one does not buy new guitars. This relation is annotated using the `have-concession-91` predicate or the shortcut `:concession` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3](#part-4-3-modal-dependency)).
+```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. The concessive _even though_ specifies that typically being broke causes one to not buy new guitars. This relation is annotated using the ```have-concession-91``` predicate or the shortcut ```:concession``` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3](#part-4-3-modal-dependency)).
 
-```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in [3-1-6 (7d)\]](#3-1-6 (7d)), there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the **have-condition-91/have-condition-91 predicate. [??]**
+```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in [3-1-6 (7d)\]](#3-1-6 (7d)), there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the ```concessive-condition``` relation.
 
-<span id="3-1-6 (7a)" label="3-1-6 (7a)">\[3-1-6 (7a)\]</span> Sarah carried the bowl of punch into the living room **without** spilling a drop. / Sarah carried the bowl of punch into the living room **and/but** didn't spill a drop.
+<span id="3-1-6 (7a)" label="3-1-6 (7a)">\[3-1-6 (7a)\]</span>
+```
+Sarah carried the bowl of punch into the living room **without** doing a somersault. / Sarah carried the bowl of punch into the living room **and/but** didn't do a somersault.
+(c/ carry-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Sarah"))
+	:ARG1 (p2/ punch
+		:unit (b/ bowl))
+	:goal (r/ room
+		:mod (l/ living))
+	:manner (s/ somersault
+		:ARG0 p
+		:aspect Performance
+		:polarity -
+		:modstr FullNeg)
+	:aspect Performance
+	:modstr FullAff)
+```
 
-<span id="3-1-6 (7b)" label="3-1-6 (7b)">\[3-1-6 (7b)\]</span> Sarah carried the bowl of punch into the living room **without** doing a summersault. / Sarah carried the bowl of punch into the living room **and/but** didn't do a summersault.
+<span id="3-1-6 (7b)" label="3-1-6 (7b)">\[3-1-6 (7b)\]</span> 
+```
+Sarah carried the bowl of punch into the living room **without** spilling a drop. / Sarah carried the bowl of punch into the living room **and/but** didn't spill a drop.
+(c/ carry-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Sarah"))
+	:ARG1 (p2/ punch
+		:unit (b/ bowl))
+	:goal (r/ room
+		:mod (l/ living))
+	:manner (s/ spill
+		:ARG0 p
+		:ARG1 p2
+			:unit (d/ drop)
+		:aspect Performance
+		:polarity -
+		:modstr FullNeg)
+	:aspect Performance
+	:modstr FullAff)
+```
 
-<span id="3-1-6 (7c)" label="3-1-6 (7c)">\[3-1-6 (7c)\]</span> **Even though** he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
+<span id="3-1-6 (7c)" label="3-1-6 (7c)">\[3-1-6 (7c)\]</span>
+```
+**Even though** he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
+(b/ buy-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (g/ guitar
+		:mod (n/ new)
+		:ref-number Singular)
+	:concession (h/ have-mod-91
+		:ARG1 p
+		:ARG2 (b2/ broke)
+		:aspect State
+		:modstr FullAff)
+	:aspect Performance
+	:modstr FullAff)
+```
 
-<span id="3-1-6 (7d)" label="3-1-6 (7d)">\[3-1-6 (7d)\]</span> **Even if** you arrive only five minutes late, you will be fired.
+<span id="3-1-6 (7d)" label="3-1-6 (7d)">\[3-1-6 (7d)\]</span>
+```
+**Even if** you arrive only five minutes late, you will be fired.
+(f/ fire-02
+	:ARG1 (p/ person
+		:ref-person 2nd
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff
+	:concessive-condition (a/ arrive-01
+		:ARG1 p
+		:temporal (l/ late
+			:extent (t/ temporal-quantity
+				:quant 5
+				:unit (m/ minute)))
+		:aspect Performance
+		:modstr FullAff))
+```
 
-Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
+Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice, annotated in UMR using the ```but``` abstract concept and numbered ```:opX``` argument roles. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
 
-```And + unexpected```:  may be used if a language does not formally distinguish conjuctive relations from unexpected co-occurrence relations. The language may still have a distinct form to express pure contrast.
+```And + unexpected```: abstract concept that may be used if a language does not formally distinguish conjuctive relations from unexpected co-occurrence relations. The language may still have a distinct form to express pure contrast. This abstract concept takes numbered ```:opX``` roles.
 
-```And + contrast```:  may be used if a language does not formally distinguish conjunctive relations from pure contrast relations. The language may still have a distinct form for expressing unexpected cooccurrence.
+```And + contrast```: abstract concept that may be used if a language does not formally distinguish conjunctive relations from pure contrast relations. The language may still have a distinct form for expressing unexpected cooccurrence. This abstract concept takes numbered ```:opX``` roles.
 
-```And + but```:  may be used if a language does not formally distinguish between conjunctive relations and adversative relations at all.
+```And + but```: abstract concept that may be used if a language does not formally distinguish between conjunctive relations and adversative relations at all. This abstract concept takes numbered ```:opX``` roles.
 
 [Back to Table of Contents](#toc)
 
@@ -2274,27 +2349,23 @@ Some languages co-express the “(pure) contrast” and the “unexpected co-occ
    
 Every entity and event identified as a participant is related to an
 event (the event that it is dependent on) and annotated with a
-participant role label. The participant role annotation looks rather
-different at the different stages of the road map. The factor which
+participant role label. The participant role annotation is organized as a road map with different stages. The factor which
 determines where a language begins on the road map is whether there is
-an existing PropBank-style lexicon (frame files) for the language, which defines predicate-specific roles. An English PropBank
+an existing PropBank-style lexicon (frame files) for the language which defines predicate-specific roles. An English PropBank
 frame file is shown in [\[3-2-1 (1)\]](#3-2-1 (1)).
 
 <span id="3-2-1 (1)" label="3-2-1 (1)">\[3-2-1 (1)\]</span>
 ```
-
 Predicate: give.01  
 	Roles:    
 	Arg0: giver   
 	Arg1: thing given    
 	Arg2: entity given to    
-
 ```
-
 Following AMR, UMR uses PropBank frame files to annotate lexicalized
 participant roles. But, this only works for languages which have
 PropBank-style frame files. This is considered the ‘Stage 1’ participant
-role annotation (see [Part 3-2-1-2](#part-3-2-1-2-stage-1)). The Stage 0 annotation involves
+role annotation (see [Part 3-2-1-2](#part-3-2-1-2-stage-1)). The 'Stage 0' annotation involves
 using a set of general participant roles, while building a lexicon of
 PropBank-style frame files in order to move towards Stage 1 annotation.
 
@@ -2336,16 +2407,18 @@ example of a pragmatic valency alternation, as seen in
 [\[3-2-1 (3)\]](#3-2-1 (3)) from Balinese (Shibatani and Artawa 2013).
 
 <span id="3-2-1 (3)" label="3-2-1 (3)">\[3-2-1 (3)\]</span>
-
+```
 <span id="3-2-1 (3a)" label="3-2-1 (3a)">\[3-2-1 (3a)\]</span> 
 anak=e 		muani	cenik	ento 	ngajeng buah=e 		ento 
 person=DEF	male	small	that	eat	fruit=DEF	that
 ‘The boy ate the fruit.’
-
+```
 <span id="3-2-1 (3b)" label="3-2-1 (3b)">\[3-2-1 (3b)\]</span>
+```
 buah=e 		ento 	ajeng=a 	teken 	anak=e 		muani 	cenik	ento
 fruit=DEF	that	eat=PASS	by	person=DEF	male	small	that
 ‘The fruit was eaten by the boy.’
+```
 
 Here, [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) could
 refer to the same event, with the main difference being the saliency or
