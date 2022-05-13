@@ -1127,8 +1127,8 @@ the corner of the street, but when he **saw** me, he stopped <u>
 **\[_smoking_\]**</u>.
 
 <span id="3-1-1-4 (1b)" label="3-1-1-4 (1b)">\[3-1-1-4 (1b)\]</span> They **told** me “a card
-was **left** on Tuesday” (no it wasn’t <u>**\[left\]**</u> *of
-course)...*
+was **left** on Tuesday” (no it wasn’t <u>**\[_left_\]**</u> of
+course)...
 
 In [\[3-1-1-4 (1a)\]](#3-1-1-4 (1a)), there is an implicit second *smoking* event and
 in [\[3-1-1-4 (1b)\]](#3-1-1-4 (1b)), there is an implicit second *leave* event. These
@@ -1143,12 +1143,12 @@ context.
 <span id="3-1-1-4 (2)" label="3-1-1-4 (2)">\[3-1-1-4 (2)\]</span>
 
 <span id="3-1-1-4 (2a)" label="3-1-1-4 (2a)">\[3-1-1-4 (2a)\]</span> **Phoned** Amtrak on
-Wednesday, <u>**\[they said\]**</u> *“We **need** a consignment
-number”.*
+Wednesday, <u>**\[_they said_\]**</u> “We **need** a consignment
+number”.
 
 <span id="3-1-1-4 (2b)" label="3-1-1-4 (2b)">\[3-1-1-4 (2b)\]</span> “I have **ordered** the Coast
 Guard and our entire naval force in the (Central Philippines) region
-<u>**\[to go\]**</u> to the area,” she **said**.
+<u>**\[_to go_\]**</u> to the area,” she **said**.
 
 In [\[3-1-1-4 (2a)\]](#3-1-1-4 (2a)), the quotation marks make it clear that there is an
 implicit *say* event. In [\[3-1-1-4 (2b)\]](#3-1-1-4 (2b)), we can identify a very general
@@ -1165,15 +1165,19 @@ general event possible should be identified.
 
  #### Part 3-1-2. Named entities
  
-Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a `country` entity and a `person` entity. 
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a `nationality` entity and a `person` entity. 
 
 <span id="3-1-2 (1)" label="3-1-2 (1)">\[3-1-2 (1)\]</span> Edmond Pope is an American businessman.
 ```                    
-(b2 / businessman
-      :mod (c5 / country :wiki "United_States"
-            :name (n6 / name :op1 "America"))
-      :domain (p / person :wiki "Edmond_Pope"
-            :name (n5 / name :op1 "Pope")))                   
+(h/ have-role-91
+      :ARG1 (p/ person :wiki "Edmond_Pope"
+            :name (n/ name :op1 "Edmund" :op2 "Pope"))
+      :ARG2 (b/ businessman
+      	    :mod (n2/ nationality :wiki "United_States"
+	          (n3/ name :op1 "America")))
+      :aspect State
+      :modstr FullAff)
+                 
 ```        
 The total set of entity types are hierarchically organized, as listed in Table 5 below.
 
@@ -1199,9 +1203,9 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 |                  | clan              	|                  |
 |                  | organization        | international_organization, business, company, government_organization, political_organization, criminal_organization,  armed_organization, academic_organization, association, sports_organization, religious_organization |
 | geographic_entity | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley,  canyon, island, desert, forest |  |
-|  Celestial-body   | moon, planet, star, constellation |   |
+|  celestial-body   | moon, planet, star, constellation |   |
 | region           | local-region, country-region, world-region |   |
-|  geo-politica-entity             |city, city-district, county, state, province, territory, country|  |
+|  geo-political-entity             |city, city-district, county, state, province, territory, country|  |
 | facility         | airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park |  |
 | vehicle          |  ship, aircraft, aircraft-type, spaceship, car-make | |
 | cultural-artifact | work-of-art |
@@ -1275,8 +1279,8 @@ form of a single Arapaho word. The pronominal suffix *-o'* indicates
 that a first person argument acts on a third person argument. The
 lexical item for 'head', *e'ei*, is incorporated in the verb, and the
 classifier *-s* indicates that the instrument is a blade-like implement.
-So, this single word expresses the predicate, and the Actor, Undergoer,
-Theme, and Instrument arguments of this state of affairs.
+So, this single word expresses the predicate, and the actor, undergoer,
+theme, and instrument arguments of this state of affairs.
 
 <span id="3-1-3-1 (1)" label="3-1-3-1 (1)">\[3-1-3-1 (1)\]</span>
 ```
@@ -1284,16 +1288,16 @@ nih-teb-e'ei-s-o'
 PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 'I cut his head off with a knife.'
 
-(n / teb-e'ei-s ‘break/remove.stick.like’
-    :Actor (p / person
+(t/ teb-e'ei-s ‘break/remove.stick.like’
+    :actor (p/ person
     	:ref-person 1st
 	:ref-number Singular)
-    :Undergoer (p2 / person
+    :undergoer (p2/ person
     	:ref-person 3rd
 	:ref-number Singular)
-    :Theme (t / thing
+    :theme (t2/ thing
     	:ref-person Obviative)
-    :Aspect Performance)
+    :aspect Performance)
 ```
 
 When languages use verbal affixes to index arguments, these arguments
@@ -1312,7 +1316,7 @@ languages (Mithun 1984). Some constructions, such as the one illustrated by *-e'
 functions as an argument of the verb, meaning that no overt NP can be
 present in the clause to fill this semantic role. So, while UMR treats
 the whole stem *teb-e'ei-s* as the predicate, it also identifies a
-separate concept for 'head', which has the `:Theme` participant role as
+separate concept for 'head', which has the `:theme` participant role as
 seen in the UMR corresponding to example
 [\[3-1-3-1 (1)\]](#3-1-3-1 (1)).
 
@@ -1327,12 +1331,12 @@ example, the Arapaho instrumental suffix *-s* indicates that the
 independent NP can appear to specify the instrument. For such
 grammaticalized noun incorporation constructions, no separate concept
 corresponding to the incorporated noun is identified. A participant
-with the `:Instrument` role is only identified if it is expressed as an
+with the `:instrument` role is only identified if it is expressed as an
 overt NP in the clause.
 
 This treatment of noun incorporation means that a certain amount of
 linguistic analysis must be done prior to UMR annotation. If the
-language at hand has one or more noun incorporation construction(s),
+language at hand has one or more noun incorporation constructions,
 annotators need to know for any individual construction whether or not
 it allows the expression of the incorporated participant as an
 independent overt NP. Of course, grammaticalization is a continuous
@@ -1379,12 +1383,18 @@ by the verb root.
 Grandmother made the kid drink the water.
 ```
 (d/ drink
-    :Cause (m/ make
-    	:Actor (g/ grandmother)
-    	:Aspect Performance)
-    :Actor (k/ kid)
-    :Undergoer (w/ water)
-    :Aspect Performance)
+    :cause (m/ make
+    	:actor (p/ person
+	    :ARG0-of (k/ kinship-91
+	         :ARG1 (k2/ kid)
+		 :ARG2 (g/ grandmother))
+	    :ref-number Singular)
+    	:aspect Performance
+	:modstr FullAff)
+    :actor k2
+    :undergoer (w/ water)
+    :aspect Performance
+    :modstr FullAff)
 
 ```
 <span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span>
