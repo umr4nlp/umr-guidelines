@@ -2397,7 +2397,7 @@ PFV-3PL.S-TAM	REC	RDP-find	in.that.direction=LOC
 ```
 
 The event described in [\[3-2-1 (2a)\]](#3-2-1 (2a)) is different than the
-event described in [\[3-2-1 (2b)\]](#3-2-1 (2b)). This is in contrast to
+event described in [\[3-2-1 (2b)\]](#3-2-1 (2b)) - in the former, the finder and findee are different, while in the latter they are the same. This is in contrast to
 valency alternations which reflect a pragmatic difference between the
 basic and non-basic construction. With pragmatic alternations, both
 constructions refer to the same “real-world” event, but they package
@@ -2408,7 +2408,6 @@ example of a pragmatic valency alternation, as seen in
 
 <span id="3-2-1 (3)" label="3-2-1 (3)">\[3-2-1 (3)\]</span>
 ```
-<span id="3-2-1 (3a)" label="3-2-1 (3a)">\[3-2-1 (3a)\]</span> 
 anak=e 		muani	cenik	ento 	ngajeng buah=e 		ento 
 person=DEF	male	small	that	eat	fruit=DEF	that
 ‘The boy ate the fruit.’
@@ -2419,7 +2418,6 @@ buah=e 		ento 	ajeng=a 	teken 	anak=e 		muani 	cenik	ento
 fruit=DEF	that	eat=PASS	by	person=DEF	male	small	that
 ‘The fruit was eaten by the boy.’
 ```
-
 Here, [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) could
 refer to the same event, with the main difference being the saliency or
 topicality of *anak=e muani cenik* ‘the boy’.
@@ -2431,7 +2429,7 @@ for [\[3-2-1 (2a)\]](#3-2-1 (2a)) and [\[3-2-1 (2b)\]](#3-2-1 (2b)) would be
 different, where as the participant role annotation for
 [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) would be the
 same. The annotations for valency alternations also depend on the stage
-of the road map, so that will be detailed in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations) and [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
+of the road map, which will be detailed in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations) and [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
 
 [Back to Table of Contents](#toc)
 
@@ -2477,9 +2475,9 @@ Table 9: UMR non-lexicalized roles
 
 These general semantic roles can be categorized based on the types of
 events with which they occur, shown in Table 10. Some
-participant roles express the external cause of an event; these can
+participant roles (those found in the first column of the table) express the external cause of an event. These can
 occur with many semantic classes of events. Similarly, the
-“circumstantial” type semantic roles can occur with a wide range of
+“circumstantial” type semantic roles in the last column of the table can occur with a wide range of
 semantic event classes.
 
 <div id="tab:catroles">
@@ -2500,13 +2498,13 @@ Table 10: Categorization of UMR non-lexicalized roles
 
 For the roles that characterize the central participant(s) in the event,
 the best way to decide which participant role label a given participant
-should receive is to consider the semantic class of the event. The
-`undergoer` role only occurs with
+should receive is to consider the semantic class of the event as specified in the middle column of table 10. The
+```:undergoer``` role only occurs with
 change-of-state events, construed broadly to include creation and
-contact events as well. The `undergoer`
+contact events as well. The ```:undergoer```
 role is used for the entity that undergoes the change-of-state, is the
 endpoint of force in a contact event, or is created in a creation event,
-as seen in [\[3-2-1-1 (1)\]](#3-2-1-1 (1)). The `material`
+as seen in [\[3-2-1-1 (1)\]](#3-2-1-1 (1)). The ```:material```
 role only occurs with creation events, as in
 [\[3-2-1-1 (1c)\]](#3-2-1-1 (1c)), and is used for the raw materials
 that are transformed into the created object.
@@ -2516,83 +2514,100 @@ that are transformed into the created object.
 <span id="3-2-1-1 (1a)" label="3-2-1-1 (1a)">\[3-2-1-1 (1a)\]</span>
 ```
 The ice cube melted.  
-
-(m / melt  
-	:undergoer (i / ice cube))
+(m/ melt-01  
+	:undergoer (c / cube
+		:consist-of (i/ ice)
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 ```
 <span id="3-2-1-1 (1b)" label="3-2-1-1 (1b)">\[3-2-1-1 (1b)\]</span> 
 ```
 The enemy sank the ship. 
-
-(s1 / sank  
-	:actor (e / enemy) 
-	:undergoer (s2 / ship))
+(s/ sink-01  
+	:actor (e/ enemy) 
+	:undergoer (s2/ ship
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 
 ```
 <span id="#3-2-1-1 (1c)" label="#3-2-1-1 (1c)">\[#3-2-1-1 (1c)\]</span> 
 ```
 She built a house out of wood. 
-
-(b / build  
-	:actor (s / she)  
-	:undergoer (h / house) 
-	:source (w / wood))
+(b/ build-01  
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)  
+	:undergoer (h/ house
+		:ref-number Singular) 
+	:material (w/ wood)
+	:aspect Performance
+	:modstr FullAff)
 ```
 <span id="#3-2-1-1 (1d)" label="#3-2-1-1 (1d)">\[#3-2-1-1 (1d)\]</span> 
 ```
 He hit the stick against the fence.  
-
-(h1 / hit 
-	:actor (h2 / he)  
-	:instrument (s / stick)  
-	:undergoer (f / fence)) 
+(h / hit-01
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)  
+	:instrument (s/ stick
+		:ref-number Singular)  
+	:undergoer (f / fence
+		:ref-number Singular)
+	:aspect Endeavor
+	:modstr FullAff) 
 ```
-
-The `experiencer` and
-`stimulus` roles always occur with
+The `:experiencer` and
+`:stimulus` roles always occur with
 experiential events, as seen in [\[3-2-1-1 (4)\]](#3-2-1-1 (4)). The
-`experiencer` role is used for the
+`:experiencer` role is used for the
 mental-level entity which attends to, reacts to, or passively
-experiences the `stimulus` role.
+experiences the `:stimulus` role.
 
 <span id="3-2-1-1 (4)" label="3-2-1-1 (4)">\[3-2-1-1 (4)\]</span>
 
 <span id="3-2-1-1 (4a)" label="3-2-1-1 (4a)">\[3-2-1-1 (4a)\]</span>
 ```
 The audience listened to the concerto.  
-
-(l / listen
-	:experiencer (a / audience) 
-	:stimulus (c / concerto))
+(l/ listen-01
+	:experiencer (a/ audience) 
+	:stimulus (c / concerto
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff)
 ```
 <span id="3-2-1-1 (4b)" label="3-2-1-1 (4b)">\[3-2-1-1 (4b)\]</span>
 ```
 The cat startled me.
-
-(s / startle  
-	:experiencer (m / me)
-	:stimulus (c / cat)) 
+(s/ startle-01  
+	:experiencer (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:stimulus (c / cat
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
-
-
-The `start, goal`, and
-`source` roles only occur with motion
-events; `place` has two different uses, one
+The `:start, :goal`, and
+`:source` roles only occur with motion
+events; `:place` has two different uses, one
 with Motion/Location events and one with other event classes.
-`start`,
-`goal`, and
-`place` are used for locations –
-`start` is the location from which motion
+`:start`,
+`:goal`, and
+`:place` are used for locations –
+`:start` is the location from which motion
 originates, as in [\[3-2-1-1 (5a)\]](#[3-2-1-1 (5a)),
-`goal` is the location in which motion
+`:goal` is the location in which motion
 ends, as in [\[[3-2-1-1 (5b)\]](#3-2-1-1 (5b)) and [\[3-2-1-1 (5c)\]](#3-2-1-1 (5c)),
-and `place` is used for static locations,
+and `:place` is used for static locations,
 as in [\[3-2-1-1 (5d)\]](#3-2-1-1 (5d)). The
-`source` role is in the removal subclass of
+`:source` role is in the removal subclass of
 motion events; it is used for the entity from which the
-`theme` is removed, as in
+`:theme` is removed, as in
 [\[3-2-1-1 (5e)\]](#3-2-1-1 (5e)). With motion events, the
-`theme` role is used for the entity that
+`:theme` role is used for the entity that
 moves (unless the motion is volitional), as in
 [\[3-2-1-1 (5a)\]](#3-2-1-1 (5a)).
 
@@ -2601,57 +2616,76 @@ moves (unless the motion is volitional), as in
 <span id="[3-2-1-1 (5a)" label="[3-2-1-1 (5a)">\[[3-2-1-1 (5a)\]</span> 
 ```
 She walked home from the store.
-
-(w / walk 
-	:actor (s / she)  
-	:goal (h / home)
-	:start (s2 / store))  
+(w/ walk-01 
+	:actor (p/ person
+		:ref-person 3rd
+		ref-number Singular)  
+	:goal (h/ home)
+	:start (s/ store)
+	:aspect Performance
+	:modstr FullAff)  
 ```
 <span id="3-2-1-1 (5b)" label="3-2-1-1 (5b)">\[3-2-1-1 (5b)\]</span> 
 ```
 The leaf fell to the ground.
-
-(f / fall 
-	:theme (l / leaf) 
-	:goal (g / ground))  
+(f/ fall-01 
+	:theme (l/ leaf
+		:ref-number Singular) 
+	:goal (g/ ground)
+	:aspect Performance
+	:modstr FullAff)  
 ```
 <span id="3-2-1-1 (5c)" label="3-2-1-1 (5c)">\[3-2-1-1 (5c)\]</span> 
 ```
 He put the books in a box.
-
-(p / put  
-	:actor (h / he)  
-	:theme (b1 / books)  
-	:goal (b2 / box))  
+(p/ put-01  
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)  
+	:theme (b / book
+		:ref-number Plural)  
+	:goal (b2 / box
+		:ref-number Singular)
+	:aspect: Performance
+	:modstr FullAff)  
 
 ```
 <span id="3-2-1-1 (5d)" label="3-2-1-1 (5d)">\[3-2-1-1 (5d)\]</span> 
 ```
 She is sitting on the couch.
-
-(s1 / sit  
-	:actor (s2 / she)  
-	:place (c / couch))  
+(s/ sit-01  
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)  
+	:place (c/ couch
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff)  
 ```
 <span id="3-2-1-1 (5e)" label="3-2-1-1 (5e)">\[3-2-1-1 (5e)\]</span> 
 ```
 He picked some berries from the bush.
-
-(p / pick
-	:actor (h / he) 
-	:theme (b1 / berries)  
-	:source (b2 / bush)) 
+(p/ pick-01
+	:actor (p2/ person
+		:ref-person 3rd
+		:ref-number Singular) 
+	:theme (b/ berry
+		:ref-number Paucal)  
+	:source (b2/ bush
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
-The `recipient` role only occurs with
+The `:recipient` role only occurs with
 transfer events, or metaphorical transfer events like communication.
 With these events, the initiator of the transfer is an
-`actor`, the entity that is transferred is
-the `theme` and the entity that the
-`theme` is transferred to is labelled as
-the `recipient`. For transfer of possession
+`:actor`, the entity that is transferred is
+the `:theme` and the entity that the
+`:theme` is transferred to is labelled as
+the `:recipient`. For transfer of possession
 events that express the original possessor of the
-`theme`, the original possessor is
-annotated as `affectee`, as in
+`:theme`, the original possessor is
+annotated as `:affectee`, as in
 [\[3-2-1-1 (6d)\]](#3-2-1-1 (6d)).
 
 <span id="3-2-1-1 (6)" label="3-2-1-1 (6)">\[3-2-1-1 (6)\]</span>
@@ -2659,46 +2693,69 @@ annotated as `affectee`, as in
 <span id="3-2-1-1 (6a)" label="3-2-1-1 (6a)">\[3-2-1-1 (6a)\]</span> 
 ```
 He gave the cat some wet food.
-
-(g / give  
-	:actor (h / he)  
-	:theme (w / wet food)  
-	:recipient (c / cat))
+(g/ give-01  
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)  
+	:theme (f/ food
+		:mod (w/ wet)
+		:quant (s/ some))  
+	:recipient (c/ cat
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 <span id="3-2-1-1 (6b)" label="3-2-1-1 (6b)">\[3-2-1-1 (6b)\]</span> 
 ```
 I showed the pictures to her.
-
-(s / show  
-	:actor (i / I)  
-	:theme (p / picture)
-	:recipient (h / her)) 
+(s/ show-01  
+	:actor (p/ person
+		:ref-person 1st
+		:ref-number Singular)  
+	:theme (p2/ picture
+		:ref-number Plural)
+	:recipient (p3/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 <span id="3-2-1-1 (6c)" label="3-2-1-1 (6c)">\[3-2-1-1 (6c)\]</span> 
 ```
 She told me that they they’re attending.
-
-(t1 / tell`  
-	:actor (s / she)  
-	:recipient (m / me)  
-	:theme ( a / attend  
-		:actor (t2 / they))) 
+(t/ tell-01  
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)    
+	:theme (a/ attend-01  
+		:actor (p2/ person
+			:ref-person 3rd
+			:ref-number Plural)
+		:aspect Activity
+		:quot t
+		:modstr FullAff)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 <span id="3-2-1-1 (6d)" label="3-2-1-1 (6d)">\[3-2-1-1 (6d)\]</span> 
 ```
 She stole the information from a competitor.
-
-(s1 / steal
-	:actor (s2 / she)
-	:theme (i / information) 
-	:source (c / competitor)) 
+(s/ steal-01
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:theme (i/ information) 
+	:source (c/ competitor
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 The other participant roles can occur pretty much freely with any semantic class of event. The external cause roles are used to annotate entities that bring about the central event. The
-`actor` role is used for “active”
+`:actor` role is used for “active”
 single-participant events, in which the single participant acts
 volitionally to bring about the event, as in
 [\[3-2-1-1 (7a)\]](#3-2-1-1 (7a)). This contrasts with “inactive”
@@ -2706,33 +2763,33 @@ single-participant events, in which the single participant undergoes a
 change outside of its control, as in [\[3-2-1-1 (1a)\]](#3-2-1-1 (1a))
 above. See Appendix [8](#ap:verbspr) for examples of single-participant
 verbs and their participant role annotation. The
-`actor` role is also used for animate
+`:actor` role is also used for animate
 entities that initiate an action, as in [\[3-2-1-1 (1b)\]](#3-2-1-1 (1b))
 above.
 
-The `companion` role is used for the entity
-that helps the `actor` bring about the
-action, as in [\[3-2-1-1 (7b)\]](#3-2-1-1 (7b)). Note that this role is only annotated when the `companion`
+The `:companion` role is used for the entity
+that helps the `:actor` bring about the
+action, as in [\[3-2-1-1 (7b)\]](#3-2-1-1 (7b)). Note that this role is only annotated when the `:companion`
 participant is expressed separately from the
-`actor`. Plural participants and conjoined
+`:actor`. Plural participants and conjoined
 participants, as in [\[3-2-1-1 (7c)\]](#3-2-1-1 (7c)) and
 [\[3-2-1-1 (7d)\]](#3-2-1-1 (7d)), are annotated with a single
-`actor` role. In some languages, a marker
-may be ambiguous between a comitative marker and a conjunction. When the two participants are expressed separately in the clause, they should be treated as separate participants, annotated with`actor` and `companion`. When they are expressed
+`:actor` role. In some languages, a marker
+may be ambiguous between a comitative marker and a conjunction. When the two participants are expressed separately in the clause, they should be treated as separate participants, annotated with `:actor` and `:companion`. When they are expressed
 together, they are treated as a single
-`actor` participant.
+`:actor` participant.
 
-The `instrument` role is used for an entity
-that is manipulated by one of the other external cause roles, often an `actor`, in order to initiate the action.
+The `:instrument` role is used for an entity
+that is manipulated by one of the other external cause roles, often an `:actor`, in order to initiate the action.
 The entity which manipulates the
-`instrument` may or may not be present in
+`:instrument` may or may not be present in
 the clause; see [\[3-2-1-1 (7e)\]](#3-2-1-1 (7e)) and
 [\[3-2-1-1 (7f)\]](#3-2-1-1 (7f)).
 
-The `force` role is used for inanimate physical
+The `:force` role is used for inanimate physical
 entities which initiate an action, or cause another entity to undergo a
 change, as in [\[3-2-1-1 (7g)\]](#3-2-1-1 (7g)). Finally, the
-`causer` role is used for the external
+`:causer` role is used for the external
 initiator in some causative constructions, see [4.1.2](#pr0:alts).
 
 
@@ -2741,82 +2798,109 @@ initiator in some causative constructions, see [4.1.2](#pr0:alts).
 <span id="3-2-1-1 (7a)" label="3-2-1-1 (7a)">\[3-2-1-1 (7a)\]</span>
 ```
 He winked.
-
-(w / wink
-	:actor (h / he))
+(w/ wink-01
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:aspect Endeavor
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1 (7b)" label="3-2-1-1 (7b)">\[3-2-1-1 (7b)\]</span> 
 ```
 Jane wrote the paper with Chris.
-
-(w / write 
-	:actor (J / Jane)  
-	:companion (C / Chris)  
-	:undergoer (p / paper)) 
+(w/ write-01 
+	:actor (p/ person
+		:name (n/ name :op1 "Jane"))  
+	:companion (p2/ person
+		:name (n2/ name :op2 "Chris"))  
+	:undergoer (p3 / paper
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 <span id="3-2-1-1 (7c)" label="3-2-1-1 (7c)">\[3-2-1-1 (7c)\]</span> 
 ```
 They wrote the paper.
-
-(w / write  
-	:actor (t / they)
-	:undergoer (p / paper))
+(w/ write-01  
+	:actor (p/ person
+		:ref-number Plural)
+	:undergoer (p2/ paper
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1 (7d)" label="3-2-1-1 (7d)">\[3-2-1-1 (7d)\]</span> 
 ```
 Jane and Chris wrote the paper.
-
-(w / write
-	:actor (J / Jane and Chris) 
-	:undergoer (p / paper))  
+(w/ write-01
+	:actor (a/ and
+		:op1 (p/ person
+			:name (n/ name :op1 "Jane"))
+		:op2 (p2/ person
+			:name (n2/ name :op1 "Chris)))
+	:undergoer (p3/ paper
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)  
 ```
-
 <span id="3-2-1-1 (7e)" label="3-2-1-1 (7e)">\[3-2-1-1 (7e)\]</span> 
 ```
 She sliced the bread with a knife.
-
-(s / slice
-	:actor (s / she) 
-	:instrument (k / knife) 
-	:undergoer (b / bread))
+(s/ slice-01
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular) 
+	:instrument (k/ knife
+		:ref-number Singular) 
+	:undergoer (b/ bread
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1 (7f)" label="3-2-1-1 (7f)">\[3-2-1-1 (7f)\]</span>
 ```
 The knife sliced through the bread.
-
-(s / slice 
-	:instrument (k / knife)  
-	:undergoer (b / bread)) 
+(s/ slice-01 
+	:instrument (k/ knife
+		:ref-number Singular)  
+	:undergoer (b/ bread
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
-
 <span id="3-2-1-1 (7g)" label="3-2-1-1 (7g)">\[3-2-1-1 (7g)\]</span> 
 ```
 The storm damaged the power lines.
-
-(d / damage 
-	:force (s / storm)  
-	:undergoer (p / power lines)) 
+(d/ damage-01 
+	:force (s/ storm
+		:ref-number Singular)  
+	:undergoer (l/ line
+		:purpose (p/ power)
+		:ref-number Plural)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 See Table 9 above for examples of the circumstantial
-roles. In addition, there is an `other`
+roles. In addition, there is an `:other`
 placeholder role that can be used when annotators are unsure of which participant role annotation is accurate for a particular participant. Also see Appendix [8](#ap:verbspr) for a list of verbs and how their microroles are annotated.
 
 At Stage 0, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in [\[3-2-1-1 (8)\]](#3-2-1-1 (8)), the
-`goal` is left implicit; at Stage 0, this
+`:goal` is left implicit on the left-hand side but annotated on the right-hand side; at Stage 0, this
 role may be left out of the annotation.
 
 <span id="3-2-1-1 (8)" label="3-2-1-1 (8)">\[3-2-1-1 (8)\]</span> 
 ```
 They loaded the boxes.
-
-(l  load  
-	:actor (t / they)  
-	:theme (b / boxes)) 
+(l/ load-01  					Or		(l/ load-01
+	:actor (p/ person						:actor (p/ person
+		:ref-person 3rd							:ref-person 3rd
+		:ref-number Plural)  						:ref-number Plural)
+	:theme (b/ box							:theme (b/ box
+		:ref-number Plural)						:ref-number Plural)
+	:aspect Performance						:goal (t/ thing)
+	:modstr FullAff)						:aspect Performance
+									:modstr FullAff)
 ```
 
 [Back to Table of Contents](#toc)
@@ -2829,22 +2913,22 @@ Each nonverbal clause predicate has an `ARG0` and an `ARG1`; these map
 to the semantic roles as shown in Table 11.
 
 <div id="tab:nonverbalprs">
-
-| **Clause type**                  | **UMR Predicate** | **ARG0**     | **ARG1**           |
-| :------------------------------- | :---------------- | :----------- | :----------------- |
-| thetic/presentational possession | `have-03 `          | *possessor*  | *possession*       |
-| predicative possession           | `belong-01`         | *possession* | *possessor*        |
-| thetic/presentational location   | `exist-91`          | *location*   | *theme*            |
-| predicative location             | `have-location-91`  | *theme*      | *location*         |
-| property predication             | `have-mod-91`       | *theme*      | *property*         |
-| object predication               | `have-role-91`      | *theme*      | *object category*  |
-| equational                       | `identity-91`       | *theme*      | *equated referent* |
-
+| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
+| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
+| Thetic Possession      | have-03          | possessor | possessum        | ---              |
+| Predicative Possession | belong-01        | possessum | possessor        | ---              |
+| Thetic Location        | exist-91         | location  | theme            | ---              |
+| Predicative Location   | have-location-91 | ---       | theme            | location         |
+| Property Predication   | have-mod-91      | ---       | theme            | property         |
+| Object Predication     | have-role-91     | theme     | reference point  | object category  |
+|                        | have-org-role-91 | theme     | organization     | role             |
+|                        | kinship-91       | theme     | family member    | kinship rel.     |
+| Equational             | identity-91      | ---       | theme            | equated referent |
 Table 11: Nonverbal clause predicates
 </div>
 
-The argument that can be predicativized in languages using the  is always
-`ARG1`. The examples in [\[3-2-1-1-1 (1)\]](#3-2-1-1-1 (1)) show how
+The argument that can be predicativized in languages using the predicativized-argument strategy is always
+the argument role with the highest number. The examples in [\[3-2-1-1-1 (1)\]](#3-2-1-1-1 (1)) show how
 nonverbal clauses are annotated with participant roles. Note that these
 annotations will be the same at every stage of the road map.
 
@@ -2858,73 +2942,88 @@ Mijiri-tin  ɨara-yara
 Miguel-CER  canoe-owner  
 ‘Miguel does have a canoe.’ (Lit. ‘Miguel is a canoe-owner’)
 
-(e / ɨara-yara ‘have-canoe’ 
-	:ARG0 (p / person
-		:name (n / name :op1 "Mijiri" ‘Miguel’)) 
-	:ARG1 (i / ara ‘canoe’)) 
+(h/ have-03
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mijiri")) 
+	:ARG1 (i/ ɨarayara ‘canoe’
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff) 
 ```
-
 <span id="3-2-1-1-1 (1b)" label="3-2-1-1-1 (1b)">\[3-2-1-1-1 (1b)\]</span> Predicative
 Possession - English <br />
 ```
 The dog belongs to the teacher.  
   
-(b / belong-01
-	:ARG0 (d / dog) 
-	:ARG1 (t / teacher)) 
+(b/ belong-01
+	:ARG0 (d/ dog
+		:ref-number Singular) 
+	:ARG1 (t/ teacher
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff) 
 ```
-
 <span id="3-2-1-1-1 (1c)" label="3-2-1-1-1 (1c)">\[3-2-1-1-1 (1c)\]</span> Thetic/presentational Location - English <br />
 ```
 On the rock was a symbol.  
   
-(e / exist-91
-	:ARG0 (r / rock)
-	:ARG1 (s / symbol))  
+(e/ exist-91
+	:ARG0 (r/ rock
+		:ref-number Singular)
+	:ARG1 (s/ symbol
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff)  
 ```
-
 <span id="3-2-1-1-1 (1d)" label="3-2-1-1-1 (1d)">\[3-2-1-1-1 (1d)\]</span> Predicative
 Location - Yabem (Dempwolff 1939) <br />
 ```
 àndu  kê-kô 	malac  
 house 3SG-be.at village  
 ‘The house is in the village.’
-
-(h / have-location-91
-	:ARG0 (a / àndu ‘house’)
-	:ARG1 (m / malac ‘village’))
+(h/ have-location-91
+	:ARG1 (a/ àndu ‘house’
+		:ref-number Singular)
+	:ARG2 (m/ malac ‘village’
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1-1 (1e)" label="3-2-1-1-1 (1e)">\[3-2-1-1-1 (1e)\]</span> Property
 Predication - English <br />
 ```
 The cat is black.  
-  
-(h / have-mod-91
-	:ARG0 (c / cat) 
-	:ARG1 (b / black))  
-
+(h/ have-mod-91
+	:ARG1 (c/ cat
+		:ref-number Singular) 
+	:ARG2 (b/ black)
+	:aspect State
+	:modstr FullAff)  
 ```
-
 <span id="3-2-1-1-1 (1f)" label="3-2-1-1-1 (1f)">\[3-2-1-1-1 (1f)\]</span> Object Predication - Kukama <br />
-
 ```
 ajan kunumi 	tsumi  
 this young.man 	shaman  
 ‘This young man is a shaman.’
-
-(h / have-role-91
-	:ARG0 (k / kunumi ‘young man’)
-	:ARG1 (t / tsumi ‘shaman’))  
+(h/ have-role-91
+	:ARG0 (k/ kunumi ‘young man’
+		:mod (a/ ajan 'this')
+		:ref-number Singular)
+	:ARG2 (t/ tsumi ‘shaman’)
+	:aspect State
+	:modstr FullAff)  
 ```
-
 <span id="3-2-1-1-1 (1g)" label="3-2-1-1-1 (1g)">\[3-2-1-1-1 (1g)\]</span> Object Equational - English <br />
 ```
 She is the winner.  
-  
-(h / identity-91
-	:ARG0 (s / she)` 
-	:ARG1 (w / winner))
+(i/ identity-91
+	:ARG1 (p/ person
+		:ref-person 3rd
+		:ref-number Singular) 
+	:ARG2 (p2/ person
+		:ARG0-of (w/ win-01))
+	:aspect State
+	:modstr FullAff)
 ```
 
 [Back to Table of Contents](#toc)
