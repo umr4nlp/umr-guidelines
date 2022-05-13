@@ -1059,7 +1059,7 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 | predicative location             | have-location-91  |
 | property predication             | have-mod-91       |
 | object predication               | have-role-91      |
-| 			           | (subtypes: kinship-91; have-org-role-91; have-rel-role-91) |
+| 			           | (subtypes: kinship-91; have-org-role-91) |
 | equational                       | identity-91       |
 
 Table 4: Non-verbal clause predicates
@@ -1386,12 +1386,12 @@ Grandmother made the kid drink the water.
     :cause (m/ make
     	:actor (p/ person
 	    :ARG0-of (k/ kinship-91
-	         :ARG1 (k2/ kid)
 		 :ARG2 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
 	:modstr FullAff)
-    :actor k2
+    :actor (k2/ kid
+    	:ref-number Singular)
     :undergoer (w/ water)
     :aspect Performance
     :modstr FullAff)
@@ -1401,9 +1401,42 @@ Grandmother made the kid drink the water.
 
 Grandmother did not make the kid drink the water.
 
+```
+(d/ drink
+    :cause (m/ make
+    	:actor (p/ person
+	    :ARG0-of (k/ kinship-91
+		 :ARG2 (g/ grandmother))
+	    :ref-number Singular)
+    	:aspect Performance
+	:modstr FullNeg)
+    :actor (k2/ kid
+    	:ref-number Singular)
+    :undergoer (w/ water)
+    :aspect Performance
+    :modstr NeutAff)
+
+```
+
 <span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span>
 
 Grandmother made the kid not drink the water.
+```
+(d/ drink
+    :cause (m/ make
+    	:actor (p/ person
+	    :ARG0-of (k/ kinship-91
+		 :ARG2 (g/ grandmother))
+	    :ref-number Singular)
+    	:aspect Performance
+	:modstr FullAff)
+    :actor (k2/ kid
+    	:ref-number Singular)
+    :undergoer (w/ water)
+    :aspect Performance
+    :modstr FullNeg)
+
+```
 
 Kukama (Tupían), on the other hand, has a morphological causative, as in
 [\[3-1-3-2 (2)\]](#3-1-3-2 (2)). The caused event and causing event cannot be
@@ -1420,10 +1453,14 @@ grandmother	drink-CAUS	kid=PST		water-INST
 'Grandmother made the kid drink the water.'
 
 (k/ kuratata 'make drink'
-    :Causer (n/ nai 'grandmother')
-    :Actor (c/ churan 'kid')
-    :Undergoer (u/ uni 'water')
-    :Aspect Performance)
+    :causer (p/ person
+    	:ARG0-of (k2/ kinship-91
+		:ARG2 (n/ nai 'grandmother'))
+	:ref-number Singular)
+    :actor (c/ churan 'kid')
+    :undergoer (u/ uni 'water')
+    :aspect Performance
+    :modstr FullAff)
 ```
 
 This criterion will be used for all valency change concepts: if the
@@ -1457,7 +1494,7 @@ either through bound morphology or through separate words (often called
 Phasal aspectual meanings such as inchoative, completive, and
 continuative, firstly, are never identified as separate events, even if
 they are expressed through independent words. Instead, they will simply
-inform the Aspect attribute label of the event they modify ([Part 3-3-1](#part-3-3-1-Aspect)). This principle is illustrated in example
+inform the aspect attribute label of the event they modify ([Part 3-3-1](#part-3-3-1-Aspect)). This principle is illustrated in example
 [\[3-1-3-3 (1)\]](#3-1-3-3 (1)). In
 Manipuri, the inchoative concept and the "close"-meaning form part of
 the same word, while in the English translation, they are expressed as
@@ -1475,7 +1512,7 @@ paper	this	black-change
     :ARG0 (c/ ce 'paper')			    :ARG0 (p/ paper)
     	:mod (s/ əsi 'this')			        :mod (t/ this)
     :ARG1 (m/ mu 'black')			    :ARG1 (b/ black)
-    :Aspect Performance)				    :Aspect Performance)
+    :aspect Performance)			    :aspect Performance)
 ```
 
 Similarly, modal and temporal auxiliaries will not be identified
@@ -1496,6 +1533,7 @@ as independent events in English. The UMR therefore has predicates for
 both *want* and *go*.
 
 <span id="3-1-3-3 (2)" label="3-1-3-3 (2)">\[3-1-3-3 (2)\]</span> 
+
 <span id="3-1-3-3 (2a)" label="3-1-3-3 (2a)">\[3-1-3-3 (2a)\]</span> She wants to go to school.
 ```
 (w/ want-01
@@ -1505,11 +1543,26 @@ both *want* and *go*.
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
-        :Aspect Performance)
-    :Aspect State)
+        :aspect Performance
+	:modal w)
+    :aspect State
+    :modstr FullAff)
 ```
 
 <span id="3-1-3-3 (2b)" label="3-1-3-3 (2b)">\[3-1-3-3 (2b)\]</span> She may want to go to school.
+```
+(w/ want-01
+    :ARG0 (p/ person
+    	:ref-person 3rd
+	:ref-number Singular)
+    :ARG1 (g/ go-01
+    	:ARG1 p
+        :ARG4 (s/ school)
+        :aspect Performance
+	:modal w)
+    :aspect State
+    :modstr NeutAff)
+```
 
 However, if in a language the desire-event cannot be modalized
 independently from the desired event, no separate event is identified
@@ -1544,22 +1597,24 @@ argument structure, and only one event is identified for UMR annotation.
 <span id="3-1-3-4 (1)" label="3-1-3-4 (1)">\[3-1-3-4 (1)\]</span> 
 ```
 en-na'-ten-ek-ant-a'		La	Esperanza
-1PL-DSTR-sleep-PST/HAB-NOM	La	Esperanza
+1PL-DSTR-sleep-TI-VNT-NOM	La	Esperanza
 'We slept in La Esperanza while coming here'
 
-(t/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
-    :Undergoer (p/ person :ref 1PL)			    :ARG0 (p/ person :ref 1PL)
-    :Place (l/ location					    :Place (l/ location
+(e/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
+    :undergoer (p/ person				    :ARG0 (p/ person
+    	:ref-person 1st						:ref-person 1st
+	:ref-number Plural)					:ref-number Plural)	    
+    :place (c/ city					    :place (c/ city
     	:name (n/ name					        :name (n/ name
-            :op1 ("La")						    :op1 ("La")
-            :op2 ("Esperanza")))				    :op2 ("Esperanza")))
-    :Aspect State					    :Temporal (c/ come-01
-    :Modstr Aff)					        :ARG1 p
+            :op1 "La"						    :op1 "La"
+            :op2 "Esperanza"))				    	    :op2 "Esperanza"))
+    :aspect State					    :temporal (c2/ come-01
+    :modstr FullAff)					        :ARG1 p
     								:ARG4 (h/ here)
-                                                        	:Aspect Activity
-                                                        	:Modstr Aff)
-                                                    	    :Aspect State
-                                                   	    :Modstr Aff)
+                                                        	:aspect Activity
+                                                        	:modstr FullAff)
+                                                    	    :aspect State
+                                                   	    :modstr FullAff)
 ```
 
 The English "venitive" construction in the translational equivalent of
@@ -1579,7 +1634,7 @@ easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
 [\[3-1-3-5 (1)\]](#3-1-3-5 (1)) and [\[3-1-3-5 (2)\]](#3-1-3-5 (2)). In English, these constructions do not pose
 serious problems to the predicate-argument structure of UMR - one could
-simply identify the 'have' or 'be'-verb as a predicate, and the NPs in
+simply identify the "have" or "be"-verb as a predicate, and the NPs in
 the clause as its arguments.
 
 In the Kukama object predication construction in
@@ -1600,12 +1655,13 @@ this	young.man	shaman
 'This young man is a shaman.'
 
 (h/ have-role-91						(h/ have-role-91
-    :ARG0 (k/ kunumi 'young man')				    :ARG0 (m/ man)
-    	:mod (a/ ajan 'this')					        :mod (y/ young)
-    :ARG1 (t/ tsumi 'shaman')						:mod (t/ this)
-    :Aspect State						    :ARG1 (s/ shaman)
-    :Modstr Aff)						    :Aspect State
-    								    :Modstr Aff)
+    :ARG0 (k/ kunumi 'young man'				    :ARG0 (m/ man
+    	:mod (a/ ajan 'this')						:mod (y/ young)
+	:ref-number Singular)						:mod (t/ this)						
+    :ARG1 (t/ tsumi 'shaman')						:ref-number Singular)	
+    :aspect State						    :ARG1 (s/ shaman)
+    :modstr FullAff)						    :aspect State
+    								    :modstr Aff)
 ```
 
 <span id="3-1-3-5 (2)" label="3-1-3-5 (2)">\[3-1-3-5 (2)\]</span> 
@@ -1614,42 +1670,42 @@ Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
 'Miguel does have a canoe.' lit. 'Miguel is a canoe-owner.'
 
-(a/ ɨara-yara 'have canoe'					(h/ have-03
-    :ARG0 (m/ Mijiri 'Miguel')					    :ARG0 (m/ Miguel)
-    :ARG1 (a/ ɨara 'canoe')					    :ARG1 (c/ canoe)
-    :Aspect State						    :Aspect State
-    :Modstr Aff)						    :Modstr Aff)
+(h/ have-03							(h/ have-03
+    :ARG0 (p/ person						    :ARG0 (p/ person
+    	:name (n/ name :op1 "Mijiri")					:name (n/ name :op1 "Miguel")
+	:ref-number Singular)					    	:ref-number Singular)
+    :ARG1 (a/ ɨarayara 'canoe')					    :ARG1 (c/ canoe)
+    :aspect State						    :aspect State
+    :modstr FullAff)						    :modstr FullAff)
 ```
 
 We propose a set of seven abstract concept predicates each corresponding
 to a discrete "non-verbal clause" function, listed in the table below. When there is no overt predicate-word, as
 in [\[3-1-3-5 (1)\]](#3-1-3-5 (1)), we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
-with. They should use such an abstract predicate concept as predicative core of the graph, and use the :ARG0 and :ARG1 numbered argument roles to link the arguments to this predicate as specified in
+with. They should use such an abstract predicate concept as predicative core of the graph, and use the appropriate numbered argument roles (:ARG0 and :ARG1 or :ARG1 and ARG2, depending on whether the predicate is inherited from AMR or not) as specified in
 the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
-[\[3-1-3-5 (2)\]](#3-1-3-5 (2)), UMR takes the same approach as for
-pronominal affixation. Both a predicate concept and an argument concept
-are identified separately, but linked to the same word token in the
-sentence - in this case *ɨara-yara*. As can be seen in the example UMRs
+[\[3-1-3-5 (2)\]](#3-1-3-5 (2)), once again annotators are expected to recognize the type of non-verbal clause function at hand and select the appropriate predicate. An argument concept will be identified and linked to the predicativized participant word in the sentence - the possessum *ɨara-yara* in the case of [\[3-1-3-5 (2)\]](#3-1-3-5 (2)). As can be seen in the example UMRs
 above, the resulting graphs have similar structures regardless of
-whether a languages uses an overt-predicate strategy, a zero-predicate
+whether a language uses an overt-predicate strategy, a zero-predicate
 (juxtaposition) strategy, or a predicativized argument strategy for such
 "non-verbal clause" meanings.
 
-
 <div id="tab:nonverbal_arguments">
 	
-| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         |
-| :--------------------- | :--------------- | :-------- | :--------------- |
-| Thetic Possession      | have-03          | possessor | possessum        |
-| Predicative Possession | belong-01        | possessum | possessor        | 
-| Thetic Location        | exist-91         | location  | theme            |
-| Predicative Location   | have-location-91 | theme     | location         |
-| Property Predication   | have-mod-91      | theme     | property         |
-| Object Predication     | have-role-91     | theme     | object category  |
-| Equational             | identity-91      | theme     | equated referent |
+| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
+| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
+| Thetic Possession      | have-03          | possessor | possessum        | ---              |
+| Predicative Possession | belong-01        | possessum | possessor        | ---              |
+| Thetic Location        | exist-91         | location  | theme            | ---              |
+| Predicative Location   | have-location-91 | ---       | theme            | location         |
+| Property Predication   | have-mod-91      | ---       | theme            | property         |
+| Object Predication     | have-role-91     | theme     | ---              | object category  |
+|                        | have-org-role-91 | theme     | organization     | role             |
+|                        | kinship-91       | theme     | family member    | kinship rel.     |
+| Equational             | identity-91      | ---       | theme            | equated referent |
 
 Table 8: Argument structure of non-verbal clause predicates
 </div>
@@ -1664,40 +1720,51 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 
 <span id="3-1-3-6 (1a)" label="3-1-3-6 (1a)">\[3-1-3-6 (1a)\]</span> So I normally steep it in hot water , then take it out and stir - fry it.
 ```
-(c / cause-01
-      :ARG1 (a2 / and
-            :op1 (s / steep-01
-	          :aspect Habitual
-                  :ARG0 (i / i)
-                  :ARG1 (i2 / it)
-                  :ARG2 (w / water
-                        :ARG1-of (h / hot-05)))
-            :op2 (a / and
-                  :op1 (t / take-out-11
-		        :aspect Habitual
-                        :ARG0 i
-                        :ARG1 i2)
-                  :op2 (s2 / stir-01
-		        :aspect Habitual
-                        :ARG0 i
-                        :ARG1 i2)
-                  :op3 (f / fry-01
-		        :aspect Habitual
-                        :ARG0 i
-                        :ARG1 i2)
-                  :temporal (t3 / then)))
-      :ARG1-of (n / normal-02))
+(c/ cause-01
+      :ARG1 (a/ and
+            :op1 (s/ steep-01
+                  :ARG0 (p/ person
+		        :ref-person 1st
+			:ref-number Singular)
+                  :ARG1 (t/ thing
+		        :ref-number Singular)
+                  :ARG2 (w/ water
+                        :ARG1-of (h/ hot-05))
+		  :aspect Habitual
+		  :modstr FullAff)
+            :op2 (a2/ and
+                  :op1 (t2/ take-out-11
+                        :ARG0 p
+                        :ARG1 t
+			:aspect Habitual
+			:modstr FullAff)
+                  :op2 (s2/ stir-01
+                        :ARG0 p
+                        :ARG1 t
+			:aspect Habitual
+			:modstr FullAff)
+                  :op3 (f/ fry-01
+                        :ARG0 p
+                        :ARG1 t
+			:aspect Habitual
+			:modstr FullAff)
+                  :temporal (t3/ then)))
+      :ARG1-of (n/ normal-02))
 ```
 
 <span id="3-1-3-6 (1b)" label="3-1-3-6 (1b)">\[3-1-3-6 (1b)\]</span> The moral aspects of the movement intrigued him as well
 ```
-(i / intrigue-01
-      :aspect Performance
-      :ARG0 (a / aspect
-            :ARG1-of (m / moral-02)
-            :poss (m2 / movement-07))
-      :ARG1 (h / he)
-      :mod (a2 / as-well))
+(i/ intrigue-01
+      :ARG0 (a/ aspect
+            :ARG1-of (m/ moral-02)
+            :poss (m2/ movement-07)
+	    :ref-number Plural)
+      :ARG1 (p/ person
+            :ref-person 3rd
+	    :ref-number Singular)
+      :mod (a2/ as-well)
+      :aspect State
+      :modstr FullAff)
 ```
 
 [Back to Table of Contents](#toc)
@@ -1707,23 +1774,27 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 
 <span id="3-1-4 (1)" label="3-1-4 (1)">\[3-1-4 (1)\]</span> The school has approximately 570 pupils.
 ``` 
-(h / have-03
-      :ARG0 (s / school)
-      :ARG1 (p / pupil
-            :quant (a / approximately :op1 570)))
+(h/ have-03
+      :ARG0 (s/ school)
+      :ARG1 (p/ pupil
+            :quant (a/ approximately :op1 570))
+      :aspect State
+      :modstr FullAff)
 ```
 
 <span id="3-1-4 (2)" label="3-1-4 (2)">\[3-1-4 (2)\]</span>
  ```
  并且 还 有 很多 高层 的 人物 哦 ！
 There will even be many VIPs!
-(x11 / and
-      :op2  (x3 / 有-03
-               :mod (x2 / 还)
-               :arg1  (x7 / 人物
-                         :mod  (x5 / 高层)
-                         :quant (x4 / 很多))
-            :mode  Expressive))
+(x/ and
+      :op2 (e/ exist-91
+            :mod (x2/ 还)
+            :arg1 (x3/ 人物
+                   :mod (x4/ 高层)
+                   :quant (x5/ 很多))
+            :mode Expressive
+	    :aspect State
+	    :modstr FullAff))
 ```
  
 
@@ -1739,12 +1810,12 @@ The scope annotation is only needed when these elements are interpreted "out-of-
 <span id="3-1-5 (1)" label="3-1-5 (1)">\[3-1-5 (1)\]</span>
 ```
 Someone didn't answer all the questions
-(a answer-01
-   :ARG0 (p / person)
-   :ARG1 (q / question
+(a/ answer-01
+   :ARG0 (p/ person)
+   :ARG1 (q/ question
               :quant A
               :polarity -)
-   :pred-of (s / scope
+   :pred-of (s/ scope
                 :ARG0 p
                 :ARG1 q))
 ```
@@ -1755,12 +1826,14 @@ Related to scope is the issue of distributive vs. collective interpretations of 
 
 <span id="3-1-5 (2a)" label="3-1-5 (2a)">\[3-1-5 (2a)\]</span> Each man loves a woman.
 
-However, many cases that are technically ambiguous nevertheless have a strong default reading reading stemming from the lexical semantics of the predicate and its arguments. For example, in [\[3-1-5 (3a)\]](#3-1-5 (3a)), there is a strong default interpretation that every single student ran 5 kilometers rather than that they ran a total of 5 kilometers between them - _run_ is typically an individual activity, so its lexical semantics trigger a default distributive reading. However, in [\[3-1-5 (3b)\]](#3-1-5 (3b)), the equally strong default interpretation is that the students carried the piano together and there was only a single carrying-event - our world knowledge specifies that things as heavy as a piano must typically be carried by multiple people, so the lexical semantics of the predicate here trigger a default collective reading. In yet another set of cases, our "default" feeling is that it does not really matter in what configurations the participants participate in the denoted events. In [\[3-1-5 (3c)\]](#3-1-5 (3c)), all that typically matters is that 6 states were hit by at least one hurricane, and that there was a total of 10 hurricanes. We can't really know how many hurricanes hit each state, and we don't really care - all we know is that 6 states and 10 hurricanes were involved. This kind of default interpretation is called a summation reading.
+However, many cases that are technically ambiguous nevertheless have a strong default reading stemming from the lexical semantics of the predicate and its arguments. For example, in [\[3-1-5 (3a)\]](#3-1-5 (3a)), there is a strong default interpretation that every single student ran 5 kilometers rather than that they ran a total of 5 kilometers between them - _run_ is typically an individual activity, so its lexical semantics trigger a default distributive reading. However, in [\[3-1-5 (3b)\]](#3-1-5 (3b)), the equally strong default interpretation is that the students carried a single piano together and there was only a single carrying-event - our world knowledge specifies that things as heavy as a piano must typically be carried by multiple people, so the lexical semantics of the predicate-argument combination here trigger a default collective reading. In yet another set of cases, our "default" feeling is that it does not really matter in what configurations the participants participate in the denoted events. In [\[3-1-5 (3c)\]](#3-1-5 (3c)), all that typically matters is that 6 states were hit by at least one hurricane each, and that there was a total of 10 hurricanes. We can't really know how many hurricanes hit each state, and we don't really care - all we know is that 6 states and 10 hurricanes were involved. This kind of default interpretation is called a summation reading.
 					
 <span id="3-1-5 (3)" label="3-1-5 (3)">\[3-1-5 (3)\]</span>
 
 <span id="3-1-5 (3a)" label="3-1-5 (3a)">\[3-1-5 (3a)\]</span> The linguistics students ran 5 kilometers to raise money for charity.
+
 <span id="3-1-5 (3b)" label="3-1-5 (3b)">\[3-1-5 (3b)\]</span> The linguistics students carried a piano into the theater.
+
 <span id="3-1-5 (3c)" label="3-1-5 (3c)">\[3-1-5 (3c)\]</span> Ten hurricanes hit six states over the weekend.
 
 Scope will not be annotated for summation readings (as we cannot reliably know it from the text alone), nor is it annotated where a distributive or collective reading can be predictably derived from the lexical semantics. In other words, whenever _run_ is interpreted distributively or _carry a piano_ is interpreted collectively, no scope annotation is needed. The scope annotation only comes into play when some overt linguistic element forces an interpretation that diverges from the lexical default. For example, in [\[3-1-5 (4a)\]](#3-1-5 (4a)), _together_ forces a collective interpretation of _run_, in [\[3-1-5 (4b)\]](#3-1-5 (4b)), _each_ forces a distributive interpretation of _carry a piano_, and in [\[3-1-5 (4c)\]](#3-1-5 (4c)), _each_ similarly forces a distributive interpretation of _hit_. In all these cases, a (s / scope) predicate would appear to clarify the non-canonical scopal relations.
