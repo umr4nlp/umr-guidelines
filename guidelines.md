@@ -2912,7 +2912,8 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 Each nonverbal clause predicate has an `ARG0` and an `ARG1`; these map
 to the semantic roles as shown in Table 11.
 
-<div id="tab:nonverbalprs">
+<div id="tab:nonverbal_arguments">
+	
 | **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
 | :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
 | Thetic Possession      | have-03          | possessor | possessum        | ---              |
@@ -2924,7 +2925,8 @@ to the semantic roles as shown in Table 11.
 |                        | have-org-role-91 | theme     | organization     | role             |
 |                        | kinship-91       | theme     | family member    | kinship rel.     |
 | Equational             | identity-91      | ---       | theme            | equated referent |
-Table 11: Nonverbal clause predicates
+
+Table 11: Argument structure of non-verbal clause predicates
 </div>
 
 The argument that can be predicativized in languages using the predicativized-argument strategy is always
@@ -3042,10 +3044,13 @@ in the language. If a participant is omitted, for example the agent in a passive
 Y-usy 		wrba 	tafirast.  
 3M.SG-pick.up 	boy:CST	pear  
 ‘The boy picked up the pear.’
-
-(u / usy ‘pick up’  
-	:actor (w / wrba ‘boy’) 
-	:undergoer (t / tafirast ‘pear’))
+(u/ yusy-00 ‘pick up’  
+	:actor (w/ wrba ‘boy’
+		:ref-number Singular) 
+	:undergoer (t/ tafirast ‘pear’
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 <span id="3-2-1-1-2 (1b)" label="3-2-1-1-2 (1b)">\[3-2-1-1-2 (1b)\]</span> <br />
@@ -3053,37 +3058,43 @@ Y-usy 		wrba 	tafirast.
 T-ttw-asy		tfirast.  
 3F.SG-DETR-pick.up	pear  
 ‘The pear was picked up.’
-
-(t / ttw-asy ‘pick up’  
-	:undergoer (t / tafirast ‘pear’)) 
+(t/ tttwasy-00 ‘pick up’  
+	:undergoer (t2/ tafirast ‘pear’
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 **Causatives.** There are a few different types of causatives that
 require different annotation solutions. For most causatives of
 transitives, the causer is annotated as
-`causer`, the causee as
-`actor`, and the rest of the participants
+`:causer`, the causee as
+`:actor`, and the rest of the participants
 receive the same annotation labels that they would in a a non-causative
 construction. In [\[3-2-1-1-2 (2)\]](#3-2-1-1-2 (2)) from Kukama, *nai*
-‘grandmother’ is annotated as `causer`,
+‘grandmother’ is annotated as `:causer`,
 the causee *churan* ‘kid’ is annotated as
-`actor`, and *uni* ‘water’ as `undergoer`.
+`:actor`, and *uni* ‘water’ as `:undergoer`.
 
 <span id="3-2-1-1-2 (2)" label="3-2-1-1-2 (2)">\[3-2-1-1-2 (2)\]</span>
 ```
 nai 		kurata-ta	churan=ui	uni=pu  
 grandmother 	drink-CAUS	kid=PST 	water=INS 
 ‘Grandmother made the kid drink the water.’
-
-(k / kuratata ‘make drink’  
-	:causer (n / nai ‘grandmother’)  
-	:actor (c / churan ‘kid’)  
-	:undergoer (u / uni ‘water’))  
+(k/ kuratata 'make drink'
+    :causer (p/ person
+    	:ARG0-of (k2/ kinship-91
+		:ARG2 (n/ nai 'grandmother'))
+	:ref-number Singular)
+    :actor (c/ churan 'kid')
+    :undergoer (u/ uni 'water')
+    :aspect Performance
+    :modstr FullAff)  
 ```
 
-There are certain causatives of transitives which do not use the `causer` role. These are constructions which express transfer events, including mental/cognitive transfer. Some
+There are certain causatives of transitives which do not use the `:causer` role. These are constructions which express transfer events, including mental/cognitive transfer. Some
 languages express these types of events with monomorphemic verbs, like English, but other languages use causatives of transitive verbs.
-Languages may differ in terms of which types of causative constructions are construed as transfer; in order to annotate the same semantic events in the same way across languages, the `actor, theme, recipient` roles are used for transfer of possession	(giving), sending, and mental transfer, which includes showing and communication. Bezhta in [\[3-2-1-1-2 (3b)\]](#3-2-1-1-2 (3b)) (Comrie, Khalilov, Khalilova 2015:560) uses the causative of *b-egā-yo* ‘see’ as equivalent to English *show*.
+Languages may differ in terms of which types of causative constructions are construed as transfer; in order to annotate the same semantic events in the same way across languages, the `:actor, :theme, :recipient` roles are used for transfer of possession (giving), sending, and mental transfer, which includes showing and communication. Bezhta in [\[3-2-1-1-2 (3b)\]](#3-2-1-1-2 (3b)) (Comrie, Khalilov, Khalilova 2015:560) uses the causative of *b-egā-yo* ‘see’ as equivalent to English *show*.
 
 
 <span id="3-2-1-1-2 (3)" label="3-2-1-1-2 (3)">\[3-2-1-1-2 (3)\]</span>
@@ -3093,28 +3104,34 @@ Languages may differ in terms of which types of causative constructions are cons
 hogco-l 	raɬad 		b-egā-yo  
 he.OBL-LAT 	sea(iii) 	iii-see-PST  
 ‘He saw the sea.’ 
-
-(b / b-egā ‘see’
-	:experiencer (h / hogco ‘he’)
-	:stimulus (r / raɬad ‘sea’))
+(b/ begāyo-00 ‘see’
+	:experiencer (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:stimulus (r/ raɬad ‘sea’)
+	:aspect State
+	:modstr FullAff)
 
 ```
-
 <span id="3-2-1-1-2 (3b)" label="3-2-1-1-2 (3b)">\[3-2-1-1-2 (3b)\]</span>
 ```
 hogco 		kibba-l 	raɬad 		b-ega-l-lo  
 he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST 
 ‘He showed the sea to the girl.’
-
-(b / b-ega-l ‘show’
-	:actor (h / hogco ‘he’)
-	:theme (r / raɬad ‘sea’)
-	:recipient (k / kibba ‘girl’))
+(b/ begallo-00 ‘show’
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:theme (r/ raɬad ‘sea’)
+	:recipient (k/ kibba ‘girl’
+		:ref-number Singular)
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 For causatives of ditransitives, the causer receives the
-`causer` role, the causee the `actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in [\[3-2-1-1-2 (4)\]](#3-2-1-1-2 (4)) from Shipibo-Konibo
-(Valenzuela 2003:612). If ‘the man’ was expressed in the clause, that participant would be annotated as `recipient`.
+`:causer` role, the causee the `:actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in [\[3-2-1-1-2 (4)\]](#3-2-1-1-2 (4)) from Shipibo-Konibo
+(Valenzuela 2003:612). If ‘the man’ was expressed in the clause, that participant would be annotated as `:recipient`.
 
 
 <span id="3-2-1-1-2 (4)" label="3-2-1-1-2 (4)">\[3-2-1-1-2 (4)\]</span> <br />
@@ -3123,17 +3140,30 @@ Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-b
 that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	give-CAUS-INC 	want-NEG-SDS-EM  
 ‘Then her mother makes the unmarried girl give roasted meat/fish (to the
 man who had asked her in matrimony) even though she doesn’t want to...’
-
-(m / meni-ma ‘make give’ 
-	:causer (t / tita ‘mother’) 
-	:actor (x1 / xontako ‘unmarried girl’) 
-	:theme (x2 / xoi ‘roasted meat’)) 
-
+(m/ menima-00 'make give'
+	:causer (p/ person
+		:ARG0-of (k/ kinship-91
+			:ARG1 (x/ xontako 'unmarried girl'
+				:mod (j/ ja 'that')
+				:ref-number Singular)
+			:ARG2 (t/ titan 'mother'))
+			:ref-number Singular)
+	:actor x
+	:theme (x2/ xoi 'roasted meat/fish')
+	:temporal (j2/ jatian 'that time')
+	:concession (k2/ keenyamaaibi-00 'want'
+		:experiencer x
+		:stimulus (m
+			:modal k2)
+		:aspect State
+		:modstr FullNeg)
+	:aspect Habitual
+	:modstr FullAff)
 ```
 
-There are two types of causatives of intransitives, based on the two types of intransitives. For intransitives whose single participant corresponds to an `undergoer` role, such as
-change-of-state verbs in many languages, the causer is annotated as `actor` and the single participant retains
-its `undergoer`label. This can be seen in
+There are two types of causatives of intransitives, based on the two types of intransitives. For intransitives whose single participant corresponds to an `:undergoer` role, such as
+change-of-state verbs in many languages, the causer is annotated as `:actor` and the single participant retains
+its `:undergoer` label. This can be seen in
 [\[3-2-1-1-2 (5)\]](#3-2-1-1-2 (5)) from Falam Chin (King 2011:195) below.
 
 
@@ -3144,9 +3174,15 @@ its `undergoer`label. This can be seen in
 Ka 	kedam 	hri	a 	cat.  
 1SG 	shoe 	string	3SG.NOM	broken.1  
 ‘My shoelace is broken/broke.’
-
-(c / cat ‘broken’ 
-	:undergoer (k / kedam hri ‘shoelace’)) 
+(c/ cat-00 ‘broken’ 
+	:undergoer (h/ hri 'string'
+		:part-of (k/ kedam 'shoe')
+		:poss (p/ person
+			:ref-person 1st
+			:ref-number Singular)
+		:ref-number Singular)
+	:aspect State
+	:modstr FullAff)
 ```
 
 <span id="3-2-1-1-2 (5b)" label="3-2-1-1-2 (5b)">\[3-2-1-1-2 (5b)\]</span> <br /> 
@@ -3154,17 +3190,24 @@ Ka 	kedam 	hri	a 	cat.
 Thangte in 	ka 	kedam 	hri 	a 	cat-ter.  
 Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS  
 ‘Thangte broke my shoelace.’
-
-(c / cat-ter ‘break’  
-	:actor (t / Thangte)
-	:undergoer (k / kedam hri ‘shoelace’))
+(c/ catter-00 ‘break’  
+	:actor (p/ person
+		:name (n/ name :op1 "Thangte"))
+	:undergoer (h/ hri 'string'
+		:part-of (k/ kedam 'shoe')
+		:poss (p2/ person
+			:ref-person 1st
+			:ref-number Singular)
+		:ref-number Singular
+	:aspect Performance
+	:modstr FullAff)
 ```
 
-Regardless of whether the causative or anticausative verb is derived (or, neither is derived), the anticausative/intransitive meaning is annotated with a single `undergoer` participant and the causative/transitive meaning is annotated with an
-`actor` and an `undergoer` participant.
+Regardless of whether the causative or anticausative verb is derived (or if neither is derived), the anticausative/intransitive meaning is annotated with a single `:undergoer` participant and the causative/transitive meaning is annotated with an
+`:actor` and an `:undergoer` participant.
 
 When the single participant of the intransitive corresponds to the
-`actor` role, then the causer receives the `causer` annotation and the single participant retains its `actor` label. This
+`:actor` role, then the causer receives the `:causer` annotation and the single participant retains its `:actor` label. This
 can be seen in [\[3-2-1-1-2 (6)\]](#3-2-1-1-2 (6)) from Falam Chin (King 2011:195) below.
 
 <span id="3-2-1-1-2 (6)" label="3-2-1-1-2 (6)">\[3-2-1-1-2 (6)\]</span>
@@ -3174,20 +3217,24 @@ can be seen in [\[3-2-1-1-2 (6)\]](#3-2-1-1-2 (6)) from Falam Chin (King 2011:19
 Cinte a 	hni.  
 Cinte 3SG.NOM 	laugh.1  
 ‘Cinte laughed.’ 
-
-(h / hni ‘laugh’
-	:actor (C / Cinte)) 
+(h/ hni-00 ‘laugh’
+	:actor (p/ person
+		:name (n/ name :op1 "Cinte"))
+	:aspect Endeavor
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br /> 
 ```
 Parte 	in 	Cinte a 	hni-ter.  
 Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS  
 ‘Parte made Cinte laugh.’
-
-(h / hni-ter ‘make laugh’ 
-	:causer (P / Parte) 
-	:actor (C / Cinte))  
+(h/ hniter-00 ‘make laugh’ 
+	:causer (p/ person
+		:name (n/ name :op1 "Parte")) 
+	:actor (p2/ person
+		:name (n2/ name :op1 "Cinte"))  
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 **Applicatives.**  Peterson (2007) distinguishes between “valency-increasing” applicatives and “valency-rearranging” applicatives. In valency-rearranging applicatives, a participant is expressed as an oblique in the basic construction and expressed as a core argument in the applicative construction; they are generally associated with the increased saliency or topicality of the oblique participant. Therefore, these fit into the category of pragmatic valency alternations, and both the basic and applicative construction receive the same participant role
@@ -3201,29 +3248,62 @@ annotation. This can be seen in
 Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.  
 Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1  
 ‘Parte cooked some curry for Thangte.’
-
-(s / suang ‘cook’
-	:actor (P / Parte)
-	:undergoer (h / hmeh ‘curry’) 
-	:affectee (T / Thangte))
+(s/ suang-00 ‘cook’
+	:actor (p/ person
+		:name (n/ name :op1 "Parte"))
+	:undergoer (h/ hmeh ‘curry’) 
+	:affectee (p2/ person
+		:name (n2/ name :op2 "Thangte"))
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1-2 (7b)" label="3-2-1-1-2 (7b)">\[3-2-1-1-2 (7b)\]</span>
 ```
 Parte in 	Thangte hmeh 	a 	suan-sak  
 Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN  
 ‘Parte cooked Thangte some curry.’
-
-(s / suang-sak ‘cook for’
-	:actor (P / Parte)
-	:undergoer (h / hmeh ‘curry’) 
-	:affectee (T / Thangte)) 
+(s/ suangsak-00 ‘cook for’
+	:actor (p/ person
+		:name (n/ name :op1 "Parte"))
+	:undergoer (h/ hmeh ‘curry’) 
+	:affectee (p2/ person
+		:name (n2/ name :op1 "Thangte"))
+	:aspect Performance
+	:modstr FullAff)
+```
+<span id="3-2-1-1-2 (7c)" label="3-2-1-1-2 (7c)">\[3-2-1-1-2 (7c)\]</span>
+```
+as-teny-aye'	pa'ang
+1SG-buy-DECL	palm
+‘I bought palm hearts.’
+(t/ entenyay'a-00
+	:actor (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:theme (p2/ pa'ang 'palm)
+	:aspect Performance
+	:modstr FullAff)
+```
+<span id="3-2-1-1-2 (7d)" label="3-2-1-1-2 (7d)">\[3-2-1-1-2 (7d)\]</span>
+```
+as-teny-as-ke'		pa'ang	ap-angkok	Eduardo
+1SG-buy-APPL-DECL	palm  	2/3M-POSS	Eduardo
+‘I bought palm hearts from Eduardo.’
+(t/ entenyaskama-00
+	:actor (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:theme (p2/ pa'ang 'palm)
+	:source (p3/ person
+		:name (n/ name :op1 "Eduardo"))
+	:aspect Performance
+	:modstr FullAff)
 ```
 
-Whether the beneficiary, *Thangte*, is expressed as an oblique or a core argument, it is annotated as `affectee`. Valency-increasing applicatives involve the addition of a participant, compared to the basic construction. Here, the added participant is
-simply annotated with the appropriate semantic role. This can be seen in ADD EXAMPLE.
+Whether the beneficiary, *Thangte*, is expressed as an oblique or a core argument, it is annotated as `:affectee`. Valency-increasing applicatives involve the addition of a participant, compared to the basic construction. Here, the added participant is
+simply annotated with the appropriate semantic role. This can be seen in [\[3-2-1-1-2 (7c)\]](#3-2-1-1-2 (7c))-[\[3-2-1-1-2 (7d)\]](#3-2-1-1-2 (7d)) from Sanapaná.
 
-**Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be in [\[3-2-1-1-2 (8a)\]](#3-2-1-1-2 (8a)) and [\[3-2-1-1-2 (8b)\]](#3-2-1-1-2 (8b)) from Supyire (Carlson 1994:416-7).
+**Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be seen in [\[3-2-1-1-2 (8a)\]](#3-2-1-1-2 (8a)) and [\[3-2-1-1-2 (8b)\]](#3-2-1-1-2 (8b)) from Supyire (Carlson 1994:416-7).
 
 <span id="3-2-1-1-2 (8)" label="3-2-1-1-2 (8)">\[3-2-1-1-2 (8)\]</span>
 
@@ -3232,21 +3312,26 @@ simply annotated with the appropriate semantic role. This can be seen in ADD EXA
 U 	a 	ù-yé 	bánì  
 he 	PERF 	he-REFL wound  
 ‘He has wounded himself.’
-
-(b / bánì ‘wound’ 
-	:actor (u / u ‘he’) 
-	:undergoer (u)) 
+(b/ bánì-00 ‘wound’ 
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Singular) 
+	:undergoer p
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-1-2 (8b)" label="3-2-1-1-2 (8b)">\[3-2-1-1-2 (8b)\]</span><br /> 
 ```
 Pi 	a 	pì-yé 		kánù  
 they 	PERF	they-REFL 	love  
 ‘They loved each other.’
-
-(k / kánù ‘love’
-	:actor (p / pi ‘they’)
-	:undergoer (p))
+(k/ kánù-00 ‘love’
+	:actor (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:undergoer p
+	:aspect State
+	:modstr FullAff)
 ```
 
 The annotation of participant roles for valency alternations in Step 1 of the road map is summarized in table 12 below.
@@ -3258,11 +3343,11 @@ The annotation of participant roles for valency alternations in Step 1 of the ro
 | Passives | Every overt participant | Same as in basic construction |
 | Anticausatives | Every overt participant | Same as in basic construction |
 | Valency-rearranging applicatives | Every overt participant | Same as in basic construction |
-| Causatives of transitives | Every overt participant | `causer`, `actor`, other participants same as in basic construction |
-| Transfer events expressed as causatives | Every overt participant | `actor`, `theme`, `recipient` |
-| Causatives of ditransitives | Every overt participant | `causer`, `actor`, `theme`, `recipient` |
-| Causatives of inactive intransitives | Every overt participant | `actor`, `theme` |
-| Causatives of active intransitives | Every overt participant | `causer`, `actor` |
+| Causatives of transitives | Every overt participant | `:causer`, `:actor`, other participants same as in basic construction |
+| Transfer events expressed as causatives | Every overt participant | `:actor`, `:theme`, `:recipient` |
+| Causatives of ditransitives | Every overt participant | `:causer`, `:actor`, `:theme`, `:recipient` |
+| Causatives of inactive intransitives | Every overt participant | `:actor`, `:theme` |
+| Causatives of active intransitives | Every overt participant | `:causer`, `:actor` |
 | Valency-increasing applicatives | Every overt participant | Same as in basic construction, appropriate role for new participant |
 | Reflexives | A single participant with two roles | Both roles the participant fulfills in the construction |
 | Reciprocals | A single participant with two roles | Both roles the participant fulfills in the construction |
@@ -3294,10 +3379,16 @@ predicate: tease.02
 ```
 He teased the boy about his hat.
 
-(t / tease.02
-	:ARG0 (h / he)
-	:ARG1 (b / boy)
-	:ARG2 (h2 / hat))
+(t/ tease.02
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (b/ boy
+		:ref-number Singular)
+	:ARG2 (h/ hat
+		:poss b)
+	:aspect Endeavor
+	:modstr FullAff)
 ```
 
 Since the nonverbal clause functions require the use of lexicalized predicates at Stage 0, these are annotated in the same way at Stage 1 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses)). Unlike Stage 0, implicit participants are
@@ -3308,22 +3399,34 @@ annotated for their semantic role at Stage 1. This is shown in
 ```
 She parked the truck in the driveway. They loaded the boxes.
 
-(h / park.01
-	:ARG0 (s / she)
-	:ARG1 (t / truck)
-	:ARG2 (d / driveway)) 
+(s1p/ park-01
+	:ARG0 (s1p2/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (s1t/ truck
+		:ref-number Singular)
+	:ARG2 (s1d/ driveway)
+	:aspect Performance
+	:modstr FullAff) 
 
-(h / load.01
-	:ARG0 (t2 / they)
-	:ARG1 (t)  
-	:ARG2 (b / boxes))
+(s2l/ load-01
+	:ARG0 (s2p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG1 (s2t/ thing)  
+	:ARG2 (s2b/ box
+		:ref-number Plural)
+	:aspect Performance
+	:modstr FullAff)
+(s2/ sentence
+	:temporal (DCT :before s2l)
+	:modal (AUTH :FullAff s2l)
+	:coref (s1t :same-entity s2t))
 ```
 
 The second sentence in [\[3-2-1-2 (2)\]](#3-2-1-2 (2)) does not
 include explicit mention of the truck, but it is understood from the
-context that the truck is the goal participant of the loading event.
-Therefore, at Stage 1, these implicit roles receive participant role
-annotation.
+context that the truck is the goal participant of the loading event. Therefore, an implicit `thing' participant is identified for the ```:ARG1``` role of the loading event at Stage 1. In the document-level annotation, this participant is then flagged as coreferential with the truck in the previous sentence.
 
 [Back to Table of Contents](#toc)
 
@@ -3342,113 +3445,121 @@ the participants are annotated accordingly with numbered argument roles rather t
 
 ##### Part 3-2-1-3. Inverse participant roles
 
-AMR, the predecessor of UMR, makes use of **inverse** participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see [Part 3-1-1-2](#part-3-1-1-2-processes-in-modification-and-reference)), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the `:ARG1-of` relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role `:ARG1`, allows us to maintain a single-rooted graph structure by embedding the *see*-event underneath the participant it modifies (*sweater*). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating *runner* in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as `(p / person :ARG0-of r / run.02)`, we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node `(r / runner)` or something similar.
+AMR, the predecessor of UMR, makes use of **inverse** participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see [Part 3-1-1-2](#part-3-1-1-2-processes-in-modification-and-reference)), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the `:ARG1-of` relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role `:ARG1`, allows us to maintain a single-rooted graph structure by embedding the *see*-event underneath the participant it modifies (*sweater*). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating *runner* in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as `(p/ person :ARG0-of r/ run-02)`, we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node `(r/ runner)`.
 
 <span id="3-2-1-3 (1)" label="3-2-1-3 (1)">\[3-2-1-3 (1)\]</span>
 
 <span id="3-2-1-3 (1a)" label="3-2-1-3 (1a)">\[3-2-1-3 (1a)\]</span> 
-I bought the sweater that you saw.
 ```
-(b / buy.01
-	:ARG0 (p / person
+I bought the sweater that you saw.
+(b/ buy-0101
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (s / sweater
-		:ARG1-of (s2 / see.01
+	:ARG1 (s/ sweater
+		:ARG1-of (s2/ see-01
 			:ARG0 (p2/ person
 				:ref-person 2nd
 				:ref-number Singular)
-			:Aspect State)
+			:aspect State
+			:modstr FullAff)
 		:ref-number Singular)
-	:Aspect Performance)
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 <span id="3-2-1-3 (1b)" label="3-2-1-3 (1b)">\[3-2-1-3 (1b)\]</span> 
-I didn't see whether he bought the sweater.
 ```
-(s / see.01
-	:ARG0 (p / person
+I didn't see whether he bought the sweater.
+(s/ see-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (t / truth-value
-		:polarity-of (b/ buy.01
-			:ARG0 (p / person
+	:ARG1 (t/ truth-value
+		:polarity-of (b/ buy-01
+			:ARG0 (p2/ person
 				:ref-person 3rd
 				:ref-number Singular)
-			:ARG1 (s/ sweater
+			:ARG1 (s2/ sweater
 				:ref-number Singular)
-			:Aspect Performance))
+			:aspect Performance
+			:modstr NeutAff))
 	:Aspect State
-	:Polarity -)
+	:Modstr FullNeg)
 ```
 
 <span id="3-2-1-3 (1c)" label="3-2-1-3 (1c)">\[3-2-1-3 (1c)\]</span> 
-The runner was wearing a sweater.
 ```
-(w / wear.01
-	:ARG0 (p / person
-		:ARG0-of (r / run.02)
+The runner was wearing a sweater.
+(w/ wear-01
+	:ARG0 (p/ person
+		:ARG0-of (r/ run-02)
 		:ref-number Singular)
-	:ARG1 (s / sweater
+	:ARG1 (s/ sweater
 		:ref-number Singular)
-	:Aspect State)
+	:aspect State
+	:modstr FullAff)
 ```
 
-UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 1 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:Actor-of` and `:Undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-1)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:Stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
+UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:actor-of` and `:undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-1)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
 
 <span id="3-2-1-3 (2)" label="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
-I bought the sweater that you saw.
+
 ```
-(b / buy.01
-	:Actor (p / person
+I bought the sweater that you saw.
+(b/ buy-01
+	:actor (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:Theme (s / sweater
-		:Stimulus-of (s2 / see.01
-			:Experiencer (p2 / person
+	:theme (s/ sweater
+		:stimulus-of (s2/ see-01
+			:experiencer (p2/ person
 				:ref-person 2nd
 				:ref-number Singular)
-			:Aspect State)
+			:aspect State
+			:modstr FullAff)
 		:ref-number Singular)
-	:Aspect Performance)
+	:aspect Performance
+	:modstr FullAff)
 ```
 
-One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p / person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `kinship-91`) for frequently encountered concrete relation types are also available (FLESH OUT AND CREATE ROLESETS FOR PREDICATES). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3)).
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `kinship-91, have-org-role-91`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3)).
   
 <span id="3-2-1-3 (3)" label="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
 
 <span id="3-2-1-3 (3a)" label="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
+```
 I met my father.
-```
-(m / meet.03
-	:Arg0 (p / person
+(m/ meet-03
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:Arg1 (p2 / person
-		:ARG0-of (k / kinship-91
+	:ARG1 (p2/ person
+		:ARG0-of (k/ kinship-91
 			:ARG1 p
-			:ARG2 (f / father)))
-	:Aspect Performance)
+			:ARG2 (f/ father)))
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-1-3 (3a)" label="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
-I met the President of the University of New Mexico.
 ```
-(m / meet.03
-	:Arg0 (p / person
+I met the President of the University of New Mexico.
+(m/ meet-03
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:Arg1 (p2 / person
-		:ARG0-of (h / have-org-role-91
-			:ARG1 (a / academic_org
-				:name (n / name
+	:ARG1 (p2/ person
+		:ARG0-of (h/ have-org-role-91
+			:ARG1 (a/ academic_organization
+				:name (n/ name
 					:op1 "University
 					:op2 "of"
 					:op3 "New"
-					:op4 "Mexico"
-					:wiki "University_of_New_Mexico"))
-			:ARG2 (p / president)))
-	:Aspect Performance)
+					:op4 "Mexico")
+				:wiki "University_of_New_Mexico")
+			:ARG2 (p3/ president)))
+	:aspect Performance
+	:modstr FullAff)
 ```
 [Back to Table of Contents](#toc)
 
@@ -3458,33 +3569,31 @@ Apart from predicate-specific and general participant roles, UMR also has a set 
 
   ##### Part 3-2-2-1. Temporal relations
 
-Some relations are used to describe entities in a standard, canonical form. This is the case for :calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year, and :year2. The use of these relations is exemplified in [\[3-2-2-1 (1)\]](#3-2-2-1 (1)).
+Some relations are used to describe entities in a standard, canonical form. This is the case for ```:calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year,``` and ```:year2```. The use of these relations is exemplified in [\[3-2-2-1 (1)\]](#3-2-2-1 (1)).
 
 <span id="3-2-2-1 (1)" label="3-2-2-1 (1)">\[3-2-2-1 (1)\]</span> 
 
 <span id="3-2-2-1 (1a)" label="3-2-2-1 (1a)">\[3-2-2-1 (1a)\]</span> 
-March 23rd, 2021
 ```
-(d / date-entity
+March 23rd, 2021
+(d/ date-entity
 	:year 2021
 	:month 3
 	:day 23)
 ```
-
 <span id="3-2-2-1 (1b)" label="3-2-2-1 (1b)">\[3-2-2-1 (1b)\]</span> 
-Friday the 13th
 ```
-(d / date-entity
-	:weekday (f / Friday)
+Friday the 13th
+(d/ date-entity
+	:weekday (f/ Friday)
 	:day 13)
 ```
-
 <span id="3-2-2-1 (1c)" label="3-2-2-1 (1c)">\[3-2-2-1 (1c)\]</span> 
-3.30 pm Albuquerque time
 ```
-(d / date-entity
+3.30 pm Albuquerque time
+(d/ date-entity
 	:time 15:30
-	:timezone (z / MST))
+	:timezone (z/ MST))
 ```
 
   ##### Part 3-2-2-2. Modifiers
@@ -3494,254 +3603,252 @@ Other relations mostly function to modify object concepts - they are often expre
 <span id="3-2-2-2 (1)" label="3-2-2-2 (1)">\[3-2-2-2 (1)\]</span> 
 
 <span id="3-2-2-2 (1a)" label="3-2-2-2 (1a)">\[3-2-2-2 (1a)\]</span> 
-John's car
+
 ```
-(c / car
-	:poss (p / person
-		:name (n / name	:op1 "John"))
+John's car
+(c/ car
+	:poss (p/ person
+		:name (n/ name	:op1 "John"))
 	:ref-number Singular)
 ```
-
 <span id="3-2-2-2 (1b)" label="3-2-2-2 (1b)">\[3-2-2-2 (1b)\]</span> 
-Guitar strings
 ```
-(s / string
-	:part-of (g / guitar)
+Guitar strings
+(s/ string
+	:part-of (g/ guitar)
 	:ref-number Plural)
 ```
-
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
 category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in [\[3-2-2-2 (2a)\]](#3-2-2-2 (2a)), the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in [\[3-2-2-2 (2b)\]](#3-2-2-2 (2b)); `:consist-of`, for indicating the membership of groups [\[3-2-2-2 (2c)\]](#3-2-2-2 (2c)); `:topic`, for indicating what a referent is about as in [\[3-2-2-2 (2d)\]](#3-2-2-2 (2d)), and `:medium` for indicating channels of communication, such as languages as in [\[3-2-2-2 (2e)\]](#3-2-2-2 (2e)).
 
 <span id="3-2-2-2 (2)" label="3-2-2-2 (2)">\[3-2-2-2 (2)\]</span> 
 
 <span id="3-2-2-2 (2a)" label="3-2-2-2 (2a)">\[3-2-2-2 (2a)\]</span> 
+```
 a women's magazine
-```
-(m / magazine
-	:mod (w / woman)
+(m/ magazine
+	:mod (w/ woman)
 	:ref-number Singular)
 ```
-
 <span id="3-2-2-2 (2b)" label="3-2-2-2 (2b)">\[3-2-2-2 (2b)\]</span> 
-The thirty year-old man
 ```
-(m / man
-	:age (t / temporal-quantity
+The thirty year-old man
+(m/ man
+	:age (t/ temporal-quantity
 		:quant 30
-		:unit (y / year))
+		:unit (y/ year))
 	:ref-number Singular)
 ```
-
 <span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">\[3-2-2-2 (2c)\]</span> 
-A swarm of bees
+
 ```
-(s / swarm
-	:consist-of (b / bee
+A swarm of bees
+(s/ swarm
+	:consist-of (b/ bee
 		:ref-number Plural))
 ```
-
 <span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">\[3-2-2-2 (2d)\]</span> 
-Information about the case
+
 ```
-(i / information
-	:topic (c / case))
+Information about the case
+(i/ information
+	:topic (c/ case))
 ```
 
 <span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">\[3-2-2-2 (2e)\]</span> 
-a French song
 ```
-(t / thing
-	:ARG1-of (s / sing-01)
-	:medium (l / language
+a French song
+(t/ thing
+	:ARG1-of (s/ sing-01)
+	:medium (l/ language
 		:wiki "French_language"
-		:name (n / name :op1 "French")))
+		:name (n/ name :op1 "French")))
 ```
 
-  ##### Part 3-2-2-3. Circumstantial temporals and locatives
+##### Part 3-2-2-3. Circumstantial temporals and locatives
 
 A number of relations serve to modify events rather than objects - they are used to annotate circumstantial locative and temporal information rather than participants. The `:direction` and `:path` relations are used to annotate cardinal directions and extended spatial paths, respectively, as in [\[3-2-2-3 (1a)\]](#3-2-2-3 (1a)) and [\[3-2-2-3 (1b)\]](#3-2-2-3 (1b)). The `:duration` and `:frequency` relations, illustrated in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) - [\[3-2-2-3 (1e)\]](#3-2-2-3 (1e)), are optionally used to annotate aspectual information that may be overtly present but that cannot be captured in the `:aspect` attribute - as clarified in [Part 3-3-1](#part-3-3-1-Aspect), the latter abstracts away from duration and frequency information.
 
 <span id="3-2-2-3 (1)" label="3-2-2=3 (1)">\[3-2-2-3 (1)\]</span> 
 
 <span id="3-2-2-3 (1a)" label="3-2-2-3 (1a)">\[3-2-2-3 (1a)\]</span> 
+```
 He drove west.
-```
-(d / drive.01
-	:ARG0 (p / person
+(d/ drive-01
+	:ARG0 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
-	:direction (w / west)
-	:aspect Activity)
+	:direction (w/ west)
+	:aspect Activity
+	:modstr FullAff)
 ```
-
 <span id="3-2-2-3 (1b)" label="3-2-2-3 (1b)">\[3-2-2-3 (1b)\]</span> 
-He drove through the tunnel.
 ```
-(d / drive.01
-	:ARG0 (p / person
+He drove through the tunnel.
+(d/ drive-01
+	:ARG0 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
-	:path (t / tunnel)
-	:aspect Performance)
+	:path (t/ tunnel)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-2-3 (1c)" label="3-2-2-3 (1c)">\[3-2-2-3 (1c)\]</span> 
+```
 I visited New York City for a week.
-```
-(v / visit.01
-	:ARG0 (p / person
+(v/ visit-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (c / city
-		:name (n / name
+	:ARG1 (c/ city
+		:name (n/ name
 			:op1 "New"
 			:op2 "York"
-			:op3 "City"
-			:wiki "New_York_City"))
-	:duration (t / temporal-quantity
+			:op3 "City")
+		:wiki "New_York_City")
+	:duration (t/ temporal-quantity
 		:quant 1
-		:unit (w / week))
-	:Aspect Endeavor)
+		:unit (w/ week))
+	:aspect Endeavor
+	:modstr FullAff)
 ```
-
 <span id="3-2-2-3 (1d)" label="3-2-2-3 (1d)">\[3-2-2-3 (1d)\]</span> 
+```
 I visited New York City twice.
-```
-(v / visit.01
-	:ARG0 (p / person
+(v/ visit-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (c / city
+	:ARG1 (c/ city
 		:name (n / name
 			:op1 "New"
 			:op2 "York"
-			:op3 "City"
-			:wiki "New_York_City"))
+			:op3 "City")
+		:wiki "New_York_City")
 	:frequency 2
-	:Aspect Performance)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-2-3 (1e)" label="3-2-2-3 (1e)">\[3-2-2-3(1e)\]</span> 
-I visit New York City every December.
 ```
-(v / visit.01
-	:ARG0 (p / person
+I visit New York City every December.
+(v/ visit-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (c / city
+	:ARG1 (c/ city
 		:name (n / name
 			:op1 "New"
 			:op2 "York"
-			:op3 "City"
-			:wiki "New_York_City"))
-	:frequency (r / rate-entity-91
-		:ARG4 (d / date-entity
+			:op3 "City")
+		:wiki "New_York_City")
+	:frequency (r/ rate-entity-91
+		:ARG4 (d/ date-entity
 			:month 12))
-	:Aspect Habitual)
+	:aspect Habitual
+	:modstr FullAff)
 ```
 
   ##### Part 3-2-2-4. Named entities
 
-The relations `:name`, `:wiki`, and `:opX` are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a `:name` relation, whose daughter is an `(n / name)` node. This node then has as many numbered `:opX` relations as the number of words this name consists of, each of which takes one of these words as their daughter. In [\[3-2-2-3 (1e)\]](#3-2-2-3 (1e)) above, for example, the `(n / name)` concept corresponding to *New York City* takes an `:op1`, `:op1`, and `:op3` relation, one for each orthographic word. Named entities can also take a `:wiki` relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered `:op` relations are also used in coordination, as in [\[3-2-2-4 (1)\]](#3-2-2-4 (1)).
+The relations `:name`, `:wiki`, and `:opX` are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a `:name` relation, whose daughter is an `(n/ name)` node. This node then has as many numbered `:opX` relations as the number of words this name consists of, each of which takes one of these words as their daughter. In [\[3-2-2-3 (1e)\]](#3-2-2-3 (1e)) above, for example, the `(n/ name)` concept corresponding to *New York City* takes an `:op1`, `:op1`, and `:op3` relation, one for each orthographic word. Named entities can also take a `:wiki` relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered `:opX` relations are also used as the daughters of various abstract concepts used for expressing relations between clauses or phrases (e.g. coordination), as in [\[3-2-2-4 (1)\]](#3-2-2-4 (1)).
 
 <span id="3-2-2-4 (1)" label="3-2-2 (5)">\[3-2-2-4 (1)\]</span> 
-
-I saw a spider and a snake.
 ```
-(s / see.01
-	:ARG0 (i / I)
-	:ARG1 (a / and
-		:op1 (s2 / spider)
-		:op2 (s3 / snake))
-	:Aspect State)
+I saw a spider and a snake.
+(s/ see-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (a/ and
+		:op1 (s2/ spider
+			:ref-number Singular)
+		:op2 (s3/ snake
+			:ref-number Singular))
+	:aspect State
+	:modstr FullAff)
 ```
 
   ##### Part 3-2-2-5. Quantification
 
-The `:ord`, `:quant`, `:range`, `:scale`, `:unit`, and `:value` relations are used to annotate semantics of quantification, as illustrated in [\[3-2-2-5 (1)\]](#3-2-2-5 (1)). The `:ord` role is used to express ordinals. It always takes an `(o / ordinal-entity)` concept as its daughter, which in turn takes a `:value` relation to express the ordinal position, as in [\[3-2-2-5 (1a)\]](#3-2-2-5 (1a)). It may furthermore take a `:range` relation to indicate a specific time period in which the relevant ordinal position holds, as in [\[3-2-2-5 (1b)\]](#3-2-2-5 (1b)). The `:value` relation is, apart from ordinals, used for annotating percentages, phone numbers, e-mail addresses, and urls, as illustrated in [\[3-2-2-5 (1c)\]](#3-2-2-5 (1c)) and [\[3-2-2-5 (1d)\]](#3-2-2-5 (1d)). The `:quant` relation is used for annotating both exact and approximate cardinalities of sets of countable objects as in [\[3-2-2-5 (1e)\]](#3-2-2-5 (1e)) and [\[3-2-2-5 (1f)\]](#3-2-2-5 (1f)), as well as for the number of "units" of non-countable substances, as in [\[3-2-2-5 (1g)\]](#3-2-2-5 (1g)). This latter use includes temporal durations and spatial distances, as in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) above. The `:unit` relation is used for both standardized, well-established units such as dollars in [\[3-3-2 (1a)\]](#3-3-2 (1a)) below or weeks in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) above, and for ad-hoc mensural constructions, such as cups in [\[3-2-2-5 (1g)\]](#3-2-2-5 (1g)). Lastly, the `:scale` relation is used for quantities where a `:quant 0` value does not actually represent a 0-quantity, such as on the Richter or Decibel scale, as in [\[3-2-2-5 (1h)\]](#3-2-2-5 (1h))
+The `:ord`, `:quant`, `:range`, `:scale`, `:unit`, and `:value` relations are used to annotate semantics of quantification, as illustrated in [\[3-2-2-5 (1)\]](#3-2-2-5 (1)). The `:ord` role is used to express ordinals. It always takes an `(o/ ordinal-entity)` concept as its daughter, which in turn takes a `:value` relation to express the ordinal position, as in [\[3-2-2-5 (1a)\]](#3-2-2-5 (1a)). It may furthermore take a `:range` relation to indicate a specific time period in which the relevant ordinal position holds, as in [\[3-2-2-5 (1b)\]](#3-2-2-5 (1b)). The `:value` relation is, apart from ordinals, used for annotating percentages, phone numbers, e-mail addresses, and urls, as illustrated in [\[3-2-2-5 (1c)\]](#3-2-2-5 (1c)) and [\[3-2-2-5 (1d)\]](#3-2-2-5 (1d)). The `:quant` relation is used for annotating both exact and approximate cardinalities of sets of countable objects as in [\[3-2-2-5 (1e)\]](#3-2-2-5 (1e)) and [\[3-2-2-5 (1f)\]](#3-2-2-5 (1f)), as well as for the number of "units" of non-countable substances, as in [\[3-2-2-5 (1g)\]](#3-2-2-5 (1g)). This latter use includes temporal durations and spatial distances, as in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) above. The `:unit` relation is used for both standardized, well-established units such as dollars in [\[3-3-2 (1a)\]](#3-3-2 (1a)) below or weeks in [\[3-2-2-3 (1c)\]](#3-2-2-3 (1c)) above, and for ad-hoc mensural constructions, such as cups in [\[3-2-2-5 (1g)\]](#3-2-2-5 (1g)). Lastly, the `:scale` relation is used for quantities where a `:quant 0` value does not actually represent a 0-quantity, such as on the Richter or Decibel scale, as in [\[3-2-2-5 (1h)\]](#3-2-2-5 (1h))
 
 <span id="3-2-2-5 (1)" label="3-2-2-5 (1)">\[3-2-2-5 (1)\]</span> 
 
 <span id="3-2-2-5 (1a)" label="3-2-2-5 (1a)">\[3-2-2-5 (1a)\]</span> 
+```
 I visited New York for the third time.
-```
-(v / visit.01
-	:ARG0 (p / person
+(v/ visit-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (c / city
-		:name (n / name
+	:ARG1 (c/ city
+		:name (n/ name
 			:op1 "New"
-			:op2 "York"
-			:wiki "New_York_City"))
-	:ord (o / ordinal-entity
+			:op2 "York")
+		:wiki "New_York_City")
+	:ord (o/ ordinal-entity
 		:value 3)
-	:Aspect Performance)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-2-5 (1b)" label="3-2-2-5 (1b)">\[3-2-2-5 (1b)\]</span> 
-I visited New York for the third time in six months.
 ```
-(v / visit.01
-	:ARG0 (p / person
+I visited New York for the third time in six months.
+(v/ visit-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (c / city
-		:name (n / name
+	:ARG1 (c/ city
+		:name (n/ name
 			:op1 "New"
-			:op2 "York"
-			:wiki "New_York_City"))
-	:ord (o / ordinal-entity
+			:op2 "York")
+		:wiki "New_York_City")
+	:ord (o/ ordinal-entity
 		:value 3
-		:range (t / temporal-quantity
+		:range (t/ temporal-quantity
 			:quant 6
-			:unit (m / month)))
-	:Aspect Performance)
+			:unit (m/ month)))
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 <span id="3-2-2-5 (1c)" label="3-2-2 (6c)">\[3-2-2 (6c)\]</span> 
-30 percent
 ```
-(p / percentage-entity
+30 percent
+(p/ percentage-entity
 	:value 30)
 ```
-
 <span id="3-2-2-5 (1d)" label="3-2-2-5 (1d)">\[3-2-2-5 (1d)\]</span> 
-http://umr-tool.cs.brandeis.edu/display_post
 ```
-(u / url-entity
+http://umr-tool.cs.brandeis.edu/display_post
+(u/ url-entity
 	:value "http://umr-tool.cs.brandeis.edu/display_post")
 ```
-
 <span id="3-2-2-5 (1e)" label="3-2-2-5 (1e)">\[3-2-2-5 (1e)\]</span> 
-Three houses
 ```
-(h / house
+Three houses
+(h/ house
 	:quant 3)
 ```
-
 <span id="3-2-2-5 (1f)" label="3-2-2-5 (1f)">\[3-2-2-5 (1f)\]</span> 
+```
 More than three houses
+(h/ house
+	:quant (m/ more-than :op1 3))
 ```
-(h / house
-	:quant (m / more-than	:op1 3))
-```
-
 <span id="3-2-2-5 (1g)" label="3-2-2-5 (1g)">\[3-2-2-5 (1g)\]</span> 
+```
 Three cups of milk
-```
-(m / milk
+(m/ milk
 	:quant 3
-	:unit (c / cup))
+	:unit (c/ cup))
 ```
-
 <span id="3-2-2-5 (1h)" label="3-2-2-5 (1h)">\[3-2-2-5 (1h)\]</span> 
-6.5 on the Richter scale
 ```
-(s / seismic-quantity
+6.5 on the Richter scale
+(s/ seismic-quantity
 	:quant 6.5
-	:scale (r / richter))
+	:scale (r/ richter))
 ```
 
   ##### Part 3-2-2-6. Other relations
@@ -3751,18 +3858,17 @@ The `:example` relation, illustrated in [\[3-2-2-6 (1a)\]](#3-2-2-6 (1a)), is us
 <span id="3-2-2-6 (1)" label="3-2-2-6 (1)">\[3-2-2-6 (1)\]</span> 
 
 <span id="3-2-2-6 (1a)" label="3-2-2-6 (1a)">\[3-2-2-6 (1a)\]</span> 
+```
 Countries like Germany and France
-```
-(c / country
+(c/ country
 	:example (a/ and
-		:op1 (c / country
-			:name (n / name	:op1 "Germany"
-				:wiki "Germany"))
-		:op2 (c / country
-			:name (n / name	:op1 "France"
-				:wiki "France"))))
+		:op1 (c2/ country
+			:name (n/ name	:op1 "Germany")
+			:wiki "Germany")
+		:op2 (c3/ country
+			:name (n2/ name	:op1 "France")
+			:wiki "France")))
 ```
-
 <span id="3-2-2-6 (1b)" label="3-2-2-6 (1b)">\[3-2-2-6 (1b)\]</span> 
 Could you close the window?
 ```
@@ -3848,26 +3954,36 @@ nominals, as in [\[3-3-1-1 (1)\]](#3-3-1-1 (1)), are annotated as
 
 <span id="3-3-1-1 (1)" label="3-3-1-1 (1)">\[3-3-1 (1)\]</span>
 
-<span id="3-3-1-1 (1a)" label="3-3-1-1 (1a)">\[3-3-1-1 (1a)\]</span> He presented his
-research at **the meeting** yesterday.
+<span id="3-3-1-1 (1a)" label="3-3-1-1 (1a)">\[3-3-1-1 (1a)\]</span>
 ```
-(m / meeting  
-	Aspect: process)  
+He presented his research at **the meeting** yesterday.
+(p/ present-01
+	:ARG0 (p2/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (t/ thing
+		:ARG1-of (r/ research-01
+			:ARG0 p2))
+	:place (m/ meet-01
+		:aspect Process)
+	:temporal (y/ yesterday)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
-<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">\[3-3-1-1 (1b)\]</span> After **the game**, she
-went home.  
+<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">\[3-3-1-1 (1b)\]</span>   
 ```
-(g / game  
-	Aspect: process)  
+After **the game**, she went home.
+(g/ go-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG4 (h/ home)
+	:temporal (a/ after
+		:op1 (g2/ game
+			:aspect Process))
+	:aspect Performance
+	:modstr FullAff)
 ```
-<span id="3-3-1-1 (1c)" label="3-3-1-1 (1c)">\[3-3-1-1 (1c)\]</span> He had **the operation** on Tuesday.  
-
-```
-(o / operation  
-	Aspect: process)  
-```
-
 Any event packaged in a referring expression is considered an event
 nominal and annotated with `process`. This
 includes underived nominals, nominalizations, and gerunds, as in
@@ -3875,17 +3991,31 @@ includes underived nominals, nominalizations, and gerunds, as in
 
 <span id="3-3-1-1 (2)" label="3-3-1-1 (2)">\[3-3-1-1 (2)\]</span>
 
-<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">\[3-3-1-1 (2a)\]</span> **The second training** was cancelled yesterday.  
+<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">\[3-3-1-1 (2a)\]</span>   
 ```
-(t / training  
-	Aspect: process)  
+**The second training** was cancelled yesterday.
+(c/ cancel-01
+	:ARG1 (t/ train-01
+		:ord (o/ ordinal-entity
+			:value 2)
+		:aspect Process)
+	:temporal (y/ yesterday)
+	:aspect Performance
+	:modstr FullAff) 
 ```
-
 <span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">\[3-3-1-1 (2b)\]</span> The dog
 interrupted the meeting with **his barking**.  
 ```
-(b / barking  
-	Aspect: process)  
+(i/ interrupt-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:ARG1 (m/ meet-01
+		:aspect Process)
+	:manner (b/ bark-01
+		:ARG0 d
+		:aspect Process)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 Note that *-ing* forms in English can occur in a variety of
@@ -3919,27 +4049,68 @@ habitually, as in [\[3-3-1-2 (1)\]](#3-3-1-2 (1)).
 
 <span id="3-3-1-2 (1)" label="3-3-1-2 (1)">\[3-3-1-2 (1)\]</span>
 
-<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">\[3-3-1-2 (1a)\]</span> He **bakes** pies.
+<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">\[3-3-1-2 (1a)\]</span> 
 ```
-(b / bake  
-	Aspect: habitual) 
+He **bakes** pies.
+(b/ bake-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (p2/ pie
+		:ref-number Plural)
+	:aspect Habitual
+	:modstr FullAff) 
 ```
-<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">\[3-3-1-2 (1b)\]</span> She **rides** her bike to work. 
+<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">\[3-3-1-2 (1b)\]</span>  
 ```
-(r / ride  
-	Aspect: habitual)  
+She **rides** her bike to work.
+(r/ ride-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (b/ bike
+		:poss p)
+	:goal (w/ work-01
+		:ARG0 p
+		:aspect Process)
+	:aspect Habitual
+	:modstr FullAff)
 ```
-<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">\[3-3-1-2 (1c)\]</span> They
-**vacation** in Taos every winter.  
+<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">\[3-3-1-2 (1c)\]</span>   
 ```
-(v / vacation  
-	Aspect: habitual)  
+They **vacation** in Taos every winter.
+(v/ vacation-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG (c/ city
+		:name (n/ name :op1 "Taos")
+		:wiki "Taos_New_Mexico")
+	:frequency (r/ rate-entity-91
+		:ARG3 (t/ temporal-quantity
+			:quant 1
+			:unit (y/ year))
+		:ARG4 (w/ winter))
+	:aspect Habitual
+	:modstr FullAff)  
 ```
-<span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">\[3-3-1-2 (1d)\]</span> They
-**used to vacation** in Taos every winter.  
+<span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">\[3-3-1-2 (1d)\]</span>
 ```
-(v / vacation  
-	Aspect: habitual)  
+They **used to vacation** in Taos every winter.
+(v/ vacation-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG (c/ city
+		:name (n/ name :op1 "Taos")
+		:wiki "Taos_New_Mexico")
+	:frequency (r/ rate-entity-91
+		:ARG3 (t/ temporal-quantity
+			:quant 1
+			:unit (y/ year))
+		:ARG4 (w/ winter))
+	:aspect Habitual
+	:modstr FullAff)   
 ```
 
 In English, present habitual events are signalled by the Simple Present
@@ -3959,31 +4130,61 @@ identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-conc
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">\[3-3-1-3 (1)\]</span>
 
-<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">\[3-3-1-3 (1a)\]</span> My cat **loves** tuna. 
+<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">\[3-3-1-3 (1a)\]</span>  
 ```
-(l / love  
-	Aspect: state)  
+My cat **loves** tuna.
+(l/ love-01
+	:ARG0 (c/ cat
+		:poss (p/ person
+			:ref-person 1st
+			:ref-number Singular)
+		:ref-number Singular)
+	:ARG1 (t/ tuna)
+	:aspect State
+	:modstr FullAff)  
 ```
-<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">\[3-3-1-3 (1b)\]</span> The doctor **is tall**.  
+<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">\[3-3-1-3 (1b)\]</span>  
 ```
-(h / have-mod-91  
-	Aspect: state) 
+The doctor **is tall**.
+(h/ have-mod-91
+	:ARG1 (d/ doctor
+		:ref-number Singular)
+	:ARG2 (t/ tall)
+	:aspect State
+	:modstr FullAff)
 ```
-<span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">\[3-3-1-3 (1c)\]</span> The book **is on the table**.  
+<span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">\[3-3-1-3 (1c)\]</span>   
 ```
-(h / have-location-91  
-	Aspect: state)  
+The book **is on the table**.
+(h/ have-location-91
+	:ARG1 (b/ book
+		:ref-number Singular)
+	:ARG2 (t/ table)
+	:aspect State
+	:modstr FullAff)  
 ```
-<span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">\[3-3-1-3 (1d)\]</span> She **is an architect**.  
+<span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">\[3-3-1-3 (1d)\]</span>   
 ```
-(h / have-role-91  
-	Aspect: state) 
+She **is an architect**.
+(h/ have-role-91
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG2 (a/ architect)
+	:aspect State
+	:modstr FullAff) 
 ```
-<span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">\[3-3-1-3 (1e)\]</span> Your glass **is in
-the kitchen**.  
+<span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">\[3-3-1-3 (1e)\]</span>   
 ```
-(h / have-location-91  
-	Aspect: state) 
+Your glass **is in the kitchen**.
+(h/ have-location-91 
+	:ARG1 (g/ glass
+		:poss (p/ person
+			:ref-person 2nd
+			:ref-number Singular))
+	:ARG2 (k/ kitchen)
+	:aspect State
+	:modstr FullAff)
 ```
 
 Modal verbs, as in [\[3-3-1-3 (2)\]](#3-3-1-3 (2)), and events under the scope of
@@ -3992,32 +4193,78 @@ ability modals, as in [\[3-3-1-3 (3)\]](#3-3-1-3 (3)), are also annotated as
 
 <span id="3-3-1-3 (2)" label="3-3-1-3 (2)">\[3-3-1-3 (2)\]</span>
 
-<span id="3-3-1-3 (2a)" label="3-3-1-3 (2a)">\[3-3-1-3 (2a)\]</span> He **wants** to travel to Albuquerque.  
+<span id="3-3-1-3 (2a)" label="3-3-1-3 (2a)">\[3-3-1-3 (2a)\]</span>  
 ```
-(w / want  
-	Aspect: state)  
+He **wants** to travel to Albuquerque. 
+(w/ want-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (t/ travel-01
+		:ARG0 p
+		:ARG4 (c/ city
+			:name (n/ name :op1 "Albuquerque")
+			:wiki "Albuquerque")
+		:aspect Performance
+		:modal w)
+	:aspect State
+	:modstr FullAff)
 ```
-<span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">\[3-3-1-3 (2b)\]</span> The cat **needs** to be fed. 
+<span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">\[3-3-1-3 (2b)\]</span> 
 ```
-(n / need  
-	Aspect: state)  
+The cat **needs** to be fed.
+(n/ need-01
+	:ARG0 (c/ cat)
+	:ARG1 (f/ feed-01
+		:ARG c
+		:aspect Performance
+		:modal n)
+	:aspect State
+	:modstr FullAff)
 ```
-<span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">\[3-3-1-3 (2c)\]</span> He’s **dreading** their decision.  
+<span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">\[3-3-1-3 (2c)\]</span>   
 ```
-(d / dread  
-	Aspect: state)  
+He’s **dreading** their decision.
+(d/ dread  
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (d2/ decide-01
+		:ARG0 (p2/ person
+			:ref-person 3rd
+			:ref-person Plural)
+		:aspect Process
+		:modal d)
+	:aspect State
+	:modstr FullAff)
 ```
 <span id="3-3-1-3 (3)" label="3-3-1-3 (3)">\[3-3-1-3 (3)\]</span>
 
-<span id="3-3-1-3 (3a)" label="3-3-1-3 (3a)">\[3-3-1-3 (3a)\]</span> She <u>is able to</u> **sing** that aria.  
+<span id="3-3-1-3 (3a)" label="3-3-1-3 (3a)">\[3-3-1-3 (3a)\]</span>   
 ```
-(s / sing  
-	Aspect: state) 
+She <u>is able to</u> **sing** that aria.
+(s/ sing-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (a/ aria
+		:mod (t/ that)
+		:ref-number Singular)
+	:aspect State
+	:modstr NeutAff)
 ```
-<span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">\[3-3-1-3 (3b)\]</span> This car <u>can</u> **go** up to 150 mph.  
+<span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">\[3-3-1-3 (3b)\]</span>   
 ```
-(g / go  
-	Aspect: state)  
+This car <u>can</u> **go** up to 150 mph.
+(g/ go-01
+	:ARG0 (c/ car
+		:mod (t/ this)
+		:ref-number Singular)
+	:manner (s/ speed-quantity
+		:quant 150
+		:unit (m/ miles-per-hour))
+	:aspect State
+	:modstr NeutAff)
 ```
 In this analysis, ability modals refer to a static state of affairs,
 i.e. an entity possesses the relevant ability. For examples like
@@ -4047,25 +4294,52 @@ the aspect annotation.
 
 <span id="3-3-1-3 (4)" label="3-3-1-3 (4)">\[3-3-1-3 (4)\]</span>
 
-<span id="3-3-1-3 (4a)" label="3-3-1-3 (4a)">\[3-3-1-3 (4a)\]</span> My cat **is black and white**.
+<span id="3-3-1-3 (4a)" label="3-3-1-3 (4a)">\[3-3-1-3 (4a)\]</span> 
 ```
-(h / have-mod-91  
-	Aspect: inherent state)  
+My cat **is black and white**.
+(h/ have-mod-91
+	:ARG1 (c/ cat
+		:poss (p/ person
+			:ref-person 1st
+			:ref-number Singular)
+		:ref-number Singular)
+	:ARG2 (a/ and
+		:op1 (b/ black)
+		:op2 (w/ white)
+	:aspect Inherent State
+	:modstr FullAff)
 ```
-<span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">\[3-3-1-3 (4b)\]</span> My cat **is hungry**.  
+<span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">\[3-3-1-3 (4b)\]</span>   
 ```
-(h / have-mod-91  
-	Aspect: reversible state)  
+My cat **is hungry**.
+(h / hunger-01
+	:ARG0 (c/ cat
+		:poss (p/ person
+			:ref-person 1st
+			:ref-number Singular))
+		:ref-number Singular)
+	:aspect Reversible State
+	:modstr FullAff)
 ```
-<span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">\[3-3-1-3 (4c)\]</span> The wine glass **is shattered**.  
+<span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">\[3-3-1-3 (4c)\]</span>   
 ```
-(h / have-mod-91  
-	Aspect: irreversible state)  
+The wine glass **is shattered**.
+(s/ shatter-01
+	:ARG1 (g/ glass
+		:purpose (w/ wine)
+		:ref-number Singular)
+	:aspect Irreversible State
+	:modstr FullAff)
 ```
-<span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">\[3-3-1-3 (4d)\]</span> It **is 2:30pm**. 
+<span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">\[3-3-1-3 (4d)\]</span>  
 ```
-(h / have-mod-91  
-	Aspect: point state)  
+It **is 2:30pm**.
+(b/ be-temporally-at-91
+	:ARG1 (n/ now)
+	:ARG2 (d/ date-entity
+		:time 14:30)
+	:aspect Point State
+	:modstr FullAff)
 ```
 
 Events that are annotated as ```inherent
@@ -4099,16 +4373,33 @@ when there is no evidence that the event has come to an end, as in
 
 <span id="3-3-1-4 (1)" label="3-3-1-4(1)">\[3-3-1-4 (1)\]</span>
 
-<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">\[3-3-1-4 (1a)\]</span> He is still **writing** his paper.  
+<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">\[3-3-1-4 (1a)\]</span>   
 ```
-(w / write  
-	Aspect: activity) 
+He is still **writing** his paper.
+(w/ write-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (p2/ paper
+		:poss p
+		:ref-number Singular)
+	:mod (s/ still)
+	:aspect Activity
+	:modstr FullAff)
 ```
-<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">\[3-3-1-4 (1b)\]</span> He was
-**writing** his paper yesterday.  
+<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">\[3-3-1-4 (1b)\]</span>   
 ```
-(w / write  
-	Aspect: activity) 
+He was **writing** his paper yesterday.
+(w/ write-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG1 (p2/ paper
+		:poss p
+		:ref-number Singular)
+	:temporal (y/ yesterday)
+	:aspect Activity
+	:modstr FullAff)
 ```
 
 This covers cases where it is clear that the process is still ongoing at
@@ -4121,10 +4412,16 @@ however there are some grammatical cues that can help. Events in the
 present tense, as in [\[3-3-1-4 (2)\]](#3-3-1-4 (2)), are annotated as
 ```activity```.
 
-<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span> He **is playing** the violin.  
+<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span>   
 ```
-(p / play  
-	Aspect: activity)  
+He **is playing** the violin.
+(p/ play-01
+	:ARG0 (p2/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG2 (v/ violin)
+	:aspect Activity
+	:modstr FullAff)
 ```
 
 Inceptive and continuative aspectual marking, as in [\[3-3-1-4 (3)\]](#3-3-1-4 (3)),
@@ -4132,22 +4429,33 @@ also do not imply that an event has (necessarily) ended.
 
 <span id="3-3-1-4 (3)" label="3-3-1-4 (3)">\[3-3-1-4 (3)\]</span>
 
-<span id="3-3-1-4 (3a)" label="3-3-1-4 (3a)">\[3-3-1-4 (3a)\]</span> He
-<u>started</u> **playing** the violin.  
+<span id="3-3-1-4 (3a)" label="3-3-1-4 (3a)">\[3-3-1-4 (3a)\]</span>
 ```
-(p / play  
-	Aspect: activity) 
+He <u>started</u> **playing** the violin.
+(p/ play-01
+	:ARG0 (p2/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG2 (v/ violin)
+	:aspect Activity
+	:modstr FullAff)
 ```
-<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">\[3-3-1-4 (3b)\]</span> He <u>kept on</u> **playing** the violin.  
+<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">\[3-3-1-4 (3b)\]</span>   
 ```
-(p / play  
-	Aspect: activity)  
+He <u>kept on</u> **playing** the violin.
+(p/ play-01
+	:ARG0 (p2/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG2 (v/ violin)
+	:aspect Activity
+	:modstr FullAff)
 ```
 If an annotator is unsure about whether the text indicates that an event has ended or not, the ```atelic process```
 label can be used.
 
 There are two finer-grained ```activity```
-categories which can optionally be distinguished. Certain type of
+categories which can optionally be distinguished. Certain types of
 activities describe directed change, as in
 [\[3-3-1-4 (4)\]](#3-3-1-4 (4)), whereas other activities describe
 undirected change, as in [\[3-3-1-4 (5)\]](#3-3-1-4 (5));
@@ -4156,17 +4464,25 @@ and ```undirected activity``` respectively.
 
 
 <span id="3-3-1-4 (4)" label="3-3-1-4 (4)">\[3-3-1-4 (4)\]</span>
-The soup was **cooling** on the counter.
 ```
-(c / cool  
-	Aspect: directed activity)  
+The soup was **cooling** on the counter.
+(c/ cool
+	:ARG1 (s/ soup)
+	:place (c2/ counter)
+	:aspect Directed Activity
+	:modstr FullAff)
 ```
 
 <span id="3-3-1-4 (5)" label="3-3-1-4 (5)">\[3-3-1-4 (5)\]</span>
-The cat was **meowing** outside the door.
 ```
-(m / meow  
-	Aspect: undirected activity)  
+The cat was **meowing** outside the door.
+(m/ meow-01
+	:ARG0 (c/ cat
+		:ref-number Singular)
+	:place (o/ outside
+		:op1 (d/ door))
+	:aspect Undirected Activity
+	:modstr FullAff)
 ```
 
 Events annotated as ```directed activity```
@@ -4209,36 +4525,70 @@ illustrated for English below.
 
 <span id="3-3-1-5 (1)" label="3-3-1-5 (1)">\[3-3-1-5 (1)\]</span>
 
-<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">\[3-3-1-5 (1a)\]</span> Mary
-<u>stopped</u> **mowing** the lawn.  
+<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">\[3-3-1-5 (1a)\]</span>   
 ```
-(m / mow  
-	Aspect: endeavor)  
+Mary <u>stopped</u> **mowing** the lawn.
+(m/ mow-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (l/ lawn)
+	:aspect Endeavor
+	:modstr FullAff)
 ```
-<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">\[3-3-1-5 (1b)\]</span> Mary **mowed** the lawn <u>for thirty minutes</u>.  
+<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">\[3-3-1-5 (1b)\]</span>   
 ```
-(m / mow  
-	Aspect: endeavor) 
+Mary **mowed** the lawn <u>for thirty minutes</u>.
+(m/ mow-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (l/ lawn)
+	:duration (t/ temporal-quantity
+		:unit (m2/ minute)
+		:quant 30)
+	:aspect Endeavor
+	:modstr FullAff)
 ```
 <span id="3-3-1-5 (1c)" label="3-3-1-5 (1c)">\[3-3-1-5 (1c)\]</span> \*Mary
 <u>finished</u> **mowing** the lawn <u>for thirty minutes</u>.  
 
-<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">\[3-3-1-5 (1d)\]</span> They **walked** <u>along the river</u>.  
+<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">\[3-3-1-5 (1d)\]</span>  
 ```
-(w / walk  
-	Aspect: endeavor)
+They **walked** <u>along the river</u>. 
+(w/ walk-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG2 (a/ along
+		:op1 (r/ river))
+	:aspect Endeavor
+	:modstr FullAff)
 ```
-<span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">\[3-3-1-5 (1e)\]</span> They
-<u>finished</u> **walking** <u>along the river</u>. 
+<span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">\[3-3-1-5 (1e)\]</span>  
 ```
-(w / walk  
-	Aspect: performance) 
+They <u>finished</u> **walking** <u>along the river</u>.
+(w/ walk-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG2 (a/ along
+		:op1 (r/ river))
+	:aspect Performance
+	:modstr FullAff) 
 ```
-<span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">\[3-3-1-5 (1f)\]</span> They
-**walked** <u>along the river</u> <u>in 3 hours</u>.  
+<span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">\[3-3-1-5 (1f)\]</span>   
 ```
-(w / walk  
-	Aspect: performance) 
+They **walked** <u>along the river</u> <u>in 3 hours</u>.
+(w/ walk-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG2 (a/ along
+		:op1 (r/ river))
+	:duration (t/ temporal-quantity
+		:unit (h/ hour)
+		:quant 3)
+	:aspect Performance
+	:modstr FullAff) 
 ```
 
 Terminative aspectual marking, such as *stop* in English, is the
@@ -4281,24 +4631,52 @@ process), as in [\[3-3-1-5 (2c)\]](#3-3-1-5 (2c)).
 
 <span id="3-3-1-5 (2)" label="3-3-1-5 (2)">\[3-3-1-5 (2)\]</span>
 
-<span id="3-3-1-5 (2a)" label="3-3-1-5 (2a)">\[3-3-1-5 (2a)\]</span> The cat
-**meowed** for two hours until I woke up.
+<span id="3-3-1-5 (2a)" label="3-3-1-5 (2a)">\[3-3-1-5 (2a)\]</span> 
 ```
-(m / meow  
-	Aspect: undirected endeavor)  
+The cat **meowed** for two hours until I woke up.
+(m/ meow-01
+	:ARG0 (c/ cat)
+	:duration (t/ temporal-quantity
+		:unit (h/ hour)
+		:quant 2)
+	:temporal (u/ until
+		:op1 (w/ wake-01
+			:ARG1 (p/ person
+				:ref-person 1st
+				:ref-number Singular)
+			:aspect Performance
+			:modstr FullAff))
+	:aspect Undirected Endeavor
+	:modstr FullAff)
 ```
-<span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">\[3-3-1-5 (2b)\]</span> The soup **cooled**
-for an hour before we ate it.
+<span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">\[3-3-1-5 (2b)\]</span> 
 ```
-(c / cool  
-	Aspect: directed endeavor) 
+The soup **cooled**for an hour before we ate it.
+(c/ cool-01
+	:ARG1 (s/ soup)
+	:duration (t/ temporal-quantity
+		:unit (h/ hour)
+		:quant 1)
+	:temporal (b/ before
+		:op1 (e/ eat-01
+			:ARG0 (p/ person
+				:ref-person 1st
+				:ref-number Plural)
+			:ARG1 s
+			:aspect Performance
+			:modstr FullAff))
+	:aspect Directed Endeavor
+	:modstr FullAff)
 ```
 
-<span id="3-3-1-5 (2c)" label="3-3-1-5 (2c)">\[3-3-1-5 (2c)\]</span> The
-cat **meowed** (once).
+<span id="3-3-1-5 (2c)" label="3-3-1-5 (2c)">\[3-3-1-5 (2c)\]</span> 
 ```
-(m / meow  
-	Aspect: semelfactive)  
+The cat **meowed** (once).
+(m/ meow-01
+	:ARG0 (c/ cat
+		:ref-number Singular)
+	:aspect Semelfactive
+	:modstr FullAff)
 ```
 
 The finer-grained annotations for
@@ -4342,28 +4720,47 @@ eventually succeeds in repairing the computer.
 
 <span id="3-3-1-5 (3)" label="3-3-1-5 (3)">\[3-3-1-5 (3)\]</span>
 
-<span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">\[3-3-1-5 (3a)\]</span> The door **opened**.
+<span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">\[3-3-1-5 (3a)\]</span> 
 ```
-(o / open  
-	Aspect: reversible directed achievement)
+The door **opened**.
+(o/ open-01
+	:ARG1 (d/ door
+		:ref-number Singular)
+	:aspect Reversible Directed Achievement
+	:modstr FullAff)
 ```
-<span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">\[3-3-1-5 (3b)\]</span> The window
-**shattered**.
+<span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">\[3-3-1-5 (3b)\]</span> 
 ```
-(s / shatter  
-	Aspect: irreversible directed achievement)  
+The window **shattered**.
+(s/ shatter-01
+	:ARG1 (w/ window
+		:ref-number Singular)
+	:aspect Irreversible Directed Achievement
+	:modstr FullAff)
 ```
-<span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">\[3-3-1-5 (3c)\]</span> I
-**ate** an apple pancake.
+<span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">\[3-3-1-5 (3c)\]</span> 
 ```
-(a / ate  
-	Aspect: incremental accomplishment)
+I **ate** an apple pancake.
+(e/ eat-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (p2/ pancake
+		:mod (a/ apple)
+		:ref-number Singular)
+	:aspect Incremental Accomplishment
+	:modstr FullAff)
 ```
 <span id="3-3-1-5 (3d)" label="3-3-1-5 (3d)">\[3-3-1-5 (3d)\]</span>
-Harry **repaired** the computer.
 ```
-(r / repair  
-	Aspect: nonincremental accomplishment) 
+Harry **repaired** the computer.
+(r/ repair-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Harry"))
+	:ARG1 (c/ computer
+		:ref-number Singular)
+	:aspect Nonincremental Accomplishment
+	:modstr FullAff)
 ```
 [Back to Table of Contents](#toc)
 
@@ -4382,34 +4779,45 @@ UMR adopts the `:mode` attribute from AMR. The values for the `:mode` attribute 
 <span id="3-3-2 (1a)" label="3-3-2 (1a)">3-3-2 (1a)</span>
 ```
 Yup , a couple of hundred dollars is going to save the day !
-(s / save-02 
-      :mode expressive
-      :ARG0 (c / couple
-            :op1 (m / monetary-quantity :quant 100
-                  :unit (d2 / dollar)))
-      :ARG1 (d / day))
+(s/ save-02 
+      :ARG0 (c/ couple
+            :op1 (m/ monetary-quantity
+	    	:quant 100
+                :unit (d/ dollar)))
+      :ARG1 (d/ day
+      	    :ref-number Singular)
+      :aspect Performance
+      :modstr FullAff
+      :mode expressive)
 ```
-
 <span id="3-3-2 (1b)" label="3-3-2 (1b)">3-3-2 (1b)</span>
 ```
 Chalk another good one up to the wife .
-
-(c / chalk-up-02 :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (o / one
-            :mod (a / another)
-            :ARG1-of (g / good-02))
-      :ARG2 (w / wife))
+(c/ chalk-up-02
+      :ARG0 (p/ person
+      	    :ref-person 2nd
+	    :ref-number Singular)
+      :ARG1 (a/ another
+            :ARG1-of (g/ good-02)
+	    :quant 1)
+      :ARG2 (w/ wife)
+      :aspect Performance
+      :modstr PrtAff
+      :mode imperative)
 ```
 
 <span id="3-3-2 (1c)" label="3-3-2 (1c)">3-3-2 (1c)</span>
 ```
 Did you see that?
-(s / see-01 :mode interrogative
-      :ARG0 (y / you)
-      :ARG1 (t / that)
-      :polarity amr-unknown
-      :aspect State)
+(s/ see-01
+      :ARG0 (p/ person
+      	:ref-person 2nd
+	:ref-number Singular)
+      :ARG1 (t/ that)
+      :aspect State
+      :modstr NeutAff
+      :mode interrogative
+      :polarity amr-unknown)
 ```
 
 [Back to Table of Contents](#toc)
@@ -4421,25 +4829,9 @@ UMR mainly treats propositional negation at the document-level in the modal depe
 
 <span id="3-3-3 (1a)" label="3-3-3 (1a)">3-3-3 (1a)</span>
 ```
-Most of the time, economic policy and economic theory are not aimed at individuals.
-
-(a / aim-02 
-      :polarity -
-      :aspect State
-      :ARG1 (a2 / and
-            :op1 (p / policy-01)
-            :op2 (t / theory)
-            :mod (e / economy))
-      :ARG2 (i / individual)
-      :frequency (t2 / time
-            :quant (m / most)))
-```
-
-<span id="3-3-3 (1b)" label="3-3-3 (1b)">3-3-3 (1b)</span>
-```
 Unhealthy food.
 
-(t / thing
+(t/ thing
 	:ARG1-of (e/ eat-01)
 	:mod (h/ healthy
 		:polarity -))
@@ -4453,13 +4845,16 @@ Unhealthy food.
 
 ```
 As of now , five million tickets have been sold on the StubHub website .
-(s / sell-01
-      :Aspect Performance
-      :ARG1 (t / ticket :quant 5000000)
-      :location (w / website
-            :mod (c / company :wiki "StubHub" :name (n / name :op1 "StubHub")))
-      :temporal (a / as-of
-            :op1 (n2 / now)))
+(s/ sell-01
+      :ARG1 (t/ ticket
+      	:quant 5000000)
+      :location (w/ website
+            :mod (c/ company
+	    	:wiki "StubHub"
+		:name (n/ name :op1 "StubHub")))
+      :temporal (a/ as-of
+            :op1 (n2/ now))
+      :Aspect Performance)
 ```
 
 [Back to Table of Contents](#toc)
@@ -4472,12 +4867,14 @@ As opposed to AMR, which uses an English-based lexical treatment of pronominal r
 <span id="3-3-5 (1a)" label="3-3-5 (1a)">3-3-5 (1a)</span>
 ```
 Bill saw rare birds today.
-(s / see-01
+(s/ see-01
 	:ARG0 (p/ person
 		:name (n/ name	:op1 "Bill"))
 	:ARG1 (b/ bird
 		:mod (r/ rare)
-		:ref-number Plural))
+		:ref-number Plural)
+	:aspect State
+	:modstr FullAff)
 ```
 
 <span id="3-3-5 (1b)" label="3-3-5 (1b)">3-3-5 (1b)</span>
@@ -4486,27 +4883,26 @@ Bill saw rare birds today.
 woman	that-3PL-EP-DU
 'Those two women'
 
-(w/ woman
-	:ref-number Dual
-	:mod (a/ ŋara))
+(a/ áine 'woman'
+	:mod (ŋ/ ŋara 'that')
+	:ref-number Dual)
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept which takes a `:ref-number Singular` attribute. No `:ref-person` attribute is needed here, since the `thing` concept implies third person rather than a speech act participant.
+For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as co-referential with a mention of 'food' in the previous context.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
 m-e-hl-t-om-o=hlta
-NEG-2/3M.IRR-DSTR-eat-PST/HAB-SBJ=PHOD
+NEG-2/3M.IRR-DSTR-eat-TI-IPFV=PHOD
 'They did not eat it.'
 
 (e/ entoma-00 'eat'
-	:Actor (p/ person
+	:actor (p/ person
 		:ref-person 3rd
 		:ref-number Plural)
-	:Undergoer (t/ thing
-		:ref-number Singular)
+	:undergoer (t/ thing)
 	:aspect Performance
-	:polarity -)
+	:modstr FullNeg)
 ```
 
 The possible values for the `:refer-person` attribute are based on Cysouw's (2003) cross-linguistic study of person-marking systems in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar `1st`, `2nd`, and `3rd` person values. Some languages have more fine-grained person systems, distinguishing a first person `exclusive` from a first person `inclusive` value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
@@ -4536,17 +4932,21 @@ In AMR, markers of degree such as English _very_ (high degree of a scalar qualit
 <span id="3-3-6 (1)" label="3-3-6 (1)">3-3-6 (1)</span>
 ```
 ak-yav-ay'-a=ngkoye		yamet
-2/3F-be.large-PST/HAB-NOM=INTNS	tree
+2/3F-be.large-TI-PFV.NMLZ=INTNS	tree
 'The tree is very large.'
-
-(h / have-mod-91
-	:ARG0 (y/ yamet 'tree')
-	:ARG1 (e/ enyavay'a-00 'large'
-		:degree Intensifier))
 (h/ have-mod-91
-	:ARG0 (t/ tree)
-	:ARG1 (l/ large
-		:degree (v/ very)))
+	:ARG1 (y/ yamet 'tree')
+	:ARG2 (e/ enyavay'a-00 'large'
+		:degree Intensifier)
+	:aspect State
+	:modstr FullAff)
+	
+(h/ have-mod-91
+	:ARG1 (t/ tree)
+	:ARG2 (l/ large
+		:degree (v/ very))
+	:aspect State
+	:modstr FullAff)
 Lexicon: Very - Intensifier
 ```
 
