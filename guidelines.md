@@ -180,7 +180,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 
 For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
 happened *last week*, which itself depends on the DCT for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
-*sentence* event definitely happened, and that *Pope* is certainly *the American businessman*. It introduces a *NULL_CHARGER* conceiver to indicate that the authority that charged Pope (which is not explicit in the text) presents the *spying* event as a certainty. The co-reference annotation specifies that *Pope* in sentence 2 and *Edmund Pope* in sentence 1 are the same entity.
+*sentence* event definitely happened, and that *Pope* is certainly *the American businessman*. It introduces a *NULL_CHARGER* conceiver to indicate that the authority that charged Pope (which is not explicit in the text) presents the *spying* event as a certainty. The coreference annotation specifies that *Pope* in sentence 2 and *Edmund Pope* in sentence 1 are the same entity.
 
 <span id="1 (3)" label="1 (3)">\[1 (3)\]</span>
 ```
@@ -207,7 +207,7 @@ Snt3: He denied any wrongdoing.
 
 ```
 
-For this sentence, the coreference annotation indicates that *he* is the same person as *Pope* mentioned in [\[1 (2)\]](#1 (2)). Because there is no strict event co-reference or subevent relation between *wrongdoing* and, for example, *spying* in [\[1 (2)\]](#1 (2)), this relation is left unannotated.
+For this sentence, the coreference annotation indicates that *he* is the same person as *Pope* mentioned in [\[1 (2)\]](#1 (2)). Because there is no strict event coreference or subevent relation between *wrongdoing* and, for example, *spying* in [\[1 (2)\]](#1 (2)), this relation is left unannotated.
 
 The temporal annotation indicates that Pope's denial took place before document creation time, and that any *wrongdoing* would have happened before this denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
 
@@ -238,7 +238,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
     :coref(s3p :same-entity s4p4))
 ```
 
-In the document-level representation for this sentence, the person that is pardoned by Putin is marked as co-referential with *he* in sentence 3 (and therefore *Edmund Pope*). In the temporal annotation, the *sentence-01* event is designated as the reference time of *pardon-01* - the latter happens after the former. In the modal annotation, *pardon-01* is annotated as certain from the point of view of the author.
+In the document-level representation for this sentence, the person that is pardoned by Putin is marked as coreferential with *he* in sentence 3 (and therefore *Edmund Pope*). In the temporal annotation, the *sentence-01* event is designated as the reference time of *pardon-01* - the latter happens after the former. In the modal annotation, *pardon-01* is annotated as certain from the point of view of the author.
 
 <span id="1 (5)" label="1 (5)">\[1 (5)\]</span>
 ```
@@ -409,7 +409,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
 	 (s9p :AFF s9s3))
  :coref (s8p :same-entity s9p2))
  ```
-The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson. Once again, co-reference is indicated between different mentions of *Pope*.  
+The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson. Once again, coreference is indicated between different mentions of *Pope*.  
 
 [Back to Table of Contents](#toc)
 
@@ -508,7 +508,7 @@ The annotation scheme detailed in these guidelines, Uniform Meaning
 Representation (UMR), intends to allow for annotation of temporal,
 aspectual, modal, and quantification semantics, as well as semantic
 argument structure, in a cross-linguistically motivated and portable
-way. Some semantic domains, specifically co-reference, temporal
+way. Some semantic domains, specifically coreference, temporal
 relations, and modal relations, are annotated in a document-level
 structure. Other domains, such as predicate-argument structure, aspect,
 and quantification, are annotated in a sentence-level structure.
@@ -1132,7 +1132,7 @@ course)...
 
 In [\[3-1-1-4 (1a)\]](#3-1-1-4 (1a)), there is an implicit second *smoking* event and
 in [\[3-1-1-4 (1b)\]](#3-1-1-4 (1b)), there is an implicit second *leave* event. These
-implicit events should be annotated as co-referential with the event
+implicit events should be annotated as coreferential with the event
 mentioned earlier in the text (see [Part 4-1](#part-4-1-coreference)).
 
 In [\[3-1-1-4 (2)\]](#3-1-1-4 (2)), however, the implicit events don’t
@@ -1349,9 +1349,9 @@ an incorporated noun to co-occur with an independent NP as criterial. This treat
 
 | **Construction type** | **Construction definition/diagnostic** | **UMR Treatment** |
 | :------------------------------- | :----------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------|
-| Pronominal affixes | Verbal affixes expressing person/number values of arguments | If co-referential with overtly expressed nominal argument: don't annotate |
+| Pronominal affixes | Verbal affixes expressing person/number values of arguments | If coreferential with overtly expressed nominal argument: don't annotate |
 | | | If no overt nominal is present: annotate as argument with relevant named-entity concept |
-| Incorporated nouns | No nominal expression co-referential with the incorporated noun can occur in the clause | Annotate separate concept for incorporated noun as argument |
+| Incorporated nouns | No nominal expression coreferential with the incorporated noun can occur in the clause | Annotate separate concept for incorporated noun as argument |
 | Verbal classifier | Nominal expression specifying type of object denoted by incorporated noun can occur in the clause | Do not annotate separate concept for incorporated noun |
 
 Table 6: Treatment of pronominal affixes and noun incorporation
@@ -4888,7 +4888,7 @@ woman	that-3PL-EP-DU
 	:ref-number Dual)
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as co-referential with a mention of 'food' in the previous context.
+For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as coreferential with a mention of 'food' in the previous context.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
@@ -4960,67 +4960,106 @@ Anaphoric expressions such as pronouns cannot be properly interpreted without id
 
 #### Part 4-1-1. Entity coreference
 
-For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1-1 (1)\]](#4-1-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s1p` node.
+For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1-1 (1)\]](#4-1-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s2p` node.
 
 <span id="4-1-1 (1)" label="4-1-1 (1)">4-1 (1)</span>
 
 ```
-Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
-
-(t2 / taste-01
-  :Aspect Performance
-  :ARG0 (p / person :wiki "Edmond_Pope"
-         :name (n2 / name :op1 "Edmund" :op2 "Pope"))
-  :ARG1 (f / free-04
-         :ARG1 p)
-  :temporal (t3 / today)
-  :ord (o3 / ordinal-entity :value 1
-        :range (m / more-than
-                :op1 (t / temporal-quantity :quant 8
-                    :unit (m2 / month)))))
-
+Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
+(i/ identity-91
+     :ARG1 (p/ person :wiki "Edmond_Pope"
+     	:name (n/ name "op1 "Pope))
+     :ARG2 (b/ businessman
+	:mod (n2/ nationality :wiki "United_States"
+	   :name (n3/ name :op1 "America")))
+	:ARG1-of (c/ convict-01
+	   :ARG2 (c2/ charge-05
+	      :ARG1 b
+	      :ARG2 (s/ spy-02
+	         :ARG0 b
+		 :modal c2))
+	   :temporal (w/ week
+	      :mod (l/ last))
+	   :aspect Performance
+	   :modstr FullAff)
+	:ARG1-of (s2/ sentence-01
+	   :ARG2 (p2/ prison
+	      :mod (c3/ country :wiki "Russia"
+	         :name (n4/ name :op1 "Russia))
+	      :duration (t/ temporal-quantity
+	         :quant 20
+		 :unit (y/ year)))
+	   :ARG3 s
+	   :aspect Performance
+	   :modstr FullAff)
+     :aspect State
+     :modstr FullAff)
 
 Snt3: He denied any wrongdoing.
-(d / deny-01
-      :Aspect Performance
-      :ARG0 (h / person
-               :ref 3s)
-      :ARG1 (t / thing
-            :ARG1-of (d2 / do-02
-                  :ARG0 h
-                  :ARG1-of (w / wrong-02))))
+(d/ deny-01 
+      :ARG0 (p/person
+         :ref-person 3rd
+	 :ref-number Singular)
+      :ARG1 (t/ thing
+            :ARG1-of (d2/ do-02
+                  :ARG0 p
+                  :ARG1-of (w/ wrong-02)
+		  :modal d))
+      :aspect Performance
+      :modstr FullAff)
   
-(s3 / sentence
-    :coref((s3h :same-entity s1p)) )
+(s3/ sentence
+    :temporal((DCT :before s3d)
+              (s3d :before s3d2))
+    :modal((AUTH :FullAff s3d))
+	   (AUTH :FullAff s3p)
+	   (s3p :FullNeg s3d2))
+  **:coref(s2p :same-entity s3p))**
 ```
 
-The example in [\[4-1-1 (2)\]](#4-1-1 (2)) shows how the `:subset-of` relation is used to relate mentions of sets of entities to later mentions of entities belonging to such a set. For example, _we_ (`p3`) includes reference to two entities - the author/speaker of the sentence, and the person who is described as *possessive and controlling*. The pronoun _he_, given the constant `p2`, refers to one of these two entities. Therefore, in the document-level annotation, `p2` is annotated with a `:subset-of` relation to the `p3` node.
+The example in [\[4-1-1 (2)\]](#4-1-1 (2)) shows how the `:subset-of` relation is used to relate mentions of sets of entities to mentions of entities belonging to such a set. For example, _we_ (`p3`) includes reference to two entities - the author/speaker of the sentence, and the person who is described as *possessive and controlling*. The pronoun _he_, given the constant `p2`, refers to one of these two entities. Therefore, in the document-level annotation, `p2` is annotated with a `:subset-of` relation to the `p3` node.
 
 <span id="4-1-1 (2)" label="4-1-1 (2)">4-1-1 (2)</span>
 ```
-# ::snt He is very possesive and controlling but he has no right to be as we are not together.
-(c / contrast-01
-      :ARG1 (a / and
-            :op1 (p / possessive-03
-	          :Aspect Stative
-                  :ARG0 (p2 / person
+He is very possessive and controlling but he has no right to be as we are not together.
+(c/ contrast-01
+      :ARG1 (a/ and
+            :op1 (p/ possessive-03
+                  :ARG0 (p/ person
 		  	:ref-person 3rd
 			:ref-number Singular)
-                  :degree (v2 / very))
-            :op2 (c3 / control-01
-                  :ARG0 p2
-                  :degree (v / very)))
-      :ARG2 (r / right-05 :polarity -
-            :ARG1 p2
+                  :degree (v/ very)
+		  :aspect State
+		  :modstr FullAff)
+            :op2 (h/ have-mod-91
+                  :ARG1 p
+		  :ARG2 (c2/ controlling)
+                  :degree (v / very)
+		  :aspect State
+		  :modstr FullAff))
+      :ARG2 (r/ right-05
+            :ARG1 p
             :ARG2 a
-            :ARG1-of (c2 / cause-01
-                  :ARG0 (t / together
-		        :Aspect Stative
-                        :domain (p3 / person
+            :ARG1-of (c3/ cause-01
+                  :ARG0 (h2/ have-mod-91
+		  	:ARG1 (p2/ person
 				:ref-person 1st
-				:ref-number Plural)))))
-(s / sentence
-  :coref ((s4p2 :subset-of s4p3)))
+				:ref-number Plural)
+			:ARG2 (t/ together)
+			:aspect State
+			:modstr FullNeg))
+            :aspect State
+	    :modstr FullNeg))
+(s/ sentence
+  :temporal ((DCT :overlap s1p)
+  	     (s1p :overlap s1h)
+	     (s1h :overlap s1r)
+	     (s1r :overlap s1h2))
+  :modal ((AUTH :FullAff s1p)
+  	  (AUTH :FullAff s1h)
+	  (AUTH :FullNeg s1r)
+	  (AUTH :FullNeg s1h2))
+  :coref (p :subset-of p2))
 ```
 
 [Back to Table of Contents](#toc)
@@ -5031,132 +5070,205 @@ UMR uses the `:same-event` relation to represent cases where two event mentions 
  
  <span id="4-1-2 (1)" label="4-1-2 (1)">4-1-2 (1)</span>
  
-  <span id="4-1-2 (1a)" label="4-1-2 (1a)">4-1-2 (1a)</span>
-::id PROXY_APW_ENG_20080415_1054.19 ::date 2013-07-19T04:50:53 ::snt-type body ::annotator SDL-AMR-09 ::preferred
-::snt El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
- ::save-date Wed Jan 20, 2016 ::file PROXY_APW_ENG_20080415_1054_19.txt
+ <span id="4-1-2 (1a)" label="4-1-2 (1a)">4-1-2 (1a)</span>
 ```
-(a / and
-      :op1 (c / confiscate-01
-            :Aspect Performance
-            :ARG1 (a2 / and
-                  :op1 (p3 / property
-                        :poss (p / person :wiki "Khairat_el-Shater" :name (n / name :op1 "El-Shater")))
-                  :op2 (p4 / property
-                        :poss (p2 / person :wiki - :name (n2 / name :op1 "Malek")))))
-      :op2 (b / believe-01
-            :ARG1 (w / worth-01
+El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
+(a/ and
+      :op1 (c/ confiscate-01
+            :ARG1 (a2/ and
+                  :op1 (p/ property
+                        :poss (p2/ person 
+				:wiki "Khairat_el-Shater"
+				:name (n/ name :op1 "El-Shater")))
+                  :op2 (p3/ property
+                        :poss (p4/ person
+				:wiki -
+				:name (n2/ name :op1 "Malek"))))
+	    :aspect Performance
+	    :modstr FullAff)
+      :op2 (b/ believe-01
+            :ARG1 (w/ worth-01
                   :ARG1 a2
-                  :ARG2 (m / multiple
-                        :op1 (m2 / monetary-quantity :quant 1000000
-                              :unit (d / dollar))))))
+                  :ARG2 (m/ multiple
+                        :op1 (m2/ monetary-quantity 
+			      :quant 1000000
+                              :unit (d / dollar)))
+	          :aspect State
+		  :modal b)
+	    :aspect State
+	    :modstr FullAff))
+	    
+(s1/ sentence
+  :temporal ((Past_Ref :includes s1c)
+  	     (DCT :overlap s1b)
+	     (s1b :overlap s1w))
+  :modal ((AUTH :FullAff s1c)
+  	  (AUTH :FullAff Null_Believer)
+	  (Null_Believer :FullAff s1w)))
 ```
-
  <span id="4-1-2 (1b)" label="4-1-2 (1b)">4-1-2 (1b)</span>
- ::id PROXY_APW_ENG_20080415_1054.20 ::date 2013-07-19T04:57:55 ::snt-type body ::annotator SDL-AMR-09 ::preferred
- ::snt Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial bases.
- ::save-date Thu May 28, 2015 ::file PROXY_APW_ENG_20080415_1054_20.txt
 ```
-(s / state-01
-      :Aspect Performance
-      :ARG0 (p / person :wiki "Hamdeen_Sabahi" :name (n / name :op1 "Abdel-Maksoud"))
-      :ARG1 (a / affect-01
-            :ARG0 (c / confiscate-01)
-            :ARG1 (b2 / base
-                  :poss (o / organization :wiki "Muslim_Brotherhood" :name (n2 / name :op1 "Brotherhood"))
-                  :mod (f / finance))))
+Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial bases.
+(s/ state-01
+      :ARG0 (p/ person
+           :wiki "Hamdeen_Sabahi"
+	   :name (n/ name :op1 "Abdel-Maksoud"))
+      :ARG1 (a/ affect-01
+            :ARG0 (c/ confiscate-01)
+            :ARG1 (b/ base
+                  :poss (o/ organization
+		  	:wiki "Muslim_Brotherhood"
+			:name (n2/ name :op1 "Brotherhood"))
+                  :mod (f/ finance))
+	    :aspect Performance
+	    :modal s
+	    :modstr FullAff)
+      :aspect Performance
+      :modstr FullAff)
 
-(s2 / sentence
-  :coref ((s2c :same-event s1c)))
+(s2/ sentence
+  :temporal ((s1c :after s2s)
+  	     (s2s :after s2a))
+  :modal ((AUTH :FullAff s2s)
+  	  (AUTH :FullAff s2p)
+	  (s2p :FullAff s2c)
+	  (s2p :FullAff s2a))
+  :coref (s1c :same-event s2c))
 ```
-
 Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for *introduced* and *provide* in [\[4-1-2 (2)\]](#4-1-2 (2)).
 
- <span id="4-1-2 (2)" label="4-1-2 (2)">4-1-2 (2)</span>
+<span id="4-1-2 (2)" label="4-1-2 (2)">4-1-2 (2)</span>
 
 <span id="4-1-2 (2a)" label="4-1-2 (2a)">4-1-2 (2a)</span>
- ::id nw.chtb_0021.2 ::date 2012-11-01T15:15:42 ::annotator SDL-AMR-09 ::preferred
- ::snt The Three Gorges project on the Yangtze River has recently **introduced*** the first foreign capital .
- ::save-date Fri Oct 24, 2014 ::file nw_chtb_0021_2.txt
 ```
-(i / introduce-01
-      :ARG0 (p / project :wiki "Three_Gorges_Dam" :name (n / name :op1 "The" :op2 "Three" :op3 "Gorges")
-            :location (r / river :wiki "Yangtze" :name (n2 / name :op1 "Yangtze" :op2 "River")))
-      :ARG1 (c2 / capital
-            :mod (f2 / foreign)
-            :ord (o / ordinal-entity :value 1))
-      :temporal (r2 / recent))
+The Three Gorges project on the Yangtze River has recently **introduced*** the first foreign capital.
+(i/ introduce-01
+      :ARG0 (p/ project
+      	    :wiki "Three_Gorges_Dam"
+	    :name (n/ name 
+	    	:op1 "The"
+		:op2 "Three"
+		:op3 "Gorges")
+            :place (r/ river
+	    	:wiki "Yangtze"
+		:name (n2/ name
+			:op1 "Yangtze"
+			:op2 "River")))
+      :ARG1 (c/ capital
+            :mod (f/ foreign)
+            :ord (o/ ordinal-entity
+	    	:value 1))
+      :temporal (r2/ recent)
+      :aspect Performance
+      :modstr FullAff)
+      
+(s1/ sentence
+	:temporal ((Past_Ref :includes s1r2)
+		   (s1r2 :includes s1i))
+	:modal (AUTH :FullAff s1i))
 ```
-
 <span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
- ::id nw.chtb_0021.3 ::date 2012-11-01T15:29:23 ::annotator SDL-AMR-09 ::preferred
- ::snt The loan , a sum of 12.5 million US dollars , is an export credit **provided** to the Three Gorges project by the Canadian government , which will be used mainly for the management system of the Three Gorges project .
- ::save-date Thu Dec 19, 2013 ::file nw_chtb_0021_3.txt
-
 ```
-(c2 / credit
-      :mod (e / export-01)
-      :ARG1-of (p / provide-01
-            :ARG0 (g / government-organization
-                  :ARG0-of (g2 / govern-01
-                        :mod (c / country :wiki "Canada"
-                              :name (n / name :op1 "Canada"))))
-            :ARG2 (p2 / project :wiki "Three_Gorges_Dam"
-                  :name (n2 / name :op1 "Three" :op2 "Gorges")))
-      :ARG1-of (u / use-01
-            :ARG2 (s / system
-                  :poss p2
-                  :mod (m2 / manage-01))
-            :mod (m3 / main))
-      :domain (m / monetary-quantity :quant 12500000
-            :unit (d / dollar
-                  :mod (c3 / country :wiki "United_States"
-                        :name (n3 / name :op1 "US")))
-            :ARG1-of (l / loan-01)))
+The loan, a sum of 12.5 million US dollars, is an export credit **provided** to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
+(i/ identity-91
+	:ARG1 (t/ thing
+		:ARG1-of (l/ loan)
+		:ARG1-of (i2/ identity
+			:ARG2 (m/ monetary-quantity
+				:quant 12500000
+				:unit (d/ dollar
+					:mod (c/ country
+						:wiki "United_States"
+						:name (n/ name :op1 "US"))))))
+	:ARG2 (c2/ credit
+		:mod (e/ export-01)
+		:ARG1-of (p/ provide
+			:ARG0 (g/ government-organization
+				:ARG0-of (g/ govern-01
+					:mod (c3/ country
+						:wiki "Canada"
+						:name (n2/ name :op1 "Canada"))))
+			:ARG2 (p2/ project
+				:wiki "Three_Gorges_Dam"
+				:name (n3/ name
+					:op1 "Three"
+					:op2 "Gorges"))
+			:aspect Performance
+			:modstr FullAff)
+		:ARG1-of (u/ use-01
+			:ARG2 (s/ system
+				:poss p2
+				:mod (m2/ manage-01))
+			:mod (m3/ main)
+			:aspect Activity
+			:modstr FullAff))
+	:aspect State
+	:modstr FullAff)
 	    
-(s / sentence
-   :coref ((s2p :same-event s1i)))
+(s2 / sentence
+   :temporal ((DCT :overlap s2i)
+   	      (Future_Ref :includes s2u))
+   :modal ((AUTH :FullAff s2i)
+   	   (AUTH :FullAff s2p)
+	   (AUTH :FullAff s2u))
+   :coref (s1i :same-event s2p))
 ```
-
 The `:subset-of` relation is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-2 (3)\]](#4-1-2 (3)). Both the _arrest_ made in Germany and the one made in the Netherlands are subevents of the _arrests_ that were ordered by judge Fragnoli. Therefore, both the `s1a2` node and the `s1a3` node are annotated with a `:subset-of` relation to `s2a`.
 
 <span id="4-1-2 (3)" label="4-1-2 (3)">4-1-2 (3)</span>
 
 <span id="4-1-2 (3a)" label="4-1-2 (3a)">4-1-2 (3a)</span>
-<!-- ::id PROXY_AFP_ENG_20080719_0249.9 ::date 2013-07-06T05:53:36 ::snt-type body ::annotator SDL-AMR-09 ::preferred -->
- ::snt 1 arrest took place in the Netherlands and another in Germany.
-<!-- ::save-date Sat Jul 6, 2013 ::file PROXY_AFP_ENG_20080719_0249_9.txt -->
-
 ```
-(a / and
-      :op1 (a2 / arrest-01 :quant 1
-            :Aspect Performance
-            :location (c / country :wiki "Netherlands"
-                  :name (n / name :op1 "Netherlands")))
-      :op2 (a3 / arrest-01
-            :Aspect Performance
-            :location (c2 / country :wiki "Germany"
-                  :name (n2 / name :op1 "Germany"))
-            :mod (a4 / another)))
-```
+1 arrest took place in the Netherlands and another in Germany.
+(a/ and
+      :op1 (a2/ arrest-01
+      	    :quant 1
+            :location (c/ country
+	    	  :wiki "Netherlands"
+                  :name (n/ name
+		  	:op1 "Netherlands"))
+	    :aspect Performance
+	    :modstr FullAff)
+      :op2 (a3/ arrest-01
+            :location (c2/ country
+	    	  :wiki "Germany"
+                  :name (n2/ name
+		  	:op1 "Germany"))
+            :mod (a4/ another)
+	    :aspect Performance)
+	    :modstr FullAff)
 
+(s/ sentence
+	:temporal ((DCT :before a2)
+		   (DCT :before a3))
+	:modal ((AUTH :FullAff a2)
+		(AUTH :FullAff a3)))
+```
 <span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
-<!--  ::id PROXY_AFP_ENG_20080719_0249.14 ::date 2013-07-06T06:12:27 ::snt-type body ::annotator SDL-AMR-09 ::preferred -->
- ::snt 2 The arrests were ordered by anti-terrorism judge fragnoli.
-<!-- ::save-date Tue Sep 17, 2013 ::file PROXY_AFP_ENG_20080719_0249_14.txt -->
 ```
-(o / order-01
-      :Aspect Performance
-      :ARG0 (p / person :wiki -
-            :name (n / name :op1 "Fragnoli")
-            :ARG0-of (o2 / oppose-01
-                  :ARG1 (t / terrorism))
-            :ARG0-of (h / have-org-role-91
-                  :ARG3 (j / judge-01)))
-      :ARG2 (a / arrest-01))
+The arrests were ordered by anti-terrorism judge fragnoli.
+(o/ order-01
+      :ARG0 (p/ person
+      	    :wiki -
+            :name (n/ name
+	    	:op1 "Fragnoli")
+            :ARG0-of (o2/ oppose-01
+                  :ARG1 (t/ terrorism))
+            :ARG0-of (h/ have-role-91
+                  :ARG2 (j/ judge-01)))
+      :ARG2 (a/ arrest-01
+      	    :aspect Process
+	    :modal o)
+      :aspect Performance
+      :modstr FullAff)
  
- (s / sentence
-  :coref ((s1a3, s1a2 :subset-of s2a))
+ (s2 / sentence
+ 	:temporal (s2a :before s2o)
+	:modal ((AUTH :FullAff s2o)
+		(AUTH :FullAff s2p)
+		(s2p :PrtAff s2a))
+  	:coref ((s2a :subset-of s1a2)
+		(s2a :subset-of s1a3)))
 ```
 
 - Script / subevent?
@@ -6217,8 +6329,8 @@ complement event node in the full dependency structure.
  
  * Document-level Annotation
  	* For any **event concept** or **object concept**:
- 		* Assess whether it is **co-referential** with, or a **subset/subevent** of, a previously mentioned event or object concept.
- 		* If so, choose the relevant **co-reference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
+ 		* Assess whether it is **coreferential** with, or a **subset/subevent** of, a previously mentioned event or object concept.
+ 		* If so, choose the relevant **coreference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) a **modal annotation**, except for purpose clauses, conditionals, and concessives (see [Part 4-3](#part-4-3-modal-dependency)).
  		* Give events **under the scope of a modal event** (e.g. a wanting-event) a _:modal_ relation with the space-building complement-taking predicate as the parent.
  		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
@@ -6395,7 +6507,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Affectee* | Participant role | **3-2-1-1**, 3-2-1-1-2 |
 | *After* | Temporal annotation value | 1, **4-2-2-1**, 4-2-2-3, 4-2-2-4 |
 | *Age* | Non-participant role relation | **3-2-2-2** |
-| Anaphoric expression | Co-reference semantic category | 4-1, **4-1-1** |
+| Anaphoric expression | Coreference semantic category | 4-1, **4-1-1** |
 | Anchoring modification | Modification semantic category | **3-2-2-2** |
 | And + but | Discourse relation | **3-1-6** |
 | And + contrast | Discourse relation | **3-1-6** |
@@ -6467,9 +6579,9 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Continuative | Aspectual semantic category | 3-1-3-3, **3-3-1-4** |
 | (pure) Contrast | Discourse relation | **3-1-6** |
 | Coordination | Strategy | **3-1-6**, 3-2-2-4 |
-| Co-reference | Semantic category | 1, 2-1, 2-2, 3-1-1-4, 3-1-3-1, **4-1**, 4-1-1, 4-1-2 |
-| Co-reference, entities | Co-reference semantic category | 3-1-3-1, **4-1-1** |
-| Co-reference, events | Co-reference semantic category | 3-1-1-4, **4-1-2** |
+| Coreference | Semantic category | 1, 2-1, 2-2, 3-1-1-4, 3-1-3-1, **4-1**, 4-1-1, 4-1-2 |
+| Coreference, entities | Coreference semantic category | 3-1-3-1, **4-1-1** |
+| Coreference, events | Coreference semantic category | 3-1-1-4, **4-1-2** |
 | Counterfactual | Modal semantic category | **4-3-2** |
 | *Country* | Named entity type | **3-1-2** |
 | Creation | Event type | **3-2-1-1** |
@@ -6535,7 +6647,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Habitual* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-5, 3-3-1, **3-3-1-2** |
 | Hope | Modal semantic category | **4-3-2** |
 | Hua | Language | 3-1-6 |
-| Identity | Co-reference semantic category | **4-1-1, 4-1-2** |
+| Identity | Coreference semantic category | **4-1-1, 4-1-2** |
 | *Imperative* | Mode annotation value | 2-1, 3-1-6, 3-2-2-6, **3-3-2**, 4-3-2 |
 | *Imperfective* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3** |
 | Implicit event | Event type | **3-1-1-4**, 3-1-3-5 |
@@ -6686,8 +6798,8 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Reversible state* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-3** |
 | Road map | UMR annotation practice | 3-2-1, 3-2-1-1-1, 3-2-1-1-2, 3-2-1-3, 4-3 |
 | *ROOT* | Temporal, modal annotation value | **4-2-1**, 4-2-1-2 |
-| *Same-entity* | Co-reference annotation value | **4-1-1** |
-| *Same-event* | Co-reference annotation value | **4-1-2** |
+| *Same-entity* | Coreference annotation value | **4-1-1** |
+| *Same-event* | Coreference annotation value | **4-1-2** |
 | Sanapaná | Language | 2-2-1, 2-2-2, 2-2-3, 3-1-3-2, 3-1-3-4, 3-3-5, 3-3-6 |
 | *Scale* | Non-participant role relation | **3-2-2-5** |
 | Scope | Semantic category | 2-1, 2-2-5, 3-1-3-2, **3-1-5**, 3-3-1-3, 4-3-1, 4-3-1-1-3, 4-3-1-2, 4-3-1-3 |
@@ -6710,8 +6822,8 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *State* | Aspectual semantic category, aspect annotation value | 2-1, 2-2-1, 2-2-5, 3-1-1, 3-1-1-3, 3-3-1, 3-3-1-1, **3-3-1-3**, 3-3-1-5, 4-2-2-1 |
 | *Stimulus* | Participant role | **3-2-1-1** |
 | *Stimulus-of* | Participant role | **3-2-1-3** |
-| Subevent | Co-reference, temporal semantic category | 4-1-2, 4-2-2-1, **4-2-2-2** |
-| *Subset-of* | Co-reference annotation value | **4-1-1, 4-1-2** |
+| Subevent | Coreference, temporal semantic category | 4-1-2, 4-2-2-1, **4-2-2-2** |
+| *Subset-of* | Coreference annotation value | **4-1-1, 4-1-2** |
 | Substitution | Discourse relation | **3-1-6** |
 | *Temp* | Temporal annotation value | 4-2-1, **4-2-1-1** |
 | *Temporal* | Participant role | 2-1, **3-1-6, 3-2-1-1**, 4-2 |
