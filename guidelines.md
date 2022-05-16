@@ -146,7 +146,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      :ARG1 b
 	      :ARG2 (s/ spy-02
 	         :ARG0 b
-		 :modal c2))
+		 :modpred c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
 	   :aspect Performance
@@ -171,9 +171,9 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      (s2c :after s2s))
     :modal((AUTH :FullAff s2i)
       	   (AUTH :FullAff s2c)
-      	   (AUTH :FullAff s2s2)
 	   (AUTH :FullAff NULL_CHARGER)
-	   (NULL_CHARGER :FullAff s2s))
+	   (NULL_CHARGER :FullAff s2c)
+	   (s2c :Unsp s2s)
     :coref(s1p :same-entity s2p))
 ```
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
@@ -193,16 +193,16 @@ Snt3: He denied any wrongdoing.
             :ARG1-of (d2/ do-02
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
-		  :modal d))
+		  :modpred d))
       :aspect Performance
       :modstr FullAff)
   
 (s3/ sentence
     :temporal((DCT :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :FullAff s3d))
-	   (AUTH :FullAff s3p)
-	   (s3p :FullNeg s3d2))
+    :modal((AUTH :FullAff s3p)
+    	   (s3p :FullAff s3d)
+	   (s3d :Unsp s3d2))
     :coref(s2p :same-entity s3p))
 
 ```
@@ -1544,11 +1544,10 @@ both *want* and *go*.
     	:ARG1 p
         :ARG4 (s/ school)
         :aspect Performance
-	:modal w)
+	:modpred w)
     :aspect State
     :modstr FullAff)
 ```
-
 <span id="3-1-3-3 (2b)" label="3-1-3-3 (2b)">\[3-1-3-3 (2b)\]</span> She may want to go to school.
 ```
 (w/ want-01
@@ -1559,7 +1558,7 @@ both *want* and *go*.
     	:ARG1 p
         :ARG4 (s/ school)
         :aspect Performance
-	:modal w)
+	:modpred w)
     :aspect State
     :modstr NeutAff)
 ```
@@ -3154,7 +3153,7 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 	:concession (k2/ keenyamaaibi-00 'want'
 		:experiencer x
 		:stimulus (m
-			:modal k2)
+			:modpred k2)
 		:aspect State
 		:modstr FullNeg)
 	:aspect Habitual
@@ -4206,7 +4205,7 @@ He **wants** to travel to Albuquerque.
 			:name (n/ name :op1 "Albuquerque")
 			:wiki "Albuquerque")
 		:aspect Performance
-		:modal w)
+		:modpred w)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -4218,7 +4217,7 @@ The cat **needs** to be fed.
 	:ARG1 (f/ feed-01
 		:ARG c
 		:aspect Performance
-		:modal n)
+		:modpred n)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -4234,7 +4233,7 @@ He’s **dreading** their decision.
 			:ref-person 3rd
 			:ref-person Plural)
 		:aspect Process
-		:modal d)
+		:modpred d)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -4977,7 +4976,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      :ARG1 b
 	      :ARG2 (s/ spy-02
 	         :ARG0 b
-		 :modal c2))
+		 :modpred c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
 	   :aspect Performance
@@ -5004,16 +5003,16 @@ Snt3: He denied any wrongdoing.
             :ARG1-of (d2/ do-02
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
-		  :modal d))
+		  :modpred d))
       :aspect Performance
       :modstr FullAff)
   
 (s3/ sentence
     :temporal((DCT :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :FullAff s3d))
-	   (AUTH :FullAff s3p)
-	   (s3p :FullNeg s3d2))
+    :modal((AUTH :FullAff s3p))
+	   (s3p :FullAff s3d)
+	   (s3d :Unsp s3d2))
   **:coref(s2p :same-entity s3p))**
 ```
 
@@ -5094,17 +5093,18 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
 			      :quant 1000000
                               :unit (d / dollar)))
 	          :aspect State
-		  :modal b)
+		  :modpred b)
 	    :aspect State
 	    :modstr FullAff))
 	    
 (s1/ sentence
-  :temporal ((Past_Ref :includes s1c)
+  :temporal ((PAST_REF :includes s1c)
   	     (DCT :overlap s1b)
 	     (s1b :overlap s1w))
   :modal ((AUTH :FullAff s1c)
-  	  (AUTH :FullAff Null_Believer)
-	  (Null_Believer :FullAff s1w)))
+  	  (AUTH :FullAff NULL_BELIEVER)
+	  (NULL_BELIEVER :FullAff s1b)
+	  (s1b :Unsp s1w)))
 ```
  <span id="4-1-2 (1b)" label="4-1-2 (1b)">4-1-2 (1b)</span>
 ```
@@ -5121,7 +5121,7 @@ Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial ba
 			:name (n2/ name :op1 "Brotherhood"))
                   :mod (f/ finance))
 	    :aspect Performance
-	    :modal s
+	    :quot s
 	    :modstr FullAff)
       :aspect Performance
       :modstr FullAff)
@@ -5163,7 +5163,7 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
       :modstr FullAff)
       
 (s1/ sentence
-	:temporal ((Past_Ref :includes s1r2)
+	:temporal ((PAST_REF :includes s1r2)
 		   (s1r2 :includes s1i))
 	:modal (AUTH :FullAff s1i))
 ```
@@ -5258,7 +5258,7 @@ The arrests were ordered by anti-terrorism judge fragnoli.
                   :ARG2 (j/ judge-01)))
       :ARG2 (a/ arrest-01
       	    :aspect Process
-	    :modal o)
+	    :quot o)
       :aspect Performance
       :modstr FullAff)
  
@@ -5291,23 +5291,28 @@ The temporal annotation in UMR is done at both the sentence level and the docume
 
 <span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
 ```
-::id PROXY_AFP_ENG_20020105_0162.15 ::date 2013-05-08T13:37:04 ::snt-type body ::annotator LDC-AMR-14 ::preferred
-::snt In April 1998 Arab countries signed an anti-terrorism agreement that binds the signatories to coordinate to fight terrorism.
-::save-date Wed Dec 11, 2013 ::file PROXY_AFP_ENG_20020105_0162_15.txt
-(s / sign-02
-      :ARG0 (c / country
-            :mod (e / ethnic-group :wiki "Arabs"
-                  :name (n / name :op1 "Arab")))
-      :ARG1 (a2 / agree-01
-            :topic (c3 / counter-01
-                  :ARG1 (t2 / terrorism)
-                  :ARG0-of (b / bind-01
+In April 1998 Arab countries signed an anti-terrorism agreement that binds the signatories to coordinate to fight terrorism.
+(s/ sign-02
+      :ARG0 (c/ country
+            :mod (e/ ethnic-group 
+	    	  :wiki "Arabs"
+                  :name (n/ name :op1 "Arab")))
+      :ARG1 (a/ agree-01
+            :topic (c2/ counter-01
+                  :ARG1 (t/ terrorism))
+            :ARG0-of (b/ bind-01
+                  :ARG1 c
+                  :ARG2 (c3/ coordinate-01
                         :ARG1 c
-                        :ARG2 (c2 / coordinate-01
-                              :ARG1 c
-                              :purpose (f / fight-01
-                                    :ARG0 c
-                                    :ARG1 (t / terrorism))))))
+                        :purpose (f/ fight-01
+                              :ARG0 c
+                              :ARG1 t
+			      :aspect Activity
+			      :modstr FullAff)
+			:aspect Activity
+			:modpred b)
+		  :aspect Activity
+		  :modstr FullAff))
       :temporal (d / date-entity :year 1998 :month 4)
       :temporal (b2 /before :op (n/now))
       :aspect Performance))
@@ -5321,28 +5326,28 @@ a relative time depends on another time expression for its interpretation.
 Event-event relations are annotated only when the temporal relations are clearly supported by morpho-syntactic clues or when there is a clear temporal sequence can be inferred. 
 
 The temporal dependency is divided into two passes: the first pass involves setting up the temporal
-superstructure – the top levels of the dependency structure and the fourth
-pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined meta nodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
+superstructure – the top levels of the dependency structure - and the second
+pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined metanodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
 
 #### Part 4-2-1. Temporal superstructure
 
 The highest level of the temporal
 dependency is always a single `ROOT` node. The temporal
 superstructure consists of two types of nodes: time expressions and
-pre-defined metanodes. For now at least, `:Temp` is the
+pre-defined metanodes. `depends-on` is the
 relation that is used to link all nodes in the superstructure.
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
 The first type of node in the temporal superstructure are the
-pre-defined metanodes: `Past_Ref`, `Present_Ref`,
-`Future_Ref`, and `DCT` (document creation time).
+pre-defined metanodes: `PAST_REF`, `PRESENT_REF`,
+`FUTURE_REF`, and `DCT` (document creation time).
 Unlike time expressions, the pre-defined metanodes don’t correspond to
 linguistic material in the text. All four of the pre-defined metanodes
 should be added at the top of every temporal dependency structure.
 Whether or not they are actually used in the annotation will be
 determined when events are annotated in the next pass. As mentioned
-above, there is a generic `:Temp` relation between all nodes
+above, there is a generic `:depends-on` relation between all nodes
 in the temporal superstructure; this is shown in Figure
 [\[tempsuper\]](#tempsuper).
 
@@ -5413,8 +5418,8 @@ are not represented in the temporal dependency structure at any level. They do i
 All locatable time expressions are represented in the temporal
 superstructure. Locatable time expressions are divided between concrete
 and vague time expressions. Vague time expressions (e.g. *nowadays, in
-the old days*) are represented as the children of `Present_Ref`,
-`Past_Ref`, or `Future_Ref`. Concrete time expressions
+the old days*) are represented as the children of `PRESENT_REF`,
+`PAST_REF`, or `FUTURE_REF`. Concrete time expressions
 are divided into relative and absolute time expressions. Relative
 concrete time expressions (*yesterday, the week before*) are represented
 as the children of either `DCT` (as in *yesterday*) or
@@ -5525,49 +5530,61 @@ least one temporal annotation.
 In order to demonstrate how these rules work, let’s look at the
 annotation of ([\[4-2-2-1 (1)\]](#4-2-2-1 (1))) below.
 
-<span id="4-2-2-1 (1)" label="4-2-2-1 (1)">\[4-2-2-1 (1)\]</span> *Lerias
-**said** that many Guinsaugon residents had been **evacuated** after
-**landslides** had **killed** more than 20 people on Leyte, but that
-many had **returned** because the **rains** had **stopped** and the sun
-had **come out**.*  
+<span id="4-2-2-1 (1)" label="4-2-2-1 (1)">\[4-2-2-1 (1)\]</span> 
 Key event: landslide\_KEY
-
-
- ::id NW_AFP_ENG_0024_2006_0217.16 ::date 2017-11-03T23:39:57 ::annotator SDL-AMR-09 ::preferred
- ::snt Lerias said that many Guinsaugon residents had been evacuated after landslides earlier in the week had killed more than 20 people on Leyte, but that many had returned Friday because the rains had stopped and the sun had come out.
- ::save-date Thu Dec 14, 2017 ::file NW_AFP_ENG_0024_2006_0217_16.txt
 ```
-(s / say-01
-      :ARG0 (p / person :wiki -
-            :name (n / name :op1 "Lerias"))
-      :ARG1 (e / evacuate-01
-            :ARG2 (p2 / person
-                  :ARG0-of (r / reside-01
-                        :ARG1 (c / city :wiki "Saint_Bernard,_Southern_Leyte"
-                              :name (n2 / name :op1 "Guinsaugon")))
-                  :quant (m / many))
-            :temporal (a / after
-                  :op1 (k / kill-01
-                        :ARG0 (l / landslide)
-                        :ARG1 (p3 / person
-                              :quant (m2 / more-than :op1 20))
-                        :location (i2 / island :wiki "Leyte"
-                              :name (n3 / name :op1 "Leyte"))
-                        :temporal (w / week)
-                        :temporal (b / before
-                              :op1 s)))
-            :concession (r2 / return-01
-                  :ARG1 p2
-                  :temporal (d / date-entity
-                        :weekday (f / friday))
-                  :ARG1-of (c2 / cause-01
-                        :ARG0 (a2 / and
-                              :op1 (s2 / stop-01
-                                    :ARG1 (r3 / rain-01))
-                              :op2 (c3 / come-out-09
-                                    :ARG1 (s3 / sun)))))))
+Lerias **said** that many Guinsaugon residents had been **evacuated** after **landslides** earlier in the week had **killed** more than 20 people on Leyte, but that many had **returned** Friday because the **rains** had **stopped** and the sun had **come out**.
+(s/ say-01
+      :ARG0 (p/ person
+      	    :wiki -
+            :name (n/ name :op1 "Lerias"))
+      :ARG1 (c/ contrast
+      	    :ARG1 (e/ evacuate-01
+	    	:ARG2 (p2/ person
+			:ARG0-of (r/ reside-01
+				:ARG1 (c2/ city
+					:wiki "Saint_Bernard,_Southern_Leyte"
+					:name (n2/ name :op1 "Guinsaugon")))
+			:quant (m/ many))
+		:temporal (a/ after
+			:op1 (k/ kill-01
+				:ARG0 (l/ landslide
+					:aspect Process)
+				:ARG1 (p3/ person
+					:quant (m2/ more-than :op1 20))
+				:place (i/ island
+					:wiki "Leyte
+					:name (n3/ name :op1 "Leyte"))
+				:temporal (w/ week)
+				:temporal (b/ before
+					:op1 s)
+				:aspect Performance
+				:quot s
+				:modstr FullAff))
+		:aspect Performance
+		:quot s
+		:modstr FullAff)
+	    :ARG2 (r2/ return-01
+	    	:ARG1 p2
+		:temporal (d/ date-entity
+			:weekday (f/ Friday))
+		:ARG1-of (c3/ cause-01
+			:ARG0 (a/ and
+				:op1 (r3/ rain
+					:aspect Endeavor
+					:quot s
+					:modstr FullAff)
+				:op2 (c4/ come-out-09
+					:ARG1 (s2/ sun)
+					:aspect Performance
+					:quot s
+					:modstr FullAff)
+		:aspect Performance
+		:quot s
+		:modstr FullAff)
+	:aspect Performance
+	:modstr FullAff)
 ```
-
 
 | Events    | Modal annotation      | Temporal annotation |
 | :-------- | :-------------------- | :------------------ |
@@ -5581,37 +5598,37 @@ Key event: landslide\_KEY
 | come-out  | Pos(come-out,LERIAS)  |                     |
 
 For *say*, it does not have a `:contained` relation
-with either of the time expressions in the example, so we move to step
+with either of the time expressions (`Friday` and `earlier in the week`) in the example, so we move to step
 2. It’s also the first event in the sentence, so (assuming it can’t be
 linked to any of the events in the previous sentence), we move to step
 4. We do know that *say* occurred after the key event in the
-text, therefore we can add `:after(say,landslide_KEY)` and
+text, therefore we can add `(landslide_KEY :after say)` and
 move on to the next event.
 
 *Evacuate* is not necessarily `:contained` within
 either of the timexs, so we move to step 2. Since *evacuate*
 is a reported event, the reporting event, *say*, is an
 appropriate parent in the temporal dependency; we can add
-`:before(evacuate,say)`.
+`(say :before evacuate)`.
 
 Next, we have *landslide*. Following step 1,
 *landslide* is `:contained` within the timex
 *earlier in the week*, so we add
-`:contained(landslide,earlier_week)`. Then, we move to step 3
+`(earlier_week :contained landslide)`. Then, we move to step 3
 and see if the temporal location of *landslide* can be made
 more specific by adding an event relation. The immediately preceding
 event in the text, *evacuate*, has a clear temporal relation
 and the same modal annotation as *landslide* and is therefore
-a good parent. We can add `:before(landslide,evacuate)`.
+a good parent. We can add `(evacuate :before landslide)`.
 
 Then, we move on to *kill*. Like *landslide*,
 *kill* is `:contained` within the timex *earlier in
-the week*, so we can add `:contained(kill,earlier_week)`.
+the week*, so we can add `(earlier_week :contained kill)`.
 Then we move to step 3 and can add a relation to *landslide*:
-`:overlap(kill,landslide)`.
+`(landslide :overlap kill)`.
 
 *Return* can be linked to the timex *Friday*:
-`:contained(return,Friday)`. Moving to step 3, we look earlier
+`(Friday :contained return)`. Moving to step 3, we look earlier
 in the sentence for a parent event. Both *kill* and
 *landslide* are `:contained` within a different timex, so they
 don’t make good parents. That is, by virtue of the fact that
@@ -5622,38 +5639,32 @@ in *earlier in the week*, it logically falls out that
 *landslide*; therefore, we don’t need to annotate this
 relation. *Evacuate*, however, is not `:contained`
 within a timex and has the same modal annotation as *return*;
-so, we can add `:after(return,evacuate)`.
+so, we can add `(evacuate :after return)`.
 
 *Rain* does not have a `:contained` relation with a
 timex, so we move to step 2. *Return* makes a good parent for
 *rain* since it has the same modal annotation, so we can
 add  
-`:before(rain,return)`.
-
-*Stop* also does not have a `:contained` relation
-with a timex. The preceding event, *rain*, makes a good
-parent, since it has the same modal annotation; we can add
-`:overlap(stop,rain)`.
+`(return :before rain)`.
 
 Finally, *come-out* also does not have a
-`:contained` relation with a timex. *Stop* makes a
+`:contained` relation with a timex. *rain* makes a
 good parent, since it has the same modal annotation, so we can add
-`:overlap(come-out,stop)`. This gives us the full annotation
+`(rain :overlap come-out)`. This gives us the full annotation
 below.
 
 | Events    | Modal annotation   | Temporal annotation                |
 | :-------- | :----------------- | :--------------------------------- |
-| say       | Pos(say,LERIAS)    | After(say,landslide\_KEY)          |
-| evacuate  | Pos(evacuate,say)  | Before(evacuate, say)              |
-| landslide | Pos(landslide,say) | Contained(landslide,earlier\_week) |
-|           |                    | Before(landslide,evacuate)         |
-| kill      | Pos(kill,say)      | Contained(kill,earlier\_week)      |
-|           |                    | Overlap(kill,landslide)            |
-| return    | Pos(return,say)    | Contained(return,Friday)           |
-|           |                    | After(return,evacuate)             |
-| rain      | Pos(rain,say)      | Before(rain,return)                |
-| stop      | Pos(stop,say)      | Overlap(stop,rain)                 |
-| come-out  | Pos(come-out,say)  | Overlap(come-out,stop)             |
+| say       | Pos(say,LERIAS)    | (landslide_KEY :after say)         |
+| evacuate  | Pos(evacuate,say)  | (say :before evacuate)             |
+| landslide | Pos(landslide,say) | (earlier_week :contained landslide)|
+|           |                    | (evacuate :before landslide)       |
+| kill      | Pos(kill,say)      | (earlier_week :contained kill)     |
+|           |                    | (landslide :overlap kill)          |
+| return    | Pos(return,say)    | (Friday :contained return)         |
+|           |                    | (evacuate :after return)           |
+| rain      | Pos(rain,say)      | (return :before rain)              |
+| come-out  | Pos(come-out,say)  | (rain :overlap come-out)           |
 
 ##### Part 4-2-2-2. Contained or Overlap
 
@@ -5671,14 +5682,14 @@ conceptual) relation between them.
 
 Causal relations between events are always annotated as
 `:after` relations. This means that in examples such as *the
-crops grew well because it rained enough*, `:after(grow,rain)`
+crops grew well because it rained enough*, `(rain :after grow)`
 is annotated even though the causing event (raining) and the caused
 event (growing) partly overlap. If the causal relationship is explicitly
 predicated, it is identified as a separate event. It is then annotated
 as `:after` the causing event, and the caused event is
 annotated as following it. Therefore, *the opening of the food can
-prompted my cat to meow* is annotated as `:after(prompt,open)`
-and `:after(meow,prompt)`.
+prompted my cat to meow* is annotated as `(open :after prompt)`
+and `(prompt :after meow)`.
 
 ##### Part 4-2-2-4. Deontic modal events
 
@@ -5725,24 +5736,31 @@ structure is shown below in [\[4-3 (1)\]](#4-3 (1)).
 Martin **said** that the package has probably already **arrived**.
 
 ```
-(s / say  
-	:actor (M / Martin)
-	:theme (a / arrive  
-		:theme (p / package)  
+(s/ say-01  
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Martin")
+	:ARG1 (a/ arrive-01  
+		:ARG1 (p/ package
+			:ref-number Singular)  
 		quot: s
-		modstr: Prt)
-	modstr: Aff)  
+		modstr: PrtAff)
+	modstr: Aff)
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		   (s1s :before s1a))
+	**:modal ((AUTH :FullAff s1p)
+		(AUTH :FullAff s1s)
+		(s1p :PrtAff s1a)))**
 ```
 
 The *say*-event and the *arrive*-event each get a modal strength value (`:modstr`), which can then be represented
-in the dependency as shown on the right. The
+in the dependency as an edge between the event and the relevant conceiver/source. The
 `:quot` value indicates than an event is
 being reported, and the participant role annotation can be used to
 automatically select the conceiver for the reported event(s), here,
 *Martin*.
 
-The road map stages build on each other to end up at a fully specified
-modal dependency structure. This means that Stage 1 annotation involves first doing the Stage 0 modality annotations. (This contrasts with participant roles, where annotators can largely ignore Stage 0 if the annotation language has existing frame files.)
+This simplified, mostly sentence-level, annotation process is step 0 of the road map for modal annotation. Step 1 builds on this step to end up at a fully specified modal dependency structure. This means that Stage 1 annotation involves first doing the Stage 0 modality annotations. (This contrasts with participant roles, where annotators can largely ignore Stage 0 if the annotation language has existing frame files.)
 
 [Back to Table of Contents](#toc)
 
@@ -5752,17 +5770,23 @@ There are two types of modal annotations at Stage 0: a
 `:modstr` annotation that consists of a
 single epistemic strength/polarity value, and a dependency annotation
 that indicates a relation between two events. There are two dependency
-relations: `:mod` for the link between a
+relations: `:modpred` for the link between a
 modal event and the event(s) that it modalizes, and
 `:quot` for the link between a reporting
 event and the event(s) that it reports. Additionally, events in purpose clauses and events in conditional constructions must be taken up in the modal dependency tree. The right structure of the modal dependency graph for these events will be extrapolated from the sentence-level annotation: events in purpose clauses are daughters of events in the main clause they depend on, and are connected to them with the `:purpose` participant role. This can be leveraged to embed the purpose-event underneath the correct parent in the modal dependency graph as well. For conditionals, similarly, the protasis event will be embedded under the apodosis event with a `:condition` relation, or the protasis and apodosis events will both be `:ARG1` and `:ARG2` of a `have-condition-91` node. Again, this information will be taken up in the eventual modal dependency graph without annotators needing to indicate it a second time in the document-level modal annotation workflow.
 The `:modstr` annotation applies to all events, except for those under the scope of a modal identified as its own event (i.e., events with `:mod` relations). This
 is summarized below.
 
-Events under the scope of modal events: `mod` relation  
-Events under the scope of reporting events: `modstr` annotation;
-`quot` relation  
-All other events: `modstr` annotation
+<div id="tab:modal_relations">
+
+| **Event type** | **UMR Treatment** |
+| :------------------------------- |:------------------------------------------------------------------------------------------|
+| Events under the scope of modals | `:modpred` relation to CPT |
+| Events under the scope of reporting events| `:modstr` annotation, `:quot` relation to reporting event |
+| All other events | `:modstr` annotation |
+
+Table 14: Modal relations at Stage 0
+</div>
 
 [Back to Table of Contents](#toc)
 
@@ -5786,7 +5810,7 @@ The cat <u>might</u> have already **eaten** breakfast.
 
 The `Full` modal strength value, as in [\[4-3-1-1 (1a)\]](#4-3-1-1 (1a)), corresponds to complete certainty; that is, the conceiver is 100% certain that the event occurs in the real world. The `Neutral` modal strength value, shown in [\[4-3-1-1 (1c)\]](#4-3-1-1 (1c)), indicates the possibility of the event; essentially, this corresponds to 50/50 certainty that the event occurs in the real world. The `Partial` modal strength value, as in [\[4-3-1-1 (1b)\]](#4-3-1-1 (1b)), falls between the `Full` and `Neutral` values; the conceiver believes that more likely than not, the event occurs in the real world.
 
-But, `Full`, `Partial`, and `Neutral` aren’t the only possible modal strength annotation values. Languages differ in the modal strength distinctions that are conventionalized in their grammar. In order to accommodate these differences, we use a typological lattice of annotation values, constructed based on the structure of the annotation categories across languages (Van Gysel et al. 2019).
+But, `Full`, `Partial`, and `Neutral` aren’t the only possible modal strength annotation values. Languages differ in the modal strength distinctions that are conventionalized in their grammar. In order to accommodate these differences, we use a typological lattice of annotation values, constructed based on the structure of the annotation category across languages (Van Gysel et al. 2019).
 
 One level of granularity in the lattice is designated as the “base
 level”: annotators are encouraged to use categories from this level as
@@ -5800,19 +5824,19 @@ This lattice is based around the base level of `Full` vs. `Partial` vs.
 values that lump together the distinctions in the base level, and more
 fine-grained annotation values. For contexts where it is unclear if the modal strength is `Full` or `Partial`, the `Non-neutral` value can be used; if it is unclear whether the modal strength is `Partial` or `Neutral`, then the `Non-full` value can be used. The most fine-grained modal strength values are generally used with languages that have grammatical forms that encode the relevant distinction.
 
-Also following FactBank (Pustejovsky et al. 2006), the `modstr`
-annotation combines the epistemic strength values with a binary polarity distinction (`Affirmative`, `Negative`). This results in six modal strength/polarity values for the default level, shown below.
+Also following FactBank (Pustejovsky et al. 2006), the `:modstr`
+annotation combines the epistemic strength values with a binary polarity distinction (`Affirmative`, `Negative`). This results in six modal strength/polarity values for the default level, shown below. Both the affirmative values and the negative values have their own set of related coarse-grained and fine-grained values.
 
 <div>
 
 | **Label**                              | **Value**                              |
 | :------------------------------------- | :------------------------------------- |
-| ```Aff```     | full strength, affirmative polarity    |
-| ```Prt```     | partial strength, affirmative polarity |
-| ```Neut```    | neutral strength, affirmative polarity |
+| ```FullAff```     | full strength, affirmative polarity    |
+| ```PrtAff```     | partial strength, affirmative polarity |
+| ```NeutAFf```    | neutral strength, affirmative polarity |
 | ```NeutNeg``` | neutral strength, negative polarity    |
 | ```PrtNeg```  | partial strength, negative polarity    |
-| ```Neg```    | full strength, negative polarity       |
+| ```FullNeg```    | full strength, negative polarity       |
 
 </div>
 
@@ -5826,7 +5850,7 @@ These values and their interpretation are shown below; the corresponding FactBan
 ```Neg```: full negative support; complete certainty that the event does not occur (CT-)
 
 Degree of certainty corresponds most straightforwardly to the degree of confidence of a conceiver (often, the author) in the occurrence of an episodic event, i.e. the epistemic continuum from certainty to
-possibility. We use these same values for the evidential continuum from direct evidence to second-hand (reported or inferred) evidence; see [Part 4-3-1-1-2](#part-4-3-1-1-2-evidential-justification) below. And these values are
+possibility. We use these same values for the evidential continuum from direct evidence to second-hand (reported or inferred) evidence; see [Part 4-3-1-1-2](#part-4-3-1-1-2-evidential-justification) below). And these values are
 interpreted into the domain of future-oriented or deontic modality, as
 explained in [Part 4-3-1-1-3](#part-4-3-1-1-3-future-events-and-deontic-modality). The interpretation of
 the value - as epistemic, evidential or deontic - is not reflected in
@@ -5835,10 +5859,10 @@ the modal strength annotation.
 ##### Part 4-3-1-1-1. Non-future events
 
 For non-future (non-deontic) events, the `modstr` values correspond to the author’s level of certainty towards the occurrence of the event in the real world. Events presented as fact are annotated with
-`Aff`, while events for which the author categorically denies their occurrence are annotated `Neg`. When the author doesn’t present the
+`FullAff`, while events for which the author categorically denies their occurrence are annotated `FullNeg`. When the author doesn’t present the
 event as fact, but has a higher level of certainty towards the event
 either being true or not true, this is annotated as
-`Prt` or, when the polarity is negative, `PrtNeg`. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as `Neut` or
+`PrtAff` or, when the polarity is negative, `PrtNeg`. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as `NeutAff` or
 `NeutNeg`, depending on the polarity of the
 linguistic expression. These strength values are exemplified in
 ([\[4-3-1-1-1 (1)\]](#4-3-1-1-1 (1))).
@@ -5846,39 +5870,72 @@ linguistic expression. These strength values are exemplified in
 
 <span id="4-3-1-1-1 (1)" label="4-3-1-1-1 (1)">\[4-3-1-1-1 (1)\]</span>
 
-<span id="4-3-1-1-1 (1a)" label="4-3-1-1-1 (1a)">\[4-3-1-1-1 (1a)\]</span> The dog **barked**
-last night.  
+<span id="4-3-1-1-1 (1a)" label="4-3-1-1-1 (1a)">\[4-3-1-1-1 (1a)\]</span>   
 ```
-(b / bark  
-	modstr: Aff)  
+The dog **barked** last night.
+(b/ bark-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:temporal (n/ night
+		:mod (l/ last))
+	:aspect Endeavor
+	:modstr FullAff)  
 ```
-<span id="4-3-1-1-1 (1b)" label="4-3-1-1-1 (1b)">\[4-3-1-1-1 (1b)\]</span> The dog <u>probably</u> **barked** last night.  
+<span id="4-3-1-1-1 (1b)" label="4-3-1-1-1 (1b)">\[4-3-1-1-1 (1b)\]</span>  
 ```
-(b / bark  
-modstr: Prt)  
+The dog <u>probably</u> **barked** last night.
+(b/ bark-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:temporal (n/ night
+		:mod (l/ last))
+	:aspect Endeavor
+	:modstr PrtAff)  
 ```
-<span id="4-3-1-1-1 (1c)" label="4-3-1-1-1 (1c)">\[4-3-1-1-1 (1c)\]</span> The dog <u>may</u> have **barked** last night.  
+<span id="4-3-1-1-1 (1c)" label="4-3-1-1-1 (1c)">\[4-3-1-1-1 (1c)\]</span>
 ```
-(b / bark  
-	modstr: Neut)  
+The dog <u>may</u> have **barked** last night.
+(b/ bark-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:temporal (n/ night
+		:mod (l/ last))
+	:aspect Endeavor
+	:modstr NeutAff)  
 ```
-<span id="4-3-1-1-1 (1d)" label="4-3-1-1-1 (1d)">\[4-3-1-1-1 (1d)\]</span> The dog <u>may not</u> have **barked** last night.  
+<span id="4-3-1-1-1 (1d)" label="4-3-1-1-1 (1d)">\[4-3-1-1-1 (1d)\]</span> 
 ```
-(b / bark  
-	modstr: NeutNeg)  
+The dog <u>may not</u> have **barked** last night.
+(b/ bark-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:temporal (n/ night
+		:mod (l/ last))
+	:aspect Endeavor
+	:modstr NeutNeg)  
 ```
-
-<span id="4-3-1-1-1 (1e)" label="4-3-1-1-1 (1e)">\[4-3-1-1-1 (1e)\]</span> The dog <u>probably didn’t</u> **bark** last night. 
+<span id="4-3-1-1-1 (1e)" label="4-3-1-1-1 (1e)">\[4-3-1-1-1 (1e)\]</span>
 ```
-(b / bark  
-	modstr: PrtNeg)  
-```
-
-<span id="4-3-1-1-1 (1f)" label="4-3-1-1-1 (1f)">\[4-3-1-1-1 (1f)\]</span> The dog <u>didn’t</u> **bark** last night.  
+The dog <u>probably didn't</u> **bark** last night.
+(b/ bark-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:temporal (n/ night
+		:mod (l/ last))
+	:aspect Endeavor
+	:modstr PrtNeg)  
+``` 
+<span id="4-3-1-1-1 (1f)" label="4-3-1-1-1 (1f)">\[4-3-1-1-1 (1f)\]</span>
 ```   
-(b / bark  
-	modstr: Neg)  
-```
+The dog <u>didn't</u> **bark** last night.
+(b/ bark-01
+	:ARG0 (d/ dog
+		:ref-number Singular)
+	:temporal (n/ night
+		:mod (l/ last))
+	:aspect Endeavor
+	:modstr FullNeg)  
+```  
 
 ##### Part 4-3-1-1-2. Evidential justification
 
@@ -5888,15 +5945,32 @@ Example [\[4-3-1-1-2 (1)\]](#4-3-1-1-2 (1)) shows how direct and indirect justif
 
 <span id="4-3-1-1-2 (1)" label="4-3-1-1-2 (1)">\[4-3-1-1-2 (1)\]</span>
 
-<span id="4-3-1-1-2 (1a)" label="4-3-1-1-2 (1a)">\[4-3-1-1-2 (1a)\]</span> (I **saw**) Mary <span class="smallcaps">feed</span> the cat.
+<span id="4-3-1-1-2 (1a)" label="4-3-1-1-2 (1a)">\[4-3-1-1-2 (1a)\]</span> 
 ```
-(f / feed  
-	modstr: Aff)
+(I **saw**) Mary <span class="smallcaps">feed</span> the cat.
+(s/ see-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (f/ feed-01
+		:ARG0 (p2/ person
+			:name (n/ name :op1 "Mary"))
+		:ARG2 (c/ cat
+			:ref-number Singular)
+		:aspect Performance
+		**:modstr FullAff**)
+	:aspect State
+	:modstr FullAff)
 ```
 <span id="4-3-1-1-2 (1b)" label="4-3-1-1-2 (1b)">\[4-3-1-1-2 (1b)\]</span> Mary **must** have <span class="smallcaps">fed</span> the cat.
 ```
-(f / feed  
-	modstr: Prt) 
+(f/ feed-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG2 (c/ cat
+		:ref-number Singular)
+	:aspect Performance
+	**:modstr PrtAff**)
 ```
 
 In [\[4-3-1-1-2 (1a)\]](#4-3-1-1-2 (1a)), the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)), however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)) is annotated with `Prt` modal strength.
@@ -5906,35 +5980,64 @@ In [\[4-3-1-1-2 (1a)\]](#4-3-1-1-2 (1a)), the author has direct knowledge of the
 For events presented as (potentially) happening in the future,
 `:modstr` refers to the predictability of
 the occurrence of the event in the future, as presented by the author.
-Predictive future has full strength (`Aff`
-or `Neg`); intentions and commands
-correspond to partial strength (`Prt` or
+Predictive future has full strength (`FullAff`
+or `FullNeg`); intentions and commands
+correspond to partial strength (`PrtAff` or
 `PrtNeg`); and desire and permission
-correspond to neutral (`Neut` or
+correspond to neutral (`NeutAff` or
 `NeutNeg`) strength. Keep in mind that events under the scope of modals identified as their own event don't receive any `:modstr` value at all. This section refers to deontic meanings indicated by grammaticalized modals that don't fit the criteria to be identified as events.
 
 This is illustrated in ([\[4-3-1-1-3 (1)\]](#4-3-1-1-3 (1))).
 
 <span id="4-3-1-1-3 (1)" label="4-3-1-1-3 (1)">\[4-3-1-1-3 (1)\]</span>
 
-<span id="4-3-1-1-3 (1a)" label="4-3-1-1-3 (1a)">\[4-3-1-1-3 (1a)\]</span> I <u>will</u> **go** to Santa Fe. 
+<span id="4-3-1-1-3 (1a)" label="4-3-1-1-3 (1a)">\[4-3-1-1-3 (1a)\]</span>  
 ```
-(g / go  
-	modstr: Aff) 
+I <u>will</u> **go** to Santa Fe.
+(g/ go-01
+	:ARG1 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG4 (c/ city
+		:wiki "Santa_Fe,_New_Mexico"
+		:name (n/ name
+			:op1 "Santa"
+			:op2 "Fe"))
+	:aspect Performance
+	:modstr FullAff)
+```
+<span id="4-3-1-1-3 (1b)" label="4-3-1-1-3 (1b)">\[4-3-1-1-3 (1b)\]</span>   
+```
+You <u>must</u> **go** to Santa Fe.
+(g/ go-01
+	:ARG1 (p/ person
+		:ref-person 2nd
+		:ref-number Singular)
+	:ARG4 (c/ city
+		:wiki "Santa_Fe,_New_Mexico"
+		:name (n/ name
+			:op1 "Santa"
+			:op2 "Fe"))
+	:aspect Performance
+	:modstr PrtAff
+	:mode Imperative)
 ```
 
-<span id="4-3-1-1-3 (1b)" label="4-3-1-1-3 (1b)">\[4-3-1-1-3 (1b)\]</span> You <u>must</u> **go** to Santa Fe.  
+<span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">\[4-3-1-1-3 (1c)\]</span>   
 ```
-(g / go  
-	modstr: Prt)  
+You can **go** to Santa Fe.
+(g/ go-01
+	:ARG1 (p/ person
+		:ref-person 2nd
+		:ref-number Singular)
+	:ARG4 (c/ city
+		:wiki "Santa_Fe,_New_Mexico"
+		:name (n/ name
+			:op1 "Santa"
+			:op2 "Fe"))
+	:aspect Performance
+	:modstr NeutAff)
 ```
-
-<span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">\[4-3-1-1-3 (1c)\]</span> You can **go** to Santa Fe.  
-```
-(g / go  
-	modstr: Neut)  
-```
- 
 The predictive future, as in [\[4-3-1-1-3 (1a)\]](#4-3-1-1-3 (1a)), is annotated with
 full modal strength because it presents the future event as a certainty
 (i.e., it is as certain as is possible for future events). Commands, as
@@ -5944,10 +6047,10 @@ future, but more likely to happen than the neutral strength deontics.
 Finally, permission, as in [\[4-3-1-1-3 (1c)\]](#4-3-1-1-3 (1c)), is annotated as
 neutral strength, since even if someone has permission to do something, there is no guarantee they will.
 
-##### Part 4-3-1-2. mod relation
+##### Part 4-3-1-2. :modpred relation
 
 Events under the scope of a modal identified as its own event are only
-annotated with a `:mod` relation to the
+annotated with a `:modpred` relation to the
 relevant modal. This is shown below in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)).
 
 <span id="4-3-1-2 (1)" label="4-3-1-2 (1)">\[4-3-1-2 (1)\]</span>
@@ -5955,43 +6058,99 @@ relevant modal. This is shown below in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)).
 <span id="4-3-1-2 (1a)" label="4-3-1-2 (1a)">\[4-3-1-2 (1a)\]</span> Mary <u>**wants**</u> to
 **visit** France.
 ```
-(w / want  
-	(v / visit  
-		mod: w)  
-	modstr: Aff)  
-```
+(w/ want-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (v/ visit-01
+		:ARG0 p
+		:ARG1 (c/ country
+			:wiki "France"
+			:name (n/ name :op1 "France"))
+		:aspect Performance
+		:modpred w
+	:aspect State
+	:modstr FullAff
 
+(s/ sentence
+	:temporal ((DCT :overlap s1w)
+		   (s1w :after s1v))
+	:modal ((AUTH :FullAff s1p)
+		(s1p :FullAff s1w)
+		(s1w :Unsp s1v))
+```
 <span id="4-3-1-2 (1b)" label="4-3-1-2 (1b)">\[4-3-1-2 (1b)\]</span> Rob <u>**thinks**</u>
 the dog **escaped** through the fence.
 ```
-(t / think  
-	(e / escape  
-		mod: t)  
-	modstr: Aff)
+(t/ think-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Rob"))
+	:ARG1 (e/ escape-01
+		:ARG0 (d/ dog
+			:ref-number Singular)
+		:path (f/ fence)
+		:aspect Performance
+		:modpred t)
+	:aspect State
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((DCT :overlap s1t)
+		   (s1t :before s1e))
+	:modal ((AUTH :FullAff s1p)
+		(s1p :FullAff s1t)
+		(s1t :Unsp s1e)))
 ```
-
 <span id="4-3-1-2 (1c)" label="4-3-1-2 (1c)">\[4-3-1-2 (1c)\]</span> They <u>probably</u>
 <u>**decided**</u> to **leave** on Monday.
 ```
-(d / decide  
-	(l / leave  
-		mod: d)  
-	modstr: Prt)  
+(d/ decide-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG1 (l/ leave-01
+		:ARG0 p
+		:temporal (d/ date-entity
+			:weekday (m/ Monday))
+		:aspect Performance
+		:modpred d)
+	:aspect Performance 
+	:modstr PrtAff) 
+(s/ sentence
+	:temporal ((PAST_REF :contained s1d)
+		   (s1m :contained s1l))
+	:modal ((AUTH :PrtAff s1p)
+		(s1p :FullAff s1d)
+		(s1d :Unsp s1l)))
 ```
-
 <span id="4-3-1-2 (1d)" label="4-3-1-2 (1d)">\[4-3-1-2 (1d)\]</span> His parents
 <u>**forbid**</u> him from **smoking**.
 ```
-(f / forbid  
-	(s / smoke  
-		mod: f)  
-	modstr: Aff)
+(f/ forbid-01
+	:ARG0 (p/ person
+		:ARG0-of (k/ kinship)
+			:ARG1 (p2/ person
+				:ref-person 3rd
+				:ref-number Singular)
+			:ARG2 (p3/ parent)
+		:ref-number Plural)
+	:ARG1 (s/ smoke-01
+		:ARG0 p2
+		:aspect Process
+		:modpred f)
+	:ARG2 p2
+	:aspect State
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((DCT :overlap s1f)
+		   (s1f :overlap s1s))
+	:modal ((AUTH :FullAff s1p)
+		(s1p :FullAff s1f)
+		(s1f :Unsp s1s)))
 ```
 
 Note that the modal itself is annotated with a
 `:modstr` value (if it is not under the
 scope of another modal). The actual modal value imparted by the modal
-event is not annotated at Stage 0.
+event is not annotated at Stage 0. It will be taken up in the lexical entries of modal complement-taking predicates and space-builders as the lexicon is being built, and will then automatically replace the unspecified link between the modal event and the modalized event in the document-level structure.
 
 ##### Part 4-3-1-3. quot relation
 
@@ -6000,69 +6159,168 @@ are annotated with a `:quot` relation to the
 reporting or speech predicate. Unlike events under the scope of modals,
 these events are also annotated with a
 `:modstr` value.
-vh 
+
 <span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span>
 
-<span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span> Mary <u>**said**</u>
-that she **went** to Santa Fe.
+<span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span> 
 ```
-(s / say  
-	(g / go  
-		quot: s  
-		modstr: Aff)  
-	modstr: Aff)  
+Mary <u>**said**</u> that she **went** to Santa Fe.
+(s/ say-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (g/ go-01
+		:ARG1 p
+		:ARG4 (c/ city
+			:wiki "Santa_Fe,_New_Mexico"
+			:name (n2/ name
+				:op1 "Santa"
+				:op2 "Fe))
+		:aspect Performance
+		:modstr FullAff
+		:quot s
+	:aspect Performance
+	:modstr FullAff) 
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		   (s1s :before s1g))
+	:modal ((AUTH :FullAff s1s)
+		(AUTH :FullAff s1p)
+		(s1p :FullAff s1g)))
 ```
-
-<span id="4-3-1-3 (1a)" label="4-3-1-3 (1a)">\[4-3-1-3 (1a)\]</span> The New York Times
-<u>**reported**</u> that Congress **voted** on the bill this afternoon.
+<span id="4-3-1-3 (1a)" label="4-3-1-3 (1a)">\[4-3-1-3 (1a)\]</span> 
 ```
-(r / report  
-	(v / vote  
-		quot: r  
-		modstr: Aff)  
-	modstr: Aff) 
+The New York Times <u>**reported**</u> that Congress **voted** on the bill this afternoon.
+(r/ report-01
+	:ARG0 (n/ newspaper
+		:name (n2/ name
+			:op1 "The"
+			:op2 "New"
+			:op3 "York"
+			:op4 "Times")
+		:wiki "The_New_York_Times")
+	:ARG1 (v/ vote-01
+		:ARG0 (g/ government-organization
+			:name (n3/ name :op1 "Congress")
+			:wiki "United_States_Congress")
+		:ARG1 (b/ bill
+			:ref-number Singular)
+		:temporal (a/ afternoon
+			:mod (t/ this))
+		:aspect Performance
+		:modstr FullAff
+		:quot r)
+	:aspect Performance
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((PAST_REF :contained s1r)
+		   (s1a :contained s1v))
+	:modal ((AUTH :FullAff s1r)
+		(AUTH :FullAff s1n)
+		(s1n :FullAff s1v)))
 ```
-
 <span id="4-3-1-3 (1b)" label="4-3-1-3 (1b)">\[4-3-1-3 (1b)\]</span> Mary <u>might</u>
 have <u>**said**</u> that she **went** to Santa Fe.
 ```
-(s / say  
-	(g / go  
-		quot: s  
-		modstr: Aff)  
-	modstr: Neut)  
+Mary <u>**might**</u> have <u>**said**</u> that she **went** to Santa Fe.
+(s/ say-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (g/ go-01
+		:ARG1 p
+		:ARG4 (c/ city
+			:wiki "Santa_Fe,_New_Mexico"
+			:name (n2/ name
+				:op1 "Santa"
+				:op2 "Fe))
+		:aspect Performance
+		:modstr FullAff
+		:quot s
+	:aspect Performance
+	:modstr NeutAff) 
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		   (s1s :before s1g))
+	:modal ((AUTH :NeutAff s1s)
+		(AUTH :NeutAff s1p)
+		(s1p :FullAff s1g))) 
 ```
-
-<span id="4-3-1-3 (1c)" label="4-3-1-3 (1c)">\[4-3-1-3 (1c)\]</span> Mary <u>didn’t</u>
-<u>**say**</u> that she **went** to Santa Fe.
+<span id="4-3-1-3 (1c)" label="4-3-1-3 (1c)">\[4-3-1-3 (1c)\]</span> 
 ```
-(s / say  
-	(g / go  
-		quot: s  
-		modstr: Aff)  
-	modstr: Neg)
+Mary <u>didn’t</u> <u>**say**</u> that she **went** to Santa Fe.
+(s/ say-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (g/ go-01
+		:ARG1 p
+		:ARG4 (c/ city
+			:wiki "Santa_Fe,_New_Mexico"
+			:name (n2/ name
+				:op1 "Santa"
+				:op2 "Fe))
+		:aspect Performance
+		:modstr FullAff
+		:quot s
+	:aspect Performance
+	:modstr FullNeg) 
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		   (s1s :before s1g))
+	:modal ((AUTH :FullNeg s1s)
+		(AUTH :FullNeg s1p)
+		(s1p :FullAff s1g))) 
 ```
-
-<span id="4-3-1-3 (1d)" label="4-3-1-3 (1d)">\[4-3-1-3 (1d)\]</span> Mary
-<u>**said**</u> that John <u>might</u> have **gone** to Santa Fe.
+<span id="4-3-1-3 (1d)" label="4-3-1-3 (1d)">\[4-3-1-3 (1d)\]</span> 
 ```
-(s / say  
-	(g / go  
-		quot: s  
-		modstr: Neut)  
-	modstr: Aff) 
+Mary <u>**said**</u> that John <u>might</u> have **gone** to Santa Fe.
+(s/ say-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (g/ go-01
+		:ARG1 (p2/ person
+			:name (n2/ name :op1 "John"))
+		:ARG4 (c/ city
+			:wiki "Santa_Fe,_New_Mexico"
+			:name (n3/ name
+				:op1 "Santa"
+				:op2 "Fe))
+		:aspect Performance
+		:modstr NeutAff
+		:quot s
+	:aspect Performance
+	:modstr FullAff) 
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		   (s1s :before s1g))
+	:modal ((AUTH :FullNeg s1s)
+		(AUTH :NeutAff s1p)
+		(s1p :NeutAff s1g))) 
 ```
-
-<span id="4-3-1-3 (1e)" label="4-3-1-3 (1e)">\[4-3-1-3 (1e)\]</span> Mary <u>**said**</u>
-that John <u>probably didn’t</u> **go** to Santa Fe.
+<span id="4-3-1-3 (1e)" label="4-3-1-3 (1e)">\[4-3-1-3 (1e)\]</span> 
 ```
-(s / say  
-	(g / go  
-		quot: s  
-		modstr: PrtNeg)  
-	modstr: Aff)  
+Mary <u>**said**</u> that John <u>probably didn’t</u> **go** to Santa Fe.
+(s/ say-01
+	:ARG0 (p/ person
+		:name (n/ name :op1 "Mary"))
+	:ARG1 (g/ go-01
+		:ARG1 (p2/ person
+			:name (n2/ name :op1 "John"))
+		:ARG4 (c/ city
+			:wiki "Santa_Fe,_New_Mexico"
+			:name (n3/ name
+				:op1 "Santa"
+				:op2 "Fe))
+		:aspect Performance
+		:modstr PrtNeg
+		:quot s
+	:aspect Performance
+	:modstr FullAff) 
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		   (s1s :before s1g))
+	:modal ((AUTH :FullNeg s1s)
+		(AUTH :PrtNeg s1p)
+		(s1p :PrtNeg s1g)))  
 ```
-
 As can be seen above, both the reporting predicate and the reported
 events are annotated with a `:modstr` value.
 The `:modstr` value of the reporting
@@ -6086,19 +6344,48 @@ Events in purpose clauses are annotated with both a
 <span id="4-3-1-4 (1)" label="4-3-1-4 (1)">\[4-3-1-4 (1)\]</span>
 They **dropped** water <u>in order to</u> **fight** the fire.
 ```
-(d / drop  
-	:purpose (f / fight 
-		modstr: Aff)  
-	modstr: Aff) 
+(d/ drop-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG1 (w/ water)
+	:purpose (f/ fight-01
+		:ARG0 p
+		:ARG1 (f/ fire)
+		:aspect Activity
+		:modstr FullAff)
+	:aspect Performance
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((PAST_REF :contained s1d)
+		   (s1d :after :s1f))
+	:modal ((AUTH :FullAff s1d)
+		(AUTH :FullAff s1p)
+		(s1p :PrtAff purpose)
+		(purpose :FullAff s1f)))
 ```
-
 <span id="4-3-1-4 (2)" label="4-3-1-4 (2)">\[4-3-1-4 (2)\]</span>
-He **walked** quickly <u>in order to</u> not **arrive** late.
 ```
-(w / walked  
-	:purpose (a / arrive   
-		modstr: Neg)  
-	modstr: Aff)  
+He **walked** quickly <u>in order to</u> not **arrive** late.
+(w/ walk-01
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:manner (q/ quickly)
+	:purpose (a/ arrive-01
+		:ARG1 p
+		:temporal (l/ late)
+		:aspect Performance
+		:modstr FullNeg)
+	:aspect Activity
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((PAST_REF :contained s1w)
+		   (s1w :after s1a))
+	:modal ((AUTH :FullAff s1w)
+		(AUTH :FullAff s1p)
+		(s1p :PrtAff purpose)
+		(purpose :FullNeg s1a)))
 ```
 
 The `:modstr` value represents any modals or
@@ -6116,39 +6403,83 @@ apodosis.
 
 <span id="4-3-1-5 (1)" label="4-3-1-5 (1)">\[4-3-1-5 (1)\]</span>
 
-<span id="4-3-1-5 (1a)" label="4-3-1-5 (1a)">\[4-3-1-5 (1a)\]</span> If she’s **hungry**, I’ll **feed** her dinner.
+<span id="4-3-1-5 (1a)" label="4-3-1-5 (1a)">\[4-3-1-5 (1a)\]</span> 
 ```
-(f / feed  
-	  
-	:condition (h / have-mod-91
-		modstr: Aff)
-	modstr: Aff)
+If she’s **hungry**, I’ll **feed** her dinner.
+(f/ feed-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (d/ dinner)
+	:ARG2 (p2/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:condition (h/ hunger-01
+		:ARG0 p2
+		:aspect State
+		:modstr FullAff)
+	:aspect Performance
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((DCT :overlap s1h)
+		   (DCT :after s1f))
+	:modal ((AUTH :NeutAff have-condition)
+		(have-condition :FullAff s1h)
+		(have-condition :FullAff s1f)))
 ```
-
-<span id="4-3-1-5 (1b)" label="4-3-1-5 (1b)">\[4-3-1-5 (1b)\]</span> If she’s **hungry**, maybe I’ll **cook** pasta.
+<span id="4-3-1-5 (1b)" label="4-3-1-5 (1b)">\[4-3-1-5 (1b)\]</span> 
 ```
-(c / cook  
-	:condition (h / have-mod-91
-		modstr Aff)
-	modstr: Prt)
+If she’s **hungry**, maybe I’ll **cook** pasta.
+(c/ cook-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (p2/ pasta)
+	:condition (h/ hunger-01
+		:ARG0 (p3/ person
+			:ref-person 3rd
+			:ref-number Singular)
+		:aspect State
+		:modstr FullAff)
+	:aspect Performance
+	:modstr NeutAff)
+(s/ sentence
+	:temporal ((DCT :overlap s1h)
+		   (DCT :after s1c))
+	:modal ((AUTH :NeutAff have-condition)
+		(have-condition :FullAff s1h)
+		(have-condition :NeutAff s1c)))
 ```
-
-<span id="4-3-1-5 (1c)" label="4-3-1-5 (1c)">\[4-3-1-5 (1c)\]</span> If she **isn’t hungry**, we’ll just **watch** a movie.
+<span id="4-3-1-5 (1c)" label="4-3-1-5 (1c)">\[4-3-1-5 (1c)\]</span> 
 ```
-(h / have-mod-91  
-	modstr: Neg)  
-(w / watch
-	:condition (h / have-mod-91
-		modstr: Neg)
-	modstr: Aff)  
+If she **isn’t hungry**, we’ll just **watch** a movie.
+(w/ watch-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Plural)
+	:ARG1 (m/ movie)
+	:mod (j/ just)
+	:condition (h/ hunger-01
+		:ARG0 (p2/ person
+			:ref-person 3rd
+			:ref-number Singular)
+		:aspect State
+		:modstr FullNeg)
+	:aspect Performance
+	:modstr FullAff)
+(s/ sentence
+	:temporal ((DCT :overlap s1h)
+		   (DCT :after s1w))
+	:modal ((AUTH :NeutAff have-condition)
+		(have-condition :FullNeg s1h)
+		(have-condition :FullAff s1c))) 
 ```
-
 As with purpose clauses, the `:modstr` value
 doesn’t capture the uncertainty imparted by the conditional construction
 itself; it corresponds to any negation or modals which are expressed
 inside of the conditional construction. The modal value of the
 conditional construction is captured by the
-`cond` value.
+`:condition` value.
 
 [Back to Table of Contents](#toc)
 
@@ -6159,7 +6490,7 @@ are unspecified. The modal strength that a modal verb imparts on its
 complement is one of these pieces. As the modal annotation progresses,
 this information is added to the frame files for modal verbs. For
 example, the complements of English *want* have a
-`:modstr Neut` value; this will be indicated
+`:modstr NeutAff` value; this will be indicated
 in the frame file as shown below.
 
 ```
@@ -6171,7 +6502,7 @@ Predicate: want.01
 	Arg3: in-exchange-for  
 	Arg4: from 
 
-:modstr of complement: Neut  
+:modstr of complement: NeutAff  
 ```
 
 For the complements of modals, the `:modstr`
@@ -6180,7 +6511,7 @@ they reflect the beliefs of the
 `:experiencer` participant of the modal
 event, who is often not the author. For example, in
 [\[4-3-1-6 (1)\]](#4-3-1-6 (1)), Mary believes that the visit event may take
-place in the future (`Neut` strength), but
+place in the future (`NeutAff` strength), but
 the author disagrees.
 
 <span id="4-3-1-6 (1)" label="4-3-1-6 (1)">\[4-3-1-6 (1)\]</span> Mary wants
@@ -6191,30 +6522,30 @@ to Mary’s beliefs, as the `:experiencer` of
 the wanting event.
 
 Some predicates impart full, positive
-(`Aff`) strength on their complements,
+(`FullAff`) strength on their complements,
 often called factive predicates (e.g., *manage to*). Strong epistemic
 modals (e.g., *expect that, deduce*) and strong deontic modals,
 including intention modals (e.g., *plan to, decide to*) and obligation
-modals (e.g., *need, demand*), impart `Prt`
+modals (e.g., *need, demand*), impart `PrtAff`
 strength on their complements. Weak deontic modals, including desire
 (e.g., *want*) and permission (e.g., *allow*), impart
-`Neut` strength on their complements.
+`NeutAff` strength on their complements.
 Certain modals may also lexicalize negation, such as *doubt*, *forbid*,
 or *wish*. These are annotated with the
 `NeutNeg`,
 `PrtNeg`, and
-`Neg` values, respectively.
+`FullNeg` values, respectively.
 
 #### Part 4-3-2. English modals
 
 This list gives the modal strength value associated with common English
 modal constructions (this is certaintly not an exhaustive list). For
 modal predicates that are identified as their own event (e.g.,
-deontic predicates), the modal strength value characterizes the dependency link between the modal predicate node and its child event. For example, *want* is in the `Neut` list, which indicates that there
-is a `Neut` link between the `want` node and its
+deontic predicates), the modal strength value characterizes the dependency link between the modal predicate node and its child event. For example, *want* is in the `NeutAff` list, which indicates that there
+is a `NeutAff` link between the `want` node and its
 complement event node in the full dependency structure.   
 
-`Aff` (full affirmative)
+`FullAff` (full affirmative)
 
   - Simple assertions: declarative sentences
 
@@ -6224,7 +6555,7 @@ complement event node in the full dependency structure.
 
   - Factual predicates: *manage to, finished*
 
-`Prt` (partial affirmative)
+`PrtAff` (partial affirmative)
 
   - Strong epistemic modals: *must/must have, have to, expect that,
     deduce*
@@ -6243,14 +6574,14 @@ complement event node in the full dependency structure.
       - Purpose clauses/purposive event nominals: *(in order) to* VERB,
         *for* EVENT.NOM
 
-`Neut` (neutral affirmative)
+`NeutAff` (neutral affirmative)
 
   - Weak epistemic modals: *may, might/might have, could have*
 
   - Weak epistemic adverbs/adjectives: *maybe, possibly/be possible
     that*
 
-  - Conditionals
+  - Conditionals (done automatically in the conversion from sentence-level to document-level structure)
 
   - Hope/Fear: *hope, fear, worry, dread*
 
@@ -6265,7 +6596,7 @@ complement event node in the full dependency structure.
   - Doubt: *doubt, call into question, be dubious that, be skeptical
     that*
 
-  - Combination of (some) <span>Neut</span> lexical items with negation
+  - Combination of (some) <span>NeutAff</span> lexical items with negation
 
 `PrtNeg` (partial negative)
 
@@ -6273,9 +6604,9 @@ complement event node in the full dependency structure.
 
   - Negative imperatives
 
-  - Combination of (some) <span>Prt</span> lexical items with negation
+  - Combination of (some) <span>PrtAff</span> lexical items with negation
 
-`Neg` (full negative)
+`FullNeg` (full negative)
 
   - Negation: *not, never, no* + noun phrase
 
@@ -6332,7 +6663,7 @@ complement event node in the full dependency structure.
  		* Assess whether it is **coreferential** with, or a **subset/subevent** of, a previously mentioned event or object concept.
  		* If so, choose the relevant **coreference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) a **modal annotation**, except for purpose clauses, conditionals, and concessives (see [Part 4-3](#part-4-3-modal-dependency)).
- 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a _:modal_ relation with the space-building complement-taking predicate as the parent.
+ 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a _:modpred_ relation with the space-building complement-taking predicate as the parent.
  		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
  		* Give **all other events** a _:modstr_ annotation with the relevant strength.
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
@@ -6738,7 +7069,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Part-of* | Non-participant role relation | **3-2-2-2** |
 | Part-whole relations | Semantic category | **3-2-2-2** |
 | Passive | Valency-changing category | 3-2-1, **3-2-1-1-2** |
-| *Past_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *PAST_REF* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | *Path* | Non-participant role relation | **3-2-2-3** |
 | *Paucal* | Number semantic category, Number annotation value | 2-1, **3-3-5** |
 | *Perfective* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
