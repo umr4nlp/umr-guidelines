@@ -108,7 +108,6 @@ that focuses on **coreference**, **temporal** and **modal** relations. We illust
 
 Operationally, for both sentence-level and document-level annotation, we assume an annotation procedure in which a document is processed sentence by sentence. The sentence-level representation is annotated first, so that the document-level annotation can make reference to the concepts in the sentence-level representation.
 
-**<span id="toc" label="toc">Table of Contents</span>**
 <span id="1 (1)" label="1 (1)">[1 (1)]</span>
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
