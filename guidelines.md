@@ -3906,7 +3906,7 @@ Could you close the window?
 
 The `:condition` and `:concession` relations are alternative ways of annotating the `have-condition-91` and `have-concession-91` predicates - their use is detailed in [Part 4-3](#part-4-3-modal-dependency).
 
-Lastly, annotators have at their disposal an `:other` relation, as already mentioned in table 5 in [Part 3-2-1-1](#part-3-2-1-1-stage-1). If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this `:other` relation, linking it to the concept node that seems appropriate.
+Lastly, annotators have at their disposal an `:other` relation, as already mentioned in table 5 in [Part 3-2-1-1](#part-3-2-1-1-stage-0). If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this `:other` relation, linking it to the concept node that seems appropriate.
 
 [Back to Table of Contents](#toc)
 
