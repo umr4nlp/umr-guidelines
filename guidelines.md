@@ -2098,7 +2098,7 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
 
 ```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the `cause-01` predicate or the `:cause` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3-1-5](#part-4-3-1-5-cond-relation)).
+```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3-1-5](#part-4-3-1-5-condition-relation)).
 
 ```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
 
