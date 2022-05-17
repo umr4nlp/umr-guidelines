@@ -5546,7 +5546,7 @@ annotation of ([\[4-2-2-1 (1)\]](#4-2-2-1 (1))) below.
 <span id="4-2-2-1 (1)" label="4-2-2-1 (1)">\[4-2-2-1 (1)\]</span> 
 Key event: landslide\_KEY
 ```
-Lerias **said** that many Guinsaugon residents had been **evacuated** after **landslides** earlier in the week had **killed** more than 20 people on Leyte, but that many had **returned** Friday because the **rains** had stopped and the sun had **come out**.
+Lerias said that many Guinsaugon residents had been evacuated after landslides earlier in the week had killed more than 20 people on Leyte, but that many had returned Friday because the rains had stopped and the sun had come out.
 (s/ say-01
       :ARG0 (p/ person
       	    :wiki -
@@ -5752,9 +5752,8 @@ structure is shown below in [\[4-3 (1)\]](#4-3 (1)).
 
 ![Modal dependency structure](modal-dependency.png)
 
-Martin **said** that the package has probably already **arrived**.
-
 ```
+Martin said that the package has probably already arrived.
 (s/ say-01  
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Martin")
@@ -5893,7 +5892,7 @@ linguistic expression. These strength values are exemplified in
 
 <span id="4-3-1-1-1 (1a)" label="4-3-1-1-1 (1a)">\[4-3-1-1-1 (1a)\]</span>   
 ```
-The dog **barked** last night.
+The dog barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -5904,7 +5903,7 @@ The dog **barked** last night.
 ```
 <span id="4-3-1-1-1 (1b)" label="4-3-1-1-1 (1b)">\[4-3-1-1-1 (1b)\]</span>  
 ```
-The dog <u>probably</u> **barked** last night.
+The dog probably barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -5915,7 +5914,7 @@ The dog <u>probably</u> **barked** last night.
 ```
 <span id="4-3-1-1-1 (1c)" label="4-3-1-1-1 (1c)">\[4-3-1-1-1 (1c)\]</span>
 ```
-The dog <u>may</u> have **barked** last night.
+The dog may have barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -5926,7 +5925,7 @@ The dog <u>may</u> have **barked** last night.
 ```
 <span id="4-3-1-1-1 (1d)" label="4-3-1-1-1 (1d)">\[4-3-1-1-1 (1d)\]</span> 
 ```
-The dog <u>may not</u> have **barked** last night.
+The dog may not have barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -5937,7 +5936,7 @@ The dog <u>may not</u> have **barked** last night.
 ```
 <span id="4-3-1-1-1 (1e)" label="4-3-1-1-1 (1e)">\[4-3-1-1-1 (1e)\]</span>
 ```
-The dog <u>probably didn't</u> **bark** last night.
+The dog probably didn't bark last night.
 (b/ bark-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -5948,7 +5947,7 @@ The dog <u>probably didn't</u> **bark** last night.
 ``` 
 <span id="4-3-1-1-1 (1f)" label="4-3-1-1-1 (1f)">\[4-3-1-1-1 (1f)\]</span>
 ```   
-The dog <u>didn't</u> **bark** last night.
+The dog didn't bark last night.
 (b/ bark-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -5969,7 +5968,7 @@ Example [\[4-3-1-1-2 (1)\]](#4-3-1-1-2 (1)) shows how direct and indirect justif
 
 <span id="4-3-1-1-2 (1a)" label="4-3-1-1-2 (1a)">\[4-3-1-1-2 (1a)\]</span> 
 ```
-(I **saw**) Mary <span class="smallcaps">feed</span> the cat.
+(I saw) Mary feed the cat.
 (s/ see-01
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -5984,8 +5983,9 @@ Example [\[4-3-1-1-2 (1)\]](#4-3-1-1-2 (1)) shows how direct and indirect justif
 	:aspect State
 	:modstr FullAff)
 ```
-<span id="4-3-1-1-2 (1b)" label="4-3-1-1-2 (1b)">\[4-3-1-1-2 (1b)\]</span> Mary **must** have <span class="smallcaps">fed</span> the cat.
+<span id="4-3-1-1-2 (1b)" label="4-3-1-1-2 (1b)">\[4-3-1-1-2 (1b)\]</span> 
 ```
+Mary must have fed the cat.
 (f/ feed-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6017,7 +6017,7 @@ This is illustrated in ([\[4-3-1-1-3 (1)\]](#4-3-1-1-3 (1))).
 
 <span id="4-3-1-1-3 (1a)" label="4-3-1-1-3 (1a)">\[4-3-1-1-3 (1a)\]</span>  
 ```
-I <u>will</u> **go** to Santa Fe.
+I will go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
 		:ref-person 1st
@@ -6032,7 +6032,7 @@ I <u>will</u> **go** to Santa Fe.
 ```
 <span id="4-3-1-1-3 (1b)" label="4-3-1-1-3 (1b)">\[4-3-1-1-3 (1b)\]</span>   
 ```
-You <u>must</u> **go** to Santa Fe.
+You must go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
 		:ref-person 2nd
@@ -6049,7 +6049,7 @@ You <u>must</u> **go** to Santa Fe.
 
 <span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">\[4-3-1-1-3 (1c)\]</span>   
 ```
-You can **go** to Santa Fe.
+You can go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
 		:ref-person 2nd
@@ -6081,9 +6081,9 @@ relevant modal. This is shown below in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)).
 
 <span id="4-3-1-2 (1)" label="4-3-1-2 (1)">\[4-3-1-2 (1)\]</span>
 
-<span id="4-3-1-2 (1a)" label="4-3-1-2 (1a)">\[4-3-1-2 (1a)\]</span> Mary <u>**wants**</u> to
-**visit** France.
+<span id="4-3-1-2 (1a)" label="4-3-1-2 (1a)">\[4-3-1-2 (1a)\]</span> 
 ```
+Mary wants to visit France.
 (w/ want-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6104,9 +6104,9 @@ relevant modal. This is shown below in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)).
 		(s1p :FullAff s1w)
 		(s1w :Unsp s1v))
 ```
-<span id="4-3-1-2 (1b)" label="4-3-1-2 (1b)">\[4-3-1-2 (1b)\]</span> Rob <u>**thinks**</u>
-the dog **escaped** through the fence.
+<span id="4-3-1-2 (1b)" label="4-3-1-2 (1b)">\[4-3-1-2 (1b)\]</span> 
 ```
+Rob thinks the dog escaped through the fence.
 (t/ think-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Rob"))
@@ -6125,9 +6125,9 @@ the dog **escaped** through the fence.
 		(s1p :FullAff s1t)
 		(s1t :Unsp s1e)))
 ```
-<span id="4-3-1-2 (1c)" label="4-3-1-2 (1c)">\[4-3-1-2 (1c)\]</span> They <u>probably</u>
-<u>**decided**</u> to **leave** on Monday.
+<span id="4-3-1-2 (1c)" label="4-3-1-2 (1c)">\[4-3-1-2 (1c)\]</span> 
 ```
+They probably decided to leave on Monday.
 (d/ decide-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -6147,9 +6147,9 @@ the dog **escaped** through the fence.
 		(s1p :FullAff s1d)
 		(s1d :Unsp s1l)))
 ```
-<span id="4-3-1-2 (1d)" label="4-3-1-2 (1d)">\[4-3-1-2 (1d)\]</span> His parents
-<u>**forbid**</u> him from **smoking**.
+<span id="4-3-1-2 (1d)" label="4-3-1-2 (1d)">\[4-3-1-2 (1d)\]</span> 
 ```
+His parents forbid him from smoking.
 (f/ forbid-01
 	:ARG0 (p/ person
 		:ARG0-of (k/ kinship)
@@ -6192,7 +6192,7 @@ these events are also annotated with a
 
 <span id="4-3-1-3 (1)" label="4-3-1-3 (1)">\[4-3-1-3 (1)\]</span> 
 ```
-Mary <u>**said**</u> that she **went** to Santa Fe.
+Mary said that she went to Santa Fe.
 (s/ say-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6217,7 +6217,7 @@ Mary <u>**said**</u> that she **went** to Santa Fe.
 ```
 <span id="4-3-1-3 (1a)" label="4-3-1-3 (1a)">\[4-3-1-3 (1a)\]</span> 
 ```
-The New York Times <u>**reported**</u> that Congress **voted** on the bill this afternoon.
+The New York Times reported that Congress voted on the bill this afternoon.
 (r/ report-01
 	:ARG0 (n/ newspaper
 		:name (n2/ name
@@ -6246,10 +6246,9 @@ The New York Times <u>**reported**</u> that Congress **voted** on the bill this 
 		(AUTH :FullAff s1n)
 		(s1n :FullAff s1v)))
 ```
-<span id="4-3-1-3 (1b)" label="4-3-1-3 (1b)">\[4-3-1-3 (1b)\]</span> Mary <u>might</u>
-have <u>**said**</u> that she **went** to Santa Fe.
+<span id="4-3-1-3 (1b)" label="4-3-1-3 (1b)">\[4-3-1-3 (1b)\]</span> 
 ```
-Mary <u>**might**</u> have <u>**said**</u> that she **went** to Santa Fe.
+Mary might have said that she went to Santa Fe.
 (s/ say-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6274,7 +6273,7 @@ Mary <u>**might**</u> have <u>**said**</u> that she **went** to Santa Fe.
 ```
 <span id="4-3-1-3 (1c)" label="4-3-1-3 (1c)">\[4-3-1-3 (1c)\]</span> 
 ```
-Mary <u>didn’t</u> <u>**say**</u> that she **went** to Santa Fe.
+Mary didn’t say that she went to Santa Fe.
 (s/ say-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6299,7 +6298,7 @@ Mary <u>didn’t</u> <u>**say**</u> that she **went** to Santa Fe.
 ```
 <span id="4-3-1-3 (1d)" label="4-3-1-3 (1d)">\[4-3-1-3 (1d)\]</span> 
 ```
-Mary <u>**said**</u> that John <u>might</u> have **gone** to Santa Fe.
+Mary said that John might have gone to Santa Fe.
 (s/ say-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6325,7 +6324,7 @@ Mary <u>**said**</u> that John <u>might</u> have **gone** to Santa Fe.
 ```
 <span id="4-3-1-3 (1e)" label="4-3-1-3 (1e)">\[4-3-1-3 (1e)\]</span> 
 ```
-Mary <u>**said**</u> that John <u>probably didn’t</u> **go** to Santa Fe.
+Mary said that John probably didn’t go to Santa Fe.
 (s/ say-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -6368,10 +6367,9 @@ annotated with `Neut` modal strength.
 Events in purpose clauses are annotated with both a
 `:modstr` value in the document-level annotation, and with the `:purpose` participant role relation to the main clause event in the sentence-level annotation.
 
-
 <span id="4-3-1-4 (1)" label="4-3-1-4 (1)">\[4-3-1-4 (1)\]</span>
-They **dropped** water <u>in order to</u> **fight** the fire.
 ```
+They dropped water in order to fight the fire.
 (d/ drop-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -6394,7 +6392,7 @@ They **dropped** water <u>in order to</u> **fight** the fire.
 ```
 <span id="4-3-1-4 (2)" label="4-3-1-4 (2)">\[4-3-1-4 (2)\]</span>
 ```
-He **walked** quickly <u>in order to</u> not **arrive** late.
+He walked quickly in order to not arrive late.
 (w/ walk-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -6435,7 +6433,7 @@ apodosis.
 
 <span id="4-3-1-5 (1a)" label="4-3-1-5 (1a)">\[4-3-1-5 (1a)\]</span> 
 ```
-If she’s **hungry**, I’ll **feed** her dinner.
+If she’s hungry, I’ll feed her dinner.
 (f/ feed-01
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -6459,7 +6457,7 @@ If she’s **hungry**, I’ll **feed** her dinner.
 ```
 <span id="4-3-1-5 (1b)" label="4-3-1-5 (1b)">\[4-3-1-5 (1b)\]</span> 
 ```
-If she’s **hungry**, maybe I’ll **cook** pasta.
+If she’s hungry, maybe I’ll cook pasta.
 (c/ cook-01
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -6482,7 +6480,7 @@ If she’s **hungry**, maybe I’ll **cook** pasta.
 ```
 <span id="4-3-1-5 (1c)" label="4-3-1-5 (1c)">\[4-3-1-5 (1c)\]</span> 
 ```
-If she **isn’t hungry**, we’ll just **watch** a movie.
+If she isn’t hungry, we’ll just watch a movie.
 (w/ watch-01
 	:ARG0 (p/ person
 		:ref-person 1st
