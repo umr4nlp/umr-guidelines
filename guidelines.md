@@ -375,7 +375,7 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
   :coref(s7p :same-entity s8p)) 
 ```
 
-The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *Neutral* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
+The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *NeutAff* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
 
 <span id="1 (9)" label="1 (9)">\[1 (9)\]</span>
 ```
