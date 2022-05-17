@@ -81,7 +81,7 @@
     			* Part 4-3-1-1-1. [Non-future events](#part-4-3-1-1-1-non-future-events)
     			* Part 4-3-1-1-2. [Evidential justification](#part-4-3-1-1-2-evidential-justification)
     			* Part 4-3-1-1-3. [Future events and deontic modality](#part-4-3-1-1-3-future-events-and-deontic-modality)
-    		* Part 4-3-1-2. [mod relation](#part-4-3-1-2-mod-relation)
+    		* Part 4-3-1-2. [modpred relation](#part-4-3-1-2-modpred-relation)
     		* Part 4-3-1-3. [quot relation](#part-4-3-1-3-quot-relation)
     		* Part 4-3-1-4. [purpose relation](#part-4-3-1-4-purpose-relation)
     		* Part 4-3-1-5. [condition relation](#part-4-3-1-5-condition-relation)
@@ -623,6 +623,7 @@ I heard about his travels.
 	:aspect State
 	:modstr FullAff)
 ```
+[Back to Table of Contents](#toc)
 
 #### Part 2-2-2: Multi-word expressions.
 
@@ -655,6 +656,7 @@ apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 	:aspect Performance
 	:modstr FullAff)
 ```
+[Back to Table of Contents](#toc)
 
 #### Part 2-2-3: Abstract concepts.
 
@@ -766,6 +768,7 @@ apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=a
 	:aspect Performance
 	:modstr NeutAff)
 ```
+[Back to Table of Contents](#toc)
 
 #### Part 2-2-4: Non-participant role relations.
 
@@ -795,6 +798,8 @@ However, UMR maintains the `:duration` and `:frequency` relations so that
 annotators can use them to indicate more fine-grained aspectual
 information beyond the aspect categories offered in the corresponding
 attribute, as in [\[2-2-3 (2b)\]](#2-2-3 (2b)). UMR also adds a new non-participant role relation: the `:other` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
+
+[Back to Table of Contents](#toc)
 
 #### Part 2-2-5: Attributes.
 
@@ -903,6 +908,8 @@ either the semantic type of the prototype (process) or the prototypical
 information packaging (predication). The categories which are identified
 as events in UMR are shown in bold in Table 2.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 3-1-1-1. Processes in predication
 
 Predicated processes are the most prototypical subcategory of events,
@@ -923,6 +930,8 @@ Regardless of whether they are in an independent clause, like *repaired*
 in [\[3-1-1-1 (1a)\]](#3-1-1-1 (1a)), or a dependent clause, like *went* in
 [\[3-1-1-1 (1b)\]](#3-1-1-1 (1b)), predicated processes are always
 identified as events.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-1-1-2. Processes in modification and reference
 
@@ -1251,6 +1260,8 @@ Table 5: Named entity types
 </div>
 -->
 
+[Back to Table of Contents](#toc)
+
  #### Part 3-1-3. Concept-word mismatches
  
 Cross-linguistically, concepts are not always mapped onto words in the
@@ -1266,6 +1277,8 @@ involved and how they behave across languages. This section provides
 guidance on the annotation of predicates and arguments in five different
 types of constructions where the mapping between words and concepts is
 not straightforward.
+
+[Back to Table of Contents](#toc)
 
  ##### Part 3-1-3-1. Predicate and argument as one word
 
@@ -3566,6 +3579,8 @@ I met the President of the University of New Mexico.
   
 Apart from predicate-specific and general participant roles, UMR also has a set of relations that are mainly used to mark NP-internal relations, to mark some types of modifiers of predicates, and to make the meanings of certain natural language expressions computationally tractable. Most of those relations are inherited from AMR, but for some of them, there are some changes in their use.
 
+[Back to Table of Contents](#toc)
+
   ##### Part 3-2-2-1. Temporal relations
 
 Some relations are used to describe entities in a standard, canonical form. This is the case for ```:calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year,``` and ```:year2```. The use of these relations is exemplified in [\[3-2-2-1 (1)\]](#3-2-2-1 (1)).
@@ -3594,6 +3609,7 @@ Friday the 13th
 	:time 15:30
 	:timezone (z/ MST))
 ```
+[Back to Table of Contents](#toc)
 
   ##### Part 3-2-2-2. Modifiers
 
@@ -3663,6 +3679,8 @@ a French song
 		:wiki "French_language"
 		:name (n/ name :op1 "French")))
 ```
+
+[Back to Table of Contents](#toc)
 
 ##### Part 3-2-2-3. Circumstantial temporals and locatives
 
@@ -3748,6 +3766,8 @@ I visit New York City every December.
 	:modstr FullAff)
 ```
 
+[Back to Table of Contents](#toc)
+
   ##### Part 3-2-2-4. Named entities
 
 The relations `:name`, `:wiki`, and `:opX` are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a `:name` relation, whose daughter is an `(n/ name)` node. This node then has as many numbered `:opX` relations as the number of words this name consists of, each of which takes one of these words as their daughter. In [\[3-2-2-3 (1e)\]](#3-2-2-3 (1e)) above, for example, the `(n/ name)` concept corresponding to *New York City* takes an `:op1`, `:op1`, and `:op3` relation, one for each orthographic word. Named entities can also take a `:wiki` relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered `:opX` relations are also used as the daughters of various abstract concepts used for expressing relations between clauses or phrases (e.g. coordination), as in [\[3-2-2-4 (1)\]](#3-2-2-4 (1)).
@@ -3767,6 +3787,8 @@ I saw a spider and a snake.
 	:aspect State
 	:modstr FullAff)
 ```
+
+[Back to Table of Contents](#toc)
 
   ##### Part 3-2-2-5. Quantification
 
@@ -3849,6 +3871,8 @@ Three cups of milk
 	:quant 6.5
 	:scale (r/ richter))
 ```
+
+[Back to Table of Contents](#toc)
 
   ##### Part 3-2-2-6. Other relations
 
@@ -4957,6 +4981,8 @@ Lexicon: Very - Intensifier
 
 Anaphoric expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphoric expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
 
+[Back to Table of Contents](#toc)
+
 #### Part 4-1-1. Entity coreference
 
 For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1-1 (1)\]](#4-1-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s2p` node.
@@ -5322,12 +5348,13 @@ In addition to temporal relations at the sentence level, we also annotate tempor
 The document-level temporal relations focus on event-event and time-time relations. Time-time relations are annotated when 
 a relative time depends on another time expression for its interpretation.
 
-
 Event-event relations are annotated only when the temporal relations are clearly supported by morpho-syntactic clues or when there is a clear temporal sequence can be inferred. 
 
 The temporal dependency is divided into two passes: the first pass involves setting up the temporal
 superstructure – the top levels of the dependency structure - and the second
 pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined metanodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
+
+[Back to Table of Contents](#toc)
 
 #### Part 4-2-1. Temporal superstructure
 
@@ -5336,6 +5363,8 @@ dependency is always a single `ROOT` node. The temporal
 superstructure consists of two types of nodes: time expressions and
 pre-defined metanodes. `depends-on` is the
 relation that is used to link all nodes in the superstructure.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
@@ -5350,6 +5379,8 @@ determined when events are annotated in the next pass. As mentioned
 above, there is a generic `:depends-on` relation between all nodes
 in the temporal superstructure; this is shown in Figure
 [\[tempsuper\]](#tempsuper).
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-2. Time expressions
 
@@ -5428,6 +5459,8 @@ interpretation (as in *the week before*). Finally, absolute concrete
 time expressions (*in 2019*) are represented as children of
 `ROOT`.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 4-2-1-3. Key events
 
 For news stories only, the temporal superstructure includes the “key
@@ -5436,6 +5469,8 @@ news story is centered. It is often mentioned in the title or first
 sentence of the news story and referred to many times in the text. The
 key event should be added to the superstructure, with a relation to the
 timex which most specifically locates it in time.
+
+[Back to Table of Contents](#toc)
 
 #### Part 4-2-2. Temporal relations
 
@@ -5666,6 +5701,8 @@ below.
 | rain      | Pos(rain,say)      | (return :before rain)              |
 | come-out  | Pos(come-out,say)  | (rain :overlap come-out)           |
 
+[Back to Table of Contents](#toc)
+
 ##### Part 4-2-2-2. Contained or Overlap
 
 Following the definition of the `:contained` and the
@@ -5677,6 +5714,8 @@ where both the beginning and ending of one event are included within the
 temporal duration of a second event - this includes subevent structure
 and also events which have a purely temporal (and not causal or
 conceptual) relation between them.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-2-2-3. Causally-related events
 
@@ -5690,6 +5729,8 @@ as `:after` the causing event, and the caused event is
 annotated as following it. Therefore, *the opening of the food can
 prompted my cat to meow* is annotated as `(open :after prompt)`
 and `(prompt :after meow)`.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-2-2-4. Deontic modal events
 
@@ -5856,6 +5897,8 @@ explained in [Part 4-3-1-1-3](#part-4-3-1-1-3-future-events-and-deontic-modality
 the value - as epistemic, evidential or deontic - is not reflected in
 the modal strength annotation.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 4-3-1-1-1. Non-future events
 
 For non-future (non-deontic) events, the `modstr` values correspond to the author’s level of certainty towards the occurrence of the event in the real world. Events presented as fact are annotated with
@@ -5936,6 +5979,7 @@ The dog <u>didn't</u> **bark** last night.
 	:aspect Endeavor
 	:modstr FullNeg)  
 ```  
+[Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-1-2. Evidential justification
 
@@ -5974,6 +6018,8 @@ Example [\[4-3-1-1-2 (1)\]](#4-3-1-1-2 (1)) shows how direct and indirect justif
 ```
 
 In [\[4-3-1-1-2 (1a)\]](#4-3-1-1-2 (1a)), the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)), however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)) is annotated with `Prt` modal strength.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-1-3. Future events and deontic modality
 
@@ -6047,7 +6093,9 @@ future, but more likely to happen than the neutral strength deontics.
 Finally, permission, as in [\[4-3-1-1-3 (1c)\]](#4-3-1-1-3 (1c)), is annotated as
 neutral strength, since even if someone has permission to do something, there is no guarantee they will.
 
-##### Part 4-3-1-2. :modpred relation
+[Back to Table of Contents](#toc)
+
+##### Part 4-3-1-2. modpred relation
 
 Events under the scope of a modal identified as its own event are only
 annotated with a `:modpred` relation to the
@@ -6151,6 +6199,8 @@ Note that the modal itself is annotated with a
 `:modstr` value (if it is not under the
 scope of another modal). The actual modal value imparted by the modal
 event is not annotated at Stage 0. It will be taken up in the lexical entries of modal complement-taking predicates and space-builders as the lexicon is being built, and will then automatically replace the unspecified link between the modal event and the modalized event in the document-level structure.
+
+[Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-3. quot relation
 
@@ -6394,6 +6444,8 @@ doesn’t capture the fact that the purpose clause itself imparts a
 non-full epistemic stance on its events; that is captured by the
 `:purpose` relation.
 
+[Back to Table of Contents](#toc)
+
 ##### Part 4-3-1-5. condition relation
 
 The `:condition` relation in the sentence-level annotation indicates the relationship between events in conditional constructions. These events
@@ -6536,6 +6588,8 @@ or *wish*. These are annotated with the
 `PrtNeg`, and
 `FullNeg` values, respectively.
 
+[Back to Table of Contents](#toc)
+
 #### Part 4-3-2. English modals
 
 This list gives the modal strength value associated with common English
@@ -6617,6 +6671,8 @@ complement event node in the full dependency structure.
   - Counterfactuals
 
   - Wishes: *wish*
+
+[Back to Table of Contents](#toc)
   
  ## Part 5. Annotation Cheat Sheet
  
@@ -6667,6 +6723,8 @@ complement event node in the full dependency structure.
  		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
  		* Give **all other events** a _:modstr_ annotation with the relevant strength.
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
+
+[Back to Table of Contents](#toc)
 
  ## Part 6: Integrated examples
 
@@ -7199,3 +7257,5 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Yabem | Language | 3-2-1-1-1 |
 | *Year* | Temporal annotation relation | 2-2-4, **3-2-2-1** |
 | *Year2* | Temporal annotation relation | **3-2-2-1** |
+
+[Back to Table of Contents](#toc)
