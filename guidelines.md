@@ -463,7 +463,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 **UMR modal values:** UMR currently has three modal relations that are annotated at the sentence level, even though the final modal dependency structure functions at the document level:
 
 * Modstr: Indicates the epistemic strength relation (degree of confidence/certainty) between a conceiver and an event or between a conceiver and an embedded conceiver.
-* Modal: Indicates the relation between a modal complement-taking predicate and its complement
+* Modpred: Indicates the relation between a modal complement-taking predicate and its complement
 * Quot: Indicates the relation between a speech predicate and its complement
 
 **Differences between AMR and UMR**
@@ -810,7 +810,7 @@ closed, pre-defined list of values to a concept node: for example, the
 of a predicate node.
 
 Attributes inherited from AMR are `:polarity`, `:mode`,
-`:quant`, and `:value` ([Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3](#part-3-3-UMR-attributes). The use
+`:quant`, and `:value` ([Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3](#part-3-3-UMR-attributes)). The use
 of the `:quant` relation was changed in that a more fine-grained
 annotation scheme for quantification is now available (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-3-4](#part-3-3-4-quant)). The `:quant` relation is mainly what annotators with
 less training or for languages with less available linguistic analysis
@@ -2009,7 +2009,7 @@ Grab a stick or he will he attack you!
 
 ```Additive```: expresses the addition of one “figure” (foregrounded participant or event) to another one in order to form a complex figure. This is represented in UMR through an ```additive``` abstract concept with numbered ```:opX``` roles. The additive function has a number of more fine-grained subfunctions:
 
-```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level using the ```:temporal``` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level through the :overlap temporal relation (see [Part 4-2-1](#part-4-2-1-temporal-relations)).
+```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level using the ```:temporal``` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level through the :overlap temporal relation (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
 
 ```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In [\[3-1-6 (4b)\]](#3-1-6 (4b)), having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary. UMR uses a ```:pure-addition``` relation to connect two events semantically related in this way.
 
