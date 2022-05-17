@@ -3512,7 +3512,7 @@ The runner was wearing a sweater.
 	:modstr FullAff)
 ```
 
-UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:actor-of` and `:undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-1)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
+UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:actor-of` and `:undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-0)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
 
 <span id="3-2-1-3 (2)" label="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
 
