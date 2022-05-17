@@ -608,7 +608,6 @@ content in different parts of speech.
 <span id="2-2-1 (2)" label="2-2-1 (2)">\[2-2-1 (2)\]</span>
 ```
 I heard about his travels.
-
 (h/ hear-01
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -648,7 +647,6 @@ specifically in section [Part 3-1-3-6](#part-3-1-3-6-multi-word-concepts).
 apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 2/3M-DSTR-be.just-CAUS-PAS-DECL	across	child<PL>
 'The children were rescued.'
-
 (e/ elvongkeskama-tayep-00 'rescue'
 	:Undergoer (a/ ayko'ok 'child'
 		:ref-number Plural)
@@ -680,7 +678,6 @@ information on such "non-verbal clauses").
 an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 2/3F-exist-DECL		1SG:PRO	cow-old		1SG-POS
 'I have a book.' lit. 'My book exists.'
-
 (h/ have-03
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -705,7 +702,6 @@ illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a))-[\[2-2-3 (2b)\]](#2-2-3 (2b))), and
 cinco,	seis	meses	apk-ehl-ta'mehl-kes-kam-a
 five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 'They would preserve it for five or six months.'
-
 (e/ enta'mehlkeskama-00 'preserve'
 	:actor (p/ person
 		:ref-person 3rd
@@ -726,7 +722,6 @@ five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 escuela	agrícola	seis	millón	cada	año	on-yanmong-kes-ek
 school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 'For the agricultural school, we would pay six million (guaranies) per year.'
-
 (e/ enyanmongkeskama-00 'pay'
 	:actor (p/ person
 		:ref-person 1st
@@ -752,7 +747,6 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=anehla
 2/3M-DSTR-arrive-TI-DUPL-NOM	Venancio	1PL-live-TI-NOM.LOC	thousand	nine-hundred	sixty	and	six=DUB
 'Venancio and his companions arrived where we lived in ninteen sixty-six, maybe.'
-
 (e/ elvay'a-00 'arrive'
 	:actor (p/ person
 		:name (n/ name :op1 "Venancio")
@@ -835,7 +829,6 @@ document-level modal annotation, these will not be annotated as negated.
 <span id="2-2-5 (1)" label="2-2-5 (1)">\[2-2-5 (1)\]</span>
 ```
 Three bottles of water
-
 (w/ water
 	:quant 3
 	:unit (b/ bottle))
@@ -1176,7 +1169,7 @@ general event possible should be identified.
 Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a `nationality` entity and a `person` entity. 
 
 <span id="3-1-2 (1)" label="3-1-2 (1)">\[3-1-2 (1)\]</span> Edmond Pope is an American businessman.
-```                    
+```
 (h/ have-role-91
       :ARG0 (p/ person :wiki "Edmond_Pope"
             :name (n/ name :op1 "Edmund" :op2 "Pope"))
@@ -1184,8 +1177,7 @@ Following AMR, each named entity in a text is annotated with a type. However, th
       	    :mod (n2/ nationality :wiki "United_States"
 	          :name (n3/ name :op1 "America")))
       :aspect State
-      :modstr FullAff)
-                 
+      :modstr FullAff)         
 ```        
 The total set of entity types are hierarchically organized, as listed in Table 5 below.
 
@@ -1299,7 +1291,6 @@ theme, and instrument arguments of this state of affairs.
 nih-teb-e'ei-s-o'
 PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 'I cut his head off with a knife.'
-
 (t/ teb-e'ei-s ‘break/remove.stick.like’
     :actor (p/ person
     	:ref-person 1st
@@ -1309,7 +1300,8 @@ PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 	:ref-number Singular)
     :theme (t2/ thing
     	:ref-person Obviative)
-    :aspect Performance)
+    :aspect Performance
+    :modstr FullAff)
 ```
 
 When languages use verbal affixes to index arguments, these arguments
@@ -1390,9 +1382,7 @@ by the verb root.
 
 <span id="3-1-3-2 (1)" label="3-1-3-2 (1)">\[3-1-3-2 (1)\]</span> 
 
-<span id="3-1-3-2 (1a)" label="3-1-3-2 (1a)">\[3-1-3-2 (1a)\]</span>
-
-Grandmother made the kid drink the water.
+<span id="3-1-3-2 (1a)" label="3-1-3-2 (1a)">\[3-1-3-2 (1a)\]</span> Grandmother made the kid drink the water.
 ```
 (d/ drink
     :cause (m/ make
@@ -1407,12 +1397,8 @@ Grandmother made the kid drink the water.
     :undergoer (w/ water)
     :aspect Performance
     :modstr FullAff)
-
 ```
-<span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span>
-
-Grandmother did not make the kid drink the water.
-
+<span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span> Grandmother did not make the kid drink the water.
 ```
 (d/ drink
     :cause (m/ make
@@ -1427,12 +1413,9 @@ Grandmother did not make the kid drink the water.
     :undergoer (w/ water)
     :aspect Performance
     :modstr NeutAff)
-
 ```
 
-<span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span>
-
-Grandmother made the kid not drink the water.
+<span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span> Grandmother made the kid not drink the water.
 ```
 (d/ drink
     :cause (m/ make
@@ -1447,7 +1430,6 @@ Grandmother made the kid not drink the water.
     :undergoer (w/ water)
     :aspect Performance
     :modstr FullNeg)
-
 ```
 
 Kukama (Tupían), on the other hand, has a morphological causative, as in
@@ -1463,7 +1445,6 @@ single event. Therefore, only a single predicate is identified
 nai		kurata-ta	churan=ui	uni-pu
 grandmother	drink-CAUS	kid=PST		water-INST
 'Grandmother made the kid drink the water.'
-
 (k/ kuratata 'make drink'
     :causer (p/ person
     	:ARG0-of (k2/ kinship-91
@@ -1519,7 +1500,6 @@ predication, in this case).
 ce	əsi	mu-re
 paper	this	black-change
 'This paper has become black.'
-
 (h/ have-mod-91					(h/ have-mod-91
     :ARG1 (c/ ce 'paper')			    :ARG1 (p/ paper)
     	:mod (s/ əsi 'this')			        :mod (t/ this)
@@ -1610,7 +1590,6 @@ argument structure, and only one event is identified for UMR annotation.
 en-na'-ten-ek-ant-a'		La	Esperanza
 1PL-DSTR-sleep-TI-VNT-NOM	La	Esperanza
 'We slept in La Esperanza while coming here'
-
 (e/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
     :undergoer (p/ person				    :ARG0 (p/ person
     	:ref-person 1st						:ref-person 1st
@@ -5882,12 +5861,12 @@ annotation combines the epistemic strength values with a binary polarity distinc
 
 These values and their interpretation are shown below; the corresponding FactBank values are in parentheses.
 
-```Aff```: full affirmative support; complete certainty that the event occurs (CT+)  
-```Prt```: partial affirmative support; there is strong, but not definitive certainty that the event occurs (PR+)  
-```Neut```: affirmative neutral support; there is neutral certainty that the event occurs/doesn’t occur; event is expressed positively (PS+)  
+```FullAff```: full affirmative support; complete certainty that the event occurs (CT+)  
+```PrtAff```: partial affirmative support; there is strong, but not definitive certainty that the event occurs (PR+)  
+```NeutAff```: affirmative neutral support; there is neutral certainty that the event occurs/doesn’t occur; event is expressed positively (PS+)  
 ```NeutNeg```: negative neutral support; there is neutral certainty that the event occurs/doesn’t occur; negation of event is expressed (PS-)  
 ```PrtNeg```: partial negative support; there is strong but not definitive certainty that the event does not occur (PR-)  
-```Neg```: full negative support; complete certainty that the event does not occur (CT-)
+```FullNeg```: full negative support; complete certainty that the event does not occur (CT-)
 
 Degree of certainty corresponds most straightforwardly to the degree of confidence of a conceiver (often, the author) in the occurrence of an episodic event, i.e. the epistemic continuum from certainty to
 possibility. We use these same values for the evidential continuum from direct evidence to second-hand (reported or inferred) evidence; see [Part 4-3-1-1-2](#part-4-3-1-1-2-evidential-justification) below). And these values are
@@ -6687,8 +6666,8 @@ complement event node in the full dependency structure.
  		* Select the correct **role/relation**:
  			* If the top node is an **abstract concept predicate**, use **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
  			* If the top node is a **sense-disambiguated lexicalized concept** with frame files, use the relevant **numbered argument roles** (see [Part 3-1-4](#part-3-1-4-word-senses)).
- 			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** ([Part 3-2-1-1](#part-3-2-1-1-stage-1)).
- 			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (see [Part 3-2-1-1](#part-3-2-1-1-stage-1)).
+ 			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** ([Part 3-2-1-1](#part-3-2-1-1-stage-0)).
+ 			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
  		* Select the correct **concept** (see [Part 3-1-3](#part-3-1-3-concept-word-mismatches) for identification of participants expressed as part of the same word of the event):
  			* If the participant is overtly expressed as a **nominal**, add the **nominal word from the sentence** to the graph.
  			* If the participant is overtly expressed as a **verb** (e.g. complement clause, adverbial), add the **verbal word from the sentence** to the graph.
