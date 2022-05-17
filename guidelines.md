@@ -5546,7 +5546,7 @@ annotation of ([\[4-2-2-1 (1)\]](#4-2-2-1 (1))) below.
 <span id="4-2-2-1 (1)" label="4-2-2-1 (1)">\[4-2-2-1 (1)\]</span> 
 Key event: landslide\_KEY
 ```
-Lerias **said** that many Guinsaugon residents had been **evacuated** after **landslides** earlier in the week had **killed** more than 20 people on Leyte, but that many had **returned** Friday because the **rains** had **stopped** and the sun had **come out**.
+Lerias **said** that many Guinsaugon residents had been **evacuated** after **landslides** earlier in the week had **killed** more than 20 people on Leyte, but that many had **returned** Friday because the **rains** had stopped and the sun had **come out**.
 (s/ say-01
       :ARG0 (p/ person
       	    :wiki -
