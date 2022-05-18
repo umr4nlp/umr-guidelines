@@ -41,7 +41,8 @@
       		* Part 3-2-1-1-2. [Valency alternations](#part-3-2-1-1-2-valency-alternations)
       	* Part 3-2-1-2. [Stage 1](#part-3-2-1-2-stage-1)
       		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
-      	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)   
+      	* Part 3-2-1-3. [Inverse participant roles](#part-3-2-1-3-inverse-participant-roles)
+      	* Part 3-2-1-4. [Table of verb meanings] (#part-3-2-1-4-Table-of-verb-meanings)
       * Part 3-2-2. [Non-participant role UMR relations](#part-3-2-2-Non-participant-role-UMR-relations)
       	* Part 3-2-2-1. [Temporal relations](#part-3-2-2-1-temporal-relations)
      	* Part 3-2-2-2. [Modifiers](#part-3-2-2-2-modifiers)
@@ -3561,8 +3562,8 @@ Table X below contains the general participant role annotation for the microrole
 
 
 | **Verb Meaning** | **Microrole** | **UMR annotation** |
-| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
-|Active (A-like) S
+| :--------------------- | :--------------- | :-------- | 
+|Active (A-like) S | | |
 | BLINK | blinker | <span class="smallcaps">`actor`</span> |
 | COUGH | cougher | <span class="smallcaps">`actor`</span> |
 | CLIMB | climber | <span class="smallcaps">`actor`</span> |
@@ -3584,7 +3585,7 @@ Table X below contains the general participant role annotation for the microrole
 | SING | singer | <span class="smallcaps">`actor`</span> |
 | ROLL | roller | <span class="smallcaps">`actor`</span> |
 | DIG | digger | <span class="smallcaps">`actor`</span> |
-| Inactive (P-like) S 
+| Inactive (P-like) S  | | |
 | DIE | dieer | <span class="smallcaps">`undergoer`</span> |
 | BE SAD | sad person | <span class="smallcaps">`undergoer`</span> |
 | BE HUNGRY | hungry person | <span class="smallcaps">`undergoer`</span>|
@@ -3596,7 +3597,7 @@ Table X below contains the general participant role annotation for the microrole
 | CRY | crier | <span class="smallcaps">`undergoer`</span> |
 | FALL | fallee | <span class="smallcaps">`undergoer`</span> |
 | RAIN | rain | <span class="smallcaps">`undergoer`</span> |
-| Reflexive/Reciprocal
+| Reflexive/Reciprocal | | |
 | DRESS | dresser | <span class="smallcaps">`actor`</span> |
 |		| dressee | <span class="smallcaps">`undergoer`</span> |
 | SHAVE (a body part) | shaver (of body part) | <span class="smallcaps">`actor`</span> |
@@ -3609,7 +3610,7 @@ Table X below contains the general participant role annotation for the microrole
 |		| met person | <span class="smallcaps">`undergoer`</span> |
 | HUG | hugger | <span class="smallcaps">`actor`</span> |
 |	| huggee  | <span class="smallcaps">`undergoer`</span> |
-| Change-of-State
+| Change-of-State | | |
 | EAT | eater | <span class="smallcaps">`actor`</span> |
 |		| eaten food | <span class="smallcaps">`undergoer`</span> |
 | WASH | washer | <span class="smallcaps">`actor`</span> |
@@ -3632,7 +3633,7 @@ Table X below contains the general participant role annotation for the microrole
 |		| cooked food | <span class="smallcaps">`undergoer`</span> |
 | DRINK | drinking person | <span class="smallcaps">`actor`</span> |
 |		| drunked thing | <span class="smallcaps">`undergoer`</span> |
-| Contact 
+| Contact | | |
 | HIT | hitter | <span class="smallcaps">`actor`</span> |
 |	| hittee | <span class="smallcaps">`undergoer`</span> |
 |	| hitting <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
@@ -3641,7 +3642,7 @@ Table X below contains the general participant role annotation for the microrole
 |	| touching <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
 | PUSH | pusher | <span class="smallcaps">`actor`</span> |
 |	| pushee | <span class="smallcaps">`undergoer`</span> |
-| Experiential
+| Experiential | | |
 | LOOK AT | looker | <span class="smallcaps">`experiencer`</span> |
 |		| looked at entity | <span class="smallcaps">`stimulus`</span> |
 | SEE | seeer | <span class="smallcaps">`experiencer`</span> |
@@ -3665,7 +3666,7 @@ Table X below contains the general participant role annotation for the microrole
 | APPEAR | appearer | <span class="smallcaps">`stimulus`</span> |
 | WANT | wanter | <span class="smallcaps">`experiencer`</span> |
 |	| wanted thing | <span class="smallcaps">`stimulus`</span> |
-| Partly-unrealized 
+| Partly-unrealized | | |
 | SEARCH FOR | searcher | <span class="smallcaps">`actor`</span> |
 |			| searched thing | <span class="smallcaps">`undergoer`</span> |
 | HUNT (FOR) | hunter | <span class="smallcaps">`actor`</span> |
@@ -3689,7 +3690,7 @@ Table X below contains the general participant role annotation for the microrole
 | FILL | filler | <span class="smallcaps">`actor`</span> |
 |		| filling material | <span class="smallcaps">`instrument`</span> |
 |		| filled container | <span class="smallcaps">`undergoer`</span> |
-| Removal
+| Removal | | |
 | TAKE | taker | <span class="smallcaps">`actor`</span> |
 |		| taken thing | <span class="smallcaps">`theme`</span>  |
 |		| taking source | <span class="smallcaps">`source`</span> |
@@ -3706,7 +3707,7 @@ Table X below contains the general participant role annotation for the microrole
 |			| wiped surface | <span class="smallcaps">`undergoer`</span> |
 | PEEL_cos | peeler | <span class="smallcaps">`actor`</span> |
 |			| peeled object | <span class="smallcaps">`undergoer`</span> |
-| Creation
+| Creation | | |
 | BUILD | builder | <span class="smallcaps">`actor`</span> |
 |		| built thing | <span class="smallcaps">`undergoer`</span> |
 |		| building material | <span class="smallcaps">`instrument`</span> |
@@ -3733,7 +3734,7 @@ Table X below contains the general participant role annotation for the microrole
 |		| stealing source | <span class="smallcaps">`affectee`</span> |
 | GET | receiver | <span class="smallcaps">`recipient`</span> |
 |		| received thing | <span class="smallcaps">`theme`</span> |
-| Communication
+| Communication | | |
 | TALK | talker | <span class="smallcaps">`actor`</span> |
 |		| talked about content | <span class="smallcaps">`theme`</span>  |
 |		| talked to person | <span class="smallcaps">`recipient`</span> |
