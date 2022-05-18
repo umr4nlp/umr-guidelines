@@ -3553,6 +3553,220 @@ I met the President of the University of New Mexico.
 ```
 [Back to Table of Contents](#toc)
 
+##### Part 3-2-1-4. Table of verb meanings
+
+Table X below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a ``motion'' sense (ex: She wiped the crumbs from the table) and a ``cos'' or change-of-state sense (ex: He wiped the table). Annotators may use Table X as a reference point for annotating general participant roles for various semantic classes of verbs.
+
+<div id="tab:predicateroles">
+
+
+| **Verb Meaning** | **Microrole** | **UMR annotation** |
+| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
+|Active (A-like) S
+| BLINK | blinker | <span class="smallcaps">`actor`</span> |
+| COUGH | cougher | <span class="smallcaps">`actor`</span> |
+| CLIMB | climber | <span class="smallcaps">`actor`</span> |
+| 		| climbing <span class="smallcaps">`goal`</span> | <span class="smallcaps">`undergoer`</span> |
+| RUN	| runner | <span class="smallcaps">`actor`</span> |
+| SIT | sitter | <span class="smallcaps">`actor`</span> |
+|		| sitting <span class="smallcaps">`place`</span>  | <span class="smallcaps">`place`</span>  |
+| SIT DOWN | sit downer | <span class="smallcaps">`actor`</span> |
+|		| sitting-down <span class="smallcaps">`place`</span>  | <span class="smallcaps">`goal`</span> |
+| JUMP | jumper | <span class="smallcaps">`actor`</span> |
+| GO | goer | <span class="smallcaps">`actor`</span> |
+|	| going <span class="smallcaps">`goal`</span> | <span class="smallcaps">`goal`</span> |
+| LEAVE | leaver | <span class="smallcaps">`actor`</span> |
+|		| left <span class="smallcaps">`place`</span> /person | <span class="smallcaps">`source`</span> |
+| LIVE | liver | <span class="smallcaps">`actor`</span> |
+|	| living <span class="smallcaps">`place`</span>  | <span class="smallcaps">`place`</span>  |
+| LAUGH | laugher | <span class="smallcaps">`actor`</span> |
+| PLAY | player | <span class="smallcaps">`actor`</span> |
+| SING | singer | <span class="smallcaps">`actor`</span> |
+| ROLL | roller | <span class="smallcaps">`actor`</span> |
+| DIG | digger | <span class="smallcaps">`actor`</span> |
+| Inactive (P-like) S 
+| DIE | dieer | <span class="smallcaps">`undergoer`</span> |
+| BE SAD | sad person | <span class="smallcaps">`undergoer`</span> |
+| BE HUNGRY | hungry person | <span class="smallcaps">`undergoer`</span>|
+| SINK | sunken entity | <span class="smallcaps">`undergoer`</span> |
+| BURN | burnt thing | <span class="smallcaps">`undergoer`</span> |
+| BE DRY | dry thing | <span class="smallcaps">`undergoer`</span> |
+| BOIL | boiled thing | <span class="smallcaps">`undergoer`</span> |
+| BE ILL | sick person | <span class="smallcaps">`undergoer`</span> |
+| CRY | crier | <span class="smallcaps">`undergoer`</span> |
+| FALL | fallee | <span class="smallcaps">`undergoer`</span> |
+| RAIN | rain | <span class="smallcaps">`undergoer`</span> |
+| Reflexive/Reciprocal
+| DRESS | dresser | <span class="smallcaps">`actor`</span> |
+|		| dressee | <span class="smallcaps">`undergoer`</span> |
+| SHAVE (a body part) | shaver (of body part) | <span class="smallcaps">`actor`</span> |
+|	| shaved body part | <span class="smallcaps">`undergoer`</span> |
+| HELP | helper | <span class="smallcaps">`actor`</span> |
+|		| helpee | <span class="smallcaps">`undergoer`</span> |
+| FOLLOW | follower | <span class="smallcaps">`actor`</span> |
+|		| followee | <span class="smallcaps">`undergoer`</span> |
+| MEET | meeter | <span class="smallcaps">`actor`</span> |
+|		| met person | <span class="smallcaps">`undergoer`</span> |
+| HUG | hugger | <span class="smallcaps">`actor`</span> |
+|	| huggee  | <span class="smallcaps">`undergoer`</span> |
+| Change-of-State
+| EAT | eater | <span class="smallcaps">`actor`</span> |
+|		| eaten food | <span class="smallcaps">`undergoer`</span> |
+| WASH | washer | <span class="smallcaps">`actor`</span> |
+|		| washed entity | <span class="smallcaps">`undergoer`</span> |
+| BREAK | breaker | <span class="smallcaps">`actor`</span> |
+|		| broken thing | <span class="smallcaps">`undergoer`</span> |
+|		| breaking <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
+| KILL | killer | <span class="smallcaps">`actor`</span> |
+|		| killee | <span class="smallcaps">`undergoer`</span> |
+|		| killing <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
+| BEAT | beater | <span class="smallcaps">`actor`</span> |
+|		| beatee | <span class="smallcaps">`undergoer`</span> |
+|		| beating <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
+| CUT | cutter | <span class="smallcaps">`actor`</span> |
+|		| cut thing | <span class="smallcaps">`undergoer`</span> |
+|		| cutting <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
+| GRIND | grinder | <span class="smallcaps">`actor`</span> |
+|		| ground thing | <span class="smallcaps">`undergoer`</span> |
+| COOK | cooker | <span class="smallcaps">`actor`</span> |
+|		| cooked food | <span class="smallcaps">`undergoer`</span> |
+| DRINK | drinking person | <span class="smallcaps">`actor`</span> |
+|		| drunked thing | <span class="smallcaps">`undergoer`</span> |
+| Contact 
+| HIT | hitter | <span class="smallcaps">`actor`</span> |
+|	| hittee | <span class="smallcaps">`undergoer`</span> |
+|	| hitting <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
+| TOUCH | toucher | <span class="smallcaps">`actor`</span> |
+|	| touchee | <span class="smallcaps">`undergoer`</span> |
+|	| touching <span class="smallcaps">`instrument`</span> | <span class="smallcaps">`instrument`</span> |
+| PUSH | pusher | <span class="smallcaps">`actor`</span> |
+|	| pushee | <span class="smallcaps">`undergoer`</span> |
+| Experiential
+| LOOK AT | looker | <span class="smallcaps">`experiencer`</span> |
+|		| looked at entity | <span class="smallcaps">`stimulus`</span> |
+| SEE | seeer | <span class="smallcaps">`experiencer`</span> |
+|	| seen entity | <span class="smallcaps">`stimulus`</span> |
+| SMELL | smeller | <span class="smallcaps">`experiencer`</span> |
+|	| smelled entity | <span class="smallcaps">`stimulus`</span> |
+| FEAR | fearer | <span class="smallcaps">`experiencer`</span> |
+|	| fear <span class="smallcaps">`stimulus`</span> | <span class="smallcaps">`stimulus`</span> |
+| FRIGHTEN | frightenee | <span class="smallcaps">`experiencer`</span> |
+|	| frightener | <span class="smallcaps">`stimulus`</span> |
+| LIKE | liker | <span class="smallcaps">`experiencer`</span> |
+|	| liked entity | <span class="smallcaps">`stimulus`</span> |
+| KNOW | knower | <span class="smallcaps">`experiencer`</span> |
+|	| known thing/person | <span class="smallcaps">`stimulus`</span> |
+| THINK | thinker | <span class="smallcaps">`experiencer`</span> |
+|	| thought content | <span class="smallcaps">`stimulus`</span> |
+| HEAR | hearer | <span class="smallcaps">`experiencer`</span> |
+|	| heard sound | <span class="smallcaps">`stimulus`</span> |
+| FEEL PAIN | pain-feeler | <span class="smallcaps">`experiencer`</span> |
+|	| pain locus | <span class="smallcaps">`stimulus`</span> |
+| APPEAR | appearer | <span class="smallcaps">`stimulus`</span> |
+| WANT | wanter | <span class="smallcaps">`experiencer`</span> |
+|	| wanted thing | <span class="smallcaps">`stimulus`</span> |
+| Partly-unrealized 
+| SEARCH FOR | searcher | <span class="smallcaps">`actor`</span> |
+|			| searched thing | <span class="smallcaps">`undergoer`</span> |
+| HUNT (FOR) | hunter | <span class="smallcaps">`actor`</span> |
+|			| hunted thing | <span class="smallcaps">`undergoer`</span> |
+| Application
+| PUT | putter | <span class="smallcaps">`actor`</span> |
+|		| put thing | <span class="smallcaps">`theme`</span>  |
+|		| putting <span class="smallcaps">`goal`</span> | <span class="smallcaps">`goal`</span> |
+| POUR | pourer | <span class="smallcaps">`actor`</span> |
+|		| poured substance | <span class="smallcaps">`theme`</span>  |
+|		| pouring <span class="smallcaps">`goal`</span> | <span class="smallcaps">`goal`</span> |
+| LOAD | loader | <span class="smallcaps">`actor`</span> |
+|		| loaded thing | <span class="smallcaps">`theme`</span>  |
+|		| loading <span class="smallcaps">`place`</span>  | <span class="smallcaps">`goal`</span> |
+| TIE | tier | <span class="smallcaps">`actor`</span> |
+|		| tied thing | <span class="smallcaps">`theme`</span>  |
+|		| tying <span class="smallcaps">`goal`</span> | <span class="smallcaps">`goal`</span> |
+| COVER | coverer | <span class="smallcaps">`actor`</span> |
+|		| cover | <span class="smallcaps">`instrument`</span> |
+|		| covered thing | <span class="smallcaps">`undergoer`</span> |
+| FILL | filler | <span class="smallcaps">`actor`</span> |
+|		| filling material | <span class="smallcaps">`instrument`</span> |
+|		| filled container | <span class="smallcaps">`undergoer`</span> |
+| Removal
+| TAKE | taker | <span class="smallcaps">`actor`</span> |
+|		| taken thing | <span class="smallcaps">`theme`</span>  |
+|		| taking source | <span class="smallcaps">`source`</span> |
+| TEAR | tearer | <span class="smallcaps">`actor`</span> |
+| 		| torn thing | <span class="smallcaps">`theme`</span>  |
+|		| tearing source | <span class="smallcaps">`source`</span> |
+| WIPE_motion | wiper | <span class="smallcaps">`actor`</span> |
+|				| wiped material | <span class="smallcaps">`theme`</span>  |
+|				| wiped surface | <span class="smallcaps">`source`</span> |
+| PEEL_motion | peeler | <span class="smallcaps">`actor`</span> |
+|			| peel | <span class="smallcaps">`theme`</span>  |
+|			| peeled object | <span class="smallcaps">`source`</span> |
+| WIPE_cos | wiper | <span class="smallcaps">`actor`</span> |
+|			| wiped surface | <span class="smallcaps">`undergoer`</span> |
+| PEEL_cos | peeler | <span class="smallcaps">`actor`</span> |
+|			| peeled object | <span class="smallcaps">`undergoer`</span> |
+| Creation
+| BUILD | builder | <span class="smallcaps">`actor`</span> |
+|		| built thing | <span class="smallcaps">`undergoer`</span> |
+|		| building material | <span class="smallcaps">`instrument`</span> |
+| MAKE | maker | <span class="smallcaps">`actor`</span> |
+|		| made thing | <span class="smallcaps">`undergoer`</span> |
+| Transfer
+| GIVE | giver | <span class="smallcaps">`actor`</span> |
+|		| gift | <span class="smallcaps">`theme`</span>  |
+|		| giving <span class="smallcaps">`recipient`</span> | <span class="smallcaps">`recipient`</span> |
+| SEND | sender | <span class="smallcaps">`actor`</span> |
+|		| sent thing | <span class="smallcaps">`theme`</span>  |
+|		| sending <span class="smallcaps">`recipient`</span> | <span class="smallcaps">`recipient`</span> |
+| CARRY | carrier | <span class="smallcaps">`actor`</span> |
+|		| carried thing | <span class="smallcaps">`theme`</span>  |
+|		| carrying <span class="smallcaps">`goal`</span> | <span class="smallcaps">`goal`</span> |
+| THROW | thrower | <span class="smallcaps">`actor`</span> |
+|		| thrown thing | <span class="smallcaps">`theme`</span>  |
+|		| throwing <span class="smallcaps">`goal`</span> | <span class="smallcaps">`goal`</span> |
+| BRING | bringer | <span class="smallcaps">`actor`</span> |
+|		| brought thing | <span class="smallcaps">`theme`</span>  |
+|		| bringing <span class="smallcaps">`recipient`</span> | <span class="smallcaps">`recipient`</span> |
+| STEAL | stealer | <span class="smallcaps">`actor`</span> |
+|		| stolen thing | <span class="smallcaps">`theme`</span>  |
+|		| stealing source | <span class="smallcaps">`affectee`</span> |
+| GET | receiver | <span class="smallcaps">`recipient`</span> |
+|		| received thing | <span class="smallcaps">`theme`</span> |
+| Communication
+| TALK | talker | <span class="smallcaps">`actor`</span> |
+|		| talked about content | <span class="smallcaps">`theme`</span>  |
+|		| talked to person | <span class="smallcaps">`recipient`</span> |
+| ASK FOR | asker | <span class="smallcaps">`actor`</span> |
+|		| requested thing | <span class="smallcaps">`theme`</span>  |
+|		| askee | <span class="smallcaps">`recipient`</span> |
+| SHOUT AT | shouter | <span class="smallcaps">`actor`</span> |
+|		   | shoutee | <span class="smallcaps">`recipient`</span> |
+| TELL | teller | <span class="smallcaps">`actor`</span> |
+|		| told content | <span class="smallcaps">`theme`</span>  |
+|		| tellee | <span class="smallcaps">`recipient`</span> |
+| SHOW | shower | <span class="smallcaps">`actor`</span> |
+|		| shown thing | <span class="smallcaps">`theme`</span>  |
+|		| showing addressee | <span class="smallcaps">`recipient`</span> |
+| HIDE | hider | <span class="smallcaps">`actor`</span> |
+|		| hidden thing | <span class="smallcaps">`theme`</span>  |
+|		| hiding <span class="smallcaps">`affectee`</span> | <span class="smallcaps">`affectee`</span> |
+| SCREAM | screamer | <span class="smallcaps">`actor`</span> |
+|TEACH | teacher | <span class="smallcaps">`actor`</span> |
+|		| taught content | <span class="smallcaps">`theme`</span>  |
+|		| teachee | <span class="smallcaps">`recipient`</span> |
+| SAY | sayer | <span class="smallcaps">`actor`</span> |
+|	  | said content | <span class="smallcaps">`theme`</span>  |
+|     | saying addressee | <span class="smallcaps">`recipient`</span> |
+| NAME | namer | <span class="smallcaps">`actor`</span> |
+|	   | name | <span class="smallcaps">`theme`</span>  |
+|	   | namee | <span class="smallcaps">`recipient`</span> |	
+
+Table X: Verb meanings and non-lexicalized role annotation
+</div>
+
+[Back to Table of Contents](#toc)
+
   #### Part 3-2-2. Non-participant role UMR relations
   
 Apart from predicate-specific and general participant roles, UMR also has a set of relations that are mainly used to mark NP-internal relations, to mark some types of modifiers of predicates, and to make the meanings of certain natural language expressions computationally tractable. Most of those relations are inherited from AMR, but for some of them, there are some changes in their use.
