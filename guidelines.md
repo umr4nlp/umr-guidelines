@@ -4124,7 +4124,7 @@ resources, it has very little overt aspectual marking in its grammar and
 therefore the most fine-grained aspect distinctions are very difficult
 to judge in annotation. This aspect lattice is shown below. 
 
-![Aspect lattice](aspect-lattice.png)
+![Aspect lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Aspect%20Lattice_2022.png)
 
 Below are the aspect values with a brief definition.
 
@@ -5123,22 +5123,11 @@ NEG-2/3M.IRR-DSTR-eat-TI-IPFV=PHOD
 
 The possible values for the `:refer-person` attribute are based on Cysouw's (2003) cross-linguistic study of person-marking systems in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar `1st`, `2nd`, and `3rd` person values. Some languages have more fine-grained person systems, distinguishing a first person `exclusive` from a first person `inclusive` value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
 
-![Person lattice](person-lattice.png)
-
-```
-|         | coarse-gr | default | fine-gr   |
-|---------|-----------|---------|-----------|
-|         |           | 1st     | excl.     |
-|         | non-3rd   |         | incl.     |
-| pers.   |           | 2nd     |           |
-|         | non-1st   |         |           |
-|         |           | 3rd     |           |
-
-```
+![Person lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Person%20Lattice_2022.png)
 
 The possible number values for the `:refer-number` attribute are based on Corbett (2000). The default level here consists simply of `singular` vs. `non-singular`. Languages with more fine-grained categories in their system may have more fine-grained `dual`, `trial`, `paucal`, and `greater plural` categories, which fit together as shown in the figure below.
 
-![Number lattice](number-lattice.png)
+![Number lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Number%20Lattice.jpg)
 
 [Back to Table of Contents](#toc)
 
@@ -6050,7 +6039,9 @@ level”: annotators are encouraged to use categories from this level as
 the default. These values are selected as the base level because these
 distinctions occur the most frequently across languages. The higher and lower levels, respectively, contain equally typologically-motivated coarser-grained and finer-grained categories, which can be used when a language conventionalizes these distinctions in its grammar. Such lattices capture the idea that many semantic categories are structured as hierarchical scales, where the middle values can group together with either end, but the extremes of the scale are highly unlikely to be categorized together in any language. For example, no language has a grammatical form that is used for both `Full` and `Neutral` epistemic strength, but not `Partial`. The typological lattice for epistemic strength is shown below.
 
-![Modal strength lattice](modal-lattice.png)
+![Modal strength lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Affirmative%20Modal%20Strength%20Lattice_2022.png)
+
+![Modal strength lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Negative%20Modal%20Strength%20Lattice_2022.png)
 
 This lattice is based around the base level of `Full` vs. `Partial` vs.
 `Neutral`, but also allows for the annotation of more coarse-grained
