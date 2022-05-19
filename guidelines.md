@@ -100,11 +100,11 @@
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
 the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
-from **Abstract Meaning Representation** (AMR), which focuses on **predicate-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document as in [\[1 (1)\]](#1 (1)) - [\[1 (9)\]](#1 (9)), and then describe in more detail each component of UMR in the next few sections. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations. 
+from **Abstract Meaning Representation** (AMR), which focuses on **predicate-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document as in <a href="#1 (1)">(1)</a> - <a href="#1 (9)">(9)</a>, and then describe in more detail each component of UMR in the next few sections. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations. 
 
 Operationally, for both sentence-level and document-level annotation, we assume an annotation procedure in which a document is processed sentence by sentence. The sentence-level representation is annotated first, so that the document-level annotation can make reference to the concepts in the sentence-level representation.
 
-<span id="1 (1)" label="1 (1)">\[1 (1)\]</span>
+<span id="1 (1)">(1)</span>
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
@@ -131,7 +131,7 @@ The document-level representation includes a list of **temporal and modal depend
 
 The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:FullAff* label.
 
-<span id="1 (2)" label="1 (2)">\[1 (2)\]</span>
+<span id="1 (2)">(2)</span>
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
@@ -182,7 +182,7 @@ For this sentence, the temporal relations represent the fact that the *convictio
 happened *last week*, which itself depends on the DCT for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
 *sentence* event definitely happened, and that *Pope* is certainly *the American businessman*. It introduces a *NULL_CHARGER* conceiver to indicate that the authority that charged Pope (which is not explicit in the text) presents the *spying* event as a certainty. The coreference annotation specifies that *Pope* in sentence 2 and *Edmund Pope* in sentence 1 are the same entity.
 
-<span id="1 (3)" label="1 (3)">\[1 (3)\]</span>
+<span id="1 (3)">(3)</span>
 ```
 Snt3: He denied any wrongdoing.
 (d/ deny-01 
@@ -207,13 +207,13 @@ Snt3: He denied any wrongdoing.
 
 ```
 
-For this sentence, the coreference annotation indicates that *he* is the same person as *Pope* mentioned in [\[1 (2)\]](#1 (2)). Because there is no strict event coreference or subevent relation between *wrongdoing* and, for example, *spying* in [\[1 (2)\]](#1 (2)), this relation is left unannotated.
+For this sentence, the coreference annotation indicates that *he* is the same person as *Pope* mentioned in <a href="#1 (2)">(2)</a>. Because there is no strict event coreference or subevent relation between *wrongdoing* and, for example, *spying* in  <a href="#1 (2)">(2)</a>, this relation is left unannotated.
 
 The temporal annotation indicates that Pope's denial took place before document creation time, and that any *wrongdoing* would have happened before this denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
 
 The modal relations indicate that the *deny* event definitely happened according to the author. The author presents themselves as having certainty about Pope's mental state at the time of the denial (annotated as a :FullAff relation from AUTH to *Pope*), and the :FullNeg relation indicates that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
 
-<span id="1 (4)" label="1 (4)">\[1 (4)\]</span>
+<span id="1 (4)">(4)</span>
 ```
 Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 (p/ pardon-01
@@ -240,7 +240,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 
 In the document-level representation for this sentence, the person that is pardoned by Putin is marked as coreferential with *he* in sentence 3 (and therefore *Edmund Pope*). In the temporal annotation, the *sentence-01* event is designated as the reference time of *pardon-01* - the latter happens after the former. In the modal annotation, *pardon-01* is annotated as certain from the point of view of the author.
 
-<span id="1 (5)" label="1 (5)">\[1 (5)\]</span>
+<span id="1 (5)">(5)</span>
 ```
 Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
  
@@ -263,11 +263,11 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
     :modal(AUTH :FullAff s5f)
     :coref(s4p4 :same-entity s5p))
 ```
-In the document-level annotation of this sentence, *pardon-01* from [\[1 (4)\]](#1 (4)) is chosen as the
+In the document-level annotation of this sentence, *pardon-01* from <a href="#1 (4)">(4)</a> is chosen as the
 reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is certain that the *fly-01* 
 event happened, and *Pope* in this sentence is the same person as *him* in the previous one.
 
-<span id="1 (6)" label="1 (6)">\[1 (6)\]</span>
+<span id="1 (6)">(6)</span>
 ```
 Snt6: He will spend the next several days at the medical center there before he returns home with his wife Sherry
 
@@ -304,9 +304,9 @@ Snt6: He will spend the next several days at the medical center there before he 
   :coref((s5p :same-entity s6p)
          (s5b :same-entity s6t2))
 ```
-In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the DCT, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in [\[1 (5)\]](#1 (5)), and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence. 
+In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the DCT, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in <a href="#1 (5)">(5)</a>, and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence. 
 
-<span id="1 (7)" label="1 (7)">\[1 (7)\]</span>
+<span id="1 (7)">(7)</span>
  ```
 Snt7: Pope was in remission from a rare form of bone cancer when he was arrested in Russia.
 
@@ -333,9 +333,9 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
          (AUTH :FullAff s7a))
   :coref (s6p :same-entity s7p))
 ```
-For [\[1 (7)\]](#1 (7)), the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before the *convict-01* event from sentence 2. According to the author, both *arrest-01* and *be in remission* happened. Once again, *Pope* is the same entity as *he* in the previous sentence.
+For <a href="#1 (7)">(7)</a>, the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before the *convict-01* event from sentence 2. According to the author, both *arrest-01* and *be in remission* happened. Once again, *Pope* is the same entity as *he* in the previous sentence.
 
-<span id="1 (8)" label="1 (8)">\[1 (8)\]</span>
+<span id="1 (8)">(8)</span>
 ```
 Snt8: Doctors will examine him for signs that the cancer may have come back while he was awaiting trial in a Russian jail.
 
@@ -378,7 +378,7 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 
 The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *NeutAff* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
 
-<span id="1 (9)" label="1 (9)">\[1 (9)\]</span>
+<span id="1 (9)">(9)</span>
 ```
 Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
 (s/ say-01
