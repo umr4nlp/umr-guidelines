@@ -136,9 +136,9 @@ The document-level representation also includes a list of modal dependencies. Th
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
 (i/ identity-91
-     :ARG1 (p/ person :wiki "Edmond_Pope"
+     :ARG0 (p/ person :wiki "Edmond_Pope"
      	:name (n/ name "op1 "Pope))
-     :ARG2 (b/ businessman
+     :ARG1 (b/ businessman
 	:mod (n2/ nationality :wiki "United_States"
 	   :name (n3/ name :op1 "America")))
 	:ARG1-of (c/ convict-01
@@ -670,7 +670,7 @@ concepts corresponding to specific words with the goal of making
 annotations cross-linguistically comparable. For example, even though
 the Sanapaná thetic possession construction in [\[2-2-3 (1)\]](#2-2-3 (1)) makes use of a verb
 that literally means *exist*, an abstract concept predicate node
-`have-03` is introduced rather than a language specific `enyetnema-00`
+`have-91` is introduced rather than a language specific `enyetnema-00`
 concept. This way, possessive constructions across the world's languages
 can be annotated in consistent and comparable ways regardless of the
 morphosyntactic strategies they use (see [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses) for more
@@ -681,7 +681,7 @@ information on such "non-verbal clauses").
 an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 2/3F-exist-DECL		1SG:PRO	cow-old		1SG-POS
 'I have a book.' lit. 'My book exists.'
-(h/ have-03
+(h/ have-91
 	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
@@ -1661,7 +1661,7 @@ Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
 'Miguel does have a canoe.' lit. 'Miguel is a canoe-owner.'
 
-(h/ have-03							(h/ have-03
+(h/ have-91							(h/ have-91
     :ARG0 (p/ person						    :ARG0 (p/ person
     	:name (n/ name :op1 "Mijiri")					:name (n/ name :op1 "Miguel")
 	:ref-number Singular)					    	:ref-number Singular)
@@ -1764,7 +1764,7 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 
 <span id="3-1-4 (1)" label="3-1-4 (1)">\[3-1-4 (1)\]</span> The school has approximately 570 pupils.
 ``` 
-(h/ have-03
+(h/ have-91
       :ARG0 (s/ school)
       :ARG1 (p/ pupil
             :quant (a/ approximately :op1 570))
@@ -1921,16 +1921,16 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 'Is he here or isn't he?'
 (e/ exclusive-disj
    :op1 (h/ have-location-91
-   	:ARG1 (p/ person
+   	:ARG0 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
-	:ARG2 (p2/ place)
+	:ARG1 (p2/ place)
 	:aspect State
 	:modstr NeutAff
 	:mode Interrogative)
    :op2 (h2/ have-location-91
-   	:ARG1 p 
-	:ARG2 p2
+   	:ARG0 p 
+	:ARG1 p2
 	:aspect State
 	:modstr NeutNeg
 	:polarity -
@@ -2208,7 +2208,7 @@ Peter	diligent	CONJ	Vanja	lazy
    :ARG1 (h/ have-mod-91
    	:ARG1 (p/ person
 		:name (n/ name :op1 "Peter"))
-	:ARG1 (s/ staratel'nyi 'diligent')
+	:ARG2 (s/ staratel'nyi 'diligent')
 	:aspect State
 	:modstr FullAff)
    :ARG2 (h2/ have-mod-91
@@ -2909,12 +2909,12 @@ to the semantic roles as shown in Table 11.
 | Thetic Possession      | have-91          | possessor | possessum        | ---              |
 | Predicative Possession | belong-91        | possessum | possessor        | ---              |
 | Thetic Location        | exist-91         | location  | theme            | ---              |
-| Predicative Location   | have-location-91 | theme       | location            | ---         |
+| Predicative Location   | have-location-91 | theme     | location         | ---              |
 | Property Predication   | have-mod-91      | ---       | theme            | property         |
 | Object Predication     | have-role-91     | theme     | reference point  | object category  |
 |                        | have-org-role-91 | theme     | organization     | role             |
 |                        | kinship-91       | theme     | family member    | kinship rel.     |
-| Equational             | identity-91      | theme       | equated referent           | --- |
+| Equational             | identity-91      | theme     | equated referent | ---              |
 
 Table 11: Argument structure of non-verbal clause predicates
 </div>
@@ -2934,7 +2934,7 @@ Mijiri-tin  ɨara-yara
 Miguel-CER  canoe-owner  
 ‘Miguel does have a canoe.’ (Lit. ‘Miguel is a canoe-owner’)
 
-(h/ have-03
+(h/ have-91
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mijiri")) 
 	:ARG1 (i/ ɨarayara ‘canoe’
@@ -2947,7 +2947,7 @@ Possession - English <br />
 ```
 The dog belongs to the teacher.  
   
-(b/ belong-01
+(b/ belong-91
 	:ARG0 (d/ dog
 		:ref-number Singular) 
 	:ARG1 (t/ teacher
@@ -2974,9 +2974,9 @@ Location - Yabem (Dempwolff 1939) <br />
 house 3SG-be.at village  
 ‘The house is in the village.’
 (h/ have-location-91
-	:ARG1 (a/ àndu ‘house’
+	:ARG0 (a/ àndu ‘house’
 		:ref-number Singular)
-	:ARG2 (m/ malac ‘village’
+	:ARG1 (m/ malac ‘village’
 		:ref-number Singular)
 	:aspect State
 	:modstr FullAff)
@@ -3009,10 +3009,10 @@ this young.man 	shaman
 ```
 She is the winner.  
 (i/ identity-91
-	:ARG1 (p/ person
+	:ARG0 (p/ person
 		:ref-person 3rd
 		:ref-number Singular) 
-	:ARG2 (p2/ person
+	:ARG1 (p2/ person
 		:ARG0-of (w/ win-01))
 	:aspect State
 	:modstr FullAff)
@@ -4372,9 +4372,9 @@ The doctor **is tall**.
 ```
 The book **is on the table**.
 (h/ have-location-91
-	:ARG1 (b/ book
+	:ARG0 (b/ book
 		:ref-number Singular)
-	:ARG2 (t/ table)
+	:ARG1 (t/ table)
 	:aspect State
 	:modstr FullAff)  
 ```
@@ -4393,11 +4393,11 @@ She **is an architect**.
 ```
 Your glass **is in the kitchen**.
 (h/ have-location-91 
-	:ARG1 (g/ glass
+	:ARG0 (g/ glass
 		:poss (p/ person
 			:ref-person 2nd
 			:ref-number Singular))
-	:ARG2 (k/ kitchen)
+	:ARG1 (k/ kitchen)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -5173,9 +5173,9 @@ For the UMR corereference annotation, we first need to answer two questions. The
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 (i/ identity-91
-     :ARG1 (p/ person :wiki "Edmond_Pope"
+     :ARG0 (p/ person :wiki "Edmond_Pope"
      	:name (n/ name "op1 "Pope))
-     :ARG2 (b/ businessman
+     :ARG1 (b/ businessman
 	:mod (n2/ nationality :wiki "United_States"
 	   :name (n3/ name :op1 "America")))
 	:ARG1-of (c/ convict-01
@@ -5378,16 +5378,16 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
 ```
 The loan, a sum of 12.5 million US dollars, is an export credit **provided** to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
 (i/ identity-91
-	:ARG1 (t/ thing
+	:ARG0 (t/ thing
 		:ARG1-of (l/ loan)
-		:ARG1-of (i2/ identity
-			:ARG2 (m/ monetary-quantity
+		:ARG0-of (i2/ identity
+			:ARG1 (m/ monetary-quantity
 				:quant 12500000
 				:unit (d/ dollar
 					:mod (c/ country
 						:wiki "United_States"
 						:name (n/ name :op1 "US"))))))
-	:ARG2 (c2/ credit
+	:ARG1 (c2/ credit
 		:mod (e/ export-01)
 		:ARG1-of (p/ provide
 			:ARG0 (g/ government-organization
