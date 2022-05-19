@@ -534,6 +534,8 @@ Other meanings are represented as *relations* in AMR, which means that
 they function as edges in the AMR graphs. This is the case for argument
 roles and a range of different modification relations, amongst others.
 
+[Back to Table of Contents](#toc)
+
 #### Part 2-2-1: Predicate-argument relations.
 
 The annotation of predicate-argument structure is the main domain in
