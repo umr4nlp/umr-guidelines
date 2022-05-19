@@ -2899,22 +2899,22 @@ They loaded the boxes.
 
 There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the nonverbal clause predicates shown in Table 11 (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). These are repeated below with their participant role annotation.
 
-Each nonverbal clause predicate has an `ARG0` and an `ARG1`; these map
+Each nonverbal clause predicate has a set of numbered argument roles which map
 to the semantic roles as shown in Table 11.
 
 <div id="tab:nonverbal_arguments">
 	
 | **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
 | :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
-| Thetic Possession      | have-03          | possessor | possessum        | ---              |
-| Predicative Possession | belong-01        | possessum | possessor        | ---              |
+| Thetic Possession      | have-91          | possessor | possessum        | ---              |
+| Predicative Possession | belong-91        | possessum | possessor        | ---              |
 | Thetic Location        | exist-91         | location  | theme            | ---              |
-| Predicative Location   | have-location-91 | ---       | theme            | location         |
+| Predicative Location   | have-location-91 | theme       | location            | ---         |
 | Property Predication   | have-mod-91      | ---       | theme            | property         |
 | Object Predication     | have-role-91     | theme     | reference point  | object category  |
 |                        | have-org-role-91 | theme     | organization     | role             |
 |                        | kinship-91       | theme     | family member    | kinship rel.     |
-| Equational             | identity-91      | ---       | theme            | equated referent |
+| Equational             | identity-91      | theme       | equated referent           | --- |
 
 Table 11: Argument structure of non-verbal clause predicates
 </div>
