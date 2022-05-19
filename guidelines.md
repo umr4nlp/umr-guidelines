@@ -3826,7 +3826,7 @@ Guitar strings
 	:ref-number Plural)
 ```
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
-category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in [\[3-2-2-2 (2a)\]](#3-2-2-2 (2a)), the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in [\[3-2-2-2 (2b)\]](#3-2-2-2 (2b)); `:consist-of`, for indicating the membership of groups [\[3-2-2-2 (2c)\]](#3-2-2-2 (2c)); `:topic`, for indicating what a referent is about as in [\[3-2-2-2 (2d)\]](#3-2-2-2 (2d)), and `:medium` for indicating channels of communication, such as languages as in [\[3-2-2-2 (2e)\]](#3-2-2-2 (2e)).
+category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in [\[3-2-2-2 (2a)\]](#3-2-2-2 (2a)), the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. The `:mod` relation additionally inherits some uses from UMR. It is used to annotate demonstrative determiners, and it is used to annotate property concept modifiers that do not have their own frame files. Those uses are exemplified in [\[3-2-2-2 (2b)\]](#3-2-2-2 (2b))-[\[3-2-2-2 (2c)\]](#3-2-2-2 (2c)) A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in [\[3-2-2-2 (2d)\]](#3-2-2-2 (2d)); `:consist-of`, for indicating the membership of groups [\[3-2-2-2 (2e)\]](#3-2-2-2 (2e)); `:topic`, for indicating what a referent is about as in [\[3-2-2-2 (2f)\]](#3-2-2-2 (2f)), and `:medium` for indicating channels of communication, such as languages as in [\[3-2-2-2 (2g)\]](#3-2-2-2 (2g)).
 
 <span id="3-2-2-2 (2)" label="3-2-2-2 (2)">\[3-2-2-2 (2)\]</span> 
 
@@ -3839,6 +3839,26 @@ a women's magazine
 ```
 <span id="3-2-2-2 (2b)" label="3-2-2-2 (2b)">\[3-2-2-2 (2b)\]</span> 
 ```
+These shirts of mine
+(s/ shirt
+	:poss (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:mod (t/ these)
+	:ref-number Plural)
+```
+<span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">\[3-2-2-2 (2c)\]</span> 
+```
+My quirky shirts
+(s/ shirt
+	:poss (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:mod (q/ quirky)
+	:ref-number Plural)
+```
+<span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">\[3-2-2-2 (2d)\]</span> 
+```
 The thirty year-old man
 (m/ man
 	:age (t/ temporal-quantity
@@ -3846,7 +3866,7 @@ The thirty year-old man
 		:unit (y/ year))
 	:ref-number Singular)
 ```
-<span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">\[3-2-2-2 (2c)\]</span> 
+<span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">\[3-2-2-2 (2e)\]</span> 
 
 ```
 A swarm of bees
@@ -3854,7 +3874,7 @@ A swarm of bees
 	:consist-of (b/ bee
 		:ref-number Plural))
 ```
-<span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">\[3-2-2-2 (2d)\]</span> 
+<span id="3-2-2-2 (2f)" label="3-2-2-2 (2f)">\[3-2-2-2 (2f)\]</span> 
 
 ```
 Information about the case
@@ -3862,7 +3882,7 @@ Information about the case
 	:topic (c/ case))
 ```
 
-<span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">\[3-2-2-2 (2e)\]</span> 
+<span id="3-2-2-2 (2g)" label="3-2-2-2 (2g)">\[3-2-2-2 (2g)\]</span> 
 ```
 a French song
 (t/ thing
