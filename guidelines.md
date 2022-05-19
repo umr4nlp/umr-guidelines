@@ -413,7 +413,7 @@ The document-level representation indicates the *say-01* event happened before D
 
 [Back to Table of Contents](#toc)
 
-##  Part 2: From AMR to UMR
+##  Part 2. From AMR to UMR
 
 ### Part 2-1. Introduction
 
