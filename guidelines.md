@@ -6860,7 +6860,9 @@ complement event node in the full dependency structure.
  
  * Sentence-level Annotation
  	* Choose the **top node** of the graph for the sentence you are annotating.
- 		* If the sentence contains **one main event** (typically a lexical verb), **annotate it** as the **top of the graph** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) and [Part 3-1-3](#part-3-1-3-concept-word-mismatches) on how to decide what counts as one event).
+ 		* If the sentence contains **one main event** (typically a lexical verb in a main clause), **annotate it** as the **top of the graph** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) and [Part 3-1-3](#part-3-1-3-concept-word-mismatches) on how to decide what counts as one event).
+ 			* Highlight the word token that corresponds to the event. If a citation form of it is in the lexicon already, click the "Lexicalized Concept" button and select this lemma.
+ 			* If it is not in the lexicon yet, click the "add to Lexicon" button and create a lexical entry for it first.
  		* If the sentence contains **multiple events** expressed in multiple clauses, decide what the top node is **based on the logical relation** between the events:
  			* If they are **coordinated**, choose the **relevant coordinator** as the top node (see [Part 3-1-6](#part-3-1-6-discourse-relations)).
 			* If one event is a **subevent** of the other, choose _have-subevent-91_ as the top node.
