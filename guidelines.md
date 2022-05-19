@@ -2469,7 +2469,7 @@ events with which they occur, shown in Table 10. Some
 participant roles (those found in the first column of the table) express the external cause of an event. These can
 occur with many semantic classes of events. Similarly, the
 “circumstantial” type semantic roles in the last column of the table can occur with a wide range of
-semantic event classes.
+semantic event classes. Note that UMR uses `:temporal` to annotate temporal circumstantials of events, while `:time` is only used as a daughter of `date-entity` concepts to annotate hours and minutes on the clock.
 
 <div id="tab:catroles">
 
@@ -3776,7 +3776,7 @@ Apart from predicate-specific and general participant roles, UMR also has a set 
 
   ##### Part 3-2-2-1. Temporal relations
 
-Some relations are used to describe entities in a standard, canonical form. This is the case for ```:calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :timezone, :weekday, :year,``` and ```:year2```. The use of these relations is exemplified in [\[3-2-2-1 (1)\]](#3-2-2-1 (1)).
+Some relations are used to describe entities in a standard, canonical form. This is the case for ```:calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :time, :timezone, :weekday, :year,``` and ```:year2```. The use of these relations is exemplified in [\[3-2-2-1 (1)\]](#3-2-2-1 (1)).
 
 <span id="3-2-2-1 (1)" label="3-2-2-1 (1)">\[3-2-2-1 (1)\]</span> 
 
