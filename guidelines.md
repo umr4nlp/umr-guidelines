@@ -7109,7 +7109,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 [Back to Table of Contents](#toc)
 
-##  Part 7: Alphabetical Index of UMR Annotation Categories
+##  Part 7. Alphabetical Index of UMR Annotation Categories
 
 In the following alphabetical index, annotation values are distinguished by their italic typeface in the first column. In the last column, the principal section(s) in which each term is defined or discussed is indicated in boldface.
 
