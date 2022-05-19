@@ -3555,7 +3555,23 @@ I met the President of the University of New Mexico.
 
 ##### Part 3-2-1-4. Table of verb meanings
 
-Table X below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a ''motion'' sense (ex: She wiped the crumbs from the table) and a ''cos'' or change-of-state sense (ex: He wiped the table). Annotators may use Table X as a reference point for annotating general participant roles for various semantic classes of verbs.
+Table X below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a motion sense (ex: She wiped the crumbs from the table) and a change-of-state (COS) sense (ex: He wiped the table). 
+
+As mentioned in [Part 3-2-1-1](#part-3-2-1-1-stage-0), the single participant in a monovalent event can either be annotated as <span class="smallcaps">`actor`</span> or as <span class="smallcaps">`undergoer`</span>. This distinction depends on the amount of control that the single participant has in carrying out the event. For events that are more controlled by the participant ("active" events), the participant is annotated as <span class="smallcaps">`actor`</span>; for events that are less controlled by the participant ("inactive" events), the participant is annotated as <span class="smallcaps">`undergoer`</span>. Languages that reflect this distinction in their morphosyntax (i.e., languages with active alignment) do not always draw the distinction between active events and inactive events in the same place. There is, however, a cross-linguistic organization in terms of how languages with active alignment code these events in their morphosyntax.
+
+The following semantic event classes reflect an ordering from most active to most inactive (Croft 2012; Croft to appear).
+
+Controlled activities (ex: run)  
+Position events (ex: hang)  
+Inherent properties (ex: short)  
+Bodily actions (ex: cough)  
+Change of state (ex: become ill)  
+Transitory properties (ex: be ill)  
+Uncontrolled activities (ex: fall)  
+
+For the purposes of UMR, controlled activities, position events, inherent properties, and more controlled types of bodily actions (ex: laugh) are annotated with an <span class="smallcaps">`actor`</span> participant. Less controlled types of bodily actions (ex: cry) and the remaining semantic event classes are annotated with an <span class="smallcaps">`undergoer`</span> participant.
+
+Annotators may use Table X as a reference point for annotating general participant roles for various semantic verb classes.
 
 <div id="tab:predicateroles">
 
@@ -3563,37 +3579,37 @@ Table X below contains the general participant role annotation for the microrole
 | **Verb Meaning** | **Microrole** | **UMR annotation** |
 | :--------------------- | :--------------- | :-------- | 
 |**Active (A-like) S** | | |
-| BLINK | blinker | <span class="smallcaps">`actor`</span> |
-| COUGH | cougher | <span class="smallcaps">`actor`</span> |
+| RUN	| runner | <span class="smallcaps">`actor`</span> |
 | CLIMB | climber | <span class="smallcaps">`actor`</span> |
 | 		| climbing goal | <span class="smallcaps">`undergoer`</span> |
-| RUN	| runner | <span class="smallcaps">`actor`</span> |
-| SIT | sitter | <span class="smallcaps">`actor`</span> |
-|		| sitting place  | <span class="smallcaps">`place`</span>  |
-| SIT DOWN | sit downer | <span class="smallcaps">`actor`</span> |
-|		| sitting-down place  | <span class="smallcaps">`goal`</span> |
 | JUMP | jumper | <span class="smallcaps">`actor`</span> |
 | GO | goer | <span class="smallcaps">`actor`</span> |
 |	| going goal | <span class="smallcaps">`goal`</span> |
 | LEAVE | leaver | <span class="smallcaps">`actor`</span> |
 |		| left place/person | <span class="smallcaps">`source`</span> |
+| SIT DOWN | sit downer | <span class="smallcaps">`actor`</span> |
+|		| sitting-down place  | <span class="smallcaps">`goal`</span> |
+| DIG | digger | <span class="smallcaps">`actor`</span> |
+| PLAY | player | <span class="smallcaps">`actor`</span> |
+| SING | singer | <span class="smallcaps">`actor`</span> |
+| SIT | sitter | <span class="smallcaps">`actor`</span> |
+|		| sitting place  | <span class="smallcaps">`place`</span>  |
 | LIVE | liver | <span class="smallcaps">`actor`</span> |
 |	| living place  | <span class="smallcaps">`place`</span>  |
 | LAUGH | laugher | <span class="smallcaps">`actor`</span> |
-| PLAY | player | <span class="smallcaps">`actor`</span> |
-| SING | singer | <span class="smallcaps">`actor`</span> |
-| ROLL | roller | <span class="smallcaps">`actor`</span> |
-| DIG | digger | <span class="smallcaps">`actor`</span> |
+| BLINK | blinker | <span class="smallcaps">`actor`</span> |
+| COUGH | cougher | <span class="smallcaps">`actor`</span> |
 | **Inactive (P-like) S**  | | |
+| CRY | crier | <span class="smallcaps">`undergoer`</span> |
 | DIE | dieer | <span class="smallcaps">`undergoer`</span> |
-| BE SAD | sad person | <span class="smallcaps">`undergoer`</span> |
-| BE HUNGRY | hungry person | <span class="smallcaps">`undergoer`</span>|
 | SINK | sunken entity | <span class="smallcaps">`undergoer`</span> |
 | BURN | burnt thing | <span class="smallcaps">`undergoer`</span> |
-| BE DRY | dry thing | <span class="smallcaps">`undergoer`</span> |
 | BOIL | boiled thing | <span class="smallcaps">`undergoer`</span> |
+| BE SAD | sad person | <span class="smallcaps">`undergoer`</span> |
+| BE HUNGRY | hungry person | <span class="smallcaps">`undergoer`</span>|
+| BE DRY | dry thing | <span class="smallcaps">`undergoer`</span> |
 | BE ILL | sick person | <span class="smallcaps">`undergoer`</span> |
-| CRY | crier | <span class="smallcaps">`undergoer`</span> |
+| ROLL | rolling entity | <span class="smallcaps">`undergoer`</span> |
 | FALL | fallee | <span class="smallcaps">`undergoer`</span> |
 | RAIN | rain | <span class="smallcaps">`undergoer`</span> |
 | **Reflexive/Reciprocal** | | |
@@ -3601,6 +3617,8 @@ Table X below contains the general participant role annotation for the microrole
 |		| dressee | <span class="smallcaps">`undergoer`</span> |
 | SHAVE (a body part) | shaver (of body part) | <span class="smallcaps">`actor`</span> |
 |	| shaved body part | <span class="smallcaps">`undergoer`</span> |
+| WASH | washer | <span class="smallcaps">`actor`</span> |
+|		| washed entity | <span class="smallcaps">`undergoer`</span> |
 | HELP | helper | <span class="smallcaps">`actor`</span> |
 |		| helpee | <span class="smallcaps">`undergoer`</span> |
 | FOLLOW | follower | <span class="smallcaps">`actor`</span> |
@@ -3610,10 +3628,6 @@ Table X below contains the general participant role annotation for the microrole
 | HUG | hugger | <span class="smallcaps">`actor`</span> |
 |	| huggee  | <span class="smallcaps">`undergoer`</span> |
 | **Change-of-State** | | |
-| EAT | eater | <span class="smallcaps">`actor`</span> |
-|		| eaten food | <span class="smallcaps">`undergoer`</span> |
-| WASH | washer | <span class="smallcaps">`actor`</span> |
-|		| washed entity | <span class="smallcaps">`undergoer`</span> |
 | BREAK | breaker | <span class="smallcaps">`actor`</span> |
 |		| broken thing | <span class="smallcaps">`undergoer`</span> |
 |		| breaking instrument | <span class="smallcaps">`instrument`</span> |
@@ -3630,8 +3644,20 @@ Table X below contains the general participant role annotation for the microrole
 |		| ground thing | <span class="smallcaps">`undergoer`</span> |
 | COOK | cooker | <span class="smallcaps">`actor`</span> |
 |		| cooked food | <span class="smallcaps">`undergoer`</span> |
+| EAT | eater | <span class="smallcaps">`actor`</span> |
+|		| eaten food | <span class="smallcaps">`undergoer`</span> |
 | DRINK | drinking person | <span class="smallcaps">`actor`</span> |
 |		| drunked thing | <span class="smallcaps">`undergoer`</span> |
+| COVER | coverer | <span class="smallcaps">`actor`</span> |
+|		| cover | <span class="smallcaps">`instrument`</span> |
+|		| covered thing | <span class="smallcaps">`undergoer`</span> |
+| FILL | filler | <span class="smallcaps">`actor`</span> |
+|		| filling material | <span class="smallcaps">`instrument`</span> |
+|		| filled container | <span class="smallcaps">`undergoer`</span> |
+| WIPE (cos) | wiper | <span class="smallcaps">`actor`</span> |
+|			| wiped surface | <span class="smallcaps">`undergoer`</span> |
+| PEEL (cos) | peeler | <span class="smallcaps">`actor`</span> |
+|			| peeled object | <span class="smallcaps">`undergoer`</span> |
 | **Contact** | | |
 | HIT | hitter | <span class="smallcaps">`actor`</span> |
 |	| hittee | <span class="smallcaps">`undergoer`</span> |
@@ -3646,8 +3672,11 @@ Table X below contains the general participant role annotation for the microrole
 |		| looked at entity | <span class="smallcaps">`stimulus`</span> |
 | SEE | seeer | <span class="smallcaps">`experiencer`</span> |
 |	| seen entity | <span class="smallcaps">`stimulus`</span> |
+| APPEAR | appearer | <span class="smallcaps">`stimulus`</span> |
 | SMELL | smeller | <span class="smallcaps">`experiencer`</span> |
 |	| smelled entity | <span class="smallcaps">`stimulus`</span> |
+| HEAR | hearer | <span class="smallcaps">`experiencer`</span> |
+|	| heard sound | <span class="smallcaps">`stimulus`</span> |
 | FEAR | fearer | <span class="smallcaps">`experiencer`</span> |
 |	| fear stimulus | <span class="smallcaps">`stimulus`</span> |
 | FRIGHTEN | frightenee | <span class="smallcaps">`experiencer`</span> |
@@ -3658,13 +3687,10 @@ Table X below contains the general participant role annotation for the microrole
 |	| known thing/person | <span class="smallcaps">`stimulus`</span> |
 | THINK | thinker | <span class="smallcaps">`experiencer`</span> |
 |	| thought content | <span class="smallcaps">`stimulus`</span> |
-| HEAR | hearer | <span class="smallcaps">`experiencer`</span> |
-|	| heard sound | <span class="smallcaps">`stimulus`</span> |
-| FEEL PAIN | pain-feeler | <span class="smallcaps">`experiencer`</span> |
-|	| pain locus | <span class="smallcaps">`stimulus`</span> |
-| APPEAR | appearer | <span class="smallcaps">`stimulus`</span> |
 | WANT | wanter | <span class="smallcaps">`experiencer`</span> |
 |	| wanted thing | <span class="smallcaps">`stimulus`</span> |
+| FEEL PAIN | pain-feeler | <span class="smallcaps">`experiencer`</span> |
+|	| pain locus | <span class="smallcaps">`stimulus`</span> |
 | **Partly-unrealized** | | |
 | SEARCH FOR | searcher | <span class="smallcaps">`actor`</span> |
 |			| searched thing | <span class="smallcaps">`undergoer`</span> |
@@ -3683,12 +3709,6 @@ Table X below contains the general participant role annotation for the microrole
 | TIE | tier | <span class="smallcaps">`actor`</span> |
 |		| tied thing | <span class="smallcaps">`theme`</span>  |
 |		| tying goal | <span class="smallcaps">`goal`</span> |
-| COVER | coverer | <span class="smallcaps">`actor`</span> |
-|		| cover | <span class="smallcaps">`instrument`</span> |
-|		| covered thing | <span class="smallcaps">`undergoer`</span> |
-| FILL | filler | <span class="smallcaps">`actor`</span> |
-|		| filling material | <span class="smallcaps">`instrument`</span> |
-|		| filled container | <span class="smallcaps">`undergoer`</span> |
 | **Removal** | | |
 | TAKE | taker | <span class="smallcaps">`actor`</span> |
 |		| taken thing | <span class="smallcaps">`theme`</span>  |
@@ -3696,16 +3716,12 @@ Table X below contains the general participant role annotation for the microrole
 | TEAR | tearer | <span class="smallcaps">`actor`</span> |
 | 		| torn thing | <span class="smallcaps">`theme`</span>  |
 |		| tearing source | <span class="smallcaps">`source`</span> |
-| WIPE_motion | wiper | <span class="smallcaps">`actor`</span> |
+| WIPE (motion) | wiper | <span class="smallcaps">`actor`</span> |
 |				| wiped material | <span class="smallcaps">`theme`</span>  |
 |				| wiped surface | <span class="smallcaps">`source`</span> |
-| PEEL_motion | peeler | <span class="smallcaps">`actor`</span> |
+| PEEL (motion) | peeler | <span class="smallcaps">`actor`</span> |
 |			| peel | <span class="smallcaps">`theme`</span>  |
 |			| peeled object | <span class="smallcaps">`source`</span> |
-| WIPE_cos | wiper | <span class="smallcaps">`actor`</span> |
-|			| wiped surface | <span class="smallcaps">`undergoer`</span> |
-| PEEL_cos | peeler | <span class="smallcaps">`actor`</span> |
-|			| peeled object | <span class="smallcaps">`undergoer`</span> |
 | **Creation** | | |
 | BUILD | builder | <span class="smallcaps">`actor`</span> |
 |		| built thing | <span class="smallcaps">`undergoer`</span> |
