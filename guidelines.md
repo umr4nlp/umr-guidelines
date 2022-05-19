@@ -6965,7 +6965,7 @@ complement event node in the full dependency structure.
 
 [Back to Table of Contents](#toc)
 
- ## Part 6: Integrated examples
+ ## Part 6. Integrated examples
 
 PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
 
