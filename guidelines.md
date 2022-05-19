@@ -1034,9 +1034,7 @@ Table 3: Non-verbal clause types
 There are four semantic types of nonverbal clauses: possession,
 location, property, and object. All of these occur with predicational
 information-packaging: the possessive relationship, location, property,
-or object category are predicated of the possession or theme. Possession
-and location are, in addition, used in a context in which the entire
-information is presented as ‘thetic’ or ‘all-new’ in the terms of
+or object category are predicated of the possession or theme. Possession and location are, in addition, used in a context in which the entire information is presented as ‘thetic’ or ‘all-new’ in the terms of
 Lambrecht’s theory of information structure (Lambrecht 1994; cf. the contrast between
 ‘have’ possession \[thetic\] and ‘belong’ possession \[predicational\]
 in Heine 1997). One common thetic function is presentational, as in the examples
@@ -1050,15 +1048,15 @@ referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
 For these nonverbal clause categories, the event identified is labelled
 with a special abstract UMR predicate that indicates the relevant combination of
-semantics and information-packaging. These are shown below in Table 4. For the labelling of participants with these
+semantics and information-packaging. These are shown below in Table 4. Note that some of these (e.g. `have-91`, `belong-91`) look very similar to existing English PropBank predicates (`have-03` and `belong-01`, respectively). However, they are cross-linguistic abstract concepts meant to annotate the crosslinguistically stable meanings of thetic possession and predicative possession, respectively. For the labelling of participants with these
 nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses).
 
 <div id="tab:nonverbalpreds">
 
 | **Clause type**                  | **UMR Predicate** |
 | :------------------------------- | :---------------- |
-| thetic/presentational possession | have-03           |
-| predicative possession           | belong-01         |
+| thetic/presentational possession | have-91           |
+| predicative possession           | belong-91         |
 | thetic/presentational location   | exist-91          |
 | predicative location             | have-location-91  |
 | property predication             | have-mod-91       |
