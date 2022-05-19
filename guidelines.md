@@ -1674,7 +1674,7 @@ We propose a set of seven abstract concept predicates each corresponding
 to a discrete "non-verbal clause" function, listed in the table below. When there is no overt predicate-word, as
 in [\[3-1-3-5 (1)\]](#3-1-3-5 (1)), we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
-with. They should use such an abstract predicate concept as predicative core of the graph, and use the appropriate numbered argument roles (:ARG0 and :ARG1 or :ARG1 and ARG2, depending on whether the predicate is inherited from AMR or not) as specified in
+with. They should use such an abstract predicate concept as predicative core of the graph, and use the appropriate numbered argument roles as specified in
 the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
@@ -1688,20 +1688,19 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 	
 | **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
 | :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
-| Thetic Possession      | have-03          | possessor | possessum        | ---              |
-| Predicative Possession | belong-01        | possessum | possessor        | ---              |
+| Thetic Possession      | have-91          | possessor | possessum        | ---              |
+| Predicative Possession | belong-91        | possessum | possessor        | ---              |
 | Thetic Location        | exist-91         | location  | theme            | ---              |
-| Predicative Location   | have-location-91 | ---       | theme            | location         |
+| Predicative Location   | have-location-91 | theme     | location         | ---              |
 | Property Predication   | have-mod-91      | ---       | theme            | property         |
 | Object Predication     | have-role-91     | theme     | reference point  | object category  |
 |                        | have-org-role-91 | theme     | organization     | role             |
 |                        | kinship-91       | theme     | family member    | kinship rel.     |
-| Equational             | identity-91      | ---       | theme            | equated referent |
+| Equational             | identity-91      | theme     | equated referent | ---              |
 
 Table 8: Argument structure of non-verbal clause predicates
 </div>
 
-[Back to Table of Contents](#toc)
 ##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
