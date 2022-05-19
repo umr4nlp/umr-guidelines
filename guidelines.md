@@ -5954,7 +5954,7 @@ structure is shown below in [\[4-3 (1)\]](#4-3 (1)).
 
 <span id="4-3 (1)" label="4-3 (1)">\[4-3 (1)\]</span>
 
-![Modal dependency structure](modal-dependency.png)
+![Modal dependency structure](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Modal%20Dep_2022.jpg)
 
 ```
 Martin said that the package has probably already arrived.
