@@ -502,7 +502,7 @@ UMR differs from AMR in a number of ways:
 
 [Back to Table of Contents](#toc)
 
-### Part 2-2: Introduction for field linguists.
+### Part 2-2. Introduction for field linguists.
 
 The annotation scheme detailed in these guidelines, Uniform Meaning
 Representation (UMR), intends to allow for annotation of temporal,
