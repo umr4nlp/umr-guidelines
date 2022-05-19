@@ -6861,51 +6861,71 @@ complement event node in the full dependency structure.
  * Sentence-level Annotation
  	* Choose the **top node** of the graph for the sentence you are annotating.
  		* If the sentence contains **one main event** (typically a lexical verb in a main clause), **annotate it** as the **top of the graph** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) and [Part 3-1-3](#part-3-1-3-concept-word-mismatches) on how to decide what counts as one event).
- 			* Highlight the word token that corresponds to the event. If a citation form of it is in the lexicon already, click the "Lexicalized Concept" button and select this lemma.
+ 			* Highlight the word token that corresponds to the event. 
+ 			* If a citation form of it is in the lexicon already, click the "Lexicalized Concept" button and select this lemma.
  			* If it is not in the lexicon yet, click the "add to Lexicon" button and create a lexical entry for it first.
+ 		* If the sentence contains a **"non-verbal clause"** concept as its main event, choose the relevant **non-verbal clause predicate** as the top node (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities), [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)).
  		* If the sentence contains **multiple events** expressed in multiple clauses, decide what the top node is **based on the logical relation** between the events:
- 			* If they are **coordinated**, choose the **relevant coordinator** as the top node (see [Part 3-1-6](#part-3-1-6-discourse-relations)).
-			* If one event is a **subevent** of the other, choose _have-subevent-91_ as the top node.
- 			* If one event is an **argument**, **circumstantial participant**, or **adverbial** in the other, choose the **main event** as the top node.
- 		* If the sentence contains a **"non-verbal clause"** concept, choose the relevant **non-verbal clause predicate** as the top node (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities), [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)).
- 	* Annotate the **participants** of the top node.
- 		* Select the correct **role/relation**:
- 			* If the top node is an **abstract concept predicate**, use **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
+	 		* If one event is an argument of another event, choose the **main event** as the top node.
+	 		* If one event is a **circumstantial participant** or **adverbial participant** in another event, choose the **main event** as the top node.
+	 		* If two events are **coordinated** but a fine-grained meaning on the lowest level of the lattice in [Part 3-1-6](#part-3-1-6-discourse-relations) can be identified, choose the **main event** as the top node following the guidelines in the aforementioned section.
+	 		* If two events are **coordinated** but a fine-grained meaning on the lowest level of the lattice in [Part 3-1-6](#part-3-1-6-discourse-relations) can not be identified, choose the **relevant coordinator concept** as the top node (see [Part 3-1-6](#part-3-1-6-discourse-relations)).
+ 			
+ 		
+ 	* Annotate the **participants** of the top node - these can be both entities and events.
+ 		* For each participant, select the correct **role/relation** from the "roles" drop-down menu:
+ 			* If the top node is an **abstract concept predicate**, use the appropriate **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
  			* If the top node is a **sense-disambiguated lexicalized concept** with frame files, use the relevant **numbered argument roles** (see [Part 3-1-4](#part-3-1-4-word-senses)).
  			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** ([Part 3-2-1-1](#part-3-2-1-1-stage-0)).
  			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
  		* Select the correct **concept** (see [Part 3-1-3](#part-3-1-3-concept-word-mismatches) for identification of participants expressed as part of the same word of the event):
  			* If the participant is overtly expressed as a **nominal**, add the **nominal word from the sentence** to the graph.
+	 			* Highlight the word token in the sentence.
+	 			* Click the "Lexicalized Concept" button, and then the word token in the drop-down menu.
  			* If the participant is overtly expressed as a **verb** (e.g. complement clause, adverbial), add the **verbal word from the sentence** to the graph.
+	 			* Highlight the word token in the sentence.
+	 			*  If a citation form of it is in the lexicon already, click the "Lexicalized Concept" button and select this lemma.
+	 			* If it is not in the lexicon yet, click the "add to Lexicon" button and create a lexical entry for it first.
  			* If the participant is expressed **pronominally**, is **impersonal**, is a **proper noun**, or is **not expressed overtly**, add the correct **named entity concept label** (e.g. _person_, _thing_, _river_ etc.) to the graph ([Part 3-1-2](#part-3-1-2-named-entities)).
+	 			* If the participant's name is overt in the sentence:
+		 			* Choose the correct label from the "Named Entity Types" drop-down menu
+		 			* Highlight the word tokens corresponding to it and add them using the "Lexicalized Concept" button.
+	 			* If the participant's name is not overt in the sentence
+		 			* Choose or type the correct label in the "Abstract Concept" drop-down menu and add it using the "Add Abstract Concept" button.
+ 			* If the participant **has been annotated in the graph for this sentence already** (e.g. reentrancy of a main clause participant in a complement clause), select the constant for this participant in the graph and add it using the "Lexicalized Concept" button.
  			* If the participant is expressed as a **participant nominalization**, choose either of the following options:
- 				* Add the word **directly from the sentence**.
- 				* Add the correct **named entity concept label** to the graph and modify it with an **inverse argument role** to the relevant event concept (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 				* Add the word **directly from the sentence** by highlighting it and using the "Lexicalized Concept" button.
+ 				* Add the correct **named entity concept label** to the graph through the "Named Entity Types" or "Abstract Concept" drop-down menu and modify it with an **inverse argument role** to the relevant event concept (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* **Repeat** these steps for every node you have added that corresponds to an **event concept**.
  	* Annote the **modifiers** of each participant.
- 		* If a participant is modified by a **property concept**, annotate it with an **inverse numbered participant role** to the _have-mod-91_ predicate, and complete the argument structure of this predicate (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
- 		* If a participant is modified by an **event concept** (e.g. relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 		* If a participant is modified by a **property concept**, either:
+	 		* Annotate it with an **:ARG1-of** relation to the **have-mod-91** predicate, and complete the argument structure of this predicate (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+	 		* Select the **:mod** relation from the "roles" drop-down menu, highlight the modifier word token in the sentence, and add it to the graph using the "Lexicalized Concept" button.
+ 		* If a participant is modified by an **event concept** (e.g. a relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by an **object concept**:
- 			* Annotate it with the _:mod_ relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
- 			* Annotate it with the _:poss_, _:part-of_, or _:ARG0-of (k/ kinship-91)_ relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
- 		* If a participant is modified by a **quantifier**, annotate it with the _:quant_ relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
- 		* If a participant is a **named entity**, apply the _:name_ and _:wiki_ relations to the appropriate named entity category concept node (see [Part 3-1-2](#part-3-1-2-named-entities)).
+ 			* Annotate it with the **:mod** relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
+ 			* Annotate it with the **:poss**, **:part-of**, or **:ARG0-of (k/ kinship-91)** relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 		* If a participant is modified by a **quantifier**, annotate it with the **:quant** relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
+ 		* If a participant is a **named entity**, apply the **:name** and **:wiki** relations to the appropriate named entity category concept node, if you have not done so yet (see [Part 3-1-2](#part-3-1-2-named-entities)).
  	* Annotate **attributes** of participants and events.
- 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a _:ref-number_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
- 		* Give "person" nodes from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:ref-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
- 		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines), an _:aspect_ attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
- 		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a _:mode_ attribute with the relevant value (see [Part 3-3-2](#part-3-3-2-mode)).
- 		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a _:polarity_ attribute with the relevant value (see [Part 3-3-3](#part-3-3-3-polarity)).
- 		* Give concepts that are modified with a **downtoner** or **intensifier** a _:degree_ attribute with the relevant value ([Part 3-3-6](#part-3-3-6-degree)).
+ 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a **:ref-number** attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give **_person_ nodes** from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:ref-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) an **:aspect** attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
+ 		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) the relevant **modal attributes** ([Part 4-3](#part-4-3-modal-dependency)):
+	 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a **:modpred** relation with the space-building complement-taking predicate as the parent.
+	 		* Give events **under the scope of a reporting event** a **:quot** relation with the reporting verb as the parent, and a **:modstr** relation with the relevant strenght.
+	 		* Give **all other events** a **:modstr** annotation with the relevant strength.
+ 		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a **:mode** attribute with the relevant value (see [Part 3-3-2](#part-3-3-2-mode)).
+ 		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a **:polarity** attribute with the relevant value (see [Part 3-3-3](#part-3-3-3-polarity)).
+ 		* Give concepts that are modified with a **downtoner** or **intensifier** a **:degree** attribute with the relevant value ([Part 3-3-6](#part-3-3-6-degree)).
  
  * Document-level Annotation
  	* For any **event concept** or **object concept**:
- 		* Assess whether it is **coreferential** with, or a **subset/subevent** of, a previously mentioned event or object concept.
+ 		* Assess whether it is **coreferential** with a previously mentioned event or object concept. In the case of object concepts, also assess whether it is a **subset** of another concept.
  		* If so, choose the relevant **coreference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
- 	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) a **modal annotation**, except for purpose clauses, conditionals, and concessives (see [Part 4-3](#part-4-3-modal-dependency)).
- 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a _:modpred_ relation with the space-building complement-taking predicate as the parent.
- 		* Give events **under the scope of a reporting event** a _:quot_ relation with the reporting verb as the parent, and a _:modstr_ relation with the relevant strenght.
- 		* Give **all other events** a _:modstr_ annotation with the relevant strength.
+ 	* Assess  the **modal dependency structure** generated on the basis of the sentence-level modal annotation.
+	 	* Edit any errors.
+	 	* If possible, substitute the relevant modal strength value for any **:Unsp** links generated between conceivers and events because of **:modpred** relations in the sentence-level annotation.
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
 
 [Back to Table of Contents](#toc)
