@@ -96,7 +96,7 @@
 * Part 7. [Alphabetical Index of UMR Annotation Categories](#part-7-alphabetical-index-of-UMR-annotation-categories)
 
 
-##  Part 1: Introduction: What is UMR and what does UMR annotation look like?
+##  Part 1. Introduction: What is UMR and what does UMR annotation look like?
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
 the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
