@@ -1806,7 +1806,7 @@ Someone didn't answer all the questions
    :ARG1 (q/ question
               :quant A
               :polarity -)
-   :pred-of (s/ scope
+   :Pred-of (s/ scope
                 :ARG0 p
                 :ARG1 q))
 ```
@@ -3467,7 +3467,7 @@ I didn't see whether he bought the sweater.
 		:ref-person 1st
 		:ref-number Singular)
 	:ARG1 (t/ truth-value
-		:polarity-of (b/ buy-01
+		:Polarity-of (b/ buy-01
 			:ARG0 (p2/ person
 				:ref-person 3rd
 				:ref-number Singular)
@@ -3492,7 +3492,7 @@ The runner was wearing a sweater.
 	:modstr FullAff)
 ```
 
-UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:actor-of` and `:undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-0)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
+UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:Actor-of` and `:Undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-0)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:Stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
 
 <span id="3-2-1-3 (2)" label="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
 
@@ -3503,7 +3503,7 @@ I bought the sweater that you saw.
 		:ref-person 1st
 		:ref-number Singular)
 	:theme (s/ sweater
-		:stimulus-of (s2/ see-01
+		:Stimulus-of (s2/ see-01
 			:experiencer (p2/ person
 				:ref-person 2nd
 				:ref-number Singular)
@@ -5221,7 +5221,7 @@ Snt3: He denied any wrongdoing.
     :modal((AUTH :FullAff s3p))
 	   (s3p :FullAff s3d)
 	   (s3d :Unsp s3d2))
-  **:coref(s2p :same-entity s3p))**
+  :coref(s2p :same-entity s3p))
 ```
 
 The example in [\[4-1-1 (2)\]](#4-1-1 (2)) shows how the `:subset-of` relation is used to relate mentions of sets of entities to mentions of entities belonging to such a set. For example, _we_ (`p3`) includes reference to two entities - the author/speaker of the sentence, and the person who is described as *possessive and controlling*. The pronoun _he_, given the constant `p2`, refers to one of these two entities. Therefore, in the document-level annotation, `p2` is annotated with a `:subset-of` relation to the `p3` node.
