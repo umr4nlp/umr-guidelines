@@ -65,7 +65,7 @@
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference)
     	* Part 4-1-1. [Entity coreference](#part-4-1-1-entity-coreference)
-    	* Part 4-1-2  [Event coreference](#part-4-1-2-event-coreference)
+    	* Part 4-1-2.  [Event coreference](#part-4-1-2-event-coreference)
     * Part 4-2. [Temporal dependency](#part-4-2-temporal-dependency)
     	* Part 4-2-1. [Temporal superstructure](#part-4-2-1-temporal-superstructure)
     		* Part 4-2-1-1. [Pre-defined metanodes](#part-4-2-1-1-pre-defined-metanodes)
