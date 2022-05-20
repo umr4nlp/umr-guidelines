@@ -755,7 +755,7 @@ apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=a
 		:name (n/ name :op1 "Venancio")
 	:companion (p2/ person))
 	:goal (p3/ place
-		:place-of (e2/ eleyvoma-00 'live'
+		:Place-of (e2/ eleyvoma-00 'live'
 			:actor (p4/ person
 				:ref-person 1st
 				:ref-number Plural)))
