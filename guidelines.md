@@ -1842,7 +1842,7 @@ Scope will not be annotated for summation readings (as we cannot reliably know i
 
 When multiple events are expressed in a complex sentence, a variety of semantic relations can hold between them. UMR provides annotators with a lattice of category values to annotate such discourse-level event-event relations. This lattice is based partly on existing typological research (Malchukov 2004; Thompson & Longacre 1985), and partly on patterns of expression through adverbial subordination or coordination in English. This lattice covers event-event relations that are typically overtly and obligatorily expressed in languages through either (coordinating or subordinating) conjunctions or dedicated (“deranked”) verb forms. In other words, it does not cover relations typically expressed through optional “discourse adverbs”.
 
-![Discourse Lattice_2022](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Discourse%20Lattice_2022.png)
+![Discourse Lattice_2022](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Discourse%20Lattice_May2022.png)
 
 Annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination (although, as mentioned before, subordination constructions may allow for the identification of more fine-grained meanings). In the examples below, both options are illustrated wherever possible.
 
@@ -2321,6 +2321,25 @@ Even if you arrive only five minutes late, you will be fired.
 				:unit (m/ minute)))
 		:aspect Performance
 		:modstr FullAff))
+```
+
+Lastly, the “(pure) contrast” meaning has a more fine-grained “subtraction” value, where one event is
+additionally characterized by the absence of a second event that is normally a part of
+the first event (Croft, to appear). UMR handles this meaning through a ```:subtraction``` relation that takes the absent second event as its child (see [3-1-6 (8)\]](#3-1-6 (8)).
+
+<span id="3-1-6 (8)" label="3-1-6 (8)">\[3-1-6 (8)\]</span>
+```
+People don't own tigers, except for Joe Exotic.
+(o/ own-01
+	:ARG0 (p/ person)
+	:ARG1 (t/ tiger
+		:ref-number Plural)
+	:subtraction (p2/ person
+		:name (n/ name
+			:op1 "Joe"
+			:op2 "Exotic"))
+	:aspect State
+	:modstr FullNeg)
 ```
 
 Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice, annotated in UMR using the ```but``` abstract concept and numbered ```:opX``` argument roles. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
