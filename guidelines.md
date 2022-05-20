@@ -6984,16 +6984,17 @@ complement event node in the full dependency structure.
 
 [Back to Table of Contents](#toc)
 
- ## Part 6. Integrated examples
+  ## Part 6. Integrated examples
 
 PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. The man rode up behind the Crow Chief. He aimed his gun at him. He fired.
 
 ```
 \ref	CrowCh(o).096
-\tx	"wohei,"	hee3oohok	nuhu'	3ii'okuni3i,	"nooxohowu',
-\mb	wohei		hee3oohok	nuhu'	3ii'oku -ni3i	nooxoh -owu'
-\ge	okay		said.to.s.o.	this	IC.sit -4PL	dig.hole.with.tool -2PL.IMPER
-\ps	part		vta.3s/4	det	vai -infl	vti -infl
+\tx	"wohei,"	hee3oohok		nuhu'	3ii'okuni3i,	"nooxohowu',	nooxohowu'!"
+\mb	wohei		hee3oohok		nuhu'	3ii'oku -ni3i	nooxoh -owu'			nooxoh-owu'
+\ge	okay		said.to.s.o.	this	IC.sit -4PL		dig.hole.with.tool -2PL.IMPER	dig.hole.with.too -2PL.IMPER
+\ps	part		vta.3s/4		det		vai -infl		vti -infl	vti -infl
+\ft "Wohei, the Crow Chief said to the ones sitting there, "dig for them, dig for them!""
 			Hee3- ‘say s.t. to s.o.’ (verb, di-transitive)
 			ARG 0 = [Crow Chief] [not overt in sentence]
 			ARG 1 = [those sitting there]
@@ -7002,29 +7003,39 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 			ARG 0 = [those sitting there]
 			ARG 1 = [bullets] [not overt in sentence]
 
-\tx	nooxohowu'!
-\mb	nooxoh -owu'
-\ge	dig.hole.with.tool -2PL.IMPER
-\ps	vti -infl
-\ft	"Wohei, the Crow Chief said to the ones sitting there, "dig for them, dig for them!"
-
-(h / hee3-01
-   :Arg0 (p / person :ref "3sg")
-   :Arg1 (p2 / person :ref "4pl"
-             :mod (n2 / nuhu')
-             :Arg0-of (x / 3ii'oku))
-   :Arg2 (n / nooxoh-01 :mode imperative
-              :Arg0 p2
-             :Arg1 (t / thing)
-             :discmark (w / wohei))
-    :temporal (b/before :op (n/now))
-    :aspect Performance)
+(h/ hee3-01 'say s.t. to s.o.'
+   :ARG0 (p/ person
+	   :ref-person 3rd
+	   :ref-number Singular)
+   :ARG1 (p2/ person
+	   :ARG0-of (x/ 3ii'oku 'sit'
+		   :aspect State
+		   :modstr FullAff)
+	   :mod (n/ nuhu' 'this')
+	   :ref-number Plural) 
+   :ARG2 (n2/ nooxoh-01 'dig for s.t. with a tool'
+	   :ARG0 p2
+	   :ARG1 (t/ thing)
+	   :other-role (w/ wohei)
+	   :aspect Performance
+	   :modstr PrtAff
+	   :mode Imperative)
+   :aspect Performance
+   :modstr FullAff)
+(s1/ sentence
+	:temporal ((PAST_REF :contained s1h)
+			   (s1h :overlap s1x)
+			   (s1h :after s1n2))
+	:modal ((AUTH :FullAff s1h)
+			(AUTH :FullAff s1x)
+			(AUTH :FullAff s1p)
+			(s1p :PrtAff s1n2)))
 
 \ref	CrowCh(o).097
-\tx	bii'inowuneehek,	neihoowneh'e'.
+\tx	bii'inowuneehek,		neihoowneh'e'.
 \mb	bii'in -owunee	-hek	neihoow- neh' -e'
 \ge	find.s.t. -2PL	-SUBJ	1.NEG- kill -3/1
-\ps	vti -infl	-infl		infl.pref- vta -infl
+\ps	vti 	-infl	-infl	infl.pref- vta -infl
 \ft	"If you find [the bullets], he does not kill me."
 	Bii’in- ‘find s.t.’ (verb, transitive)
 	ARG 0 = [you]
@@ -7032,28 +7043,79 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	Neh’- ‘kill s.o.’ (verb, transitive)
 	ARG 0 = [he]
 	ARG 1 = [me]
-(n/neh’ 
-   :Arg0 (p / person :ref “3sg”)
-   :Arg1 (p2/person :ref “1sg”)
-   :polarity –
-   :condition (b/ Bii’in
-                         :Arg0 (p3 /person :ref “2pl”)
-                         :Arg1 (t/thing )))
-			 
+(e/ event
+	:actor (p/ person
+	:theme (n/ neh'-01 'kill s.o.'
+		:ARG0 (p2/ person
+			:ref-person 3rd
+			:ref-number Singular)
+		:ARG1 (p3/ person
+			:ref-person 1st
+			:ref-number Singular)
+		:condition (b/ bii'in-01 'find s.t.'
+			:ARG0 (p4/ person
+				:ref-person 2nd
+				:ref-number Plural)
+			:ARG1 (t/ thing)
+			:aspect Performance
+			:modstr FullAff)
+		:aspect Performance
+		:modstr FullNeg
+		:quot e))
+(s2/ sentence
+	:temporal ((s1h :after s2e)
+			   (s2e :after s2b)
+			   (s2b :after s2n))
+	:modal ((AUTH :FullAff s2e)
+			(AUTH :FullAff s2p)
+			(s2p :NeutAff have-condition)
+			(have-condition :FullNeg s2n)
+			(have-condition :FullAff s2b))
+	:coref ((s1p :same-entity s2p)
+			(s2p :same-entity s2p3)
+			(s1p2 :same-entity s2p4)
+			(s1t :same-entity s2t)))
+					 
 \ref	CrowCh(o).098
-\tx	ciibii'inowuneehek,	noh	ne'neh'einoo."
-\mb	cii- bii'in -owunee	-hek	noh	ne'- neh' -einoo
-\ge	NEG- find.s.t. -2PL	-SUBJ	and	then- kill -3S/1S
-\ps	pref- vti -infl	-infl	part	pref- vta -infl
+\tx	ciibii'inowuneehek,			noh		ne'neh'einoo."
+\mb	cii- bii'in -owunee	-hek	noh		ne'- neh' -einoo
+\ge	NEG- find.s.t. -2PL	-SUBJ	and		then- kill -3S/1S
+\ps	pref- vti -infl	-infl		part	pref- vta -infl
 \ft	"If you don't find them, then he kills me."
 	SAME ARG STRUCTURE AS PRECEDING
-(n/neh’ 
-   :Arg0 (p / person :ref “3sg”)
-   :Arg1 (p2/person :ref “1sg”)
-   :condition (b/ Bii’in
-                         :polarity –
-                         :Arg0 (p3 /person :ref “2pl”)
-                         :Arg1 (t/thing ))
+(e/ event
+	:actor (p/ person
+	:theme (n/ neh'-01 'kill s.o.'
+		:ARG0 (p2/ person
+			:ref-person 3rd
+			:ref-number Singular)
+		:ARG1 (p3/ person
+			:ref-person 1st
+			:ref-number Singular)
+		:condition (b/ bii'in-01 'find s.t.'
+			:ARG0 (p4/ person
+				:ref-person 2nd
+				:ref-number Plural)
+			:ARG1 (t/ thing)
+			:aspect Performance
+			:modstr FullNeg)
+		:aspect Performance
+		:modstr FullAff
+		:quot e))
+(s3/ sentence
+	:temporal ((s2e :after s3e)
+			   (s3e :after s3b)
+			   (s3b :after s3n))
+	:modal ((AUTH :FullAff s3e)
+			(AUTH :FullAff s3p)
+			(s3p :NeutAff have-condition)
+			(have-condition :FullAff s3n)
+			(have-condition :FullNeg s3b))
+	:coref ((s2p3 :same-entity s3p)
+			(s3p :same-entity s3p3)
+			(s2p2 :same-entity s3p2)
+			(s2p4 :same-entity s3p4)
+			(s2t :same-entity s3t)))
 
 \ref	CrowCh(o).099
 \tx	wo'oe'onoun	he'ih'iinooxoheino'.
@@ -7067,14 +7129,21 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
  				verb is syntactically/grammatically intransitive, though
  				semantically transitive]
 
-(n/nooxohei
-   :Arg0 (p/person :ref “3pl”)
-   :Arg1 (t /thing)
-   :manner (w / wo'oe'onoun)
-   :temporal (b/before :op (n/now))
-   :aspect Activity)
+(n/ nooxohei-01 'dig for s.t. unspecified'
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG1 (t/ thing)
+	:duration (w/ wo'oe'onoun 'on and on')
+	:aspect Activity
+	:modstr FullAff)
+(s4/ sentence
+	:temporal (s3e :after s4n)
+	:modal (AUTH :FullAff s4n)
+	:coref ((s3p4 :same-entity s4p)
+			(s3t :same-entity s4t)
+			(s1n2 :same-event s4n)))
 
-    
 \ref	CrowCh(o).100
 \tx	he'ihnooko'wuuteen.
 \mb	he'ih- nooko'wuutee-  ni
@@ -7084,32 +7153,41 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	Nooko’wuutee- ‘there is a white mark in the ground’ or ‘the ground is marked white’ (verb, intransitive)
 	ARG 0 = [the ground] (incorporated into the verb)
 
-(w / nooko'wuutee
-       :Arg0 (t /thing)
-       :temporal (b/before :op (n/now))
-       :aspect State)
+(h/ have-mod-91
+       :ARG1 (t /thing)
+       :ARG2 (n/ nooko'wuutee 'have.white.streak')
+       :aspect State
+       :modstr FullAff)
+(s5/ sentence
+	:temporal (s4n :overlap s5h)
+	:modal (AUTH :FullAff s5h))
 
 \ref	CrowCh(o).101
 \tx	niisootoxuuus	ne'no'uxoo';		nooxoheino'.
 \mb	niisootox- uuus	ne'- no'uxoo -'		nooxohei -no'
-\ge	seven- days	then- arrive -0S		dig.holes -pers.PL
-\ps	pref- ni.pl	pref- vai+aff -infl	vai.o -infl
+\ge	seven- days		then- arrive -0S	dig.holes -pers.PL
+\ps	pref- ni.pl		pref- vai+aff -infl	vai.o -infl
 \ft	For seven days they are digging (for them).
 			No’uxoo- ‘a certain time arrives, comes’ (verb, intransitive)
 			ARG 0 = [(end of) seven days]
 			Nooxohei- ‘dig for s.t. unspecified’ (verb, intransitive)
-			SEE ARG STRUCTURE ABOVE
-(a/and 
-   : op1 ( n /No’uxoo
-                   :Arg0 (n2 /  niisootoxuuus)
-                   :temporal (b/before :op1 (n /now))
-		   :aspect Performance)
-   :op2  (n2/ nooxohei
-                  :Arg0 (p/person :ref “3pl”)
-                  :Arg1 (t /thing))
-		  :aspect Activity)
-
-
+			SEE ARG STRUCTURE ABOVE SENTENCE 4
+(n/ nooxohei-01 'dig for s.t. unspecified'
+	:ARG0 (p/ person
+		:ref-person 3rd
+		:ref-number Plural)
+	:ARG1 (t/ thing)
+	:duration (t2/ temporal-quantity
+		:unit (u/ uuus 'day')
+		:quant 7)
+	:aspect Activity
+	:modstr FullAff)
+(s6/ sentence
+	:temporal (s5h :overlap s6n)
+	:modal (AUTH :FullAff s6n)
+	:coref ((s4p :same-entity s6p)
+			(s4t :same-entity s6t)))
+	
 \ref	CrowCh(o).102
 \tx	hoo3ontii3i';
 \mb	hoo3ontii -3i'
@@ -7119,11 +7197,21 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	Hoo3ontii- ‘fail to do s.t.’ (verb, intransitive)
 	ARG 0 = [the ones sitting there] [not overt in the sentence]
 	ARG 1 (implied only) = [find the bullets by digging] [not overt in the sentence, and the verb is syntactically/grammatically intransitive, though semantically transitive]
-   (h/ hoo3ontii
-       :Arg0 (p  /person :ref “3pl”)
-       :temporal (b /before :op (n /now))
-       :aspect Endeavor)
-
+   (h/ hoo3ontii 'fail to do s.t.'
+       :ARG0 (p/ person
+	       :ref-person 3rd
+	       :ref-number Plural)
+	   :ARG1 (e/ event
+		   :mod h)
+       :aspect Performance
+       :modstr FullAff)
+   (s7/ sentence
+	   :temporal (s6n :after s7h)
+	   :modal ((AUTH :FullAff s7h)
+			   (AUTH :FullAff s7p)
+			   (s7p :Unsp s7e))
+	   :coref ((s6p :same-entity s7p)
+			   (s2b :same-event s7e)))
 ```
 
 [Back to Table of Contents](#toc)
