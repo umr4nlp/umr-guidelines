@@ -6005,9 +6005,9 @@ Martin said that the package has probably already arrived.
 (s/ sentence
 	:temporal ((PAST_REF :contained s1s)
 		   (s1s :before s1a))
-	**:modal ((AUTH :FullAff s1p)
+	:modal ((AUTH :FullAff s1p)
 		(AUTH :FullAff s1s)
-		(s1p :PrtAff s1a)))**
+		(s1p :PrtAff s1a)))
 ```
 
 The *say*-event and the *arrive*-event each get a modal strength value (`:modstr`), which can then be represented
