@@ -2247,7 +2247,7 @@ There are three subtypes of unexpected co-occurrence relations that confident an
 
 <span id="3-1-6 (7a)" label="3-1-6 (7a)">\[3-1-6 (7a)\]</span>
 ```
-Sarah carried the bowl of punch into the living room **without** doing a somersault. / Sarah carried the bowl of punch into the living room **and/but** didn't do a somersault.
+Sarah carried the bowl of punch into the living room without doing a somersault. / Sarah carried the bowl of punch into the living room and/but didn't do a somersault.
 (c/ carry-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Sarah"))
@@ -2266,7 +2266,7 @@ Sarah carried the bowl of punch into the living room **without** doing a somersa
 
 <span id="3-1-6 (7b)" label="3-1-6 (7b)">\[3-1-6 (7b)\]</span> 
 ```
-Sarah carried the bowl of punch into the living room **without** spilling a drop. / Sarah carried the bowl of punch into the living room **and/but** didn't spill a drop.
+Sarah carried the bowl of punch into the living room without spilling a drop. / Sarah carried the bowl of punch into the living room and/but didn't spill a drop.
 (c/ carry-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Sarah"))
@@ -2287,7 +2287,7 @@ Sarah carried the bowl of punch into the living room **without** spilling a drop
 
 <span id="3-1-6 (7c)" label="3-1-6 (7c)">\[3-1-6 (7c)\]</span>
 ```
-**Even though** he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
+Even though he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
 (b/ buy-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -2306,7 +2306,7 @@ Sarah carried the bowl of punch into the living room **without** spilling a drop
 
 <span id="3-1-6 (7d)" label="3-1-6 (7d)">\[3-1-6 (7d)\]</span>
 ```
-**Even if** you arrive only five minutes late, you will be fired.
+Even if you arrive only five minutes late, you will be fired.
 (f/ fire-02
 	:ARG1 (p/ person
 		:ref-person 2nd
