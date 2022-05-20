@@ -4207,7 +4207,7 @@ nominals, as in [\[3-3-1-1 (1)\]](#3-3-1-1 (1)), are annotated as
 
 <span id="3-3-1-1 (1a)" label="3-3-1-1 (1a)">\[3-3-1-1 (1a)\]</span>
 ```
-He presented his research at **the meeting** yesterday.
+He presented his research at the meeting yesterday.
 (p/ present-01
 	:ARG0 (p2/ person
 		:ref-person 3rd
@@ -4223,7 +4223,7 @@ He presented his research at **the meeting** yesterday.
 ```
 <span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">\[3-3-1-1 (1b)\]</span>   
 ```
-After **the game**, she went home.
+After the game, she went home.
 (g/ go-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4244,7 +4244,7 @@ includes underived nominals, nominalizations, and gerunds, as in
 
 <span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">\[3-3-1-1 (2a)\]</span>   
 ```
-**The second training** was cancelled yesterday.
+The second training was cancelled yesterday.
 (c/ cancel-01
 	:ARG1 (t/ train-01
 		:ord (o/ ordinal-entity
@@ -4254,9 +4254,9 @@ includes underived nominals, nominalizations, and gerunds, as in
 	:aspect Performance
 	:modstr FullAff) 
 ```
-<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">\[3-3-1-1 (2b)\]</span> The dog
-interrupted the meeting with **his barking**.  
+<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">\[3-3-1-1 (2b)\]</span>   
 ```
+The dog interrupted the meeting with his barking.
 (i/ interrupt-01
 	:ARG0 (d/ dog
 		:ref-number Singular)
@@ -4302,7 +4302,7 @@ habitually, as in [\[3-3-1-2 (1)\]](#3-3-1-2 (1)).
 
 <span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">\[3-3-1-2 (1a)\]</span> 
 ```
-He **bakes** pies.
+He bakes pies.
 (b/ bake-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4314,7 +4314,7 @@ He **bakes** pies.
 ```
 <span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">\[3-3-1-2 (1b)\]</span>  
 ```
-She **rides** her bike to work.
+She rides her bike to work.
 (r/ ride-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4329,7 +4329,7 @@ She **rides** her bike to work.
 ```
 <span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">\[3-3-1-2 (1c)\]</span>   
 ```
-They **vacation** in Taos every winter.
+They vacation in Taos every winter.
 (v/ vacation-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4347,7 +4347,7 @@ They **vacation** in Taos every winter.
 ```
 <span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">\[3-3-1-2 (1d)\]</span>
 ```
-They **used to vacation** in Taos every winter.
+They used to vacation in Taos every winter.
 (v/ vacation-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4383,7 +4383,7 @@ identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-conc
 
 <span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">\[3-3-1-3 (1a)\]</span>  
 ```
-My cat **loves** tuna.
+My cat loves tuna.
 (l/ love-01
 	:ARG0 (c/ cat
 		:poss (p/ person
@@ -4396,7 +4396,7 @@ My cat **loves** tuna.
 ```
 <span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">\[3-3-1-3 (1b)\]</span>  
 ```
-The doctor **is tall**.
+The doctor is tall.
 (h/ have-mod-91
 	:ARG1 (d/ doctor
 		:ref-number Singular)
@@ -4406,7 +4406,7 @@ The doctor **is tall**.
 ```
 <span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">\[3-3-1-3 (1c)\]</span>   
 ```
-The book **is on the table**.
+The book is on the table.
 (h/ have-location-91
 	:ARG0 (b/ book
 		:ref-number Singular)
@@ -4416,7 +4416,7 @@ The book **is on the table**.
 ```
 <span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">\[3-3-1-3 (1d)\]</span>   
 ```
-She **is an architect**.
+She is an architect.
 (h/ have-role-91
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4427,7 +4427,7 @@ She **is an architect**.
 ```
 <span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">\[3-3-1-3 (1e)\]</span>   
 ```
-Your glass **is in the kitchen**.
+Your glass is in the kitchen.
 (h/ have-location-91 
 	:ARG0 (g/ glass
 		:poss (p/ person
@@ -4446,7 +4446,7 @@ ability modals, as in [\[3-3-1-3 (3)\]](#3-3-1-3 (3)), are also annotated as
 
 <span id="3-3-1-3 (2a)" label="3-3-1-3 (2a)">\[3-3-1-3 (2a)\]</span>  
 ```
-He **wants** to travel to Albuquerque. 
+He wants to travel to Albuquerque. 
 (w/ want-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4463,7 +4463,7 @@ He **wants** to travel to Albuquerque.
 ```
 <span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">\[3-3-1-3 (2b)\]</span> 
 ```
-The cat **needs** to be fed.
+The cat needs to be fed.
 (n/ need-01
 	:ARG0 (c/ cat)
 	:ARG1 (f/ feed-01
@@ -4475,7 +4475,7 @@ The cat **needs** to be fed.
 ```
 <span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">\[3-3-1-3 (2c)\]</span>   
 ```
-He’s **dreading** their decision.
+He’s dreading their decision.
 (d/ dread  
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4493,7 +4493,7 @@ He’s **dreading** their decision.
 
 <span id="3-3-1-3 (3a)" label="3-3-1-3 (3a)">\[3-3-1-3 (3a)\]</span>   
 ```
-She <u>is able to</u> **sing** that aria.
+She is able to sing that aria.
 (s/ sing-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4506,7 +4506,7 @@ She <u>is able to</u> **sing** that aria.
 ```
 <span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">\[3-3-1-3 (3b)\]</span>   
 ```
-This car <u>can</u> **go** up to 150 mph.
+This car can go up to 150 mph.
 (g/ go-01
 	:ARG0 (c/ car
 		:mod (t/ this)
@@ -4547,7 +4547,7 @@ the aspect annotation.
 
 <span id="3-3-1-3 (4a)" label="3-3-1-3 (4a)">\[3-3-1-3 (4a)\]</span> 
 ```
-My cat **is black and white**.
+My cat is black and white.
 (h/ have-mod-91
 	:ARG1 (c/ cat
 		:poss (p/ person
@@ -4562,7 +4562,7 @@ My cat **is black and white**.
 ```
 <span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">\[3-3-1-3 (4b)\]</span>   
 ```
-My cat **is hungry**.
+My cat is hungry.
 (h / hunger-01
 	:ARG0 (c/ cat
 		:poss (p/ person
@@ -4574,7 +4574,7 @@ My cat **is hungry**.
 ```
 <span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">\[3-3-1-3 (4c)\]</span>   
 ```
-The wine glass **is shattered**.
+The wine glass is shattered.
 (s/ shatter-01
 	:ARG1 (g/ glass
 		:purpose (w/ wine)
@@ -4584,7 +4584,7 @@ The wine glass **is shattered**.
 ```
 <span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">\[3-3-1-3 (4d)\]</span>  
 ```
-It **is 2:30pm**.
+It is 2:30pm.
 (b/ be-temporally-at-91
 	:ARG1 (n/ now)
 	:ARG2 (d/ date-entity
@@ -4626,7 +4626,7 @@ when there is no evidence that the event has come to an end, as in
 
 <span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">\[3-3-1-4 (1a)\]</span>   
 ```
-He is still **writing** his paper.
+He is still writing his paper.
 (w/ write-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4640,7 +4640,7 @@ He is still **writing** his paper.
 ```
 <span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">\[3-3-1-4 (1b)\]</span>   
 ```
-He was **writing** his paper yesterday.
+He was writing his paper yesterday.
 (w/ write-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4665,7 +4665,7 @@ present tense, as in [\[3-3-1-4 (2)\]](#3-3-1-4 (2)), are annotated as
 
 <span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span>   
 ```
-He **is playing** the violin.
+He is playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
 		:ref-person 3rd
@@ -4682,7 +4682,7 @@ also do not imply that an event has (necessarily) ended.
 
 <span id="3-3-1-4 (3a)" label="3-3-1-4 (3a)">\[3-3-1-4 (3a)\]</span>
 ```
-He <u>started</u> **playing** the violin.
+He started playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
 		:ref-person 3rd
@@ -4693,7 +4693,7 @@ He <u>started</u> **playing** the violin.
 ```
 <span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">\[3-3-1-4 (3b)\]</span>   
 ```
-He <u>kept on</u> **playing** the violin.
+He kept on playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
 		:ref-person 3rd
@@ -4716,7 +4716,7 @@ and ```undirected activity``` respectively.
 
 <span id="3-3-1-4 (4)" label="3-3-1-4 (4)">\[3-3-1-4 (4)\]</span>
 ```
-The soup was **cooling** on the counter.
+The soup was cooling on the counter.
 (c/ cool
 	:ARG1 (s/ soup)
 	:place (c2/ counter)
@@ -4726,7 +4726,7 @@ The soup was **cooling** on the counter.
 
 <span id="3-3-1-4 (5)" label="3-3-1-4 (5)">\[3-3-1-4 (5)\]</span>
 ```
-The cat was **meowing** outside the door.
+The cat was meowing outside the door.
 (m/ meow-01
 	:ARG0 (c/ cat
 		:ref-number Singular)
@@ -4778,7 +4778,7 @@ illustrated for English below.
 
 <span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">\[3-3-1-5 (1a)\]</span>   
 ```
-Mary <u>stopped</u> **mowing** the lawn.
+Mary stopped mowing the lawn.
 (m/ mow-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -4788,7 +4788,7 @@ Mary <u>stopped</u> **mowing** the lawn.
 ```
 <span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">\[3-3-1-5 (1b)\]</span>   
 ```
-Mary **mowed** the lawn <u>for thirty minutes</u>.
+Mary mowed the lawn for thirty minutes.
 (m/ mow-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
@@ -4804,7 +4804,7 @@ Mary **mowed** the lawn <u>for thirty minutes</u>.
 
 <span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">\[3-3-1-5 (1d)\]</span>  
 ```
-They **walked** <u>along the river</u>. 
+They walked along the river. 
 (w/ walk-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4816,7 +4816,7 @@ They **walked** <u>along the river</u>.
 ```
 <span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">\[3-3-1-5 (1e)\]</span>  
 ```
-They <u>finished</u> **walking** <u>along the river</u>.
+They finished walking <u>along the river</u>.
 (w/ walk-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4828,7 +4828,7 @@ They <u>finished</u> **walking** <u>along the river</u>.
 ```
 <span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">\[3-3-1-5 (1f)\]</span>   
 ```
-They **walked** <u>along the river</u> <u>in 3 hours</u>.
+They walked along the river in 3 hours.
 (w/ walk-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -4884,7 +4884,7 @@ process), as in [\[3-3-1-5 (2c)\]](#3-3-1-5 (2c)).
 
 <span id="3-3-1-5 (2a)" label="3-3-1-5 (2a)">\[3-3-1-5 (2a)\]</span> 
 ```
-The cat **meowed** for two hours until I woke up.
+The cat meowed for two hours until I woke up.
 (m/ meow-01
 	:ARG0 (c/ cat)
 	:duration (t/ temporal-quantity
@@ -4902,7 +4902,7 @@ The cat **meowed** for two hours until I woke up.
 ```
 <span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">\[3-3-1-5 (2b)\]</span> 
 ```
-The soup **cooled**for an hour before we ate it.
+The soup cooled for an hour before we ate it.
 (c/ cool-01
 	:ARG1 (s/ soup)
 	:duration (t/ temporal-quantity
@@ -4922,7 +4922,7 @@ The soup **cooled**for an hour before we ate it.
 
 <span id="3-3-1-5 (2c)" label="3-3-1-5 (2c)">\[3-3-1-5 (2c)\]</span> 
 ```
-The cat **meowed** (once).
+The cat meowed (once).
 (m/ meow-01
 	:ARG0 (c/ cat
 		:ref-number Singular)
@@ -4973,7 +4973,7 @@ eventually succeeds in repairing the computer.
 
 <span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">\[3-3-1-5 (3a)\]</span> 
 ```
-The door **opened**.
+The door opened.
 (o/ open-01
 	:ARG1 (d/ door
 		:ref-number Singular)
@@ -4982,7 +4982,7 @@ The door **opened**.
 ```
 <span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">\[3-3-1-5 (3b)\]</span> 
 ```
-The window **shattered**.
+The window shattered.
 (s/ shatter-01
 	:ARG1 (w/ window
 		:ref-number Singular)
@@ -4991,7 +4991,7 @@ The window **shattered**.
 ```
 <span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">\[3-3-1-5 (3c)\]</span> 
 ```
-I **ate** an apple pancake.
+I ate an apple pancake.
 (e/ eat-01
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -5004,7 +5004,7 @@ I **ate** an apple pancake.
 ```
 <span id="3-3-1-5 (3d)" label="3-3-1-5 (3d)">\[3-3-1-5 (3d)\]</span>
 ```
-Harry **repaired** the computer.
+Harry repaired the computer.
 (r/ repair-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Harry"))
