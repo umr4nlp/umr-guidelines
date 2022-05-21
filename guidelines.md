@@ -2363,9 +2363,9 @@ event (the event that it is dependent on) and annotated with a
 participant role label. The participant role annotation is organized as a road map with different stages. The factor which
 determines where a language begins on the road map is whether there is
 an existing PropBank-style lexicon (frame files) for the language which defines predicate-specific roles. An English PropBank
-frame file is shown in [\[3-2-1 (1)\]](#3-2-1 (1)).
+frame file is shown in <a href="#3-2-1 (1)">(1)</a>.
 
-<span id="3-2-1 (1)" label="3-2-1 (1)">\[3-2-1 (1)\]</span>
+<span id="3-2-1 (1)">\[3-2-1 (1)\]</span>
 ```
 Predicate: give.01  
 	Roles:    
@@ -2389,56 +2389,58 @@ alternations. In semantic alternations, the basic and non-basic
 constructions differ in terms of the semantic content that they express,
 i.e., they don’t refer to the same “real-world” event. Reciprocals are
 an example of a semantic alternation, seen below in
-[\[3-2-1 (2)\]](#3-2-1 (2)) from Torau (Parkinson 2018:53).
+<a href="#3-2-1 (2)">(2)</a> from Torau (Parkinson 2018:53).
 
-<span id="3-2-1 (2)" label="3-2-1 (2)">\[3-2-1 (2)\]</span>
+<span id="3-2-1 (2)">\[3-2-1 (2)\]</span>
 
-<span id="3-2-1 (2a)" label="3-2-1 (2a)">\[3-2-1 (2a)\]</span>
+<span id="3-2-1 (2a)">\[3-2-1 (2a)\]</span>
 ```
 ta-di=lo	daki-a		tioni	arimi 		ta 	besu  
 PFV-3PL.S=go	find-3SG.O	man	feel.sorry	3SG.PFV	be.hungry
 ‘When they found him, the poor many was hungry.’
 ```
 
-<span id="3-2-1 (2b)" label="3-2-1 (2b)">\[3-2-1 (2b)\]</span>
+<span id="3-2-1 (2b)">\[3-2-1 (2b)\]</span>
 ```
 ta-di=lama 	ari 	da-daki 	uua=i
 PFV-3PL.S-TAM	REC	RDP-find	in.that.direction=LOC
 ‘They had found each other.’
 ```
 
-The event described in [\[3-2-1 (2a)\]](#3-2-1 (2a)) is different than the
-event described in [\[3-2-1 (2b)\]](#3-2-1 (2b)) - in the former, the finder and findee are different, while in the latter they are the same. This is in contrast to
+The event described in <a href="#3-2-1 (2a)">(2a)</a> is different than the
+event described in <a href="#3-2-1 (2b)">(2b)</a> - in the former, the finder and findee are different, while in the latter they are the same. This is in contrast to
 valency alternations which reflect a pragmatic difference between the
 basic and non-basic construction. With pragmatic alternations, both
 constructions refer to the same “real-world” event, but they package
 that information differently, often in terms of the topicality (or,
 discourse salience) of participants. Passive constructions are an
 example of a pragmatic valency alternation, as seen in
-[\[3-2-1 (3)\]](#3-2-1 (3)) from Balinese (Shibatani and Artawa 2013).
+<a href="#3-2-1 (3)">(3)</a> from Balinese (Shibatani and Artawa 2013).
 
-<span id="3-2-1 (3)" label="3-2-1 (3)">\[3-2-1 (3)\]</span>
+<span id="3-2-1 (3)">\[3-2-1 (3)\]</span>
+
+<span id="3-2-1 (3a)">\[3-2-1 (3a)\]</span>
 ```
 anak=e 		muani	cenik	ento 	ngajeng buah=e 		ento 
 person=DEF	male	small	that	eat	fruit=DEF	that
 ‘The boy ate the fruit.’
 ```
-<span id="3-2-1 (3b)" label="3-2-1 (3b)">\[3-2-1 (3b)\]</span>
+<span id="3-2-1 (3b)">\[3-2-1 (3b)\]</span>
 ```
 buah=e 		ento 	ajeng=a 	teken 	anak=e 		muani 	cenik	ento
 fruit=DEF	that	eat=PASS	by	person=DEF	male	small	that
 ‘The fruit was eaten by the boy.’
 ```
-Here, [\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) could
+Here, <a href="#3-2-1 (3a)">(3a)</a> and <a href="#3-2-1 (3b)">(3b)</a> could
 refer to the same event, with the main difference being the saliency or
 topicality of *anak=e muani cenik* ‘the boy’.
 
 Broadly, UMR indicates semantic valency alternations with the
 participant role annotation, while pragmatic alternations are not
 reflected in the UMR. This means that the participant role annotations
-for [\[3-2-1 (2a)\]](#3-2-1 (2a)) and [\[3-2-1 (2b)\]](#3-2-1 (2b)) would be
+for <a href="#3-2-1 (2a)">(2a)</a> and <a href="#3-2-1 (2b)">(2b)</a> would be
 different, where as the participant role annotation for
-[\[3-2-1 (3a)\]](#3-2-1 (3a)) and [\[3-2-1 (3b)\]](#3-2-1 (3b)) would be the
+<a href="#3-2-1 (3a)">(3a)</a> and <a href="#3-2-1 (3b)">(3b)</a> would be the
 same. The annotations for valency alternations also depend on the stage
 of the road map, which will be detailed in [Part 3-2-1-1-2](#part-3-2-1-1-2-valency-alternations) and [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
 
@@ -2515,14 +2517,14 @@ change-of-state events, construed broadly to include creation and
 contact events as well. The ```:undergoer```
 role is used for the entity that undergoes the change-of-state, is the
 endpoint of force in a contact event, or is created in a creation event,
-as seen in [\[3-2-1-1 (1)\]](#3-2-1-1 (1)). The ```:material```
+as seen in <a href="#3-2-1-1 (1)">(1)</a>. The ```:material```
 role only occurs with creation events, as in
-[\[3-2-1-1 (1c)\]](#3-2-1-1 (1c)), and is used for the raw materials
+<a href="#3-2-1-1 (1c)">(1c)</a>), and is used for the raw materials
 that are transformed into the created object.
 
-<span id="3-2-1-1 (1)" label="3-2-1-1 (1)">\[3-2-1-1 (1)\]</span>
+<span id="3-2-1-1 (1)">\[3-2-1-1 (1)\]</span>
 
-<span id="3-2-1-1 (1a)" label="3-2-1-1 (1a)">\[3-2-1-1 (1a)\]</span>
+<span id="3-2-1-1 (1a)">\[3-2-1-1 (1a)\]</span>
 ```
 The ice cube melted.  
 (m/ melt-01  
@@ -2532,7 +2534,7 @@ The ice cube melted.
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1 (1b)" label="3-2-1-1 (1b)">\[3-2-1-1 (1b)\]</span> 
+<span id="3-2-1-1 (1b)">\[3-2-1-1 (1b)\]</span> 
 ```
 The enemy sank the ship. 
 (s/ sink-01  
@@ -2543,7 +2545,7 @@ The enemy sank the ship.
 	:modstr FullAff)
 
 ```
-<span id="#3-2-1-1 (1c)" label="#3-2-1-1 (1c)">\[#3-2-1-1 (1c)\]</span> 
+<span id="#3-2-1-1 (1c)">\[#3-2-1-1 (1c)\]</span> 
 ```
 She built a house out of wood. 
 (b/ build-01  
@@ -2556,7 +2558,7 @@ She built a house out of wood.
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="#3-2-1-1 (1d)" label="#3-2-1-1 (1d)">\[#3-2-1-1 (1d)\]</span> 
+<span id="#3-2-1-1 (1d)">\[#3-2-1-1 (1d)\]</span> 
 ```
 He hit the stick against the fence.  
 (h / hit-01
@@ -2572,14 +2574,14 @@ He hit the stick against the fence.
 ```
 The `:experiencer` and
 `:stimulus` roles always occur with
-experiential events, as seen in [\[3-2-1-1 (4)\]](#3-2-1-1 (4)). The
+experiential events, as seen in <a href="#3-2-1-1 (4)">(4)</a>. The
 `:experiencer` role is used for the
 mental-level entity which attends to, reacts to, or passively
 experiences the `:stimulus` role.
 
-<span id="3-2-1-1 (4)" label="3-2-1-1 (4)">\[3-2-1-1 (4)\]</span>
+<span id="3-2-1-1 (4)">\[3-2-1-1 (4)\]</span>
 
-<span id="3-2-1-1 (4a)" label="3-2-1-1 (4a)">\[3-2-1-1 (4a)\]</span>
+<span id="3-2-1-1 (4a)">\[3-2-1-1 (4a)\]</span>
 ```
 The audience listened to the concerto.  
 (l/ listen-01
@@ -2589,7 +2591,7 @@ The audience listened to the concerto.
 	:aspect State
 	:modstr FullAff)
 ```
-<span id="3-2-1-1 (4b)" label="3-2-1-1 (4b)">\[3-2-1-1 (4b)\]</span>
+<span id="3-2-1-1 (4b)">\[3-2-1-1 (4b)\]</span>
 ```
 The cat startled me.
 (s/ startle-01  
@@ -2609,22 +2611,22 @@ with Motion/Location events and one with other event classes.
 `:goal`, and
 `:place` are used for locations –
 `:start` is the location from which motion
-originates, as in [\[3-2-1-1 (5a)\]](#[3-2-1-1 (5a)),
+originates, as in <a href="#3-2-1-1 (5a)">(5a)</a>,
 `:goal` is the location in which motion
-ends, as in [\[[3-2-1-1 (5b)\]](#3-2-1-1 (5b)) and [\[3-2-1-1 (5c)\]](#3-2-1-1 (5c)),
+ends, as in <a href="#3-2-1-1 (5b)">(5b)</a> and <a href="#3-2-1-1 (5c)">(5c)</a>,
 and `:place` is used for static locations,
-as in [\[3-2-1-1 (5d)\]](#3-2-1-1 (5d)). The
+as in <a href="#3-2-1-1 (5d)">(5d)</a>. The
 `:source` role is in the removal subclass of
 motion events; it is used for the entity from which the
 `:theme` is removed, as in
-[\[3-2-1-1 (5e)\]](#3-2-1-1 (5e)). With motion events, the
+<a href="#3-2-1-1 (5e)">(5e)</a>. With motion events, the
 `:theme` role is used for the entity that
 moves (unless the motion is volitional), as in
-[\[3-2-1-1 (5a)\]](#3-2-1-1 (5a)).
+<a href="#3-2-1-1 (5a)">(5a)</a>.
 
-<span id="3-2-1-1 (5)" label="3-2-1-1 (5)">\[3-2-1-1 (5)\]</span>
+<span id="3-2-1-1 (5)">\[3-2-1-1 (5)\]</span>
 
-<span id="[3-2-1-1 (5a)" label="[3-2-1-1 (5a)">\[[3-2-1-1 (5a)\]</span> 
+<span id="3-2-1-1 (5a)">\[3-2-1-1 (5a)\]</span> 
 ```
 She walked home from the store.
 (w/ walk-01 
@@ -2636,7 +2638,7 @@ She walked home from the store.
 	:aspect Performance
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1 (5b)" label="3-2-1-1 (5b)">\[3-2-1-1 (5b)\]</span> 
+<span id="3-2-1-1 (5b)">\[3-2-1-1 (5b)\]</span> 
 ```
 The leaf fell to the ground.
 (f/ fall-01 
@@ -2646,7 +2648,7 @@ The leaf fell to the ground.
 	:aspect Performance
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1 (5c)" label="3-2-1-1 (5c)">\[3-2-1-1 (5c)\]</span> 
+<span id="3-2-1-1 (5c)">\[3-2-1-1 (5c)\]</span> 
 ```
 He put the books in a box.
 (p/ put-01  
@@ -2661,7 +2663,7 @@ He put the books in a box.
 	:modstr FullAff)  
 
 ```
-<span id="3-2-1-1 (5d)" label="3-2-1-1 (5d)">\[3-2-1-1 (5d)\]</span> 
+<span id="3-2-1-1 (5d)">\[3-2-1-1 (5d)\]</span> 
 ```
 She is sitting on the couch.
 (s/ sit-01  
@@ -2673,7 +2675,7 @@ She is sitting on the couch.
 	:aspect State
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1 (5e)" label="3-2-1-1 (5e)">\[3-2-1-1 (5e)\]</span> 
+<span id="3-2-1-1 (5e)">\[3-2-1-1 (5e)\]</span> 
 ```
 He picked some berries from the bush.
 (p/ pick-01
@@ -2697,11 +2699,11 @@ the `:recipient`. For transfer of possession
 events that express the original possessor of the
 `:theme`, the original possessor is
 annotated as `:affectee`, as in
-[\[3-2-1-1 (6d)\]](#3-2-1-1 (6d)).
+<a href="#3-2-1-1 (6d)">(6d)</a>.
 
-<span id="3-2-1-1 (6)" label="3-2-1-1 (6)">\[3-2-1-1 (6)\]</span>
+<span id="3-2-1-1 (6)">\[3-2-1-1 (6)\]</span>
 
-<span id="3-2-1-1 (6a)" label="3-2-1-1 (6a)">\[3-2-1-1 (6a)\]</span> 
+<span id="3-2-1-1 (6a)">\[3-2-1-1 (6a)\]</span> 
 ```
 He gave the cat some wet food.
 (g/ give-01  
@@ -2717,7 +2719,7 @@ He gave the cat some wet food.
 	:modstr FullAff)
 ```
 
-<span id="3-2-1-1 (6b)" label="3-2-1-1 (6b)">\[3-2-1-1 (6b)\]</span> 
+<span id="3-2-1-1 (6b)">\[3-2-1-1 (6b)\]</span> 
 ```
 I showed the pictures to her.
 (s/ show-01  
@@ -2733,7 +2735,7 @@ I showed the pictures to her.
 	:modstr FullAff) 
 ```
 
-<span id="3-2-1-1 (6c)" label="3-2-1-1 (6c)">\[3-2-1-1 (6c)\]</span> 
+<span id="3-2-1-1 (6c)">\[3-2-1-1 (6c)\]</span> 
 ```
 She told me that they they’re attending.
 (t/ tell-01  
@@ -2751,7 +2753,7 @@ She told me that they they’re attending.
 	:modstr FullAff) 
 ```
 
-<span id="3-2-1-1 (6d)" label="3-2-1-1 (6d)">\[3-2-1-1 (6d)\]</span> 
+<span id="3-2-1-1 (6d)">\[3-2-1-1 (6d)\]</span> 
 ```
 She stole the information from a competitor.
 (s/ steal-01
@@ -2769,22 +2771,22 @@ The other participant roles can occur pretty much freely with any semantic class
 `:actor` role is used for “active”
 single-participant events, in which the single participant acts
 volitionally to bring about the event, as in
-[\[3-2-1-1 (7a)\]](#3-2-1-1 (7a)). This contrasts with “inactive”
+<a href="#3-2-1-1 (7a)">(7a)</a>. This contrasts with “inactive”
 single-participant events, in which the single participant undergoes a
-change outside of its control, as in [\[3-2-1-1 (1a)\]](#3-2-1-1 (1a))
+change outside of its control, as in <a href="#3-2-1-1 (1a)">(1a)</a>
 above. See Appendix [8](#ap:verbspr) for examples of single-participant
 verbs and their participant role annotation. The
 `:actor` role is also used for animate
-entities that initiate an action, as in [\[3-2-1-1 (1b)\]](#3-2-1-1 (1b))
+entities that initiate an action, as in <a href="#3-2-1-1 (1b)">(1b)</a>
 above.
 
 The `:companion` role is used for the entity
 that helps the `:actor` bring about the
-action, as in [\[3-2-1-1 (7b)\]](#3-2-1-1 (7b)). Note that this role is only annotated when the `:companion`
+action, as in <a href="#3-2-1-1 (7b)">(7b)</a>. Note that this role is only annotated when the `:companion`
 participant is expressed separately from the
 `:actor`. Plural participants and conjoined
-participants, as in [\[3-2-1-1 (7c)\]](#3-2-1-1 (7c)) and
-[\[3-2-1-1 (7d)\]](#3-2-1-1 (7d)), are annotated with a single
+participants, as in <a href="#3-2-1-1 (7c)">(7c)</a> and
+<a href="#3-2-1-1 (7d)">(7d)</a>, are annotated with a single
 `:actor` role. In some languages, a marker
 may be ambiguous between a comitative marker and a conjunction. When the two participants are expressed separately in the clause, they should be treated as separate participants, annotated with `:actor` and `:companion`. When they are expressed
 together, they are treated as a single
@@ -2794,19 +2796,19 @@ The `:instrument` role is used for an entity
 that is manipulated by one of the other external cause roles, often an `:actor`, in order to initiate the action.
 The entity which manipulates the
 `:instrument` may or may not be present in
-the clause; see [\[3-2-1-1 (7e)\]](#3-2-1-1 (7e)) and
-[\[3-2-1-1 (7f)\]](#3-2-1-1 (7f)).
+the clause; see <a href="#3-2-1-1 (7e)">(7e)</a> and
+<a href="#3-2-1-1 (7f)">(7f)</a>.
 
 The `:force` role is used for inanimate physical
 entities which initiate an action, or cause another entity to undergo a
-change, as in [\[3-2-1-1 (7g)\]](#3-2-1-1 (7g)). Finally, the
+change, as in <a href="#3-2-1-1 (7g)">(7g)</a>. Finally, the
 `:causer` role is used for the external
 initiator in some causative constructions, see [4.1.2](#pr0:alts).
 
 
-<span id="3-2-1-1 (7)" label="3-2-1-1 (7)">\[3-2-1-1 (7)\]</span>
+<span id="3-2-1-1 (7)">\[3-2-1-1 (7)\]</span>
 
-<span id="3-2-1-1 (7a)" label="3-2-1-1 (7a)">\[3-2-1-1 (7a)\]</span>
+<span id="3-2-1-1 (7a)">\[3-2-1-1 (7a)\]</span>
 ```
 He winked.
 (w/ wink-01
@@ -2816,7 +2818,7 @@ He winked.
 	:aspect Endeavor
 	:modstr FullAff)
 ```
-<span id="3-2-1-1 (7b)" label="3-2-1-1 (7b)">\[3-2-1-1 (7b)\]</span> 
+<span id="3-2-1-1 (7b)">\[3-2-1-1 (7b)\]</span> 
 ```
 Jane wrote the paper with Chris.
 (w/ write-01 
@@ -2830,7 +2832,7 @@ Jane wrote the paper with Chris.
 	:modstr FullAff) 
 ```
 
-<span id="3-2-1-1 (7c)" label="3-2-1-1 (7c)">\[3-2-1-1 (7c)\]</span> 
+<span id="3-2-1-1 (7c)">\[3-2-1-1 (7c)\]</span> 
 ```
 They wrote the paper.
 (w/ write-01  
@@ -2841,7 +2843,7 @@ They wrote the paper.
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1 (7d)" label="3-2-1-1 (7d)">\[3-2-1-1 (7d)\]</span> 
+<span id="3-2-1-1 (7d)">\[3-2-1-1 (7d)\]</span> 
 ```
 Jane and Chris wrote the paper.
 (w/ write-01
@@ -2855,7 +2857,7 @@ Jane and Chris wrote the paper.
 	:aspect Performance
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1 (7e)" label="3-2-1-1 (7e)">\[3-2-1-1 (7e)\]</span> 
+<span id="3-2-1-1 (7e)">\[3-2-1-1 (7e)\]</span> 
 ```
 She sliced the bread with a knife.
 (s/ slice-01
@@ -2869,7 +2871,7 @@ She sliced the bread with a knife.
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1 (7f)" label="3-2-1-1 (7f)">\[3-2-1-1 (7f)\]</span>
+<span id="3-2-1-1 (7f)">\[3-2-1-1 (7f)\]</span>
 ```
 The knife sliced through the bread.
 (s/ slice-01 
@@ -2880,7 +2882,7 @@ The knife sliced through the bread.
 	:aspect Performance
 	:modstr FullAff) 
 ```
-<span id="3-2-1-1 (7g)" label="3-2-1-1 (7g)">\[3-2-1-1 (7g)\]</span> 
+<span id="3-2-1-1 (7g)">\[3-2-1-1 (7g)\]</span> 
 ```
 The storm damaged the power lines.
 (d/ damage-01 
@@ -2896,11 +2898,11 @@ See Table 9 above for examples of the circumstantial
 roles. In addition, there is an `:other`
 placeholder role that can be used when annotators are unsure of which participant role annotation is accurate for a particular participant. Also see Appendix [8](#ap:verbspr) for a list of verbs and how their microroles are annotated.
 
-At Stage 0, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in [\[3-2-1-1 (8)\]](#3-2-1-1 (8)), the
+At Stage 0, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in <a href="#3-2-1-1 (8)">(8)</a>, the
 `:goal` is left implicit on the left-hand side but annotated on the right-hand side; at Stage 0, this
 role may be left out of the annotation.
 
-<span id="3-2-1-1 (8)" label="3-2-1-1 (8)">\[3-2-1-1 (8)\]</span> 
+<span id="3-2-1-1 (8)">\[3-2-1-1 (8)\]</span> 
 ```
 They loaded the boxes.
 (l/ load-01  					Or		(l/ load-01
@@ -2941,13 +2943,13 @@ Table 11: Argument structure of non-verbal clause predicates
 </div>
 
 The argument that can be predicativized in languages using the predicativized-argument strategy is always
-the argument role with the highest number. The examples in [\[3-2-1-1-1 (1)\]](#3-2-1-1-1 (1)) show how
+the argument role with the highest number. The examples in <a href="#3-2-1-1-1 (1)">(1)</a> show how
 nonverbal clauses are annotated with participant roles. Note that these
 annotations will be the same at every stage of the road map.
 
-<span id="3-2-1-1-1 (1)" label="3-2-1-1-1 (1)">\[3-2-1-1-1 (1)\]</span>
+<span id="3-2-1-1-1 (1)">\[3-2-1-1-1 (1)\]</span>
 
-<span id="3-2-1-1-1 (1a)" label="3-2-1-1-1 (1a)">\[3-2-1-1-1 (1a)\]</span>
+<span id="3-2-1-1-1 (1a)">\[3-2-1-1-1 (1a)\]</span>
 Thetic/presentational Possession - Kukama <br />
 
 ```
@@ -2963,7 +2965,7 @@ Miguel-CER  canoe-owner
 	:aspect State
 	:modstr FullAff) 
 ```
-<span id="3-2-1-1-1 (1b)" label="3-2-1-1-1 (1b)">\[3-2-1-1-1 (1b)\]</span> Predicative
+<span id="3-2-1-1-1 (1b)">\[3-2-1-1-1 (1b)\]</span> Predicative
 Possession - English <br />
 ```
 The dog belongs to the teacher.  
@@ -2976,7 +2978,7 @@ The dog belongs to the teacher.
 	:aspect State
 	:modstr FullAff) 
 ```
-<span id="3-2-1-1-1 (1c)" label="3-2-1-1-1 (1c)">\[3-2-1-1-1 (1c)\]</span> Thetic/presentational Location - English <br />
+<span id="3-2-1-1-1 (1c)">\[3-2-1-1-1 (1c)\]</span> Thetic/presentational Location - English <br />
 ```
 On the rock was a symbol.  
   
@@ -2988,7 +2990,7 @@ On the rock was a symbol.
 	:aspect State
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1-1 (1d)" label="3-2-1-1-1 (1d)">\[3-2-1-1-1 (1d)\]</span> Predicative
+<span id="3-2-1-1-1 (1d)">\[3-2-1-1-1 (1d)\]</span> Predicative
 Location - Yabem (Dempwolff 1939) <br />
 ```
 àndu  kê-kô 	malac  
@@ -3002,7 +3004,7 @@ house 3SG-be.at village
 	:aspect State
 	:modstr FullAff)
 ```
-<span id="3-2-1-1-1 (1e)" label="3-2-1-1-1 (1e)">\[3-2-1-1-1 (1e)\]</span> Property
+<span id="3-2-1-1-1 (1e)">\[3-2-1-1-1 (1e)\]</span> Property
 Predication - English <br />
 ```
 The cat is black.  
@@ -3013,7 +3015,7 @@ The cat is black.
 	:aspect State
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1-1 (1f)" label="3-2-1-1-1 (1f)">\[3-2-1-1-1 (1f)\]</span> Object Predication - Kukama <br />
+<span id="3-2-1-1-1 (1f)">\[3-2-1-1-1 (1f)\]</span> Object Predication - Kukama <br />
 ```
 ajan kunumi 	tsumi  
 this young.man 	shaman  
@@ -3026,7 +3028,7 @@ this young.man 	shaman
 	:aspect State
 	:modstr FullAff)  
 ```
-<span id="3-2-1-1-1 (1g)" label="3-2-1-1-1 (1g)">\[3-2-1-1-1 (1g)\]</span> Object Equational - English <br />
+<span id="3-2-1-1-1 (1g)">\[3-2-1-1-1 (1g)\]</span> Object Equational - English <br />
 ```
 She is the winner.  
 (i/ identity-91
@@ -3046,11 +3048,11 @@ She is the winner.
 Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 0, these alternations influence the choice of general participant role labels. For information-packaging alternations, such as
 passives, antipassives, or valency-rearranging applicatives,
 participants are annotated in the same way as in the basic construction
-in the language. If a participant is omitted, for example the agent in a passive construction as in [\[3-2-1-1-2 (1)\]](#3-2-1-1-2 (1)) from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 0. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 0. 
+in the language. If a participant is omitted, for example the agent in a passive construction as in <a href="#3-2-1-1-2 (1)">(1)</a> from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 0. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 0. 
 
-<span id="3-2-1-1-2 (1)" label="3-2-1-1-2 (1)">\[3-2-1-1-2 (1)\]</span>
+<span id="3-2-1-1-2 (1)">\[3-2-1-1-2 (1)\]</span>
 
-<span id="3-2-1-1-2 (1a)" label="3-2-1-1-2 (1a)">\[3-2-1-1-2 (1a)\]</span> <br />
+<span id="3-2-1-1-2 (1a)">\[3-2-1-1-2 (1a)\]</span> <br />
 ```
 Y-usy 		wrba 	tafirast.  
 3M.SG-pick.up 	boy:CST	pear  
@@ -3064,7 +3066,7 @@ Y-usy 		wrba 	tafirast.
 	:modstr FullAff)
 ```
 
-<span id="3-2-1-1-2 (1b)" label="3-2-1-1-2 (1b)">\[3-2-1-1-2 (1b)\]</span> <br />
+<span id="3-2-1-1-2 (1b)">\[3-2-1-1-2 (1b)\]</span> <br />
 ```
 T-ttw-asy		tfirast.  
 3F.SG-DETR-pick.up	pear  
@@ -3082,12 +3084,12 @@ transitives, the causer is annotated as
 `:causer`, the causee as
 `:actor`, and the rest of the participants
 receive the same annotation labels that they would in a a non-causative
-construction. In [\[3-2-1-1-2 (2)\]](#3-2-1-1-2 (2)) from Kukama, *nai*
+construction. In <a href="#3-2-1-1-2 (2)">(2)</a> from Kukama, *nai*
 ‘grandmother’ is annotated as `:causer`,
 the causee *churan* ‘kid’ is annotated as
 `:actor`, and *uni* ‘water’ as `:undergoer`.
 
-<span id="3-2-1-1-2 (2)" label="3-2-1-1-2 (2)">\[3-2-1-1-2 (2)\]</span>
+<span id="3-2-1-1-2 (2)">\[3-2-1-1-2 (2)\]</span>
 ```
 nai 		kurata-ta	churan=ui	uni=pu  
 grandmother 	drink-CAUS	kid=PST 	water=INS 
@@ -3105,12 +3107,12 @@ grandmother 	drink-CAUS	kid=PST 	water=INS
 
 There are certain causatives of transitives which do not use the `:causer` role. These are constructions which express transfer events, including mental/cognitive transfer. Some
 languages express these types of events with monomorphemic verbs, like English, but other languages use causatives of transitive verbs.
-Languages may differ in terms of which types of causative constructions are construed as transfer; in order to annotate the same semantic events in the same way across languages, the `:actor, :theme, :recipient` roles are used for transfer of possession (giving), sending, and mental transfer, which includes showing and communication. Bezhta in [\[3-2-1-1-2 (3b)\]](#3-2-1-1-2 (3b)) (Comrie, Khalilov, Khalilova 2015:560) uses the causative of *b-egā-yo* ‘see’ as equivalent to English *show*.
+Languages may differ in terms of which types of causative constructions are construed as transfer; in order to annotate the same semantic events in the same way across languages, the `:actor, :theme, :recipient` roles are used for transfer of possession (giving), sending, and mental transfer, which includes showing and communication. Bezhta in <a href="#3-2-1-1-2 (3b)">(3b)</a> (Comrie, Khalilov, Khalilova 2015:560) uses the causative of *b-egā-yo* ‘see’ as equivalent to English *show*.
 
 
-<span id="3-2-1-1-2 (3)" label="3-2-1-1-2 (3)">\[3-2-1-1-2 (3)\]</span>
+<span id="3-2-1-1-2 (3)">\[3-2-1-1-2 (3)\]</span>
 
-<span id="3-2-1-1-2 (3a)" label="3-2-1-1-2 (3a)">\[3-2-1-1-2 (3a)\]</span> <br />
+<span id="3-2-1-1-2 (3a)">\[3-2-1-1-2 (3a)\]</span> <br />
 ```
 hogco-l 	raɬad 		b-egā-yo  
 he.OBL-LAT 	sea(iii) 	iii-see-PST  
@@ -3124,7 +3126,7 @@ he.OBL-LAT 	sea(iii) 	iii-see-PST
 	:modstr FullAff)
 
 ```
-<span id="3-2-1-1-2 (3b)" label="3-2-1-1-2 (3b)">\[3-2-1-1-2 (3b)\]</span>
+<span id="3-2-1-1-2 (3b)">\[3-2-1-1-2 (3b)\]</span>
 ```
 hogco 		kibba-l 	raɬad 		b-ega-l-lo  
 he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST 
@@ -3141,11 +3143,11 @@ he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST
 ```
 
 For causatives of ditransitives, the causer receives the
-`:causer` role, the causee the `:actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in [\[3-2-1-1-2 (4)\]](#3-2-1-1-2 (4)) from Shipibo-Konibo
+`:causer` role, the causee the `:actor` role, and the other participants receive the same annotation as in a non-causative construction. This can be seen in <a href="#3-2-1-1-2 (4)">(4)</a> from Shipibo-Konibo
 (Valenzuela 2003:612). If ‘the man’ was expressed in the clause, that participant would be annotated as `:recipient`.
 
 
-<span id="3-2-1-1-2 (4)" label="3-2-1-1-2 (4)">\[3-2-1-1-2 (4)\]</span> <br />
+<span id="3-2-1-1-2 (4)">\[3-2-1-1-2 (4)\]</span> <br />
 ```
 Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-bi...  
 that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	give-CAUS-INC 	want-NEG-SDS-EM  
@@ -3175,12 +3177,12 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 There are two types of causatives of intransitives, based on the two types of intransitives. For intransitives whose single participant corresponds to an `:undergoer` role, such as
 change-of-state verbs in many languages, the causer is annotated as `:actor` and the single participant retains
 its `:undergoer` label. This can be seen in
-[\[3-2-1-1-2 (5)\]](#3-2-1-1-2 (5)) from Falam Chin (King 2011:195) below.
+<a href="#3-2-1-1-2 (5)">(5)</a> from Falam Chin (King 2011:195) below.
 
 
-<span id="3-2-1-1-2 (5)" label="3-2-1-1-2 (5)">\[3-2-1-1-2 (5)\]</span>
+<span id="3-2-1-1-2 (5)">\[3-2-1-1-2 (5)\]</span>
 
-<span id="3-2-1-1-2 (5a)" label="3-2-1-1-2 (5a)">\[3-2-1-1-2 (5a)\]</span> <br /> 
+<span id="3-2-1-1-2 (5a)">\[3-2-1-1-2 (5a)\]</span> <br /> 
 ```
 Ka 	kedam 	hri	a 	cat.  
 1SG 	shoe 	string	3SG.NOM	broken.1  
@@ -3196,7 +3198,7 @@ Ka 	kedam 	hri	a 	cat.
 	:modstr FullAff)
 ```
 
-<span id="3-2-1-1-2 (5b)" label="3-2-1-1-2 (5b)">\[3-2-1-1-2 (5b)\]</span> <br /> 
+<span id="3-2-1-1-2 (5b)">\[3-2-1-1-2 (5b)\]</span> <br /> 
 ```
 Thangte in 	ka 	kedam 	hri 	a 	cat-ter.  
 Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS  
@@ -3219,11 +3221,11 @@ Regardless of whether the causative or anticausative verb is derived (or if neit
 
 When the single participant of the intransitive corresponds to the
 `:actor` role, then the causer receives the `:causer` annotation and the single participant retains its `:actor` label. This
-can be seen in [\[3-2-1-1-2 (6)\]](#3-2-1-1-2 (6)) from Falam Chin (King 2011:195) below.
+can be seen in <a href="#3-2-1-1-2 (6)">(6)</a> from Falam Chin (King 2011:195) below.
 
-<span id="3-2-1-1-2 (6)" label="3-2-1-1-2 (6)">\[3-2-1-1-2 (6)\]</span>
+<span id="3-2-1-1-2 (6)">\[3-2-1-1-2 (6)\]</span>
 
-<span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br />
+<span id="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br />
 ```
 Cinte a 	hni.  
 Cinte 3SG.NOM 	laugh.1  
@@ -3234,7 +3236,7 @@ Cinte 3SG.NOM 	laugh.1
 	:aspect Endeavor
 	:modstr FullAff)
 ```
-<span id="3-2-1-1-2 (6a)" label="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br /> 
+<span id="3-2-1-1-2 (6a)">\[3-2-1-1-2 (6a)\]</span> <br /> 
 ```
 Parte 	in 	Cinte a 	hni-ter.  
 Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS  
@@ -3250,11 +3252,11 @@ Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS
 
 **Applicatives.**  Peterson (2007) distinguishes between “valency-increasing” applicatives and “valency-rearranging” applicatives. In valency-rearranging applicatives, a participant is expressed as an oblique in the basic construction and expressed as a core argument in the applicative construction; they are generally associated with the increased saliency or topicality of the oblique participant. Therefore, these fit into the category of pragmatic valency alternations, and both the basic and applicative construction receive the same participant role
 annotation. This can be seen in
-[\[3-2-1-1-2 (7)\]](#3-2-1-1-2 (7)) from Falam Chin (King 2011:240).
+<a href="#3-2-1-1-2 (7)">(7)</a> from Falam Chin (King 2011:240).
 
-<span id="3-2-1-1-2 (7)" label="3-2-1-1-2 (7)">\[3-2-1-1-2 (7)\]</span>
+<span id="3-2-1-1-2 (7)">\[3-2-1-1-2 (7)\]</span>
 
-<span id="3-2-1-1-2 (7a)" label="3-2-1-1-2 (7a)">\[3-2-1-1-2 (7a)\]</span>
+<span id="3-2-1-1-2 (7a)">\[3-2-1-1-2 (7a)\]</span>
 ```
 Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.  
 Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1  
@@ -3268,7 +3270,7 @@ Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1-2 (7b)" label="3-2-1-1-2 (7b)">\[3-2-1-1-2 (7b)\]</span>
+<span id="3-2-1-1-2 (7b)">\[3-2-1-1-2 (7b)\]</span>
 ```
 Parte in 	Thangte hmeh 	a 	suan-sak  
 Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN  
@@ -3282,7 +3284,7 @@ Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1-2 (7c)" label="3-2-1-1-2 (7c)">\[3-2-1-1-2 (7c)\]</span>
+<span id="3-2-1-1-2 (7c)">\[3-2-1-1-2 (7c)\]</span>
 ```
 as-teny-aye'	pa'ang
 1SG-buy-DECL	palm
@@ -3295,7 +3297,7 @@ as-teny-aye'	pa'ang
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1-2 (7d)" label="3-2-1-1-2 (7d)">\[3-2-1-1-2 (7d)\]</span>
+<span id="3-2-1-1-2 (7d)">\[3-2-1-1-2 (7d)\]</span>
 ```
 as-teny-as-ke'		pa'ang	ap-angkok	Eduardo
 1SG-buy-APPL-DECL	palm  	2/3M-POSS	Eduardo
@@ -3312,13 +3314,13 @@ as-teny-as-ke'		pa'ang	ap-angkok	Eduardo
 ```
 
 Whether the beneficiary, *Thangte*, is expressed as an oblique or a core argument, it is annotated as `:affectee`. Valency-increasing applicatives involve the addition of a participant, compared to the basic construction. Here, the added participant is
-simply annotated with the appropriate semantic role. This can be seen in [\[3-2-1-1-2 (7c)\]](#3-2-1-1-2 (7c))-[\[3-2-1-1-2 (7d)\]](#3-2-1-1-2 (7d)) from Sanapaná.
+simply annotated with the appropriate semantic role. This can be seen in <a href="#3-2-1-1-2 (7c)">(7c)</a>-<a href="#3-2-1-1-2 (7d)">(7d)</a> from Sanapaná.
 
-**Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be seen in [\[3-2-1-1-2 (8a)\]](#3-2-1-1-2 (8a)) and [\[3-2-1-1-2 (8b)\]](#3-2-1-1-2 (8b)) from Supyire (Carlson 1994:416-7).
+**Reflexives & Reciprocals** For reflexive and reciprocal constructions, the single participant is annotated with both of the semantic role labels which it is fulfilling in the construction. This can be seen in <a href="#3-2-1-1-2 (8a)">(8a)</a> and <a href="#3-2-1-1-2 (8b)">(8b)</a> from Supyire (Carlson 1994:416-7).
 
-<span id="3-2-1-1-2 (8)" label="3-2-1-1-2 (8)">\[3-2-1-1-2 (8)\]</span>
+<span id="3-2-1-1-2 (8)">\[3-2-1-1-2 (8)\]</span>
 
-<span id="3-2-1-1-2 (8a)" label="3-2-1-1-2 (8a)">\[3-2-1-1-2 (8a)\]</span>
+<span id="3-2-1-1-2 (8a)">\[3-2-1-1-2 (8a)\]</span>
 ```
 U 	a 	ù-yé 	bánì  
 he 	PERF 	he-REFL wound  
@@ -3331,7 +3333,7 @@ he 	PERF 	he-REFL wound
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-1-2 (8b)" label="3-2-1-1-2 (8b)">\[3-2-1-1-2 (8b)\]</span><br /> 
+<span id="3-2-1-1-2 (8b)">\[3-2-1-1-2 (8b)\]</span><br /> 
 ```
 Pi 	a 	pì-yé 		kánù  
 they 	PERF	they-REFL 	love  
@@ -3375,7 +3377,7 @@ PropBank-style frame files in the language for a large number of
 predicates. At this stage, each predicate identified as event is linked
 to its corresponding frame file. The participants dependent on that
 event are annotated with the lexicalized roles, as determined by the
-frame file. This can be seen in [\[3-2-1-2 (1)\]](#3-2-1-2 (1)) below.  
+frame file. This can be seen in <a href="#3-2-1-2 (1)">(1)</a> below.  
 
 ```
 predicate: tease.02
@@ -3385,7 +3387,7 @@ predicate: tease.02
 	ARG2: about what
 ```
 
-<span id="3-2-1-2 (1)" label="3-2-1-2 (1)">\[3-2-1-2 (1)\]</span>
+<span id="3-2-1-2 (1)">\[3-2-1-2 (1)\]</span>
 
 ```
 He teased the boy about his hat.
@@ -3404,9 +3406,9 @@ He teased the boy about his hat.
 
 Since the nonverbal clause functions require the use of lexicalized predicates at Stage 0, these are annotated in the same way at Stage 1 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses)). Unlike Stage 0, implicit participants are
 annotated for their semantic role at Stage 1. This is shown in
-[\[3-2-1-2 (2)\]](#3-2-1-2 (2)).
+<a href="#3-2-1-2 (2)">(2)</a>.
 
-<span id="3-2-1-2 (2)" label="3-2-1-2 (2)">\[3-2-1-2 (2)\]</span> 
+<span id="3-2-1-2 (2)">\[3-2-1-2 (2)\]</span> 
 ```
 She parked the truck in the driveway. They loaded the boxes.
 
@@ -3435,9 +3437,9 @@ She parked the truck in the driveway. They loaded the boxes.
 	:coref (s1t :same-entity s2t))
 ```
 
-The second sentence in [\[3-2-1-2 (2)\]](#3-2-1-2 (2)) does not
+The second sentence in <a href="#3-2-1-2 (2)">(2)</a> does not
 include explicit mention of the truck, but it is understood from the
-context that the truck is the goal participant of the loading event. Therefore, an implicit `thing' participant is identified for the ```:ARG1``` role of the loading event at Stage 1. In the document-level annotation, this participant is then flagged as coreferential with the truck in the previous sentence.
+context that the truck is the goal participant of the loading event. Therefore, an implicit 'thing' participant is identified for the ```:ARG1``` role of the loading event at Stage 1. In the document-level annotation, this participant is then flagged as coreferential with the truck in the previous sentence.
 
 [Back to Table of Contents](#toc)
 
@@ -3456,11 +3458,11 @@ the participants are annotated accordingly with numbered argument roles rather t
 
 ##### Part 3-2-1-3. Inverse participant roles
 
-AMR, the predecessor of UMR, makes use of **inverse** participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see [Part 3-1-1-2](#part-3-1-1-2-processes-in-modification-and-reference)), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in [\[3-2-1-3 (1)\]](#3-2-1-3 (1)). The use of, for example, the `:ARG1-of` relation in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)), which is the inverse of the numbered argument role `:ARG1`, allows us to maintain a single-rooted graph structure by embedding the *see*-event underneath the participant it modifies (*sweater*). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating *runner* in [\[3-2-1-3 (1c)\]](#3-2-1-3 (1c)) as `(p/ person :ARG0-of r/ run-02)`, we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node `(r/ runner)`.
+AMR, the predecessor of UMR, makes use of **inverse** participant roles for a number of different purposes, such as the annotation of events that function as modifiers of referring expressions (typically relative clauses or participles, see [Part 3-1-1-2](#part-3-1-1-2-processes-in-modification-and-reference)), the annotation of embedded interrogatives, and the annotation of participant nominalizations. These three uses of inverse participant roles are illustrated in <a href="#3-2-1-3 (1)">(1)</a>. The use of, for example, the `:ARG1-of` relation in <a href="#3-2-1-3 (1a)">(1a)</a>, which is the inverse of the numbered argument role `:ARG1`, allows us to maintain a single-rooted graph structure by embedding the *see*-event underneath the participant it modifies (*sweater*). Such event concept nodes which are linked to other concepts by means of inverse participant roles can then further take their own full argument structure annotation and attribute values for e.g. aspect. Such inverses of numbered argument roles also allow us to make use of PropBank framefiles as much as possible: by annotating *runner* in <a href="#3-2-1-3 (1c)">(1c)</a> as `(p/ person :ARG0-of r/ run-02)`, we can directly link this annotation to the existing lexicon rather than having to enter an ad-hoc object concept node `(r/ runner)`.
 
-<span id="3-2-1-3 (1)" label="3-2-1-3 (1)">\[3-2-1-3 (1)\]</span>
+<span id="3-2-1-3 (1)">\[3-2-1-3 (1)\]</span>
 
-<span id="3-2-1-3 (1a)" label="3-2-1-3 (1a)">\[3-2-1-3 (1a)\]</span> 
+<span id="3-2-1-3 (1a)">\[3-2-1-3 (1a)\]</span> 
 ```
 I bought the sweater that you saw.
 (b/ buy-0101
@@ -3479,7 +3481,7 @@ I bought the sweater that you saw.
 	:modstr FullAff)
 ```
 
-<span id="3-2-1-3 (1b)" label="3-2-1-3 (1b)">\[3-2-1-3 (1b)\]</span> 
+<span id="3-2-1-3 (1b)">\[3-2-1-3 (1b)\]</span> 
 ```
 I didn't see whether he bought the sweater.
 (s/ see-01
@@ -3499,7 +3501,7 @@ I didn't see whether he bought the sweater.
 	:Modstr FullNeg)
 ```
 
-<span id="3-2-1-3 (1c)" label="3-2-1-3 (1c)">\[3-2-1-3 (1c)\]</span> 
+<span id="3-2-1-3 (1c)">\[3-2-1-3 (1c)\]</span> 
 ```
 The runner was wearing a sweater.
 (w/ wear-01
@@ -3512,9 +3514,9 @@ The runner was wearing a sweater.
 	:modstr FullAff)
 ```
 
-UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:Actor-of` and `:Undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-0)). Example [\[3-2-1-3 (1a)\]](#3-2-1-3 (2)) below illustrates the use of the inverse `:Stimulus-of` role to annotate the same relative clause as in [\[3-2-1-3 (1a)\]](#3-2-1-3 (1a)) above.
+UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:Actor-of` and `:Undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-0)). Example <a href="#3-2-1-3 (2)">(2)</a> below illustrates the use of the inverse `:Stimulus-of` role to annotate the same relative clause as in <a href="#3-2-1-3 (1a)">(1a)</a> above.
 
-<span id="3-2-1-3 (2)" label="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
+<span id="3-2-1-3 (2)">\[3-2-1-3 (2)\]</span> 
 
 ```
 I bought the sweater that you saw.
@@ -3534,11 +3536,11 @@ I bought the sweater that you saw.
 	:modstr FullAff)
 ```
 
-One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `kinship-91, have-org-role-91`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in [\[3-2-1-3 (3)\]](#3-2-1-3 (3)).
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `kinship-91, have-org-role-91`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in <a href="#3-2-1-3 (3)">(3)</a>.
   
-<span id="3-2-1-3 (3)" label="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
+<span id="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
 
-<span id="3-2-1-3 (3a)" label="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
+<span id="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
 ```
 I met my father.
 (m/ meet-03
@@ -3552,7 +3554,7 @@ I met my father.
 	:aspect Performance
 	:modstr FullAff)
 ```
-<span id="3-2-1-3 (3a)" label="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
+<span id="3-2-1-3 (3a)">\[3-2-1-3 (3a)\]</span> 
 ```
 I met the President of the University of New Mexico.
 (m/ meet-03
