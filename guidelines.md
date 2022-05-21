@@ -910,20 +910,20 @@ as events in UMR are shown in bold in Table 2.
 Predicated processes are the most prototypical subcategory of events,
 corresponding cross-linguistically to unmarked verbs. They will
 therefore always be identified as events. This is shown in
-[\[3-1-1-1 (1)\]](#3-1-1-1 (1)) below. (Throughout this section, words
+<a href="#3-1-1-1 (1)">(1)</a> below. (Throughout this section, words
 that are identified as events will be shown in bold; the relevant
 phenomenon under discussion will be italicized.)
 
-<span id="3-1-1-1 (1)" label="3-1-1-1 (1)">\[3-1-1-1 (1)\]</span>
+<span id="3-1-1-1 (1)">(1)</span>
 
-<span id="3-1-1-1 (1a)" label="3-1-1-1 (1a)">\[3-1-1-1 (1a)\]</span> She
+<span id="3-1-1-1 (1a)">(1a)</span> She
 <u>**_repaired_**</u> her bike.  
-<span id="3-1-1-1 (1b)" label="3-1-1-1 (1b)">\[3-1-1-1 (1b)\]</span> Before
+<span id="3-1-1-1 (1b)">(1b)</span> Before
 she <u>**_went_**</u> to school, she **repaired** my bike.  
 
 Regardless of whether they are in an independent clause, like *repaired*
-in [\[3-1-1-1 (1a)\]](#3-1-1-1 (1a)), or a dependent clause, like *went* in
-[\[3-1-1-1 (1b)\]](#3-1-1-1 (1b)), predicated processes are always
+in <a href="#3-1-1-1 (1a)">(1a)</a>, or a dependent clause, like *went* in
+<a href="#3-1-1-1 (1b)">(1b)</a>, predicated processes are always
 identified as events.
 
 [Back to Table of Contents](#toc)
@@ -933,23 +933,23 @@ identified as events.
 Processes packaged as modifiers or referents should also be identified
 as events. Cross-linguistically, these may take a variety of
 morphosyntactic forms, such as event nominals (as in
-[\[3-1-1-2 (1a)\]](#3-1-1-2 (1a))), non-finite complements (as in
-[\[3-1-1-2 (1b)\]](#3-1-1-2 (1b))), participles (as in
-[\[3-1-1-2 (1c)\]](#3-1-1-2 (1c))), or relative clauses (as in
-[\[3-1-1-2 (1d)\]](#3-1-1-2 (1d))).
+<a href="#3-1-1-2 (1a)">(1a)</a>), non-finite complements (as in
+<a href="#3-1-1-2 (1b)">(1b)</a>), participles (as in
+<a href="#3-1-1-2 (1c)">(1c)</a>), or relative clauses (as in
+<a href="#3-1-1-2 (1d)">(1d)</a>).
 
-<span id="3-1-1-2 (1)" label="3-1-1-2 (1)">\[3-1-1-2 (1)\]</span>
+<span id="3-1-1-2 (1)">(1)</span>
 
-<span id="3-1-1-2 (1a)" label="3-1-1-2 (1a)">\[3-1-1-2 (1a)\]</span> The
+<span id="3-1-1-2 (1a)">(1a)</span> The
 **<u>_storm_</u> damaged** the roads.
 
-<span id="3-1-1-2 (1b)" label="3-1-1-2 (1b)">\[3-1-1-2 (1b)\]</span> She
+<span id="3-1-1-2 (1b)">(1b)</span> She
 **wanted <u>_to go_</u>** to school.
 
-<span id="3-1-1-2 (1c)" label="3-1-1-2 (1c)">\[3-1-1-2 (1c)\]</span> The
+<span id="3-1-1-2 (1c)">(1c)</span> The
 student **<u>_playing_</u>** the violin **likes** Bach.
 
-<span id="3-1-1-2 (1d)" label="3-1-1-2 (1d)">\[3-1-1-2 (1d)\]</span> The student,
+<span id="3-1-1-2 (1d)">(1d)</span> The student,
 who is **<u>_playing_</u>** the violin, **likes** Bach.
 
 The combination of semantic type and information packaging determines
@@ -957,33 +957,33 @@ whether or not a particular word in a particular context is identified
 as an event. The morphological structure of a word (i.e., whether or not
 it derives from a verb) doesn’t factor into whether or not it is
 identified as an event. For example, not all event nominals are derived
-from verbs, as in [\[3-1-1-2 (2a)\]](#3-1-1-2 (2a)); and, not all words
+from verbs, as in <a href="#3-1-1-2 (2a)">(2a)</a>; and, not all words
 derived from verbs actually refer to processes, as in
-[\[3-1-1-2 (2b)\]](#3-1-1-2 (2b)).
+<a href="#3-1-1-2 (2b)">(2b)</a>.
 
-<span id="3-1-1-2 (2)" label="3-1-1-2 (2)">\[3-1-1-2 (2)\]</span>
+<span id="3-1-1-2 (2)">(2)</span>
 
-<span id="3-1-1-2 (2a)" label="3-1-1-2 (2a)">\[3-1-1-2 (2a)\]</span> He is
+<span id="3-1-1-2 (2a)">(2a)</span> He is
 **planning** a **<u>_ceremony_</u>** for Saturday.
 
-<span id="3-1-1-2 (2b)" label="3-1-1-2 (2b)">\[3-1-1-2 (2b)\]</span>
+<span id="3-1-1-2 (2b)">(2b)</span>
 The bus <u>_driver_</u> **turned** the corner too sharply.
 
 Even the same lexical item may or may not refer to a process, depending
-on context as in ([\[3-1-1-2 (3)\]](#3-1-1-2 (3))) below.
+on context as in <a href="#3-1-1-2 (3)">(3)</a> below.
 
-<span id="3-1-1-2 (3)" label="3-1-1-2 (3)">\[3-1-1-2 (3)\]</span>
+<span id="3-1-1-2 (3)">(3)</span>
 
-<span id="3-1-1-2 (3a)" label="3-1-1-2 (3a)">\[3-1-1-2 (3a)\]</span>
+<span id="3-1-1-2 (3a)">(3a)</span>
 
 The <u>**_final exam_**</u> began at 8:00.
 
-<span id="3-1-1-2 (3b)" label="3-1-1-2 (3b)">\[3-1-1-2 (3b)\]</span>
+<span id="3-1-1-2 (3b)">(3b)</span>
 
 One student **threw** their <u>_final exam_</u> in the trash.
 
-In ([\[3-1-1-2 (3a)\]](#3-1-1-2 (3a))), *final exam* refers to a process and therefore
-is identified as an event. In ([\[3-1-1-2 (3b)\]](#3-1-1-2 (3b))), however,
+In <a href="#3-1-1-2 (3a)">(3a)</a>, *final exam* refers to a process and therefore
+is identified as an event. In <a href="#3-1-1-2 (3b)">(3b)</a>, however,
 *final exam* refers to a physical object and therefore is not identified
 as an event.
 
@@ -1003,11 +1003,11 @@ event as well.
 
 As mentioned above, anything that is predicated is identified as an
 event, even if it is not a process. Two-place statives, such as *love*
-in [\[3-1-1-3 (1)\]](#3-1-1-3 (1)), are annotated in the same way as predicated
+in <a href="#3-1-1-3 (1)">(1)</a>, are annotated in the same way as predicated
 processes, i.e. an event is identified and labelled with the predicate
 in the language.
 
-<span id="3-1-1-3 (1)" label="3-1-1-3 (1)">\[3-1-1-3 (1)\]</span>
+<span id="3-1-1-3 (1)">(1)</span>
 
 My cat <u>**_loves_**</u> wet food.
 
@@ -1067,44 +1067,44 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 Table 4: Non-verbal clause predicates
 </div>
 
-States in modification, as in [\[3-1-1-3 (2a)\]](#3-1-1-3 (2a)) and
-[\[3-1-1-3 (2b)\]](#3-1-1-3 (2b)), and states in reference, as in
-[\[3-1-1-3 (2c)\]](#3-1-1-3 (2c)), are not identified as events.
+States in modification, as in <a href="#3-1-1-3 (2a)">(2a)</a> and
+<a href="#3-1-1-3 (2b)">(2b)</a>, and states in reference, as in
+<a href="#3-1-1-3 (2c)">(2c)</a>, are not identified as events.
 
-<span id="3-1-1-3 (2)" label="3-1-1-3 (2)">\[3-1-1-3 (2)\]</span>
+<span id="3-1-1-3 (2)">(2)</span>
 
-<span id="3-1-1-3 (2a)" label="3-1-1-3 (2a)">\[3-1-1-3 (2a)\]</span> The
+<span id="3-1-1-3 (2a)">(2a)</span> The
 <u>_tall_</u> man...
 
-<span id="3-1-1-3 (2b)" label="3-1-1-3 (2b)">\[3-1-1-3 (2b)\]</span> The man,
+<span id="3-1-1-3 (2b)">(2b)</span> The man,
 <u>_who is tall_</u>...
 
-<span id="3-1-1-3 (2c)" label="3-1-1-3 (2c)">\[3-1-1-3 (2c)\]</span> His
+<span id="3-1-1-3 (2c)">(2c)</span> His
 <u>_happiness_</u>...
 
-Similarly, entities in modification, as in [\[3-1-1-3 (3a)\]](#3-1-1-3 (3a)),
-and entities in reference, as in [\[3-1-1-3 (3b)\]](#3-1-1-3 (3b)), are not
+Similarly, entities in modification, as in <a href="#3-1-1-3 (3a)">(3a)</a>,
+and entities in reference, as in <a href="#3-1-1-3 (3b)">(3b)</a>, are not
 identified as events.
 
-<span id="3-1-1-3 (3)" label="3-1-1-3 (3)">\[3-1-1-3 (3)\]</span>
+<span id="3-1-1-3 (3)">(3)</span>
 
-<span id="3-1-1-3 (3a)" label="3-1-1-3 (3a)">\[3-1-1-3 (3a)\]</span> The man,
+<span id="3-1-1-3 (3a)">(3a)</span> The man,
 <u>_who is a doctor_</u>...
 
-<span id="3-1-1-3 (3b)" label="3-1-1-3 (3b)">\[3-1-1-3 (3b)\]</span> The
+<span id="3-1-1-3 (3b)">(3b)</span> The
 <u>_doctor_</u>
 
 Causal relationships follow the same rules as states and entities. They
 are identified as events when they are predicated, as in
-[\[3-1-1-3 (4a)\]](#3-1-1-3 (4a)), but they are not identified as events
-otherwise, like in [\[3-1-1-3 (4b)\]](#3-1-1-3 (4b)).
+<a href="#3-1-1-3 (4a)">(4a)</a>, but they are not identified as events
+otherwise, like in <a href="#3-1-1-3 (4b)">(4b)</a>.
 
-<span id="3-1-1-3 (4)" label="3-1-1-3 (4)">\[3-1-1-3 (4)\]</span>
+<span id="3-1-1-3 (4)">(4)</span>
 
-<span id="3-1-1-3 (4a)" label="3-1-1-3 (4a)">\[3-1-1-3 (4a)\]</span> The
+<span id="3-1-1-3 (4a)">(4a)</span> The
 **explosion <u>_caused_</u>** the house **to collapse**.
 
-<span id="3-1-1-3 (4b)" label="3-1-1-3 (4b)">\[3-1-1-3 (4b)\]</span> The house
+<span id="3-1-1-3 (4b)">(4b)</span> The house
 **collapsed** <u>_because_</u> of the **explosion**.
 
 [Back to Table of Contents](#toc)
@@ -1119,44 +1119,44 @@ this front; when in doubt, don’t add an implicit event.
 
 We’ve identified two types implicit events: those where the implicit
 event corresponds to an event mentioned earlier in the text (as in
-[\[3-1-1-4 (1)\]](#3-1-1-4 (1))), and those where it does not (as in
-[\[3-1-1-4 (2)\]](#3-1-1-4 (2))).
+<a href="#3-1-1-4 (1)">(1)</a>), and those where it does not (as in
+<a href="#3-1-1-4 (2)">(2)</a>).
 
-<span id="3-1-1-4 (1)" label="3-1-1-4 (1)">\[3-1-1-4 (1)\]</span>
+<span id="3-1-1-4 (1)">(1)</span>
 
-<span id="3-1-1-4 (1a)" label="3-1-1-4 (1a)">\[3-1-1-4 (1a)\]</span> John was **smoking** on
+<span id="3-1-1-4 (1a)">(1a)</span> John was **smoking** on
 the corner of the street, but when he **saw** me, he stopped <u>
 **\[_smoking_\]**</u>.
 
-<span id="3-1-1-4 (1b)" label="3-1-1-4 (1b)">\[3-1-1-4 (1b)\]</span> They **told** me “a card
+<span id="3-1-1-4 (1b)">(1b)</span> They **told** me “a card
 was **left** on Tuesday” (no it wasn’t <u>**\[_left_\]**</u> of
 course)...
 
-In [\[3-1-1-4 (1a)\]](#3-1-1-4 (1a)), there is an implicit second *smoking* event and
-in [\[3-1-1-4 (1b)\]](#3-1-1-4 (1b)), there is an implicit second *leave* event. These
+In <a href="#3-1-1-4 (1a)">(1a)</a>, there is an implicit second *smoking* event and
+in <a href="#3-1-1-4 (1b)">(1b)</a>, there is an implicit second *leave* event. These
 implicit events should be annotated as coreferential with the event
 mentioned earlier in the text (see [Part 4-1](#part-4-1-coreference)).
 
-In [\[3-1-1-4 (2)\]](#3-1-1-4 (2)), however, the implicit events don’t
+In <a href="#3-1-1-4 (2)">(2)</a>, however, the implicit events don’t
 have a relationship with an event previously mentioned in the text;
 instead, they refer to generic events which can be filled in from
 context.
 
-<span id="3-1-1-4 (2)" label="3-1-1-4 (2)">\[3-1-1-4 (2)\]</span>
+<span id="3-1-1-4 (2)">(2)</span>
 
-<span id="3-1-1-4 (2a)" label="3-1-1-4 (2a)">\[3-1-1-4 (2a)\]</span> **Phoned** Amtrak on
+<span id="3-1-1-4 (2a)">(2a)</span> **Phoned** Amtrak on
 Wednesday, <u>**\[_they said_\]**</u> “We **need** a consignment
 number”.
 
-<span id="3-1-1-4 (2b)" label="3-1-1-4 (2b)">\[3-1-1-4 (2b)\]</span> “I have **ordered** the Coast
+<span id="3-1-1-4 (2b)">(2b)</span> “I have **ordered** the Coast
 Guard and our entire naval force in the (Central Philippines) region
 <u>**\[_to go_\]**</u> to the area,” she **said**.
 
-In [\[3-1-1-4 (2a)\]](#3-1-1-4 (2a)), the quotation marks make it clear that there is an
-implicit *say* event. In [\[3-1-1-4 (2b)\]](#3-1-1-4 (2b)), we can identify a very general
+In <a href="#3-1-1-4 (2a)">(2a)</a>, the quotation marks make it clear that there is an
+implicit *say* event. In <a href="#3-1-1-4 (2b)">(2b)</a>, we can identify a very general
 *go* event, since *ordered...to the area* implies a motion event. For
 these types of implicit events, the most abstract, least specific event
-should be identified. For example in [\[3-1-1-4 (2b)\]](#3-1-1-4 (2b)), we could make an
+should be identified. For example in <a href="#3-1-1-4 (2b)">(2b)</a>, we could make an
 assumption based on context clues (e.g., *Coast Guard, naval force*),
 that the type of motion event is *sail*. But, that assumption may not be
 accurate (and may not be shared amongst annotators); therefore, the most
@@ -1167,9 +1167,9 @@ general event possible should be identified.
 
  #### Part 3-1-2. Named entities
  
-Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example [\[3-1-2 (1)\]](#[3-1-2 (1)) has a `nationality` entity and a `person` entity. 
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example <a href="#3-1-2 (1)">(1)</a> has a `nationality` entity and a `person` entity. 
 
-<span id="3-1-2 (1)" label="3-1-2 (1)">\[3-1-2 (1)\]</span> Edmond Pope is an American businessman.
+<span id="3-1-2 (1)">(1)</span> Edmond Pope is an American businessman.
 ```
 (h/ have-role-91
       :ARG0 (p/ person :wiki "Edmond_Pope"
@@ -1278,7 +1278,7 @@ In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
 noun incorporation, predicates and their arguments can be expressed
 together in a single word. Both issues are illustrated in 
-[3-1-3-1 (1)](#3-1-3-1 (1)) from Arapaho. Here, what is
+<a href="#3-1-3-1 (1)">(1)</a> from Arapaho. Here, what is
 expressed as a multi-word sentence in the English translation takes the
 form of a single Arapaho word. The pronominal suffix *-o'* indicates
 that a first person argument acts on a third person argument. The
@@ -1287,7 +1287,7 @@ classifier *-s* indicates that the instrument is a blade-like implement.
 So, this single word expresses the predicate, and the actor, undergoer,
 theme, and instrument arguments of this state of affairs.
 
-<span id="3-1-3-1 (1)" label="3-1-3-1 (1)">\[3-1-3-1 (1)\]</span>
+<span id="3-1-3-1 (1)">(1)</span>
 ```
 nih-teb-e'ei-s-o'
 PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
@@ -1323,7 +1323,7 @@ present in the clause to fill this semantic role. So, while UMR treats
 the whole stem *teb-e'ei-s* as the predicate, it also identifies a
 separate concept for 'head', which has the `:theme` participant role as
 seen in the UMR corresponding to example
-[\[3-1-3-1 (1)\]](#3-1-3-1 (1)).
+<a href="#3-1-3-1 (1)">(1)</a>.
 
 On the other hand, in more grammaticalized noun incorporation
 constructions, the incorporated noun does not "replace" one of the
@@ -1376,14 +1376,14 @@ negation is chosen as a criterion.
 
 In English Causatives, for instance, negation can apply to the causing
 event and to the caused event separately as in
-[\[3-1-3-2 (1)\]](#3-1-3-2 (1)), indicating that the causing event and the
+<a href="#3-1-3-2 (1)">(1)</a>, indicating that the causing event and the
 caused event are construed as independent predicates. Therefore, a
 "cause"-event is identified in addition to the "drink"-event expressed
 by the verb root.
 
-<span id="3-1-3-2 (1)" label="3-1-3-2 (1)">\[3-1-3-2 (1)\]</span> 
+<span id="3-1-3-2 (1)">(1)</span> 
 
-<span id="3-1-3-2 (1a)" label="3-1-3-2 (1a)">\[3-1-3-2 (1a)\]</span> Grandmother made the kid drink the water.
+<span id="3-1-3-2 (1a)">(1a)</span> Grandmother made the kid drink the water.
 ```
 (d/ drink
     :cause (m/ make
@@ -1399,7 +1399,7 @@ by the verb root.
     :aspect Performance
     :modstr FullAff)
 ```
-<span id="3-1-3-2 (1b)" label="3-1-3-2 (1b)">\[3-1-3-2 (1b)\]</span> Grandmother did not make the kid drink the water.
+<span id="3-1-3-2 (1b)">(1b)</span> Grandmother did not make the kid drink the water.
 ```
 (d/ drink
     :cause (m/ make
@@ -1416,7 +1416,7 @@ by the verb root.
     :modstr NeutAff)
 ```
 
-<span id="3-1-3-2 (1c)" label="3-1-3-2 (1c)">\[3-1-3-2 (1c)\]</span> Grandmother made the kid not drink the water.
+<span id="3-1-3-2 (1c)">(1c)</span> Grandmother made the kid not drink the water.
 ```
 (d/ drink
     :cause (m/ make
@@ -1434,14 +1434,14 @@ by the verb root.
 ```
 
 Kukama (Tupían), on the other hand, has a morphological causative, as in
-[\[3-1-3-2 (2)\]](#3-1-3-2 (2)). The caused event and causing event cannot be
+<a href="#3-1-3-2 (2)">(2)</a>. The caused event and causing event cannot be
 negated independently: if
-[\[3-1-3-2 (2)\]](#3-1-3-2 (2)) is negated, negation necessarily scopes over
+<a href="#3-1-3-2 (2)">(2)</a> is negated, negation necessarily scopes over
 both, indicating that this form is construed in Kukama as denoting a
 single event. Therefore, only a single predicate is identified
 (corresponding to the whole verb stem *kuratata* 'make drink').
 
-<span id="3-1-3-2 (2)" label="3-1-3-2 (2)">\[3-1-3-2 (2)\]</span> 
+<span id="3-1-3-2 (2)">(2)</span> 
 ```
 nai		kurata-ta	churan=ui	uni-pu
 grandmother	drink-CAUS	kid=PST		water-INST
@@ -1489,14 +1489,14 @@ Phasal aspectual meanings such as inchoative, completive, and
 continuative, firstly, are never identified as separate events, even if
 they are expressed through independent words. Instead, they will simply
 inform the aspect attribute label of the event they modify ([Part 3-3-1](#part-3-3-1-Aspect)). This principle is illustrated in example
-[\[3-1-3-3 (1)\]](#3-1-3-3 (1)). In
+<a href="#3-1-3-3 (1)">(1)</a>. In
 Manipuri, the inchoative concept and the "close"-meaning form part of
 the same word, while in the English translation, they are expressed as
 two different words (example from Bhat 1999). Nevertheless, in both the English and the Manipuri
 UMR, only one event is identified (corresponding to concept of property
 predication, in this case).
 
-<span id="3-1-3-3 (1)" label="3-1-3-3 (1)">\[3-1-3-3 (1)\]</span> 
+<span id="3-1-3-3 (1)">(1)</span> 
 ```
 ce	əsi	mu-re
 paper	this	black-change
@@ -1520,14 +1520,14 @@ detailed in [Part 4-2](#part-4-2-temporal-dependency) and [Part 4-3](#part-4-3-m
 For some semi-modal concepts, there may be language-internal semantic
 evidence that they are construed as independent concepts. For instance,
 in the English desiderative construction in
-[\[3-1-3-3 (2)\]](#3-1-3-3 (2)), the desire-event can be modalized
+<a href="#3-1-3-3 (2)">(2)</a>, the desire-event can be modalized
 independently of the "go"-event, indicating that desires are construed
 as independent events in English. The UMR therefore has predicates for
 both *want* and *go*.
 
-<span id="3-1-3-3 (2)" label="3-1-3-3 (2)">\[3-1-3-3 (2)\]</span> 
+<span id="3-1-3-3 (2)">(2)</span> 
 
-<span id="3-1-3-3 (2a)" label="3-1-3-3 (2a)">\[3-1-3-3 (2a)\]</span> She wants to go to school.
+<span id="3-1-3-3 (2a)">(2a)</span> She wants to go to school.
 ```
 (w/ want-01
     :ARG0 (p/ person
@@ -1541,7 +1541,7 @@ both *want* and *go*.
     :aspect State
     :modstr FullAff)
 ```
-<span id="3-1-3-3 (2b)" label="3-1-3-3 (2b)">\[3-1-3-3 (2b)\]</span> She may want to go to school.
+<span id="3-1-3-3 (2b)">(2b)</span> She may want to go to school.
 ```
 (w/ want-01
     :ARG0 (p/ person
@@ -1576,17 +1576,17 @@ separate predicates in the UMR. If they cannot take their own argument
 structure, only one event is identified.
 
 For instance, the Sanapaná associated motion construction in
-[\[3-1-3-4 (1)\]](#3-1-3-4 (1)) expresses that the sleeping-event takes place during a motion event
+<a href="#3-1-3-4 (1)">(1)</a> expresses that the sleeping-event takes place during a motion event
 towards the deictic center: the suffix *-ant* essentially means that the
 event expressed by the verb root happens "while coming here". As shown
-in [\[3-1-3-4 (1)\]](#3-1-3-4 (1)), this construction can co-occur with a spatial NP. However, such a spatial NP can only express the location of the sleeping-event rather
+in <a href="#3-1-3-4 (1)">(1)</a>, this construction can co-occur with a spatial NP. However, such a spatial NP can only express the location of the sleeping-event rather
 than the goal or the start point of the motion event. It is therefore
 better analyzed as a circumstantial locative belonging to the
 "sleep"-event expressed by the verb root than as an argument of the
 motion event. The motion event itself therefore has no independent
 argument structure, and only one event is identified for UMR annotation.
 
-<span id="3-1-3-4 (1)" label="3-1-3-4 (1)">\[3-1-3-4 (1)\]</span> 
+<span id="3-1-3-4 (1)">(1)</span> 
 ```
 en-na'-ten-ek-ant-a'		La	Esperanza
 1PL-DSTR-sleep-TI-VNT-NOM	La	Esperanza
@@ -1609,7 +1609,7 @@ en-na'-ten-ek-ant-a'		La	Esperanza
 ```
 
 The English "venitive" construction in the translational equivalent of
-[\[3-1-3-4 (1)\]](#3-1-3-4 (1)), however, can co-occur with an NP which is clearly an argument of the "come"-event: one could say, for instance *We slept in La Esperanza
+<a href="#3-1-3-4 (1)">(1)</a>, however, can co-occur with an NP which is clearly an argument of the "come"-event: one could say, for instance *We slept in La Esperanza
 while coming here **from Puerto Casado***. Therefore, the motion event
 and the "sleep"-event are construed in English as two independent
 events, and are annotated in UMR as two separate predicates.
@@ -1623,23 +1623,23 @@ predication of properties, possession, and location (see [Part 3-1-1-3](#part-3-
 mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
 easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
-[\[3-1-3-5 (1)\]](#3-1-3-5 (1)) and [\[3-1-3-5 (2)\]](#3-1-3-5 (2)). In English, these constructions do not pose
+<a href="#3-1-3-5 (1)">(1)</a> and <a href="#3-1-3-5 (2)">(2)</a>. In English, these constructions do not pose
 serious problems to the predicate-argument structure of UMR - one could
 simply identify the "have" or "be"-verb as a predicate, and the NPs in
 the clause as its arguments.
 
 In the Kukama object predication construction in
-[\[3-1-3-5 (1)\]](#3-1-3-5 (1)), however, the predicate does not map to
+<a href="#3-1-3-5 (1)">(1)</a>, however, the predicate does not map to
 an overt word: object predication is expressed through juxtaposition of
 two NPs, with the predicational meaning implicit but inherent in the
-construction. In the Kukama thetic possession construction in [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), on the other hand, the possessum
+construction. In the Kukama thetic possession construction in <a href="#3-1-3-5 (2)">(2)</a>, on the other hand, the possessum
 and the relation of possession are expressed together as a single word
 which functions as a predicate: something that is typically thought of
-as an "argument" is predicativized. In languages that use the construction type exemplified in [\[3-1-3-5 (2)\]](#3-1-3-5 (2)), there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a [\[3-1-3-5 (2)\]](#3-1-3-5 (2))-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
+as an "argument" is predicativized. In languages that use the construction type exemplified in <a href="#3-1-3-5 (2)">(2)</a>, there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a <a href="#3-1-3-5 (2)">(2)</a>-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
 for the annotation of predicate-argument structure, since there is no
 separate material that can be identified as a predicate.
 
-<span id="3-1-3-5 (1)" label="3-1-3-5 (1)">\[3-1-3-5 (1)\]</span> 
+<span id="3-1-3-5 (1)">(1)</span> 
 ```
 ajan	kunumi		tsumi
 this	young.man	shaman
@@ -1655,7 +1655,7 @@ this	young.man	shaman
     								    :modstr Aff)
 ```
 
-<span id="3-1-3-5 (2)" label="3-1-3-5 (2)">\[3-1-3-5 (2)\]</span> 
+<span id="3-1-3-5 (2)">(2)</span> 
 ```
 Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
@@ -1672,13 +1672,13 @@ Miguel-CER	canoe-owner
 
 We propose a set of seven abstract concept predicates each corresponding
 to a discrete "non-verbal clause" function, listed in the table below. When there is no overt predicate-word, as
-in [\[3-1-3-5 (1)\]](#3-1-3-5 (1)), we assume that annotators will be able
+in <a href="#3-1-3-5 (1)">(1)</a>, we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
 with. They should use such an abstract predicate concept as predicative core of the graph, and use the appropriate numbered argument roles as specified in
 the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
-[\[3-1-3-5 (2)\]](#3-1-3-5 (2)), once again annotators are expected to recognize the type of non-verbal clause function at hand and select the appropriate predicate. An argument concept will be identified and linked to the predicativized participant word in the sentence - the possessum *ɨara-yara* in the case of [\[3-1-3-5 (2)\]](#3-1-3-5 (2)). As can be seen in the example UMRs
+<a href="#3-1-3-5 (2)">(2)</a>, once again annotators are expected to recognize the type of non-verbal clause function at hand and select the appropriate predicate. An argument concept will be identified and linked to the predicativized participant word in the sentence - the possessum *ɨara-yara* in the case of <a href="#3-1-3-5 (2)">(2)</a>. As can be seen in the example UMRs
 above, the resulting graphs have similar structures regardless of
 whether a language uses an overt-predicate strategy, a zero-predicate
 (juxtaposition) strategy, or a predicativized argument strategy for such
@@ -1704,11 +1704,11 @@ Table 8: Argument structure of non-verbal clause predicates
 ##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
-concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
+concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>.
 
-<span id="3-1-3-6 (1)" label="3-1-3-6 (1)">\[3-1-3-6 (1)\]</span>
+<span id="3-1-3-6 (1)">(1)</span>
 
-<span id="3-1-3-6 (1a)" label="3-1-3-6 (1a)">\[3-1-3-6 (1a)\]</span> So I normally steep it in hot water , then take it out and stir - fry it.
+<span id="3-1-3-6 (1a)">(1a)</span> So I normally steep it in hot water , then take it out and stir - fry it.
 ```
 (c/ cause-01
       :ARG1 (a/ and
@@ -1742,7 +1742,7 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
       :ARG1-of (n/ normal-02))
 ```
 
-<span id="3-1-3-6 (1b)" label="3-1-3-6 (1b)">\[3-1-3-6 (1b)\]</span> The moral aspects of the movement intrigued him as well
+<span id="3-1-3-6 (1b)">(1b)</span> The moral aspects of the movement intrigued him as well
 ```
 (i/ intrigue-01
       :ARG0 (a/ aspect
@@ -1760,9 +1760,9 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
  
- UMR allows concepts to be word senses. In order to annotate word senses, it is necessary to first have a sense inventory for all words that need to be sense-disambiguated. For languages that do not have a sense inventory, concepts can simply be represented by lemmas. For predicate concepts which the annotator wants to flag for later inclusion in a lexicon, the suffix -00 can be added to such lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English [\[3-1-4 (1)\]](#3-1-4 (1)) and Chinese [\[3-1-4 (2)\]](#3-1-4 (2)), where word senses are defined for predicates together with their arguments in *frame files*.
+ UMR allows concepts to be word senses. In order to annotate word senses, it is necessary to first have a sense inventory for all words that need to be sense-disambiguated. For languages that do not have a sense inventory, concepts can simply be represented by lemmas. For predicate concepts which the annotator wants to flag for later inclusion in a lexicon, the suffix -00 can be added to such lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English <a href="#3-1-4 (1)">(1)</a> and Chinese <a href="#3-1-4 (2)">(2)</a>, where word senses are defined for predicates together with their arguments in *frame files*.
 
-<span id="3-1-4 (1)" label="3-1-4 (1)">\[3-1-4 (1)\]</span> The school has approximately 570 pupils.
+<span id="3-1-4 (1)">(1)</span> The school has approximately 570 pupils.
 ``` 
 (h/ have-91
       :ARG0 (s/ school)
@@ -1772,7 +1772,7 @@ concatenating the lemmatized words, as in [\[3-1-3-6 (1)\]](#3-1-3-6 (1)).
       :modstr FullAff)
 ```
 
-<span id="3-1-4 (2)" label="3-1-4 (2)">\[3-1-4 (2)\]</span>
+<span id="3-1-4 (2)">(2)</span>
  ```
  并且 还 有 很多 高层 的 人物 哦 ！
 There will even be many VIPs!
@@ -1795,9 +1795,9 @@ There will even be many VIPs!
 To facilitate the translation of UMR into first-order expressions to support logical inference,
 we add a **scope** concept to represent the relative order of the predicate, quantified concept and negated concept.
 In most cases, the order of these elements are interpreted in textual order, and do not need an over scope annotation.
-The scope annotation is only needed when these elements are interpreted "out-of-order", as in [\[3-1-5 (1)\]](#3-1-5 (1)).
+The scope annotation is only needed when these elements are interpreted "out-of-order", as in <a href="#3-1-5 (1)">(1)</a>.
 
-<span id="3-1-5 (1)" label="3-1-5 (1)">\[3-1-5 (1)\]</span>
+<span id="3-1-5 (1)">(1)</span>
 ```
 Someone didn't answer all the questions
 (a/ answer-01
@@ -1810,31 +1810,31 @@ Someone didn't answer all the questions
                 :ARG1 q))
 ```
 
-Related to scope is the issue of distributive vs. collective interpretations of events. Ambiguities in this realm may arise in a great number of different contexts. They may be triggered by, amongst others, explicit quantifiers or numerals, or events with plural arguments. For example, in [\[3-1-5 (2)\]](#3-1-5 (2)) below, is there a single woman which every man loves, or does every man love a different woman? The latter interpretation is distributive, the former is usually interpreted as collective.
+Related to scope is the issue of distributive vs. collective interpretations of events. Ambiguities in this realm may arise in a great number of different contexts. They may be triggered by, amongst others, explicit quantifiers or numerals, or events with plural arguments. For example, in <a href="#3-1-5 (2)">(2)</a> below, is there a single woman which every man loves, or does every man love a different woman? The latter interpretation is distributive, the former is usually interpreted as collective.
 
-<span id="3-1-5 (2)" label="3-1-5 (2)">\[3-1-5 (2)\]</span>
+<span id="3-1-5 (2)">(2)</span>
 
-<span id="3-1-5 (2a)" label="3-1-5 (2a)">\[3-1-5 (2a)\]</span> Each man loves a woman.
+<span id="3-1-5 (2a)">(2a)</span> Each man loves a woman.
 
-However, many cases that are technically ambiguous nevertheless have a strong default reading stemming from the lexical semantics of the predicate and its arguments. For example, in [\[3-1-5 (3a)\]](#3-1-5 (3a)), there is a strong default interpretation that every single student ran 5 kilometers rather than that they ran a total of 5 kilometers between them - _run_ is typically an individual activity, so its lexical semantics trigger a default distributive reading. However, in [\[3-1-5 (3b)\]](#3-1-5 (3b)), the equally strong default interpretation is that the students carried a single piano together and there was only a single carrying-event - our world knowledge specifies that things as heavy as a piano must typically be carried by multiple people, so the lexical semantics of the predicate-argument combination here trigger a default collective reading. In yet another set of cases, our "default" feeling is that it does not really matter in what configurations the participants participate in the denoted events. In [\[3-1-5 (3c)\]](#3-1-5 (3c)), all that typically matters is that 6 states were hit by at least one hurricane each, and that there was a total of 10 hurricanes. We can't really know how many hurricanes hit each state, and we don't really care - all we know is that 6 states and 10 hurricanes were involved. This kind of default interpretation is called a summation reading.
+However, many cases that are technically ambiguous nevertheless have a strong default reading stemming from the lexical semantics of the predicate and its arguments. For example, in <a href="#3-1-5 (3a)">(3a)</a>, there is a strong default interpretation that every single student ran 5 kilometers rather than that they ran a total of 5 kilometers between them - _run_ is typically an individual activity, so its lexical semantics trigger a default distributive reading. However, in <a href="#3-1-5 (3b)">(3b)</a>, the equally strong default interpretation is that the students carried a single piano together and there was only a single carrying-event - our world knowledge specifies that things as heavy as a piano must typically be carried by multiple people, so the lexical semantics of the predicate-argument combination here trigger a default collective reading. In yet another set of cases, our "default" feeling is that it does not really matter in what configurations the participants participate in the denoted events. In <a href="#3-1-5 (3c)">(3c)</a>, all that typically matters is that 6 states were hit by at least one hurricane each, and that there was a total of 10 hurricanes. We can't really know how many hurricanes hit each state, and we don't really care - all we know is that 6 states and 10 hurricanes were involved. This kind of default interpretation is called a summation reading.
 					
-<span id="3-1-5 (3)" label="3-1-5 (3)">\[3-1-5 (3)\]</span>
+<span id="3-1-5 (3)">(3)</span>
 
-<span id="3-1-5 (3a)" label="3-1-5 (3a)">\[3-1-5 (3a)\]</span> The linguistics students ran 5 kilometers to raise money for charity.
+<span id="3-1-5 (3a)">(3a)</span> The linguistics students ran 5 kilometers to raise money for charity.
 
-<span id="3-1-5 (3b)" label="3-1-5 (3b)">\[3-1-5 (3b)\]</span> The linguistics students carried a piano into the theater.
+<span id="3-1-5 (3b)">(3b)</span> The linguistics students carried a piano into the theater.
 
-<span id="3-1-5 (3c)" label="3-1-5 (3c)">\[3-1-5 (3c)\]</span> Ten hurricanes hit six states over the weekend.
+<span id="3-1-5 (3c)">(3c)</span> Ten hurricanes hit six states over the weekend.
 
-Scope will not be annotated for summation readings (as we cannot reliably know it from the text alone), nor is it annotated where a distributive or collective reading can be predictably derived from the lexical semantics. In other words, whenever _run_ is interpreted distributively or _carry a piano_ is interpreted collectively, no scope annotation is needed. The scope annotation only comes into play when some overt linguistic element forces an interpretation that diverges from the lexical default. For example, in [\[3-1-5 (4a)\]](#3-1-5 (4a)), _together_ forces a collective interpretation of _run_, in [\[3-1-5 (4b)\]](#3-1-5 (4b)), _each_ forces a distributive interpretation of _carry a piano_, and in [\[3-1-5 (4c)\]](#3-1-5 (4c)), _each_ similarly forces a distributive interpretation of _hit_. In all these cases, a (s / scope) predicate would appear to clarify the non-canonical scopal relations.
+Scope will not be annotated for summation readings (as we cannot reliably know it from the text alone), nor is it annotated where a distributive or collective reading can be predictably derived from the lexical semantics. In other words, whenever _run_ is interpreted distributively or _carry a piano_ is interpreted collectively, no scope annotation is needed. The scope annotation only comes into play when some overt linguistic element forces an interpretation that diverges from the lexical default. For example, in <a href="#3-1-5 (4a)">(4a)</a>, _together_ forces a collective interpretation of _run_, in <a href="#3-1-5 (4b)">(4b)</a>, _each_ forces a distributive interpretation of _carry a piano_, and in <a href="#3-1-5 (4c)">(4c)</a>, _each_ similarly forces a distributive interpretation of _hit_. In all these cases, a (s / scope) predicate would appear to clarify the non-canonical scopal relations.
 
-<span id="3-1-5 (4)" label="3-1-5 (4)">\[3-1-5 (4)\]</span>
+<span id="3-1-5 (4)">(4)</span>
 
-<span id="3-1-5 (4a)" label="3-1-5 (4a)">\[3-1-5 (4a)\]</span> The linguistics students together ran 200 kilometers to raise money for charity.
+<span id="3-1-5 (4a)">(4a)</span> The linguistics students together ran 200 kilometers to raise money for charity.
 
-<span id="3-1-5 (4b)" label="3-1-5 (4b)">\[3-1-5 (4b)\]</span> The bodybuilders each carried a piano into the theater.
+<span id="3-1-5 (4b)">(4b)</span> The bodybuilders each carried a piano into the theater.
 
-<span id="3-1-5 (4c)" label="3-1-5 (4c)">\[3-1-5 (4c)\]</span> Ten hurricanes each hit six states over the weekend.
+<span id="3-1-5 (4c)">(4c)</span> Ten hurricanes each hit six states over the weekend.
 
 [Back to Table of Contents](#toc)
 
@@ -1848,9 +1848,9 @@ Annotators may choose annotation values from more fine-grained levels of the lat
 
 Each discourse relation on the lattice is defined below, based on Croft (to appear, ch. 15, ch. 17).
 
-```Disjunctive```: Construes two (or more) events as being alternatives of each other in some way. Roughly corresponds to the range of meanings expressed by English _(either) or_. UMR expresses this meaning through an abstract concept ```or``` which takes numbered ```:opX``` arguments for the construed alternatives as in [\[3-1-6 (1)\]](#3-1-6 (1)).
+```Disjunctive```: Construes two (or more) events as being alternatives of each other in some way. Roughly corresponds to the range of meanings expressed by English _(either) or_. UMR expresses this meaning through an abstract concept ```or``` which takes numbered ```:opX``` arguments for the construed alternatives as in <a href="#3-1-6 (1)">(1)</a>.
 
-<span id="3-1-6 (1)" label="3-1-6 (1)">\[3-1-6 (1)\]</span>
+<span id="3-1-6 (1)">(1)</span>
 ```
 I will go for a walk or play some soccer.
 (o/ or
@@ -1869,13 +1869,13 @@ I will go for a walk or play some soccer.
 
 There are two more fine-grained subtypes of disjunctive relations:
 
-```Inclusive Disjunctive```: also known as “non-exhaustive disjunction”. Indicates that either any of the construed alternatives can be “chosen” individually, or any combination of the construed alternatives. This is illustrated in [\[3-1-6 (2a)\]](#3-1-6 (2a)) from Hua (Haiman 1978:7-8). Here, _-ve_ indicates that bashing pandanus, husking and eating corn, and planting bananas are not mutually exclusive alternatives. Performing any or all of these actions equally violates a sexual taboo. UMR uses an abstract concept ```inclusive-disj``` to annotate this meaning, with numbered ```:opX``` roles for the construed alternatives.
+```Inclusive Disjunctive```: also known as “non-exhaustive disjunction”. Indicates that either any of the construed alternatives can be “chosen” individually, or any combination of the construed alternatives. This is illustrated in <a href="#3-1-6 (2a)">(2a)</a> from Hua (Haiman 1978:7-8). Here, _-ve_ indicates that bashing pandanus, husking and eating corn, and planting bananas are not mutually exclusive alternatives. Performing any or all of these actions equally violates a sexual taboo. UMR uses an abstract concept ```inclusive-disj``` to annotate this meaning, with numbered ```:opX``` roles for the construed alternatives.
 
-```Exclusive Disjunctive```: also known as “exhaustive disjunction”. Indicates that the construed alternatives are presented as mutually exclusive options. This is illustrated in [\[3-1-6 (2b)\]](#3-1-6 (2b)) from Hua (Haiman 1980:271). Here, _ito_ indicates that his being here and his not being here are mutually exclusive alternatives. UMR uses an abstract concept ```exclusive-disj``` to annotate this meaning, with numbered ```:opX``` roles for the construed alternatives.
+```Exclusive Disjunctive```: also known as “exhaustive disjunction”. Indicates that the construed alternatives are presented as mutually exclusive options. This is illustrated in <a href="#3-1-6 (2b)">(2b)</a> from Hua (Haiman 1980:271). Here, _ito_ indicates that his being here and his not being here are mutually exclusive alternatives. UMR uses an abstract concept ```exclusive-disj``` to annotate this meaning, with numbered ```:opX``` roles for the construed alternatives.
 
-<span id="3-1-6 (2)" label="3-1-6 (2)">\[3-1-6 (2)\]</span>
+<span id="3-1-6 (2)">(2)</span>
 
-<span id="3-1-6 (2a)" label="3-1-6 (2a)">\[3-1-6 (2a)\]</span>
+<span id="3-1-6 (2a)">(2a)</span>
 ```
 mnu'bo		hatai-supi'ba-ve	kire'bo	kro-de-supi'ba-ve	egemo	bre-supi'ba-ve		degi	kiko-pi'	rmi-supamo	a-ki'		a'-vo-g-une
 pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-NONEX	crazy	place-in	go_down-if.1PL	woman-with	not-sleep-fut-1PL.IND
@@ -1914,7 +1914,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 	
 ```
 
-<span id="3-1-6 (2b)" label="3-1-6 (2b)">\[3-1-6 (2b)\]</span>
+<span id="3-1-6 (2b)">(2b)</span>
 ```
 bai-ve		ito	'a'-bai-e
 be.3SG-INTERR	EX	NEG-be.3SG-IND
@@ -1939,11 +1939,11 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 
 The exclusive disjunction relation has one further, more specific subtype:
 
-```Apprehensive```: expresses that two events are mutually exclusive alternatives, but more specifically, that one event is carried out with the intention of preventing the other event from happening. It is in a way a negated counterpart of the `purpose` relation discussed below. In [\[3-1-6 (3)\]](#3-1-6 (3)), the implication is that if the addressee of the imperative grabs a stick, they will not be attacked - the grab-event and the attack-event are mutually exclusive alternatives. As illustrated in [\[3-1-6 (3)\]](#3-1-6 (3)), English has a dedicated subordinator to express apprehensive relations, but may also draw on its polysemous disjunctive coordinator, which has apprehensive as one of its functions. In the latter case, annotators may either use the higher-level category (the ```or``` abstract concept) in the lattice, or if they are confident, the lower-level category (using the ```:apprehensive``` relation. The same holds for many of the other fine-grained meanings discussed below - illustrative annotations will not be provided for all of them.
+```Apprehensive```: expresses that two events are mutually exclusive alternatives, but more specifically, that one event is carried out with the intention of preventing the other event from happening. It is in a way a negated counterpart of the `purpose` relation discussed below. In <a href="#3-1-6 (3)">(3)</a>, the implication is that if the addressee of the imperative grabs a stick, they will not be attacked - the grab-event and the attack-event are mutually exclusive alternatives. As illustrated in <a href="#3-1-6 (3)">(3)</a>, English has a dedicated subordinator to express apprehensive relations, but may also draw on its polysemous disjunctive coordinator, which has apprehensive as one of its functions. In the latter case, annotators may either use the higher-level category (the ```or``` abstract concept) in the lattice, or if they are confident, the lower-level category (using the ```:apprehensive``` relation. The same holds for many of the other fine-grained meanings discussed below - illustrative annotations will not be provided for all of them.
 
-<span id="3-1-6 (3)" label="3-1-6 (3)">\[3-1-6 (3)\]</span>
+<span id="3-1-6 (3)">(3)</span>
 
-<span id="3-1-6 (3a)" label="3-1-6 (3a)">\[3-1-6 (3a)\]</span>
+<span id="3-1-6 (3a)">(3a)</span>
 ```
 Grab a stick lest he attack you!
 (g/ grab-01
@@ -1964,7 +1964,7 @@ Grab a stick lest he attack you!
      :modstr PrtAff)
 ```
 
-<span id="3-1-6 (3b)" label="3-1-6 (3b)">\[3-1-6 (3b)\]</span>
+<span id="3-1-6 (3b)">(3b)</span>
 ```
 Grab a stick or he will he attack you!
 (g/ grab-01					Or	(o/ or
@@ -1988,15 +1988,15 @@ Grab a stick or he will he attack you!
 
 ```Additive```: expresses the addition of one “figure” (foregrounded participant or event) to another one in order to form a complex figure. This is represented in UMR through an ```additive``` abstract concept with numbered ```:opX``` roles. The additive function has a number of more fine-grained subfunctions:
 
-```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in [\[3-1-6 (4a)\]](#3-1-6 (4a)) - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level using the ```:temporal``` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level through the :overlap temporal relation (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
+```Simultaneous```: expresses full or partial temporal overlap of the events that together form a complex figure. This is illustrated in <a href="#3-1-6 (4a)">(4a)</a> - the reading-event and the listening-event take place, at least in part, at the same time. This function is annotated at the sentence level using the ```:temporal``` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level through the :overlap temporal relation (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
 
-```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In [\[3-1-6 (4b)\]](#3-1-6 (4b)), having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary. UMR uses a ```:pure-addition``` relation to connect two events semantically related in this way.
+```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In <a href="#3-1-6 (4b)">(4b)</a>, having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary. UMR uses a ```:pure-addition``` relation to connect two events semantically related in this way.
 
-```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in [\[3-1-6 (4c)\]](#3-1-6 (4c)). The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract `substitute-01` predicate. The rejected alternative is annotated as :ARG2, while the replacement is annotated as :ARG1
+```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in <a href="#3-1-6 (4c)">(4c)</a>. The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract `substitute-01` predicate. The rejected alternative is annotated as :ARG2, while the replacement is annotated as :ARG1
 
-<span id="3-1-6 (4)" label="3-1-6 (4)">\[3-1-6 (4)\]</span>
+<span id="3-1-6 (4)">(4)</span>
 
-<span id="3-1-6 (4a)" label="3-1-6 (4a)">\[3-1-6 (4a)\]</span>
+<span id="3-1-6 (4a)">(4a)</span>
 ```
 I read a book while I listened to music. / I read a book while listening to music. / I read a book and listened to music.
 (r/ read-01				Or		(a/ and
@@ -2015,7 +2015,7 @@ I read a book while I listened to music. / I read a book while listening to musi
    									:modstr FullAff))
 ```
 
-<span id="3-1-6 (4b)" label="3-1-6 (4b)">\[3-1-6 (4b)\]</span>
+<span id="3-1-6 (4b)">(4b)</span>
 ```
 In addition to having your hand stamped, you have to show your ticket to get into the concert. / You have to have your hand stamped and show your ticket stub to get into the concert.
 (a/ and							Or	(h/ have-04
@@ -2047,7 +2047,7 @@ In addition to having your hand stamped, you have to show your ticket to get int
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (4c)" label="3-1-6 (4c)">\[3-1-6 (4c)\]</span>
+<span id="3-1-6 (4c)">(4c)</span>
 ```
 Instead of going out to eat, we barbecued chicken at home. / We didn’t go out to eat and/but barbecued chicken at home.
 (s/ substitute-01				Or		(a/ and
@@ -2071,19 +2071,19 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
 
 ```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. Just like the ```Additive``` meaning, this is represented in UMR through a ```consecutive``` abstract concept with numbered ```:opX``` relations. The temporal relations holding between the events can then be further specified in the document-level temporal annotation. More fine-grained sub-functions of the consecutive function are the following:
 
-```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in [\[3-1-6 (5a)\]](#3-1-6 (5a)). This relation is annotated using the `:purpose` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
+```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in <a href="#3-1-6 (5a)">(5a)</a>. This relation is annotated using the `:purpose` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Means```: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in [\[3-1-6 (5b)\]](#3-1-6 (5b)). This relation has also been called “positive circumstantial”. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
+```Means```: expresses a relation where one event accompanies another and characterizes more specifically what happened (or didn't happen) in another event, as in <a href="#3-1-6 (5b)">(5b)</a>. This relation has also been called “positive circumstantial”. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in [\[3-1-6 (5c)\]](#3-1-6 (5c)). This relation is annotated using the `cause-01` predicate or the `:cause` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
+```Causal```: expresses a relation between a causing event and a resulting event, where the former explicitly brings about the latter, as in <a href="#3-1-6 (5c)">(5c)</a>. This relation is annotated using the `cause-01` predicate or the `:cause` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
-```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in [\[3-1-6 (5d)\]](#3-1-6 (5d)). This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3-1-5](#part-4-3-1-5-condition-relation)).
+```Conditional```: expresses a relation where one event is contingent upon the occurrence of another event, as in <a href="#3-1-6 (5d)">(5d)</a>. This relation is annotated using the `have-condition-91` predicate or the `:condition` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3-1-5](#part-4-3-1-5-condition-relation)).
 
-```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in [\[3-1-6 (5e)\]](#3-1-6 (5e)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
+```Anterior```: expresses that one event takes place before another. This can either be expressed through an adverbial construction with the earlier event in the main clause and the later event in a subordinate clause, or through iconicity of tense in coordinated clauses with the earlier event in the sequentially prior clause, all exemplified in <a href="#3-1-6 (5e)">(5e)</a>. This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
 
-```Posterior```: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in [\[3-1-6 (5f)\]](#3-1-6 (5f)). This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
+```Posterior```: expresses that one event takes place following another. This can either be expressed through an adverbial construction with the later event in the main clause and the earlier event in a subordinate clause, or through iconicity of tense in coordinated clauses with the later event in the sequentially later clause, all exemplified in <a href="#3-1-6 (5f)">(5f)</a>. This relation is annotated at the sentence level, using the `:temporal` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and at the document level (see [Part 4-2-2](#part-4-2-2-temporal-relations)).
 
-<span id="3-1-6 (5a)" label="3-1-6 (5a)">\[3-1-6 (5a)\]</span>
+<span id="3-1-6 (5a)">(5a)</span>
 ```
 I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** defended myself.
 (g/ grab-01
@@ -2101,7 +2101,7 @@ I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** def
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (5b)" label="3-1-6 (5b)">\[3-1-6 (5b)\]</span>
+<span id="3-1-6 (5b)">(5b)</span>
 ```
 He got into the army **by** lying about his age. / He lied about his age **and** got into the army.
 (g/ get-5
@@ -2120,7 +2120,7 @@ He got into the army **by** lying about his age. / He lied about his age **and**
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (5c)" label="3-1-6 (5c)">\[3-1-6 (5c)\]</span>
+<span id="3-1-6 (5c)">(5c)</span>
 ```
 Sarah moved back to California **because** she couldn't find a job in Washington. / Sarah couldn't find a job in Washington **and (so)** she moved back to California.
 (m/ move-01
@@ -2140,7 +2140,7 @@ Sarah moved back to California **because** she couldn't find a job in Washington
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (5d)" label="3-1-6 (5d)">\[3-1-6 (5d)\]</span>
+<span id="3-1-6 (5d)">(5d)</span>
 ```
 **If** you touch it, it might explode. / Touch it, **and** it might explode.
 (e/ explode-01
@@ -2155,7 +2155,7 @@ Sarah moved back to California **because** she couldn't find a job in Washington
 	:modstr NeutAff)
 ```
 
-<span id="3-1-6 (5e)" label="3-1-6 (5e)">\[3-1-6 (5e)\]</span>
+<span id="3-1-6 (5e)">(5e)</span>
 ```
 I went home **before** paying the check. / I went home **and** paid the check.
 (g/ go-01
@@ -2173,7 +2173,7 @@ I went home **before** paying the check. / I went home **and** paid the check.
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (5f)" label="3-1-6 (5f)">\[3-1-6 (5f)\]</span>
+<span id="3-1-6 (5f)">(5f)</span>
 ```
 I went home **after** paying the check. / I paid the check **and** went home.
 (g/ go-01
@@ -2193,13 +2193,13 @@ I went home **after** paying the check. / I paid the check **and** went home.
 
 Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function, marked in UMR with the ```and``` abstract concept and numbered ```:opX``` roles. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
 
-```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In [3-1-6 (6a)\]](#3-1-6 (6a)), properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy. This meaning is annotated using the ```contrast-01``` abstract predicate and its numbered argument roles.
+```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In <a href="#3-1-6 (6a)">(6a)</a>, properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy. This meaning is annotated using the ```contrast-01``` abstract predicate and its numbered argument roles.
 
-```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in [3-1-6 (6b)\]](#3-1-6 (6b)) from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school. UMR uses a ``unexpected-co-occurrence``` abstract concept with numbered ```:opX``` roles to represent this meaning.
+```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in <a href="#3-1-6 (6b)">(6b)</a> from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school. UMR uses a ``unexpected-co-occurrence``` abstract concept with numbered ```:opX``` roles to represent this meaning.
 
-<span id="3-1-6 (6)" label="3-1-6 (6)">\[3-1-6 (6)\]</span>
+<span id="3-1-6 (6)">(6)</span>
 
-<span id="3-1-6 (6a)" label="3-1-6 (6a)">\[3-1-6 (6a)\]</span>
+<span id="3-1-6 (6a)">(6a)</span>
 ```
 Petja	staratel'nyi,	a	Vanja	lenivyj
 Peter	diligent	CONJ	Vanja	lazy
@@ -2219,7 +2219,7 @@ Peter	diligent	CONJ	Vanja	lazy
 	:modstr FullAff))
 ```
 
-<span id="3-1-6 (6b)" label="3-1-6 (6b)">\[3-1-6 (6b)\]</span>
+<span id="3-1-6 (6b)">(6b)</span>
 ```
 Vanja	prostudilsja,	no	poshël	v	shkolu
 Vanja	caught_cold	CONJ	went	to	school
@@ -2239,13 +2239,15 @@ Vanja	caught_cold	CONJ	went	to	school
 
 There are three subtypes of unexpected co-occurrence relations that confident annotators, or annotators for languages which have overt grammatical mechanisms of disambiguating them, may distinguish:
 
-```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between [3-1-6 (7a)\]](#3-1-6 (7a)) and [3-1-6 (7b)\]](#3-1-6 (7b)): the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a somersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
+```Negative circumstantial```: expresses that the lack of occurrence of one event is a specific characterization of the other event, in the same way that the `means` relation discussed above expresses that the occurrence of one event is a specific characterization of another event. This meaning is classified as a subtype of “unexpected cooccurrence” because typically, the “more specific”, “characterizing” event that did not happen is only expressed overtly if the general expectation is that it _would_ happen. Compare the difference in naturalness between <a href="#3-1-6 (7a)">(7a)</a> and <a href="#3-1-6 (7b)">(7b)</a>: the former sounds natural because we assume that, when carrying a bowl of punch, spills are a fairly common occurrence. The latter is not ungrammatical, but it implies that Sarah usually does a somersault whenever she carries bowls of punch. This relation is annotated using the `:manner` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)), and a negative polarity attribute (see [Part 3-3-3](#part-3-3-3-polarity)).
 
-```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in [3-1-6 (7c)\]](#3-1-6 (7c)), the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. The concessive _even though_ specifies that typically being broke causes one to not buy new guitars. This relation is annotated using the ```have-concession-91``` predicate or the shortcut ```:concession``` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3](#part-4-3-modal-dependency)).
+```Concessive```: expresses a relation between two events towards which the speaker has a positive epistemic stance (i.e. the speaker believes they both occurred/will occur), but specifies that this co-occurrence is unexpected. Concessives have also been treated as negative causal relations (Comrie 1986). For instance, in <a href="#3-1-6 (7c)">(7c)</a>, the speaker asserts that both the state of being broke and the guitar-buying event occurred in the real world. The concessive _even though_ specifies that typically being broke causes one to not buy new guitars. This relation is annotated using the ```have-concession-91``` predicate or the shortcut ```:concession``` relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0), [Part 4-3](#part-4-3-modal-dependency)).
 
-```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in [3-1-6 (7d)\]](#3-1-6 (7d)), there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the ```concessive-condition``` relation.
+```Concessive conditional```: expresses that the state of affairs described in the apodosis will be true under the entire range of conditions described in the protasis. Concessive conditionals are different from regular conditionals in that they imply an expectation that the event expressed in the protasis may not lead to the event expressed in the apodosis happening. For instance, in <a href="#3-1-6 (7d)">(7d)</a>, there is an expectation that a mere five minutes of tardiness is not likely to cause one to be fired, and the concessive conditional contradicts this expectation: in the entire range of possible tardiness events, the event in the apodosis (being fired) will take place. This relation is annotated using the ```concessive-condition``` relation.
 
-<span id="3-1-6 (7a)" label="3-1-6 (7a)">\[3-1-6 (7a)\]</span>
+<span id="3-1-6 (7)">(7)</span>
+
+<span id="3-1-6 (7a)">(7a)</span>
 ```
 Sarah carried the bowl of punch into the living room without doing a somersault. / Sarah carried the bowl of punch into the living room and/but didn't do a somersault.
 (c/ carry-01
@@ -2264,7 +2266,7 @@ Sarah carried the bowl of punch into the living room without doing a somersault.
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (7b)" label="3-1-6 (7b)">\[3-1-6 (7b)\]</span> 
+<span id="3-1-6 (7b)">(7b)</span> 
 ```
 Sarah carried the bowl of punch into the living room without spilling a drop. / Sarah carried the bowl of punch into the living room and/but didn't spill a drop.
 (c/ carry-01
@@ -2285,7 +2287,7 @@ Sarah carried the bowl of punch into the living room without spilling a drop. / 
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (7c)" label="3-1-6 (7c)">\[3-1-6 (7c)\]</span>
+<span id="3-1-6 (7c)">(7c)</span>
 ```
 Even though he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
 (b/ buy-01
@@ -2304,7 +2306,7 @@ Even though he was broke, he bought a new guitar. / He was broke, **but (still)*
 	:modstr FullAff)
 ```
 
-<span id="3-1-6 (7d)" label="3-1-6 (7d)">\[3-1-6 (7d)\]</span>
+<span id="3-1-6 (7d)">(7d)</span>
 ```
 Even if you arrive only five minutes late, you will be fired.
 (f/ fire-02
@@ -2325,9 +2327,9 @@ Even if you arrive only five minutes late, you will be fired.
 
 Lastly, the “(pure) contrast” meaning has a more fine-grained “subtraction” value, where one event is
 additionally characterized by the absence of a second event that is normally a part of
-the first event (Croft, to appear). UMR handles this meaning through a ```:subtraction``` relation that takes the absent second event as its child (see [3-1-6 (8)\]](#3-1-6 (8)).
+the first event (Croft, to appear). UMR handles this meaning through a ```:subtraction``` relation that takes the absent second event as its child (see <a href="#3-1-6 (8)">(8)</a>.
 
-<span id="3-1-6 (8)" label="3-1-6 (8)">\[3-1-6 (8)\]</span>
+<span id="3-1-6 (8)">(8)</span>
 ```
 People don't own tigers, except for Joe Exotic.
 (o/ own-01
