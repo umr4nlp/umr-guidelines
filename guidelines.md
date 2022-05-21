@@ -4222,7 +4222,7 @@ annotation value difficult. We do, however, know that these events are
 processes, and not states, since nominals expressing states are not
 identified as events. On the lattice,
 ```process``` is the aspectual value that includes all types of processes. Therefore, events expressed as event
-nominals, as in [\[3-3-1-1 (1)\]](#3-3-1-1 (1)), are annotated as
+nominals, as in <a href="#3-3-1-1 (1)">(1)</a>, are annotated as
 ```process```.
 
 
@@ -4260,8 +4260,7 @@ After the game, she went home.
 ```
 Any event packaged in a referring expression is considered an event
 nominal and annotated with `process`. This
-includes underived nominals, nominalizations, and gerunds, as in
-[\[3-3-1-1 (2)\]](#3-3-1-1 (2)).
+includes underived nominals, nominalizations, and gerunds, as in <a href="#3-3-1-1 (2)">(2)</a>.
 
 <span id="3-3-1-1 (2)" label="3-3-1-1 (2)">\[3-3-1-1 (2)\]</span>
 
@@ -4294,9 +4293,9 @@ The dog interrupted the meeting with his barking.
 
 Note that *-ing* forms in English can occur in a variety of
 constructions; they should only be treated as event nominals when they
-are used in referring expressions (as in [\[3-3-1-1 (2a)\]](#3-3-1-1 (2a)) and
-[\[3-3-1-1 (2b)\]](#3-3-1-1 (2b)) above). When they occur in other types of
-constructions, as in [\[3-3-1-1 (3)\]](#3-3-1-1 (3)), they should not
+are used in referring expressions (as in <a href="#3-3-1-1 (2a)">(2a)</a> and
+<a href="#3-3-1-1 (2b)">(2b)</a> above). When they occur in other types of
+constructions, as in <a href="#3-3-1-1 (3)">(3)</a>, they should not
 receive an aspect annotation at this point and annotators should
 continue on to the next step.
 
@@ -4304,7 +4303,7 @@ continue on to the next step.
 dog stopped **barking** for a few seconds.
 
 Event nominals that occur in predicate nominal constructions, as in
-[\[3-3-1-1 (4)\]](#3-3-1-1 (4)), are also not annotated at this point;
+<a href="#3-3-1-1 (4)">(4)</a>, are also not annotated at this point;
 these are treated like other predicate nominal constructions.
 
 <span id="3-3-1-1 (4)" label="3-3-1-1 (4)">\[3-3-1-1 (4)\]</span>
@@ -4318,7 +4317,7 @@ It was **an earthquake**.
 The next step concerns the application of the
 ```habitual``` aspect value. This value should
 be applied to all events that are presented as occurring usually or
-habitually, as in [\[3-3-1-2 (1)\]](#3-3-1-2 (1)).
+habitually, as in <a href="#3-3-1-2 (1)">(1)</a>.
 
 
 <span id="3-3-1-2 (1)" label="3-3-1-2 (1)">\[3-3-1-2 (1)\]</span>
@@ -4399,7 +4398,7 @@ pie*); these events should continue on to the next step.
 The next step assesses whether the event is a
 ```state```. The distinction between states and
 processes is necessary for event identification (as states are only
-identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in [\[3-3-1-3 (1)\]](#3-3-1-3 (1)); note that all of the nonverbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
+identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the nonverbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
 
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">\[3-3-1-3 (1)\]</span>
@@ -4461,8 +4460,8 @@ Your glass is in the kitchen.
 	:modstr FullAff)
 ```
 
-Modal verbs, as in [\[3-3-1-3 (2)\]](#3-3-1-3 (2)), and events under the scope of
-ability modals, as in [\[3-3-1-3 (3)\]](#3-3-1-3 (3)), are also annotated as
+Modal verbs, as in <a href="#3-3-1-3 (2)">(2)</a>, and events under the scope of
+ability modals, as in <a href="#3-3-1-3 (3)">(3)</a>, are also annotated as
 ```state```.
 
 <span id="3-3-1-3 (2)" label="3-3-1-3 (2)">\[3-3-1-3 (2)\]</span>
@@ -4542,11 +4541,11 @@ This car can go up to 150 mph.
 ```
 In this analysis, ability modals refer to a static state of affairs,
 i.e. an entity possesses the relevant ability. For examples like
-[\[3-3-1-3 (3a)\]](#3-3-1-3 (3a)), ability modals may look more like event
-quantification. That is, there are probably multiple singing events that this example is generalizing over. Examples like [\[3-3-1-3 (3b)\]](#3-3-1-3 (3b)), however, show how ability modals are more like states. It is possible
+<a href="#3-3-1-3 (3a)">(3a)</a>, ability modals may look more like event
+quantification. That is, there are probably multiple singing events that this example is generalizing over. Examples like <a href="#3-3-1-3 (3b)">(3b)</a>, however, show how ability modals are more like states. It is possible
 that the car has never actually gone as fast as 150 mph; the car just
 has the parts and (theoretical) ability to do so. Therefore, all types
-of ability modals, both [\[3-3-1-3 (3a)\]](#3-3-1-3 (3a)) and [\[3-3-1-3 (3b)\]](#3-3-3 (3b)), are
+of ability modals, both <a href="#3-3-1-3 (3a)">(3a)</a> and <a href="#3-3-1-3 (3b)">(3b)</a>, are
 analyzed as states and annotated as such.
 
 There is a type of event, called “inactive actions” by Croft (2012), which is semantically intermediate between states and processes. In many languages, they can be construed either way. For example, English *lie* can occur in the Progressive (*Bill **is lying** on the bed*) or the Simple Present (*The Sandias **lie** to the east of Albuquerque*). And across languages there is variation as to the default construal of
@@ -4562,7 +4561,7 @@ refers to a ```state``` or an
 ```imperfective``` annotation value is used.
 
 There are different types of states, shown in
-[\[3-3-1-3 (4)\]](#3-3-1-3 (4)), which can optionally be distinguished in
+<a href="#3-3-1-3 (4)">(4)</a>, which can optionally be distinguished in
 the aspect annotation.
 
 
@@ -4617,19 +4616,19 @@ It is 2:30pm.
 ```
 
 Events that are annotated as ```inherent
-state```, as in [\[3-3-1-3 (4a)\]](#3-3-1-3 (4a)), refer to states that are
+state```, as in <a href="#3-3-1-3 (4a)">(4a)</a>, refer to states that are
 an inherent property of the entity, i.e. they did not ‘start’ at any
 particular point in the entity’s history and are not changeable in the
 future. Events annotated as ```reversible
-state```, as in [\[3-3-1-3 (4b)\]](#3-3-1-3 (4b)), refer to properties of entities
+state```, as in <a href="#3-3-1-3 (4b)">(4b)</a>, refer to properties of entities
 that are not inherent, meaning they have come into existence at some
 point during the entity’s history; these states are reversible, meaning
 the entity likely will revert back to its base state in the future.
 Events annotated as ```irreversible state```,
-as in [\[3-3-1-3 (4c)\]](#3-3-1-3 (4c)), refer to properties of entities that are not
+as in <a href="#3-3-1-3 (4c)">(4c)</a>, refer to properties of entities that are not
 inherent, but cannot be reversed in the future; once acquired, these
 states are permanent. Finally, events that are annotated as
-```point state```, as in [\[3-3-1-3 (4d)\]](#3-3-1-3 (4d)),
+```point state```, as in <a href="#3-3-1-3 (4d)">(4d)</a>,
 refer to states that come into and out of existence over a single point
 in time (what is considered a ‘point’ is open to construal); these
 states necessarily do not persist into the future.
@@ -4643,7 +4642,7 @@ Events that are not annotated as a type of
 
 The ```activity``` label applies to processes
 when there is no evidence that the event has come to an end, as in
-[\[3-3-1-4 (1)\]](#3-3-1-4 (1)).
+<a href="#3-3-1-4 (1)">(1)</a>.
 
 <span id="3-3-1-4 (1)" label="3-3-1-4(1)">\[3-3-1-4 (1)\]</span>
 
@@ -4677,13 +4676,13 @@ He was writing his paper yesterday.
 ```
 
 This covers cases where it is clear that the process is still ongoing at
-document creation time, as in [\[3-3-1-4 (1a)\]](#3-3-1-4 (1a)), but also cases
+document creation time, as in <a href="#3-3-1-4 (1a)">(1a)</a>, but also cases
 where it is ambiguous whether or not the process continues, as in
-[\[3-3-1-4 (1b)\]](#3-3-1-4 (1b)).
+<a href="#3-3-1-4 (1b)">(1b)</a>.
 
 This step is largely dependent on context and real world knowledge,
 however there are some grammatical cues that can help. Events in the
-present tense, as in [\[3-3-1-4 (2)\]](#3-3-1-4 (2)), are annotated as
+present tense, as in <a href="#3-3-1-4 (2)">(2)</a>, are annotated as
 ```activity```.
 
 <span id="3-3-1-4 (2)" label="3-3-1-4 (2)">\[3-3-1-4 (2)\]</span>   
@@ -4698,7 +4697,7 @@ He is playing the violin.
 	:modstr FullAff)
 ```
 
-Inceptive and continuative aspectual marking, as in [\[3-3-1-4 (3)\]](#3-3-1-4 (3)),
+Inceptive and continuative aspectual marking, as in <a href="#3-3-1-4 (3)">(3)</a>,
 also do not imply that an event has (necessarily) ended.
 
 <span id="3-3-1-4 (3)" label="3-3-1-4 (3)">\[3-3-1-4 (3)\]</span>
@@ -4731,8 +4730,8 @@ label can be used.
 There are two finer-grained ```activity```
 categories which can optionally be distinguished. Certain types of
 activities describe directed change, as in
-[\[3-3-1-4 (4)\]](#3-3-1-4 (4)), whereas other activities describe
-undirected change, as in [\[3-3-1-4 (5)\]](#3-3-1-4 (5));
+<a href="#3-3-1-4 (4)">(4)</a>, whereas other activities describe
+undirected change, as in <a href="#3-3-1-4 (5)">(5)</a>;
 these are annotated as ```directed activity```
 and ```undirected activity``` respectively.
 
@@ -4761,11 +4760,11 @@ The cat was meowing outside the door.
 
 Events annotated as ```directed activity```
 refer to change that occurs gradually along a qualitative scale. In
-[\[3-3-1-4 (4)\]](#3-3-1-4 (4)), the temperature of the soup
+<a href="#3-3-1-4 (4)">(4)</a>, the temperature of the soup
 continues to decrease in a linear fashion. Events annotated as
 ```undirected activity``` refer to change that
 does not progress incrementally along a scale; in
-[\[3-3-1-4 (5)\]](#3-3-1-4 (5)), there is no scale or gradual
+<a href="#3-3-1-4 (5)">(5)</a>, there is no scale or gradual
 change.
 
 Events that have ended prior to document creation time and have not yet
@@ -4869,18 +4868,18 @@ Terminative aspectual marking, such as *stop* in English, is the
 strongest evidence that an event has ended without reaching a result
 state and should therefore be annotated as
 ```endeavor```. Durative adverbials, such as in
-[\[3-3-1-5 (1b)\]](#3-3-1-5 (1b)), are the second strongest evidence for an
+<a href="#3-3-1-5 (1b)">(1b)</a>, are the second strongest evidence for an
 ```endeavor``` annotation: they indicate that
 the event took place for a defined period of time and then ended, likely
 without completion. At least in English, durative adverbials cannot
 co-occur with completive aspectual marking; see
-[\[3-3-1-5 (1c)\]](#3-3-1-5 (1c)). A non-result path is the weakest evidence
+<a href="#3-3-1-5 (1c)">(1c)</a>. A non-result path is the weakest evidence
 for an ```endeavor``` annotation; in the
 absence of other aspectual indicators, a non-result path requires an
 ```endeavor``` annotation, as in
-[\[3-3-1-5 (1d)\]](#3-3-1-5 (1d)). But, if there is a completive aspectual marker,
-as in [\[3-3-1-5 (1e)\]](#3-3-1-5 (1e)), or a container adverbial, as in
-[\[3-3-1-5 (1f)\]](#3-3-1-5 (1f)), both indicators that an event has reached
+<a href="#3-3-1-5 (1d)">(1d)</a>. But, if there is a completive aspectual marker,
+as in <a href="#3-3-1-5 (1e)">(1e)</a>, or a container adverbial, as in
+<a href="#3-3-1-5 (1f)">(1f)</a>, both indicators that an event has reached
 a distinct result state, then the event is annotated as
 ```performance```.
 
@@ -4901,7 +4900,7 @@ be specified with ```undirected endeavor```,
 the event has come to an end. Semelfactives refer to punctual events
 that happen once before reverting back to the base state (these are
 similar to ```point state```, but refer to a
-process), as in [\[3-3-1-5 (2c)\]](#3-3-1-5 (2c)).
+process), as in <a href="#3-3-1-5 (2c)">(2c)</a>.
 
 <span id="3-3-1-5 (2)" label="3-3-1-5 (2)">\[3-3-1-5 (2)\]</span>
 
@@ -4969,10 +4968,10 @@ back to the base state, which is why they’re considered a finer-grained
 type of ```performance```. The
 ```directed achievement``` annotation can be
 further specified based on whether the change is reversible or
-irreversible. In [\[3-3-1-5 (3a)\]](#3-3-1-5 (3a)), the change that the door
+irreversible. In <a href="#3-3-1-5 (3a)">(3a)</a>, the change that the door
 undergoes can be reversed in that the door can be closed; therefore this
 is annotated as ```reversible directed
-achievement```. In [\[3-3-1-5 (3b)\]](#3-3-1-5 (3b)), the change that the
+achievement```. In <a href="#3-3-1-5 (3b)">(3b)</a>, the change that the
 window undergoes cannot be reversed; therefore this is annotated as
 ```irreversible directed achievement```.
 
@@ -4981,12 +4980,12 @@ whether the change occurs incrementally or nonincrementally; this is
 similar to the difference between directed and undirected activities and
 endeavors. With ```incremental
 accomplishment```, the change occurs incrementally along the
-qualitative dimension; in [\[3-3-1-5 (3c)\]](#3-3-1-5 (3c)), the pancake
+qualitative dimension; in <a href="#3-3-1-5 (3c)">(3c)</a>, the pancake
 is eaten piece-by-piece and each subsequent bite brings the event closer
 to completion. With ```nonincremental
 accomplishment```, the change ends up at a distinct result state (as
 with all types of Performances), but it may not get there in a
-linear/incremental fashion. In [\[3-3-1-5 (3d)\]](#3-3-1-5 (3d)),
+linear/incremental fashion. In <a href="#3-3-1-5 (3d)">(3d)</a>,
 the computer does not necessarily get progressively more repaired with
 each action. Harry may try one tactic unsuccessfully to fix the
 computer; he may even make the problem worse at some point, but
@@ -5042,11 +5041,11 @@ Harry repaired the computer.
 
 UMR adopts the `:mode` attribute from AMR. The values for the `:mode` attribute include:
 
-```expressive```: used for exclamational words such as _hmm_, _wow_, _yup_ etc., which express emotion but don't clearly refer to events, objects or properties, as in [\[3-3-2 (1a)\]](#3-3-2 (1a)). This value is not used for mere emphasis, or for exclamation marks.
+```expressive```: used for exclamational words such as _hmm_, _wow_, _yup_ etc., which express emotion but don't clearly refer to events, objects or properties, as in <a href="#3-3-2 (1a)">(1a)</a>. This value is not used for mere emphasis, or for exclamation marks.
 
-```imperative```: used for commands, as in [\[3-3-2 (1b)\]](#3-3-2 (1b)).
+```imperative```: used for commands, as in <a href="#3-3-2 (1b)">(1b)</a>.
 
-```interrogative```: used for both polar questions and content questions, as in [\[3-3-2 (1c)\]](#3-3-2 (1c)).
+```interrogative```: used for both polar questions and content questions, as in <a href="#3-3-2 (1c)">(1c)</a>.
 
 <span id="3-3-2 (1)" label="3-3-2 (1)">3-3-2 (1)</span>
 
@@ -5097,7 +5096,7 @@ Did you see that?
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-3. Polarity
-UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute `:polarity` is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in [\[3-3-3 (1)\]](#3-3-3 (1)). These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
+UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute `:polarity` is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in <a href="#3-3-3 (1)">(1)</a>. These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
 
 <span id="3-3-3 (1)" label="3-3-3 (1)">3-3-3 (1)</span>
 
@@ -5134,7 +5133,7 @@ As of now , five million tickets have been sold on the StubHub website .
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-5. Ref
-As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically motivated way. It annotates person and number through two attributes - `:ref-person` for grammatical person information, and `:ref-number` for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in [\[3-3-5 (1)\]](#3-3-5 (1)).
+As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically motivated way. It annotates person and number through two attributes - `:ref-person` for grammatical person information, and `:ref-number` for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in <a href="#3-3-5 (1)">(1)</a>.
 
 <span id="3-3-5 (1)" label="3-3-5 (1)">3-3-5 (1)</span>
 
@@ -5162,7 +5161,7 @@ woman	that-3PL-EP-DU
 	:ref-number Dual)
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in [\[3-3-5 (2)\]](#3-3-5 (2)). In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as coreferential with a mention of 'food' in the previous context.
+For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in <a href="#3-3-5 (2)">(2)</a>. In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as coreferential with a mention of 'food' in the previous context.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
@@ -5190,7 +5189,7 @@ The possible number values for the `:refer-number` attribute are based on Corbet
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-6. Degree
-In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a `:degree` relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat `:degree` as an attribute, with three possible values: `intensifier`, `downtoner`, and `equal`. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in [\[3-3-6 (1)\]](#3-3-6 (1)). For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná.
+In AMR, markers of degree such as English _very_ (high degree of a scalar quality, as in _very cold_) and _somewhat_ (low degree of a scalar quality, as in _somewhat dirty_) are treated lexically - a `:degree` relation is added to the property concept that is admodified. However, in many languages, such degree expressions are morphological rather than periphrastic - they form a single word with the property concept word. Such a lexical treatment is hard for these languages. UMR therefore allows annotators to treat `:degree` as an attribute, with three possible values: `intensifier`, `downtoner`, and `equal`. These values can in this way be attached directly to the whole property concept word without the need for morphological decomposition, as shown in <a href="#3-3-6 (1)">(1)</a>. For languages with periphrastic degree expressions like English, the lexical entry for words such as _very_ and _somewhat_ can be constructed to include reference to which of the three degree values listed above it expresses. In that way, English annotations would be comparable to annotations in a language like Sanapaná.
 
 <span id="3-3-6 (1)" label="3-3-6 (1)">3-3-6 (1)</span>
 ```
