@@ -417,9 +417,9 @@ The document-level representation indicates the *say-01* event happened before D
 
 ### Part 2-1. Introduction
 
-UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph, as in [\[2 (1)\]](#2 (1)). The nodes of this graph are UMR concepts, while edges represent UMR relations. 
+UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph, as in <a href="#2 (1)">(1)</a>. The nodes of this graph are UMR concepts, while edges represent UMR relations. 
 
-<span id="2 (1)" label="2 (1)">\[2 (1)\]</span>
+<span id="2 (1)">(1)</span>
 ```
 Snt1: Edmund Pope tasted freedom today for the first time in more than eight months.
 
@@ -473,9 +473,9 @@ UMR differs from AMR in a number of ways:
 
 * UMR has a document-level representation that represents *coreference*, *temporal dependencies*, and *modal dependencies*.
 
-* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`) - see the AMR and the UMR for *The boy can go* in [\[2 (2a)\]](#2 (2a)) and [\[2 (2b)\]](#2 (2b)), respectively.
+* As a result, some sentence-level AMR concepts  are now represented at the document level. This applies to concepts for modality (e.g., `possible-01`, `obligate-01`) - see the AMR and the UMR for *The boy can go* in <a href="#2 (2a)">(2a)</a> and <a href="#2 (2b)">(2b)</a>, respectively.
 
-<span id="2 (2a)" label="2 (2a)">\[2 (2a)\]</span>
+<span id="2 (2a)">(2a)</span>
 
 ```
 (p/ possible-01
@@ -483,7 +483,7 @@ UMR differs from AMR in a number of ways:
             :ARG0 (b/ boy
 	       :ref-number Singular)))
 ```
-<span id="2 (2b)" label="2 (2b)">\[2 (2b)\]</span>
+<span id="2 (2b)">(2b)</span>
 ```
 (g/ go-01  
     :ARG0 (b/ boy
@@ -571,9 +571,9 @@ argument structure of individual predicates, and the predicate-specific
 argument roles can be linked to predicate-general participant roles for
 commensurability (see [Part 3-2-1](#part-3-2-1-participant-roles) on argument structure annotation).
 This AMR-based predicate-argument annotation is shown in its most basic
-form in [\[2-2-1 (1)\]](#2-2-1 (1)) from Sanapaná (Enlhet-Enenlhet) below.
+form in <a href="#2-2-1 (1)">(1)</a> from Sanapaná (Enlhet-Enenlhet) below.
 
-<span id="2-2-1 (1)" label="2-2-1 (1)">\[2-2-1 (1)\]</span>
+<span id="2-2-1 (1)">(1)</span>
 ```
 ap-hle-am-ke'		nenhlet
 2/3M-travel-TI-DECL	person
@@ -604,11 +604,11 @@ while in Sanapaná it is a predicate-general participant role. In both languages
 
 AMR and UMR concepts are underspecified for morphosyntactic
 representation: the same concept (for example, `travel-01`) can be used
-to annotate a verb (as seen above), a noun (e.g. *his travels* in [\[2-2-1 (2)\]](#2-2-1 (2))), or any other relevant part of speech conveying the same semantics. [Part 3-1-1](#part-3-1-1-eventive-concepts) discusses how AMR and UMR deal with the
+to annotate a verb (as seen above), a noun (e.g. *his travels* in <a href="#2-2-1 (2)">(2)</a>, or any other relevant part of speech conveying the same semantics. [Part 3-1-1](#part-3-1-1-eventive-concepts) discusses how AMR and UMR deal with the
 information-packaging differences which are conveyed by packaging such
 content in different parts of speech.
 
-<span id="2-2-1 (2)" label="2-2-1 (2)">\[2-2-1 (2)\]</span>
+<span id="2-2-1 (2)">(2)</span>
 ```
 I heard about his travels.
 (h/ hear-01
@@ -634,7 +634,7 @@ multi-word expressions in essentially the same way as AMR. Specifically,
 it allows annotators to select multiple words in a sentence and annotate
 them as a single concept. This is necessary, for example, to annotate
 idiomatic expressions which cannot be semantically decomposed
-felicitously. In [\[2-2-2 (1)\]](#2-2-2 (1)) from Sanapaná, for instance,
+felicitously. In <a href="#2-2-2 (1)">(1)</a> from Sanapaná, for instance,
 *elvongkeskama tayep* is a multi-word expression which literally and
 compositionally means 'cause (someone) to be just across', but its
 idiomatic meaning is 'rescue'. The two words are therefore annotated
@@ -645,7 +645,7 @@ periphrastic TAM constructions. More information about the annotation of
 multi-word expressions is given throughout [Part 3-1-3](#part-3-1-3-concept-word-mismatches), and
 specifically in section [Part 3-1-3-6](#part-3-1-3-6-multi-word-concepts).
 
-<span id="2-2-2 (1)" label="2-2-2 (1)">\[2-2-2 (1)\]</span>
+<span id="2-2-2 (1)">(1)</span>
 ```
 apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 2/3M-DSTR-be.just-CAUS-PAS-DECL	across	child<PL>
@@ -668,7 +668,7 @@ which AMR and UMR use abstract concepts. Firstly, there are concepts
 where AMR and UMR use abstract concepts rather than language-specific
 concepts corresponding to specific words with the goal of making
 annotations cross-linguistically comparable. For example, even though
-the Sanapaná thetic possession construction in [\[2-2-3 (1)\]](#2-2-3 (1)) makes use of a verb
+the Sanapaná thetic possession construction in <a href="#2-2-3 (1)">(1)</a> makes use of a verb
 that literally means *exist*, an abstract concept predicate node
 `have-91` is introduced rather than a language specific `enyetnema-00`
 concept. This way, possessive constructions across the world's languages
@@ -676,7 +676,7 @@ can be annotated in consistent and comparable ways regardless of the
 morphosyntactic strategies they use (see [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses) for more
 information on such "non-verbal clauses").
 
-<span id="2-2-3 (1)" label="2-2-3 (1)">\[2-2-3 (1)\]</span>
+<span id="2-2-3 (1)">(1)</span>
 ```
 an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 2/3F-exist-DECL		1SG:PRO	cow-old		1SG-POS
@@ -696,11 +696,11 @@ needs to be standardized for computational tractability. This applies
 to, for example, the annotation of different types of quantities (which
 use abstract concepts such as `distance-quantity`,
 `temporal-quantity` and `monetary-quantity`, as
-illustrated in [\[2-2-3 (2a)\]](#2-2-3 (2a))-[\[2-2-3 (2b)\]](#2-2-3 (2b))), and the annotation of dates and times (which use abstract concepts such as `date-entity`, as illustrated in [\[2-2-3 (2c)\]](#2-2-3 (2c)), all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
+illustrated in <a href="#2-2-3 (2a)">(2a)</a>-<a href="#2-2-3 (2b)">(2b)</a>, and the annotation of dates and times (which use abstract concepts such as `date-entity`, as illustrated in <a href="#2-2-3 (2c)">(2c)</a>, all from Sanapaná). More information on abstract concepts can be found throughout this document in the sections dedicated to the specific semantic phenomena for which they are needed.
 
-<span id="2-2-3 (2)" label="2-2-3 (2)">\[2-2-3 (2)\]</span>
+<span id="2-2-3 (2)">(2)</span>
 
-<span id="2-2-3 (2a)" label="2-2-3 (2a)">\[2-2-3 (2a)\]</span>
+<span id="2-2-3 (2a)">(2a)</span>
 ```
 cinco,	seis	meses	apk-ehl-ta'mehl-kes-kam-a
 five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
@@ -720,7 +720,7 @@ five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 	:aspect Habitual
 	:modstr FullAff)
 ```
-<span id="2-2-3 (2b)" label="2-2-3 (2b)">\[2-2-3 (2b)\]</span>
+<span id="2-2-3 (2b)">(2b)</span>
 ```
 escuela	agrícola	seis	millón	cada	año	on-yanmong-kes-ek
 school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
@@ -745,7 +745,7 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 	:aspect Habitual
 	:modstr FullAff)
 ```
-<span id="2-2-3 (2c)" label="2-2-3 (2c)">\[2-2-3 (2c)\]</span>
+<span id="2-2-3 (2c)">(2c)</span>
 ```
 apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=anehla
 2/3M-DSTR-arrive-TI-DUPL-NOM	Venancio	1PL-live-TI-NOM.LOC	thousand	nine-hundred	sixty	and	six=DUB
@@ -771,7 +771,7 @@ apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=a
 Another domain in which AMR conventions are inherited by UMR is the
 annotation of non-participant role relations. Such relations are used to
 annotate a wide range of meanings. Many of them, such as `:medium`,
-`:topic`, and `:mod` (the latter of which is illustrated in [\[2-2-3 (2b)\]](#2-2-3 (2b))) are used to
+`:topic`, and `:mod` (the latter of which is illustrated in <a href="#2-2-3 (2b)">(2-2-3 2b)</a> are used to
 annotate modifiers of referring expressions. Other relations are used
 with specific abstract concepts: whenever a `date-entity`
 concept is present, one of the temporal relations `:month`, `:year`, `:day`
@@ -793,7 +793,7 @@ annotating aspect, UMR does this through a dedicated `:aspect` attribute.
 However, UMR maintains the `:duration` and `:frequency` relations so that
 annotators can use them to indicate more fine-grained aspectual
 information beyond the aspect categories offered in the corresponding
-attribute, as in [\[2-2-3 (2b)\]](#2-2-3 (2b)). UMR also adds a new non-participant role relation: the `:other` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
+attribute, as in <a href="#2-2-3 (2b)">(2-2-3 2b)</a>. UMR also adds a new non-participant role relation: the `:other` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
 
 [Back to Table of Contents](#toc)
 
@@ -821,7 +821,7 @@ term as the head depending on morphosyntactic expression, UMR always
 annotates the substance as the head for greater cross-linguistic
 comparability. This means that even less conventionalized measure terms,
 like English *cup* or *bag*, are annotated as modifiers, even though
-they look like morphosyntactic heads. This is illustrated in [\[2-2-5 (1)\]](#2-2-5 (1)). The use of the `:polarity` value is constrained to the sentence level.
+they look like morphosyntactic heads. This is illustrated in <a href="#2-2-5 (1)">(1)</a>. The use of the `:polarity` value is constrained to the sentence level.
 Propositional negation is annotated in the modal section of the document
 level annotation and through :modstr relations. The `:polarity` value is used to indicate any overt
 morphosyntactic exponents of negation at the sentence level, flagging
@@ -829,7 +829,7 @@ such concepts as interesting for the modal or scope negation. This
 includes e.g. morphologically negated adjectives like _unhappy_, even though in the
 document-level modal annotation, these will not be annotated as negated.
 
-<span id="2-2-5 (1)" label="2-2-5 (1)">\[2-2-5 (1)\]</span>
+<span id="2-2-5 (1)">(1)</span>
 ```
 Three bottles of water
 (w/ water
