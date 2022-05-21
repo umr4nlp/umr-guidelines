@@ -5224,7 +5224,7 @@ Anaphoric expressions such as pronouns cannot be properly interpreted without id
 
 #### Part 4-1-1. Entity coreference
 
-For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In [\[4-1-1 (1)\]](#4-1-1 (1)), *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s2p` node.
+For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In <a href="#4-1-1 (1)">(1)</a>, *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s2p` node.
 
 <span id="4-1-1 (1)" label="4-1-1 (1)">4-1 (1)</span>
 
@@ -5281,7 +5281,7 @@ Snt3: He denied any wrongdoing.
   :coref(s2p :same-entity s3p))
 ```
 
-The example in [\[4-1-1 (2)\]](#4-1-1 (2)) shows how the `:subset-of` relation is used to relate mentions of sets of entities to mentions of entities belonging to such a set. For example, _we_ (`p3`) includes reference to two entities - the author/speaker of the sentence, and the person who is described as *possessive and controlling*. The pronoun _he_, given the constant `p2`, refers to one of these two entities. Therefore, in the document-level annotation, `p2` is annotated with a `:subset-of` relation to the `p3` node.
+The example in <a href="#4-1-1 (2)">(2)</a> shows how the `:subset-of` relation is used to relate mentions of sets of entities to mentions of entities belonging to such a set. For example, _we_ (`p3`) includes reference to two entities - the author/speaker of the sentence, and the person who is described as *possessive and controlling*. The pronoun _he_, given the constant `p2`, refers to one of these two entities. Therefore, in the document-level annotation, `p2` is annotated with a `:subset-of` relation to the `p3` node.
 
 <span id="4-1-1 (2)" label="4-1-1 (2)">4-1-1 (2)</span>
 ```
@@ -5330,7 +5330,7 @@ He is very possessive and controlling but he has no right to be as we are not to
 
 #### Part 4-1-2. Event coreference
  
-UMR uses the `:same-event` relation to represent cases where two event mentions refer to  the same event, as in [\[4-1-1 (1)\]](#4-1-1 (1)).
+UMR uses the `:same-event` relation to represent cases where two event mentions refer to  the same event, as in <a href="#4-1-1 (1)">\[4-1-1 (1)\]</a>.
  
  <span id="4-1-2 (1)" label="4-1-2 (1)">4-1-2 (1)</span>
  
@@ -5400,7 +5400,7 @@ Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial ba
 	  (s2p :FullAff s2a))
   :coref (s1c :same-event s2c))
 ```
-Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for *introduced* and *provide* in [\[4-1-2 (2)\]](#4-1-2 (2)).
+Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for *introduced* and *provide* in <a href="#4-1-2 (2)">(2)</a>.
 
 <span id="4-1-2 (2)" label="4-1-2 (2)">4-1-2 (2)</span>
 
@@ -5478,7 +5478,7 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 	   (AUTH :FullAff s2u))
    :coref (s1i :same-event s2p))
 ```
-The `:subset-of` relation is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in [\[4-1-2 (3)\]](#4-1-2 (3)). Both the _arrest_ made in Germany and the one made in the Netherlands are subevents of the _arrests_ that were ordered by judge Fragnoli. Therefore, both the `s1a2` node and the `s1a3` node are annotated with a `:subset-of` relation to `s2a`.
+The `:subset-of` relation is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in <a href="#4-1-2 (3)">(3)</a>. Both the _arrest_ made in Germany and the one made in the Netherlands are subevents of the _arrests_ that were ordered by judge Fragnoli. Therefore, both the `s1a2` node and the `s1a3` node are annotated with a `:subset-of` relation to `s2a`.
 
 <span id="4-1-2 (3)" label="4-1-2 (3)">4-1-2 (3)</span>
 
@@ -5550,8 +5550,8 @@ For now UMR does not annotate cases where one event is a subevent of another eve
 
 ### Part 4-2. Temporal Dependency
 
-The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the time expression 
-*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In [\[4-2 (1)\]](#4-2 (1)), the temporal relation between *sign* and the DCT is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
+The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression 
+*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the DCT is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
 
 
 <span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
@@ -5802,7 +5802,7 @@ least one temporal annotation.
     event, then link it to a tense metanode.
 
 In order to demonstrate how these rules work, let’s look at the
-annotation of ([\[4-2-2-1 (1)\]](#4-2-2-1 (1))) below.
+annotation of <a href="#4-2-2-1 (1)">(1)</a> below.
 
 <span id="4-2-2-1 (1)" label="4-2-2-1 (1)">\[4-2-2-1 (1)\]</span> 
 Key event: landslide\_KEY
@@ -6007,7 +6007,7 @@ The modal annotation captures the modal strength of events, but not the modal ty
 permissive, etc.). These modal strengths are annotated based on a
 lattice of annotation values that differ in terms of granularity. An
 example of the UMR annotation and the underlying modal dependency
-structure is shown below in [\[4-3 (1)\]](#4-3 (1)).
+structure is shown below in <a href="#4-3 (1)">(1)</a>.
 
 <span id="4-3 (1)" label="4-3 (1)">\[4-3 (1)\]</span>
 
@@ -6072,7 +6072,7 @@ Table 14: Modal relations at Stage 0
 ##### Part 4-3-1-1. modstr values
 
 The modal strength values correspond to epistemic strength, i.e. the
-author or conceiver’s certainty about the occurrence of the event in the real world, or certainty about another conceiver’s mental content. Based on Boye (2012), a typological study of modal systems across languages, and following FactBank (Pustejovsky et al. 2005), the UMR annotation is based around three levels of modal strength: `Full`, `Partial`, and `Neutral`, illustrated in [\[4-3-1-1 (1)\]](#4-3-1-1 (1)).
+author or conceiver’s certainty about the occurrence of the event in the real world, or certainty about another conceiver’s mental content. Based on Boye (2012), a typological study of modal systems across languages, and following FactBank (Pustejovsky et al. 2005), the UMR annotation is based around three levels of modal strength: `Full`, `Partial`, and `Neutral`, illustrated in <a href="#4-3-1-1 (1)">(1)</a>.
 
 <span id="4-3-1-1 (1)" label="4-3-1-1 (1)">\[4-3-1-1 (1)\]</span>
 
@@ -6087,7 +6087,7 @@ The cat <u>probably</u> already **ate** breakfast.
 Neutral:  
 The cat <u>might</u> have already **eaten** breakfast.
 
-The `Full` modal strength value, as in [\[4-3-1-1 (1a)\]](#4-3-1-1 (1a)), corresponds to complete certainty; that is, the conceiver is 100% certain that the event occurs in the real world. The `Neutral` modal strength value, shown in [\[4-3-1-1 (1c)\]](#4-3-1-1 (1c)), indicates the possibility of the event; essentially, this corresponds to 50/50 certainty that the event occurs in the real world. The `Partial` modal strength value, as in [\[4-3-1-1 (1b)\]](#4-3-1-1 (1b)), falls between the `Full` and `Neutral` values; the conceiver believes that more likely than not, the event occurs in the real world.
+The `Full` modal strength value, as in <a href="#4-3-1-1 (1a)">(1a)</a>, corresponds to complete certainty; that is, the conceiver is 100% certain that the event occurs in the real world. The `Neutral` modal strength value, shown in <a href="#4-3-1-1 (1c)">(1c)</a>, indicates the possibility of the event; essentially, this corresponds to 50/50 certainty that the event occurs in the real world. The `Partial` modal strength value, as in <a href="#4-3-1-1 (1b)">(1b)</a>, falls between the `Full` and `Neutral` values; the conceiver believes that more likely than not, the event occurs in the real world.
 
 But, `Full`, `Partial`, and `Neutral` aren’t the only possible modal strength annotation values. Languages differ in the modal strength distinctions that are conventionalized in their grammar. In order to accommodate these differences, we use a typological lattice of annotation values, constructed based on the structure of the annotation category across languages (Van Gysel et al. 2019).
 
@@ -6148,7 +6148,7 @@ either being true or not true, this is annotated as
 `PrtAff` or, when the polarity is negative, `PrtNeg`. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as `NeutAff` or
 `NeutNeg`, depending on the polarity of the
 linguistic expression. These strength values are exemplified in
-([\[4-3-1-1-1 (1)\]](#4-3-1-1-1 (1))).
+<a href="#4-3-1-1-1 (1)">(1)</a>.
 
 
 <span id="4-3-1-1-1 (1)" label="4-3-1-1-1 (1)">\[4-3-1-1-1 (1)\]</span>
@@ -6225,7 +6225,7 @@ The dog didn't bark last night.
 
 Following Boye (2012) and Saurí and Pustejovsky (2009), we conflate evidential justification with epistemic support. Boye (2012) finds that there is cross-linguistic evidence for lumping epistemic support and evidential justification together into the same relations. Languages may encode direct evidential justification (sensory perception) with the same forms as full epistemic support; indirect justification (hearsay, inferential) may be encoded by the same forms as partial epistemic support.
 
-Example [\[4-3-1-1-2 (1)\]](#4-3-1-1-2 (1)) shows how direct and indirect justification correspond to epistemic support.
+Example <a href="#4-3-1-1-2 (1)">(1)</a> shows how direct and indirect justification correspond to epistemic support.
 
 <span id="4-3-1-1-2 (1)" label="4-3-1-1-2 (1)">\[4-3-1-1-2 (1)\]</span>
 
@@ -6258,7 +6258,7 @@ Mary must have fed the cat.
 	**:modstr PrtAff**)
 ```
 
-In [\[4-3-1-1-2 (1a)\]](#4-3-1-1-2 (1a)), the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)), however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in [\[4-3-1-1-2 (1b)\]](#4-3-1-1-2 (1b)) is annotated with `Prt` modal strength.
+In <a href="#4-3-1-1-2 (1a)">(1a)</a>, the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In <a href="#4-3-1-1-2 (1b)">(1b)</a>, however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in <a href="#4-3-1-1-2 (1b)">(1b)</a> is annotated with `Prt` modal strength.
 
 [Back to Table of Contents](#toc)
 
@@ -6274,7 +6274,7 @@ correspond to partial strength (`PrtAff` or
 correspond to neutral (`NeutAff` or
 `NeutNeg`) strength. Keep in mind that events under the scope of modals identified as their own event don't receive any `:modstr` value at all. This section refers to deontic meanings indicated by grammaticalized modals that don't fit the criteria to be identified as events.
 
-This is illustrated in ([\[4-3-1-1-3 (1)\]](#4-3-1-1-3 (1))).
+This is illustrated in <a href="#4-3-1-1-3 (1)">(1)</a>.
 
 <span id="4-3-1-1-3 (1)" label="4-3-1-1-3 (1)">\[4-3-1-1-3 (1)\]</span>
 
@@ -6325,13 +6325,13 @@ You can go to Santa Fe.
 	:aspect Performance
 	:modstr NeutAff)
 ```
-The predictive future, as in [\[4-3-1-1-3 (1a)\]](#4-3-1-1-3 (1a)), is annotated with
+The predictive future, as in <a href="#4-3-1-1-3 (1a)">(1a)</a>, is annotated with
 full modal strength because it presents the future event as a certainty
 (i.e., it is as certain as is possible for future events). Commands, as
-in [\[4-3-1-1-3 (1b)\]](#4-3-1-1-3 (1b)), are annotated with partial modal strength
+in <a href="#4-3-1-1-3 (1b)">(1b)</a>, are annotated with partial modal strength
 because they present the future event as less likely than the predictive
 future, but more likely to happen than the neutral strength deontics.
-Finally, permission, as in [\[4-3-1-1-3 (1c)\]](#4-3-1-1-3 (1c)), is annotated as
+Finally, permission, as in <a href="#4-3-1-1-3 (1c)">(1c)</a>, is annotated as
 neutral strength, since even if someone has permission to do something, there is no guarantee they will.
 
 [Back to Table of Contents](#toc)
@@ -6340,7 +6340,7 @@ neutral strength, since even if someone has permission to do something, there is
 
 Events under the scope of a modal identified as its own event are only
 annotated with a `:modpred` relation to the
-relevant modal. This is shown below in [\[4-3-1-2 (1)\]](#4-3-1-2 (1)).
+relevant modal. This is shown below in <a href="#4-3-1-2 (1)">(1)</a>.
 
 <span id="4-3-1-2 (1)" label="4-3-1-2 (1)">\[4-3-1-2 (1)\]</span>
 
@@ -6618,7 +6618,7 @@ predicate corresponds to the author’s certainty that the reporting event
 happened. The `:modstr` value associated
 with the reported events corresponds to the certainty with which the
 sayer/reporter reports the events. For example, in
-[\[4-3-1-3 (1d)\]](#4-3-1-3 (1d)), the author is certain about the saying event,
+<a href="#4-3-1-3 (1d)">(1d)</a>, the author is certain about the saying event,
 so it is annotated with `Aff`; but Mary is
 unsure about the reality of the going event, and therefore it is
 annotated with `Neut` modal strength.
@@ -6689,7 +6689,7 @@ non-full epistemic stance on its events; that is captured by the
 
 The `:condition` relation in the sentence-level annotation indicates the relationship between events in conditional constructions. These events
 also receive a `:modstr` annotation. As can
-be seen in [\[4-3-1-5 (1)\]](#4-3-1-5 (1)), the event in the protasis is annotated with a `:condition` relation to the event in the
+be seen in <a href="#4-3-1-5 (1)">(1)</a>, the event in the protasis is annotated with a `:condition` relation to the event in the
 apodosis.
 
 <span id="4-3-1-5 (1)" label="4-3-1-5 (1)">\[4-3-1-5 (1)\]</span>
@@ -6801,7 +6801,7 @@ values work largely the same way that they do for other events; however,
 they reflect the beliefs of the
 `:experiencer` participant of the modal
 event, who is often not the author. For example, in
-[\[4-3-1-6 (1)\]](#4-3-1-6 (1)), Mary believes that the visit event may take
+<a href="#4-3-1-6 (1)">(1)</a>, Mary believes that the visit event may take
 place in the future (`NeutAff` strength), but
 the author disagrees.
 
