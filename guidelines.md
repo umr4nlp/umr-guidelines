@@ -4127,7 +4127,7 @@ Three cups of milk
 
   ##### Part 3-2-2-6. Other relations
 
-The `:example` relation, illustrated in <a href="#3-2-2-6 (1a)">(1a)</a>, is used to annotate illustrative examples of object categories. The `:polite` relation is used to indicate that an utterance (often a command) is marked for deference with respect to the interlocutor, as in <a href="#3-2-2-6 (1b)">(1b)</a>. 
+The `:example` relation, illustrated in <a href="#3-2-2-6 (1a)">(1a)</a>, is used to annotate illustrative examples of object categories. The `:polite` relation is used to indicate that an utterance (often a command) is marked for deference with respect to the interlocutor, as in <a href="#3-2-2-6 (1b)">(1b)</a>. The `:li` relation is used to mark entities as entries on a bulleted list, as in <a href="#3-2-2-6 (1c)">(1c)</a>.
 
 <span id="3-2-2-6 (1)" label="3-2-2-6 (1)">\[3-2-2-6 (1)\]</span> 
 
@@ -4144,8 +4144,8 @@ Countries like Germany and France
 			:wiki "France")))
 ```
 <span id="3-2-2-6 (1b)" label="3-2-2-6 (1b)">\[3-2-2-6 (1b)\]</span> 
-Could you close the window?
 ```
+Could you close the window?
 (c/ close-01
 	:ARG0 (p/ person
 		:ref-person 2nd
@@ -4154,6 +4154,26 @@ Could you close the window?
 	:aspect Performance
 	:mode Imperative
 	:polite +)
+```
+
+<span id="3-2-2-6 (1c)" label="3-2-2-6 (1c)">\[3-2-2-6 (1c)\]</span> 
+```
+I will buy (a) rice, (b) beans, and (c) onions.
+(b/ buy-01
+	:ARG0 (p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (and
+		:op1 (r/ rice
+			:li "(a)")
+		:op2 (b/ bean
+			:ref-number Plural
+			:li "(b)")
+		:op3 (o/ onion
+			:ref-number Plural
+			:li "(c)")
+	:aspect Performance
+	:modstr FullAff)
 ```
 
 The `:condition` and `:concession` relations are alternative ways of annotating the `have-condition-91` and `have-concession-91` predicates - their use is detailed in [Part 4-3](#part-4-3-modal-dependency).
