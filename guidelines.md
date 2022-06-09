@@ -394,7 +394,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
                         :ARG1 p2)
                   :op2 (p3/ pressure-01
                         :ARG1 (b/ blood
-			   :part-of p2)
+			   :part p2)
                         :ARG1-of (h2/ high-02)))
 	    :aspect State
 	    :modstr FullAff)
@@ -651,7 +651,7 @@ apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 2/3M-DSTR-be.just-CAUS-PAS-DECL	across	child<PL>
 'The children were rescued.'
 (e/ elvongkeskama-tayep-00 'rescue'
-	:Undergoer (a/ ayko'ok 'child'
+	:undergoer (a/ ayko'ok 'child'
 		:ref-number Plural)
 	:aspect Performance
 	:modstr FullAff)
@@ -785,7 +785,7 @@ cover all *typifying* modifiers - i.e. modifiers which subcategorize the
 reference of a referring expression rather than narrowing it down to a
 specific entity (e.g. *women* in *women's magazine*). In AMR, this
 semantic domain was shared between the `:mod` relation and a number of
-other relations such as `:medium`, `:topic`, and `:consist-of`. In UMR, these
+other relations such as `:medium`, `:topic`, and `:group`. In UMR, these
 other relations still exist, but they are treated as more fine-grained
 values on a lattice underneath the more general `:mod` relation. Whereas
 AMR used the `:frequency` and `:duration` relations as the main ways of
@@ -793,7 +793,7 @@ annotating aspect, UMR does this through a dedicated `:aspect` attribute.
 However, UMR maintains the `:duration` and `:frequency` relations so that
 annotators can use them to indicate more fine-grained aspectual
 information beyond the aspect categories offered in the corresponding
-attribute, as in <a href="#2-2-3 (2b)">(2-2-3 2b)</a>. UMR also adds a new non-participant role relation: the `:other` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
+attribute, as in <a href="#2-2-3 (2b)">(2-2-3 2b)</a>. UMR also adds a new non-participant role relation: the `:other-role` relation, which annotators can use when encountering meanings that UMR currently does not provide a straightforward annotation procedure for.
 
 [Back to Table of Contents](#toc)
 
@@ -1048,50 +1048,24 @@ referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
 For these nonverbal clause categories, the event identified is labelled
 with a special abstract UMR predicate that indicates the relevant combination of
-semantics and information-packaging. These are shown below in Table 4. Note that some of these (e.g. `have-91`, `belong-91`) look very similar to existing English PropBank predicates (`have-03` and `belong-01`, respectively). However, they are cross-linguistic abstract concepts meant to annotate the crosslinguistically stable meanings of thetic possession and predicative possession, respectively. For the labelling of participants with these
+semantics and information-packaging. These are shown below in Table 4. Note that some of these (e.g. `have-91`, `belong-91`) look very similar to existing English PropBank predicates (`have-91` and `belong-91`, respectively). However, they are cross-linguistic abstract concepts meant to annotate the crosslinguistically stable meanings of thetic possession and predicative possession, respectively. For the labelling of participants with these
 nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses).
 
-<table>  
-<tr>  
-<th>Clause type</th>  
-<th>UMR Predicate</th>  
-</tr>  
-<tr>  
-<td>thetic/presentational possession</td>  
-<td>have-91</td>
-</tr>  
-<tr>  
-<td>predicative possession</td>  
-<td>belong-91</td>  
-</tr>  
-<tr>  
-<td>thetic/presentational location</td>  
-<td>exist-91</td>  
-</tr>  
-<tr>  
-<td>predicative location</td>  
-<td>have-location-91</td>  
-</tr>  
-<tr>  
-<td>property predication</td>  
-<td>have-mod-91</td>  
-</tr>  
-<tr>  
-<td rowspan="2">object predication</td>  
-<td>have-role-91</td>  
-</tr>  
-<tr>  
-<td>(subtypes: kinship-91; have-org-role-91)</td>  
-</tr>  
-<tr>  
-<td>equational  </td>  
-<td>identity-91</td>  
-</tr>  
-</table>
+<div id="tab:nonverbalpreds">
+
+| **Clause type**                  | **UMR Predicate** |
+| :------------------------------- | :---------------- |
+| thetic/presentational possession | have-91           |
+| predicative possession           | belong-91         |
+| thetic/presentational location   | exist-91          |
+| predicative location             | have-location-91  |
+| property predication             | have-mod-91       |
+| object predication               | have-role-91      |
+| 			           | (subtypes: have-rel-role-91; have-org-role-91) |
+| equational                       | identity-91       |
 
 Table 4: Non-verbal clause predicates
 </div>
-
 
 States in modification, as in <a href="#3-1-1-3 (2a)">(2a)</a> and
 <a href="#3-1-1-3 (2b)">(2b)</a>, and states in reference, as in
@@ -1375,32 +1349,15 @@ process, and therefore noun incorporation constructions are likely to be
 found on a continuum between these two end points. However, we map this
 continuum onto a discrete choice for annotators by taking the ability of
 an incorporated noun to co-occur with an independent NP as criterial. This treatment of single words containing predicates and arguments is summarized in table 6 below.
+
 <div id="tab:noun_incorporation">
 
-<table>  
-<tr>  
-<th>Construction type</th>  
-<th>Construction definition/diagnostic</th>  
-<th>UMR Treatment</th>  
-</tr>  
-<tr>  
-<td rowspan="2">Pronominal affixes </td>  
-<td rowspan="2"> Verbal affixes expressing person/number values of arguments</td>  
-<td>If coreferential with overtly expressed nominal argument: don't annotate</td>  
-</tr>  
-<tr> 
-<td>If no overt nominal is present: annotate as argument with relevant named-entity concept</td>  
-</tr> 
-<td>Incorporated nouns</td>  
-<td>No nominal expression coreferential with the incorporated noun can occur in the clause</td> 
-<td>Annotate separate concept for incorporated noun as argument</td>   
-</tr>  
-<tr>  
-<td>Verbal classifier</td>  
-<td>Nominal expression specifying type of object denoted by incorporated noun can occur in the clause</td>  
-<td>Do not annotate separate concept for incorporated noun</td>  
-</tr> 
-</table>
+| **Construction type** | **Construction definition/diagnostic** | **UMR Treatment** |
+| :------------------------------- | :----------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------|
+| Pronominal affixes | Verbal affixes expressing person/number values of arguments | If coreferential with overtly expressed nominal argument: don't annotate |
+| | | If no overt nominal is present: annotate as argument with relevant named-entity concept |
+| Incorporated nouns | No nominal expression coreferential with the incorporated noun can occur in the clause | Annotate separate concept for incorporated noun as argument |
+| Verbal classifier | Nominal expression specifying type of object denoted by incorporated noun can occur in the clause | Do not annotate separate concept for incorporated noun |
 
 Table 6: Treatment of pronominal affixes and noun incorporation
 </div>
@@ -1431,7 +1388,7 @@ by the verb root.
 (d/ drink
     :cause (m/ make
     	:actor (p/ person
-	    :ARG0-of (k/ kinship-91
+	    :ARG0-of (h/ have-rel-role-91
 		 :ARG2 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
@@ -1447,7 +1404,7 @@ by the verb root.
 (d/ drink
     :cause (m/ make
     	:actor (p/ person
-	    :ARG0-of (k/ kinship-91
+	    :ARG0-of (h/ have-rel-role-91
 		 :ARG2 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
@@ -1464,7 +1421,7 @@ by the verb root.
 (d/ drink
     :cause (m/ make
     	:actor (p/ person
-	    :ARG0-of (k/ kinship-91
+	    :ARG0-of (h/ have-rel-role-91
 		 :ARG2 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
@@ -1491,7 +1448,7 @@ grandmother	drink-CAUS	kid=PST		water-INST
 'Grandmother made the kid drink the water.'
 (k/ kuratata 'make drink'
     :causer (p/ person
-    	:ARG0-of (k2/ kinship-91
+    	:ARG0-of (h/ have-rel-role-91
 		:ARG2 (n/ nai 'grandmother'))
 	:ref-number Singular)
     :actor (c/ churan 'kid')
@@ -1728,77 +1685,18 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 "non-verbal clause" meanings.
 
 <div id="tab:nonverbal_arguments">
-
-<table>  
-<tr>  
-<th>Clause Type</th>  
-<th>Predicate</th>  
-<th>ARG0</th>  
-<th>ARG1</th>  
-<th>ARG2</th>  
-</tr>  
-<tr>  
-<td>Thetic Possession</td>  
-<td>have-91</td>  
-<td>possessor</td>  
-<td>possessum</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Predicative Possession</td>  
-<td>belong-91</td>  
-<td>possessum</td>  
-<td>possessor</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Thetic Location</td>  
-<td>exist-91</td>  
-<td>location</td>  
-<td>theme </td>  
-<td>---</td>  
-</tr> 
-<tr>  
-<td>Predicative Location</td>  
-<td>have-location-91</td>  
-<td>theme</td>  
-<td>location</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Property Predication</td>  
-<td>have-mod-91</td>  
-<td>--- </td>  
-<td>theme</td>  
-<td>property</td>  
-</tr> 
-<tr>  
-<td rowspan="3">Object Predication</td>  
-<td>have-role-91</td>  
-<td>theme</td>  
-<td>reference point</td>  
-<td>object category</td>  
-</tr>  
-<tr>  
-<td>have-org-role-91</td>  
-<td>theme</td>  
-<td>organization</td>  
-<td>role</td>  
-</tr>  
-<tr>  
-<td>kinship-91</td>  
-<td>theme</td>  
-<td>family member</td>  
-<td>kinship rel. </td>  
-</tr>  
-<tr>  
-<td>Equational</td>  
-<td>identity-91</td>  
-<td>theme</td>  
-<td>equated referent</td>  
-<td>---</td>  
-</tr>  
-</table>
+	
+| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
+| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
+| Thetic Possession      | have-91          | possessor | possessum        | ---              |
+| Predicative Possession | belong-91        | possessum | possessor        | ---              |
+| Thetic Location        | exist-91         | location  | theme            | ---              |
+| Predicative Location   | have-location-91 | theme     | location         | ---              |
+| Property Predication   | have-mod-91      | ---       | theme            | property         |
+| Object Predication     | have-role-91     | theme     | reference point  | object category  |
+|                        | have-org-role-91 | theme     | organization     | role             |
+|                        | have-rel-role-91 | theme     | reference point  | relation         |
+| Equational             | identity-91      | theme     | equated referent | ---              |
 
 Table 8: Argument structure of non-verbal clause predicates
 </div>
@@ -1928,7 +1826,7 @@ However, many cases that are technically ambiguous nevertheless have a strong de
 
 <span id="3-1-5 (3c)">(3c)</span> Ten hurricanes hit six states over the weekend.
 
-Scope will not be annotated for summation readings (as we cannot reliably know it from the text alone), nor is it annotated where a distributive or collective reading can be predictably derived from the lexical semantics. In other words, whenever _run_ is interpreted distributively or _carry a piano_ is interpreted collectively, no scope annotation is needed. The scope annotation only comes into play when some overt linguistic element forces an interpretation that diverges from the lexical default. For example, in <a href="#3-1-5 (4a)">(4a)</a>, _together_ forces a collective interpretation of _run_, in <a href="#3-1-5 (4b)">(4b)</a>, _each_ forces a distributive interpretation of _carry a piano_, and in <a href="#3-1-5 (4c)">(4c)</a>, _each_ similarly forces a distributive interpretation of _hit_. In all these cases, a (s / scope) predicate would appear to clarify the non-canonical scopal relations.
+Scope will not be annotated for summation readings (as we cannot reliably know it from the text alone), nor is it annotated where a distributive or collective reading can be predictably derived from the lexical semantics. In other words, whenever _run_ is interpreted distributively or _carry a piano_ is interpreted collectively, no scope annotation is needed. The scope annotation only comes into play when some overt linguistic element forces an interpretation that diverges from the lexical default. For example, in <a href="#3-1-5 (4a)">(4a)</a>, _together_ forces a collective interpretation of _run_, in <a href="#3-1-5 (4b)">(4b)</a>, _each_ forces a distributive interpretation of _carry a piano_, and in <a href="#3-1-5 (4c)">(4c)</a>, _each_ similarly forces a distributive interpretation of _hit_. In all these cases, a (s/ scope) predicate would appear to clarify the non-canonical scopal relations.
 
 <span id="3-1-5 (4)">(4)</span>
 
@@ -1994,7 +1892,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
    	:actor p
 	:goal (k/ kikopi' 'place'
 		:mod (d/ degi 'crazy'))
-	:Purpose (i/ inclusive-disj
+	:purpose (i/ inclusive-disj
 		:op1 (h2/ hataisupi'bave-00 'bash'
 			:actor p
 			:undergoer (m/ mnu'bo 'pandanus')
@@ -2007,7 +1905,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 			:modstr FullAff)
 		:op3 (b/ bresupi'bave-00 'plant'
 			:actor p
-			:undergoer (e / egemo 'banana')
+			:undergoer (e/ egemo 'banana')
 			:aspect Performance
 			:modstr FullAff)
 	:aspect Performance
@@ -2094,7 +1992,7 @@ Grab a stick or he will he attack you!
 
 ```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In <a href="#3-1-6 (4b)">(4b)</a>, having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary. UMR uses a ```:pure-addition``` relation to connect two events semantically related in this way.
 
-```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in <a href="#3-1-6 (4c)">(4c)</a>. The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract `substitute-01` predicate. The rejected alternative is annotated as `:ARG2`, while the replacement is annotated as `:ARG1`.
+```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in <a href="#3-1-6 (4c)">(4c)</a>. The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the ```:substitute``` relation, which takes the event being replaced as its child and the replacement event as its parent. The rejected alternative is annotated as `:ARG2`, while the replacement is annotated as `:ARG1`.
 
 <span id="3-1-6 (4)">(4)</span>
 
@@ -2127,8 +2025,8 @@ In addition to having your hand stamped, you have to show your ticket to get int
 		:ref-number Singular)					:ARG1 (s/ stamp-01
 	:ARG1 (s/ stamp-01							:ARG0 (p2/ person)
 		:ARG0 (p2/ person)						:ARG1 (h/ hand
-		:ARG1 (h2/ hand								:part-of p)
-			:part-of p)						:aspect Performance
+		:ARG1 (h2/ hand								:part p)
+			:part p)						:aspect Performance
 		:aspect Performance						:modstr PrtAff)
 		:modstr PrtAff)						:aspect Performance
 	:aspect Performance						:modstr PrtAff
@@ -2152,26 +2050,26 @@ In addition to having your hand stamped, you have to show your ticket to get int
 <span id="3-1-6 (4c)">(4c)</span>
 ```
 Instead of going out to eat, we barbecued chicken at home. / We didn’t go out to eat and/but barbecued chicken at home.
-(s/ substitute-01				Or		(a/ and
-   :ARG1 (b/ barbecue-01						:op1 (g/ go_out-17
-   	:ARG0 (p/ person							:ARG0 (p/ person
-		:ref-person 1st								:ref-person 1st
-		:ref-number Plural)							:ref-number Plural)
-	:ARG1 (c/ chicken)							:purpose (e/ eat-01
-	:location (h/ home)								:ARG0 p
-	:aspect Performance								:aspect Endeavor
-	:modstr FullAff)								:Modstr FullAff)
-   :ARG2 (g/ go_out-17								:aspect Performance
-   	:ARG0 p									:modstr FullNeg)				
-	:purpose (e/ eat-01						:op2 (b/ barbecue-01
-		:ARG0 p								:ARG0 p
-		:aspect Endeavor						:ARG1 (c/ chicken)
-		:modstr FullAff)						:location (h/ home)
-	:aspect Performance							:aspect Performance
-	:modstr FullNeg))							:modstr FullAff))
+(b/ barbecue-01				Or		(a/ and
+   :ARG0 (p/ person						:op1 (g/ go_out-17
+   	:ref-person 1st							:ARG0 (p/ person
+	:ref-number Plural)							:ref-person 1st
+   :ARG1 (c/ chicken)								:ref-number Plural)
+   :location (h/ home)							:purpose (e/ eat-01
+   :substitute (g/ go_out-17							:ARG0 p
+   	:ARG0 p									:aspect Endeavor	
+	:purpose (e/ eat-01							:modstr FullAff)				
+		:ARG0 p							:aspect Performance
+		:aspect Endeavor					:modstr FullNeg)
+		:modstr FullAff)				:op2 (b/ barbecue-01
+	:aspect Performance						:ARG0 p
+	:modstr FullNeg							:ARG1 (c/ chicken)
+   :aspect Performance							:location (h/ home)	
+   :modstr FullAff							:aspect Performance		
+									:modstr FullAff))
 ```
 
-```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. Just like the ```Additive``` meaning, this is represented in UMR through a ```consecutive``` abstract concept with numbered ```:opX``` relations. The temporal relations holding between the events can then be further specified in the document-level temporal annotation. More fine-grained sub-functions of the consecutive function are the following:
+```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. Just like the ```additive``` meaning, this is represented in UMR through a ```consecutive``` abstract concept with numbered ```:opX``` relations. The temporal relations holding between the events can then be further specified in the document-level temporal annotation. More fine-grained sub-functions of the consecutive function are the following:
 
 ```Purpose```: expresses the intention on the part of the agent of one event towards bringing about another event, as in <a href="#3-1-6 (5a)">(5a)</a>. This relation is annotated using the `:purpose` participant role relation (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
 
@@ -2295,9 +2193,9 @@ I went home after paying the check. / I paid the check and went home.
 
 Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function, marked in UMR with the ```and``` abstract concept and numbered ```:opX``` roles. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
 
-```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In <a href="#3-1-6 (6a)">(6a)</a>, properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy. This meaning is annotated using the ```contrast-01``` abstract predicate and its numbered argument roles.
+```(pure) Contrast```: expresses a relation of contrast in some way between events, without an element of unexpectedness. In <a href="#3-1-6 (6a)">(6a)</a>, properties attributed to Peter are contrasted with properties attributed to Vanja. Unlike with the “unexpected co-occurrence” relation below, there is no expectation that whenever two people are discussed and one of them is diligent, the other must be lazy. This meaning is annotated using the ```contrast-91``` abstract predicate and its numbered argument roles.
 
-```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in <a href="#3-1-6 (6b)">(6b)</a> from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school. UMR uses a ``unexpected-co-occurrence``` abstract concept with numbered ```:opX``` roles to represent this meaning.
+```Unexpected co-occurrence```: expresses a relation of juxtaposition between two events where the second event is unexpected in case the first occurs. For example, in <a href="#3-1-6 (6b)">(6b)</a> from Russian (Malchukov 2004:180), it is unexpected that Vanja went to school given that she had a cold - the sentence implies, in other words, that people who have a cold usually do not go to school. UMR uses a ```unexpected-co-occurrence-91``` abstract concept with ```:ARG1``` and ```:ARG2``` roles to represent this meaning.
 
 <span id="3-1-6 (6)">(6)</span>
 
@@ -2306,7 +2204,7 @@ Together, the additive and consecutive functions and all their subfunctions can 
 Petja	staratel'nyi,	a	Vanja	lenivyj
 Peter	diligent	CONJ	Vanja	lazy
 'Peter is diligent, but [contrast] Vanja is lazy.'
-(c/ contrast-01
+(c/ contrast-91
    :ARG1 (h/ have-mod-91
    	:ARG1 (p/ person
 		:name (n/ name :op1 "Peter"))
@@ -2326,13 +2224,13 @@ Peter	diligent	CONJ	Vanja	lazy
 Vanja	prostudilsja,	no	poshël	v	shkolu
 Vanja	caught_cold	CONJ	went	to	school
 'Vanja caught a cold, but [unexpected] went to school.'
-(u/ unexpected-co-occurrence
-   :op1 (p/ prostudilsja-00 'catch a cold'
+(u/ unexpected-co-occurrence-91
+   :ARG1 (p/ prostudilsja-00 'catch a cold'
    	:experiencer (p2/ person
 		:name (n/ name :op1 "Vanja"))
 	:aspect Performance
 	:modstr FullAff)
-   :op2 (p3/ poshël-00 'go'
+   :ARG2 (p3/ poshël-00 'go'
    	:actor p2
 	:goal (s/ shkolu 'school)
 	:aspect Performance
@@ -2391,7 +2289,7 @@ Sarah carried the bowl of punch into the living room without spilling a drop. / 
 
 <span id="3-1-6 (7c)">(7c)</span>
 ```
-Even though he was broke, he bought a new guitar. / He was broke, **but (still)** bought a new guitar.
+Even though he was broke, he bought a new guitar. / He was broke, but (still) bought a new guitar.
 (b/ buy-01
 	:ARG0 (p/ person
 		:ref-person 3rd
@@ -2446,7 +2344,7 @@ People don't own tigers, except for Joe Exotic.
 	:modstr FullNeg)
 ```
 
-Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice, annotated in UMR using the ```but``` abstract concept and numbered ```:opX``` argument roles. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
+Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice, annotated in UMR using the ```but-91``` abstract concept and ```:ARG1``` and ```:ARG2``` argument roles. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
 
 ```And + unexpected```: abstract concept that may be used if a language does not formally distinguish conjuctive relations from unexpected co-occurrence relations. The language may still have a distinct form to express pure contrast. This abstract concept takes numbered ```:opX``` roles.
 
@@ -2597,45 +2495,16 @@ semantic event classes. Note that UMR uses `:temporal` to annotate temporal circ
 
 <div id="tab:catroles">
 
-<table>  
-<tr>  
-<th>External Cause</th>  
-<th>Central Event</th>  
-<th>Circumstantial</th>  
-</tr>  
-<tr>  
-<td><pre>actor</pre></td>  
-<td rowspan="2">(CHANGE OF) STATE: <br> <pre>material, undergoer</pre></td>  
-<td><pre>affectee</pre></td>  
-</tr>  
-<tr>  
-<td><pre>companion</pre></td>  
-<td><pre>place</pre></td>  
-</tr>  
-<tr>  
-<td><pre>instrument</pre></td>  
-<td rowspan="2">MOTION/LOCATION: <br><pre>theme, goal, start, source, place</pre></td>  
-<td><pre>manner</pre></td>  
-</tr>
-<tr>  
-<td><pre>force</pre></td>  
-<td><pre>purpose</pre></td>  
-</tr>  
-<tr>  
-<td><pre>causer</pre></td>  
-<td rowspan="2"> TRANSFER: <br> <pre>theme, recipient</pre> </td>  
-<td><pre>reason</pre></td>  
-</tr> 
-<tr>  
-<td><pre>cause</pre></td>  
-<td><pre>temporal</pre></td>  
-</tr>  
-<tr>  
-<td></td>  
-<td>EXPERIENTIAL: <br> <pre>experiencer, stimulus</pre></td>  
-<td><pre>extent</pre></td>  
-</tr>  
- </table>
+|            **External Cause**             |                        **Central Event**                         |           **Circumstantial**            |
+| :---------------------------------------: | :--------------------------------------------------------------: | :-------------------------------------: |
+|   <span class="smallcaps">`actor`</span>    |                        (CHANGE OF) STATE:                        | <span class="smallcaps">`affectee`</span> |
+| <span class="smallcaps">`companion`</span>  |        <span class="smallcaps">`material, undergoer`</span>        |  <span class="smallcaps">`place`</span>   |
+| <span class="smallcaps">`instrument`</span> |                         MOTION/LOCATION:                         |  <span class="smallcaps">`manner`</span>  |
+|   <span class="smallcaps">`force`</span>    | <span class="smallcaps">`theme, goal, start, source, place`</span> | <span class="smallcaps">`purpose`</span>  |
+|   <span class="smallcaps">`causer`</span>   |                            TRANSFER:                             |  <span class="smallcaps">`reason`</span>  |
+|                                           |         <span class="smallcaps">`theme, recipient`</span>          |  <span class="smallcaps">`cause`</span>   |
+|                                           |                          EXPERIENTIAL:                           | <span class="smallcaps">`temporal`</span> |
+|                                           |       <span class="smallcaps">`experiencer, stimulus`</span>       |  <span class="smallcaps">`extent`</span>  |
 
 Table 10: Categorization of UMR non-lexicalized roles
 </div>
@@ -2659,8 +2528,8 @@ that are transformed into the created object.
 ```
 The ice cube melted.  
 (m/ melt-01  
-	:undergoer (c / cube
-		:consist-of (i/ ice)
+	:undergoer (c/ cube
+		:material (i/ ice)
 		:ref-number Singular)
 	:aspect Performance
 	:modstr FullAff)
@@ -2692,13 +2561,13 @@ She built a house out of wood.
 <span id="#3-2-1-1 (1d)">\[#3-2-1-1 (1d)\]</span> 
 ```
 He hit the stick against the fence.  
-(h / hit-01
+(h/ hit-01
 	:actor (p/ person
 		:ref-person 3rd
 		:ref-number Singular)  
 	:instrument (s/ stick
 		:ref-number Singular)  
-	:undergoer (f / fence
+	:undergoer (f/ fence
 		:ref-number Singular)
 	:aspect Endeavor
 	:modstr FullAff) 
@@ -2717,7 +2586,7 @@ experiences the `:stimulus` role.
 The audience listened to the concerto.  
 (l/ listen-01
 	:experiencer (a/ audience) 
-	:stimulus (c / concerto
+	:stimulus (c/ concerto
 		:ref-number Singular)
 	:aspect State
 	:modstr FullAff)
@@ -2729,7 +2598,7 @@ The cat startled me.
 	:experiencer (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:stimulus (c / cat
+	:stimulus (c/ cat
 		:ref-number Singular)
 	:aspect Performance
 	:modstr FullAff) 
@@ -2786,9 +2655,9 @@ He put the books in a box.
 	:actor (p/ person
 		:ref-person 3rd
 		:ref-number Singular)  
-	:theme (b / book
+	:theme (b/ book
 		:ref-number Plural)  
-	:goal (b2 / box
+	:goal (b2/ box
 		:ref-number Singular)
 	:aspect: Performance
 	:modstr FullAff)  
@@ -2957,7 +2826,7 @@ Jane wrote the paper with Chris.
 		:name (n/ name :op1 "Jane"))  
 	:companion (p2/ person
 		:name (n2/ name :op2 "Chris"))  
-	:undergoer (p3 / paper
+	:undergoer (p3/ paper
 		:ref-number Singular)
 	:aspect Performance
 	:modstr FullAff) 
@@ -3026,7 +2895,7 @@ The storm damaged the power lines.
 	:modstr FullAff)
 ```
 See Table 9 above for examples of the circumstantial
-roles. In addition, there is an `:other`
+roles. In addition, there is an `:other-role`
 placeholder role that can be used when annotators are unsure of which participant role annotation is accurate for a particular participant. Also see Appendix [8](#ap:verbspr) for a list of verbs and how their microroles are annotated.
 
 At Stage 0, participant roles that aren’t explicitly expressed in the clause do not have to be annotated, even if they are implied by the context. If the annotator is certain about them, however, they can be annotated. For example, in <a href="#3-2-1-1 (8)">(8)</a>, the
@@ -3067,7 +2936,7 @@ to the semantic roles as shown in Table 11.
 | Property Predication   | have-mod-91      | ---       | theme            | property         |
 | Object Predication     | have-role-91     | theme     | reference point  | object category  |
 |                        | have-org-role-91 | theme     | organization     | role             |
-|                        | kinship-91       | theme     | family member    | kinship rel.     |
+|                        | have-rel-role-91 | theme     | reference point  | relation         |
 | Equational             | identity-91      | theme     | equated referent | ---              |
 
 Table 11: Argument structure of non-verbal clause predicates
@@ -3227,7 +3096,7 @@ grandmother 	drink-CAUS	kid=PST 	water=INS
 ‘Grandmother made the kid drink the water.’
 (k/ kuratata 'make drink'
     :causer (p/ person
-    	:ARG0-of (k2/ kinship-91
+    	:ARG0-of (h/ have-rel-role-91
 		:ARG2 (n/ nai 'grandmother'))
 	:ref-number Singular)
     :actor (c/ churan 'kid')
@@ -3286,7 +3155,7 @@ that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	gi
 man who had asked her in matrimony) even though she doesn’t want to...’
 (m/ menima-00 'make give'
 	:causer (p/ person
-		:ARG0-of (k/ kinship-91
+		:ARG0-of (h/ have-rel-role-91
 			:ARG1 (x/ xontako 'unmarried girl'
 				:mod (j/ ja 'that')
 				:ref-number Singular)
@@ -3320,7 +3189,7 @@ Ka 	kedam 	hri	a 	cat.
 ‘My shoelace is broken/broke.’
 (c/ cat-00 ‘broken’ 
 	:undergoer (h/ hri 'string'
-		:part-of (k/ kedam 'shoe')
+		:part (k/ kedam 'shoe')
 		:poss (p/ person
 			:ref-person 1st
 			:ref-number Singular)
@@ -3338,7 +3207,7 @@ Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS
 	:actor (p/ person
 		:name (n/ name :op1 "Thangte"))
 	:undergoer (h/ hri 'string'
-		:part-of (k/ kedam 'shoe')
+		:part (k/ kedam 'shoe')
 		:poss (p2/ person
 			:ref-person 1st
 			:ref-number Singular)
@@ -3667,7 +3536,7 @@ I bought the sweater that you saw.
 	:modstr FullAff)
 ```
 
-One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `kinship-91, have-org-role-91`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in <a href="#3-2-1-3 (3)">(3)</a>.
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `have-rel-role-91, have-org-role-91`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in <a href="#3-2-1-3 (3)">(3)</a>.
   
 <span id="3-2-1-3 (3)">\[3-2-1-3 (3)\]</span> 
 
@@ -3679,7 +3548,7 @@ I met my father.
 		:ref-person 1st
 		:ref-number Singular)
 	:ARG1 (p2/ person
-		:ARG0-of (k/ kinship-91
+		:ARG0-of (h/ have-rel-role-91
 			:ARG1 p
 			:ARG2 (f/ father)))
 	:aspect Performance
@@ -3729,895 +3598,211 @@ Annotators may use Table X as a reference point for annotating general participa
 
 <div id="tab:predicateroles">
 
-<table>  
-<tr>  
-<th>Verb Meaning</th>  
-<th>Microrole</th>
-<th>UMR annotation</th>
-</tr>  
-<tr>  
-<td colspan="3">Active (A-like) S</td>  
-</tr>  
-<tr>  
-<td>RUN</td>  
-<td>runner</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">CLIMB</td>  
-<td>climber</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td>climbing goal</td>  
-<td><pre>undergoer</pre></td>  
-</tr>  
-<tr>  
-<td>JUMP</td>  
-<td>jumper</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">GO</td>  
-<td>goer</td>  
-<td><pre>actor</pre> </td>  
-</tr>  
-<tr>  
-<td>going goal</td>  
-<td><pre>goal</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">LEAVE</td>  
-<td>leaver</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td>left place/person</td>  
-<td><pre>source</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">SIT DOWN</td>  
-<td>sit downer </td>  
-<td><pre>actor</pre></td>  
-</tr>  <tr>  
-<td> sitting-down place</td>  
-<td><pre>goal</pre></td>  
-</tr>  
-<tr>
-<td>DIG </td>
-<td> digger</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>PLAY </td>
-<td> player</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> SING</td>
-<td>singer </td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td rowspan="2"> SIT</td>
-<td>sitter </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>sitting place </td>
-<td><pre>place</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">LIVE </td>
-<td> liver</td>
-<td> <pre>actor</pre> </td>
-</tr>
-<tr>
-<td>living place </td>
-<td><pre>place</pre> </td>
-</tr>
-<tr>
-<td> LAUGH</td>
-<td> laugher </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> BLINK</td>
-<td> blinker</td>
-<td> <pre>actor</pre> </td>
-</tr>
-<tr>
-<td> COUGH</td>
-<td>cougher </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td colspan="3">Inactive (P-like) S </td>
-</tr>
-<tr>
-<td> CRY</td>
-<td> crier</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td> DIE</td>
-<td> dieer</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td>SINK </td>
-<td> sunken entity</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td> BURN</td>
-<td>burnt thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>BOIL </td>
-<td>boiled thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>BE SAD </td>
-<td> sad person</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td> BE HUNGRY</td>
-<td> hungry person</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td>BE DRY </td>
-<td> dry thing</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td> BE ILL</td>
-<td> sick person</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>ROLL </td>
-<td> rolling entity</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>FALL </td>
-<td>fallee </td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td>RAIN </td>
-<td> rain</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td colspan="3"> Inherent Reflexive/Reciprocal</td>
-</tr>
-<tr>
-<td rowspan="2"> DRESS</td>
-<td>dresser </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>dressee </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2"> SHAVE (a body part)</td>
-<td>shaver (of body part) </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>shaved body part </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">WASH </td>
-<td> washer</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>washed entity </td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td rowspan="2">HELP </td>
-<td>helper </td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>helpee </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">FOLLOW </td>
-<td>follower </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>followee </td>
-<td> <pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">MEET </td>
-<td> meeter</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>met person </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2"> HUG</td>
-<td>hugger </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>huggee </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td colspan="3"> Change-of-State </td>
-</tr>
-<tr>
-<td rowspan="3"> BREAK</td>
-<td> breaker</td>
-<td> <pre>actor</pre> </td>
-</tr>
-<tr>
-<td> broken thing</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td>breaking instrument </td>
-<td> <pre>instrument</pre></td>
-</tr>
-<tr>
-<td rowspan="3"> KILL</td>
-<td>killer </td>
-<td> <pre>actor</pre> </td>
-</tr>
-<tr>
-<td> killee</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-</tr>
-<tr>
-<td>killing instrument  </td>
-<td><pre>instrument</pre> </td>
-</tr>
-<tr>
-<td rowspan="3"> BEAT </td>
-<td> beater</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td> beatee</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>beating instrument </td>
-<td><pre>instrument</pre> </td>
-</tr>
-<tr>
-<td rowspan="3"> CUT</td>
-<td> cutter</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> cut thing</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>cutting instrument </td>
-<td> <pre>instrument</pre></td>
-</tr>
-<tr>
-<td rowspan="2"> GRIND</td>
-<td> grinder</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td> ground thing</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">COOK </td>
-<td>cooker </td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>cooked food </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2"> EAT</td>
-<td> eater</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>eaten food </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2"> DRINK</td>
-<td>drinking person </td>
-<td><pre>actor</pre> </td>
-</tr><tr>
-<td> drunken thing</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">COVER </td>
-<td> coverer</td>
-<td><pre>actor</pre> </td>
-</tr><tr>
-<td> cover</td>
-<td><pre>instrument</pre> </td>
-</tr>
-<tr>
-<td>covered thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">FILL </td>
-<td> filler</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>filling material </td>
-<td><pre>instrument</pre> </td>
-</tr>
-<tr>
-<td> filled container</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2"> WIPE (cos)</td>
-<td>wiper </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>wiped surface </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">PEEL (cos) </td>
-<td> peeler</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>peeled object </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td colspan="3"> Contact</td>
-</tr>
-<tr>
-<td rowspan="3">HIT </td>
-<td> hitter</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> hittee</td>
-<td> <pre>undergoer</pre></td>
-</tr>
-<tr>
-<td>hitting instrument </td>
-<td><pre>instrument</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">TOUCH </td>
-<td>toucher </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> touchee</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>touching instrument </td>
-<td> <pre>instrument</pre></td>
-</tr>
-<tr>
-<td rowspan="2">PUSH </td>
-<td>pusher </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> pushee</td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td colspan="3">Experiential </td>
-</tr>
-<tr>
-<td rowspan="2">LOOK AT </td>
-<td> looker</td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td>looked at entity </td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2"> SEE</td>
-<td>seeer </td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td> seen entity</td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td>APPEAR </td>
-<td> appearer</td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">SMELL </td>
-<td> smeller</td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td> smelled entity</td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">HEAR </td>
-<td>hearer </td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td>heard sound </td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">FEAR </td>
-<td> fearer</td>
-<td><pre>experiencer</pre> </td>
-</tr>
-<tr>
-<td>fear stimulus </td>
-<td> <pre>stimulus</pre></td>
-</tr>
-<tr>
-<td rowspan="2">FRIGHTEN </td>
-<td>frightenee </td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td>frightener </td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">LIKE </td>
-<td>liker </td>
-<td><pre>experiencer</pre> </td>
-</tr>
-<tr>
-<td> liked entity</td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">KNOW </td>
-<td>knower </td>
-<td><pre>experiencer</pre> </td>
-</tr><tr>
-<td> known thing/person</td>
-<td> <pre>stimulus</pre></td>
-</tr>
-<tr>
-<td rowspan="2">THINK </td>
-<td>thinker </td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td>thought content </td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">WANT </td>
-<td>wanter </td>
-<td> <pre>experiencer</pre></td>
-</tr>
-<tr>
-<td>wanted thing </td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">FEEL PAIN </td>
-<td>pain-feeler </td>
-<td><pre>experiencer</pre> </td>
-</tr>
-<tr>
-<td> pain locus</td>
-<td><pre>stimulus</pre> </td>
-</tr>
-<tr>
-<td colspan="3">Partly-unrealized </td>
-</tr>
-<tr>
-<td rowspan="2">SEARCH FOR </td>
-<td> searcher</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>searched thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">HUNT (FOR) </td>
-<td> hunter</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>hunted thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td colspan="3">Application </td>
-</tr>
-<tr>
-<td rowspan="3">PUT </td>
-<td>putter </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>put thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>putting goal </td>
-<td><pre>goal</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">POUR </td>
-<td>pourer </td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td> poured substance</td>
-<td> <pre>theme</pre></td>
-</tr>
-<tr>
-<td>pouring goal </td>
-<td><pre>goal</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">LOAD </td>
-<td> loader</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>loaded thing </td>
-<td> <pre>theme</pre></td>
-</tr>
-<tr>
-<td>loading place  </td>
-<td><pre>goal</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">TIE </td>
-<td> tier</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>tied thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td> tying goal</td>
-<td><pre>goal</pre> </td>
-</tr>
-<tr>
-<td colspan="3">Removal </td>
-</tr>
-<tr>
-<td rowspan="3">TAKE </td>
-<td>taker </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>taken thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>taking source </td>
-<td><pre>source</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">TEAR </td>
-<td> tearer</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>torn thing </td>
-<td><pre>theme</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td>tearing source </td>
-<td><pre>source</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td rowspan="3"> WIPE (motion) </td>
-<td> wiper </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> wiped material</td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>wiped surface </td>
-<td><pre>source</pre> </td>
-</tr>
-<tr>
-<td rowspan="3"> PEEL (motion)</td>
-<td> peeler</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>peel </td>
-<td> <pre>theme</pre></td>
-</tr>
-<tr>
-<td>peeled object </td> </td>
-<td> <pre>source</pre></td>
-</tr>
-<tr>
-<td colspan="3"> Creation</td>
-</tr>
-<tr>
-<td rowspan="3">BUILD </td>
-<td>builder </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>built thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td>building material </td>
-<td><pre>instrument</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">MAKE </td>
-<td>maker </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>made thing </td>
-<td><pre>undergoer</pre> </td>
-</tr>
-<tr>
-<td colspan="3"> Transfer</td>
-</tr>
-<tr>
-<td rowspan="3">GIVE </td>
-<td> giver</td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td > gift</td>
-<td> <pre>theme</pre></td>
-</tr>
-<tr>
-<td>giving recipient </td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">SEND </td>
-<td>sender </td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>sent thing </td>
-<td><pre>theme</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td>sending recipient </td>
-<td><pre>recipient</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td rowspan="3">CARRY </td>
-<td>carrier </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> carried thing</td>
-<td><pre>theme</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td>carrying goal </td>
-<td><pre>goal</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td rowspan="3">THROW </td>
-<td>thrower </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>thrown thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>throwing goal </td>
-<td><pre>goal</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">BRING </td>
-<td>bringer </td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>brought thing </td>
-<td><pre>theme</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td>bringing recipient </td>
-<td><pre>recipient</pre> </td>
-<td> </td>
-</tr>
-<tr>
-<td rowspan="3">STEAL </td>
-<td>stealer </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>stolen thing  </td>
-<td> <pre>theme</pre></td>
-</tr>
-<tr>
-<td> stealing source</td>
-<td><pre>affectee</pre> </td>
-</tr>
-<tr>
-<td rowspan="2">GET </td>
-<td>receiver </td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td>received thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td colspan="3"> Communication</td>
-</tr>
-<tr>
-<td rowspan="3">TALK </td>
-<td>talker </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>talked about content </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>talked to person </td>
-<td> <pre>recipient</pre></td>
-</tr>
-<tr>
-<td rowspan="3"> ASK FOR</td>
-<td>asker </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>requested thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td> askee</td>
-<td> <pre>recipient</pre></td>
-</tr>
-<tr>
-<td rowspan="2">SHOUT AT </td>
-<td>shouter </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>shoutee </td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">TELL </td>
-<td>teller </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>told content </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>tellee </td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td rowspan="3"> SHOW</td>
-<td> shower</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td>shown thing </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td> showing addressee</td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">HIDE </td>
-<td>hider </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> hidden thing</td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>hiding affectee </td>
-<td><pre>affectee</pre> </td>
-</tr>
-<tr>
-<td>SCREAM </td>
-<td> screamer</td>
-<td> <pre>actor</pre></td>
-</tr>
-<tr>
-<td rowspan="3">TEACH </td>
-<td>teacher </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>taught content </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>teachee </td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td rowspan="3">SAY </td>
-<td>sayer </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td> said content</td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>saying addressee </td>
-<td><pre>recipient</pre> </td>
-</tr>
-<tr>
-<td rowspan="3"> NAME</td>
-<td>namer </td>
-<td><pre>actor</pre> </td>
-</tr>
-<tr>
-<td>name </td>
-<td><pre>theme</pre> </td>
-</tr>
-<tr>
-<td>namee </td>
-<td><pre>recipient</pre> </td>
-</tr>
-</table>
+
+| **Verb Meaning** | **Microrole** | **UMR annotation** |
+| :--------------------- | :--------------- | :-------- | 
+|**Active (A-like) S** | | |
+| RUN	| runner | <span class="smallcaps">`actor`</span> |
+| CLIMB | climber | <span class="smallcaps">`actor`</span> |
+| 		| climbing goal | <span class="smallcaps">`undergoer`</span> |
+| JUMP | jumper | <span class="smallcaps">`actor`</span> |
+| GO | goer | <span class="smallcaps">`actor`</span> |
+|	| going goal | <span class="smallcaps">`goal`</span> |
+| LEAVE | leaver | <span class="smallcaps">`actor`</span> |
+|		| left place/person | <span class="smallcaps">`source`</span> |
+| SIT DOWN | sit downer | <span class="smallcaps">`actor`</span> |
+|		| sitting-down place  | <span class="smallcaps">`goal`</span> |
+| DIG | digger | <span class="smallcaps">`actor`</span> |
+| PLAY | player | <span class="smallcaps">`actor`</span> |
+| SING | singer | <span class="smallcaps">`actor`</span> |
+| SIT | sitter | <span class="smallcaps">`actor`</span> |
+|		| sitting place  | <span class="smallcaps">`place`</span>  |
+| LIVE | liver | <span class="smallcaps">`actor`</span> |
+|	| living place  | <span class="smallcaps">`place`</span>  |
+| LAUGH | laugher | <span class="smallcaps">`actor`</span> |
+| BLINK | blinker | <span class="smallcaps">`actor`</span> |
+| COUGH | cougher | <span class="smallcaps">`actor`</span> |
+| **Inactive (P-like) S**  | | |
+| CRY | crier | <span class="smallcaps">`undergoer`</span> |
+| DIE | dieer | <span class="smallcaps">`undergoer`</span> |
+| SINK | sunken entity | <span class="smallcaps">`undergoer`</span> |
+| BURN | burnt thing | <span class="smallcaps">`undergoer`</span> |
+| BOIL | boiled thing | <span class="smallcaps">`undergoer`</span> |
+| BE SAD | sad person | <span class="smallcaps">`undergoer`</span> |
+| BE HUNGRY | hungry person | <span class="smallcaps">`undergoer`</span>|
+| BE DRY | dry thing | <span class="smallcaps">`undergoer`</span> |
+| BE ILL | sick person | <span class="smallcaps">`undergoer`</span> |
+| ROLL | rolling entity | <span class="smallcaps">`undergoer`</span> |
+| FALL | fallee | <span class="smallcaps">`undergoer`</span> |
+| RAIN | rain | <span class="smallcaps">`undergoer`</span> |
+| **Reflexive/Reciprocal** | | |
+| DRESS | dresser | <span class="smallcaps">`actor`</span> |
+|		| dressee | <span class="smallcaps">`undergoer`</span> |
+| SHAVE (a body part) | shaver (of body part) | <span class="smallcaps">`actor`</span> |
+|	| shaved body part | <span class="smallcaps">`undergoer`</span> |
+| WASH | washer | <span class="smallcaps">`actor`</span> |
+|		| washed entity | <span class="smallcaps">`undergoer`</span> |
+| HELP | helper | <span class="smallcaps">`actor`</span> |
+|		| helpee | <span class="smallcaps">`undergoer`</span> |
+| FOLLOW | follower | <span class="smallcaps">`actor`</span> |
+|		| followee | <span class="smallcaps">`undergoer`</span> |
+| MEET | meeter | <span class="smallcaps">`actor`</span> |
+|		| met person | <span class="smallcaps">`undergoer`</span> |
+| HUG | hugger | <span class="smallcaps">`actor`</span> |
+|	| huggee  | <span class="smallcaps">`undergoer`</span> |
+| **Change-of-State** | | |
+| BREAK | breaker | <span class="smallcaps">`actor`</span> |
+|		| broken thing | <span class="smallcaps">`undergoer`</span> |
+|		| breaking instrument | <span class="smallcaps">`instrument`</span> |
+| KILL | killer | <span class="smallcaps">`actor`</span> |
+|		| killee | <span class="smallcaps">`undergoer`</span> |
+|		| killing instrument | <span class="smallcaps">`instrument`</span> |
+| BEAT | beater | <span class="smallcaps">`actor`</span> |
+|		| beatee | <span class="smallcaps">`undergoer`</span> |
+|		| beating instrument | <span class="smallcaps">`instrument`</span> |
+| CUT | cutter | <span class="smallcaps">`actor`</span> |
+|		| cut thing | <span class="smallcaps">`undergoer`</span> |
+|		| cutting instrument | <span class="smallcaps">`instrument`</span> |
+| GRIND | grinder | <span class="smallcaps">`actor`</span> |
+|		| ground thing | <span class="smallcaps">`undergoer`</span> |
+| COOK | cooker | <span class="smallcaps">`actor`</span> |
+|		| cooked food | <span class="smallcaps">`undergoer`</span> |
+| EAT | eater | <span class="smallcaps">`actor`</span> |
+|		| eaten food | <span class="smallcaps">`undergoer`</span> |
+| DRINK | drinking person | <span class="smallcaps">`actor`</span> |
+|		| drunked thing | <span class="smallcaps">`undergoer`</span> |
+| COVER | coverer | <span class="smallcaps">`actor`</span> |
+|		| cover | <span class="smallcaps">`instrument`</span> |
+|		| covered thing | <span class="smallcaps">`undergoer`</span> |
+| FILL | filler | <span class="smallcaps">`actor`</span> |
+|		| filling material | <span class="smallcaps">`instrument`</span> |
+|		| filled container | <span class="smallcaps">`undergoer`</span> |
+| WIPE (cos) | wiper | <span class="smallcaps">`actor`</span> |
+|			| wiped surface | <span class="smallcaps">`undergoer`</span> |
+| PEEL (cos) | peeler | <span class="smallcaps">`actor`</span> |
+|			| peeled object | <span class="smallcaps">`undergoer`</span> |
+| **Contact** | | |
+| HIT | hitter | <span class="smallcaps">`actor`</span> |
+|	| hittee | <span class="smallcaps">`undergoer`</span> |
+|	| hitting instrument | <span class="smallcaps">`instrument`</span> |
+| TOUCH | toucher | <span class="smallcaps">`actor`</span> |
+|	| touchee | <span class="smallcaps">`undergoer`</span> |
+|	| touching instrument | <span class="smallcaps">`instrument`</span> |
+| PUSH | pusher | <span class="smallcaps">`actor`</span> |
+|	| pushee | <span class="smallcaps">`undergoer`</span> |
+| **Experiential** | | |
+| LOOK AT | looker | <span class="smallcaps">`experiencer`</span> |
+|		| looked at entity | <span class="smallcaps">`stimulus`</span> |
+| SEE | seeer | <span class="smallcaps">`experiencer`</span> |
+|	| seen entity | <span class="smallcaps">`stimulus`</span> |
+| APPEAR | appearer | <span class="smallcaps">`stimulus`</span> |
+| SMELL | smeller | <span class="smallcaps">`experiencer`</span> |
+|	| smelled entity | <span class="smallcaps">`stimulus`</span> |
+| HEAR | hearer | <span class="smallcaps">`experiencer`</span> |
+|	| heard sound | <span class="smallcaps">`stimulus`</span> |
+| FEAR | fearer | <span class="smallcaps">`experiencer`</span> |
+|	| fear stimulus | <span class="smallcaps">`stimulus`</span> |
+| FRIGHTEN | frightenee | <span class="smallcaps">`experiencer`</span> |
+|	| frightener | <span class="smallcaps">`stimulus`</span> |
+| LIKE | liker | <span class="smallcaps">`experiencer`</span> |
+|	| liked entity | <span class="smallcaps">`stimulus`</span> |
+| KNOW | knower | <span class="smallcaps">`experiencer`</span> |
+|	| known thing/person | <span class="smallcaps">`stimulus`</span> |
+| THINK | thinker | <span class="smallcaps">`experiencer`</span> |
+|	| thought content | <span class="smallcaps">`stimulus`</span> |
+| WANT | wanter | <span class="smallcaps">`experiencer`</span> |
+|	| wanted thing | <span class="smallcaps">`stimulus`</span> |
+| FEEL PAIN | pain-feeler | <span class="smallcaps">`experiencer`</span> |
+|	| pain locus | <span class="smallcaps">`stimulus`</span> |
+| **Partly-unrealized** | | |
+| SEARCH FOR | searcher | <span class="smallcaps">`actor`</span> |
+|			| searched thing | <span class="smallcaps">`undergoer`</span> |
+| HUNT (FOR) | hunter | <span class="smallcaps">`actor`</span> |
+|			| hunted thing | <span class="smallcaps">`undergoer`</span> |
+| **Application** | | |
+| PUT | putter | <span class="smallcaps">`actor`</span> |
+|		| put thing | <span class="smallcaps">`theme`</span>  |
+|		| putting goal | <span class="smallcaps">`goal`</span> |
+| POUR | pourer | <span class="smallcaps">`actor`</span> |
+|		| poured substance | <span class="smallcaps">`theme`</span>  |
+|		| pouring goal | <span class="smallcaps">`goal`</span> |
+| LOAD | loader | <span class="smallcaps">`actor`</span> |
+|		| loaded thing | <span class="smallcaps">`theme`</span>  |
+|		| loading place  | <span class="smallcaps">`goal`</span> |
+| TIE | tier | <span class="smallcaps">`actor`</span> |
+|		| tied thing | <span class="smallcaps">`theme`</span>  |
+|		| tying goal | <span class="smallcaps">`goal`</span> |
+| **Removal** | | |
+| TAKE | taker | <span class="smallcaps">`actor`</span> |
+|		| taken thing | <span class="smallcaps">`theme`</span>  |
+|		| taking source | <span class="smallcaps">`source`</span> |
+| TEAR | tearer | <span class="smallcaps">`actor`</span> |
+| 		| torn thing | <span class="smallcaps">`theme`</span>  |
+|		| tearing source | <span class="smallcaps">`source`</span> |
+| WIPE (motion) | wiper | <span class="smallcaps">`actor`</span> |
+|				| wiped material | <span class="smallcaps">`theme`</span>  |
+|				| wiped surface | <span class="smallcaps">`source`</span> |
+| PEEL (motion) | peeler | <span class="smallcaps">`actor`</span> |
+|			| peel | <span class="smallcaps">`theme`</span>  |
+|			| peeled object | <span class="smallcaps">`source`</span> |
+| **Creation** | | |
+| BUILD | builder | <span class="smallcaps">`actor`</span> |
+|		| built thing | <span class="smallcaps">`undergoer`</span> |
+|		| building material | <span class="smallcaps">`instrument`</span> |
+| MAKE | maker | <span class="smallcaps">`actor`</span> |
+|		| made thing | <span class="smallcaps">`undergoer`</span> |
+| **Transfer**
+| GIVE | giver | <span class="smallcaps">`actor`</span> |
+|		| gift | <span class="smallcaps">`theme`</span>  |
+|		| giving recipient | <span class="smallcaps">`recipient`</span> |
+| SEND | sender | <span class="smallcaps">`actor`</span> |
+|		| sent thing | <span class="smallcaps">`theme`</span>  |
+|		| sending recipient | <span class="smallcaps">`recipient`</span> |
+| CARRY | carrier | <span class="smallcaps">`actor`</span> |
+|		| carried thing | <span class="smallcaps">`theme`</span>  |
+|		| carrying goal | <span class="smallcaps">`goal`</span> |
+| THROW | thrower | <span class="smallcaps">`actor`</span> |
+|		| thrown thing | <span class="smallcaps">`theme`</span>  |
+|		| throwing goal | <span class="smallcaps">`goal`</span> |
+| BRING | bringer | <span class="smallcaps">`actor`</span> |
+|		| brought thing | <span class="smallcaps">`theme`</span>  |
+|		| bringing recipient | <span class="smallcaps">`recipient`</span> |
+| STEAL | stealer | <span class="smallcaps">`actor`</span> |
+|		| stolen thing | <span class="smallcaps">`theme`</span>  |
+|		| stealing source | <span class="smallcaps">`affectee`</span> |
+| GET | receiver | <span class="smallcaps">`recipient`</span> |
+|		| received thing | <span class="smallcaps">`theme`</span> |
+| **Communication** | | |
+| TALK | talker | <span class="smallcaps">`actor`</span> |
+|		| talked about content | <span class="smallcaps">`theme`</span>  |
+|		| talked to person | <span class="smallcaps">`recipient`</span> |
+| ASK FOR | asker | <span class="smallcaps">`actor`</span> |
+|		| requested thing | <span class="smallcaps">`theme`</span>  |
+|		| askee | <span class="smallcaps">`recipient`</span> |
+| SHOUT AT | shouter | <span class="smallcaps">`actor`</span> |
+|		   | shoutee | <span class="smallcaps">`recipient`</span> |
+| TELL | teller | <span class="smallcaps">`actor`</span> |
+|		| told content | <span class="smallcaps">`theme`</span>  |
+|		| tellee | <span class="smallcaps">`recipient`</span> |
+| SHOW | shower | <span class="smallcaps">`actor`</span> |
+|		| shown thing | <span class="smallcaps">`theme`</span>  |
+|		| showing addressee | <span class="smallcaps">`recipient`</span> |
+| HIDE | hider | <span class="smallcaps">`actor`</span> |
+|		| hidden thing | <span class="smallcaps">`theme`</span>  |
+|		| hiding affectee | <span class="smallcaps">`affectee`</span> |
+| SCREAM | screamer | <span class="smallcaps">`actor`</span> |
+|TEACH | teacher | <span class="smallcaps">`actor`</span> |
+|		| taught content | <span class="smallcaps">`theme`</span>  |
+|		| teachee | <span class="smallcaps">`recipient`</span> |
+| SAY | sayer | <span class="smallcaps">`actor`</span> |
+|	  | said content | <span class="smallcaps">`theme`</span>  |
+|     | saying addressee | <span class="smallcaps">`recipient`</span> |
+| NAME | namer | <span class="smallcaps">`actor`</span> |
+|	   | name | <span class="smallcaps">`theme`</span>  |
+|	   | namee | <span class="smallcaps">`recipient`</span> |	
 
 Table X: Verb meanings and non-lexicalized role annotation
 </div>
-
 
 [Back to Table of Contents](#toc)
 
@@ -4659,7 +3844,7 @@ Friday the 13th
 
   ##### Part 3-2-2-2. Modifiers
 
-Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers of some sort within an NP. Semantically, modification relations in referring expressions come in two kinds: anchoring and typifying (Croft, to appear). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to them). As described in [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles), kinship relations are annotated through the `kinship-91` predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses `:poss` and `:part-of` relations with the possessum or part as the parent and the possessor or whole as the daughter, as in <a href="#3-2-2-1 (1)">(1)</a>.
+Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers of some sort within an NP. Semantically, modification relations in referring expressions come in two kinds: anchoring and typifying (Croft, to appear). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to them). As described in [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles), kinship relations are annotated through the `have-rel-role-91` predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses `:poss` and `:part` relations with the possessum or part as the parent and the possessor or whole as the daughter, as in <a href="#3-2-2-1 (1)">(1)</a>.
 
 <span id="3-2-2-2 (1)" label="3-2-2-2 (1)">\[3-2-2-2 (1)\]</span> 
 
@@ -4676,11 +3861,11 @@ John's car
 ```
 Guitar strings
 (s/ string
-	:part-of (g/ guitar)
+	:part (g/ guitar)
 	:ref-number Plural)
 ```
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
-category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in <a href="#3-2-2-2 (2a)">(2a)</a>, the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. The `:mod` relation additionally inherits some uses from UMR. It is used to annotate demonstrative determiners, and it is used to annotate property concept modifiers that do not have their own frame files. Those uses are exemplified in <a href="#3-2-2-2 (2b)">(2b)</a>-<a href="#3-2-2-2 (2c)">(2c)</a> A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in <a href="#3-2-2-2 (2d)">(2d)</a>; `:consist-of`, for indicating the membership of groups <a href="#3-2-2-2 (2e)">(2e)</a>; `:topic`, for indicating what a referent is about as in <a href="#3-2-2-2 (2f)">(2f)</a>, and `:medium` for indicating channels of communication, such as languages as in <a href="#3-2-2-2 (2g)">(2g)</a>.
+category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in <a href="#3-2-2-2 (2a)">(2a)</a>, the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. The `:mod` relation additionally inherits some uses from UMR. It is used to annotate demonstrative determiners, and it is used to annotate property concept modifiers that do not have their own frame files. Those uses are exemplified in <a href="#3-2-2-2 (2b)">(2b)</a>-<a href="#3-2-2-2 (2c)">(2c)</a> A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in <a href="#3-2-2-2 (2d)">(2d)</a>; `:group`, for indicating the membership of groups <a href="#3-2-2-2 (2e)">(2e)</a>; `:topic`, for indicating what a referent is about as in <a href="#3-2-2-2 (2f)">(2f)</a>, and `:medium` for indicating channels of communication, such as languages as in <a href="#3-2-2-2 (2g)">(2g)</a>.
 
 <span id="3-2-2-2 (2)" label="3-2-2-2 (2)">\[3-2-2-2 (2)\]</span> 
 
@@ -4725,7 +3910,7 @@ The thirty year-old man
 ```
 A swarm of bees
 (s/ swarm
-	:consist-of (b/ bee
+	:group (b/ bee
 		:ref-number Plural))
 ```
 <span id="3-2-2-2 (2f)" label="3-2-2-2 (2f)">\[3-2-2-2 (2f)\]</span> 
@@ -4803,7 +3988,7 @@ I visited New York City twice.
 		:ref-person 1st
 		:ref-number Singular)
 	:ARG1 (c/ city
-		:name (n / name
+		:name (n/ name
 			:op1 "New"
 			:op2 "York"
 			:op3 "City")
@@ -4820,7 +4005,7 @@ I visit New York City every December.
 		:ref-person 1st
 		:ref-number Singular)
 	:ARG1 (c/ city
-		:name (n / name
+		:name (n/ name
 			:op1 "New"
 			:op2 "York"
 			:op3 "City")
@@ -4961,19 +4146,19 @@ Countries like Germany and France
 <span id="3-2-2-6 (1b)" label="3-2-2-6 (1b)">\[3-2-2-6 (1b)\]</span> 
 Could you close the window?
 ```
-(c / close.01
-	:ARG0 (p / person
+(c/ close-01
+	:ARG0 (p/ person
 		:ref-person 2nd
 		:ref-number Singular)
-	:ARG1 (w / window)
-	:Aspect Performance
-	:Mode Imperative
+	:ARG1 (w/ window)
+	:aspect Performance
+	:mode Imperative
 	:polite +)
 ```
 
 The `:condition` and `:concession` relations are alternative ways of annotating the `have-condition-91` and `have-concession-91` predicates - their use is detailed in [Part 4-3](#part-4-3-modal-dependency).
 
-Lastly, annotators have at their disposal an `:other` relation, as already mentioned in table 5 in [Part 3-2-1-1](#part-3-2-1-1-stage-0). If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this `:other` relation, linking it to the concept node that seems appropriate.
+Lastly, annotators have at their disposal an `:other-role` relation, as already mentioned in table 5 in [Part 3-2-1-1](#part-3-2-1-1-stage-0). If they encounter any concept that they believe needs to be included in the UMR annotation, but UMR does currently not have a defined procedure of annotating it, they may simply add it to the graph using this `:other-role` relation, linking it to the concept node that seems appropriate.
 
 [Back to Table of Contents](#toc)
 
@@ -5400,7 +4585,7 @@ My cat is black and white.
 <span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">\[3-3-1-3 (4b)\]</span>   
 ```
 My cat is hungry.
-(h / hunger-01
+(h/ hunger-01
 	:ARG0 (c/ cat
 		:poss (p/ person
 			:ref-person 1st
@@ -5905,7 +5090,7 @@ Did you see that?
       :aspect State
       :modstr NeutAff
       :mode interrogative
-      :polarity amr-unknown)
+      :polarity umr-unknown)
 ```
 
 [Back to Table of Contents](#toc)
@@ -6113,7 +5298,7 @@ He is very possessive and controlling but he has no right to be as we are not to
             :op2 (h/ have-mod-91
                   :ARG1 p
 		  :ARG2 (c2/ controlling)
-                  :degree (v / very)
+                  :degree (v/ very)
 		  :aspect State
 		  :modstr FullAff))
       :ARG2 (r/ right-05
@@ -6171,7 +5356,7 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
                   :ARG2 (m/ multiple
                         :op1 (m2/ monetary-quantity 
 			      :quant 1000000
-                              :unit (d / dollar)))
+                              :unit (d/ dollar)))
 	          :aspect State
 		  :modpred b)
 	    :aspect State
@@ -6285,7 +5470,7 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 	:aspect State
 	:modstr FullAff)
 	    
-(s2 / sentence
+(s2/ sentence
    :temporal ((DCT :overlap s2i)
    	      (Future_Ref :includes s2u))
    :modal ((AUTH :FullAff s2i)
@@ -6342,7 +5527,7 @@ The arrests were ordered by anti-terrorism judge fragnoli.
       :aspect Performance
       :modstr FullAff)
  
- (s2 / sentence
+ (s2/ sentence
  	:temporal (s2a :before s2o)
 	:modal ((AUTH :FullAff s2o)
 		(AUTH :FullAff s2p)
@@ -6393,8 +5578,8 @@ In April 1998 Arab countries signed an anti-terrorism agreement that binds the s
 			:modpred b)
 		  :aspect Activity
 		  :modstr FullAff))
-      :temporal (d / date-entity :year 1998 :month 4)
-      :temporal (b2 /before :op (n/now))
+      :temporal (d/ date-entity :year 1998 :month 4)
+      :temporal (b2/before :op (n/now))
       :aspect Performance))
  ```
 
@@ -6445,38 +5630,51 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table
 [\[timex-taxonomy\]](#timex-taxonomy)).
 
 <table>
-<tr>
-<th colspan="4"> Taxonomy</th>
-<th> Examples</th>
-<th> Possible Reference Times</th>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span><strong>Examples</strong></span></th>
+<th style="text-align: center;"><span><strong>Possible Reference Times</strong></span></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
 </tr>
-<tr>
-<td rowspan="5"> Time Expressions </td>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Locatable</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Absolute</td>
+<td style="text-align: center;">May 2015</td>
+<td style="text-align: center;">ROOT</td>
 </tr>
-<tr>
-<td rowspan="3"> Locatable Time Expressions </td>
-<td rowspan="2"> Concrete </td>
-<td> Absolute</td>
-<td> May 2015</td>
-<td> ROOT </td>
+<tr class="even">
+<td style="text-align: center;"><p>Time</p></td>
+<td style="text-align: center;">Time</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Relative</td>
+<td style="text-align: center;">today, two days later</td>
+<td style="text-align: center;">DCT, another Concrete</td>
 </tr>
-<tr>
-<td> Relative</td>
-<td> today, two days later </td>
-<td> DCT, another Concrete </td>
+<tr class="odd">
+<td style="text-align: center;"><p>Expressions</p></td>
+<td style="text-align: center;">Expressions</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">nowadays</td>
+<td style="text-align: center;">Present/Past/Future_Ref</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td colspan="2"> Vague</td>
-<td> nowadays</td>
-<td> Present/Past/Future_Ref </td>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">every month</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td colspan="3"> Unlocatable Time Expressions</td>
-<td> every month </td>
-<td>  -- </td>
-</tr>
+</tbody>
 </table>
-
 
 First, time expressions are distinguished based on whether they are
 locatable on a timeline or not. Unlocatable time expressions are time
@@ -7763,7 +6961,7 @@ complement event node in the full dependency structure.
  		* If a participant is modified by an **event concept** (e.g. a relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by an **object concept**:
  			* Annotate it with the **:mod** relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
- 			* Annotate it with the **:poss**, **:part-of**, or **:ARG0-of (k/ kinship-91)** relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 			* Annotate it with the **:poss**, **:part**, or **:ARG0-of (k/ have-rel-role-91)** relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by a **quantifier**, annotate it with the **:quant** relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
  		* If a participant is a **named entity**, apply the **:name** and **:wiki** relations to the appropriate named entity category concept node, if you have not done so yet (see [Part 3-1-2](#part-3-1-2-named-entities)).
  	* Annotate **attributes** of participants and events.
