@@ -1992,7 +1992,7 @@ Grab a stick or he will he attack you!
 
 ```(pure) Addition```: expresses no temporal specification of the sequencing of events, but rather that the two events that form a complex figure cannot occur separately from each other in the context of the utterance. In <a href="#3-1-6 (4b)">(4b)</a>, having either your hand stamped or showing your ticket stub alone is not sufficient to get into the concert - both are necessary. UMR uses a ```:pure-addition``` relation to connect two events semantically related in this way.
 
-```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in <a href="#3-1-6 (4c)">(4c)</a>. The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract `substitute-01` predicate. The rejected alternative is annotated as :ARG2, while the replacement is annotated as :ARG1
+```Substitution```: expresses that one of the events that together form a complex figure is offered as an “alternative” or “replacement” for the other – this is typically expressed through the negation of one of the two coordinands, as in <a href="#3-1-6 (4c)">(4c)</a>. The acceptability of both _and_ and _but_ here illustrates that the substitutive function is intermediate between the conjunctive and adversative higher-level categories (see below). Substitutive meanings are annotated with the abstract `substitute-01` predicate. The rejected alternative is annotated as `:ARG2`, while the replacement is annotated as `:ARG1`.
 
 <span id="3-1-6 (4)">(4)</span>
 
@@ -2085,7 +2085,7 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
 
 <span id="3-1-6 (5a)">(5a)</span>
 ```
-I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** defended myself.
+I grabbed a stick in order to defend myself. / I grabbed a stick and defended myself.
 (g/ grab-01
 	:ARG0 (p/ person
 		:ref-person 1st
@@ -2103,7 +2103,7 @@ I grabbed a stick **in order to** defend myself. / I grabbed a stick **and** def
 
 <span id="3-1-6 (5b)">(5b)</span>
 ```
-He got into the army **by** lying about his age. / He lied about his age **and** got into the army.
+He got into the army by lying about his age. / He lied about his age and got into the army.
 (g/ get-5
 	:ARG1 (p/ person
 		:ref-person 3rd
@@ -2122,7 +2122,7 @@ He got into the army **by** lying about his age. / He lied about his age **and**
 
 <span id="3-1-6 (5c)">(5c)</span>
 ```
-Sarah moved back to California **because** she couldn't find a job in Washington. / Sarah couldn't find a job in Washington **and (so)** she moved back to California.
+Sarah moved back to California because she couldn't find a job in Washington. / Sarah couldn't find a job in Washington and (so) she moved back to California.
 (m/ move-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Sarah))
@@ -2142,7 +2142,7 @@ Sarah moved back to California **because** she couldn't find a job in Washington
 
 <span id="3-1-6 (5d)">(5d)</span>
 ```
-**If** you touch it, it might explode. / Touch it, **and** it might explode.
+If you touch it, it might explode. / Touch it, and it might explode.
 (e/ explode-01
 	:ARG1 (t/ thing
 		:ref-number Singular)
@@ -2157,7 +2157,7 @@ Sarah moved back to California **because** she couldn't find a job in Washington
 
 <span id="3-1-6 (5e)">(5e)</span>
 ```
-I went home **before** paying the check. / I went home **and** paid the check.
+I went home before paying the check. / I went home and paid the check.
 (g/ go-01
 	:ARG1 (p/ person
 		:ref-person 1st
@@ -2175,7 +2175,7 @@ I went home **before** paying the check. / I went home **and** paid the check.
 
 <span id="3-1-6 (5f)">(5f)</span>
 ```
-I went home **after** paying the check. / I paid the check **and** went home.
+I went home after paying the check. / I paid the check and went home.
 (g/ go-01
 	:ARG1 (p/ person
 		:ref-person 1st
@@ -4374,7 +4374,7 @@ They used to vacation in Taos every winter.
 	:ARG0 (p/ person
 		:ref-person 3rd
 		:ref-number Plural)
-	:ARG (c/ city
+	:ARG1 (c/ city
 		:name (n/ name :op1 "Taos")
 		:wiki "Taos_New_Mexico")
 	:frequency (r/ rate-entity-91
@@ -6052,7 +6052,7 @@ that indicates a relation between two events. There are two dependency
 relations: `:modpred` for the link between a
 modal event and the event(s) that it modalizes, and
 `:quot` for the link between a reporting
-event and the event(s) that it reports. Additionally, events in purpose clauses and events in conditional constructions must be taken up in the modal dependency tree. The right structure of the modal dependency graph for these events will be extrapolated from the sentence-level annotation: events in purpose clauses are daughters of events in the main clause they depend on, and are connected to them with the `:purpose` participant role. This can be leveraged to embed the purpose-event underneath the correct parent in the modal dependency graph as well. For conditionals, similarly, the protasis event will be embedded under the apodosis event with a `:condition` relation, or the protasis and apodosis events will both be `:ARG1` and `:ARG2` of a `have-condition-91` node. Again, this information will be taken up in the eventual modal dependency graph without annotators needing to indicate it a second time in the document-level modal annotation workflow.
+event and the event(s) that it reports. Additionally, events in purpose clauses and events in conditional constructions must be taken up in the modal dependency tree. The right structure of the modal dependency graph for these events will be extrapolated from the sentence-level annotation: events in purpose clauses are daughters of events in the main clause they depend on, and are connected to them with the `:purpose` participant role. This can be leveraged to embed the purpose-event underneath the correct parent in the modal dependency graph as well. For conditionals, similarly, the protasis event will be embedded under the apodosis event with a `:condition` relation, or the protasis and apodosis events will both be ```:ARG1``` and ```:ARG2``` of a `have-condition-91` node. Again, this information will be taken up in the eventual modal dependency graph without annotators needing to indicate it a second time in the document-level modal annotation workflow.
 The `:modstr` annotation applies to all events, except for those under the scope of a modal identified as its own event (i.e., events with `:mod` relations). This
 is summarized below.
 
@@ -6255,7 +6255,7 @@ Mary must have fed the cat.
 	:ARG2 (c/ cat
 		:ref-number Singular)
 	:aspect Performance
-	**:modstr PrtAff**)
+	:modstr PrtAff)
 ```
 
 In <a href="#4-3-1-1-2 (1a)">(1a)</a>, the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In <a href="#4-3-1-1-2 (1b)">(1b)</a>, however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in <a href="#4-3-1-1-2 (1b)">(1b)</a> is annotated with `Prt` modal strength.
