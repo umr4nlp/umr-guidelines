@@ -1196,8 +1196,8 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 | plant            |                    |                  |
 | language         |                    |                  |
 | nationality      |                    |                  |
-| individual_person |                    |                  |
-| social_group      | family              |                  | 
+| person           |                    |                  |
+| social_group     | family              |                  | 
 |                  | ethnic-group        |                  |
 |                  | regional-group      |                  |
 |                  | religious-group     |                  |
