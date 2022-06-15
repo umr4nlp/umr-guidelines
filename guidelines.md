@@ -5577,6 +5577,7 @@ The arrests were ordered by anti-terrorism judge fragnoli.
 		(s2a :subset-of s1a3)))
 ```
 
+<!---
 - Script / subevent?
 
 For now UMR does not annotate cases where one event is a subevent of another event, or when an event is part of a "script". These will be annotated under temporal relations.
@@ -5584,7 +5585,7 @@ For now UMR does not annotate cases where one event is a subevent of another eve
 ```
  Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
 ```
-  
+ --->
   
 [Back to Table of Contents](#toc)
 
