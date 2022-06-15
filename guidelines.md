@@ -1704,7 +1704,8 @@ Table 8: Argument structure of non-verbal clause predicates
 ##### Part 3-1-3-6. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
-concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>.
+concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>. In <a href="#3-1-3-6 (1a)">(1a)</a>, *take-out-11* is a multi-word concept, meaning a UMR concept that maps to multiple words. In this case, the multi-word concept also has more than one sense, as indicated by the sense number *11*.
+
 
 <span id="3-1-3-6 (1)">(1)</span>
 
@@ -1742,6 +1743,8 @@ concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>.
       :ARG1-of (n/ normal-02))
 ```
 
+Another example is <a href="#3-1-3-6 (1b)">(1b)</a>, where the multi-word concept is *as-well*, which maps to two words.
+
 <span id="3-1-3-6 (1b)">(1b)</span> The moral aspects of the movement intrigued him as well
 ```
 (i/ intrigue-01
@@ -1756,6 +1759,9 @@ concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>.
       :aspect State
       :modstr FullAff)
 ```
+
+In a language like Chinese where there are no natural word boundaries,
+
 
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
