@@ -1760,8 +1760,23 @@ Another example is <a href="#3-1-3-6 (1b)">(1b)</a>, where the multi-word concep
       :modstr FullAff)
 ```
 
-In a language like Chinese where there are no natural word boundaries,
+In a language like Chinese where there are no natural word boundaries in written text, sentences will have to go through a word segmentation process to facilitate the mapping of words into UMR concepts. Consecutive sequences of Chinese characters that form a single concept will always be segmented into a single word. Multi-word concepts will only be relevant if the sequence of words that form a single concept are discontinuous, as 帮-忙-01 in <a href="#3-1-3-6 (2)">(2)</a>:
 
+<span id="3-1-3-6 (2)">(2)</span> 这 办法 帮 不 了 我 多 大 忙 ， 点灯人 说 。
+```
+(x0 / 说-01
+      :arg0  (x11 / 人
+            :arg0-of  (x12 / 点-01
+                  :arg1  (x13 / 灯)))
+      :arg1  (x14 / 帮-忙-01
+            :degree  (x20 / 大-01
+                         :polarity  (x15 / -))
+            :arg0  (x16 / 办法
+                  :mod  (x17 / 这))
+            :arg1  x11)
+      :aspect Performance
+      :modstr FullAff)
+```
 
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
