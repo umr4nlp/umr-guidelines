@@ -5267,7 +5267,7 @@ Anaphoric expressions such as pronouns cannot be properly interpreted without id
 
 For the UMR corereference annotation, we first need to answer two questions. The first is what counts as an anaphorical expression. For UMR annotation, we focus on pronouns. The second question is what types of coreference relations we are considering. The most common type of coreference relations are *identity* relations, and we label such relations as *same*. Identity relations means two expressions have the same referent. In <a href="#4-1-1 (1)">(1)</a>, *he* refers to the same person as the person whose name is "Edmond Pope", and it is therefore annotated in the document-level representation with a `:same-entity` relation to the `s2p` node.
 
-<span id="4-1-1 (1)" label="4-1-1 (1)">4-1 (1)</span>
+<span id="4-1-1 (1)" label="4-1-1 (1)">4-1-1 (1)</span>
 
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
