@@ -2502,7 +2502,7 @@ examples are shown below in Table 9.
 | <span class="smallcaps">`purpose`</span>     | intended event that results from the action                                                                    | they dropped water in order to **fight the fires**                                                                         |
 | <span class="smallcaps">`temporal`</span>    | event that has a temporal relation with the action                                                             | she left after **dinner**                                                                                                  |
 | <span class="smallcaps">`extent`</span>      | measurement phrase                                                                                             | he ran **seven miles**                                                                                                     |
-| <span class="smallcaps">`other`</span>       | this role can be used when an annotator is unsure of which role is appropriate                                 |                                                                                                                            |
+| <span class="smallcaps">`other-role`</span>       | this role can be used when an annotator is unsure of which role is appropriate                                 |                                                                                                                            |
 
 Table 9: UMR non-lexicalized roles
 </div>
