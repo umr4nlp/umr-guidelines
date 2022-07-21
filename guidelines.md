@@ -2178,16 +2178,20 @@ If you touch it, it might explode. / Touch it, and it might explode.
 
 <span id="3-1-6 (5e)">3-1-6 (5e)</span>
 ```
-I went home before paying the check. / I went home and paid the check.
-(g/ go-01
-	:ARG1 (p/ person
+I fed my dog before going to the office. / I fed my dog and went to the office.
+
+(f/ feed-01
+	:ARG0 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG4 (h/ home)
+	:ARG2 (d/ dog
+		:poss p
+		:ref-number Singular)
 	:temporal (b/ before
-		:op1 (p2/ pay-01
-			:ARG0 p
-			:ARG3 (c/ check)
+		:op1 (g/ go-01
+			:ARG1 p
+			:ARG4 (o/ office
+				:ref-number Singular)
 			:aspect Performance
 			:modstr FullAff)
 	:aspect Performance
@@ -2507,12 +2511,7 @@ examples are shown below in Table 9.
 Table 9: UMR non-lexicalized roles
 </div>
 
-These general semantic roles can be categorized based on the types of
-events with which they occur, shown in Table 10. Some
-participant roles (those found in the first column of the table) express the external cause of an event. These can
-occur with many semantic classes of events. Similarly, the
-“circumstantial” type semantic roles in the last column of the table can occur with a wide range of
-semantic event classes. Note that UMR uses `:temporal` to annotate temporal circumstantials of events, while `:time` is only used as a daughter of `date-entity` concepts to annotate hours and minutes on the clock.
+These general semantic roles can be categorized based on the types of events with which they occur, shown in Table 10. Participant roles that characterize the central participant(s) in an event only occur with a specific semantic class of event. For example, ```:experiencer``` and ```:stimulus``` participants only occur with experiential events. The other general participant roles that characterize central event participants are shown in the middle column below along with their associated semantic event class. Other general participant roles (shown in the first and third columns below) occur with a wide variety of semantic event classes. Those in the first column characterize causes external to the central event. Those in the third column label various roles that characterize the external circumstances of the event. Note that UMR uses ```:temporal``` to annotate temporal circumstantials of events, while ```:time``` is only used as a daughter of date-entity concepts to annotate hours and minutes on the clock.
 
 <div id="tab:catroles">
 
@@ -2941,10 +2940,7 @@ They loaded the boxes.
 
 ###### Part 3-2-1-1-1. Nonverbal clauses
 
-There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the nonverbal clause predicates shown in Table 11 (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). These are repeated below with their participant role annotation.
-
-Each nonverbal clause predicate has a set of numbered argument roles which map
-to the semantic roles as shown in Table 11.
+There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the nonverbal clause predicates presented above in Table 8, repeated below (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). Each nonverbal clause predicate has a set of numbered argument roles which map to the semantic roles as shown in Table 8.
 
 <div id="tab:nonverbal_arguments">
 	
@@ -3066,10 +3062,7 @@ She is the winner.
 
 ###### Part 3-2-1-1-2. Valency alternations
  
-Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 0, these alternations influence the choice of general participant role labels. For information-packaging alternations, such as
-passives, antipassives, or valency-rearranging applicatives,
-participants are annotated in the same way as in the basic construction
-in the language. If a participant is omitted, for example the agent in a passive construction as in <a href="#3-2-1-1-2 (1)">(1)</a> from Berber (Guerssel 1986:52), then it simply isn’t annotated at Stage 0. This means that agentless passives and anticausatives will have the same participant role annotation at Stage 0. 
+Information-packaging alternations, such as passives, antipassives, or valency-rearranging applicatives, are not reflected in the annotation. That is, participants are annotated in the same way as in the basic construction in the language. If a participant is omitted, for example the agent in a passive construction as in <a href="#3-2-1-1-2 (1)">(1)</a> from Berber (Guerssel 1986:52), then it doesn't need to be annotated at Stage 0. This means that agentless passives and anticausatives may have the same participant role annotation at Stage 0. Annotators may choose to annotate omitted participants that are semantically present at Stage 0.
 
 <span id="3-2-1-1-2 (1)">3-2-1-1-2 (1)</span>
 
@@ -3098,6 +3091,8 @@ T-ttw-asy		tfirast.
 	:aspect Performance
 	:modstr FullAff) 
 ```
+
+Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 0, these alternations influence the choice of general participant role labels. 
 
 **Causatives.** There are a few different types of causatives that
 require different annotation solutions. For most causatives of
