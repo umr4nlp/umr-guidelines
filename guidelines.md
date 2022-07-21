@@ -823,7 +823,7 @@ comparability. This means that even less conventionalized measure terms,
 like English *cup* or *bag*, are annotated as modifiers, even though
 they look like morphosyntactic heads. This is illustrated in <a href="#2-2-5 (1)">(1)</a>. The use of the `:polarity` value is constrained to the sentence level.
 Propositional negation is annotated in the modal section of the document
-level annotation and through :modstr relations. The `:polarity` value is used to indicate any overt
+level annotation and through `:modstr` relations. The `:polarity` value is used to indicate any overt
 morphosyntactic exponents of negation at the sentence level, flagging
 such concepts as interesting for the modal or scope negation. This
 includes e.g. morphologically negated adjectives like _unhappy_, even though in the
@@ -1053,16 +1053,43 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 
 <div id="tab:nonverbalpreds">
 
-| **Clause type**                  | **UMR Predicate** |
-| :------------------------------- | :---------------- |
-| thetic/presentational possession | have-91           |
-| predicative possession           | belong-91         |
-| thetic/presentational location   | exist-91          |
-| predicative location             | have-location-91  |
-| property predication             | have-mod-91       |
-| object predication               | have-role-91      |
-| 			           | (subtypes: have-rel-role-91; have-org-role-91) |
-| equational                       | identity-91       |
+<table>  
+<tr>  
+<th>Clause type</th>  
+<th>UMR Predicate</th>  
+</tr>  
+<tr>  
+<td>thetic/presentational possession</td>  
+<td>have-91</td>
+</tr>  
+<tr>  
+<td>predicative possession</td>  
+<td>belong-91</td>  
+</tr>  
+<tr>  
+<td>thetic/presentational location</td>  
+<td>exist-91</td>  
+</tr>  
+<tr>  
+<td>predicative location</td>  
+<td>have-location-91</td>  
+</tr>  
+<tr>  
+<td>property predication</td>  
+<td>have-mod-91</td>  
+</tr>  
+<tr>  
+<td rowspan="2">object predication</td>  
+<td>have-role-91</td>  
+</tr>  
+<tr>  
+<td>(subtypes: kinship-91; have-org-role-91)</td>  
+</tr>  
+<tr>  
+<td>equational  </td>  
+<td>identity-91</td>  
+</tr>  
+</table>
 
 Table 4: Non-verbal clause predicates
 </div>
@@ -1352,12 +1379,30 @@ an incorporated noun to co-occur with an independent NP as criterial. This treat
 
 <div id="tab:noun_incorporation">
 
-| **Construction type** | **Construction definition/diagnostic** | **UMR Treatment** |
-| :------------------------------- | :----------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------|
-| Pronominal affixes | Verbal affixes expressing person/number values of arguments | If coreferential with overtly expressed nominal argument: don't annotate |
-| | | If no overt nominal is present: annotate as argument with relevant named-entity concept |
-| Incorporated nouns | No nominal expression coreferential with the incorporated noun can occur in the clause | Annotate separate concept for incorporated noun as argument |
-| Verbal classifier | Nominal expression specifying type of object denoted by incorporated noun can occur in the clause | Do not annotate separate concept for incorporated noun |
+<table>  
+<tr>  
+<th>Construction type</th>  
+<th>Construction definition/diagnostic</th>  
+<th>UMR Treatment</th>  
+</tr>  
+<tr>  
+<td rowspan="2">Pronominal affixes </td>  
+<td rowspan="2"> Verbal affixes expressing person/number values of arguments</td>  
+<td>If coreferential with overtly expressed nominal argument: don't annotate</td>  
+</tr>  
+<tr> 
+<td>If no overt nominal is present: annotate as argument with relevant named-entity concept</td>  
+</tr> 
+<td>Incorporated nouns</td>  
+<td>No nominal expression coreferential with the incorporated noun can occur in the clause</td> 
+<td>Annotate separate concept for incorporated noun as argument</td>   
+</tr>  
+<tr>  
+<td>Verbal classifier</td>  
+<td>Nominal expression specifying type of object denoted by incorporated noun can occur in the clause</td>  
+<td>Do not annotate separate concept for incorporated noun</td>  
+</tr> 
+</table>
 
 Table 6: Treatment of pronominal affixes and noun incorporation
 </div>
@@ -1685,18 +1730,77 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 "non-verbal clause" meanings.
 
 <div id="tab:nonverbal_arguments">
-	
-| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
-| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
-| Thetic Possession      | have-91          | possessor | possessum        | ---              |
-| Predicative Possession | belong-91        | possessum | possessor        | ---              |
-| Thetic Location        | exist-91         | location  | theme            | ---              |
-| Predicative Location   | have-location-91 | theme     | location         | ---              |
-| Property Predication   | have-mod-91      | ---       | theme            | property         |
-| Object Predication     | have-role-91     | theme     | reference point  | object category  |
-|                        | have-org-role-91 | theme     | organization     | role             |
-|                        | have-rel-role-91 | theme     | reference point  | relation         |
-| Equational             | identity-91      | theme     | equated referent | ---              |
+
+<table>  
+<tr>  
+<th>Clause Type</th>  
+<th>Predicate</th>  
+<th>ARG0</th>  
+<th>ARG1</th>  
+<th>ARG2</th>  
+</tr>  
+<tr>  
+<td>Thetic Possession</td>  
+<td>have-91</td>  
+<td>possessor</td>  
+<td>possessum</td>  
+<td>---</td>  
+</tr>  
+<tr>  
+<td>Predicative Possession</td>  
+<td>belong-91</td>  
+<td>possessum</td>  
+<td>possessor</td>  
+<td>---</td>  
+</tr>  
+<tr>  
+<td>Thetic Location</td>  
+<td>exist-91</td>  
+<td>location</td>  
+<td>theme </td>  
+<td>---</td>  
+</tr> 
+<tr>  
+<td>Predicative Location</td>  
+<td>have-location-91</td>  
+<td>theme</td>  
+<td>location</td>  
+<td>---</td>  
+</tr>  
+<tr>  
+<td>Property Predication</td>  
+<td>have-mod-91</td>  
+<td>--- </td>  
+<td>theme</td>  
+<td>property</td>  
+</tr> 
+<tr>  
+<td rowspan="3">Object Predication</td>  
+<td>have-role-91</td>  
+<td>theme</td>  
+<td>reference point</td>  
+<td>object category</td>  
+</tr>  
+<tr>  
+<td>have-org-role-91</td>  
+<td>theme</td>  
+<td>organization</td>  
+<td>role</td>  
+</tr>  
+<tr>  
+<td>kinship-91</td>  
+<td>theme</td>  
+<td>family member</td>  
+<td>kinship rel. </td>  
+</tr>  
+<tr>  
+<td>Equational</td>  
+<td>identity-91</td>  
+<td>theme</td>  
+<td>equated referent</td>  
+<td>---</td>  
+</tr>  
+</table>
 
 Table 8: Argument structure of non-verbal clause predicates
 </div>
@@ -2515,19 +2619,49 @@ These general semantic roles can be categorized based on the types of events wit
 
 <div id="tab:catroles">
 
-|            **External Cause**             |                        **Central Event**                         |           **Circumstantial**            |
-| :---------------------------------------: | :--------------------------------------------------------------: | :-------------------------------------: |
-|   <span class="smallcaps">`actor`</span>    |                        (CHANGE OF) STATE:                        | <span class="smallcaps">`affectee`</span> |
-| <span class="smallcaps">`companion`</span>  |        <span class="smallcaps">`material, undergoer`</span>        |  <span class="smallcaps">`place`</span>   |
-| <span class="smallcaps">`instrument`</span> |                         MOTION/LOCATION:                         |  <span class="smallcaps">`manner`</span>  |
-|   <span class="smallcaps">`force`</span>    | <span class="smallcaps">`theme, goal, start, source, place`</span> | <span class="smallcaps">`purpose`</span>  |
-|   <span class="smallcaps">`causer`</span>   |                            TRANSFER:                             |  <span class="smallcaps">`reason`</span>  |
-|                                           |         <span class="smallcaps">`theme, recipient`</span>          |  <span class="smallcaps">`cause`</span>   |
-|                                           |                          EXPERIENTIAL:                           | <span class="smallcaps">`temporal`</span> |
-|                                           |       <span class="smallcaps">`experiencer, stimulus`</span>       |  <span class="smallcaps">`extent`</span>  |
+<table>  
+<tr>  
+<th>External Cause</th>  
+<th>Central Event</th>  
+<th>Circumstantial</th>  
+</tr>  
+<tr>  
+<td><pre>actor</pre></td>  
+<td rowspan="2">(CHANGE OF) STATE: <br> <pre>material, undergoer</pre></td>  
+<td><pre>affectee</pre></td>  
+</tr>  
+<tr>  
+<td><pre>companion</pre></td>  
+<td><pre>place</pre></td>  
+</tr>  
+<tr>  
+<td><pre>instrument</pre></td>  
+<td rowspan="2">MOTION/LOCATION: <br><pre>theme, goal, start, source, place</pre></td>  
+<td><pre>manner</pre></td>  
+</tr>
+<tr>  
+<td><pre>force</pre></td>  
+<td><pre>purpose</pre></td>  
+</tr>  
+<tr>  
+<td><pre>causer</pre></td>  
+<td rowspan="2"> TRANSFER: <br> <pre>theme, recipient</pre> </td>  
+<td><pre>reason</pre></td>  
+</tr> 
+<tr>  
+<td><pre>cause</pre></td>  
+<td><pre>temporal</pre></td>  
+</tr>  
+<tr>  
+<td></td>  
+<td>EXPERIENTIAL: <br> <pre>experiencer, stimulus</pre></td>  
+<td><pre>extent</pre></td>  
+</tr>  
+ </table>
 
 Table 10: Categorization of UMR non-lexicalized roles
 </div>
+
 
 For the roles that characterize the central participant(s) in the event,
 the best way to decide which participant role label a given participant
@@ -2943,21 +3077,81 @@ They loaded the boxes.
 There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the nonverbal clause predicates presented above in Table 8, repeated below (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). Each nonverbal clause predicate has a set of numbered argument roles which map to the semantic roles as shown in Table 8.
 
 <div id="tab:nonverbal_arguments">
-	
-| **Clause Type**        | **Predicate**    | **ARG0**  | **ARG1**         | **ARG2**         |
-| :--------------------- | :--------------- | :-------- | :--------------- | :--------------- |
-| Thetic Possession      | have-91          | possessor | possessum        | ---              |
-| Predicative Possession | belong-91        | possessum | possessor        | ---              |
-| Thetic Location        | exist-91         | location  | theme            | ---              |
-| Predicative Location   | have-location-91 | theme     | location         | ---              |
-| Property Predication   | have-mod-91      | ---       | theme            | property         |
-| Object Predication     | have-role-91     | theme     | reference point  | object category  |
-|                        | have-org-role-91 | theme     | organization     | role             |
-|                        | have-rel-role-91 | theme     | reference point  | relation         |
-| Equational             | identity-91      | theme     | equated referent | ---              |
 
-Table 11: Argument structure of non-verbal clause predicates
+<table>  
+<tr>  
+<th>Clause Type</th>  
+<th>Predicate</th>  
+<th>ARG0</th>  
+<th>ARG1</th>  
+<th>ARG2</th>  
+</tr>  
+<tr>  
+<td>Thetic Possession</td>  
+<td>have-91</td>  
+<td>possessor</td>  
+<td>possessum</td>  
+<td>---</td>  
+</tr>  
+<tr>  
+<td>Predicative Possession</td>  
+<td>belong-91</td>  
+<td>possessum</td>  
+<td>possessor</td>  
+<td>---</td>  
+</tr>  
+<tr>  
+<td>Thetic Location</td>  
+<td>exist-91</td>  
+<td>location</td>  
+<td>theme </td>  
+<td>---</td>  
+</tr> 
+<tr>  
+<td>Predicative Location</td>  
+<td>have-location-91</td>  
+<td>theme</td>  
+<td>location</td>  
+<td>---</td>  
+</tr>  
+<tr>  
+<td>Property Predication</td>  
+<td>have-mod-91</td>  
+<td>--- </td>  
+<td>theme</td>  
+<td>property</td>  
+</tr> 
+<tr>  
+<td rowspan="3">Object Predication</td>  
+<td>have-role-91</td>  
+<td>theme</td>  
+<td>reference point</td>  
+<td>object category</td>  
+</tr>  
+<tr>  
+<td>have-org-role-91</td>  
+<td>theme</td>  
+<td>organization</td>  
+<td>role</td>  
+</tr>  
+<tr>  
+<td>kinship-91</td>  
+<td>theme</td>  
+<td>family member</td>  
+<td>kinship rel. </td>  
+</tr>  
+<tr>  
+<td>Equational</td>  
+<td>identity-91</td>  
+<td>theme</td>  
+<td>equated referent</td>  
+<td>---</td>  
+</tr>  
+</table>
+
+Table 8: Argument structure of non-verbal clause predicates
 </div>
+
 
 The argument that can be predicativized in languages using the predicativized-argument strategy is always
 the argument role with the highest number. The examples in <a href="#3-2-1-1-1 (1)">(1)</a> show how
@@ -3363,7 +3557,7 @@ they 	PERF	they-REFL 	love
 	:modstr FullAff)
 ```
 
-The annotation of participant roles for valency alternations in Step 1 of the road map is summarized in Table 12 below.
+The annotation of participant roles for valency alternations in Step 1 of the road map is summarized in Table 11 below.
 
 <div id="tab:valency_alternations">
 
@@ -3381,7 +3575,7 @@ The annotation of participant roles for valency alternations in Step 1 of the ro
 | Reflexives | A single participant with two roles | Both roles the participant fulfills in the construction |
 | Reciprocals | A single participant with two roles | Both roles the participant fulfills in the construction |
 
-Table 12: Argument structure of valency alternations
+Table 11: Argument structure of valency alternations
 </div>
 
 [Back to Table of Contents](#toc)
@@ -3594,7 +3788,7 @@ I met the President of the University of New Mexico.
 
 ##### Part 3-2-1-4. Table of verb meanings
 
-Table 13 below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a motion sense (ex: She wiped the crumbs from the table) and a change-of-state (COS) sense (ex: He wiped the table). 
+Table 12 below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a motion sense (ex: She wiped the crumbs from the table) and a change-of-state (COS) sense (ex: He wiped the table). 
 
 As mentioned in [Part 3-2-1-1](#part-3-2-1-1-stage-0), the single participant in a monovalent event can either be annotated as <span class="smallcaps">`actor`</span> or as <span class="smallcaps">`undergoer`</span>. This distinction depends on the amount of control that the single participant has in carrying out the event. For events that are more controlled by the participant ("active" events), the participant is annotated as <span class="smallcaps">`actor`</span>; for events that are less controlled by the participant ("inactive" events), the participant is annotated as <span class="smallcaps">`undergoer`</span>. Languages that reflect this distinction in their morphosyntax (i.e., languages with active alignment) do not always draw the distinction between active events and inactive events in the same place. There is, however, a cross-linguistic organization in terms of how languages with active alignment code these events in their morphosyntax.
 
@@ -3610,214 +3804,889 @@ Uncontrolled activities (ex: fall)
 
 For the purposes of UMR, controlled activities, position events, inherent properties, and more controlled types of bodily actions (ex: laugh) are annotated with an <span class="smallcaps">`actor`</span> participant. Less controlled types of bodily actions (ex: cry) and the remaining semantic event classes are annotated with an <span class="smallcaps">`undergoer`</span> participant.
 
-Annotators may use Table 13 as a reference point for annotating general participant roles for various semantic verb classes.
+Annotators may use Table 12 as a reference point for annotating general participant roles for various semantic verb classes.
 
 <div id="tab:predicateroles">
 
+<table>  
+<tr>  
+<th>Verb Meaning</th>  
+<th>Microrole</th>
+<th>UMR annotation</th>
+</tr>  
+<tr>  
+<td colspan="3">Active (A-like) S</td>  
+</tr>  
+<tr>  
+<td>RUN</td>  
+<td>runner</td>  
+<td><pre>actor</pre></td>  
+</tr>  
+<tr>  
+<td rowspan="2">CLIMB</td>  
+<td>climber</td>  
+<td><pre>actor</pre></td>  
+</tr>  
+<tr>  
+<td>climbing goal</td>  
+<td><pre>undergoer</pre></td>  
+</tr>  
+<tr>  
+<td>JUMP</td>  
+<td>jumper</td>  
+<td><pre>actor</pre></td>  
+</tr>  
+<tr>  
+<td rowspan="2">GO</td>  
+<td>goer</td>  
+<td><pre>actor</pre> </td>  
+</tr>  
+<tr>  
+<td>going goal</td>  
+<td><pre>goal</pre></td>  
+</tr>  
+<tr>  
+<td rowspan="2">LEAVE</td>  
+<td>leaver</td>  
+<td><pre>actor</pre></td>  
+</tr>  
+<tr>  
+<td>left place/person</td>  
+<td><pre>source</pre></td>  
+</tr>  
+<tr>  
+<td rowspan="2">SIT DOWN</td>  
+<td>sit downer </td>  
+<td><pre>actor</pre></td>  
+</tr>  <tr>  
+<td> sitting-down place</td>  
+<td><pre>goal</pre></td>  
+</tr>  
+<tr>
+<td>DIG </td>
+<td> digger</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>PLAY </td>
+<td> player</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> SING</td>
+<td>singer </td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td rowspan="2"> SIT</td>
+<td>sitter </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>sitting place </td>
+<td><pre>place</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">LIVE </td>
+<td> liver</td>
+<td> <pre>actor</pre> </td>
+</tr>
+<tr>
+<td>living place </td>
+<td><pre>place</pre> </td>
+</tr>
+<tr>
+<td> LAUGH</td>
+<td> laugher </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> BLINK</td>
+<td> blinker</td>
+<td> <pre>actor</pre> </td>
+</tr>
+<tr>
+<td> COUGH</td>
+<td>cougher </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td colspan="3">Inactive (P-like) S </td>
+</tr>
+<tr>
+<td> CRY</td>
+<td> crier</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td> DIE</td>
+<td> dieer</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td>SINK </td>
+<td> sunken entity</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td> BURN</td>
+<td>burnt thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>BOIL </td>
+<td>boiled thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>BE SAD </td>
+<td> sad person</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td> BE HUNGRY</td>
+<td> hungry person</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td>BE DRY </td>
+<td> dry thing</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td> BE ILL</td>
+<td> sick person</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>ROLL </td>
+<td> rolling entity</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>FALL </td>
+<td>fallee </td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td>RAIN </td>
+<td> rain</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td colspan="3"> Inherent Reflexive/Reciprocal</td>
+</tr>
+<tr>
+<td rowspan="2"> DRESS</td>
+<td>dresser </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>dressee </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2"> SHAVE (a body part)</td>
+<td>shaver (of body part) </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>shaved body part </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">WASH </td>
+<td> washer</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>washed entity </td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td rowspan="2">HELP </td>
+<td>helper </td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>helpee </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">FOLLOW </td>
+<td>follower </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>followee </td>
+<td> <pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">MEET </td>
+<td> meeter</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>met person </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2"> HUG</td>
+<td>hugger </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>huggee </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td colspan="3"> Change-of-State </td>
+</tr>
+<tr>
+<td rowspan="3"> BREAK</td>
+<td> breaker</td>
+<td> <pre>actor</pre> </td>
+</tr>
+<tr>
+<td> broken thing</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td>breaking instrument </td>
+<td> <pre>instrument</pre></td>
+</tr>
+<tr>
+<td rowspan="3"> KILL</td>
+<td>killer </td>
+<td> <pre>actor</pre> </td>
+</tr>
+<tr>
+<td> killee</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+</tr>
+<tr>
+<td>killing instrument  </td>
+<td><pre>instrument</pre> </td>
+</tr>
+<tr>
+<td rowspan="3"> BEAT </td>
+<td> beater</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td> beatee</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>beating instrument </td>
+<td><pre>instrument</pre> </td>
+</tr>
+<tr>
+<td rowspan="3"> CUT</td>
+<td> cutter</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> cut thing</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>cutting instrument </td>
+<td> <pre>instrument</pre></td>
+</tr>
+<tr>
+<td rowspan="2"> GRIND</td>
+<td> grinder</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td> ground thing</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">COOK </td>
+<td>cooker </td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>cooked food </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2"> EAT</td>
+<td> eater</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>eaten food </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2"> DRINK</td>
+<td>drinking person </td>
+<td><pre>actor</pre> </td>
+</tr><tr>
+<td> drunken thing</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">COVER </td>
+<td> coverer</td>
+<td><pre>actor</pre> </td>
+</tr><tr>
+<td> cover</td>
+<td><pre>instrument</pre> </td>
+</tr>
+<tr>
+<td>covered thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">FILL </td>
+<td> filler</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>filling material </td>
+<td><pre>instrument</pre> </td>
+</tr>
+<tr>
+<td> filled container</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2"> WIPE (cos)</td>
+<td>wiper </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>wiped surface </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">PEEL (cos) </td>
+<td> peeler</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>peeled object </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td colspan="3"> Contact</td>
+</tr>
+<tr>
+<td rowspan="3">HIT </td>
+<td> hitter</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> hittee</td>
+<td> <pre>undergoer</pre></td>
+</tr>
+<tr>
+<td>hitting instrument </td>
+<td><pre>instrument</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">TOUCH </td>
+<td>toucher </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> touchee</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>touching instrument </td>
+<td> <pre>instrument</pre></td>
+</tr>
+<tr>
+<td rowspan="2">PUSH </td>
+<td>pusher </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> pushee</td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td colspan="3">Experiential </td>
+</tr>
+<tr>
+<td rowspan="2">LOOK AT </td>
+<td> looker</td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td>looked at entity </td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2"> SEE</td>
+<td>seeer </td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td> seen entity</td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td>APPEAR </td>
+<td> appearer</td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">SMELL </td>
+<td> smeller</td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td> smelled entity</td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">HEAR </td>
+<td>hearer </td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td>heard sound </td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">FEAR </td>
+<td> fearer</td>
+<td><pre>experiencer</pre> </td>
+</tr>
+<tr>
+<td>fear stimulus </td>
+<td> <pre>stimulus</pre></td>
+</tr>
+<tr>
+<td rowspan="2">FRIGHTEN </td>
+<td>frightenee </td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td>frightener </td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">LIKE </td>
+<td>liker </td>
+<td><pre>experiencer</pre> </td>
+</tr>
+<tr>
+<td> liked entity</td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">KNOW </td>
+<td>knower </td>
+<td><pre>experiencer</pre> </td>
+</tr><tr>
+<td> known thing/person</td>
+<td> <pre>stimulus</pre></td>
+</tr>
+<tr>
+<td rowspan="2">THINK </td>
+<td>thinker </td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td>thought content </td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">WANT </td>
+<td>wanter </td>
+<td> <pre>experiencer</pre></td>
+</tr>
+<tr>
+<td>wanted thing </td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">FEEL PAIN </td>
+<td>pain-feeler </td>
+<td><pre>experiencer</pre> </td>
+</tr>
+<tr>
+<td> pain locus</td>
+<td><pre>stimulus</pre> </td>
+</tr>
+<tr>
+<td colspan="3">Partly-unrealized </td>
+</tr>
+<tr>
+<td rowspan="2">SEARCH FOR </td>
+<td> searcher</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>searched thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">HUNT (FOR) </td>
+<td> hunter</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>hunted thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td colspan="3">Application </td>
+</tr>
+<tr>
+<td rowspan="3">PUT </td>
+<td>putter </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>put thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>putting goal </td>
+<td><pre>goal</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">POUR </td>
+<td>pourer </td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td> poured substance</td>
+<td> <pre>theme</pre></td>
+</tr>
+<tr>
+<td>pouring goal </td>
+<td><pre>goal</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">LOAD </td>
+<td> loader</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>loaded thing </td>
+<td> <pre>theme</pre></td>
+</tr>
+<tr>
+<td>loading place  </td>
+<td><pre>goal</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">TIE </td>
+<td> tier</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>tied thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td> tying goal</td>
+<td><pre>goal</pre> </td>
+</tr>
+<tr>
+<td colspan="3">Removal </td>
+</tr>
+<tr>
+<td rowspan="3">TAKE </td>
+<td>taker </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>taken thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>taking source </td>
+<td><pre>source</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">TEAR </td>
+<td> tearer</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>torn thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>tearing source </td>
+<td><pre>source</pre> </td>
+</tr>
+<tr>
+<td rowspan="3"> WIPE (motion) </td>
+<td> wiper </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> wiped material</td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>wiped surface </td>
+<td><pre>source</pre> </td>
+</tr>
+<tr>
+<td rowspan="3"> PEEL (motion)</td>
+<td> peeler</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>peel </td>
+<td> <pre>theme</pre></td>
+</tr>
+<tr>
+<td>peeled object </td> </td>
+<td> <pre>source</pre></td>
+</tr>
+<tr>
+<td colspan="3"> Creation</td>
+</tr>
+<tr>
+<td rowspan="3">BUILD </td>
+<td>builder </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>built thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td>building material </td>
+<td><pre>instrument</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">MAKE </td>
+<td>maker </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>made thing </td>
+<td><pre>undergoer</pre> </td>
+</tr>
+<tr>
+<td colspan="3"> Transfer</td>
+</tr>
+<tr>
+<td rowspan="3">GIVE </td>
+<td> giver</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td > gift</td>
+<td> <pre>theme</pre></td>
+</tr>
+<tr>
+<td>giving recipient </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">SEND </td>
+<td>sender </td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>sent thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>sending recipient </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">CARRY </td>
+<td>carrier </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> carried thing</td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>carrying goal </td>
+<td><pre>goal</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">THROW </td>
+<td>thrower </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>thrown thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>throwing goal </td>
+<td><pre>goal</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">BRING </td>
+<td>bringer </td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>brought thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>bringing recipient </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">STEAL </td>
+<td>stealer </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>stolen thing  </td>
+<td> <pre>theme</pre></td>
+</tr>
+<tr>
+<td> stealing source</td>
+<td><pre>affectee</pre> </td>
+</tr>
+<tr>
+<td rowspan="2">GET </td>
+<td>receiver </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td>received thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td colspan="3"> Communication</td>
+</tr>
+<tr>
+<td rowspan="3">TALK </td>
+<td>talker </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>talked about content </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>talked to person </td>
+<td> <pre>recipient</pre></td>
+</tr>
+<tr>
+<td rowspan="3"> ASK FOR</td>
+<td>asker </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>requested thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td> askee</td>
+<td> <pre>recipient</pre></td>
+</tr>
+<tr>
+<td rowspan="2">SHOUT AT </td>
+<td>shouter </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>shoutee </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">TELL </td>
+<td>teller </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>told content </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>tellee </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3"> SHOW</td>
+<td> shower</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td>shown thing </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td> showing addressee</td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">HIDE </td>
+<td>hider </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> hidden thing</td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>hiding affectee </td>
+<td><pre>affectee</pre> </td>
+</tr>
+<tr>
+<td>SCREAM </td>
+<td> screamer</td>
+<td> <pre>actor</pre></td>
+</tr>
+<tr>
+<td rowspan="3">TEACH </td>
+<td>teacher </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>taught content </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>teachee </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3">SAY </td>
+<td>sayer </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td> said content</td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>saying addressee </td>
+<td><pre>recipient</pre> </td>
+</tr>
+<tr>
+<td rowspan="3"> NAME</td>
+<td>namer </td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>name </td>
+<td><pre>theme</pre> </td>
+</tr>
+<tr>
+<td>namee </td>
+<td><pre>recipient</pre> </td>
+</tr>
+</table>
 
-| **Verb Meaning** | **Microrole** | **UMR annotation** |
-| :--------------------- | :--------------- | :-------- | 
-|**Active (A-like) S** | | |
-| RUN	| runner | <span class="smallcaps">`actor`</span> |
-| CLIMB | climber | <span class="smallcaps">`actor`</span> |
-| 		| climbing goal | <span class="smallcaps">`undergoer`</span> |
-| JUMP | jumper | <span class="smallcaps">`actor`</span> |
-| GO | goer | <span class="smallcaps">`actor`</span> |
-|	| going goal | <span class="smallcaps">`goal`</span> |
-| LEAVE | leaver | <span class="smallcaps">`actor`</span> |
-|		| left place/person | <span class="smallcaps">`source`</span> |
-| SIT DOWN | sit downer | <span class="smallcaps">`actor`</span> |
-|		| sitting-down place  | <span class="smallcaps">`goal`</span> |
-| DIG | digger | <span class="smallcaps">`actor`</span> |
-| PLAY | player | <span class="smallcaps">`actor`</span> |
-| SING | singer | <span class="smallcaps">`actor`</span> |
-| SIT | sitter | <span class="smallcaps">`actor`</span> |
-|		| sitting place  | <span class="smallcaps">`place`</span>  |
-| LIVE | liver | <span class="smallcaps">`actor`</span> |
-|	| living place  | <span class="smallcaps">`place`</span>  |
-| LAUGH | laugher | <span class="smallcaps">`actor`</span> |
-| BLINK | blinker | <span class="smallcaps">`actor`</span> |
-| COUGH | cougher | <span class="smallcaps">`actor`</span> |
-| **Inactive (P-like) S**  | | |
-| CRY | crier | <span class="smallcaps">`undergoer`</span> |
-| DIE | dieer | <span class="smallcaps">`undergoer`</span> |
-| SINK | sunken entity | <span class="smallcaps">`undergoer`</span> |
-| BURN | burnt thing | <span class="smallcaps">`undergoer`</span> |
-| BOIL | boiled thing | <span class="smallcaps">`undergoer`</span> |
-| BE SAD | sad person | <span class="smallcaps">`undergoer`</span> |
-| BE HUNGRY | hungry person | <span class="smallcaps">`undergoer`</span>|
-| BE DRY | dry thing | <span class="smallcaps">`undergoer`</span> |
-| BE ILL | sick person | <span class="smallcaps">`undergoer`</span> |
-| ROLL | rolling entity | <span class="smallcaps">`undergoer`</span> |
-| FALL | fallee | <span class="smallcaps">`undergoer`</span> |
-| RAIN | rain | <span class="smallcaps">`undergoer`</span> |
-| **Reflexive/Reciprocal** | | |
-| DRESS | dresser | <span class="smallcaps">`actor`</span> |
-|		| dressee | <span class="smallcaps">`undergoer`</span> |
-| SHAVE (a body part) | shaver (of body part) | <span class="smallcaps">`actor`</span> |
-|	| shaved body part | <span class="smallcaps">`undergoer`</span> |
-| WASH | washer | <span class="smallcaps">`actor`</span> |
-|		| washed entity | <span class="smallcaps">`undergoer`</span> |
-| HELP | helper | <span class="smallcaps">`actor`</span> |
-|		| helpee | <span class="smallcaps">`undergoer`</span> |
-| FOLLOW | follower | <span class="smallcaps">`actor`</span> |
-|		| followee | <span class="smallcaps">`undergoer`</span> |
-| MEET | meeter | <span class="smallcaps">`actor`</span> |
-|		| met person | <span class="smallcaps">`undergoer`</span> |
-| HUG | hugger | <span class="smallcaps">`actor`</span> |
-|	| huggee  | <span class="smallcaps">`undergoer`</span> |
-| **Change-of-State** | | |
-| BREAK | breaker | <span class="smallcaps">`actor`</span> |
-|		| broken thing | <span class="smallcaps">`undergoer`</span> |
-|		| breaking instrument | <span class="smallcaps">`instrument`</span> |
-| KILL | killer | <span class="smallcaps">`actor`</span> |
-|		| killee | <span class="smallcaps">`undergoer`</span> |
-|		| killing instrument | <span class="smallcaps">`instrument`</span> |
-| BEAT | beater | <span class="smallcaps">`actor`</span> |
-|		| beatee | <span class="smallcaps">`undergoer`</span> |
-|		| beating instrument | <span class="smallcaps">`instrument`</span> |
-| CUT | cutter | <span class="smallcaps">`actor`</span> |
-|		| cut thing | <span class="smallcaps">`undergoer`</span> |
-|		| cutting instrument | <span class="smallcaps">`instrument`</span> |
-| GRIND | grinder | <span class="smallcaps">`actor`</span> |
-|		| ground thing | <span class="smallcaps">`undergoer`</span> |
-| COOK | cooker | <span class="smallcaps">`actor`</span> |
-|		| cooked food | <span class="smallcaps">`undergoer`</span> |
-| EAT | eater | <span class="smallcaps">`actor`</span> |
-|		| eaten food | <span class="smallcaps">`undergoer`</span> |
-| DRINK | drinking person | <span class="smallcaps">`actor`</span> |
-|		| drunked thing | <span class="smallcaps">`undergoer`</span> |
-| COVER | coverer | <span class="smallcaps">`actor`</span> |
-|		| cover | <span class="smallcaps">`instrument`</span> |
-|		| covered thing | <span class="smallcaps">`undergoer`</span> |
-| FILL | filler | <span class="smallcaps">`actor`</span> |
-|		| filling material | <span class="smallcaps">`instrument`</span> |
-|		| filled container | <span class="smallcaps">`undergoer`</span> |
-| WIPE (cos) | wiper | <span class="smallcaps">`actor`</span> |
-|			| wiped surface | <span class="smallcaps">`undergoer`</span> |
-| PEEL (cos) | peeler | <span class="smallcaps">`actor`</span> |
-|			| peeled object | <span class="smallcaps">`undergoer`</span> |
-| **Contact** | | |
-| HIT | hitter | <span class="smallcaps">`actor`</span> |
-|	| hittee | <span class="smallcaps">`undergoer`</span> |
-|	| hitting instrument | <span class="smallcaps">`instrument`</span> |
-| TOUCH | toucher | <span class="smallcaps">`actor`</span> |
-|	| touchee | <span class="smallcaps">`undergoer`</span> |
-|	| touching instrument | <span class="smallcaps">`instrument`</span> |
-| PUSH | pusher | <span class="smallcaps">`actor`</span> |
-|	| pushee | <span class="smallcaps">`undergoer`</span> |
-| **Experiential** | | |
-| LOOK AT | looker | <span class="smallcaps">`experiencer`</span> |
-|		| looked at entity | <span class="smallcaps">`stimulus`</span> |
-| SEE | seeer | <span class="smallcaps">`experiencer`</span> |
-|	| seen entity | <span class="smallcaps">`stimulus`</span> |
-| APPEAR | appearer | <span class="smallcaps">`stimulus`</span> |
-| SMELL | smeller | <span class="smallcaps">`experiencer`</span> |
-|	| smelled entity | <span class="smallcaps">`stimulus`</span> |
-| HEAR | hearer | <span class="smallcaps">`experiencer`</span> |
-|	| heard sound | <span class="smallcaps">`stimulus`</span> |
-| FEAR | fearer | <span class="smallcaps">`experiencer`</span> |
-|	| fear stimulus | <span class="smallcaps">`stimulus`</span> |
-| FRIGHTEN | frightenee | <span class="smallcaps">`experiencer`</span> |
-|	| frightener | <span class="smallcaps">`stimulus`</span> |
-| LIKE | liker | <span class="smallcaps">`experiencer`</span> |
-|	| liked entity | <span class="smallcaps">`stimulus`</span> |
-| KNOW | knower | <span class="smallcaps">`experiencer`</span> |
-|	| known thing/person | <span class="smallcaps">`stimulus`</span> |
-| THINK | thinker | <span class="smallcaps">`experiencer`</span> |
-|	| thought content | <span class="smallcaps">`stimulus`</span> |
-| WANT | wanter | <span class="smallcaps">`experiencer`</span> |
-|	| wanted thing | <span class="smallcaps">`stimulus`</span> |
-| FEEL PAIN | pain-feeler | <span class="smallcaps">`experiencer`</span> |
-|	| pain locus | <span class="smallcaps">`stimulus`</span> |
-| **Partly-unrealized** | | |
-| SEARCH FOR | searcher | <span class="smallcaps">`actor`</span> |
-|			| searched thing | <span class="smallcaps">`undergoer`</span> |
-| HUNT (FOR) | hunter | <span class="smallcaps">`actor`</span> |
-|			| hunted thing | <span class="smallcaps">`undergoer`</span> |
-| **Application** | | |
-| PUT | putter | <span class="smallcaps">`actor`</span> |
-|		| put thing | <span class="smallcaps">`theme`</span>  |
-|		| putting goal | <span class="smallcaps">`goal`</span> |
-| POUR | pourer | <span class="smallcaps">`actor`</span> |
-|		| poured substance | <span class="smallcaps">`theme`</span>  |
-|		| pouring goal | <span class="smallcaps">`goal`</span> |
-| LOAD | loader | <span class="smallcaps">`actor`</span> |
-|		| loaded thing | <span class="smallcaps">`theme`</span>  |
-|		| loading place  | <span class="smallcaps">`goal`</span> |
-| TIE | tier | <span class="smallcaps">`actor`</span> |
-|		| tied thing | <span class="smallcaps">`theme`</span>  |
-|		| tying goal | <span class="smallcaps">`goal`</span> |
-| **Removal** | | |
-| TAKE | taker | <span class="smallcaps">`actor`</span> |
-|		| taken thing | <span class="smallcaps">`theme`</span>  |
-|		| taking source | <span class="smallcaps">`source`</span> |
-| TEAR | tearer | <span class="smallcaps">`actor`</span> |
-| 		| torn thing | <span class="smallcaps">`theme`</span>  |
-|		| tearing source | <span class="smallcaps">`source`</span> |
-| WIPE (motion) | wiper | <span class="smallcaps">`actor`</span> |
-|				| wiped material | <span class="smallcaps">`theme`</span>  |
-|				| wiped surface | <span class="smallcaps">`source`</span> |
-| PEEL (motion) | peeler | <span class="smallcaps">`actor`</span> |
-|			| peel | <span class="smallcaps">`theme`</span>  |
-|			| peeled object | <span class="smallcaps">`source`</span> |
-| **Creation** | | |
-| BUILD | builder | <span class="smallcaps">`actor`</span> |
-|		| built thing | <span class="smallcaps">`undergoer`</span> |
-|		| building material | <span class="smallcaps">`instrument`</span> |
-| MAKE | maker | <span class="smallcaps">`actor`</span> |
-|		| made thing | <span class="smallcaps">`undergoer`</span> |
-| **Transfer**
-| GIVE | giver | <span class="smallcaps">`actor`</span> |
-|		| gift | <span class="smallcaps">`theme`</span>  |
-|		| giving recipient | <span class="smallcaps">`recipient`</span> |
-| SEND | sender | <span class="smallcaps">`actor`</span> |
-|		| sent thing | <span class="smallcaps">`theme`</span>  |
-|		| sending recipient | <span class="smallcaps">`recipient`</span> |
-| CARRY | carrier | <span class="smallcaps">`actor`</span> |
-|		| carried thing | <span class="smallcaps">`theme`</span>  |
-|		| carrying goal | <span class="smallcaps">`goal`</span> |
-| THROW | thrower | <span class="smallcaps">`actor`</span> |
-|		| thrown thing | <span class="smallcaps">`theme`</span>  |
-|		| throwing goal | <span class="smallcaps">`goal`</span> |
-| BRING | bringer | <span class="smallcaps">`actor`</span> |
-|		| brought thing | <span class="smallcaps">`theme`</span>  |
-|		| bringing recipient | <span class="smallcaps">`recipient`</span> |
-| STEAL | stealer | <span class="smallcaps">`actor`</span> |
-|		| stolen thing | <span class="smallcaps">`theme`</span>  |
-|		| stealing source | <span class="smallcaps">`affectee`</span> |
-| GET | receiver | <span class="smallcaps">`recipient`</span> |
-|		| received thing | <span class="smallcaps">`theme`</span> |
-| **Communication** | | |
-| TALK | talker | <span class="smallcaps">`actor`</span> |
-|		| talked about content | <span class="smallcaps">`theme`</span>  |
-|		| talked to person | <span class="smallcaps">`recipient`</span> |
-| ASK FOR | asker | <span class="smallcaps">`actor`</span> |
-|		| requested thing | <span class="smallcaps">`theme`</span>  |
-|		| askee | <span class="smallcaps">`recipient`</span> |
-| SHOUT AT | shouter | <span class="smallcaps">`actor`</span> |
-|		   | shoutee | <span class="smallcaps">`recipient`</span> |
-| TELL | teller | <span class="smallcaps">`actor`</span> |
-|		| told content | <span class="smallcaps">`theme`</span>  |
-|		| tellee | <span class="smallcaps">`recipient`</span> |
-| SHOW | shower | <span class="smallcaps">`actor`</span> |
-|		| shown thing | <span class="smallcaps">`theme`</span>  |
-|		| showing addressee | <span class="smallcaps">`recipient`</span> |
-| HIDE | hider | <span class="smallcaps">`actor`</span> |
-|		| hidden thing | <span class="smallcaps">`theme`</span>  |
-|		| hiding affectee | <span class="smallcaps">`affectee`</span> |
-| SCREAM | screamer | <span class="smallcaps">`actor`</span> |
-|TEACH | teacher | <span class="smallcaps">`actor`</span> |
-|		| taught content | <span class="smallcaps">`theme`</span>  |
-|		| teachee | <span class="smallcaps">`recipient`</span> |
-| SAY | sayer | <span class="smallcaps">`actor`</span> |
-|	  | said content | <span class="smallcaps">`theme`</span>  |
-|     | saying addressee | <span class="smallcaps">`recipient`</span> |
-| NAME | namer | <span class="smallcaps">`actor`</span> |
-|	   | name | <span class="smallcaps">`theme`</span>  |
-|	   | namee | <span class="smallcaps">`recipient`</span> |	
-
-Table 13: Verb meanings and non-lexicalized role annotation
+Table 12: Verb meanings and non-lexicalized role annotation
 </div>
 
 [Back to Table of Contents](#toc)
@@ -5663,7 +6532,7 @@ in the temporal superstructure; this is shown in Figure
 The other type of node in the temporal superstructure are time
 expressions. Time expressions are broken down into a taxonomy that
 determines their representation in the temporal superstructure (see
-Table 1 in Zhang & Xue (2018), reproduced here in Table 14.
+Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 
 <table>
 <thead>
@@ -6100,7 +6969,7 @@ is summarized below.
 | Events under the scope of reporting events| `:modstr` annotation, `:quot` relation to reporting event |
 | All other events | `:modstr` annotation |
 
-Table 15: Modal relations at Stage 0
+Table 14: Modal relations at Stage 0
 </div>
 
 [Back to Table of Contents](#toc)
