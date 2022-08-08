@@ -1847,9 +1847,26 @@ concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>. In <a 
       :ARG1-of (n/ normal-02))
 ```
 
-Another example is <a href="#3-1-3-6 (1b)">(1b)</a>, where the multi-word concept is *as-well*, which maps to two words.
+Multi-word concepts are not limited phrasal verbs like ``take out''. They also include idiomatic expressions like ``jump on the bandwagon'', as in 
+<a href="#3-1-3-6 (1b)">(1b)</a>:
 
-<span id="3-1-3-6 (1b)">3-1-3-6 (1b)</span> The moral aspects of the movement intrigued him as well
+<span id="3-1-3-6 (1b)">3-1-3-6 (1b)</span>  Pretty soon the far left loons will jump on his wagon.
+```
+(j / jump-on-bandwagon-09
+      :aspect Performance
+      :ARG0 (l / loon
+            :ARG1-of (l2 / left-19
+                  :degree (f / far)))
+      :ARG1 (p / person
+               :ref-person 3rd
+	       :ref-number Singular)
+      :time (s / soon
+            :mod (p / pretty)))
+''''
+Note that these muli-word concepts are predicates and have their own arguments. Other multi-word concepts are not predicates and are simply concatenation of 
+single words, as in <a href="#3-1-3-6 (1c)">(1c)</a>, where the multi-word concept is *as-well*, which maps to two words.
+
+<span id="3-1-3-6 (1c)">3-1-3-6 (1c)</span> The moral aspects of the movement intrigued him as well
 ```
 (i/ intrigue-01
       :ARG0 (a/ aspect
@@ -1864,9 +1881,10 @@ Another example is <a href="#3-1-3-6 (1b)">(1b)</a>, where the multi-word concep
       :modstr FullAff)
 ```
 
-In a language like Chinese where there are no natural word boundaries in written text, sentences will have to go through a word segmentation process to facilitate the mapping of words into UMR concepts. Consecutive sequences of Chinese characters that form a single concept will always be segmented into a single word. Multi-word concepts will only be relevant if the sequence of words that form a single concept are discontinuous, as 帮-忙-01 in <a href="#3-1-3-6 (2)">(2)</a>:
 
-<span id="3-1-3-6 (2)">3-1-3-6 (2)</span> 这 办法 帮 不 了 我 多 大 忙 ， 点灯人 说 。
+In languages like Chinese where there are no natural word boundaries in written text, sentences will have to go through a word segmentation process to facilitate the mapping of words into UMR concepts. Consecutive sequences of Chinese characters that form a single concept will always be segmented into a single word. This is the case for idioms such as 缘木求鱼, 刻舟求剑, which are segmented into single words, and  are mapped to single concepts in UMR annotation.  However, multi-word concepts are still relevant if the sequence of words that form a single concept are discontinuous, as 帮-忙-01 in <a href="#3-1-3-6 (2a)">(2a)</a>:
+
+<span id="3-1-3-6 (2a)">3-1-3-6 (2a)</span> 这 办法 帮 不 了 我 多 大 忙 ， 点灯人 说 。
 ```
 (x0 / 说-01
       :arg0  (x11 / 人
@@ -1881,6 +1899,22 @@ In a language like Chinese where there are no natural word boundaries in written
       :aspect Performance
       :modstr FullAff)
 ```
+
+Multi-word concepts are also relevant for idiomatic expressions that are segmented into multiple words but mapped single concepts.
+
+<span id="3-1-3-6 (2b)">3-1-3-6 (2b)</span> 我 把 锤子 、 螺钉 、 饥渴 、 死亡 ， 全都 抛在 脑 后 。
+(x0 / 抛在脑后-01
+      :arg0  (x2 / 我)
+      :arg1  (x3 / and
+            :op1  (x4 / 锤子)
+            :op2  (x5 / 螺钉)
+            :op3  (x6 / 饥渴)
+            :op4  (x7 / 死亡))
+      :manner  (x11 / 全-01)
+      :manner  (x12 / 都)
+      :aspect Performance)
+      
+##### Part 3-1-3-6. Annotation of special constructions
 
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
