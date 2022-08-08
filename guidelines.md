@@ -29,8 +29,11 @@
          * Part 3-1-3-2. [Valency-changing operations](#part-3-1-3-2-Valency-changing-operations)
          * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
          * Part 3-1-3-4. [Associated motion](#Part-3-1-3-4-Associated-Motion)
-         * Part 3-1-3-5. [Non-verbal clauses](#Part-3-1-3-5-Non-verbal-clauses)
-         * Part 3-1-3-6. [Multi-word concepts](#part-3-1-3-6-multi-word-concepts)
+         * Part 3-1-3-5. [Light verb constructions] (#Part-3-1-3-5-Light-verb-constructions)
+         * Part 3-1-3-6. [Non-verbal clauses](#Part-3-1-3-6-Non-verbal-clauses)
+         * Part 3-1-3-7. [Multi-word concepts](#part-3-1-3-7-Multi-word-concepts)
+         * Part 3-1-3-8. [Miscellaneous constructions] (#part-3-1-3-8-Micellaneous-constructions)
+         
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
       * Part 3-1-5. [Scope for quantification and negation](#part-3-1-5-scope-for-quantification-and-negation)
       * Part 3-1-6. [Discourse relations](#part-3-1-6-discourse-relations)
@@ -1661,30 +1664,33 @@ events, and are annotated in UMR as two separate predicates.
 
 [Back to Table of Contents](#toc)
 
-##### Part 3-1-3-5. Non-verbal clauses
+##### Part 3-1-3-5. Light verb constructions
+[Back to Table of Contents](#toc)
+
+##### Part 3-1-3-6. Non-verbal clauses
 
 Many types of "non-verbal clauses", such as predicate nominals and
 predication of properties, possession, and location (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) for the predicates UMR predicates that are used to annotate these meanings), show different
 mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
 easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
-<a href="#3-1-3-5 (1)">(1)</a> and <a href="#3-1-3-5 (2)">(2)</a>. In English, these constructions do not pose
+<a href="#3-1-3-6 (1)">(1)</a> and <a href="#3-1-3-6 (2)">(2)</a>. In English, these constructions do not pose
 serious problems to the predicate-argument structure of UMR - one could
 simply identify the "have" or "be"-verb as a predicate, and the NPs in
 the clause as its arguments.
 
 In the Kukama object predication construction in
-<a href="#3-1-3-5 (1)">(1)</a>, however, the predicate does not map to
+<a href="#3-1-3-6 (1)">(1)</a>, however, the predicate does not map to
 an overt word: object predication is expressed through juxtaposition of
 two NPs, with the predicational meaning implicit but inherent in the
-construction. In the Kukama thetic possession construction in <a href="#3-1-3-5 (2)">(2)</a>, on the other hand, the possessum
+construction. In the Kukama thetic possession construction in <a href="#3-1-3-6 (2)">(2)</a>, on the other hand, the possessum
 and the relation of possession are expressed together as a single word
 which functions as a predicate: something that is typically thought of
-as an "argument" is predicativized. In languages that use the construction type exemplified in <a href="#3-1-3-5 (2)">(2)</a>, there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a <a href="#3-1-3-5 (2)">(2)</a>-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
+as an "argument" is predicativized. In languages that use the construction type exemplified in <a href="#3-1-3-6 (2)">(2)</a>, there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a <a href="#3-1-3-6 (2)">(2)</a>-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
 for the annotation of predicate-argument structure, since there is no
 separate material that can be identified as a predicate.
 
-<span id="3-1-3-5 (1)">3-1-3-5 (1)</span> 
+<span id="3-1-3-6 (1)">3-1-3-6 (1)</span> 
 ```
 ajan	kunumi		tsumi
 this	young.man	shaman
@@ -1700,7 +1706,7 @@ this	young.man	shaman
     								    :modstr Aff)
 ```
 
-<span id="3-1-3-5 (2)">3-1-3-5 (2)</span> 
+<span id="3-1-3-6 (2)">3-1-3-6 (2)</span> 
 ```
 Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
@@ -1717,13 +1723,13 @@ Miguel-CER	canoe-owner
 
 We propose a set of seven abstract concept predicates each corresponding
 to a discrete "non-verbal clause" function, listed in the table below. When there is no overt predicate-word, as
-in <a href="#3-1-3-5 (1)">(1)</a>, we assume that annotators will be able
+in <a href="#3-1-3-6 (1)">(1)</a>, we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
 with. They should use such an abstract predicate concept as predicative core of the graph, and use the appropriate numbered argument roles as specified in
 the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
-<a href="#3-1-3-5 (2)">(2)</a>, once again annotators are expected to recognize the type of non-verbal clause function at hand and select the appropriate predicate. An argument concept will be identified and linked to the predicativized participant word in the sentence - the possessum *ɨara-yara* in the case of <a href="#3-1-3-5 (2)">(2)</a>. As can be seen in the example UMRs
+<a href="#3-1-3-6 (2)">(2)</a>, once again annotators are expected to recognize the type of non-verbal clause function at hand and select the appropriate predicate. An argument concept will be identified and linked to the predicativized participant word in the sentence - the possessum *ɨara-yara* in the case of <a href="#3-1-3-6 (2)">(2)</a>. As can be seen in the example UMRs
 above, the resulting graphs have similar structures regardless of
 whether a language uses an overt-predicate strategy, a zero-predicate
 (juxtaposition) strategy, or a predicativized argument strategy for such
@@ -1804,16 +1810,17 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 
 Table 8: Argument structure of non-verbal clause predicates
 </div>
+[Back to Table of Contents](#toc)
 
-##### Part 3-1-3-6. Multi-word concepts
+##### Part 3-1-3-7. Multi-word concepts
 
 In languages with simpler morphology, the opposite situation, *multi-word concepts* may arise. Multi-word concepts can simply be handled by
-concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>. In <a href="#3-1-3-6 (1a)">(1a)</a>, *take-out-11* is a multi-word concept, meaning a UMR concept that maps to multiple words. In this case, the multi-word concept also has more than one sense, as indicated by the sense number *11*.
+concatenating the lemmatized words, as in <a href="#3-1-3-7 (1)">(1)</a>. In <a href="#3-1-3-7 (1a)">(1a)</a>, *take-out-11* is a multi-word concept, meaning a UMR concept that maps to multiple words. In this case, the multi-word concept also has more than one sense, as indicated by the sense number *11*.
 
 
-<span id="3-1-3-6 (1)">3-1-3-6 (1)</span>
+<span id="3-1-3-7 (1)">3-1-3-7 (1)</span>
 
-<span id="3-1-3-6 (1a)">3-1-3-6 (1a)</span> So I normally steep it in hot water , then take it out and stir - fry it.
+<span id="3-1-3-7 (1a)">3-1-3-7 (1a)</span> So I normally steep it in hot water , then take it out and stir - fry it.
 ```
 (c/ cause-01
       :ARG1 (a/ and
@@ -1848,9 +1855,9 @@ concatenating the lemmatized words, as in <a href="#3-1-3-6 (1)">(1)</a>. In <a 
 ```
 
 Multi-word concepts are not limited phrasal verbs like ``take out''. They also include idiomatic expressions like ``jump on the bandwagon'', as in 
-<a href="#3-1-3-6 (1b)">(1b)</a>:
+<a href="#3-1-3-7 (1b)">(1b)</a>:
 
-<span id="3-1-3-6 (1b)">3-1-3-6 (1b)</span>  Pretty soon the far left loons will jump on his wagon.
+<span id="3-1-3-7 (1b)">3-1-3-7 (1b)</span>  Pretty soon the far left loons will jump on his wagon.
 ```
 (j / jump-on-bandwagon-09
       :aspect Performance
@@ -1864,9 +1871,9 @@ Multi-word concepts are not limited phrasal verbs like ``take out''. They also i
             :mod (p / pretty)))
 ```
 Note that these muli-word concepts are predicates and have their own arguments. Other multi-word concepts are not predicates and are simply concatenation of 
-single words, as in <a href="#3-1-3-6 (1c)">(1c)</a>, where the multi-word concept is *as-well*, which maps to two words.
+single words, as in <a href="#3-1-3-7 (1c)">(1c)</a>, where the multi-word concept is *as-well*, which maps to two words.
 
-<span id="3-1-3-6 (1c)">3-1-3-6 (1c)</span> The moral aspects of the movement intrigued him as well
+<span id="3-1-3-7 (1c)">3-1-3-7 (1c)</span> The moral aspects of the movement intrigued him as well
 ```
 (i/ intrigue-01
       :ARG0 (a/ aspect
@@ -1884,7 +1891,7 @@ single words, as in <a href="#3-1-3-6 (1c)">(1c)</a>, where the multi-word conce
 
 In languages like Chinese where there are no natural word boundaries in written text, sentences will have to go through a word segmentation process to facilitate the mapping of words into UMR concepts. Consecutive sequences of Chinese characters that form a single concept will always be segmented into a single word. This is the case for idioms such as 缘木求鱼, 刻舟求剑, which are segmented into single words, and  are mapped to single concepts in UMR annotation.  However, multi-word concepts are still relevant if the sequence of words that form a single concept are discontinuous, as 帮-忙-01 in <a href="#3-1-3-6 (2a)">(2a)</a>:
 
-<span id="3-1-3-6 (2a)">3-1-3-6 (2a)</span> 这 办法 帮 不 了 我 多 大 忙 ， 点灯人 说 。
+<span id="3-1-3-7 (2a)">3-1-3-7 (2a)</span> 这 办法 帮 不 了 我 多 大 忙 ， 点灯人 说 。
 ```
 (x0 / 说-01
       :arg0  (x11 / 人
@@ -1902,7 +1909,7 @@ In languages like Chinese where there are no natural word boundaries in written 
 
 Multi-word concepts are also relevant for idiomatic expressions that are segmented into multiple words but mapped single concepts.
 
-<span id="3-1-3-6 (2b)">3-1-3-6 (2b)</span> 我 把 锤子 、 螺钉 、 饥渴 、 死亡 ， 全都 抛在 脑 后 。
+<span id="3-1-3-7 (2b)">3-1-3-7 (2b)</span> 我 把 锤子 、 螺钉 、 饥渴 、 死亡 ， 全都 抛在 脑 后 。
 ```
 (x0 / 抛在脑后-01
       :arg0  (x2 / 我)
@@ -1916,7 +1923,36 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
       :aspect Performance)
 ```
 
-##### Part 3-1-3-6. Annotation of special constructions
+##### Part 3-1-3-7. Miscellaneous constructions
+Other than multi-word concepts, languages often have regular or irregular constructions that involve mapping multipe words to single concepts. Some of them are languages-specific, but others might be uniform across languages. Here we propose a set of predicates that can used to annotate UMR for various languages.
+
+
+<span id="3-1-3-8 (1)">3-1-3-8 (1)</span> The more I read your stuff, the more I am convinced that you have a black heart.
+
+```
+ (c2 / correlate-91
+       :aspect Habitual
+       :ARG1 (m / more
+                  :frequency-of (r / read-01
+                        :ARG0 (p / person
+			         :ref-person  1st
+				 :ref-number Singular)
+                        :ARG1 (s2 / stuff
+                              :poss (p2 / person
+			                :ref-person 2nd
+					:ref-number Singular))))
+            :ARG2 (m2 / more
+                  :ARG3-of (h3 / have-degree-91
+                        :ARG1 0
+                        :ARG2 (c / convince-01
+                              :ARG1 p
+                              :ARG2 (h / have-03
+                                    :ARG0 p2
+                                    :ARG1 (h2 / heart
+                                          :ARG1-of (b / black-06)))))))
+```
+
+<!-- we need a list of such predicates>
 
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
