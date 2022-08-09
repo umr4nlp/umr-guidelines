@@ -29,10 +29,10 @@
          * Part 3-1-3-2. [Valency-changing operations](#part-3-1-3-2-Valency-changing-operations)
          * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
          * Part 3-1-3-4. [Associated motion](#Part-3-1-3-4-Associated-Motion)
-         * Part 3-1-3-5. [Light verb constructions] (#Part-3-1-3-5-Light-verb-constructions)
+         * Part 3-1-3-5. [Light verb constructions](#Part-3-1-3-5-Light-verb-constructions)
          * Part 3-1-3-6. [Non-verbal clauses](#Part-3-1-3-6-Non-verbal-clauses)
          * Part 3-1-3-7. [Multi-word concepts](#part-3-1-3-7-Multi-word-concepts)
-         * Part 3-1-3-8. [Miscellaneous constructions] (#part-3-1-3-8-Micellaneous-constructions)
+         * Part 3-1-3-8. [Miscellaneous constructions](#part-3-1-3-8-Micellaneous-constructions)
          
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
       * Part 3-1-5. [Scope for quantification and negation](#part-3-1-5-scope-for-quantification-and-negation)
