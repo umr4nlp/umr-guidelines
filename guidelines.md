@@ -1665,6 +1665,40 @@ events, and are annotated in UMR as two separate predicates.
 [Back to Table of Contents](#toc)
 
 ##### Part 3-1-3-5. Light verb constructions
+A light verb construction takes the canonical form of a verb followed by an eventive noun, and the verb has little meaning while the nound 
+carries most of the semantic content. An example is in <a href="#3-1-3-5 (1)">(1)</a>, where ``do'' is a light verb and most of the semantic content comes from 
+``interview''. In this case the UMR concept ``interview-01'' is created based on the eventive noun, while the verb is simply dropped. Note however 
+the verb may contribute to the aspectual attribute of the concept.
+
+<span id="3-1-3-5 (1)">3-1-3-5 (1)</span>  Where do you get this information from that Obama uses tax payer money to do interviews and bus trips?
+
+```
+(g / get-01
+      :aspect Performance
+      :ARG0 (p / person 
+                :ref-number Singular
+		:ref-person 2nd)
+      :ARG1 (i / information
+            :mod (t / this)
+            :topic (u / use-01
+	          :aspect Habitual
+                  :ARG0 (p2 / person :name (n / name :op1 "Obama"))
+                  :ARG1 (m / money
+                        :source (p3 / person
+                              :ARG0-of (p4 / pay-01
+			            :aspect Process
+                                    :ARG1 (t2 / tax-01))))
+                  :ARG2 (a2 / and
+                        :op1 (i2 / interview-01
+			      :aspect Habitual
+                              :ARG1 p2)
+                        :op2 (t4 / trip-03
+			      :aspect Habitual
+                              :ARG0 p2
+                              :medium (b / bus)))))
+      :ARG2 (a / umr-unknown))
+```
+
 [Back to Table of Contents](#toc)
 
 ##### Part 3-1-3-6. Non-verbal clauses
@@ -1923,8 +1957,9 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
       :aspect Performance)
 ```
 
-##### Part 3-1-3-7. Miscellaneous constructions
-Other than multi-word concepts, languages often have regular or irregular constructions that involve mapping multipe words to single concepts. Some of them are languages-specific, but others might be uniform across languages. Here we propose a set of predicates that can used to annotate UMR for various languages.
+##### Part 3-1-3-8. Miscellaneous constructions
+Other than multi-word concepts, languages often have regular or irregular constructions that involve mapping multipe words to single concepts. We adopt the general approach of AMR, which is to propose a set of abstract predicates each of which has their semantic roles to annotate such constructions. <a href="#3-1-3-8 (1)">(1)</a> is such an example, where the abstract concept ``correlate-91'' is proposed to annotate the ``the X-er, the Y-er`` construction. 
+<!--which concepts are languages-specific, and which are uniform? -->
 
 
 <span id="3-1-3-8 (1)">3-1-3-8 (1)</span> The more I read your stuff, the more I am convinced that you have a black heart.
@@ -1941,7 +1976,7 @@ Other than multi-word concepts, languages often have regular or irregular constr
                               :poss (p2 / person
 			                :ref-person 2nd
 					:ref-number Singular))))
-            :ARG2 (m2 / more
+        :ARG2 (m2 / more
                   :ARG3-of (h3 / have-degree-91
                         :ARG1 0
                         :ARG2 (c / convince-01
