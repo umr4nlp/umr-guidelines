@@ -6560,7 +6560,6 @@ For now UMR does not annotate cases where one event is a subevent of another eve
   
 [Back to Table of Contents](#toc)
 
-
 ### Part 4-2. Temporal Dependency
 
 The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression 
@@ -6608,84 +6607,60 @@ pass involves adding events to the temporal dependency structure. The temporal s
 
 [Back to Table of Contents](#toc)
 
-#### Part 4-2-1. Temporal superstructure
+#### Part 4-2-1. Nodes in the temporal dependency
 
-The highest level of the temporal
-dependency is always a single `ROOT` node. The temporal
-superstructure consists of two types of nodes: time expressions and
-pre-defined metanodes. `depends-on` is the
-relation that is used to link all nodes in the superstructure.
+There are three types of nodes in the temporal dependency structure: pre-defined metanodes, time expressions, and events. Pre-defined metanodes and time expressions make up the top levels of the dependency structure, called the temporal superstructure. `:depends-on` is the relation that is used to link all nodes in the temporal superstructure.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
-The first type of node in the temporal superstructure are the
-pre-defined metanodes: `PAST_REF`, `PRESENT_REF`,
-`FUTURE_REF`, and `DCT` (document creation time).
-Unlike time expressions, the pre-defined metanodes don’t correspond to
-linguistic material in the text. All four of the pre-defined metanodes
-should be added at the top of every temporal dependency structure.
-Whether or not they are actually used in the annotation will be
-determined when events are annotated in the next pass. As mentioned
+Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `PAST_REF`, `PRESENT_REF`, `FUTURE_REF`, and `DCT` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
 above, there is a generic `:depends-on` relation between all nodes
-in the temporal superstructure; this is shown in Figure
-[\[tempsuper\]](#tempsuper).
+in the temporal superstructure.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-2. Time expressions
 
 The other type of node in the temporal superstructure are time
-expressions. Time expressions are broken down into a taxonomy that
+expressions. Annotators should identify all time expressions in a document and add them to the temporal superstructure before annotating events.
+
+Time expressions are broken down into a taxonomy that
 determines their representation in the temporal superstructure (see
 Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 
 <table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span><strong>Examples</strong></span></th>
-<th style="text-align: center;"><span><strong>Possible Reference Times</strong></span></th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;"></th>
+<tr>
+<th colspan="4"> Taxonomy</th>
+<th> Examples</th>
+<th> Possible Reference Times</th>
 </tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Locatable</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Absolute</td>
-<td style="text-align: center;">May 2015</td>
-<td style="text-align: center;">ROOT</td>
+<tr>
+<td rowspan="5"> Time Expressions </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><p>Time</p></td>
-<td style="text-align: center;">Time</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Relative</td>
-<td style="text-align: center;">today, two days later</td>
-<td style="text-align: center;">DCT, another Concrete</td>
+<tr>
+<td rowspan="3"> Locatable Time Expressions </td>
+<td rowspan="2"> Concrete </td>
+<td> Absolute</td>
+<td> May 2015</td>
+<td> ROOT </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><p>Expressions</p></td>
-<td style="text-align: center;">Expressions</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">nowadays</td>
-<td style="text-align: center;">Present/Past/Future_Ref</td>
-<td style="text-align: center;"></td>
+<tr>
+<td> Relative</td>
+<td> today, two days later </td>
+<td> DCT, another Concrete </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">every month</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td colspan="2"> Vague</td>
+<td> nowadays</td>
+<td> Present/Past/Future_Ref </td>
 </tr>
-</tbody>
+<tr>
+<td colspan="3"> Unlocatable Time Expressions</td>
+<td> every month </td>
+<td>  -- </td>
+</tr>
 </table>
 
 First, time expressions are distinguished based on whether they are
@@ -6693,7 +6668,6 @@ locatable on a timeline or not. Unlocatable time expressions are time
 expressions which refer to the duration (*for three hours*) or
 quantification (*every day*) of an event. Unlocatable time expressions
 are not represented in the temporal dependency structure at any level. They do influence the aspect annotation, however (see [Part 3-3-1](#part-3-3-1-Aspect)).
-
 
 <!-- (they do influence the aspect annotation; see §[3](#aspectannotation)) -->
 
@@ -6712,33 +6686,12 @@ time expressions (*in 2019*) are represented as children of
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-2-1-3. Key events
-
-For news stories only, the temporal superstructure includes the “key
-event” in the text. The key event is the main event around which the
-news story is centered. It is often mentioned in the title or first
-sentence of the news story and referred to many times in the text. The
-key event should be added to the superstructure, with a relation to the
-timex which most specifically locates it in time.
-
-[Back to Table of Contents](#toc)
 
 #### Part 4-2-2. Temporal relations
 
 #### Part 4-2-2-1. Choosing the right temporal relation
 
-The second pass in the temporal annotation involves placing events on to the
-temporal dependency structure based on their temporal relations with
-other events and time expressions. Unlike the modal dependency structure
-which includes all of the events identified in the first pass (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines), the
-temporal dependency structure only includes events whose aspect
-annotation is NOT `State`. That is, events annotated with the
-aspect value `State` are not annotated for temporal location.
-This is because states, by definition, don’t involve change; therefore,
-they generally cannot be located on a timeline in the same way as
-non-stative events.
-
-Each (non-stative) event will be annotated as the child of either a time
+Once time expressions have been identified and annotated in the temporal dependency, annotators select temporal relations for the events in a text (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines). Each event is annotated as the child of either a time
 expression in the superstructure or another event (or both). The set of
 temporal relations are shown below. Note that the labels characterize
 the relation from child to parent.
@@ -6754,205 +6707,305 @@ the relation from child to parent.
 The goal of this temporal annotation scheme is to give each event the
 most precise temporal location possible. We also want to avoid adding
 annotations which do not give any additional information (i.e., the
-relation falls out logically from the other annotations). Annotators
-should proceed through the steps below for each event until it has at
-least one temporal annotation.
+relation falls out logically from the other annotations). Follow the steps below to determine the most accurate and precise reference time for each event (but see [Part 4-2-2-1-1](#part-4-2-2-1-1-special-cases) below for exceptions) . All events need to receive at least one temporal annotation, but may receive two in cases where an event needs to be linked to both a time expression and another event.
 
-1.  The most specific location for any event will be a
-    `:contained` relation to a timex (although see the
-    exception below). If possible, link the event to a time expression
-    (timex). This can be any timex in the superstructure, but most of
-    the time it will be in the same clause as the event. If the event
-    cannot be related to a timex, proceed to 2. If the event is related
-    to a timex, proceed to 3.
-    
-      - **Exception:** The only scenario in which an event which has a clear temporal
-        relation with a timex doesn’t need to have this relation
+1. If there is a time expression in the same line as the event, link the event to it with the proper relation (although see exception below). If the event does not receive an annotation at this step, proceed to step 2. If an event does receive an annotation at this step, proceed to step 4.
+
+	 - **Exception:** The only scenario in which an event which has a clear temporal
+        relation with a time expression doesn’t need to have this relation
         annotated is when the relation logically falls out from other
-        annotations. This is the case when an event is a subevent of an
-        event that is `:contained` in a timex. That is, if
+        annotations. This is the case when an event is `:contained` in another event, which itself is 
+	`:contained` in a time expression. That is, if
         event A is `:contained` within event B (i.e., a
-        subevent) and event B is `:contained` within a timex,
+        subevent) and event B is `:contained` within a time expression,
         then logically, event A must also be `:contained`
-        within the timex and therefore this relation doesn’t need to be
+        within the time expression and therefore this relation doesn’t need to be
         annotated.
 
-2.  If the event can’t be linked to a timex, then try to link it to
-    another event in text. Starting with the immediately preceding event
-    in the text and working back through the events in the same sentence
-    and the preceding sentence, find an event that is a good parent. If
-    there is not a good parent in the same sentence or immediately
-    preceding sentence, then proceed to 4. An event is considered a good
-    parent if:
-    
-      - It has a clear temporal relation to the child event AND
-    
-      - It has a `:modstr Aff` relation to the same conceiver as the
-        child event in the modal annotation OR
-    
-      - It has the same modal relation to the same conceiver/event as
-        the child event in the modal annotation OR
-    
-      - It is either the parent or the child of the event in the modal
-        dependency.
+2. At this point, consider time expressions in other lines in the text. If the event has a `:contained` relation to 	any time expression in the text, annotate that relation. Note that the same exception applies here as in 1. If an event doesn't receive an annotation at this step, proceed to step 3. If an event does receive an annotation at this step, proceed to step 4.
 
-3.  Even if the event can be related to a timex, its temporal location
-    may be made more precise by specifying a second relation to an
-    event. Only add an event-event relation if it makes the temporal
-    location of the child event more specific. In practice, this means
-    that events which are `:contained` within a timex will
-    only be related to events `:contained` within the same
-    timex or events which are not contained within any timex. (That is,
-    two events `:contained` within different timexs should not
-    be related to each other.) Aside from that, follow the same rules as
-    in 2 for selecting a good parent event.
+3. If an event is not linked to a time expression, then the next best reference time is another event in the text.  Good reference time events (i.e., parents in the temporal dependency) meet all of the criteria listed below. Often, the most appropriate parent is the event in the immediately preceding line or clause. Starting with the immediately preceding event in the text and working back through the events in the preceding lines, find an event that is a good parent. If there isn't a good parent event in the text, proceed to step 5. Otherwise, the temporal annotation for the event is complete.
 
-4.  If an event cannot be related to either a timex or another event,
-    then relate it to the key event in the text, if there is one.
+	a. The parent event is a Process (or finer-grained subtype) in the Aspect annotation
+	
+	b. The parent event has a compatible modal annotation:
+		the parent event and child event have the same parent and the same edge value in the modal dependency OR
+		the parent event has a `:FullAff` relation to the `AUTH` node in the modal dependency
+		
+	c. There is a clear temporal relation between the parent event and the child event
 
-5.  If an event cannot be related to a timex, another event, or the key
-    event, then link it to a tense metanode.
+4. If an event does get a relation to a time expression, a second annotation that specifies its relationship with another event may also be added. This is the case when a set of events are all `:contained` within the same time expression. The first event in the set of events only needs to be linked to the time expression. Subsequent events can receive two temporal annotations: one that relates it to the time expression and one that relates it to another event in the set.
 
-In order to demonstrate how these rules work, let’s look at the
-annotation of <a href="#4-2-2-1 (1)">(1)</a> below.
+5. Finally, if the event cannot be linked to either a time expression nor another event, then link it to the appropriate tense metanode.
 
-<span id="4-2-2-1 (1)" label="4-2-2-1 (1)">4-2-2-1 (1)</span> 
-Key event: landslide\_KEY
+An example is shown below in <a href="#4-2-2-1 (1)">(1)</a>, an excerpt from a description of the Pear Story film.
+
+<span id="4-2-2-1 (1)" label="4-2-2-1 (1)">4-2-2-1 (1)</span>
+
 ```
-Lerias said that many Guinsaugon residents had been evacuated after landslides earlier in the week had killed more than 20 people on Leyte, but that many had returned Friday because the rains had stopped and the sun had come out.
-(s/ say-01
-      :ARG0 (p/ person
-      	    :wiki -
-            :name (n/ name :op1 "Lerias"))
-      :ARG1 (c/ contrast
-      	    :ARG1 (e/ evacuate-01
-	    	:ARG2 (p2/ person
-			:ARG0-of (r/ reside-01
-				:ARG1 (c2/ city
-					:wiki "Saint_Bernard,_Southern_Leyte"
-					:name (n2/ name :op1 "Guinsaugon")))
-			:quant (m/ many))
-		:temporal (a/ after
-			:op1 (k/ kill-01
-				:ARG0 (l/ landslide
-					:aspect Process)
-				:ARG1 (p3/ person
-					:quant (m2/ more-than :op1 20))
-				:place (i/ island
-					:wiki "Leyte
-					:name (n3/ name :op1 "Leyte"))
-				:temporal (w/ week)
-				:temporal (b/ before
-					:op1 s)
-				:aspect Performance
-				:quot s
-				:modstr FullAff))
+snt15	A-nd u-h and then he gets down out of the tree,
+(s15g / get-05
+  :ARG1 (s15p / person
+          :ref-person 3rd
+          :ref-number Singular)
+  :ARG2 (s15d / down)
+  :source (s15t / tree
+            :refer-number Singular)
+  :aspect Performance
+  :temporal (s15t2 / then)
+  :modstr FullAff)
+
+(s15s0 / sentence
+  :modal ((ROOT :MODAL AUTH)
+         (AUTH :FullAff s15g))
+  :temporal ((PAST_REF :contained s15g)))
+
+
+snt16	and he dumps all his pears into the basket
+(s16d / dump-01
+  :ARG0 (s16p / person
+          :ref-person 3rd
+          :ref-number Singular)
+  :ARG1 (s16p2 / pear
+          :quant (s16a / all)
+          :poss s16p)
+  :aspect Performance
+  :goal (s16b / basket
+          :ref-number Singular)
+  :modstr FullAff)
+
+(s16s0 / sentence
+  :modal ((ROOT :MODAL AUTH)
+          (AUTH :FullAff s16d))
+  :temporal ((s15g :after s16d)))
+
+
+snt17	and the basket's full,
+(s17h / have-mod-91
+  :ARG1 (s17b / basket
+          :ref-number Singular)
+  :ARG2 (s17f / full)
+  :aspect State
+  :modstr FullAff)
+
+(s17s0 / sentence
+  :modal ((ROOT :MODAL AUTH)
+          (AUTH :FullAff s17h))
+  :temporal ((s16d :overlap s17h)))
+
+
+snt18	and one of the pears drops down to the floor,
+(s18d / drop-01
+  :ARG1 (s18p / pear
+          :quant 1
+          :ARG2-of (s18i2 / include-91
+                     :ARG1 (s18p2 / pear
+                             :ref-number Plural)))
+  :ARG4 (s18f / floor
+          :ref-number Singular)
+  :direction (s18d2 / down)
+  :aspect Performance
+  :modstr FullAff)
+
+(s18s0 / sentence
+  :modal ((ROOT :MODAL AUTH)
+         (AUTH :FullAff s18d))
+  :temporal ((s16d :after s18d)))
+
+
+```
+
+
+The first event in this excerpt (`s15g`) is linked to a tense metanode, as there are no time expressions in the clause and there are no previous events in the excerpt. The next event (`s16d`) is linked to the immediately preceding event in the text (`s15g`) because it fits all of the criteria for a good reference time: its aspect annotation is a type of Process, it has a FullAff relation to the `AUTH` node, and there is a clear temporal relation between the two events. In a similar way, `s17h` is linked to `s16d`. For the final event in the excerpt (`s18d`), the previous event in the text does not make a good reference time. Since `s17h` is a State (not a Process), it does not fit the criteria for a good reference time. Therefore, `s18d` is linked to the next event back in the text `s16d`.
+
+
+
+##### Part 4-2-2-1-1. Special cases
+
+There are certain types of modal constructions that require special treatment in the temporal annotation. Events that are related in the modal dependency are generally related in the temporal dependency as well. The rest of this section covers event-event relations; when time expressions are present in the text, those temporal relations should be annotated in addition to the ones described below.
+
+
+
+**Complement-taking predicates**
+
+Events that are linked with a `:modpred` relation in the sentence-level modal annotation should also be linked in the temporal dependency. The complement-taking predicate acts as the reference time for its complement. That is, the complement is the child of the complement-taking predicate in the temporal dependency. There can be various types of temporal relations between complement-taking predicates and their complements, shown in <a href="#4-2-2-1-1 (1)">(1)</a>-<a href="#4-2-2-1-1 (3)">(3)</a>.
+
+<span id="4-2-2-1-1 (1)" label="4-2-2-1-1 (1)">4-2-2-1-1 (1)</span>
+
+```
+I saw him knock on the door.
+
+(s1s/ see-01
+	:ARG0 (s1p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (s1k/ knock-01
+		:ARG0 (s1p2/ person
+			:ref-person 3rd
+			:ref-number Singular)
+		:ARG1 (s1d/ door
+			:ref-number Singular))
 		:aspect Performance
-		:quot s
-		:modstr FullAff)
-	    :ARG2 (r2/ return-01
-	    	:ARG1 p2
-		:temporal (d/ date-entity
-			:weekday (f/ Friday))
-		:ARG1-of (c3/ cause-01
-			:ARG0 (a/ and
-				:op1 (r3/ rain
-					:aspect Endeavor
-					:quot s
-					:modstr FullAff)
-				:op2 (c4/ come-out-09
-					:ARG1 (s2/ sun)
-					:aspect Performance
-					:quot s
-					:modstr FullAff)
+		:modpred s1s)
+	:aspect State
+	:modstr FullAff)
+
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		 (s1s :overlap s1k)))
+```
+
+<span id="4-2-2-1-1 (2)" label="4-2-2-1-1 (2)">4-2-2-1-1 (2)</span>
+
+```
+I want to cook dinner.
+(s1w/ want-01
+	:ARG0 (s1p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (s1c/ cook-01
+		:ARG0 s1p
+		:ARG1 (s1d/ dinner)
 		:aspect Performance
-		:quot s
+		:modpred s1w)
+	:aspect State
+	:modstr FullAff)
+
+(s/ sentence
+	:temporal ((PRESENT_REF :contained s1W)
+		 (s1w :after s1c)))
+```
+
+<span id="4-2-2-1-1 (3)" label="4-2-2-1-1 (3)">4-2-2-1-1 (3)</span>
+
+
+
+```
+I wish she had read the book.
+(s1w/ wish-01
+	:ARG0 (s1p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (s1r/ read-01
+		:ARG0 (s1p2/ person
+			:ref-person 3rd
+			:ref-number Singular)
+		:ARG1 (s1b/ book
+			:ref-number Singular)
+		:aspect Performance
+		:modpred s1w)
+	:aspect State
+	:modstr FullAff)
+
+(s/ sentence
+	:temporal ((PRESENT_REF :contained s1W)
+		 (s1w :before s1c)))
+```
+
+In cases where there are multiple complements of the same predicate, the annotator must consider whether the complements are ordered with respect to each other. When they are ordered, only one complement is annotated as the child of the main predicate in the temporal dependency. The remaining complement(s) are then linked to other complements in whichever way most fully specifies their temporal ordering. The complement which is closest in time to the main predicate is the one that is linked to the main predicate.
+
+<span id="4-2-2-1-1 (4)" label="4-2-2-1-1 (4)">4-2-2-1-1 (4)</span>
+
+```
+I want to go to the city and visit a museum.
+(s1w/ want-01
+	:ARG0 (s1p/ person
+		:ref-person 1st
+		:ref-number Singular)
+	:ARG1 (s1g/ go-01
+		:ARG1 s1p
+		:ARG4 (s1c/ city
+			:ref-number Singular)
+		:aspect Performance
+		:modpred s1w)
+	:aspect State
+	:modstr FullAff)
+
+(s/ sentence
+	:temporal ((PRESENT_REF :contained s1W)
+		 (s1w :after s1c)))
+```
+
+The complement-taking predicate itself follows the same process as other events (see [Part 4-2-2-1](#part-4-2-2-1-choosing-the-right-temporal-relation)) in order to select its reference time (i.e., its parent in the temporal dependency).
+
+
+**Reporting events**
+
+Reporting events are treated similarly to complement-taking predicates. Generally, reported events are linked to the reporting predicate with the appropriate temporal relation. When there are multiple reported events, annotators consider if they are ordered with respect to each other. In all cases, at least one of the reported events must be linked to the reporting predicate. Other reported events may be linked to each other or to the reporting predicate.
+
+
+In <a href="#4-2-2-1-1 (5)">(5)</a>, both the arriving event and the eating event occur before the saying event. Since there is a clear ordering of the arriving event before the eating event, only one of these events is linked to the saying event. The eating event is closer in time to the saying event, and therefore the eating event is linked to the saying event in the temporal dependency. The arriving event is then linked to the eating event. (The fact that the arriving event also occurred before the saying event logically falls out from the annotations.) Finally, since the meeting event occurs after the saying event, the meeting event is also linked to the saying event.
+
+
+<span id="4-2-2-1-1 (5)" label="4-2-2-1-1 (5)">4-2-2-1-1 (5)</span>
+
+```
+Magdalena said she arrived home, ate dinner, and will meet us at the theater.
+(s1s/ say-01
+	:ARG0 (s1p/ person
+		:name (s1n/ name :op1 "Magdalena"))
+	:ARG1 (s1a/ and
+		:op1 (s1a2/ arrive-01
+			:ARG1 s1p
+			:ARG4 (s1h/ home)
+			:aspect Performance
+			:modstr FullAff
+			:QUOT s1s)
+		:op2 (s1e/ eat-01
+			:ARG0 s1p
+			:ARG1 (s1d/ dinner)
+			:aspect Performance
+			:modstr FullAff
+			:QUOT s1s)
+		:op3 (s1m/ meet-03
+			:ARG0 s1p
+			:ARG1 (s1p2/ person
+				:ref-person 1st
+				:ref-number Plural)
+			:place (s1t/ theater
+				:ref-number Singular)
+			:aspect Performance
+			:modstr FullAff
+			:QUOT s1s))
+	:aspect Performance
+	:modstr FullAff)
+
+(s/ sentence
+	:temporal ((PAST_REF :contained s1s)
+		 (s1s :before s1e)
+		 (s1e :before s1a)
+		(s1s :after s1m)))
+
+
+```
+
+**Purpose clauses**
+
+Events in purpose clauses (i.e., annotated with a `:purpose` relation at the sentence level) are linked to the event in the main clause in the temporal dependency. The temporal relation between the event in the purpose clause and the main clause event is always `:after`.
+
+<span id="4-2-2-1-1 (6)" label="4-2-2-1-1 (6)">4-2-2-1-1 (6)</span>
+
+```
+He went home (in order) to wash the dishes.
+(s1g/ go-01
+	:ARG1 (s1p/ person
+		:ref-person 3rd
+		:ref-number Singular)
+	:ARG4 (s1h/ home)
+	:purpose (s1w/ wash-01
+		:ARG0 s1p
+		:ARG1 (s1d/ dish
+			:ref-number Plural)
+		:aspect Performance
 		:modstr FullAff)
 	:aspect Performance
 	:modstr FullAff)
+
+(s/ sentence
+	:temporal ((PAST_REF :contained s1g)
+		 (s1g :after s1w)))
+
 ```
-
-| Events    | Modal annotation      | Temporal annotation |
-| :-------- | :-------------------- | :------------------ |
-| say       | Pos(say,AUTH)         |                     |
-| evacuate  | Pos(evacuate,LERIAS)  |                     |
-| landslide | Pos(landslide,LERIAS) |                     |
-| kill      | Pos(kill,LERIAS)      |                     |
-| return    | Pos(return,LERIAS)    |                     |
-| rain      | Pos(rain,LERIAS)      |                     |
-| stop      | Pos(stop,LERIAS)      |                     |
-| come-out  | Pos(come-out,LERIAS)  |                     |
-
-For *say*, it does not have a `:contained` relation
-with either of the time expressions (`Friday` and `earlier in the week`) in the example, so we move to step
-2. It’s also the first event in the sentence, so (assuming it can’t be
-linked to any of the events in the previous sentence), we move to step
-4. We do know that *say* occurred after the key event in the
-text, therefore we can add `(landslide_KEY :after say)` and
-move on to the next event.
-
-*Evacuate* is not necessarily `:contained` within
-either of the timexs, so we move to step 2. Since *evacuate*
-is a reported event, the reporting event, *say*, is an
-appropriate parent in the temporal dependency; we can add
-`(say :before evacuate)`.
-
-Next, we have *landslide*. Following step 1,
-*landslide* is `:contained` within the timex
-*earlier in the week*, so we add
-`(earlier_week :contained landslide)`. Then, we move to step 3
-and see if the temporal location of *landslide* can be made
-more specific by adding an event relation. The immediately preceding
-event in the text, *evacuate*, has a clear temporal relation
-and the same modal annotation as *landslide* and is therefore
-a good parent. We can add `(evacuate :before landslide)`.
-
-Then, we move on to *kill*. Like *landslide*,
-*kill* is `:contained` within the timex *earlier in
-the week*, so we can add `(earlier_week :contained kill)`.
-Then we move to step 3 and can add a relation to *landslide*:
-`(landslide :overlap kill)`.
-
-*Return* can be linked to the timex *Friday*:
-`(Friday :contained return)`. Moving to step 3, we look earlier
-in the sentence for a parent event. Both *kill* and
-*landslide* are `:contained` within a different timex, so they
-don’t make good parents. That is, by virtue of the fact that
-*return* is `:contained` on *Friday* and
-*kill* and *landslide* are `:contained`
-in *earlier in the week*, it logically falls out that
-*return* happened after both *kill* and
-*landslide*; therefore, we don’t need to annotate this
-relation. *Evacuate*, however, is not `:contained`
-within a timex and has the same modal annotation as *return*;
-so, we can add `(evacuate :after return)`.
-
-*Rain* does not have a `:contained` relation with a
-timex, so we move to step 2. *Return* makes a good parent for
-*rain* since it has the same modal annotation, so we can
-add  
-`(return :before rain)`.
-
-Finally, *come-out* also does not have a
-`:contained` relation with a timex. *rain* makes a
-good parent, since it has the same modal annotation, so we can add
-`(rain :overlap come-out)`. This gives us the full annotation
-below.
-
-| Events    | Modal annotation   | Temporal annotation                |
-| :-------- | :----------------- | :--------------------------------- |
-| say       | Pos(say,LERIAS)    | (landslide_KEY :after say)         |
-| evacuate  | Pos(evacuate,say)  | (say :before evacuate)             |
-| landslide | Pos(landslide,say) | (earlier_week :contained landslide)|
-|           |                    | (evacuate :before landslide)       |
-| kill      | Pos(kill,say)      | (earlier_week :contained kill)     |
-|           |                    | (landslide :overlap kill)          |
-| return    | Pos(return,say)    | (Friday :contained return)         |
-|           |                    | (evacuate :after return)           |
-| rain      | Pos(rain,say)      | (return :before rain)              |
-| come-out  | Pos(come-out,say)  | (rain :overlap come-out)           |
-
-[Back to Table of Contents](#toc)
 
 ##### Part 4-2-2-2. Contained or Overlap
 
@@ -6980,21 +7033,6 @@ as `:after` the causing event, and the caused event is
 annotated as following it. Therefore, *the opening of the food can
 prompted my cat to meow* is annotated as `(open :after prompt)`
 and `(prompt :after meow)`.
-
-[Back to Table of Contents](#toc)
-
-##### Part 4-2-2-4. Deontic modal events
-
-For deontics and purpose clauses, the deontic or purpose complement
-(e.g., *go* in *Mary wants to go*) is annotated with with an
-`:after` relation to the deontic predicate (here, *want*).
-This is important because it makes sure that events can be interpreted
-as deontically modalized - the modal annotation scheme itself does not
-provide for this.
-
-
-
-
 
 <!-- 1.  The term “event” is used throughout these guidelines as a
     superordinate category subsuming processes and states, as is
