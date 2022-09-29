@@ -1987,7 +1987,7 @@ Other than multi-word concepts, languages often have regular or irregular constr
                                           :ARG1-of (b / black-06)))))))
 ```
 
-<!-- we need a list of such predicates>
+<!-- we need a list of such predicates-->
 
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
