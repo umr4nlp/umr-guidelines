@@ -3189,9 +3189,9 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <tr>  
 <th>Clause Type</th>  
 <th>Predicate</th>  
-<th>ARG0</th>  
 <th>ARG1</th>  
 <th>ARG2</th>  
+<th>ARG3</th>  
 </tr>  
 <tr>  
 <td>Thetic Possession</td>  
@@ -3224,9 +3224,9 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <tr>  
 <td>Property Predication</td>  
 <td>have-mod-91</td>  
-<td>--- </td>  
 <td>theme</td>  
 <td>property</td>  
+<td>--- </td>  
 </tr> 
 <tr>  
 <td rowspan="3">Object Predication</td>  
@@ -3242,10 +3242,10 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <td>role</td>  
 </tr>  
 <tr>  
-<td>kinship-91</td>  
+<td>have-rel-role-91</td>  
 <td>theme</td>  
-<td>family member</td>  
-<td>kinship rel. </td>  
+<td>relative</td>  
+<td>relationship </td>  
 </tr>  
 <tr>  
 <td>Equational</td>  
