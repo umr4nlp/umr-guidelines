@@ -40,7 +40,7 @@
     * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
       * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles)
       	* Part 3-2-1-1. [Stage 0](#part-3-2-1-1-stage-0) 
-      		* Part 3-2-1-1-1. [Nonverbal clauses](#part-3-2-1-1-1-nonverbal-clauses)
+      		* Part 3-2-1-1-1. [Non-verbal clauses](#part-3-2-1-1-1-non-verbal-clauses)
       		* Part 3-2-1-1-2. [Valency alternations](#part-3-2-1-1-2-valency-alternations)
       	* Part 3-2-1-2. [Stage 1](#part-3-2-1-2-stage-1)
       		* Part 3-2-1-2-1. [Valency alternations](#part-3-2-1-2-1-valency-alternations)
@@ -1016,8 +1016,8 @@ My cat <u>**_loves_**</u> wet food.
 
 Other types of predicated states and entities require different
 solutions based on their function and the strategy used to express them
-in a language; we call these “nonverbal clauses”. The different
-functional types of nonverbal clauses are shown below in Table 3.
+in a language; we call these “non-verbal clauses”. The different
+functional types of non-verbal clauses are shown below in Table 3.
 
 <div id="tab:nonverbaltypes">
 
@@ -1034,7 +1034,7 @@ functional types of nonverbal clauses are shown below in Table 3.
 Table 3: Non-verbal clause types
 </div>
 
-There are four semantic types of nonverbal clauses: possession,
+There are four semantic types of non-verbal clauses: possession,
 location, property, and object. All of these occur with predicational
 information-packaging: the possessive relationship, location, property,
 or object category are predicated of the possession or theme. Possession and location are, in addition, used in a context in which the entire information is presented as ‘thetic’ or ‘all-new’ in the terms of
@@ -1049,10 +1049,10 @@ the theme is part of a category of objects (i.e., *Panda* fits within
 the category of *cat*), whereas equational sentences indicate that two
 referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
-For these nonverbal clause categories, the event identified is labelled
+For these non-verbal clause categories, the event identified is labelled
 with a special abstract UMR predicate that indicates the relevant combination of
 semantics and information-packaging. These are shown below in Table 4. Note that some of these (e.g. `have-91`, `belong-91`) look very similar to existing English PropBank predicates (`have-91` and `belong-91`, respectively). However, they are cross-linguistic abstract concepts meant to annotate the crosslinguistically stable meanings of thetic possession and predicative possession, respectively. For the labelling of participants with these
-nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses).
+non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses).
 
 <div id="tab:nonverbalpreds">
 
@@ -1086,7 +1086,7 @@ nonverbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clau
 <td>have-role-91</td>  
 </tr>  
 <tr>  
-<td>(subtypes: kinship-91; have-org-role-91)</td>  
+<td>(subtypes: have-rel-role-91; have-org-role-91)</td>  
 </tr>  
 <tr>  
 <td>equational  </td>  
@@ -1760,7 +1760,7 @@ to a discrete "non-verbal clause" function, listed in the table below. When ther
 in <a href="#3-1-3-6 (1)">(1)</a>, we assume that annotators will be able
 to recognize the type of non-verbal clause function they are dealing
 with. They should use such an abstract predicate concept as predicative core of the graph, and use the appropriate numbered argument roles as specified in
-the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
+the table (see also [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses) for more in-depth treatment of the argument structure annotation with these predicates).
 
 In constructions with predicativized arguments, such as
 <a href="#3-1-3-6 (2)">(2)</a>, once again annotators are expected to recognize the type of non-verbal clause function at hand and select the appropriate predicate. An argument concept will be identified and linked to the predicativized participant word in the sentence - the possessum *ɨara-yara* in the case of <a href="#3-1-3-6 (2)">(2)</a>. As can be seen in the example UMRs
@@ -1775,9 +1775,9 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <tr>  
 <th>Clause Type</th>  
 <th>Predicate</th>  
-<th>ARG0</th>  
 <th>ARG1</th>  
 <th>ARG2</th>  
+<th>ARG3</th>  
 </tr>  
 <tr>  
 <td>Thetic Possession</td>  
@@ -1810,9 +1810,9 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <tr>  
 <td>Property Predication</td>  
 <td>have-mod-91</td>  
-<td>--- </td>  
 <td>theme</td>  
 <td>property</td>  
+<td>--- </td>  
 </tr> 
 <tr>  
 <td rowspan="3">Object Predication</td>  
@@ -1828,10 +1828,10 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <td>role</td>  
 </tr>  
 <tr>  
-<td>kinship-91</td>  
+<td>have-rel-role-91</td>  
 <td>theme</td>  
-<td>family member</td>  
-<td>kinship rel. </td>  
+<td>relative</td>  
+<td>relationship</td>  
 </tr>  
 <tr>  
 <td>Equational</td>  
@@ -3179,9 +3179,9 @@ They loaded the boxes.
 
 [Back to Table of Contents](#toc)
 
-###### Part 3-2-1-1-1. Nonverbal clauses
+###### Part 3-2-1-1-1. Non-verbal clauses
 
-There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the nonverbal clause predicates presented above in Table 8, repeated below (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). Each nonverbal clause predicate has a set of numbered argument roles which map to the semantic roles as shown in Table 8.
+There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the non-verbal clause predicates presented above in Table 8, repeated below (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). Each non-verbal clause predicate has a set of numbered argument roles which map to the semantic roles as shown in Table 8.
 
 <div id="tab:nonverbal_arguments">
 
@@ -3262,7 +3262,7 @@ Table 8: Argument structure of non-verbal clause predicates
 
 The argument that can be predicativized in languages using the predicativized-argument strategy is always
 the argument role with the highest number. The examples in <a href="#3-2-1-1-1 (1)">(1)</a> show how
-nonverbal clauses are annotated with participant roles. Note that these
+non-verbal clauses are annotated with participant roles. Note that these
 annotations will be the same at every stage of the road map.
 
 <span id="3-2-1-1-1 (1)">3-2-1-1-1 (1)</span>
@@ -3721,7 +3721,7 @@ He teased the boy about his hat.
 	:modstr FullAff)
 ```
 
-Since the nonverbal clause functions require the use of lexicalized predicates at Stage 0, these are annotated in the same way at Stage 1 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses)). Unlike Stage 0, implicit participants are
+Since the non-verbal clause functions require the use of lexicalized predicates at Stage 0, these are annotated in the same way at Stage 1 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses)). Unlike Stage 0, implicit participants are
 annotated for their semantic role at Stage 1. This is shown in
 <a href="#3-2-1-2 (2)">(2)</a>.
 
@@ -5410,7 +5410,7 @@ pie*); these events should continue on to the next step.
 The next step assesses whether the event is a
 ```state```. The distinction between states and
 processes is necessary for event identification (as states are only
-identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the nonverbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
+identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the non-verbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
 
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">3-3-1-3 (1)</span>
@@ -7981,7 +7981,7 @@ complement event node in the full dependency structure.
  		
  	* Annotate the **participants** of the top node - these can be both entities and events.
  		* For each participant, select the correct **role/relation** from the "roles" drop-down menu:
- 			* If the top node is an **abstract concept predicate**, use the appropriate **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
+ 			* If the top node is an **abstract concept predicate**, use the appropriate **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
  			* If the top node is a **sense-disambiguated lexicalized concept** with frame files, use the relevant **numbered argument roles** (see [Part 3-1-4](#part-3-1-4-word-senses)).
  			* If the top node is a **lexical event concept without frame files**, use the relevant **general participant roles** ([Part 3-2-1-1](#part-3-2-1-1-stage-0)).
  			* For **circumstantial participants** (e.g. temporal and spatial roles, conditions etc.), use the relevant **general participant roles** (see [Part 3-2-1-1](#part-3-2-1-1-stage-0)).
@@ -8006,7 +8006,7 @@ complement event node in the full dependency structure.
  		* **Repeat** these steps for every node you have added that corresponds to an **event concept**.
  	* Annote the **modifiers** of each participant.
  		* If a participant is modified by a **property concept**, either:
-	 		* Annotate it with an **:ARG1-of** relation to the **have-mod-91** predicate, and complete the argument structure of this predicate (see [Part 3-2-1-1-1](#part-3-2-1-1-1-nonverbal-clauses), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+	 		* Annotate it with an **:ARG1-of** relation to the **have-mod-91** predicate, and complete the argument structure of this predicate (see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
 	 		* Select the **:mod** relation from the "roles" drop-down menu, highlight the modifier word token in the sentence, and add it to the graph using the "Lexicalized Concept" button.
  		* If a participant is modified by an **event concept** (e.g. a relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by an **object concept**:
