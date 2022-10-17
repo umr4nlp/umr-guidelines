@@ -1731,11 +1731,11 @@ this	young.man	shaman
 'This young man is a shaman.'
 
 (h/ have-role-91						(h/ have-role-91
-    :ARG0 (k/ kunumi 'young man'				    :ARG0 (m/ man
+    :ARG1 (k/ kunumi 'young man'				    :ARG1 (m/ man
     	:mod (a/ ajan 'this')						:mod (y/ young)
 	:ref-number Singular)						:mod (t/ this)						
-    :ARG2 (t/ tsumi 'shaman')						:ref-number Singular)	
-    :aspect State						    :ARG2 (s/ shaman)
+    :ARG3 (t/ tsumi 'shaman')						:ref-number Singular)	
+    :aspect State						    :ARG3 (s/ shaman)
     :modstr FullAff)						    :aspect State
     								    :modstr Aff)
 ```
@@ -1747,10 +1747,10 @@ Miguel-CER	canoe-owner
 'Miguel does have a canoe.' lit. 'Miguel is a canoe-owner.'
 
 (h/ have-91							(h/ have-91
-    :ARG0 (p/ person						    :ARG0 (p/ person
+    :ARG1 (p/ person						    :ARG1 (p/ person
     	:name (n/ name :op1 "Mijiri")					:name (n/ name :op1 "Miguel")
 	:ref-number Singular)					    	:ref-number Singular)
-    :ARG1 (a/ ɨarayara 'canoe')					    :ARG1 (c/ canoe)
+    :ARG2 (a/ ɨarayara 'canoe')					    :ARG2 (c/ canoe)
     :aspect State						    :aspect State
     :modstr FullAff)						    :modstr FullAff)
 ```
@@ -3276,9 +3276,9 @@ Miguel-CER  canoe-owner
 ‘Miguel does have a canoe.’ (Lit. ‘Miguel is a canoe-owner’)
 
 (h/ have-91
-	:ARG0 (p/ person
+	:ARG1 (p/ person
 		:name (n/ name :op1 "Mijiri")) 
-	:ARG1 (i/ ɨarayara ‘canoe’
+	:ARG2 (i/ ɨarayara ‘canoe’
 		:ref-number Singular)
 	:aspect State
 	:modstr FullAff) 
@@ -3289,9 +3289,9 @@ Possession - English <br />
 The dog belongs to the teacher.  
   
 (b/ belong-91
-	:ARG0 (d/ dog
+	:ARG1 (d/ dog
 		:ref-number Singular) 
-	:ARG1 (t/ teacher
+	:ARG2 (t/ teacher
 		:ref-number Singular)
 	:aspect State
 	:modstr FullAff) 
@@ -3301,9 +3301,9 @@ The dog belongs to the teacher.
 On the rock was a symbol.  
   
 (e/ exist-91
-	:ARG0 (r/ rock
+	:ARG1 (r/ rock
 		:ref-number Singular)
-	:ARG1 (s/ symbol
+	:ARG2 (s/ symbol
 		:ref-number Singular)
 	:aspect State
 	:modstr FullAff)  
@@ -3315,9 +3315,9 @@ Location - Yabem (Dempwolff 1939) <br />
 house 3SG-be.at village  
 ‘The house is in the village.’
 (h/ have-location-91
-	:ARG0 (a/ àndu ‘house’
+	:ARG1 (a/ àndu ‘house’
 		:ref-number Singular)
-	:ARG1 (m/ malac ‘village’
+	:ARG2 (m/ malac ‘village’
 		:ref-number Singular)
 	:aspect State
 	:modstr FullAff)
@@ -3339,10 +3339,10 @@ ajan kunumi 	tsumi
 this young.man 	shaman  
 ‘This young man is a shaman.’
 (h/ have-role-91
-	:ARG0 (k/ kunumi ‘young man’
+	:ARG1 (k/ kunumi ‘young man’
 		:mod (a/ ajan 'this')
 		:ref-number Singular)
-	:ARG2 (t/ tsumi ‘shaman’)
+	:ARG3 (t/ tsumi ‘shaman’)
 	:aspect State
 	:modstr FullAff)  
 ```
@@ -3350,10 +3350,10 @@ this young.man 	shaman
 ```
 She is the winner.  
 (i/ identity-91
-	:ARG0 (p/ person
+	:ARG1 (p/ person
 		:ref-person 3rd
 		:ref-number Singular) 
-	:ARG1 (p2/ person
+	:ARG2 (p2/ person
 		:ARG0-of (w/ win-01))
 	:aspect State
 	:modstr FullAff)
