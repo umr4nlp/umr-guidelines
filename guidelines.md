@@ -2569,15 +2569,17 @@ the first event (Croft, to appear). UMR handles this meaning through a ```:subtr
 ```
 People don't own tigers, except for Joe Exotic.
 (o/ own-01
-	:ARG0 (p/ person)
+	:polarity -
+	:ARG0 (p/ person
+		:refer-person Plural)
 	:ARG1 (t/ tiger
 		:ref-number Plural)
 	:subtraction (p2/ person
 		:name (n/ name
 			:op1 "Joe"
 			:op2 "Exotic"))
-	:aspect State
-	:modstr FullNeg)
+	:Aspect State
+	:MODSTR FullNeg)
 ```
 
 Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice, annotated in UMR using the ```but-91``` abstract concept and ```:ARG1``` and ```:ARG2``` argument roles. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
