@@ -139,9 +139,9 @@ The document-level representation also includes a list of modal dependencies. Th
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 
 (i/ identity-91
-     :ARG0 (p/ person :wiki "Edmond_Pope"
+     :ARG1 (p/ person :wiki "Edmond_Pope"
      	:name (n/ name "op1 "Pope))
-     :ARG1 (b/ businessman
+     :ARG2 (b/ businessman
 	:mod (n2/ nationality :wiki "United_States"
 	   :name (n3/ name :op1 "America")))
 	:ARG1-of (c/ convict-01
@@ -222,10 +222,10 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 (p/ pardon-01
       :ARG0 (p2/ person :wiki "Vladimir_Putin"
             :name (n/ name :op1 "Vladimir" :op2 "Putin")
-            :ARG0-of (h/ have-org-role-91
-                  :ARG1 (c/ country :wiki "Russia"
+            :ARG1-of (h/ have-org-role-92
+                  :ARG2 (c/ country :wiki "Russia"
                         :name (n2/ name :op1 "Russia"))
-                  :ARG2 (p3/ president)))
+                  :ARG3 (p3/ president)))
       :ARG1 (p4/ person
       	    :ref-person 3rd
 	    :ref-number Singular)
@@ -288,9 +288,9 @@ Snt6: He will spend the next several days at the medical center there before he 
 	    :ARG4 (h/ home)
 	    :companion (p2/ person :wiki -
 	       :name (n2/ name :op1 "Sherry")
-	       :ARG0-of (h2/ have-role-91
-	          :ARG1 p
-		  :ARG2 (w/ wife)))
+	       :ARG1-of (h2/ have-role-91
+	          :ARG2 p
+		  :ARG3 (w/ wife)))
 	    :aspect Performance
 	    :modstr FullAff))
       :place (c/ center
@@ -386,8 +386,8 @@ The *examine-01* event will happen after the DCT. The *await-01* event happened 
 Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blood pressure.
 (s/ say-01
       :ARG0 (p/ person
-            :ARG0-of (h/ have-org-role-91
-                  :ARG2 (s2/ spokeswoman))
+            :ARG1-of (h/ have-org-role-92
+                  :ARG3 (s2/ spokeswoman))
 	    :ref-number Singular)
       :ARG1 (s3/ suffer-01
             :ARG0 (p2/ person :wiki "Edmond_Pope"
@@ -676,7 +676,7 @@ that literally means *exist*, an abstract concept predicate node
 `have-91` is introduced rather than a language specific `enyetnema-00`
 concept. This way, possessive constructions across the world's languages
 can be annotated in consistent and comparable ways regardless of the
-morphosyntactic strategies they use (see [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses) for more
+morphosyntactic strategies they use (see [Part 3-1-3-6](#Part-3-1-3-6-Non-verbal-clauses) for more
 information on such "non-verbal clauses").
 
 <span id="2-2-3 (1)">2-2-3 (1)</span>
@@ -685,10 +685,10 @@ an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 2/3F-exist-DECL		1SG:PRO	cow-old		1SG-POS
 'I have a book.' lit. 'My book exists.'
 (h/ have-91
-	:ARG0 (p/ person
+	:ARG1 (p/ person
 		:ref-person 1st
 		:ref-number Singular)
-	:ARG1 (v/ vakkahak 'book')
+	:ARG2 (v/ vakkahak 'book')
 	:aspect State
 	:modstr FullAff)
 ```
@@ -1051,7 +1051,7 @@ referents are the same (i.e., *Panda* is the same referent as *my cat*).
 
 For these non-verbal clause categories, the event identified is labelled
 with a special abstract UMR predicate that indicates the relevant combination of
-semantics and information-packaging. These are shown below in Table 4. Note that some of these (e.g. `have-91`, `belong-91`) look very similar to existing English PropBank predicates (`have-91` and `belong-91`, respectively). However, they are cross-linguistic abstract concepts meant to annotate the crosslinguistically stable meanings of thetic possession and predicative possession, respectively. For the labelling of participants with these
+semantics and information-packaging. These are shown below in Table 4. Note that some of these (e.g. `have-91`, `belong-91`) look very similar to existing English PropBank predicates (`have-03` and `belong-01`, respectively). However, they are cross-linguistic abstract concepts meant to annotate the crosslinguistically stable meanings of thetic possession and predicative possession, respectively. For the labelling of participants with these
 non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses).
 
 <div id="tab:nonverbalpreds">
@@ -1086,7 +1086,7 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 <td>have-role-91</td>  
 </tr>  
 <tr>  
-<td>(subtypes: have-rel-role-91; have-org-role-91)</td>  
+<td>(subtypes: have-rel-role-92; have-org-role-92)</td>  
 </tr>  
 <tr>  
 <td>equational  </td>  
@@ -1202,9 +1202,9 @@ Following AMR, each named entity in a text is annotated with a type. However, th
 <span id="3-1-2 (1)">3-1-2 (1)</span> Edmond Pope is an American businessman.
 ```
 (h/ have-role-91
-      :ARG0 (p/ person :wiki "Edmond_Pope"
+      :ARG1 (p/ person :wiki "Edmond_Pope"
             :name (n/ name :op1 "Edmund" :op2 "Pope"))
-      :ARG2 (b/ businessman
+      :ARG3 (b/ businessman
       	    :mod (n2/ nationality :wiki "United_States"
 	          :name (n3/ name :op1 "America")))
       :aspect State
@@ -1436,8 +1436,8 @@ by the verb root.
 (d/ drink
     :cause (m/ make
     	:actor (p/ person
-	    :ARG0-of (h/ have-rel-role-91
-		 :ARG2 (g/ grandmother))
+	    :ARG1-of (h/ have-rel-role-92
+		 :ARG3 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
 	:modstr FullAff)
@@ -1452,8 +1452,8 @@ by the verb root.
 (d/ drink
     :cause (m/ make
     	:actor (p/ person
-	    :ARG0-of (h/ have-rel-role-91
-		 :ARG2 (g/ grandmother))
+	    :ARG1-of (h/ have-rel-role-92
+		 :ARG3 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
 	:modstr FullNeg)
@@ -1469,8 +1469,8 @@ by the verb root.
 (d/ drink
     :cause (m/ make
     	:actor (p/ person
-	    :ARG0-of (h/ have-rel-role-91
-		 :ARG2 (g/ grandmother))
+	    :ARG1-of (h/ have-rel-role-92
+		 :ARG3 (g/ grandmother))
 	    :ref-number Singular)
     	:aspect Performance
 	:modstr FullAff)
@@ -1496,8 +1496,8 @@ grandmother	drink-CAUS	kid=PST		water-INST
 'Grandmother made the kid drink the water.'
 (k/ kuratata 'make drink'
     :causer (p/ person
-    	:ARG0-of (h/ have-rel-role-91
-		:ARG2 (n/ nai 'grandmother'))
+    	:ARG1-of (h/ have-rel-role-92
+		:ARG3 (n/ nai 'grandmother'))
 	:ref-number Singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
@@ -1704,7 +1704,7 @@ the verb may contribute to the aspectual attribute of the concept.
 ##### Part 3-1-3-6. Non-verbal clauses
 
 Many types of "non-verbal clauses", such as predicate nominals and
-predication of properties, possession, and location (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) for the predicates UMR predicates that are used to annotate these meanings), show different
+predication of properties, possession, and location (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) for the UMR predicates that are used to annotate these meanings), show different
 mappings between concepts and words across languages. According to typological studies by Stassen (1997, 2009), Heine (1997), and Creissels (2019), there are three cross-linguistically common strategies for the expression of such meanings. English uses an
 easily identifiable "verbal" predicate with argument NPs, as seen in the
 English translational equivalents of the Kukama examples in
@@ -1778,12 +1778,16 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <th>ARG1</th>  
 <th>ARG2</th>  
 <th>ARG3</th>  
+<th>ARG4</th>  
+<th>ARG5</th>  
 </tr>  
 <tr>  
 <td>Thetic Possession</td>  
 <td>have-91</td>  
 <td>possessor</td>  
 <td>possessum</td>  
+<td>---</td>  
+<td>---</td>  
 <td>---</td>  
 </tr>  
 <tr>  
@@ -1792,12 +1796,16 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <td>possessum</td>  
 <td>possessor</td>  
 <td>---</td>  
+<td>---</td>  
+<td>---</td>  
 </tr>  
 <tr>  
 <td>Thetic Location</td>  
 <td>exist-91</td>  
 <td>location</td>  
 <td>theme </td>  
+<td>---</td>  
+<td>---</td>  
 <td>---</td>  
 </tr> 
 <tr>  
@@ -1806,6 +1814,8 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <td>theme</td>  
 <td>location</td>  
 <td>---</td>  
+<td>---</td>  
+<td>---</td>  
 </tr>  
 <tr>  
 <td>Property Predication</td>  
@@ -1813,31 +1823,41 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 <td>theme</td>  
 <td>property</td>  
 <td>--- </td>  
+<td>---</td>  
+<td>---</td>  
 </tr> 
 <tr>  
 <td rowspan="3">Object Predication</td>  
 <td>have-role-91</td>  
 <td>theme</td>  
 <td>reference point</td>  
-<td>object category</td>  
+<td>object category, arg1</td>  
+<td>object category, arg2</td>  
+<td>---</td>  
 </tr>  
 <tr>  
-<td>have-org-role-91</td>  
+<td>have-org-role-92</td>  
 <td>theme</td>  
 <td>organization</td>  
-<td>role</td>  
+<td>title of role</td>  
+<td>job description</td>  
+<td>---</td>  
 </tr>  
 <tr>  
-<td>have-rel-role-91</td>  
+<td>have-rel-role-92</td>  
 <td>theme</td>  
 <td>relative</td>  
-<td>relationship</td>  
+<td>theme's role</td>  
+<td>relative's role</td>  
+<td>relationship basis</td>  
 </tr>  
 <tr>  
 <td>Equational</td>  
 <td>identity-91</td>  
 <td>theme</td>  
 <td>equated referent</td>  
+<td>---</td>  
+<td>---</td>  
 <td>---</td>  
 </tr>  
 </table>
@@ -1997,8 +2017,8 @@ Other than multi-word concepts, languages often have regular or irregular constr
 <span id="3-1-4 (1)">3-1-4 (1)</span> The school has approximately 570 pupils.
 ``` 
 (h/ have-91
-      :ARG0 (s/ school)
-      :ARG1 (p/ pupil
+      :ARG1 (s/ school)
+      :ARG2 (p/ pupil
             :quant (a/ approximately :op1 570))
       :aspect State
       :modstr FullAff)
@@ -2011,7 +2031,7 @@ There will even be many VIPs!
 (x/ and
       :op2 (e/ exist-91
             :mod (x2/ 还)
-            :ARG1 (x3/ 人物
+            :ARG2 (x3/ 人物
                    :mod (x4/ 高层)
                    :quant (x5/ 很多))
             :mode Expressive
@@ -2153,16 +2173,16 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 'Is he here or isn't he?'
 (e/ exclusive-disj
    :op1 (h/ have-location-91
-   	:ARG0 (p/ person
+   	:ARG1 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
-	:ARG1 (p2/ place)
+	:ARG2 (p2/ place)
 	:aspect State
 	:modstr NeutAff
 	:mode Interrogative)
    :op2 (h2/ have-location-91
-   	:ARG0 p 
-	:ARG1 p2
+   	:ARG1 p 
+	:ARG2 p2
 	:aspect State
 	:modstr NeutNeg
 	:polarity -
@@ -3183,7 +3203,7 @@ They loaded the boxes.
 
 ###### Part 3-2-1-1-1. Non-verbal clauses
 
-There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the non-verbal clause predicates presented above in Table 8, repeated below (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)). Each non-verbal clause predicate has a set of numbered argument roles which map to the semantic roles as shown in Table 8.
+There is a small set of predicates that use lexicalized roles at all stages of the road map; therefore, frame files for these predicates are created at Stage 0 annotation. These are the non-verbal clause predicates presented above in Table 8, repeated below (see also [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and [Part 3-1-3-6](#Part-3-1-3-6-Non-verbal-clauses)). Each non-verbal clause predicate has a set of numbered argument roles which map to the semantic roles as shown in Table 8.
 
 <div id="tab:nonverbal_arguments">
 
@@ -3194,12 +3214,16 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <th>ARG1</th>  
 <th>ARG2</th>  
 <th>ARG3</th>  
+<th>ARG4</th>  
+<th>ARG5</th>  
 </tr>  
 <tr>  
 <td>Thetic Possession</td>  
 <td>have-91</td>  
 <td>possessor</td>  
 <td>possessum</td>  
+<td>---</td>  
+<td>---</td>  
 <td>---</td>  
 </tr>  
 <tr>  
@@ -3208,12 +3232,16 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <td>possessum</td>  
 <td>possessor</td>  
 <td>---</td>  
+<td>---</td>  
+<td>---</td>  
 </tr>  
 <tr>  
 <td>Thetic Location</td>  
 <td>exist-91</td>  
 <td>location</td>  
 <td>theme </td>  
+<td>---</td>  
+<td>---</td>  
 <td>---</td>  
 </tr> 
 <tr>  
@@ -3222,6 +3250,8 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <td>theme</td>  
 <td>location</td>  
 <td>---</td>  
+<td>---</td>  
+<td>---</td>  
 </tr>  
 <tr>  
 <td>Property Predication</td>  
@@ -3229,31 +3259,41 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 <td>theme</td>  
 <td>property</td>  
 <td>--- </td>  
+<td>---</td>  
+<td>---</td>  
 </tr> 
 <tr>  
 <td rowspan="3">Object Predication</td>  
 <td>have-role-91</td>  
 <td>theme</td>  
 <td>reference point</td>  
-<td>object category</td>  
+<td>object category, arg1</td>  
+<td>object category, arg2</td>  
+<td>---</td>  
 </tr>  
 <tr>  
-<td>have-org-role-91</td>  
+<td>have-org-role-92</td>  
 <td>theme</td>  
 <td>organization</td>  
-<td>role</td>  
+<td>title of role</td>  
+<td>job description</td>  
+<td>---</td>  
 </tr>  
 <tr>  
-<td>have-rel-role-91</td>  
+<td>have-rel-role-92</td>  
 <td>theme</td>  
 <td>relative</td>  
-<td>relationship </td>  
+<td>theme's role</td>  
+<td>relative's role</td>  
+<td>relationship basis</td>  
 </tr>  
 <tr>  
 <td>Equational</td>  
 <td>identity-91</td>  
 <td>theme</td>  
 <td>equated referent</td>  
+<td>---</td>  
+<td>---</td>  
 <td>---</td>  
 </tr>  
 </table>
@@ -3415,8 +3455,8 @@ grandmother 	drink-CAUS	kid=PST 	water=INS
 ‘Grandmother made the kid drink the water.’
 (k/ kuratata 'make drink'
     :causer (p/ person
-    	:ARG0-of (h/ have-rel-role-91
-		:ARG2 (n/ nai 'grandmother'))
+    	:ARG1-of (h/ have-rel-role-92
+		:ARG3 (n/ nai 'grandmother'))
 	:ref-number Singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
@@ -3474,11 +3514,11 @@ that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	gi
 man who had asked her in matrimony) even though she doesn’t want to...’
 (m/ menima-00 'make give'
 	:causer (p/ person
-		:ARG0-of (h/ have-rel-role-91
-			:ARG1 (x/ xontako 'unmarried girl'
+		:ARG1-of (h/ have-rel-role-92
+			:ARG2 (x/ xontako 'unmarried girl'
 				:mod (j/ ja 'that')
 				:ref-number Singular)
-			:ARG2 (t/ titan 'mother'))
+			:ARG3 (t/ titan 'mother'))
 			:ref-number Singular)
 	:actor x
 	:theme (x2/ xoi 'roasted meat/fish')
@@ -3693,13 +3733,13 @@ Table 11: Argument structure of valency alternations
 
 The Stage 1 participant role annotation requires access to
 PropBank-style frame files in the language for a large number of
-predicates. At this stage, each predicate identified as event is linked
+predicates. At this stage, each predicate identified as an event is linked
 to its corresponding frame file. The participants dependent on that
 event are annotated with the lexicalized roles, as determined by the
 frame file. This can be seen in <a href="#3-2-1-2 (1)">(1)</a> below.  
 
 ```
-predicate: tease.02
+predicate: tease-02
 	roles:
 	ARG0: teaser
 	ARG1: teased 
@@ -3711,7 +3751,7 @@ predicate: tease.02
 ```
 He teased the boy about his hat.
 
-(t/ tease.02
+(t/ tease-02
 	:ARG0 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
@@ -3855,7 +3895,7 @@ I bought the sweater that you saw.
 	:modstr FullAff)
 ```
 
-One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `have-rel-role-91, have-org-role-91`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in <a href="#3-2-1-3 (3)">(3)</a>.
+One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `have-rel-role-92, have-org-role-92`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in <a href="#3-2-1-3 (3)">(3)</a>.
   
 <span id="3-2-1-3 (3)">3-2-1-3 (3)</span> 
 
@@ -3867,9 +3907,9 @@ I met my father.
 		:ref-person 1st
 		:ref-number Singular)
 	:ARG1 (p2/ person
-		:ARG0-of (h/ have-rel-role-91
-			:ARG1 p
-			:ARG2 (f/ father)))
+		:ARG1-of (h/ have-rel-role-92
+			:ARG2 p
+			:ARG3 (f/ father)))
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3881,8 +3921,8 @@ I met the President of the University of New Mexico.
 		:ref-person 1st
 		:ref-number Singular)
 	:ARG1 (p2/ person
-		:ARG0-of (h/ have-org-role-91
-			:ARG1 (a/ academic_organization
+		:ARG1-of (h/ have-org-role-92
+			:ARG2 (a/ academic_organization
 				:name (n/ name
 					:op1 "University
 					:op2 "of"
@@ -4838,7 +4878,7 @@ Friday the 13th
 
   ##### Part 3-2-2-2. Modifiers
 
-Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers of some sort within an NP. Semantically, modification relations in referring expressions come in two kinds: anchoring and typifying (Croft, to appear). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to them). As described in [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles), kinship relations are annotated through the `have-rel-role-91` predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses `:poss` and `:part` relations with the possessum or part as the parent and the possessor or whole as the daughter, as in <a href="#3-2-2-1 (1)">(1)</a>.
+Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers of some sort within an NP. Semantically, modification relations in referring expressions come in two kinds: anchoring and typifying (Croft, to appear). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to them). As described in [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles), kinship relations are annotated through the `have-rel-role-92` predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses `:poss` and `:part` relations with the possessum or part as the parent and the possessor or whole as the daughter, as in <a href="#3-2-2-1 (1)">(1)</a>.
 
 <span id="3-2-2-2 (1)" label="3-2-2-2 (1)">3-2-2-2 (1)</span> 
 
@@ -5444,9 +5484,9 @@ The doctor is tall.
 ```
 The book is on the table.
 (h/ have-location-91
-	:ARG0 (b/ book
+	:ARG1 (b/ book
 		:ref-number Singular)
-	:ARG1 (t/ table)
+	:ARG2 (t/ table)
 	:aspect State
 	:modstr FullAff)  
 ```
@@ -5454,10 +5494,10 @@ The book is on the table.
 ```
 She is an architect.
 (h/ have-role-91
-	:ARG0 (p/ person
+	:ARG1 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
-	:ARG2 (a/ architect)
+	:ARG3 (a/ architect)
 	:aspect State
 	:modstr FullAff) 
 ```
@@ -5465,11 +5505,11 @@ She is an architect.
 ```
 Your glass is in the kitchen.
 (h/ have-location-91 
-	:ARG0 (g/ glass
+	:ARG1 (g/ glass
 		:poss (p/ person
 			:ref-person 2nd
 			:ref-number Singular))
-	:ARG1 (k/ kitchen)
+	:ARG2 (k/ kitchen)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -6245,9 +6285,9 @@ For the UMR corereference annotation, we first need to answer two questions. The
 ```
 Snt2: Pope is the American businessman who was convicted last week on spying charges and sentenced to 20 years in a Russian prison.
 (i/ identity-91
-     :ARG0 (p/ person :wiki "Edmond_Pope"
+     :ARG1 (p/ person :wiki "Edmond_Pope"
      	:name (n/ name "op1 "Pope))
-     :ARG1 (b/ businessman
+     :ARG2 (b/ businessman
 	:mod (n2/ nationality :wiki "United_States"
 	   :name (n3/ name :op1 "America")))
 	:ARG1-of (c/ convict-01
@@ -6450,7 +6490,7 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
 ```
 The loan, a sum of 12.5 million US dollars, is an export credit **provided** to the Three Gorges project by the Canadian government, which will be used mainly for the management system of the Three Gorges project.
 (i/ identity-91
-	:ARG0 (t/ thing
+	:ARG1 (t/ thing
 		:ARG1-of (l/ loan)
 		:ARG0-of (i2/ identity
 			:ARG1 (m/ monetary-quantity
@@ -6459,7 +6499,7 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 					:mod (c/ country
 						:wiki "United_States"
 						:name (n/ name :op1 "US"))))))
-	:ARG1 (c2/ credit
+	:ARG2 (c2/ credit
 		:mod (e/ export-01)
 		:ARG1-of (p/ provide
 			:ARG0 (g/ government-organization
@@ -6533,8 +6573,8 @@ The arrests were ordered by anti-terrorism judge fragnoli.
 	    	:op1 "Fragnoli")
             :ARG0-of (o2/ oppose-01
                   :ARG1 (t/ terrorism))
-            :ARG0-of (h/ have-role-91
-                  :ARG2 (j/ judge-01)))
+            :ARG1-of (h/ have-role-91
+                  :ARG3 (j/ judge-01)))
       :ARG2 (a/ arrest-01
       	    :aspect Process
 	    :quot o)
@@ -8013,7 +8053,7 @@ complement event node in the full dependency structure.
  		* If a participant is modified by an **event concept** (e.g. a relative clause), annotate it with an **inverse numbered or general participant role** to this event concept, and complete the argument structure of this predicate (see [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by an **object concept**:
  			* Annotate it with the **:mod** relation or one of its more fine-grained sub-relations if it is a **typifying modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
- 			* Annotate it with the **:poss**, **:part**, or **:ARG0-of (k/ have-rel-role-91)** relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
+ 			* Annotate it with the **:poss**, **:part**, or **:ARG0-of (k/ have-rel-role-92)** relations if it is an **anchoring modifier** (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles)).
  		* If a participant is modified by a **quantifier**, annotate it with the **:quant** relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
  		* If a participant is a **named entity**, apply the **:name** and **:wiki** relations to the appropriate named entity category concept node, if you have not done so yet (see [Part 3-1-2](#part-3-1-2-named-entities)).
  	* Annotate **attributes** of participants and events.
