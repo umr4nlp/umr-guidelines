@@ -1233,7 +1233,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 |                  | religious-group     |                  |
 |                  | clan              	|                  |
 |                  | organization        | international_organization, business, company, government_organization, political_organization, criminal_organization,  armed_organization, academic_organization, association, sports_organization, religious_organization |
-| geographic_entity | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley,  canyon, island, desert, forest |  |
+| geographic_entity | ocean, sea, lake, river, gulf, bay, strait,  peninsula, mountain, volcano, valley,  canyon, island, desert, forest |  |
 |  celestial-body   | moon, planet, star, constellation |   |
 | region           | local-region, country-region, world-region |   |
 |  geo-political-entity             |city, city-district, county, state, province, territory, country|  |
