@@ -444,7 +444,8 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 
 * Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
 * Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word *taste* in the English PropBank.
-* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when multi-word concepts should be formed will be determined on a language-by-language basis.
+* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when 
+mulit-word concepts should be formed will be determined on a language-by-language basis.
 * Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
 * Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond to any particular word in the sentence, hence it is an *abstract* concept (e.g. `ordinal-entity`).
 
@@ -1966,7 +1967,9 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
 <span id="3-1-3-7 (2b)">3-1-3-7 (2b)</span> 我 把 锤子 、 螺钉 、 饥渴 、 死亡 ， 全都 抛在 脑 后 。
 ```
 (x0 / 抛在脑后-01
-      :arg0  (x2 / 我)
+      :arg0  (x2 / individual-person
+                 :ref-person 1st
+		 :ref-number Singular)
       :arg1  (x3 / and
             :op1  (x4 / 锤子)
             :op2  (x5 / 螺钉)
