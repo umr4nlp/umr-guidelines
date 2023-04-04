@@ -1025,7 +1025,7 @@ functional types of non-verbal clauses are shown below in Table 3.
 | **Semantics** | **Information-packaging** | **Example**                     |
 | :------------ | :------------------------ | :------------------------------ |
 | possession    | thetic/presentational     | The teacher has a dog.          |
-| possession    | predicational             | The dog is the teacher's. |
+| possession    | predicational             | The dog is the teacher's.       |
 | location      | thetic/presentational     | On the rock was a symbol.       |
 | location      | predicational             | The symbol was on the rock.     |
 | property      | predicational             | The cat is black.               |
@@ -3336,8 +3336,9 @@ The dog is the teacher's.
 (b/ belong-91
 	:ARG1 (d/ dog
 		:ref-number Singular) 
-	:ARG2 (t/ teacher
-		:ref-number Singular)
+	:ARG2 (p/ person
+		:ref-number Singular
+		:ARG0-of (t / teach-01))
 	:aspect State
 	:modstr FullAff) 
 ```
