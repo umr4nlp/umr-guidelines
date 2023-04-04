@@ -1025,7 +1025,7 @@ functional types of non-verbal clauses are shown below in Table 3.
 | **Semantics** | **Information-packaging** | **Example**                     |
 | :------------ | :------------------------ | :------------------------------ |
 | possession    | thetic/presentational     | The teacher has a dog.          |
-| possession    | predicational             | The dog belongs to the teacher. |
+| possession    | predicational             | The dog is the teacher's. |
 | location      | thetic/presentational     | On the rock was a symbol.       |
 | location      | predicational             | The symbol was on the rock.     |
 | property      | predicational             | The cat is black.               |
@@ -3331,7 +3331,7 @@ Miguel-CER  canoe-owner
 <span id="3-2-1-1-1 (1b)">3-2-1-1-1 (1b)</span> Predicative
 Possession - English <br />
 ```
-The dog belongs to the teacher.  
+The dog is the teacher's.  
   
 (b/ belong-91
 	:ARG1 (d/ dog
