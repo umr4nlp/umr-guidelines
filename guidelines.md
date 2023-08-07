@@ -5245,7 +5245,7 @@ to judge in annotation. This aspect lattice is shown below.
 Below are the aspect values with a brief definition.
 
 ```habitual```: occurs/occurred usually or habitually  
-```imperfective```: ambiguous between state and process  
+```imperfective```: ambiguous between state and atelic process  
 ```process```: unspecified type of process  
 ```atelic process```: process that does not reach a result state  
 ```perfective```: process that comes to an end  
