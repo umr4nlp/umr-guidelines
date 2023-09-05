@@ -5449,7 +5449,7 @@ In English, present habitual events are signalled by the Simple Present
 construction; past tense habitual events are expressed with the *used
 to* construction. Note that the ```habitual```
 annotation is not used for ability modals (e.g., *he can bake apple
-pie*); these events should continue on to the next step.
+pie*); see example [3-3-1-3 (3)](#3-3-1-3 (3)) for handling ability modals.
 
 [Back to Table of Contents](#toc)
 ##### Part 3-3-1-3. State
