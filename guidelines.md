@@ -171,7 +171,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
     :temporal((DCT :depends-on s2w)
     	      (s2w :contained s2c)
 	      (s2w :contained s2s2)
-	      (s2c :after s2s))
+	      (s2c :before s2s))
     :modal((AUTH :FullAff s2i)
       	   (AUTH :FullAff s2c)
 	   (AUTH :FullAff NULL_CHARGER)
@@ -179,7 +179,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	   (s2c :Unsp s2s)
     :coref(s1p :same-entity s2p))
 ```
-<!-- should annotate coreference for nominals? if so we need to annotate "the american businessman"-->
+<!-- should annotate coreference for nominals? if so we need to annotate "the american businessman" (the question is really whether it needs to be in the doc graph in addition to the identity-91 predicate in the sent graph)-->
 
 For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
 happened *last week*, which itself depends on the DCT for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
@@ -203,8 +203,9 @@ Snt3: He denied any wrongdoing.
 (s3/ sentence
     :temporal((DCT :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :FullAff s3p)
-    	   (s3p :FullAff s3d)
+    :modal((AUTH :FullAff s3d)
+    	   (AUTH :FullAff s3p)
+           (s3p :FullNeg s3d2)
 	   (s3d :Unsp s3d2))
     :coref(s2p :same-entity s3p))
 
@@ -1076,7 +1077,7 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 </tr>  
 <tr>  
 <td>predicative location</td>  
-<td>have-location-91</td>  
+<td>have-place-91</td>  
 </tr>  
 <tr>  
 <td>property predication</td>  
@@ -1811,7 +1812,7 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 </tr> 
 <tr>  
 <td>Predicative Location</td>  
-<td>have-location-91</td>  
+<td>have-place-91</td>  
 <td>theme</td>  
 <td>location</td>  
 <td>---</td>  
@@ -2175,7 +2176,7 @@ bai-ve		ito	'a'-bai-e
 be.3SG-INTERR	EX	NEG-be.3SG-IND
 'Is he here or isn't he?'
 (e/ exclusive-disj
-   :op1 (h/ have-location-91
+   :op1 (h/ have-place-91
    	:ARG1 (p/ person
 		:ref-person 3rd
 		:ref-number Singular)
@@ -2183,7 +2184,7 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 	:aspect State
 	:modstr NeutAff
 	:mode Interrogative)
-   :op2 (h2/ have-location-91
+   :op2 (h2/ have-place-91
    	:ARG1 p 
 	:ARG2 p2
 	:aspect State
@@ -3249,7 +3250,7 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 </tr> 
 <tr>  
 <td>Predicative Location</td>  
-<td>have-location-91</td>  
+<td>have-place-91</td>  
 <td>theme</td>  
 <td>location</td>  
 <td>---</td>  
@@ -3360,7 +3361,7 @@ Location - Yabem (Dempwolff 1939) <br />
 àndu  kê-kô 	malac  
 house 3SG-be.at village  
 ‘The house is in the village.’
-(h/ have-location-91
+(h/ have-place-91
 	:ARG1 (a/ àndu ‘house’
 		:ref-number Singular)
 	:ARG2 (m/ malac ‘village’
@@ -5487,7 +5488,7 @@ The doctor is tall.
 <span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">3-3-1-3 (1c)</span>   
 ```
 The book is on the table.
-(h/ have-location-91
+(h/ have-place-91
 	:ARG1 (b/ book
 		:ref-number Singular)
 	:ARG2 (t/ table)
@@ -5508,7 +5509,7 @@ She is an architect.
 <span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">3-3-1-3 (1e)</span>   
 ```
 Your glass is in the kitchen.
-(h/ have-location-91 
+(h/ have-place-91 
 	:ARG1 (g/ glass
 		:poss (p/ person
 			:ref-person 2nd
