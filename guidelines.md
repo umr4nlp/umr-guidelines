@@ -860,7 +860,7 @@ Information packaging (also called discourse function or information
 structure), on the other hand, characterizes how a particular linguistic
 expression “packages” the semantic content. There are three fundamental
 information packaging functions: reference, modification, and
-predication. Croft (to appear)  defines them as:
+predication. Croft (2022)  defines them as:
 
 **reference**: what the speaker is talking about  
 **modification**: additional information provided about the referent  
@@ -868,7 +868,7 @@ predication. Croft (to appear)  defines them as:
 
 The three semantic types can occur with any of the three fundamental
 information packaging functions, as shown in Table
-1 from Croft (in preparation).
+1 from Croft (2022).
 
 
 <div id="tab:information_packaging">
@@ -2102,7 +2102,7 @@ When multiple events are expressed in a complex sentence, a variety of semantic 
 
 Annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination (although, as mentioned before, subordination constructions may allow for the identification of more fine-grained meanings). In the examples below, both options are illustrated wherever possible.
 
-Each discourse relation on the lattice is defined below, based on Croft (to appear, ch. 15, ch. 17).
+Each discourse relation on the lattice is defined below, based on Croft (2022, ch. 15, ch. 17).
 
 ```Disjunctive```: Construes two (or more) events as being alternatives of each other in some way. Roughly corresponds to the range of meanings expressed by English _(either) or_. UMR expresses this meaning through an abstract concept ```or``` which takes numbered ```:opX``` arguments for the construed alternatives as in <a href="#3-1-6 (1)">(1)</a>.
 
@@ -3946,7 +3946,7 @@ Table 12 below contains the general participant role annotation for the microrol
 
 As mentioned in [Part 3-2-1-1](#part-3-2-1-1-stage-0), the single participant in a monovalent event can either be annotated as <span class="smallcaps">`actor`</span> or as <span class="smallcaps">`undergoer`</span>. This distinction depends on the amount of control that the single participant has in carrying out the event. For events that are more controlled by the participant ("active" events), the participant is annotated as <span class="smallcaps">`actor`</span>; for events that are less controlled by the participant ("inactive" events), the participant is annotated as <span class="smallcaps">`undergoer`</span>. Languages that reflect this distinction in their morphosyntax (i.e., languages with active alignment) do not always draw the distinction between active events and inactive events in the same place. There is, however, a cross-linguistic organization in terms of how languages with active alignment code these events in their morphosyntax.
 
-The following semantic event classes reflect an ordering from most active to most inactive (Croft 2012; Croft to appear).
+The following semantic event classes reflect an ordering from most active to most inactive (Croft 2012; 2022).
 
 Controlled activities (ex: run)  
 Position events (ex: hang)  
