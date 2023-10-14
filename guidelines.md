@@ -1092,22 +1092,23 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 <tr>  
 <td rowspan="3">object predication</td>  
 <td>have-role-91</td> 
+<td>have-role-91</td>
 </tr>  
 <tr>  
 <td>have-rel-role-92</td>  
+<td>have-rel-role-92</td>
 </tr>  
 <tr>  
 <td>have-org-role-92</td>  
-</tr>  
-<td>have-role-91</td>
-<td>have-rel-role-92</td>
 <td>have-org-role-92</td>
+</tr>  
 <tr>  
 <td>equational  </td>  
 <td>identity-91</td>
 <td>identity-91</td>  
 </tr>  
 </table>
+
 
 Table 4: Non-verbal clause predicates
 </div>
