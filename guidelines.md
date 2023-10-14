@@ -1103,7 +1103,7 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 <td>have-org-role-92</td>
 </tr>  
 <tr>  
-<td>equational  </td>  
+<td>object equation</td>  
 <td>identity-91</td>
 <td>identity-91</td>  
 </tr>  
