@@ -1062,37 +1062,46 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 <tr>  
 <th>Clause type</th>  
 <th>UMR Predicate</th>  
+<th>If Phrasal</th>
 </tr>  
 <tr>  
 <td>thetic/presentational possession</td>  
 <td>have-91</td>
+<td>:poss</td>
 </tr>  
 <tr>  
 <td>predicative possession</td>  
 <td>belong-91</td>  
+<td>:poss</td>
 </tr>  
 <tr>  
 <td>thetic/presentational location</td>  
 <td>exist-91</td>  
+<td>:place</td>
 </tr>  
 <tr>  
 <td>predicative location</td>  
-<td>have-place-91</td>  
+<td>have-place-91</td>   
+<td>:place</td>
 </tr>  
 <tr>  
 <td>property predication</td>  
-<td>have-mod-91</td>  
+<td>have-mod-91</td>   
+<td>:mod</td>
 </tr>  
 <tr>  
-<td rowspan="2">object predication</td>  
-<td>have-role-91</td>  
+<td rowspan="3">object predication</td>  
+<td columnspan=”2”>have-role-91</td> 
 </tr>  
 <tr>  
-<td>(subtypes: have-rel-role-92; have-org-role-92)</td>  
+<td columnspan=”2”>have-rel-role-92</td>  
+</tr>  
+<tr>  
+<td columnspan=”2”>have-rel-role-92</td>  
 </tr>  
 <tr>  
 <td>equational  </td>  
-<td>identity-91</td>  
+<td columnspan=”2”>identity-91</td>  
 </tr>  
 </table>
 
