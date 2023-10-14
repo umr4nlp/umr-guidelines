@@ -1091,17 +1091,17 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 </tr>  
 <tr>  
 <td rowspan="3">object predication</td>  
-<td columnspan=”2”>have-role-91</td> 
+<td colspan=”2”>have-role-91</td> 
 </tr>  
 <tr>  
-<td columnspan=”2”>have-rel-role-92</td>  
+<td colspan=”2”>have-rel-role-92</td>  
 </tr>  
 <tr>  
-<td columnspan=”2”>have-rel-role-92</td>  
+<td colspan=”2”>have-rel-role-92</td>  
 </tr>  
 <tr>  
 <td>equational  </td>  
-<td columnspan=”2”>identity-91</td>  
+<td colspan=”2”>identity-91</td>  
 </tr>  
 </table>
 
