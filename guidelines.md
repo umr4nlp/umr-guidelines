@@ -191,7 +191,7 @@ Snt3: He denied any wrongdoing.
 (d/ deny-01
       :ARG0 (p/person
          :refer-person 3rd
-	 :ref-number Singular)
+	 :refer-number singular)
       :ARG1 (t/ thing
             :ARG1-of (d2/ do-02
                   :ARG0 p
@@ -229,7 +229,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
                   :ARG3 (p3/ president)))
       :ARG1 (p4/ person
       	    :refer-person 3rd
-	    :ref-number Singular)
+	    :refer-number singular)
       :ARG1-of (c2/ cause-01
             :ARG0 (r/ reason
                   :mod (h2/ health)))
@@ -278,7 +278,7 @@ Snt6: He will spend the next several days at the medical center there before he 
 (s/ spend-02
       :ARG0 (p/ person
          :refer-person 3rd
-	 :ref-number Singular)
+	 :refer-number singular)
       :ARG1 (t/ temporal-quantity
          :quant (s2/ several)
 	 :unit (d/ day
@@ -345,10 +345,10 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 
  (e/ examine-01
        :ARG0 (d/ doctor
-          :ref-number Plural)
+          :refer-number plural)
        :ARG1 (p/ person
           :refer-person 3rd
-	  :ref-number Singular)
+	  :refer-number singular)
        :ARG2 (s/ signal-07
           :ARG1 (c/ come-01
 	     :ARG1 (d2/ disease :wiki "Cancer"
@@ -389,7 +389,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
       :ARG0 (p/ person
             :ARG1-of (h/ have-org-role-92
                   :ARG3 (s2/ spokeswoman))
-	    :ref-number Singular)
+	    :refer-number singular)
       :ARG1 (s3/ suffer-01
             :ARG0 (p2/ person :wiki "Edmond_Pope"
 	          :name (n/ name :op1 "Pope"))
@@ -464,7 +464,7 @@ mulit-word concepts should be formed will be determined on a language-by-languag
 * Quantity: The value of a `:quant` attribute is a numerical number (see [Part 3-3-4](#part-3-3-4-quant)).
 * Value: The value of a `:value` attribute is a numerical number (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
 * Degree: The value of a `:degree` attribute is either `intensifier`, `downtoner`, or `equal` (see [Part 3-3-6](#part-3-3-6-degree)).
-* Reference: The value of a `:refer-person` or `:ref-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`) or a number feature (e.g. `Singular`, `Dual`, `Paucal`, `Plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
+* Reference: The value of a `:refer-person` or `:refer-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`, `4th`) or a number feature (e.g. `singular`, `dual`, `paucal`, `plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
 
 **UMR modal values:** UMR currently has three modal relations that are annotated at the sentence level, even though the final modal dependency structure functions at the document level:
 
@@ -486,13 +486,13 @@ UMR differs from AMR in a number of ways:
 (p/ possible-01
    :ARG0 (g/ go-01
             :ARG0 (b/ boy
-	       :ref-number Singular)))
+	       :refer-number singular)))
 ```
 <span id="2 (2b)">2 (2b)</span>
 ```
 (g/ go-01
     :ARG0 (b/ boy
-    	:ref-number Singular)
+    	:refer-number singular)
     :aspect State
     :modstr NeutAff)
 
@@ -586,12 +586,12 @@ ap-hle-am-ke'		nenhlet
 
 (e/ enhleama-00 'travel'
 	:actor (n/ nenhlet 'person'
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Endeavor
 	:modstr FullAff)
 (t/ travel-01
 	:ARG0 (m/ man
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Endeavor
 	:modstr FullAff)
 ```
@@ -605,7 +605,7 @@ one just has the citation form of the *travel*-verb with a `-00` suffix.
 In both cases, the semantic argument 'person/man' is a daughter of this
 predicate, linked with a participant role edge. In English, this is a
 numbered participant role taken from this same PropBank frame file,
-while in Sanapaná it is a predicate-general participant role. In both languages, the participant has a :ref-number Singular attribute.
+while in Sanapaná it is a predicate-general participant role. In both languages, the participant has a :refer-number singular attribute.
 
 AMR and UMR concepts are underspecified for morphosyntactic
 representation: the same concept (for example, `travel-01`) can be used
@@ -619,11 +619,11 @@ I heard about his travels.
 (h/ hear-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (t/ travel-01
 		:ARG0 (p2/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:aspect Process
 		:modstr FullAff)
 	:aspect State
@@ -657,7 +657,7 @@ apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 'The children were rescued.'
 (e/ elvongkeskama-tayep-00 'rescue'
 	:undergoer (a/ ayko'ok 'child'
-		:ref-number Plural)
+		:refer-number plural)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -689,7 +689,7 @@ an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 (h/ have-91
 	:ARG1 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (v/ vakkahak 'book')
 	:aspect State
 	:modstr FullAff)
@@ -713,7 +713,7 @@ five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 (e/ enta'mehlkeskama-00 'preserve'
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:undergoer (t/ thing)
 	:duration (o/ or
 		:op1 (t2/ temporal-quantity
@@ -733,7 +733,7 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 (e/ enyanmongkeskama-00 'pay'
 	:actor (p/ person
 		:refer-person 1st
-		:ref-number Plural)
+		:refer-number plural)
 	:recipient (e2/ escuela 'school'
 		:mod (a/ agrícola 'agricultural'))
 	:theme (m/ monetary-quantity
@@ -763,7 +763,7 @@ apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=a
 		:Place-of (e2/ eleyvoma-00 'live'
 			:actor (p4/ person
 				:refer-person 1st
-				:ref-number Plural)))
+				:refer-number plural)))
 	:temporal (d/ date-entity
 		:year 1966)
 	:aspect Performance
@@ -843,7 +843,7 @@ Three bottles of water
 ```
 
 UMR introduces four new attributes: `:aspect` (see [Part 3-3-1](#part-3-3-1-Aspect)), `:degree` (see [Part 3-3-6](#part-3-3-6-degree)), and
-`:refer-person` and `:ref-number` (see [Part 3-3-5](#part-3-3-5-ref)).
+`:refer-person` and `:refer-number` (see [Part 3-3-5](#part-3-3-5-ref)).
 
 [Back to Table of Contents](#toc)
 
@@ -1341,10 +1341,10 @@ PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 (t/ teb-e'ei-s ‘break/remove.stick.like’
     :actor (p/ person
     	:refer-person 1st
-	:ref-number Singular)
+	:refer-number singular)
     :undergoer (p2/ person
     	:refer-person 3rd
-	:ref-number Singular)
+	:refer-number singular)
     :theme (t2/ thing
     	:refer-person Obviative)
     :aspect Performance
@@ -1454,11 +1454,11 @@ by the verb root.
     	:actor (p/ person
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
-	    :ref-number Singular)
+	    :refer-number singular)
     	:aspect Performance
 	:modstr FullAff)
     :actor (k2/ kid
-    	:ref-number Singular)
+    	:refer-number singular)
     :undergoer (w/ water)
     :aspect Performance
     :modstr FullAff)
@@ -1470,11 +1470,11 @@ by the verb root.
     	:actor (p/ person
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
-	    :ref-number Singular)
+	    :refer-number singular)
     	:aspect Performance
 	:modstr FullNeg)
     :actor (k2/ kid
-    	:ref-number Singular)
+    	:refer-number singular)
     :undergoer (w/ water)
     :aspect Performance
     :modstr NeutAff)
@@ -1487,11 +1487,11 @@ by the verb root.
     	:actor (p/ person
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
-	    :ref-number Singular)
+	    :refer-number singular)
     	:aspect Performance
 	:modstr FullAff)
     :actor (k2/ kid
-    	:ref-number Singular)
+    	:refer-number singular)
     :undergoer (w/ water)
     :aspect Performance
     :modstr FullNeg)
@@ -1514,7 +1514,7 @@ grandmother	drink-CAUS	kid=PST		water-INST
     :causer (p/ person
     	:ARG1-of (h/ have-rel-role-92
 		:ARG3 (n/ nai 'grandmother'))
-	:ref-number Singular)
+	:refer-number singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
     :aspect Performance
@@ -1596,7 +1596,7 @@ both *want* and *go*.
 (w/ want-01
     :ARG0 (p/ person
     	:refer-person 3rd
-	:ref-number Singular)
+	:refer-number singular)
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
@@ -1610,7 +1610,7 @@ both *want* and *go*.
 (w/ want-01
     :ARG0 (p/ person
     	:refer-person 3rd
-	:ref-number Singular)
+	:refer-number singular)
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
@@ -1658,7 +1658,7 @@ en-na'-ten-ek-ant-a'		La	Esperanza
 (e/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
     :undergoer (p/ person				    :ARG0 (p/ person
     	:refer-person 1st						:refer-person 1st
-	:ref-number Plural)					:ref-number Plural)
+	:refer-number plural)					:refer-number plural)
     :place (c/ city					    :place (c/ city
     	:name (n/ name					        :name (n/ name
             :op1 "La"						    :op1 "La"
@@ -1692,7 +1692,7 @@ the verb may contribute to the aspectual attribute of the concept.
 (g / get-01
       :aspect Performance
       :ARG0 (p / person
-                :ref-number Singular
+                :refer-number singular
 		:refer-person 2nd)
       :ARG1 (i / information
             :mod (t / this)
@@ -1749,8 +1749,8 @@ this	young.man	shaman
 (h/ have-role-91						(h/ have-role-91
     :ARG1 (k/ kunumi 'young man'				    :ARG1 (m/ man
     	:mod (a/ ajan 'this')						:mod (y/ young)
-	:ref-number Singular)						:mod (t/ this)
-    :ARG3 (t/ tsumi 'shaman')						:ref-number Singular)
+	:refer-number singular)						:mod (t/ this)
+    :ARG3 (t/ tsumi 'shaman')						:refer-number singular)
     :aspect State						    :ARG3 (s/ shaman)
     :modstr FullAff)						    :aspect State
     								    :modstr Aff)
@@ -1765,7 +1765,7 @@ Miguel-CER	canoe-owner
 (h/ have-91							(h/ have-91
     :ARG1 (p/ person						    :ARG1 (p/ person
     	:name (n/ name :op1 "Mijiri")					:name (n/ name :op1 "Miguel")
-	:ref-number Singular)					    	:ref-number Singular)
+	:refer-number singular)					    	:refer-number singular)
     :ARG2 (a/ ɨarayara 'canoe')					    :ARG2 (c/ canoe)
     :aspect State						    :aspect State
     :modstr FullAff)						    :modstr FullAff)
@@ -1897,9 +1897,9 @@ concatenating the lemmatized words, as in <a href="#3-1-3-7 (1)">(1)</a>. In <a 
             :op1 (s/ steep-01
                   :ARG0 (p/ person
 		        :refer-person 1st
-			:ref-number Singular)
+			:refer-number singular)
                   :ARG1 (t/ thing
-		        :ref-number Singular)
+		        :refer-number singular)
                   :ARG2 (w/ water
                         :ARG1-of (h/ hot-05))
 		  :aspect Habitual
@@ -1936,7 +1936,7 @@ Multi-word concepts are not limited phrasal verbs like ``take out''. They also i
                   :degree (f / far)))
       :ARG1 (p / person
                :refer-person 3rd
-	       :ref-number Singular)
+	       :refer-number singular)
       :time (s / soon
             :mod (p / pretty)))
 ```
@@ -1949,10 +1949,10 @@ single words, as in <a href="#3-1-3-7 (1c)">(1c)</a>, where the multi-word conce
       :ARG0 (a/ aspect
             :ARG1-of (m/ moral-02)
             :poss (m2/ movement-07)
-	    :ref-number Plural)
+	    :refer-number plural)
       :ARG1 (p/ person
             :refer-person 3rd
-	    :ref-number Singular)
+	    :refer-number singular)
       :mod (a2/ as-well)
       :aspect State
       :modstr FullAff)
@@ -1984,7 +1984,7 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
 (x0 / 抛在脑后-01
       :arg0  (x2 / individual-person
                  :refer-person 1st
-		 :ref-number Singular)
+		 :refer-number singular)
       :arg1  (x3 / and
             :op1  (x4 / 锤子)
             :op2  (x5 / 螺钉)
@@ -2009,11 +2009,11 @@ Other than multi-word concepts, languages often have regular or irregular constr
                   :frequency-of (r / read-01
                         :ARG0 (p / person
 			         :refer-person  1st
-				 :ref-number Singular)
+				 :refer-number singular)
                         :ARG1 (s2 / stuff
                               :poss (p2 / person
 			                :refer-person 2nd
-					:ref-number Singular))))
+					:refer-number singular))))
         :ARG2 (m2 / more
                   :ARG3-of (h3 / have-degree-91
                         :ARG1 0
@@ -2127,7 +2127,7 @@ I will go for a walk or play some soccer.
    :op1 (w/ walk-01
    	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Process
 	:modstr FullAff)
    :op2 (p2/ play-01
@@ -2154,7 +2154,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
    :ARG1 (a/ a'vogune-00 'sleep'
    	:actor (p/ person
 		:refer-person 1st
-		:ref-number Plural)
+		:refer-number plural)
 	:companion (a2/ aki' 'woman')
 	:aspect Habitual
 	:modstr FullNeg)
@@ -2193,7 +2193,7 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
    :op1 (h/ have-place-91
    	:ARG1 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (p2/ place)
 	:aspect State
 	:modstr NeutAff
@@ -2219,13 +2219,13 @@ Grab a stick lest he attack you!
 (g/ grab-01
      :ARG0 (p/ person
           :refer-person 2nd
-	  :ref-number Singular)
+	  :refer-number singular)
      :ARG1 (s/ stick
-          :ref-number Singular)
+          :refer-number singular)
      :apprehensive (a/ attack-01
           :ARG0 (p2/ person
 	       :refer-person 3rd
-	       :ref-number Singular)
+	       :refer-number singular)
 	  :ARG1 p
 	  :aspect Performance
 	  :modstr FullAff)
@@ -2240,17 +2240,17 @@ Grab a stick or he will he attack you!
 (g/ grab-01					Or	(o/ or
      :ARG0 (p/ person						:op1 (g/ grab-01
           :refer-person 2nd						:ARG0 (p/ person
-	  :ref-number Singular)							:refer-person 2nd
-     :ARG1 (s/ stick								:ref-number Singular)
-          :ref-number Singular)						:ARG1 (s/ stick
-     :apprehensive (a/ attack-01						:ref-number Singular)
+	  :refer-number singular)							:refer-person 2nd
+     :ARG1 (s/ stick								:refer-number singular)
+          :refer-number singular)						:ARG1 (s/ stick
+     :apprehensive (a/ attack-01						:refer-number singular)
           :ARG0 (p2/ person						:mode Imperative
 	       :refer-person 3rd						:aspect Performance
-	       :ref-number Singular)					:modstr PrtAff)
+	       :refer-number singular)					:modstr PrtAff)
 	  :ARG1 p						:op2 (a/ attack-01
 	  :aspect Performance						:ARG0 (p2/ person
 	  :modstr FullAff)							:refer-person 3rd
-     :mode Imperative								:ref-number Singular)
+     :mode Imperative								:refer-number singular)
      :aspect Performance						:ARG1 p
      :modstr PrtAff)							:aspect Performance
                             						:modstr FullAff))
@@ -2272,10 +2272,10 @@ I read a book while I listened to music. / I read a book while listening to musi
 (r/ read-01				Or		(a/ and
    :ARG0 (p/ person						:op1 (r/ read-01
    	:refer-person 1st							:ARG0 (p/ person
-	:ref-number Singular)							:refer-person 1st
-   :ARG1 (b/ book								:ref-number Singular)
-   	:ref-number Singular)						:ARG1 (b/ book
-   :temporal (listen-01								:ref-number Singular)
+	:refer-number singular)							:refer-person 1st
+   :ARG1 (b/ book								:refer-number singular)
+   	:refer-number singular)						:ARG1 (b/ book
+   :temporal (listen-01								:refer-number singular)
    	:ARG0 p								:aspect Performance
 	:ARG1 (m/ music)						:modstr FullAff)
 	:aspect State						:op2 (l/ listen-01
@@ -2291,8 +2291,8 @@ In addition to having your hand stamped, you have to show your ticket to get int
 (a/ and							Or	(h/ have-04
    :op1 (h/ have-04							:ARG0 (p/ person
    	:ARG0 (p/ person							:refer-person 2nd
-		:refer-person 2nd							:ref-number Singular)
-		:ref-number Singular)					:ARG1 (s/ stamp-01
+		:refer-person 2nd							:refer-number singular)
+		:refer-number singular)					:ARG1 (s/ stamp-01
 	:ARG1 (s/ stamp-01							:ARG0 (p2/ person)
 		:ARG0 (p2/ person)						:ARG1 (h/ hand
 		:ARG1 (h2/ hand								:part p)
@@ -2304,15 +2304,15 @@ In addition to having your hand stamped, you have to show your ticket to get int
    :op2 (s2/ show-01								:ARG0 p
    	:ARG0 p									:ARG1 (t/ ticket
 	:ARG1 (t/ ticket								:poss p
-		:poss p									:ref-number Singular)
-		:ref-number Singular)						:ARG2 (p3/ person)
+		:poss p									:refer-number singular)
+		:refer-number singular)						:ARG2 (p3/ person)
 	:ARG2 (p3/ person)							:aspect Performance
    	:aspect Performance							:modstr PrtAff)
 	:modstr PrtAff)							:purpose (g/ get-05
    :purpose (g/ get-05								:ARG0 p
    	:ARG0 p									:ARG2 (c/ concert
-	:ARG2 (c/ concert								:ref-number Singular)
-		:ref-number Singular)						:aspect Performance
+	:ARG2 (c/ concert								:refer-number singular)
+		:refer-number singular)						:aspect Performance
 	:aspect Performance							:modstr FullAff))
 	:modstr FullAff)
 ```
@@ -2323,8 +2323,8 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
 (b/ barbecue-01				Or		(a/ and
    :ARG0 (p/ person						:op1 (g/ go_out-17
    	:refer-person 1st							:ARG0 (p/ person
-	:ref-number Plural)							:refer-person 1st
-   :ARG1 (c/ chicken)								:ref-number Plural)
+	:refer-number plural)							:refer-person 1st
+   :ARG1 (c/ chicken)								:refer-number plural)
    :location (h/ home)							:purpose (e/ eat-01
    :substitute (g/ go_out-17							:ARG0 p
    	:ARG0 p									:aspect Endeavor
@@ -2359,9 +2359,9 @@ I grabbed a stick in order to defend myself. / I grabbed a stick and defended my
 (g/ grab-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s/ stick
-		:ref-number Singular)
+		:refer-number singular)
 	:purpose (d/ defend
 		:ARG0 p
 		:ARG1 p
@@ -2377,7 +2377,7 @@ He got into the army by lying about his age. / He lied about his age and got int
 (g/ get-5
 	:ARG1 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (a/ army)
 	:manner (l/ lie-01
 		:ARG0 p
@@ -2415,7 +2415,7 @@ Sarah moved back to California because she couldn't find a job in Washington. / 
 If you touch it, it might explode. / Touch it, and it might explode.
 (e/ explode-01
 	:ARG1 (t/ thing
-		:ref-number Singular)
+		:refer-number singular)
 	:condition (t2/ touch-01
 		:ARG0 (p/ person)
 		:ARG1 t
@@ -2432,15 +2432,15 @@ I fed my dog before going to the office. / I fed my dog and went to the office.
 (f/ feed-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (d/ dog
 		:poss p
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (b/ before
 		:op1 (g/ go-01
 			:ARG1 p
 			:ARG4 (o/ office
-				:ref-number Singular)
+				:refer-number singular)
 			:aspect Performance
 			:modstr FullAff)
 	:aspect Performance
@@ -2453,7 +2453,7 @@ I went home after paying the check. / I paid the check and went home.
 (g/ go-01
 	:ARG1 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG4 (h/ home)
 	:temporal (a/ after
 		:op1 (p2/ pay-01
@@ -2567,10 +2567,10 @@ Even though he was broke, he bought a new guitar. / He was broke, but (still) bo
 (b/ buy-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (g/ guitar
 		:mod (n/ new)
-		:ref-number Singular)
+		:refer-number singular)
 	:concession (h/ have-mod-91
 		:ARG1 p
 		:ARG2 (b2/ broke)
@@ -2586,7 +2586,7 @@ Even if you arrive only five minutes late, you will be fired.
 (f/ fire-02
 	:ARG1 (p/ person
 		:refer-person 2nd
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff
 	:concessive-condition (a/ arrive-01
@@ -2609,9 +2609,9 @@ People don't own tigers, except for Joe Exotic.
 (o/ own-01
 	:polarity -
 	:ARG0 (p/ person
-		:refer-number Plural)
+		:refer-number plural)
 	:ARG1 (t/ tiger
-		:ref-number Plural)
+		:refer-number plural)
 	:subtraction (p2/ person
 		:name (n/ name
 			:op1 "Joe"
@@ -2831,7 +2831,7 @@ The ice cube melted.
 (m/ melt-01
 	:undergoer (c/ cube
 		:material (i/ ice)
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -2841,7 +2841,7 @@ The enemy sank the ship.
 (s/ sink-01
 	:actor (e/ enemy)
 	:undergoer (s2/ ship
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 
@@ -2852,9 +2852,9 @@ She built a house out of wood.
 (b/ build-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer (h/ house
-		:ref-number Singular)
+		:refer-number singular)
 	:material (w/ wood)
 	:aspect Performance
 	:modstr FullAff)
@@ -2865,11 +2865,11 @@ He hit the stick against the fence.
 (h/ hit-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:instrument (s/ stick
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer (f/ fence
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Endeavor
 	:modstr FullAff)
 ```
@@ -2888,7 +2888,7 @@ The audience listened to the concerto.
 (l/ listen-01
 	:experiencer (a/ audience)
 	:stimulus (c/ concerto
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -2898,9 +2898,9 @@ The cat startled me.
 (s/ startle-01
 	:experiencer (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:stimulus (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -2933,7 +2933,7 @@ She walked home from the store.
 (w/ walk-01
 	:actor (p/ person
 		:refer-person 3rd
-		ref-number Singular)
+		refer-number singular)
 	:goal (h/ home)
 	:start (s/ store)
 	:aspect Performance
@@ -2944,7 +2944,7 @@ She walked home from the store.
 The leaf fell to the ground.
 (f/ fall-01
 	:theme (l/ leaf
-		:ref-number Singular)
+		:refer-number singular)
 	:goal (g/ ground)
 	:aspect Performance
 	:modstr FullAff)
@@ -2955,11 +2955,11 @@ He put the books in a box.
 (p/ put-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (b/ book
-		:ref-number Plural)
+		:refer-number plural)
 	:goal (b2/ box
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect: Performance
 	:modstr FullAff)
 
@@ -2970,9 +2970,9 @@ She is sitting on the couch.
 (s/ sit-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:place (c/ couch
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -2982,11 +2982,11 @@ He picked some berries from the bush.
 (p/ pick-01
 	:actor (p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (b/ berry
-		:ref-number Paucal)
+		:refer-number paucal)
 	:source (b2/ bush
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3010,12 +3010,12 @@ He gave the cat some wet food.
 (g/ give-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (f/ food
 		:mod (w/ wet)
 		:quant (s/ some))
 	:recipient (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3026,12 +3026,12 @@ I showed the pictures to her.
 (s/ show-01
 	:actor (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (p2/ picture
-		:ref-number Plural)
+		:refer-number plural)
 	:recipient (p3/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3042,11 +3042,11 @@ She told me that they they’re attending.
 (t/ tell-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (a/ attend-01
 		:actor (p2/ person
 			:refer-person 3rd
-			:ref-number Plural)
+			:refer-number plural)
 		:aspect Activity
 		:quote t
 		:modstr FullAff)
@@ -3060,10 +3060,10 @@ She stole the information from a competitor.
 (s/ steal-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (i/ information)
 	:source (c/ competitor
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3115,7 +3115,7 @@ He winked.
 (w/ wink-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Endeavor
 	:modstr FullAff)
 ```
@@ -3128,7 +3128,7 @@ Jane wrote the paper with Chris.
 	:companion (p2/ person
 		:name (n2/ name :op2 "Chris"))
 	:undergoer (p3/ paper
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3138,9 +3138,9 @@ Jane wrote the paper with Chris.
 They wrote the paper.
 (w/ write-01
 	:actor (p/ person
-		:ref-number Plural)
+		:refer-number plural)
 	:undergoer (p2/ paper
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3154,7 +3154,7 @@ Jane and Chris wrote the paper.
 		:op2 (p2/ person
 			:name (n2/ name :op1 "Chris)))
 	:undergoer (p3/ paper
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3164,11 +3164,11 @@ She sliced the bread with a knife.
 (s/ slice-01
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:instrument (k/ knife
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer (b/ bread
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3177,9 +3177,9 @@ She sliced the bread with a knife.
 The knife sliced through the bread.
 (s/ slice-01
 	:instrument (k/ knife
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer (b/ bread
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3188,10 +3188,10 @@ The knife sliced through the bread.
 The storm damaged the power lines.
 (d/ damage-01
 	:force (s/ storm
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer (l/ line
 		:purpose (p/ power)
-		:ref-number Plural)
+		:refer-number plural)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3209,9 +3209,9 @@ They loaded the boxes.
 (l/ load-01  					Or		(l/ load-01
 	:actor (p/ person						:actor (p/ person
 		:refer-person 3rd							:refer-person 3rd
-		:ref-number Plural)  						:ref-number Plural)
+		:refer-number plural)  						:refer-number plural)
 	:theme (b/ box							:theme (b/ box
-		:ref-number Plural)						:ref-number Plural)
+		:refer-number plural)						:refer-number plural)
 	:aspect Performance						:goal (t/ thing)
 	:modstr FullAff)						:aspect Performance
 									:modstr FullAff)
@@ -3339,7 +3339,7 @@ Miguel-CER  canoe-owner
 	:ARG1 (p/ person
 		:name (n/ name :op1 "Mijiri"))
 	:ARG2 (i/ ɨarayara ‘canoe’
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -3350,9 +3350,9 @@ The dog is the teacher's.
 
 (b/ belong-91
 	:ARG1 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (p/ person
-		:ref-number Singular
+		:refer-number singular
 		:ARG0-of (t / teach-01))
 	:aspect State
 	:modstr FullAff)
@@ -3363,9 +3363,9 @@ On the rock was a symbol.
 
 (e/ exist-91
 	:ARG1 (r/ rock
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (s/ symbol
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -3377,9 +3377,9 @@ house 3SG-be.at village
 ‘The house is in the village.’
 (h/ have-place-91
 	:ARG1 (a/ àndu ‘house’
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (m/ malac ‘village’
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -3389,7 +3389,7 @@ Predication - English <br />
 The cat is black.
 (h/ have-mod-91
 	:ARG1 (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (b/ black)
 	:aspect State
 	:modstr FullAff)
@@ -3402,7 +3402,7 @@ this young.man 	shaman
 (h/ have-role-91
 	:ARG1 (k/ kunumi ‘young man’
 		:mod (a/ ajan 'this')
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG3 (t/ tsumi ‘shaman’)
 	:aspect State
 	:modstr FullAff)
@@ -3413,7 +3413,7 @@ She is the winner.
 (i/ identity-91
 	:ARG1 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (p2/ person
 		:ARG0-of (w/ win-01))
 	:aspect State
@@ -3435,9 +3435,9 @@ Y-usy 		wrba 	tafirast.
 ‘The boy picked up the pear.’
 (u/ yusy-00 ‘pick up’
 	:actor (w/ wrba ‘boy’
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer (t/ tafirast ‘pear’
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3449,7 +3449,7 @@ T-ttw-asy		tfirast.
 ‘The pear was picked up.’
 (t/ tttwasy-00 ‘pick up’
 	:undergoer (t2/ tafirast ‘pear’
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3476,7 +3476,7 @@ grandmother 	drink-CAUS	kid=PST 	water=INS
     :causer (p/ person
     	:ARG1-of (h/ have-rel-role-92
 		:ARG3 (n/ nai 'grandmother'))
-	:ref-number Singular)
+	:refer-number singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
     :aspect Performance
@@ -3498,7 +3498,7 @@ he.OBL-LAT 	sea(iii) 	iii-see-PST
 (b/ begāyo-00 ‘see’
 	:experiencer (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:stimulus (r/ raɬad ‘sea’)
 	:aspect State
 	:modstr FullAff)
@@ -3512,10 +3512,10 @@ he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST
 (b/ begallo-00 ‘show’
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (r/ raɬad ‘sea’)
 	:recipient (k/ kibba ‘girl’
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3536,9 +3536,9 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 		:ARG1-of (h/ have-rel-role-92
 			:ARG2 (x/ xontako 'unmarried girl'
 				:mod (j/ ja 'that')
-				:ref-number Singular)
+				:refer-number singular)
 			:ARG3 (t/ titan 'mother'))
-			:ref-number Singular)
+			:refer-number singular)
 	:actor x
 	:theme (x2/ xoi 'roasted meat/fish')
 	:temporal (j2/ jatian 'that time')
@@ -3570,8 +3570,8 @@ Ka 	kedam 	hri	a 	cat.
 		:part (k/ kedam 'shoe')
 		:poss (p/ person
 			:refer-person 1st
-			:ref-number Singular)
-		:ref-number Singular)
+			:refer-number singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -3588,8 +3588,8 @@ Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS
 		:part (k/ kedam 'shoe')
 		:poss (p2/ person
 			:refer-person 1st
-			:ref-number Singular)
-		:ref-number Singular
+			:refer-number singular)
+		:refer-number singular
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3670,7 +3670,7 @@ as-teny-aye'	pa'ang
 (t/ entenyay'a-00
 	:actor (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (p2/ pa'ang 'palm)
 	:aspect Performance
 	:modstr FullAff)
@@ -3683,7 +3683,7 @@ as-teny-as-ke'		pa'ang	ap-angkok	Eduardo
 (t/ entenyaskama-00
 	:actor (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (p2/ pa'ang 'palm)
 	:source (p3/ person
 		:name (n/ name :op1 "Eduardo"))
@@ -3706,7 +3706,7 @@ he 	PERF 	he-REFL wound
 (b/ bánì-00 ‘wound’
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:undergoer p
 	:aspect Performance
 	:modstr FullAff)
@@ -3719,7 +3719,7 @@ they 	PERF	they-REFL 	love
 (k/ kánù-00 ‘love’
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:undergoer p
 	:aspect State
 	:modstr FullAff)
@@ -3773,9 +3773,9 @@ He teased the boy about his hat.
 (t/ tease-02
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (b/ boy
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (h/ hat
 		:poss b)
 	:aspect Endeavor
@@ -3793,9 +3793,9 @@ She parked the truck in the driveway. They loaded the boxes.
 (s1p/ park-01
 	:ARG0 (s1p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s1t/ truck
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (s1d/ driveway)
 	:aspect Performance
 	:modstr FullAff)
@@ -3803,10 +3803,10 @@ She parked the truck in the driveway. They loaded the boxes.
 (s2l/ load-01
 	:ARG0 (s2p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (s2t/ thing)
 	:ARG2 (s2b/ box
-		:ref-number Plural)
+		:refer-number plural)
 	:aspect Performance
 	:modstr FullAff)
 (s2/ sentence
@@ -3846,15 +3846,15 @@ I bought the sweater that you saw.
 (b/ buy-0101
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s/ sweater
 		:ARG1-of (s2/ see-01
 			:ARG0 (p2/ person
 				:refer-person 2nd
-				:ref-number Singular)
+				:refer-number singular)
 			:aspect State
 			:modstr FullAff)
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3865,14 +3865,14 @@ I didn't see whether he bought the sweater.
 (s/ see-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (t/ truth-value
 		:Polarity-of (b/ buy-01
 			:ARG0 (p2/ person
 				:refer-person 3rd
-				:ref-number Singular)
+				:refer-number singular)
 			:ARG1 (s2/ sweater
-				:ref-number Singular)
+				:refer-number singular)
 			:aspect Performance
 			:modstr NeutAff))
 	:Aspect State
@@ -3885,9 +3885,9 @@ The runner was wearing a sweater.
 (w/ wear-01
 	:ARG0 (p/ person
 		:ARG0-of (r/ run-02)
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s/ sweater
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -3901,15 +3901,15 @@ I bought the sweater that you saw.
 (b/ buy-01
 	:actor (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:theme (s/ sweater
 		:Stimulus-of (s2/ see-01
 			:experiencer (p2/ person
 				:refer-person 2nd
-				:ref-number Singular)
+				:refer-number singular)
 			:aspect State
 			:modstr FullAff)
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr FullAff)
 ```
@@ -3924,7 +3924,7 @@ I met my father.
 (m/ meet-03
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ person
 		:ARG1-of (h/ have-rel-role-92
 			:ARG2 p
@@ -3938,7 +3938,7 @@ I met the President of the University of New Mexico.
 (m/ meet-03
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ person
 		:ARG1-of (h/ have-org-role-92
 			:ARG2 (a/ academic_organization
@@ -4908,14 +4908,14 @@ John's car
 (c/ car
 	:poss (p/ person
 		:name (n/ name	:op1 "John"))
-	:ref-number Singular)
+	:refer-number singular)
 ```
 <span id="3-2-2-2 (1b)" label="3-2-2-2 (1b)">3-2-2-2 (1b)</span>
 ```
 Guitar strings
 (s/ string
 	:part (g/ guitar)
-	:ref-number Plural)
+	:refer-number plural)
 ```
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
 category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in <a href="#3-2-2-2 (2a)">(2a)</a>, the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. The `:mod` relation additionally inherits some uses from UMR. It is used to annotate demonstrative determiners, and it is used to annotate property concept modifiers that do not have their own frame files. Those uses are exemplified in <a href="#3-2-2-2 (2b)">(2b)</a>-<a href="#3-2-2-2 (2c)">(2c)</a> A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in <a href="#3-2-2-2 (2d)">(2d)</a>; `:group`, for indicating the membership of groups <a href="#3-2-2-2 (2e)">(2e)</a>; `:topic`, for indicating what a referent is about as in <a href="#3-2-2-2 (2f)">(2f)</a>, and `:medium` for indicating channels of communication, such as languages as in <a href="#3-2-2-2 (2g)">(2g)</a>.
@@ -4927,7 +4927,7 @@ category or type denoted by the head noun." For such modifiers, a high-level, co
 a women's magazine
 (m/ magazine
 	:mod (w/ woman)
-	:ref-number Singular)
+	:refer-number singular)
 ```
 <span id="3-2-2-2 (2b)" label="3-2-2-2 (2b)">3-2-2-2 (2b)</span>
 ```
@@ -4935,9 +4935,9 @@ These shirts of mine
 (s/ shirt
 	:poss (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:mod (t/ these)
-	:ref-number Plural)
+	:refer-number plural)
 ```
 <span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">3-2-2-2 (2c)</span>
 ```
@@ -4945,9 +4945,9 @@ My quirky shirts
 (s/ shirt
 	:poss (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:mod (q/ quirky)
-	:ref-number Plural)
+	:refer-number plural)
 ```
 <span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">3-2-2-2 (2d)</span>
 ```
@@ -4956,7 +4956,7 @@ The thirty year-old man
 	:age (t/ temporal-quantity
 		:quant 30
 		:unit (y/ year))
-	:ref-number Singular)
+	:refer-number singular)
 ```
 <span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">3-2-2-2 (2e)</span>
 
@@ -4964,7 +4964,7 @@ The thirty year-old man
 A swarm of bees
 (s/ swarm
 	:group (b/ bee
-		:ref-number Plural))
+		:refer-number plural))
 ```
 <span id="3-2-2-2 (2f)" label="3-2-2-2 (2f)">3-2-2-2 (2f)</span>
 
@@ -4998,7 +4998,7 @@ He drove west.
 (d/ drive-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:direction (w/ west)
 	:aspect Activity
 	:modstr FullAff)
@@ -5009,7 +5009,7 @@ He drove through the tunnel.
 (d/ drive-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:path (t/ tunnel)
 	:aspect Performance
 	:modstr FullAff)
@@ -5020,7 +5020,7 @@ I visited New York City for a week.
 (v/ visit-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5039,7 +5039,7 @@ I visited New York City twice.
 (v/ visit-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5056,7 +5056,7 @@ I visit New York City every December.
 (v/ visit-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5082,12 +5082,12 @@ I saw a spider and a snake.
 (s/ see-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (a/ and
 		:op1 (s2/ spider
-			:ref-number Singular)
+			:refer-number singular)
 		:op2 (s3/ snake
-			:ref-number Singular))
+			:refer-number singular))
 	:aspect State
 	:modstr FullAff)
 ```
@@ -5106,7 +5106,7 @@ I visited New York for the third time.
 (v/ visit-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5123,7 +5123,7 @@ I visited New York for the third time in six months.
 (v/ visit-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5202,7 +5202,7 @@ Could you close the window?
 (c/ close-01
 	:ARG0 (p/ person
 		:refer-person 2nd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (w/ window)
 	:aspect Performance
 	:mode Imperative
@@ -5215,15 +5215,15 @@ I will buy (a) rice, (b) beans, and (c) onions.
 (b/ buy-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (and
 		:op1 (r/ rice
 			:li "(a)")
 		:op2 (b/ bean
-			:ref-number Plural
+			:refer-number plural
 			:li "(b)")
 		:op3 (o/ onion
-			:ref-number Plural
+			:refer-number plural
 			:li "(c)")
 	:aspect Performance
 	:modstr FullAff)
@@ -5307,7 +5307,7 @@ He presented his research at the meeting yesterday.
 (p/ present-01
 	:ARG0 (p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (t/ thing
 		:ARG1-of (r/ research-01
 			:ARG0 p2))
@@ -5323,7 +5323,7 @@ After the game, she went home.
 (g/ go-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG4 (h/ home)
 	:temporal (a/ after
 		:op1 (g2/ game
@@ -5354,7 +5354,7 @@ The second training was cancelled yesterday.
 The dog interrupted the meeting with his barking.
 (i/ interrupt-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (m/ meet-01
 		:aspect Process)
 	:manner (b/ bark-01
@@ -5401,9 +5401,9 @@ He bakes pies.
 (b/ bake-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ pie
-		:ref-number Plural)
+		:refer-number plural)
 	:aspect Habitual
 	:modstr FullAff)
 ```
@@ -5413,7 +5413,7 @@ She rides her bike to work.
 (r/ ride-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (b/ bike
 		:poss p)
 	:goal (w/ work-01
@@ -5428,7 +5428,7 @@ They vacation in Taos every winter.
 (v/ vacation-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG (c/ city
 		:name (n/ name :op1 "Taos")
 		:wiki "Taos_New_Mexico")
@@ -5446,7 +5446,7 @@ They used to vacation in Taos every winter.
 (v/ vacation-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (c/ city
 		:name (n/ name :op1 "Taos")
 		:wiki "Taos_New_Mexico")
@@ -5483,8 +5483,8 @@ My cat loves tuna.
 	:ARG0 (c/ cat
 		:poss (p/ person
 			:refer-person 1st
-			:ref-number Singular)
-		:ref-number Singular)
+			:refer-number singular)
+		:refer-number singular)
 	:ARG1 (t/ tuna)
 	:aspect State
 	:modstr FullAff)
@@ -5494,7 +5494,7 @@ My cat loves tuna.
 The doctor is tall.
 (h/ have-mod-91
 	:ARG1 (d/ doctor
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (t/ tall)
 	:aspect State
 	:modstr FullAff)
@@ -5504,7 +5504,7 @@ The doctor is tall.
 The book is on the table.
 (h/ have-place-91
 	:ARG1 (b/ book
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (t/ table)
 	:aspect State
 	:modstr FullAff)
@@ -5515,7 +5515,7 @@ She is an architect.
 (h/ have-role-91
 	:ARG1 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG3 (a/ architect)
 	:aspect State
 	:modstr FullAff)
@@ -5527,7 +5527,7 @@ Your glass is in the kitchen.
 	:ARG1 (g/ glass
 		:poss (p/ person
 			:refer-person 2nd
-			:ref-number Singular))
+			:refer-number singular))
 	:ARG2 (k/ kitchen)
 	:aspect State
 	:modstr FullAff)
@@ -5545,7 +5545,7 @@ He wants to travel to Albuquerque.
 (w/ want-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (t/ travel-01
 		:ARG0 p
 		:ARG4 (c/ city
@@ -5574,11 +5574,11 @@ He’s dreading their decision.
 (d/ dread
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (d2/ decide-01
 		:ARG0 (p2/ person
 			:refer-person 3rd
-			:refer-number Plural)
+			:refer-number plural)
 		:aspect Process
 		:modpred d)
 	:aspect State
@@ -5592,10 +5592,10 @@ She is able to sing that aria.
 (s/ sing-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (a/ aria
 		:mod (t/ that)
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect State
 	:modstr NeutAff)
 ```
@@ -5605,7 +5605,7 @@ This car can go up to 150 mph.
 (g/ go-01
 	:ARG0 (c/ car
 		:mod (t/ this)
-		:ref-number Singular)
+		:refer-number singular)
 	:manner (s/ speed-quantity
 		:quant 150
 		:unit (m/ miles-per-hour))
@@ -5647,8 +5647,8 @@ My cat is black and white.
 	:ARG1 (c/ cat
 		:poss (p/ person
 			:refer-person 1st
-			:ref-number Singular)
-		:ref-number Singular)
+			:refer-number singular)
+		:refer-number singular)
 	:ARG2 (a/ and
 		:op1 (b/ black)
 		:op2 (w/ white)
@@ -5662,8 +5662,8 @@ My cat is hungry.
 	:ARG0 (c/ cat
 		:poss (p/ person
 			:refer-person 1st
-			:ref-number Singular))
-		:ref-number Singular)
+			:refer-number singular))
+		:refer-number singular)
 	:aspect Reversible State
 	:modstr FullAff)
 ```
@@ -5673,7 +5673,7 @@ The wine glass is shattered.
 (s/ shatter-01
 	:ARG1 (g/ glass
 		:purpose (w/ wine)
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Irreversible State
 	:modstr FullAff)
 ```
@@ -5725,10 +5725,10 @@ He is still writing his paper.
 (w/ write-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ paper
 		:poss p
-		:ref-number Singular)
+		:refer-number singular)
 	:mod (s/ still)
 	:aspect Activity
 	:modstr FullAff)
@@ -5739,10 +5739,10 @@ He was writing his paper yesterday.
 (w/ write-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ paper
 		:poss p
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (y/ yesterday)
 	:aspect Activity
 	:modstr FullAff)
@@ -5764,7 +5764,7 @@ He is playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (v/ violin)
 	:aspect Activity
 	:modstr FullAff)
@@ -5781,7 +5781,7 @@ He started playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (v/ violin)
 	:aspect Activity
 	:modstr FullAff)
@@ -5792,7 +5792,7 @@ He kept on playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (v/ violin)
 	:aspect Activity
 	:modstr FullAff)
@@ -5824,7 +5824,7 @@ The soup was cooling on the counter.
 The cat was meowing outside the door.
 (m/ meow-01
 	:ARG0 (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:place (o/ outside
 		:op1 (d/ door))
 	:aspect Undirected Activity
@@ -5903,7 +5903,7 @@ They walked along the river.
 (w/ walk-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
 	:aspect Endeavor
@@ -5915,7 +5915,7 @@ They finished walking <u>along the river</u>.
 (w/ walk-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
 	:aspect Performance
@@ -5927,7 +5927,7 @@ They walked along the river in 3 hours.
 (w/ walk-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
 	:duration (t/ temporal-quantity
@@ -5989,7 +5989,7 @@ The cat meowed for two hours until I woke up.
 		:op1 (w/ wake-01
 			:ARG1 (p/ person
 				:refer-person 1st
-				:ref-number Singular)
+				:refer-number singular)
 			:aspect Performance
 			:modstr FullAff))
 	:aspect Undirected Endeavor
@@ -6007,7 +6007,7 @@ The soup cooled for an hour before we ate it.
 		:op1 (e/ eat-01
 			:ARG0 (p/ person
 				:refer-person 1st
-				:ref-number Plural)
+				:refer-number plural)
 			:ARG1 s
 			:aspect Performance
 			:modstr FullAff))
@@ -6020,7 +6020,7 @@ The soup cooled for an hour before we ate it.
 The cat meowed (once).
 (m/ meow-01
 	:ARG0 (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Semelfactive
 	:modstr FullAff)
 ```
@@ -6071,7 +6071,7 @@ eventually succeeds in repairing the computer.
 The door opened.
 (o/ open-01
 	:ARG1 (d/ door
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Reversible Directed Achievement
 	:modstr FullAff)
 ```
@@ -6080,7 +6080,7 @@ The door opened.
 The window shattered.
 (s/ shatter-01
 	:ARG1 (w/ window
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Irreversible Directed Achievement
 	:modstr FullAff)
 ```
@@ -6090,10 +6090,10 @@ I ate an apple pancake.
 (e/ eat-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ pancake
 		:mod (a/ apple)
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Incremental Accomplishment
 	:modstr FullAff)
 ```
@@ -6104,7 +6104,7 @@ Harry repaired the computer.
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Harry"))
 	:ARG1 (c/ computer
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Nonincremental Accomplishment
 	:modstr FullAff)
 ```
@@ -6131,7 +6131,7 @@ Yup , a couple of hundred dollars is going to save the day !
 	    	:quant 100
                 :unit (d/ dollar)))
       :ARG1 (d/ day
-      	    :ref-number Singular)
+      	    :refer-number singular)
       :aspect Performance
       :modstr FullAff
       :mode expressive)
@@ -6142,7 +6142,7 @@ Chalk another good one up to the wife .
 (c/ chalk-up-02
       :ARG0 (p/ person
       	    :refer-person 2nd
-	    :ref-number Singular)
+	    :refer-number singular)
       :ARG1 (a/ another
             :ARG1-of (g/ good-02)
 	    :quant 1)
@@ -6158,7 +6158,7 @@ Did you see that?
 (s/ see-01
       :ARG0 (p/ person
       	:refer-person 2nd
-	:ref-number Singular)
+	:refer-number singular)
       :ARG1 (t/ that)
       :aspect State
       :modstr NeutAff
@@ -6206,7 +6206,15 @@ As of now , five million tickets have been sold on the StubHub website .
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-5. Ref
-As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically motivated way. It annotates person and number through two attributes - `:refer-person` for grammatical person information, and `:ref-number` for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in <a href="#3-3-5 (1)">(1)</a>.
+
+As opposed to AMR, which uses an English-based lexical treatment of
+pronominal reference, UMR approaches pronominal reference and person/number
+marking in a cross-linguistically motivated way. It annotates person and
+number through two attributes - `:refer-person` for grammatical person
+information, and `:refer-number` for grammatical number marking. These
+attributes can apply to any entity concept. If an explicit nominal is marked
+for plural or dual number, for instance, the node for this entity concept can
+take the relevant attribute value label, as in <a href="#3-3-5 (1)">(1)</a>.
 
 <span id="3-3-5 (1)" label="3-3-5 (1)">3-3-5 (1)</span>
 
@@ -6218,7 +6226,7 @@ Bill saw rare birds today.
 		:name (n/ name	:op1 "Bill"))
 	:ARG1 (b/ bird
 		:mod (r/ rare)
-		:ref-number Plural)
+		:refer-number plural)
 	:aspect State
 	:modstr FullAff)
 ```
@@ -6231,10 +6239,29 @@ woman	that-3PL-EP-DU
 
 (a/ áine 'woman'
 	:mod (ŋ/ ŋara 'that')
-	:ref-number Dual)
+	:refer-number dual)
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:refer-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in <a href="#3-3-5 (2)">(2)</a>. In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:refer-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as coreferential with a mention of 'food' in the previous context.
+For arguments expressed only through verbal cross-referencing, or arguments
+that are implicit, both `:refer-person` and `:refer-number` can be used to
+represent their pronominal features. In such cases where there is no overt
+nominal expression to attach those values to, UMR "hallucinates" a concept
+(typically a named-entity category, e.g. `person`, `thing`) to attach the
+attribute labels to in order to facilitate cross-lingual compatibility, as in
+<a href="#3-3-5 (2)">(2)</a>. In the context preceding this one-word
+sentence, the speaker talks about how upon first contact between the Sanapaná
+and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes.
+Here, the Sanapaná speaker describes the reaction of his ancestors to these
+gifts. From the prefixal indexation on the verb (2nd/3rd person masculine +
+distributive) and the preceding context (talking about the Sanapaná
+ancestors), we know that the `:actor` argument of the *eat*-verb is third
+person plural. Therefore, we annotate this argument with a `(p/ person)`
+concept, which in turn takes `:refer-person` and `:ref-number` attributes
+with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not
+explicitly expressed at all, but from previous context we know it is the food
+that they were offered by the Paraguayans. We therefore annotate it with a
+`(t/ thing)` concept that will later in the document-level annotation be
+marked as coreferential with a mention of 'food' in the previous context.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
@@ -6245,7 +6272,7 @@ NEG-2/3M.IRR-DSTR-eat-TI-IPFV=PHOD
 (e/ entoma-00 'eat'
 	:actor (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:undergoer (t/ thing)
 	:aspect Performance
 	:modstr FullNeg)
@@ -6336,7 +6363,7 @@ Snt3: He denied any wrongdoing.
 (d/ deny-01
       :ARG0 (p/person
          :refer-person 3rd
-	 :ref-number Singular)
+	 :refer-number singular)
       :ARG1 (t/ thing
             :ARG1-of (d2/ do-02
                   :ARG0 p
@@ -6364,7 +6391,7 @@ He is very possessive and controlling but he has no right to be as we are not to
             :op1 (p/ possessive-03
                   :ARG0 (p/ person
 		  	:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
                   :degree (v/ very)
 		  :aspect State
 		  :modstr FullAff)
@@ -6381,7 +6408,7 @@ He is very possessive and controlling but he has no right to be as we are not to
                   :ARG0 (h2/ have-mod-91
 		  	:ARG1 (p2/ person
 				:refer-person 1st
-				:ref-number Plural)
+				:refer-number plural)
 			:ARG2 (t/ together)
 			:aspect State
 			:modstr FullNeg))
@@ -6808,10 +6835,10 @@ snt15	A-nd u-h and then he gets down out of the tree,
 (s15g / get-05
   :ARG1 (s15p / person
           :refer-person 3rd
-          :ref-number Singular)
+          :refer-number singular)
   :ARG2 (s15d / down)
   :source (s15t / tree
-            :refer-number Singular)
+            :refer-number singular)
   :aspect Performance
   :temporal (s15t2 / then)
   :modstr FullAff)
@@ -6826,13 +6853,13 @@ snt16	and he dumps all his pears into the basket
 (s16d / dump-01
   :ARG0 (s16p / person
           :refer-person 3rd
-          :ref-number Singular)
+          :refer-number singular)
   :ARG1 (s16p2 / pear
           :quant (s16a / all)
           :poss s16p)
   :aspect Performance
   :goal (s16b / basket
-          :ref-number Singular)
+          :refer-number singular)
   :modstr FullAff)
 
 (s16s0 / sentence
@@ -6844,7 +6871,7 @@ snt16	and he dumps all his pears into the basket
 snt17	and the basket's full,
 (s17h / have-mod-91
   :ARG1 (s17b / basket
-          :ref-number Singular)
+          :refer-number singular)
   :ARG2 (s17f / full)
   :aspect State
   :modstr FullAff)
@@ -6861,9 +6888,9 @@ snt18	and one of the pears drops down to the floor,
           :quant 1
           :ARG2-of (s18i2 / include-91
                      :ARG1 (s18p2 / pear
-                             :ref-number Plural)))
+                             :refer-number plural)))
   :ARG4 (s18f / floor
-          :ref-number Singular)
+          :refer-number singular)
   :direction (s18d2 / down)
   :aspect Performance
   :modstr FullAff)
@@ -6899,13 +6926,13 @@ I saw him knock on the door.
 (s1s/ see-01
 	:ARG0 (s1p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s1k/ knock-01
 		:ARG0 (s1p2/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:ARG1 (s1d/ door
-			:ref-number Singular))
+			:refer-number singular))
 		:aspect Performance
 		:modpred s1s)
 	:aspect State
@@ -6923,7 +6950,7 @@ I want to cook dinner.
 (s1w/ want-01
 	:ARG0 (s1p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s1c/ cook-01
 		:ARG0 s1p
 		:ARG1 (s1d/ dinner)
@@ -6946,13 +6973,13 @@ I wish she had read the book.
 (s1w/ wish-01
 	:ARG0 (s1p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s1r/ read-01
 		:ARG0 (s1p2/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:ARG1 (s1b/ book
-			:ref-number Singular)
+			:refer-number singular)
 		:aspect Performance
 		:modpred s1w)
 	:aspect State
@@ -6972,11 +6999,11 @@ I want to go to the city and visit a museum.
 (s1w/ want-01
 	:ARG0 (s1p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s1g/ go-01
 		:ARG1 s1p
 		:ARG4 (s1c/ city
-			:ref-number Singular)
+			:refer-number singular)
 		:aspect Performance
 		:modpred s1w)
 	:aspect State
@@ -7022,9 +7049,9 @@ Magdalena said she arrived home, ate dinner, and will meet us at the theater.
 			:ARG0 s1p
 			:ARG1 (s1p2/ person
 				:refer-person 1st
-				:ref-number Plural)
+				:refer-number plural)
 			:place (s1t/ theater
-				:ref-number Singular)
+				:refer-number singular)
 			:aspect Performance
 			:modstr FullAff
 			:quote s1s))
@@ -7051,12 +7078,12 @@ He went home (in order) to wash the dishes.
 (s1g/ go-01
 	:ARG1 (s1p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG4 (s1h/ home)
 	:purpose (s1w/ wash-01
 		:ARG0 s1p
 		:ARG1 (s1d/ dish
-			:ref-number Plural)
+			:refer-number plural)
 		:aspect Performance
 		:modstr FullAff)
 	:aspect Performance
@@ -7131,7 +7158,7 @@ Martin said that the package has probably already arrived.
 		:name (n/ name :op1 "Martin")
 	:ARG1 (a/ arrive-01
 		:ARG1 (p/ package
-			:ref-number Singular)
+			:refer-number singular)
 		quote: s
 		modstr: PrtAff)
 	modstr: Aff)
@@ -7283,7 +7310,7 @@ linguistic expression. These strength values are exemplified in
 The dog barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
 	:aspect Endeavor
@@ -7294,7 +7321,7 @@ The dog barked last night.
 The dog probably barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
 	:aspect Endeavor
@@ -7305,7 +7332,7 @@ The dog probably barked last night.
 The dog may have barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
 	:aspect Endeavor
@@ -7316,7 +7343,7 @@ The dog may have barked last night.
 The dog may not have barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
 	:aspect Endeavor
@@ -7327,7 +7354,7 @@ The dog may not have barked last night.
 The dog probably didn't bark last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
 	:aspect Endeavor
@@ -7338,7 +7365,7 @@ The dog probably didn't bark last night.
 The dog didn't bark last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
 	:aspect Endeavor
@@ -7360,12 +7387,12 @@ Example <a href="#4-3-1-1-2 (1)">(1)</a> shows how direct and indirect justifica
 (s/ see-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (f/ feed-01
 		:ARG0 (p2/ person
 			:name (n/ name :op1 "Mary"))
 		:ARG2 (c/ cat
-			:ref-number Singular)
+			:refer-number singular)
 		:aspect Performance
 		**:modstr FullAff**)
 	:aspect State
@@ -7378,7 +7405,7 @@ Mary must have fed the cat.
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
 	:ARG2 (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect Performance
 	:modstr PrtAff)
 ```
@@ -7409,7 +7436,7 @@ I will go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG4 (c/ city
 		:wiki "Santa_Fe,_New_Mexico"
 		:name (n/ name
@@ -7424,7 +7451,7 @@ You must go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
 		:refer-person 2nd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG4 (c/ city
 		:wiki "Santa_Fe,_New_Mexico"
 		:name (n/ name
@@ -7441,7 +7468,7 @@ You can go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
 		:refer-person 2nd
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG4 (c/ city
 		:wiki "Santa_Fe,_New_Mexico"
 		:name (n/ name
@@ -7500,7 +7527,7 @@ Rob thinks the dog escaped through the fence.
 		:name (n/ name :op1 "Rob"))
 	:ARG1 (e/ escape-01
 		:ARG0 (d/ dog
-			:ref-number Singular)
+			:refer-number singular)
 		:path (f/ fence)
 		:aspect Performance
 		:modpred t)
@@ -7519,7 +7546,7 @@ They probably decided to leave on Monday.
 (d/ decide-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (l/ leave-01
 		:ARG0 p
 		:temporal (d/ date-entity
@@ -7543,9 +7570,9 @@ His parents forbid him from smoking.
 		:ARG0-of (k/ kinship)
 			:ARG1 (p2/ person
 				:refer-person 3rd
-				:ref-number Singular)
+				:refer-number singular)
 			:ARG2 (p3/ parent)
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (s/ smoke-01
 		:ARG0 p2
 		:aspect Process
@@ -7619,7 +7646,7 @@ The New York Times reported that Congress voted on the bill this afternoon.
 			:name (n3/ name :op1 "Congress")
 			:wiki "United_States_Congress")
 		:ARG1 (b/ bill
-			:ref-number Singular)
+			:refer-number singular)
 		:temporal (a/ afternoon
 			:mod (t/ this))
 		:aspect Performance
@@ -7761,7 +7788,7 @@ They dropped water in order to fight the fire.
 (d/ drop-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (w/ water)
 	:purpose (f/ fight-01
 		:ARG0 p
@@ -7784,7 +7811,7 @@ He walked quickly in order to not arrive late.
 (w/ walk-01
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:manner (q/ quickly)
 	:purpose (a/ arrive-01
 		:ARG1 p
@@ -7825,11 +7852,11 @@ If she’s hungry, I’ll feed her dinner.
 (f/ feed-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (d/ dinner)
 	:ARG2 (p2/ person
 		:refer-person 3rd
-		:ref-number Singular)
+		:refer-number singular)
 	:condition (h/ hunger-01
 		:ARG0 p2
 		:aspect State
@@ -7849,12 +7876,12 @@ If she’s hungry, maybe I’ll cook pasta.
 (c/ cook-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (p2/ pasta)
 	:condition (h/ hunger-01
 		:ARG0 (p3/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:aspect State
 		:modstr FullAff)
 	:aspect Performance
@@ -7872,13 +7899,13 @@ If she isn’t hungry, we’ll just watch a movie.
 (w/ watch-01
 	:ARG0 (p/ person
 		:refer-person 1st
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (m/ movie)
 	:mod (j/ just)
 	:condition (h/ hunger-01
 		:ARG0 (p2/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:aspect State
 		:modstr FullNeg)
 	:aspect Performance
@@ -8090,7 +8117,7 @@ complement event node in the full dependency structure.
  		* If a participant is modified by a **quantifier**, annotate it with the **:quant** relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
  		* If a participant is a **named entity**, apply the **:name** and **:wiki** relations to the appropriate named entity category concept node, if you have not done so yet (see [Part 3-1-2](#part-3-1-2-named-entities)).
  	* Annotate **attributes** of participants and events.
- 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a **:ref-number** attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a **:refer-number** attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
  		* Give **_person_ nodes** from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:refer-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) an **:aspect** attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) the relevant **modal attributes** ([Part 4-3](#part-4-3-modal-dependency)):
@@ -8134,13 +8161,13 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (h/ hee3-01 'say s.t. to s.o.'
    :ARG0 (p/ person
 	   :refer-person 3rd
-	   :ref-number Singular)
+	   :refer-number singular)
    :ARG1 (p2/ person
 	   :ARG0-of (x/ 3ii'oku 'sit'
 		   :aspect State
 		   :modstr FullAff)
 	   :mod (n/ nuhu' 'this')
-	   :ref-number Plural)
+	   :refer-number plural)
    :ARG2 (n2/ nooxoh-01 'dig for s.t. with a tool'
 	   :ARG0 p2
 	   :ARG1 (t/ thing)
@@ -8176,14 +8203,14 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:theme (n/ neh'-01 'kill s.o.'
 		:ARG0 (p2/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:ARG1 (p3/ person
 			:refer-person 1st
-			:ref-number Singular)
+			:refer-number singular)
 		:condition (b/ bii'in-01 'find s.t.'
 			:ARG0 (p4/ person
 				:refer-person 2nd
-				:ref-number Plural)
+				:refer-number plural)
 			:ARG1 (t/ thing)
 			:aspect Performance
 			:modstr FullAff)
@@ -8216,14 +8243,14 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:theme (n/ neh'-01 'kill s.o.'
 		:ARG0 (p2/ person
 			:refer-person 3rd
-			:ref-number Singular)
+			:refer-number singular)
 		:ARG1 (p3/ person
 			:refer-person 1st
-			:ref-number Singular)
+			:refer-number singular)
 		:condition (b/ bii'in-01 'find s.t.'
 			:ARG0 (p4/ person
 				:refer-person 2nd
-				:ref-number Plural)
+				:refer-number plural)
 			:ARG1 (t/ thing)
 			:aspect Performance
 			:modstr FullNeg)
@@ -8260,7 +8287,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (n/ nooxohei-01 'dig for s.t. unspecified'
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (t/ thing)
 	:duration (w/ wo'oe'onoun 'on and on')
 	:aspect Activity
@@ -8303,7 +8330,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (n/ nooxohei-01 'dig for s.t. unspecified'
 	:ARG0 (p/ person
 		:refer-person 3rd
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (t/ thing)
 	:duration (t2/ temporal-quantity
 		:unit (u/ uuus 'day')
@@ -8328,7 +8355,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
    (h/ hoo3ontii 'fail to do s.t.'
        :ARG0 (p/ person
 	       :refer-person 3rd
-	       :ref-number Plural)
+	       :refer-number plural)
 	   :ARG1 (e/ event
 		   :mod h)
        :aspect Performance
