@@ -468,9 +468,9 @@ mulit-word concepts should be formed will be determined on a language-by-languag
 
 **UMR modal values:** UMR currently has three modal relations that are annotated at the sentence level, even though the final modal dependency structure functions at the document level:
 
-* Modstr: Indicates the epistemic strength relation (degree of confidence/certainty) between a conceiver and an event or between a conceiver and an embedded conceiver.
-* Modpred: Indicates the relation between a modal complement-taking predicate and its complement
-* quote: Indicates the relation between a speech predicate and its complement
+* `:modstr`: Indicates the epistemic strength relation (degree of confidence/certainty) between a conceiver and an event or between a conceiver and an embedded conceiver.
+* `:modpred`: Indicates the relation between a modal complement-taking predicate and its complement.
+* `:quote`: Indicates the relation between a reported event and the speech predicate.
 
 **Differences between AMR and UMR**
 
@@ -7156,16 +7156,30 @@ This simplified, mostly sentence-level, annotation process is step 0 of the road
 
 #### Part 4-3-1. Stage 0
 
-There are two types of modal annotations at Stage 0: a
-`:modstr` annotation that consists of a
-single epistemic strength/polarity value, and a dependency annotation
-that indicates a relation between two events. There are two dependency
-relations: `:modpred` for the link between a
-modal event and the event(s) that it modalizes, and
-`:quote` for the link between a reporting
-event and the event(s) that it reports. Additionally, events in purpose clauses and events in conditional constructions must be taken up in the modal dependency tree. The right structure of the modal dependency graph for these events will be extrapolated from the sentence-level annotation: events in purpose clauses are daughters of events in the main clause they depend on, and are connected to them with the `:purpose` participant role. This can be leveraged to embed the purpose-event underneath the correct parent in the modal dependency graph as well. For conditionals, similarly, the protasis event will be embedded under the apodosis event with a `:condition` relation, or the protasis and apodosis events will both be ```:ARG1``` and ```:ARG2``` of a `have-condition-91` node. Again, this information will be taken up in the eventual modal dependency graph without annotators needing to indicate it a second time in the document-level modal annotation workflow.
-The `:modstr` annotation applies to all events, except for those under the scope of a modal identified as its own event (i.e., events with `:mod` relations). This
-is summarized below.
+There are two types of modal annotations at Stage 0: a `:modstr` annotation
+that consists of a single epistemic strength/polarity value, and a dependency
+annotation that indicates a relation between two events. There are two
+dependency relations: `:modpred` for the link between a modal event and the
+event(s) that it modalizes, and `:quote` for the link between a reporting
+event and the event(s) that it reports (actually the direction is from the
+reported event to the reporting event, typically forming a cycle because the
+reported event is also an `:ARG1` of the reporting event). Additionally,
+events in purpose clauses and events in conditional constructions must be
+taken up in the modal dependency tree. The right structure of the modal
+dependency graph for these events will be extrapolated from the
+sentence-level annotation: events in purpose clauses are daughters of events
+in the main clause they depend on, and are connected to them with the
+`:purpose` participant role. This can be leveraged to embed the purpose-event
+underneath the correct parent in the modal dependency graph as well. For
+conditionals, similarly, the protasis event will be embedded under the
+apodosis event with a `:condition` relation, or the protasis and apodosis
+events will both be ```:ARG1``` and ```:ARG2``` of a `have-condition-91`
+node. Again, this information will be taken up in the eventual modal
+dependency graph without annotators needing to indicate it a second time in
+the document-level modal annotation workflow. The `:modstr` annotation
+applies to all events, except for those under the scope of a modal identified
+as its own event (i.e., events with `:mod` relations). This is summarized
+below.
 
 <div id="tab:modal_relations">
 
@@ -8081,7 +8095,7 @@ complement event node in the full dependency structure.
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) an **:aspect** attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) the relevant **modal attributes** ([Part 4-3](#part-4-3-modal-dependency)):
 	 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a **:modpred** relation with the space-building complement-taking predicate as the parent.
-	 		* Give events **under the scope of a reporting event** a **:quote** relation with the reporting verb as the parent, and a **:modstr** relation with the relevant strenght.
+	 		* Give events **under the scope of a reporting event** a **:quote** relation with the reporting verb as the child, and a **:modstr** relation with the relevant strength.
 	 		* Give **all other events** a **:modstr** annotation with the relevant strength.
  		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a **:mode** attribute with the relevant value (see [Part 3-3-2](#part-3-3-2-mode)).
  		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a **:polarity** attribute with the relevant value (see [Part 3-3-3](#part-3-3-3-polarity)).
