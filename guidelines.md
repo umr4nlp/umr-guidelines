@@ -85,7 +85,7 @@
     			* Part 4-3-1-1-1. [Non-future events](#part-4-3-1-1-1-non-future-events)
     			* Part 4-3-1-1-2. [Evidential justification](#part-4-3-1-1-2-evidential-justification)
     			* Part 4-3-1-1-3. [Future events and deontic modality](#part-4-3-1-1-3-future-events-and-deontic-modality)
-    		* Part 4-3-1-2. [modpred relation](#part-4-3-1-2-modpred-relation)
+    		* Part 4-3-1-2. [modal-predicate relation](#part-4-3-1-2-modal-predicate-relation)
     		* Part 4-3-1-3. [quote relation](#part-4-3-1-3-quote-relation)
     		* Part 4-3-1-4. [purpose relation](#part-4-3-1-4-purpose-relation)
     		* Part 4-3-1-5. [condition relation](#part-4-3-1-5-condition-relation)
@@ -149,7 +149,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      :ARG1 b
 	      :ARG2 (s/ spy-02
 	         :ARG0 b
-		 :modpred c2))
+		 :modal-predicate c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
 	   :aspect Performance
@@ -196,7 +196,7 @@ Snt3: He denied any wrongdoing.
             :ARG1-of (d2/ do-02
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
-		  :modpred d))
+		  :modal-predicate d))
       :aspect Performance
       :modal-strength full-affirmative)
 
@@ -468,9 +468,13 @@ mulit-word concepts should be formed will be determined on a language-by-languag
 
 **UMR modal values:** UMR currently has three modal relations that are annotated at the sentence level, even though the final modal dependency structure functions at the document level:
 
-* `:modal-strength`: Indicates the epistemic strength relation (degree of confidence/certainty) between a conceiver and an event or between a conceiver and an embedded conceiver.
-* `:modpred`: Indicates the relation between a modal complement-taking predicate and its complement.
-* `:quote`: Indicates the relation between a reported event and the speech predicate.
+* `:modal-strength`: Indicates the epistemic strength relation (degree of
+confidence/certainty) between a conceiver and an event or between a conceiver
+and an embedded conceiver.
+* `:modal-predicate`: Indicates the relation between a modal
+complement-taking predicate and its complement.
+* `:quote`: Indicates the relation between a reported event and the speech
+predicate.
 
 **Differences between AMR and UMR**
 
@@ -1601,7 +1605,7 @@ both *want* and *go*.
     	:ARG1 p
         :ARG4 (s/ school)
         :aspect Performance
-	:modpred w)
+	:modal-predicate w)
     :aspect State
     :modal-strength full-affirmative)
 ```
@@ -1615,7 +1619,7 @@ both *want* and *go*.
     	:ARG1 p
         :ARG4 (s/ school)
         :aspect Performance
-	:modpred w)
+	:modal-predicate w)
     :aspect State
     :modal-strength neutral-affirmative)
 ```
@@ -3551,7 +3555,7 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 	:concession (k2/ keenyamaaibi-00 'want'
 		:experiencer x
 		:stimulus (m
-			:modpred k2)
+			:modal-predicate k2)
 		:aspect State
 		:modal-strength full-negative)
 	:aspect Habitual
@@ -5558,7 +5562,7 @@ He wants to travel to Albuquerque.
 			:name (n/ name :op1 "Albuquerque")
 			:wiki "Albuquerque")
 		:aspect Performance
-		:modpred w)
+		:modal-predicate w)
 	:aspect State
 	:modal-strength full-affirmative)
 ```
@@ -5570,7 +5574,7 @@ The cat needs to be fed.
 	:ARG1 (f/ feed-01
 		:ARG c
 		:aspect Performance
-		:modpred n)
+		:modal-predicate n)
 	:aspect State
 	:modal-strength full-affirmative)
 ```
@@ -5586,7 +5590,7 @@ He’s dreading their decision.
 			:refer-person 3rd
 			:refer-number plural)
 		:aspect Process
-		:modpred d)
+		:modal-predicate d)
 	:aspect State
 	:modal-strength full-affirmative)
 ```
@@ -6347,7 +6351,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      :ARG1 b
 	      :ARG2 (s/ spy-02
 	         :ARG0 b
-		 :modpred c2))
+		 :modal-predicate c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
 	   :aspect Performance
@@ -6374,7 +6378,7 @@ Snt3: He denied any wrongdoing.
             :ARG1-of (d2/ do-02
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
-		  :modpred d))
+		  :modal-predicate d))
       :aspect Performance
       :modal-strength full-affirmative)
 
@@ -6464,7 +6468,7 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
 			      :quant 1000000
                               :unit (d/ dollar)))
 	          :aspect State
-		  :modpred b)
+		  :modal-predicate b)
 	    :aspect State
 	    :modal-strength full-affirmative))
 
@@ -6681,7 +6685,7 @@ In April 1998 Arab countries signed an anti-terrorism agreement that binds the s
 			      :aspect Activity
 			      :modal-strength full-affirmative)
 			:aspect Activity
-			:modpred b)
+			:modal-predicate b)
 		  :aspect Activity
 		  :modal-strength full-affirmative))
       :temporal (d/ date-entity :year 1998 :month 4)
@@ -6922,7 +6926,13 @@ There are certain types of modal constructions that require special treatment in
 
 **Complement-taking predicates**
 
-Events that are linked with a `:modpred` relation in the sentence-level modal annotation should also be linked in the temporal dependency. The complement-taking predicate acts as the reference time for its complement. That is, the complement is the child of the complement-taking predicate in the temporal dependency. There can be various types of temporal relations between complement-taking predicates and their complements, shown in <a href="#4-2-2-1-1 (1)">(1)</a>-<a href="#4-2-2-1-1 (3)">(3)</a>.
+Events that are linked with a `:modal-predicate` relation in the
+sentence-level modal annotation should also be linked in the temporal
+dependency. The complement-taking predicate acts as the reference time for
+its complement. That is, the complement is the child of the complement-taking
+predicate in the temporal dependency. There can be various types of temporal
+relations between complement-taking predicates and their complements, shown
+in <a href="#4-2-2-1-1 (1)">(1)</a>-<a href="#4-2-2-1-1 (3)">(3)</a>.
 
 <span id="4-2-2-1-1 (1)" label="4-2-2-1-1 (1)">4-2-2-1-1 (1)</span>
 
@@ -6940,7 +6950,7 @@ I saw him knock on the door.
 		:ARG1 (s1d/ door
 			:refer-number singular))
 		:aspect Performance
-		:modpred s1s)
+		:modal-predicate s1s)
 	:aspect State
 	:modal-strength full-affirmative)
 
@@ -6961,7 +6971,7 @@ I want to cook dinner.
 		:ARG0 s1p
 		:ARG1 (s1d/ dinner)
 		:aspect Performance
-		:modpred s1w)
+		:modal-predicate s1w)
 	:aspect State
 	:modal-strength full-affirmative)
 
@@ -6987,7 +6997,7 @@ I wish she had read the book.
 		:ARG1 (s1b/ book
 			:refer-number singular)
 		:aspect Performance
-		:modpred s1w)
+		:modal-predicate s1w)
 	:aspect State
 	:modal-strength full-affirmative)
 
@@ -7011,7 +7021,7 @@ I want to go to the city and visit a museum.
 		:ARG4 (s1c/ city
 			:refer-number singular)
 		:aspect Performance
-		:modpred s1w)
+		:modal-predicate s1w)
 	:aspect State
 	:modal-strength full-affirmative)
 
@@ -7189,36 +7199,36 @@ This simplified, mostly sentence-level, annotation process is step 0 of the road
 
 #### Part 4-3-1. Stage 0
 
-There are two types of modal annotations at Stage 0: a `:modal-strength` annotation
-that consists of a single epistemic strength/polarity value, and a dependency
-annotation that indicates a relation between two events. There are two
-dependency relations: `:modpred` for the link between a modal event and the
-event(s) that it modalizes, and `:quote` for the link between a reporting
-event and the event(s) that it reports (actually the direction is from the
-reported event to the reporting event, typically forming a cycle because the
-reported event is also an `:ARG1` of the reporting event). Additionally,
-events in purpose clauses and events in conditional constructions must be
-taken up in the modal dependency tree. The right structure of the modal
-dependency graph for these events will be extrapolated from the
-sentence-level annotation: events in purpose clauses are daughters of events
-in the main clause they depend on, and are connected to them with the
-`:purpose` participant role. This can be leveraged to embed the purpose-event
-underneath the correct parent in the modal dependency graph as well. For
-conditionals, similarly, the protasis event will be embedded under the
-apodosis event with a `:condition` relation, or the protasis and apodosis
+There are two types of modal annotations at Stage 0: a `:modal-strength`
+annotation that consists of a single epistemic strength/polarity value, and a
+dependency annotation that indicates a relation between two events. There are
+two dependency relations: `:modal-predicate` for the link between a modal
+event and the event(s) that it modalizes, and `:quote` for the link between a
+reporting event and the event(s) that it reports (actually the direction is
+from the reported event to the reporting event, typically forming a cycle
+because the reported event is also an `:ARG1` of the reporting event).
+Additionally, events in purpose clauses and events in conditional
+constructions must be taken up in the modal dependency tree. The right
+structure of the modal dependency graph for these events will be extrapolated
+from the sentence-level annotation: events in purpose clauses are daughters
+of events in the main clause they depend on, and are connected to them with
+the `:purpose` participant role. This can be leveraged to embed the
+purpose-event underneath the correct parent in the modal dependency graph as
+well. For conditionals, similarly, the protasis event will be embedded under
+the apodosis event with a `:condition` relation, or the protasis and apodosis
 events will both be ```:ARG1``` and ```:ARG2``` of a `have-condition-91`
 node. Again, this information will be taken up in the eventual modal
 dependency graph without annotators needing to indicate it a second time in
-the document-level modal annotation workflow. The `:modal-strength` annotation
-applies to all events, except for those under the scope of a modal identified
-as its own event (i.e., events with `:mod` relations). This is summarized
-below.
+the document-level modal annotation workflow. The `:modal-strength`
+annotation applies to all events, except for those under the scope of a modal
+identified as its own event (i.e., events with `:mod` relations). This is
+summarized below.
 
 <div id="tab:modal_relations">
 
 | **Event type** | **UMR Treatment** |
 | :------------------------------- |:------------------------------------------------------------------------------------------|
-| Events under the scope of modals | `:modpred` relation to CPT |
+| Events under the scope of modals | `:modal-predicate` relation to CPT |
 | Events under the scope of reporting events| `:modal-strength` annotation, `:quote` relation to reporting event |
 | All other events | `:modal-strength` annotation |
 
@@ -7506,11 +7516,11 @@ neutral strength, since even if someone has permission to do something, there is
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-2. modpred relation
+##### Part 4-3-1-2. modal-predicate relation
 
 Events under the scope of a modal identified as its own event are only
-annotated with a `:modpred` relation to the
-relevant modal. This is shown below in <a href="#4-3-1-2 (1)">(1)</a>.
+annotated with a `:modal-predicate` relation to the relevant modal. This is
+shown below in <a href="#4-3-1-2 (1)">(1)</a>.
 
 <span id="4-3-1-2 (1)" label="4-3-1-2 (1)">4-3-1-2 (1)</span>
 
@@ -7526,7 +7536,7 @@ Mary wants to visit France.
 			:wiki "France"
 			:name (n/ name :op1 "France"))
 		:aspect Performance
-		:modpred w
+		:modal-predicate w
 	:aspect State
 	:modal-strength full-affirmative
 
@@ -7548,7 +7558,7 @@ Rob thinks the dog escaped through the fence.
 			:refer-number singular)
 		:path (f/ fence)
 		:aspect Performance
-		:modpred t)
+		:modal-predicate t)
 	:aspect State
 	:modal-strength full-affirmative)
 (s/ sentence
@@ -7570,7 +7580,7 @@ They probably decided to leave on Monday.
 		:temporal (d/ date-entity
 			:weekday (m/ Monday))
 		:aspect Performance
-		:modpred d)
+		:modal-predicate d)
 	:aspect Performance
 	:modal-strength partial-affirmative)
 (s/ sentence
@@ -7594,7 +7604,7 @@ His parents forbid him from smoking.
 	:ARG1 (s/ smoke-01
 		:ARG0 p2
 		:aspect Process
-		:modpred f)
+		:modal-predicate f)
 	:ARG2 p2
 	:aspect State
 	:modal-strength full-affirmative)
@@ -8139,7 +8149,7 @@ complement event node in the full dependency structure.
  		* Give **_person_ nodes** from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:refer-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) an **:aspect** attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) the relevant **modal attributes** ([Part 4-3](#part-4-3-modal-dependency)):
-	 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a **:modpred** relation with the space-building complement-taking predicate as the parent.
+	 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a **:modal-predicate** relation with the space-building complement-taking predicate as the parent.
 	 		* Give events **under the scope of a reporting event** a **:quote** relation with the reporting verb as the child, and a **:modal-strength** relation with the relevant strength.
 	 		* Give **all other events** a **:modal-strength** annotation with the relevant strength.
  		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a **:mode** attribute with the relevant value (see [Part 3-3-2](#part-3-3-2-mode)).
@@ -8152,7 +8162,7 @@ complement event node in the full dependency structure.
  		* If so, choose the relevant **coreference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
  	* Assess  the **modal dependency structure** generated on the basis of the sentence-level modal annotation.
 	 	* Edit any errors.
-	 	* If possible, substitute the relevant modal strength value for any **:Unsp** links generated between conceivers and events because of **:modpred** relations in the sentence-level annotation.
+	 	* If possible, substitute the relevant modal strength value for any **:Unsp** links generated between conceivers and events because of **:modal-predicate** relations in the sentence-level annotation.
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
 
 [Back to Table of Contents](#toc)
