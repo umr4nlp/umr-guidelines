@@ -6473,7 +6473,7 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
 	    :modal-strength full-affirmative))
 
 (s1/ sentence
-  :temporal ((PAST_REF :includes s1c)
+  :temporal ((past-reference :includes s1c)
   	     (DCT :overlap s1b)
 	     (s1b :overlap s1w))
   :modal ((AUTH :full-affirmative s1c)
@@ -6538,7 +6538,7 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
       :modal-strength full-affirmative)
 
 (s1/ sentence
-	:temporal ((PAST_REF :includes s1r2)
+	:temporal ((past-reference :includes s1r2)
 		   (s1r2 :includes s1i))
 	:modal (AUTH :full-affirmative s1i))
 ```
@@ -6582,7 +6582,7 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 
 (s2/ sentence
    :temporal ((DCT :overlap s2i)
-   	      (Future_Ref :includes s2u))
+   	      (future-reference :includes s2u))
    :modal ((AUTH :full-affirmative s2i)
    	   (AUTH :full-affirmative s2p)
 	   (AUTH :full-affirmative s2u))
@@ -6713,7 +6713,7 @@ There are three types of nodes in the temporal dependency structure: pre-defined
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
-Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `PAST_REF`, `PRESENT_REF`, `FUTURE_REF`, and `DCT` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
+Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `past-reference`, `present-reference`, `future-reference`, and `DCT` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
 above, there is a generic `:depends-on` relation between all nodes
 in the temporal superstructure.
 
@@ -6752,7 +6752,7 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 <tr>
 <td colspan="2"> Vague</td>
 <td> nowadays</td>
-<td> Present/Past/Future_Ref </td>
+<td> Present/Past/future-reference </td>
 </tr>
 <tr>
 <td colspan="3"> Unlocatable Time Expressions</td>
@@ -6772,8 +6772,8 @@ are not represented in the temporal dependency structure at any level. They do i
 All locatable time expressions are represented in the temporal
 superstructure. Locatable time expressions are divided between concrete
 and vague time expressions. Vague time expressions (e.g. *nowadays, in
-the old days*) are represented as the children of `PRESENT_REF`,
-`PAST_REF`, or `FUTURE_REF`. Concrete time expressions
+the old days*) are represented as the children of `present-reference`,
+`past-reference`, or `future-reference`. Concrete time expressions
 are divided into relative and absolute time expressions. Relative
 concrete time expressions (*yesterday, the week before*) are represented
 as the children of either `DCT` (as in *yesterday*) or
@@ -6856,7 +6856,7 @@ snt15	A-nd u-h and then he gets down out of the tree,
 (s15s0 / sentence
   :modal ((ROOT :MODAL AUTH)
          (AUTH :full-affirmative s15g))
-  :temporal ((PAST_REF :contained s15g)))
+  :temporal ((past-reference :contained s15g)))
 
 
 snt16	and he dumps all his pears into the basket
@@ -6955,7 +6955,7 @@ I saw him knock on the door.
 	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		 (s1s :overlap s1k)))
 ```
 
@@ -6976,7 +6976,7 @@ I want to cook dinner.
 	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PRESENT_REF :contained s1W)
+	:temporal ((present-reference :contained s1W)
 		 (s1w :after s1c)))
 ```
 
@@ -7002,7 +7002,7 @@ I wish she had read the book.
 	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PRESENT_REF :contained s1W)
+	:temporal ((present-reference :contained s1W)
 		 (s1w :before s1c)))
 ```
 
@@ -7026,7 +7026,7 @@ I want to go to the city and visit a museum.
 	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PRESENT_REF :contained s1W)
+	:temporal ((present-reference :contained s1W)
 		 (s1w :after s1c)))
 ```
 
@@ -7075,7 +7075,7 @@ Magdalena said she arrived home, ate dinner, and will meet us at the theater.
 	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		 (s1s :before s1e)
 		 (s1e :before s1a)
 		(s1s :after s1m)))
@@ -7106,7 +7106,7 @@ He went home (in order) to wash the dishes.
 	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PAST_REF :contained s1g)
+	:temporal ((past-reference :contained s1g)
 		 (s1g :after s1w)))
 
 ```
@@ -7179,7 +7179,7 @@ Martin said that the package has probably already arrived.
 		:modal-strength partial-affirmative)
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1a))
 	:modal ((AUTH :full-affirmative s1p)
 		(AUTH :full-affirmative s1s)
@@ -7584,7 +7584,7 @@ They probably decided to leave on Monday.
 	:aspect Performance
 	:modal-strength partial-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1d)
+	:temporal ((past-reference :contained s1d)
 		   (s1m :contained s1l))
 	:modal ((AUTH :partial-affirmative s1p)
 		(s1p :full-affirmative s1d)
@@ -7652,7 +7652,7 @@ Mary said that she went to Santa Fe.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
 	:modal ((AUTH :full-affirmative s1s)
 		(AUTH :full-affirmative s1p)
@@ -7683,7 +7683,7 @@ The New York Times reported that Congress voted on the bill this afternoon.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1r)
+	:temporal ((past-reference :contained s1r)
 		   (s1a :contained s1v))
 	:modal ((AUTH :full-affirmative s1r)
 		(AUTH :full-affirmative s1n)
@@ -7708,7 +7708,7 @@ Mary might have said that she went to Santa Fe.
 	:aspect Performance
 	:modal-strength neutral-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
 	:modal ((AUTH :neutral-affirmative s1s)
 		(AUTH :neutral-affirmative s1p)
@@ -7733,7 +7733,7 @@ Mary didn’t say that she went to Santa Fe.
 	:aspect Performance
 	:modal-strength full-negative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
 	:modal ((AUTH :full-negative s1s)
 		(AUTH :full-negative s1p)
@@ -7759,7 +7759,7 @@ Mary said that John might have gone to Santa Fe.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
 	:modal ((AUTH :full-negative s1s)
 		(AUTH :neutral-affirmative s1p)
@@ -7785,7 +7785,7 @@ Mary said that John probably didn’t go to Santa Fe.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
 	:modal ((AUTH :full-negative s1s)
 		(AUTH :partial-negative s1p)
@@ -7826,7 +7826,7 @@ They dropped water in order to fight the fire.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1d)
+	:temporal ((past-reference :contained s1d)
 		   (s1d :after :s1f))
 	:modal ((AUTH :full-affirmative s1d)
 		(AUTH :full-affirmative s1p)
@@ -7849,7 +7849,7 @@ He walked quickly in order to not arrive late.
 	:aspect Activity
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1w)
+	:temporal ((past-reference :contained s1w)
 		   (s1w :after s1a))
 	:modal ((AUTH :full-affirmative s1w)
 		(AUTH :full-affirmative s1p)
@@ -8206,7 +8206,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
    :aspect Performance
    :modal-strength full-affirmative)
 (s1/ sentence
-	:temporal ((PAST_REF :contained s1h)
+	:temporal ((past-reference :contained s1h)
 			   (s1h :overlap s1x)
 			   (s1h :after s1n2))
 	:modal ((AUTH :full-affirmative s1h)
@@ -8556,7 +8556,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Frustrative | Modal semantic category | **3-1-3-3** |
 | Full support | Modal semantic category | **4-3-1-1***, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
 | Future-oriented modality | Modal semantic category | 4-3-1-1, **4-3-1-1-3** |
-| *Future_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *future-reference* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | General participant roles | Participant role category | 2-1, 2-2-1, 3-2-1, **3-2-1-1**, 3-2-1-1-2, 3-2-1-2-1, 3-2-1-3, 3-2-2 |
 | Generic events | Event type | **3-1-1-4** |
 | Gerund | Strategy | **3-1-1**, 3-3-1-1 |
@@ -8656,7 +8656,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Part-of* | Non-participant role relation | **3-2-2-2** |
 | Part-whole relations | Semantic category | **3-2-2-2** |
 | Passive | Valency-changing category | 3-2-1, **3-2-1-1-2** |
-| *PAST_REF* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *past-reference* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | *Path* | Non-participant role relation | **3-2-2-3** |
 | *Paucal* | Number semantic category, Number annotation value | 2-1, **3-3-5** |
 | *Perfective* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
@@ -8682,7 +8682,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Predicative location | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
 | Predicative possession | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
 | Predicativization/predicativized argument | Strategy | **3-1-3-5**, 3-2-1-1-1 |
-| *Present_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *present-reference* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | *Process* | Aspectual semantic category, aspect annotation value | 2-1, 3-3-1, 3-3-1-1 |
 | Pronominal affixes | Strategy | **3-1-3-1**, 3-1-3-5, **3-3-5** |
 | Pronoun | Part of Speech | 2-1, **3-1-3-1, 4-1**, 4-1-1 |
