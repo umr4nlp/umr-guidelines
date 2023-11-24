@@ -6771,17 +6771,17 @@ representation in the temporal superstructure (see Table 1 in Zhang & Xue
 <td rowspan="2"> Concrete </td>
 <td> Absolute</td>
 <td> May 2015</td>
-<td> `ROOT` </td>
+<td> <tt>ROOT</tt> </td>
 </tr>
 <tr>
 <td> Relative</td>
 <td> today, two days later </td>
-<td> `document-creation-time`, another Concrete </td>
+<td> <tt>document-creation-time</tt>, another Concrete </td>
 </tr>
 <tr>
 <td colspan="2"> Vague</td>
 <td> nowadays</td>
-<td> `present/past/future-reference` </td>
+<td> <tt>present/past/future-reference</tt> </td>
 </tr>
 <tr>
 <td colspan="3"> Unlocatable Time Expressions</td>
