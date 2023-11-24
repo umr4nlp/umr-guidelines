@@ -121,7 +121,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
         :range (m/ more-than
                 :op1 (t3/ temporal-quantity :quant 8
                     :unit (m2/ month))))
-  :aspect Performance
+  :aspect performance
   :modal-strength full-affirmative)
 
 (s1/ sentence
@@ -152,7 +152,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 		 :modal-predicate c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
-	   :aspect Performance
+	   :aspect performance
 	   :modal-strength full-affirmative)
 	:ARG1-of (s2/ sentence-01
 	   :ARG2 (p2/ prison
@@ -162,9 +162,9 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	         :quant 20
 		 :unit (y/ year)))
 	   :ARG3 s
-	   :aspect Performance
+	   :aspect performance
 	   :modal-strength full-affirmative)
-     :aspect State
+     :aspect state
      :modal-strength full-affirmative)
 
 (s2/ sentence
@@ -197,7 +197,7 @@ Snt3: He denied any wrongdoing.
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
 		  :modal-predicate d))
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s3/ sentence
@@ -233,7 +233,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
       :ARG1-of (c2/ cause-01
             :ARG0 (r/ reason
                   :mod (h2/ health)))
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s4/ sentence
@@ -259,7 +259,7 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
                   :name (n3/ name :op1 "Ramstein")
                   :place (c3/ country :wiki "Germany"
                         :name (n4/ name :op1 "Germany"))))
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s5/ sentence
@@ -292,12 +292,12 @@ Snt6: He will spend the next several days at the medical center there before he 
 	       :ARG1-of (h2/ have-role-91
 	          :ARG2 p
 		  :ARG3 (w/ wife)))
-	    :aspect Performance
+	    :aspect performance
 	    :modal-strength full-affirmative))
       :place (c/ center
           :mod (m/ medical)
 	  :place (t2/ there))
-      :aspect State
+      :aspect state
       :modal-strength full-affirmative)
 
 (s6/ sentence
@@ -325,9 +325,9 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
                    :ARG1 p
                    :place (c/ country :wiki "Russia"
                          :name (n3/ name :op1 "Russia")))
-		   :aspect Performance
+		   :aspect performance
 		   :modal-strength full-affirmative)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (s7/ sentence
@@ -358,16 +358,16 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 	        :ARG1 p
 		:ARG2 (t/ try-02
 		   :ARG1 p
-		   :aspect Process)
+		   :aspect process)
 		:place (j/ jail
 		   :mod (c2/ country :wiki "Russia
 		      :name (n2/ name :op1 "Russia")))
-		:aspect State
+		:aspect state
 		:modal-strength full-affirmative)
-	     :aspect Performance
+	     :aspect performance
 	     :modal-strength neutral-affirmative)
 	  :ARG2 d)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 
 (s8/ sentence
@@ -400,9 +400,9 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
                         :ARG1 (b/ blood
 			   :part p2)
                         :ARG1-of (h2/ high-02)))
-	    :aspect State
+	    :aspect state
 	    :modal-strength full-affirmative)
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s9/ sentence
@@ -437,7 +437,7 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
         :range (m/ more-than
                 :op1 (t3/ temporal-quantity :quant 8
                     :unit (m2/ month))))
-  :aspect Performance
+  :aspect performance
   :modal-strength full-affirmative)
 ```
 
@@ -497,7 +497,7 @@ UMR differs from AMR in a number of ways:
 (g/ go-01
     :ARG0 (b/ boy
     	:refer-number singular)
-    :aspect State
+    :aspect state
     :modal-strength neutral-affirmative)
 
 (s0/sentence
@@ -591,12 +591,12 @@ ap-hle-am-ke'		nenhlet
 (e/ enhleama-00 'travel'
 	:actor (n/ nenhlet 'person'
 		:refer-number singular)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 (t/ travel-01
 	:ARG0 (m/ man
 		:refer-number singular)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 
@@ -628,9 +628,9 @@ I heard about his travels.
 		:ARG0 (p2/ person
 			:refer-person 3rd
 			:refer-number singular)
-		:aspect Process
+		:aspect process
 		:modal-strength full-affirmative)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
@@ -662,7 +662,7 @@ apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 (e/ elvongkeskama-tayep-00 'rescue'
 	:undergoer (a/ ayko'ok 'child'
 		:refer-number plural)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
@@ -695,7 +695,7 @@ an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 		:refer-person 1st
 		:refer-number singular)
 	:ARG2 (v/ vakkahak 'book')
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -726,7 +726,7 @@ five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 		:op2 (t3/ temporal-quantity
 			:quant 6
 			:unit (m/ mes 'month')))
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 <span id="2-2-3 (2b)">2-2-3 (2b)</span>
@@ -751,7 +751,7 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 		:ARG2 (t/ temporal-quantity
 			:quant 1
 			:unit (a2/ año 'year)))
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 <span id="2-2-3 (2c)">2-2-3 (2c)</span>
@@ -770,7 +770,7 @@ apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=a
 				:refer-number plural)))
 	:temporal (d/ date-entity
 		:year 1966)
-	:aspect Performance
+	:aspect performance
 	:modal-strength neutral-affirmative)
 ```
 [Back to Table of Contents](#toc)
@@ -1227,7 +1227,7 @@ Following AMR, each named entity in a text is annotated with a type. However, th
       :ARG3 (b/ businessman
       	    :mod (n2/ nationality :wiki "United_States"
 	          :name (n3/ name :op1 "America")))
-      :aspect State
+      :aspect state
       :modal-strength full-affirmative)
 ```
 The total set of entity types are hierarchically organized, as listed in Table 5 below.
@@ -1351,7 +1351,7 @@ PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 	:refer-number singular)
     :theme (t2/ thing
     	:refer-person Obviative)
-    :aspect Performance
+    :aspect performance
     :modal-strength full-affirmative)
 ```
 
@@ -1459,12 +1459,12 @@ by the verb root.
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
 	    :refer-number singular)
-    	:aspect Performance
+    	:aspect performance
 	:modal-strength full-affirmative)
     :actor (k2/ kid
     	:refer-number singular)
     :undergoer (w/ water)
-    :aspect Performance
+    :aspect performance
     :modal-strength full-affirmative)
 ```
 <span id="3-1-3-2 (1b)">3-1-3-2 (1b)</span> Grandmother did not make the kid drink the water.
@@ -1475,12 +1475,12 @@ by the verb root.
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
 	    :refer-number singular)
-    	:aspect Performance
+    	:aspect performance
 	:modal-strength full-negative)
     :actor (k2/ kid
     	:refer-number singular)
     :undergoer (w/ water)
-    :aspect Performance
+    :aspect performance
     :modal-strength neutral-affirmative)
 ```
 
@@ -1492,12 +1492,12 @@ by the verb root.
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
 	    :refer-number singular)
-    	:aspect Performance
+    	:aspect performance
 	:modal-strength full-affirmative)
     :actor (k2/ kid
     	:refer-number singular)
     :undergoer (w/ water)
-    :aspect Performance
+    :aspect performance
     :modal-strength full-negative)
 ```
 
@@ -1521,7 +1521,7 @@ grandmother	drink-CAUS	kid=PST		water-INST
 	:refer-number singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
-    :aspect Performance
+    :aspect performance
     :modal-strength full-affirmative)
 ```
 
@@ -1573,7 +1573,7 @@ paper	this	black-change
     :ARG1 (c/ ce 'paper')			    :ARG1 (p/ paper)
     	:mod (s/ əsi 'this')			        :mod (t/ this)
     :ARG2 (m/ mu 'black')			    :ARG2 (b/ black)
-    :aspect Performance)			    :aspect Performance)
+    :aspect performance)			    :aspect performance)
 ```
 
 Similarly, modal and temporal auxiliaries will not be identified
@@ -1604,9 +1604,9 @@ both *want* and *go*.
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
-        :aspect Performance
+        :aspect performance
 	:modal-predicate w)
-    :aspect State
+    :aspect state
     :modal-strength full-affirmative)
 ```
 <span id="3-1-3-3 (2b)">3-1-3-3 (2b)</span> She may want to go to school.
@@ -1618,9 +1618,9 @@ both *want* and *go*.
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
-        :aspect Performance
+        :aspect performance
 	:modal-predicate w)
-    :aspect State
+    :aspect state
     :modal-strength neutral-affirmative)
 ```
 
@@ -1667,12 +1667,12 @@ en-na'-ten-ek-ant-a'		La	Esperanza
     	:name (n/ name					        :name (n/ name
             :op1 "La"						    :op1 "La"
             :op2 "Esperanza"))				    	    :op2 "Esperanza"))
-    :aspect State					    :temporal (c2/ come-01
+    :aspect state					    :temporal (c2/ come-01
     :modal-strength full-affirmative)					        :ARG1 p
     								:ARG4 (h/ here)
-                                                        	:aspect Activity
+                                                        	:aspect activity
                                                         	:modal-strength full-affirmative)
-                                                    	    :aspect State
+                                                    	    :aspect state
                                                    	    :modal-strength full-affirmative)
 ```
 
@@ -1694,26 +1694,26 @@ the verb may contribute to the aspectual attribute of the concept.
 
 ```
 (g / get-01
-      :aspect Performance
+      :aspect performance
       :ARG0 (p / person
                 :refer-number singular
 		:refer-person 2nd)
       :ARG1 (i / information
             :mod (t / this)
             :topic (u / use-01
-	          :aspect Habitual
+	          :aspect habitual
                   :ARG0 (p2 / person :name (n / name :op1 "Obama"))
                   :ARG1 (m / money
                         :source (p3 / person
                               :ARG0-of (p4 / pay-01
-			            :aspect Process
+			            :aspect process
                                     :ARG1 (t2 / tax-01))))
                   :ARG2 (a2 / and
                         :op1 (i2 / interview-01
-			      :aspect Habitual
+			      :aspect habitual
                               :ARG1 p2)
                         :op2 (t4 / trip-03
-			      :aspect Habitual
+			      :aspect habitual
                               :ARG0 p2
                               :medium (b / bus)))))
       :ARG2 (a / umr-unknown))
@@ -1761,8 +1761,8 @@ this	young.man	shaman
     	:mod (a/ ajan 'this')						:mod (y/ young)
 	:refer-number singular)						:mod (t/ this)
     :ARG3 (t/ tsumi 'shaman')						:refer-number singular)
-    :aspect State						    :ARG3 (s/ shaman)
-    :modal-strength full-affirmative)						    :aspect State
+    :aspect state						    :ARG3 (s/ shaman)
+    :modal-strength full-affirmative)						    :aspect state
     								    :modal-strength full-affirmative)
 ```
 
@@ -1777,7 +1777,7 @@ Miguel-CER	canoe-owner
     	:name (n/ name :op1 "Mijiri")					:name (n/ name :op1 "Miguel")
 	:refer-number singular)					    	:refer-number singular)
     :ARG2 (a/ ɨarayara 'canoe')					    :ARG2 (c/ canoe)
-    :aspect State						    :aspect State
+    :aspect state						    :aspect state
     :modal-strength full-affirmative)						    :modal-strength full-affirmative)
 ```
 
@@ -1912,23 +1912,23 @@ concatenating the lemmatized words, as in <a href="#3-1-3-7 (1)">(1)</a>. In <a 
 		        :refer-number singular)
                   :ARG2 (w/ water
                         :ARG1-of (h/ hot-05))
-		  :aspect Habitual
+		  :aspect habitual
 		  :modal-strength full-affirmative)
             :op2 (a2/ and
                   :op1 (t2/ take-out-11
                         :ARG0 p
                         :ARG1 t
-			:aspect Habitual
+			:aspect habitual
 			:modal-strength full-affirmative)
                   :op2 (s2/ stir-01
                         :ARG0 p
                         :ARG1 t
-			:aspect Habitual
+			:aspect habitual
 			:modal-strength full-affirmative)
                   :op3 (f/ fry-01
                         :ARG0 p
                         :ARG1 t
-			:aspect Habitual
+			:aspect habitual
 			:modal-strength full-affirmative)
                   :temporal (t3/ then)))
       :ARG1-of (n/ normal-02))
@@ -1940,7 +1940,7 @@ Multi-word concepts are not limited phrasal verbs like ``take out''. They also i
 <span id="3-1-3-7 (1b)">3-1-3-7 (1b)</span>  Pretty soon the far left loons will jump on his wagon.
 ```
 (j / jump-on-bandwagon-09
-      :aspect Performance
+      :aspect performance
       :ARG0 (l / loon
             :ARG1-of (l2 / left-19
                   :degree (f / far)))
@@ -1964,7 +1964,7 @@ single words, as in <a href="#3-1-3-7 (1c)">(1c)</a>, where the multi-word conce
             :refer-person 3rd
 	    :refer-number singular)
       :mod (a2/ as-well)
-      :aspect State
+      :aspect state
       :modal-strength full-affirmative)
 ```
 
@@ -1983,7 +1983,7 @@ In languages like Chinese where there are no natural word boundaries in written 
             :arg0  (x16 / 办法
                   :mod  (x17 / 这))
             :arg1  x11)
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 ```
 
@@ -2002,7 +2002,7 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
             :op4  (x7 / 死亡))
       :manner  (x11 / 全-01)
       :manner  (x12 / 都)
-      :aspect Performance)
+      :aspect performance)
 ```
 
 ##### Part 3-1-3-8. Miscellaneous constructions
@@ -2014,7 +2014,7 @@ Other than multi-word concepts, languages often have regular or irregular constr
 
 ```
  (c2 / correlate-91
-       :aspect Habitual
+       :aspect habitual
        :ARG1 (m / more
                   :frequency-of (r / read-01
                         :ARG0 (p / person
@@ -2048,7 +2048,7 @@ Other than multi-word concepts, languages often have regular or irregular constr
       :ARG1 (s/ school)
       :ARG2 (p/ pupil
             :quant (a/ approximately :op1 570))
-      :aspect State
+      :aspect state
       :modal-strength full-affirmative)
 ```
 
@@ -2063,7 +2063,7 @@ There will even be many VIPs!
                    :mod (x4/ 高层)
                    :quant (x5/ 很多))
             :mode Expressive
-	    :aspect State
+	    :aspect state
 	    :modal-strength full-affirmative))
 ```
 
@@ -2138,12 +2138,12 @@ I will go for a walk or play some soccer.
    	:ARG0 (p/ person
 		:refer-person 1st
 		:refer-number singular)
-	:aspect Process
+	:aspect process
 	:modal-strength full-affirmative)
    :op2 (p2/ play-01
    	:ARG0 p
 	:ARG1 (s/ soccer)
-	:aspect Process
+	:aspect process
 	:modal-strength full-affirmative))
 ```
 
@@ -2166,7 +2166,7 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 		:refer-person 1st
 		:refer-number plural)
 	:companion (a2/ aki' 'woman')
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-negative)
    :ARG2 (r/ rmisupamo-00 'go down'
    	:actor p
@@ -2176,21 +2176,21 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 		:op1 (h2/ hataisupi'bave-00 'bash'
 			:actor p
 			:undergoer (m/ mnu'bo 'pandanus')
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
 		:op2 (k2/ krodesupi'bave-00 'husk and eat'
 			:actor p
 			:undergoer (k3/ kire'bo 'corn')
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
 		:op3 (b/ bresupi'bave-00 'plant'
 			:actor p
 			:undergoer (e/ egemo 'banana')
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative
-   :aspect State)
+   :aspect state)
 
 ```
 
@@ -2205,13 +2205,13 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 		:refer-person 3rd
 		:refer-number singular)
 	:ARG2 (p2/ place)
-	:aspect State
+	:aspect state
 	:modal-strength neutral-affirmative
 	:mode Interrogative)
    :op2 (h2/ have-place-91
    	:ARG1 p
 	:ARG2 p2
-	:aspect State
+	:aspect state
 	:modal-strength neutral-negative
 	:polarity -
 	:mode Interrogative))
@@ -2237,10 +2237,10 @@ Grab a stick lest he attack you!
 	       :refer-person 3rd
 	       :refer-number singular)
 	  :ARG1 p
-	  :aspect Performance
+	  :aspect performance
 	  :modal-strength full-affirmative)
      :mode Imperative
-     :aspect Performance
+     :aspect performance
      :modal-strength partial-affirmative)
 ```
 
@@ -2255,14 +2255,14 @@ Grab a stick or he will he attack you!
           :refer-number singular)						:ARG1 (s/ stick
      :apprehensive (a/ attack-01						:refer-number singular)
           :ARG0 (p2/ person						:mode Imperative
-	       :refer-person 3rd						:aspect Performance
+	       :refer-person 3rd						:aspect performance
 	       :refer-number singular)					:modal-strength partial-affirmative)
 	  :ARG1 p						:op2 (a/ attack-01
-	  :aspect Performance						:ARG0 (p2/ person
+	  :aspect performance						:ARG0 (p2/ person
 	  :modal-strength full-affirmative)							:refer-person 3rd
      :mode Imperative								:refer-number singular)
-     :aspect Performance						:ARG1 p
-     :modal-strength partial-affirmative)							:aspect Performance
+     :aspect performance						:ARG1 p
+     :modal-strength partial-affirmative)							:aspect performance
                             						:modal-strength full-affirmative))
 ```
 
@@ -2286,12 +2286,12 @@ I read a book while I listened to music. / I read a book while listening to musi
    :ARG1 (b/ book								:refer-number singular)
    	:refer-number singular)						:ARG1 (b/ book
    :temporal (listen-01								:refer-number singular)
-   	:ARG0 p								:aspect Performance
+   	:ARG0 p								:aspect performance
 	:ARG1 (m/ music)						:modal-strength full-affirmative)
-	:aspect State						:op2 (l/ listen-01
+	:aspect state						:op2 (l/ listen-01
 	:modal-strength full-affirmative)						:ARG0 p
-   :aspect Performance							:ARG1 (m/ music)
-   :modal-strength full-affirmative)							:aspect State
+   :aspect performance							:ARG1 (m/ music)
+   :modal-strength full-affirmative)							:aspect state
    									:modal-strength full-affirmative))
 ```
 
@@ -2306,24 +2306,24 @@ In addition to having your hand stamped, you have to show your ticket to get int
 	:ARG1 (s/ stamp-01							:ARG0 (p2/ person)
 		:ARG0 (p2/ person)						:ARG1 (h/ hand
 		:ARG1 (h2/ hand								:part p)
-			:part p)						:aspect Performance
-		:aspect Performance						:modal-strength partial-affirmative)
-		:modal-strength partial-affirmative)						:aspect Performance
-	:aspect Performance						:modal-strength partial-affirmative
+			:part p)						:aspect performance
+		:aspect performance						:modal-strength partial-affirmative)
+		:modal-strength partial-affirmative)						:aspect performance
+	:aspect performance						:modal-strength partial-affirmative
 	:modal-strength partial-affirmative)							:pure-addition (s2/ show
    :op2 (s2/ show-01								:ARG0 p
    	:ARG0 p									:ARG1 (t/ ticket
 	:ARG1 (t/ ticket								:poss p
 		:poss p									:refer-number singular)
 		:refer-number singular)						:ARG2 (p3/ person)
-	:ARG2 (p3/ person)							:aspect Performance
-   	:aspect Performance							:modal-strength partial-affirmative)
+	:ARG2 (p3/ person)							:aspect performance
+   	:aspect performance							:modal-strength partial-affirmative)
 	:modal-strength partial-affirmative)							:purpose (g/ get-05
    :purpose (g/ get-05								:ARG0 p
    	:ARG0 p									:ARG2 (c/ concert
 	:ARG2 (c/ concert								:refer-number singular)
-		:refer-number singular)						:aspect Performance
-	:aspect Performance							:modal-strength full-affirmative))
+		:refer-number singular)						:aspect performance
+	:aspect performance							:modal-strength full-affirmative))
 	:modal-strength full-affirmative)
 ```
 
@@ -2337,15 +2337,15 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
    :ARG1 (c/ chicken)								:refer-number plural)
    :location (h/ home)							:purpose (e/ eat-01
    :substitute (g/ go_out-17							:ARG0 p
-   	:ARG0 p									:aspect Endeavor
+   	:ARG0 p									:aspect endeavor
 	:purpose (e/ eat-01							:modal-strength full-affirmative)
-		:ARG0 p							:aspect Performance
-		:aspect Endeavor					:modal-strength full-negative)
+		:ARG0 p							:aspect performance
+		:aspect endeavor					:modal-strength full-negative)
 		:modal-strength full-affirmative)				:op2 (b/ barbecue-01
-	:aspect Performance						:ARG0 p
+	:aspect performance						:ARG0 p
 	:modal-strength full-negative							:ARG1 (c/ chicken)
-   :aspect Performance							:location (h/ home)
-   :modal-strength full-affirmative							:aspect Performance
+   :aspect performance							:location (h/ home)
+   :modal-strength full-affirmative							:aspect performance
 									:modal-strength full-affirmative))
 ```
 
@@ -2375,9 +2375,9 @@ I grabbed a stick in order to defend myself. / I grabbed a stick and defended my
 	:purpose (d/ defend
 		:ARG0 p
 		:ARG1 p
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative)
-	:Aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2394,9 +2394,9 @@ He got into the army by lying about his age. / He lied about his age and got int
 		:ARG1 (t/ thing
 			:ARG2-of (a2/ age-01
 				:ARG1 p))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative)
-	:Aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2414,9 +2414,9 @@ Sarah moved back to California because she couldn't find a job in Washington. / 
 		:ARG1 (j/ job)
 		:place (s/ state :wiki "Washington"
 			:name (n3/ name :op1 "Washington"))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-negative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2429,9 +2429,9 @@ If you touch it, it might explode. / Touch it, and it might explode.
 	:condition (t2/ touch-01
 		:ARG0 (p/ person)
 		:ARG1 t
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength neutral-affirmative)
 ```
 
@@ -2451,9 +2451,9 @@ I fed my dog before going to the office. / I fed my dog and went to the office.
 			:ARG1 p
 			:ARG4 (o/ office
 				:refer-number singular)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2469,9 +2469,9 @@ I went home after paying the check. / I paid the check and went home.
 		:op1 (p2/ pay-01
 			:ARG0 p
 			:ARG3 (c/ check)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2493,13 +2493,13 @@ Peter	diligent	CONJ	Vanja	lazy
    	:ARG1 (p/ person
 		:name (n/ name :op1 "Peter"))
 	:ARG2 (s/ staratel'nyi 'diligent')
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
    :ARG2 (h2/ have-mod-91
    	:ARG1 (p2/ person
 		:name (n2/ name :op1 "Vanja"))
 	:ARG2 (l/ lenivyj 'lazy')
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative))
 ```
 
@@ -2512,12 +2512,12 @@ Vanja	caught_cold	CONJ	went	to	school
    :ARG1 (p/ prostudilsja-00 'catch a cold'
    	:experiencer (p2/ person
 		:name (n/ name :op1 "Vanja"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
    :ARG2 (p3/ poshël-00 'go'
    	:actor p2
 	:goal (s/ shkolu 'school)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative))
 ```
 
@@ -2543,10 +2543,10 @@ Sarah carried the bowl of punch into the living room without doing a somersault.
 		:mod (l/ living))
 	:manner (s/ somersault
 		:ARG0 p
-		:aspect Performance
+		:aspect performance
 		:polarity -
 		:modal-strength full-negative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2564,10 +2564,10 @@ Sarah carried the bowl of punch into the living room without spilling a drop. / 
 		:ARG0 p
 		:ARG1 p2
 			:unit (d/ drop)
-		:aspect Performance
+		:aspect performance
 		:polarity -
 		:modal-strength full-negative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2584,9 +2584,9 @@ Even though he was broke, he bought a new guitar. / He was broke, but (still) bo
 	:concession (h/ have-mod-91
 		:ARG1 p
 		:ARG2 (b2/ broke)
-		:aspect State
+		:aspect state
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -2597,7 +2597,7 @@ Even if you arrive only five minutes late, you will be fired.
 	:ARG1 (p/ person
 		:refer-person 2nd
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative
 	:concessive-condition (a/ arrive-01
 		:ARG1 p
@@ -2605,7 +2605,7 @@ Even if you arrive only five minutes late, you will be fired.
 			:extent (t/ temporal-quantity
 				:quant 5
 				:unit (m/ minute)))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative))
 ```
 
@@ -2626,7 +2626,7 @@ People don't own tigers, except for Joe Exotic.
 		:name (n/ name
 			:op1 "Joe"
 			:op2 "Exotic"))
-	:Aspect State
+	:aspect state
 	:MODSTR full-negative)
 ```
 
@@ -2842,7 +2842,7 @@ The ice cube melted.
 	:undergoer (c/ cube
 		:material (i/ ice)
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (1b)">3-2-1-1 (1b)</span>
@@ -2852,7 +2852,7 @@ The enemy sank the ship.
 	:actor (e/ enemy)
 	:undergoer (s2/ ship
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 
 ```
@@ -2866,7 +2866,7 @@ She built a house out of wood.
 	:undergoer (h/ house
 		:refer-number singular)
 	:material (w/ wood)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="#3-2-1-1 (1d)">3-2-1-1 (1d)</span>
@@ -2880,7 +2880,7 @@ He hit the stick against the fence.
 		:refer-number singular)
 	:undergoer (f/ fence
 		:refer-number singular)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 The `:experiencer` and
@@ -2899,7 +2899,7 @@ The audience listened to the concerto.
 	:experiencer (a/ audience)
 	:stimulus (c/ concerto
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (4b)">3-2-1-1 (4b)</span>
@@ -2911,7 +2911,7 @@ The cat startled me.
 		:refer-number singular)
 	:stimulus (c/ cat
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 The `:start, :goal`, and
@@ -2946,7 +2946,7 @@ She walked home from the store.
 		refer-number singular)
 	:goal (h/ home)
 	:start (s/ store)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (5b)">3-2-1-1 (5b)</span>
@@ -2956,7 +2956,7 @@ The leaf fell to the ground.
 	:theme (l/ leaf
 		:refer-number singular)
 	:goal (g/ ground)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (5c)">3-2-1-1 (5c)</span>
@@ -2983,7 +2983,7 @@ She is sitting on the couch.
 		:refer-number singular)
 	:place (c/ couch
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (5e)">3-2-1-1 (5e)</span>
@@ -2997,7 +2997,7 @@ He picked some berries from the bush.
 		:refer-number paucal)
 	:source (b2/ bush
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 The `:recipient` role only occurs with
@@ -3026,7 +3026,7 @@ He gave the cat some wet food.
 		:quant (s/ some))
 	:recipient (c/ cat
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3042,7 +3042,7 @@ I showed the pictures to her.
 	:recipient (p3/ person
 		:refer-person 3rd
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3057,10 +3057,10 @@ She told me that they they’re attending.
 		:actor (p2/ person
 			:refer-person 3rd
 			:refer-number plural)
-		:aspect Activity
+		:aspect activity
 		:quote t
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3074,7 +3074,7 @@ She stole the information from a competitor.
 	:theme (i/ information)
 	:source (c/ competitor
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3126,7 +3126,7 @@ He winked.
 	:actor (p/ person
 		:refer-person 3rd
 		:refer-number singular)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (7b)">3-2-1-1 (7b)</span>
@@ -3139,7 +3139,7 @@ Jane wrote the paper with Chris.
 		:name (n2/ name :op2 "Chris"))
 	:undergoer (p3/ paper
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3151,7 +3151,7 @@ They wrote the paper.
 		:refer-number plural)
 	:undergoer (p2/ paper
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (7d)">3-2-1-1 (7d)</span>
@@ -3165,7 +3165,7 @@ Jane and Chris wrote the paper.
 			:name (n2/ name :op1 "Chris)))
 	:undergoer (p3/ paper
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (7e)">3-2-1-1 (7e)</span>
@@ -3179,7 +3179,7 @@ She sliced the bread with a knife.
 		:refer-number singular)
 	:undergoer (b/ bread
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (7f)">3-2-1-1 (7f)</span>
@@ -3190,7 +3190,7 @@ The knife sliced through the bread.
 		:refer-number singular)
 	:undergoer (b/ bread
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (7g)">3-2-1-1 (7g)</span>
@@ -3202,7 +3202,7 @@ The storm damaged the power lines.
 	:undergoer (l/ line
 		:purpose (p/ power)
 		:refer-number plural)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 See Table 9 above for examples of the circumstantial
@@ -3222,8 +3222,8 @@ They loaded the boxes.
 		:refer-number plural)  						:refer-number plural)
 	:theme (b/ box							:theme (b/ box
 		:refer-number plural)						:refer-number plural)
-	:aspect Performance						:goal (t/ thing)
-	:modal-strength full-affirmative)						:aspect Performance
+	:aspect performance						:goal (t/ thing)
+	:modal-strength full-affirmative)						:aspect performance
 									:modal-strength full-affirmative)
 ```
 
@@ -3350,7 +3350,7 @@ Miguel-CER  canoe-owner
 		:name (n/ name :op1 "Mijiri"))
 	:ARG2 (i/ ɨarayara ‘canoe’
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1b)">3-2-1-1-1 (1b)</span> Predicative
@@ -3364,7 +3364,7 @@ The dog is the teacher's.
 	:ARG2 (p/ person
 		:refer-number singular
 		:ARG0-of (t / teach-01))
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1c)">3-2-1-1-1 (1c)</span> Thetic/presentational Location - English <br />
@@ -3376,7 +3376,7 @@ On the rock was a symbol.
 		:refer-number singular)
 	:ARG2 (s/ symbol
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1d)">3-2-1-1-1 (1d)</span> Predicative
@@ -3390,7 +3390,7 @@ house 3SG-be.at village
 		:refer-number singular)
 	:ARG2 (m/ malac ‘village’
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1e)">3-2-1-1-1 (1e)</span> Property
@@ -3401,7 +3401,7 @@ The cat is black.
 	:ARG1 (c/ cat
 		:refer-number singular)
 	:ARG2 (b/ black)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1f)">3-2-1-1-1 (1f)</span> Object Predication - Kukama <br />
@@ -3414,7 +3414,7 @@ this young.man 	shaman
 		:mod (a/ ajan 'this')
 		:refer-number singular)
 	:ARG3 (t/ tsumi ‘shaman’)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1g)">3-2-1-1-1 (1g)</span> Object Equational - English <br />
@@ -3426,7 +3426,7 @@ She is the winner.
 		:refer-number singular)
 	:ARG2 (p2/ person
 		:ARG0-of (w/ win-01))
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -3448,7 +3448,7 @@ Y-usy 		wrba 	tafirast.
 		:refer-number singular)
 	:undergoer (t/ tafirast ‘pear’
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3460,7 +3460,7 @@ T-ttw-asy		tfirast.
 (t/ tttwasy-00 ‘pick up’
 	:undergoer (t2/ tafirast ‘pear’
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3489,7 +3489,7 @@ grandmother 	drink-CAUS	kid=PST 	water=INS
 	:refer-number singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
-    :aspect Performance
+    :aspect performance
     :modal-strength full-affirmative)
 ```
 
@@ -3510,7 +3510,7 @@ he.OBL-LAT 	sea(iii) 	iii-see-PST
 		:refer-person 3rd
 		:refer-number singular)
 	:stimulus (r/ raɬad ‘sea’)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 ```
@@ -3526,7 +3526,7 @@ he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST
 	:theme (r/ raɬad ‘sea’)
 	:recipient (k/ kibba ‘girl’
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3556,9 +3556,9 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 		:experiencer x
 		:stimulus (m
 			:modal-predicate k2)
-		:aspect State
+		:aspect state
 		:modal-strength full-negative)
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 
@@ -3582,7 +3582,7 @@ Ka 	kedam 	hri	a 	cat.
 			:refer-person 1st
 			:refer-number singular)
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -3600,7 +3600,7 @@ Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS
 			:refer-person 1st
 			:refer-number singular)
 		:refer-number singular
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3621,7 +3621,7 @@ Cinte 3SG.NOM 	laugh.1
 (h/ hni-00 ‘laugh’
 	:actor (p/ person
 		:name (n/ name :op1 "Cinte"))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (6a)">3-2-1-1-2 (6a)</span> <br />
@@ -3634,7 +3634,7 @@ Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS
 		:name (n/ name :op1 "Parte"))
 	:actor (p2/ person
 		:name (n2/ name :op1 "Cinte"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3655,7 +3655,7 @@ Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1
 	:undergoer (h/ hmeh ‘curry’)
 	:affectee (p2/ person
 		:name (n2/ name :op2 "Thangte"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (7b)">3-2-1-1-2 (7b)</span>
@@ -3669,7 +3669,7 @@ Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN
 	:undergoer (h/ hmeh ‘curry’)
 	:affectee (p2/ person
 		:name (n2/ name :op1 "Thangte"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (7c)">3-2-1-1-2 (7c)</span>
@@ -3682,7 +3682,7 @@ as-teny-aye'	pa'ang
 		:refer-person 1st
 		:refer-number singular)
 	:theme (p2/ pa'ang 'palm)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (7d)">3-2-1-1-2 (7d)</span>
@@ -3697,7 +3697,7 @@ as-teny-as-ke'		pa'ang	ap-angkok	Eduardo
 	:theme (p2/ pa'ang 'palm)
 	:source (p3/ person
 		:name (n/ name :op1 "Eduardo"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3718,7 +3718,7 @@ he 	PERF 	he-REFL wound
 		:refer-person 3rd
 		:refer-number singular)
 	:undergoer p
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (8b)">3-2-1-1-2 (8b)</span><br />
@@ -3731,7 +3731,7 @@ they 	PERF	they-REFL 	love
 		:refer-person 3rd
 		:refer-number plural)
 	:undergoer p
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -3788,7 +3788,7 @@ He teased the boy about his hat.
 		:refer-number singular)
 	:ARG2 (h/ hat
 		:poss b)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 
@@ -3807,7 +3807,7 @@ She parked the truck in the driveway. They loaded the boxes.
 	:ARG1 (s1t/ truck
 		:refer-number singular)
 	:ARG2 (s1d/ driveway)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 
 (s2l/ load-01
@@ -3817,7 +3817,7 @@ She parked the truck in the driveway. They loaded the boxes.
 	:ARG1 (s2t/ thing)
 	:ARG2 (s2b/ box
 		:refer-number plural)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s2/ sentence
 	:temporal (document-creation-time :before s2l)
@@ -3862,10 +3862,10 @@ I bought the sweater that you saw.
 			:ARG0 (p2/ person
 				:refer-person 2nd
 				:refer-number singular)
-			:aspect State
+			:aspect state
 			:modal-strength full-affirmative)
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3883,9 +3883,9 @@ I didn't see whether he bought the sweater.
 				:refer-number singular)
 			:ARG1 (s2/ sweater
 				:refer-number singular)
-			:aspect Performance
+			:aspect performance
 			:modal-strength neutral-affirmative))
-	:Aspect State
+	:aspect state
 	:Modstr full-negative)
 ```
 
@@ -3898,7 +3898,7 @@ The runner was wearing a sweater.
 		:refer-number singular)
 	:ARG1 (s/ sweater
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -3917,10 +3917,10 @@ I bought the sweater that you saw.
 			:experiencer (p2/ person
 				:refer-person 2nd
 				:refer-number singular)
-			:aspect State
+			:aspect state
 			:modal-strength full-affirmative)
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -3939,7 +3939,7 @@ I met my father.
 		:ARG1-of (h/ have-rel-role-92
 			:ARG2 p
 			:ARG3 (f/ father)))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-3 (3a)">3-2-1-3 (3a)</span>
@@ -3959,7 +3959,7 @@ I met the President of the University of New Mexico.
 					:op4 "Mexico")
 				:wiki "University_of_New_Mexico")
 			:ARG2 (p3/ president)))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
@@ -5010,7 +5010,7 @@ He drove west.
 		:refer-person 3rd
 		:refer-number singular)
 	:direction (w/ west)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-2-3 (1b)" label="3-2-2-3 (1b)">3-2-2-3 (1b)</span>
@@ -5021,7 +5021,7 @@ He drove through the tunnel.
 		:refer-person 3rd
 		:refer-number singular)
 	:path (t/ tunnel)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-2-3 (1c)" label="3-2-2-3 (1c)">3-2-2-3 (1c)</span>
@@ -5040,7 +5040,7 @@ I visited New York City for a week.
 	:duration (t/ temporal-quantity
 		:quant 1
 		:unit (w/ week))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-2-3 (1d)" label="3-2-2-3 (1d)">3-2-2-3 (1d)</span>
@@ -5057,7 +5057,7 @@ I visited New York City twice.
 			:op3 "City")
 		:wiki "New_York_City")
 	:frequency 2
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-2-3 (1e)" label="3-2-2-3 (1e)">3-2-2-3(1e)</span>
@@ -5076,7 +5076,7 @@ I visit New York City every December.
 	:frequency (r/ rate-entity-91
 		:ARG4 (d/ date-entity
 			:month 12))
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 
@@ -5098,7 +5098,7 @@ I saw a spider and a snake.
 			:refer-number singular)
 		:op2 (s3/ snake
 			:refer-number singular))
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -5124,7 +5124,7 @@ I visited New York for the third time.
 		:wiki "New_York_City")
 	:ord (o/ ordinal-entity
 		:value 3)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-2-5 (1b)" label="3-2-2-5 (1b)">3-2-2-5 (1b)</span>
@@ -5144,7 +5144,7 @@ I visited New York for the third time in six months.
 		:range (t/ temporal-quantity
 			:quant 6
 			:unit (m/ month)))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-2-2-5 (1c)" label="3-2-2 (6c)">3-2-2-5 (1c)</span>
@@ -5214,7 +5214,7 @@ Could you close the window?
 		:refer-person 2nd
 		:refer-number singular)
 	:ARG1 (w/ window)
-	:aspect Performance
+	:aspect performance
 	:mode Imperative
 	:polite +)
 ```
@@ -5235,7 +5235,7 @@ I will buy (a) rice, (b) beans, and (c) onions.
 		:op3 (o/ onion
 			:refer-number plural
 			:li "(c)")
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -5249,12 +5249,12 @@ Lastly, annotators have at their disposal an `:other-role` relation, as already 
 
 #### Part 3-3-1. Aspect
 
-The aspect annotation consists of a single value that is annotated for
-every event identified in [Part 3-1-1](#part-3-1-1-eventive-concepts). The aspect annotation doesn’t
-have distinct annotation stages, unlike modality and participant roles.
-Instead it relies on a typological lattice which ranges from very
-coarse-grained to very fine-grained aspectual values. It’s expected that
-languages at an earlier stage of semantic analysis or annotation will
+The aspect annotation consists of a single value that is annotated for every
+event identified in [Part 3-1-1](#part-3-1-1-eventive-concepts). The aspect
+annotation doesn’t have distinct annotation stages, unlike modality and
+participant roles. Instead it relies on a typological lattice which ranges
+from very coarse-grained to very fine-grained aspectual values. It’s expected
+that languages at an earlier stage of semantic analysis or annotation will
 tend to use more coarse-grained values, and languages at later stages of
 annotation will tend to use more fine-grained values.
 
@@ -5262,36 +5262,36 @@ This is also heavily dependent on the aspectual distinctions that are
 grammaticalized and/or obligatory in the language. For example, although
 English has a long history of semantic analysis and many computational
 resources, it has very little overt aspectual marking in its grammar and
-therefore the most fine-grained aspect distinctions are very difficult
-to judge in annotation. This aspect lattice is shown below.
+therefore the most fine-grained aspect distinctions are very difficult to
+judge in annotation. This aspect lattice is shown below.
 
 ![Aspect lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Aspect%20Lattice_2022.png)
 
 Below are the aspect values with a brief definition.
 
-```habitual```: occurs/occurred usually or habitually
-```imperfective```: ambiguous between state and atelic process
-```process```: unspecified type of process
-```atelic process```: process that does not reach a result state
-```perfective```: process that comes to an end
-```state```: unspecified type of state
-```reversible state```: acquired state that is not permanent
-```irreversible state```: acquired state that is permanent
-```inherent state```: state that is not acquired and permanent
-```point state```: state that is acquired and reversed at a single point in time
-```activity```: process that does not end
-```undirected activity```: process that does not end and does not progress linearly along a scale
-```directed activity```: process that does not end and does progress linearly along a scale
-```endeavor```: process that ends without reaching a result state
-```semelfactive```: process that ends without reaching a result state and happens at a single point in time
-```undirected endeavor```: process that ends without reaching a result state and does not progress linearly along a scale
-```directed endeavor```: process that ends without reaching a result state and progresses linearly along a scale
-```performance```: process that ends and  reaches a result state
-```incremental accomplishment```: process that ends and reaches a result state, and progresses linearly along a scale
-```nonincremental accomplishment```: process that ends and reaches a result state, and does not progress linearly along a scale
-```directed achievement```: process that ends and reaches a result state within a single point in time, and progresses linearly along a scale
-```reversible directed achievement```: process that ends and reaches a result state, which is not permanent, within a single point in time, and progresses linearly along a scale
-```irreversible directed achievement```: process that ends and reaches a result state, which is permanent, within a single point in time, and progresses linearly along a scale
+* ```habitual```: occurs/occurred usually or habitually
+* ```imperfective```: ambiguous between state and atelic process
+* ```process```: unspecified type of process
+* ```atelic-process```: process that does not reach a result state
+* ```perfective```: process that comes to an end
+* ```state```: unspecified type of state
+  * ```reversible-state```: acquired state that is not permanent
+  * ```irreversible-state```: acquired state that is permanent
+  * ```inherent-state```: state that is not acquired and permanent
+  * ```point-state```: state that is acquired and reversed at a single point in time
+* ```activity```: process that does not end
+  * ```undirected-activity```: process that does not end and does not progress linearly along a scale
+  * ```directed-activity```: process that does not end and does progress linearly along a scale
+* ```endeavor```: process that ends without reaching a result state
+  * ```semelfactive```: process that ends without reaching a result state and happens at a single point in time
+  * ```undirected-endeavor```: process that ends without reaching a result state and does not progress linearly along a scale
+  * ```directed-endeavor```: process that ends without reaching a result state and progresses linearly along a scale
+* ```performance```: process that ends and  reaches a result state
+  * ```incremental-accomplishment```: process that ends and reaches a result state, and progresses linearly along a scale
+  * ```nonincremental-accomplishment```: process that ends and reaches a result state, and does not progress linearly along a scale
+  * ```directed-achievement```: process that ends and reaches a result state within a single point in time, and progresses linearly along a scale
+    * ```reversible-directed-achievement```: process that ends and reaches a result state, which is not permanent, within a single point in time, and progresses linearly along a scale
+    * ```irreversible-directed-achievement```: process that ends and reaches a result state, which is permanent, within a single point in time, and progresses linearly along a scale
 
 In order to select the appropriate annotation value for each event,
 annotators proceed through a series of decisions.
@@ -5300,13 +5300,14 @@ annotators proceed through a series of decisions.
 
 ##### Part 3-3-1-1. Event Nominals
 
-The first decision concerns the morphosyntactic expression of the event. Events expressed as nominals often lack any grammatical clues as to their aspectual structure. This makes determining an aspectual
-annotation value difficult. We do, however, know that these events are
-processes, and not states, since nominals expressing states are not
-identified as events. On the lattice,
-```process``` is the aspectual value that includes all types of processes. Therefore, events expressed as event
-nominals, as in <a href="#3-3-1-1 (1)">(1)</a>, are annotated as
-```process```.
+The first decision concerns the morphosyntactic expression of the event.
+Events expressed as nominals often lack any grammatical clues as to their
+aspectual structure. This makes determining an aspectual annotation value
+difficult. We do, however, know that these events are processes, and not
+states, since nominals expressing states are not identified as events. On the
+lattice, ```process``` is the aspectual value that includes all types of
+processes. Therefore, events expressed as event nominals, as in <a
+href="#3-3-1-1 (1)">(1)</a>, are annotated as ```process```.
 
 
 <span id="3-3-1-1 (1)" label="3-3-1-1 (1)">3-3-1 (1)</span>
@@ -5322,9 +5323,9 @@ He presented his research at the meeting yesterday.
 		:ARG1-of (r/ research-01
 			:ARG0 p2))
 	:place (m/ meet-01
-		:aspect Process)
+		:aspect process)
 	:temporal (y/ yesterday)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">3-3-1-1 (1b)</span>
@@ -5337,8 +5338,8 @@ After the game, she went home.
 	:ARG4 (h/ home)
 	:temporal (a/ after
 		:op1 (g2/ game
-			:aspect Process))
-	:aspect Performance
+			:aspect process))
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 Any event packaged in a referring expression is considered an event
@@ -5354,9 +5355,9 @@ The second training was cancelled yesterday.
 	:ARG1 (t/ train-01
 		:ord (o/ ordinal-entity
 			:value 2)
-		:aspect Process)
+		:aspect process)
 	:temporal (y/ yesterday)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">3-3-1-1 (2b)</span>
@@ -5366,11 +5367,11 @@ The dog interrupted the meeting with his barking.
 	:ARG0 (d/ dog
 		:refer-number singular)
 	:ARG1 (m/ meet-01
-		:aspect Process)
+		:aspect process)
 	:manner (b/ bark-01
 		:ARG0 d
-		:aspect Process)
-	:aspect Performance
+		:aspect process)
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
@@ -5397,10 +5398,9 @@ It was **an earthquake**.
 
 ##### Part 3-3-1-2. Habitual
 
-The next step concerns the application of the
-```habitual``` aspect value. This value should
-be applied to all events that are presented as occurring usually or
-habitually, as in <a href="#3-3-1-2 (1)">(1)</a>.
+The next step concerns the application of the ```habitual``` aspect value.
+This value should be applied to all events that are presented as occurring
+usually or habitually, as in <a href="#3-3-1-2 (1)">(1)</a>.
 
 
 <span id="3-3-1-2 (1)" label="3-3-1-2 (1)">3-3-1-2 (1)</span>
@@ -5414,7 +5414,7 @@ He bakes pies.
 		:refer-number singular)
 	:ARG1 (p2/ pie
 		:refer-number plural)
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">3-3-1-2 (1b)</span>
@@ -5428,8 +5428,8 @@ She rides her bike to work.
 		:poss p)
 	:goal (w/ work-01
 		:ARG0 p
-		:aspect Process)
-	:aspect Habitual
+		:aspect process)
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">3-3-1-2 (1c)</span>
@@ -5447,7 +5447,7 @@ They vacation in Taos every winter.
 			:quant 1
 			:unit (y/ year))
 		:ARG4 (w/ winter))
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">3-3-1-2 (1d)</span>
@@ -5465,7 +5465,7 @@ They used to vacation in Taos every winter.
 			:quant 1
 			:unit (y/ year))
 		:ARG4 (w/ winter))
-	:aspect Habitual
+	:aspect habitual
 	:modal-strength full-affirmative)
 ```
 
@@ -5478,10 +5478,15 @@ pie*); see example [3-3-1-3 (3)](#3-3-1-3 (3)) for handling ability modals.
 [Back to Table of Contents](#toc)
 ##### Part 3-3-1-3. State
 
-The next step assesses whether the event is a
-```state```. The distinction between states and
-processes is necessary for event identification (as states are only
-identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the non-verbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
+The next step assesses whether the event is a ```state```. The distinction
+between states and processes is necessary for event identification (as states
+are only identified as events when predicated, see [Part
+3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states
+are those events which are stative—that is, no change takes place over the
+course of the event. There are various ways to express states in predication,
+shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the non-verbal
+clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities)
+and annotated with UMR predicates are annotated as ```state```.
 
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">3-3-1-3 (1)</span>
@@ -5496,7 +5501,7 @@ My cat loves tuna.
 			:refer-number singular)
 		:refer-number singular)
 	:ARG1 (t/ tuna)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">3-3-1-3 (1b)</span>
@@ -5506,7 +5511,7 @@ The doctor is tall.
 	:ARG1 (d/ doctor
 		:refer-number singular)
 	:ARG2 (t/ tall)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">3-3-1-3 (1c)</span>
@@ -5516,7 +5521,7 @@ The book is on the table.
 	:ARG1 (b/ book
 		:refer-number singular)
 	:ARG2 (t/ table)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">3-3-1-3 (1d)</span>
@@ -5527,7 +5532,7 @@ She is an architect.
 		:refer-person 3rd
 		:refer-number singular)
 	:ARG3 (a/ architect)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">3-3-1-3 (1e)</span>
@@ -5539,7 +5544,7 @@ Your glass is in the kitchen.
 			:refer-person 2nd
 			:refer-number singular))
 	:ARG2 (k/ kitchen)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -5561,9 +5566,9 @@ He wants to travel to Albuquerque.
 		:ARG4 (c/ city
 			:name (n/ name :op1 "Albuquerque")
 			:wiki "Albuquerque")
-		:aspect Performance
+		:aspect performance
 		:modal-predicate w)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">3-3-1-3 (2b)</span>
@@ -5573,9 +5578,9 @@ The cat needs to be fed.
 	:ARG0 (c/ cat)
 	:ARG1 (f/ feed-01
 		:ARG c
-		:aspect Performance
+		:aspect performance
 		:modal-predicate n)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">3-3-1-3 (2c)</span>
@@ -5589,9 +5594,9 @@ He’s dreading their decision.
 		:ARG0 (p2/ person
 			:refer-person 3rd
 			:refer-number plural)
-		:aspect Process
+		:aspect process
 		:modal-predicate d)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (3)" label="3-3-1-3 (3)">3-3-1-3 (3)</span>
@@ -5606,7 +5611,7 @@ She is able to sing that aria.
 	:ARG1 (a/ aria
 		:mod (t/ that)
 		:refer-number singular)
-	:aspect State
+	:aspect state
 	:modal-strength neutral-affirmative)
 ```
 <span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">3-3-1-3 (3b)</span>
@@ -5619,29 +5624,34 @@ This car can go up to 150 mph.
 	:manner (s/ speed-quantity
 		:quant 150
 		:unit (m/ miles-per-hour))
-	:aspect State
+	:aspect state
 	:modal-strength neutral-affirmative)
 ```
-In this analysis, ability modals refer to a static state of affairs,
-i.e. an entity possesses the relevant ability. For examples like
-<a href="#3-3-1-3 (3a)">(3a)</a>, ability modals may look more like event
-quantification. That is, there are probably multiple singing events that this example is generalizing over. Examples like <a href="#3-3-1-3 (3b)">(3b)</a>, however, show how ability modals are more like states. It is possible
-that the car has never actually gone as fast as 150 mph; the car just
-has the parts and (theoretical) ability to do so. Therefore, all types
-of ability modals, both <a href="#3-3-1-3 (3a)">(3a)</a> and <a href="#3-3-1-3 (3b)">(3b)</a>, are
+
+In this analysis, ability modals refer to a static state of affairs, i.e. an
+entity possesses the relevant ability. For examples like <a href="#3-3-1-3 (3a)">(3a)</a>, ability modals may look more like event quantification. That
+is, there are probably multiple singing events that this example is
+generalizing over. Examples like <a href="#3-3-1-3 (3b)">(3b)</a>, however,
+show how ability modals are more like states. It is possible that the car has
+never actually gone as fast as 150 mph; the car just has the parts and
+(theoretical) ability to do so. Therefore, all types of ability modals, both
+<a href="#3-3-1-3 (3a)">(3a)</a> and <a href="#3-3-1-3 (3b)">(3b)</a>, are
 analyzed as states and annotated as such.
 
-There is a type of event, called “inactive actions” by Croft (2012), which is semantically intermediate between states and processes. In many languages, they can be construed either way. For example, English *lie* can occur in the Progressive (*Bill **is lying** on the bed*) or the Simple Present (*The Sandias **lie** to the east of Albuquerque*). And across languages there is variation as to the default construal of
-inactive actions. The most frequent inactive actions are posture verbs
-(*sit, stand, lie, hang*), perception verbs (*see/look at, watch,
-hear/listen to, feel*), some sensation verbs (*ache*), mental activity
-verbs (*think, understand*), and verbs of operation/function (*work* in
-*This washing machine **works/is working***). For the UMR annotation,
-inactive actions in all constructions are annotated as
-```state```. If it is unclear whether an event
-refers to a ```state``` or an
-```atelic process```, then the
-```imperfective``` annotation value is used.
+There is a type of event, called “inactive actions” by Croft (2012), which is
+semantically intermediate between states and processes. In many languages,
+they can be construed either way. For example, English *lie* can occur in the
+Progressive (*Bill **is lying** on the bed*) or the Simple Present (*The
+Sandias **lie** to the east of Albuquerque*). And across languages there is
+variation as to the default construal of inactive actions. The most frequent
+inactive actions are posture verbs (*sit, stand, lie, hang*), perception
+verbs (*see/look at, watch, hear/listen to, feel*), some sensation verbs
+(*ache*), mental activity verbs (*think, understand*), and verbs of
+operation/function (*work* in *This washing machine **works/is working***).
+For the UMR annotation, inactive actions in all constructions are annotated
+as ```state```. If it is unclear whether an event refers to a ```state``` or
+an ```atelic-process```, then the ```imperfective``` annotation value is
+used.
 
 There are different types of states, shown in
 <a href="#3-3-1-3 (4)">(4)</a>, which can optionally be distinguished in
@@ -5662,7 +5672,7 @@ My cat is black and white.
 	:ARG2 (a/ and
 		:op1 (b/ black)
 		:op2 (w/ white)
-	:aspect Inherent State
+	:aspect inherent-state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">3-3-1-3 (4b)</span>
@@ -5674,7 +5684,7 @@ My cat is hungry.
 			:refer-person 1st
 			:refer-number singular))
 		:refer-number singular)
-	:aspect Reversible State
+	:aspect reversible-state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">3-3-1-3 (4c)</span>
@@ -5684,7 +5694,7 @@ The wine glass is shattered.
 	:ARG1 (g/ glass
 		:purpose (w/ wine)
 		:refer-number singular)
-	:aspect Irreversible State
+	:aspect irreversible-state
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">3-3-1-3 (4d)</span>
@@ -5694,30 +5704,27 @@ It is 2:30pm.
 	:ARG1 (n/ now)
 	:ARG2 (d/ date-entity
 		:time 14:30)
-	:aspect Point State
+	:aspect point-state
 	:modal-strength full-affirmative)
 ```
 
-Events that are annotated as ```inherent
-state```, as in <a href="#3-3-1-3 (4a)">(4a)</a>, refer to states that are
-an inherent property of the entity, i.e. they did not ‘start’ at any
-particular point in the entity’s history and are not changeable in the
-future. Events annotated as ```reversible
-state```, as in <a href="#3-3-1-3 (4b)">(4b)</a>, refer to properties of entities
-that are not inherent, meaning they have come into existence at some
-point during the entity’s history; these states are reversible, meaning
-the entity likely will revert back to its base state in the future.
-Events annotated as ```irreversible state```,
-as in <a href="#3-3-1-3 (4c)">(4c)</a>, refer to properties of entities that are not
-inherent, but cannot be reversed in the future; once acquired, these
-states are permanent. Finally, events that are annotated as
-```point state```, as in <a href="#3-3-1-3 (4d)">(4d)</a>,
-refer to states that come into and out of existence over a single point
-in time (what is considered a ‘point’ is open to construal); these
-states necessarily do not persist into the future.
+Events that are annotated as ```inherent-state```, as in <a href="#3-3-1-3 (4a)">(4a)</a>, refer to states that are an inherent property of the entity,
+i.e. they did not ‘start’ at any particular point in the entity’s history and
+are not changeable in the future. Events annotated as ```reversible-state```,
+as in <a href="#3-3-1-3 (4b)">(4b)</a>, refer to properties of entities that
+are not inherent, meaning they have come into existence at some point during
+the entity’s history; these states are reversible, meaning the entity likely
+will revert back to its base state in the future. Events annotated as
+```irreversible-state```, as in <a href="#3-3-1-3 (4c)">(4c)</a>, refer to
+properties of entities that are not inherent, but cannot be reversed in the
+future; once acquired, these states are permanent. Finally, events that are
+annotated as ```point-state```, as in <a href="#3-3-1-3 (4d)">(4d)</a>, refer
+to states that come into and out of existence over a single point in time
+(what is considered a ‘point’ is open to construal); these states necessarily
+do not persist into the future.
 
-Events that are not annotated as a type of
-```state``` move on to the next step.
+Events that are not annotated as a type of ```state``` move on to the next
+step.
 
 [Back to Table of Contents](#toc)
 
@@ -5740,7 +5747,7 @@ He is still writing his paper.
 		:poss p
 		:refer-number singular)
 	:mod (s/ still)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">3-3-1-4 (1b)</span>
@@ -5754,7 +5761,7 @@ He was writing his paper yesterday.
 		:poss p
 		:refer-number singular)
 	:temporal (y/ yesterday)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 ```
 
@@ -5776,7 +5783,7 @@ He is playing the violin.
 		:refer-person 3rd
 		:refer-number singular)
 	:ARG2 (v/ violin)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 ```
 
@@ -5793,7 +5800,7 @@ He started playing the violin.
 		:refer-person 3rd
 		:refer-number singular)
 	:ARG2 (v/ violin)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">3-3-1-4 (3b)</span>
@@ -5804,19 +5811,18 @@ He kept on playing the violin.
 		:refer-person 3rd
 		:refer-number singular)
 	:ARG2 (v/ violin)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 ```
-If an annotator is unsure about whether the text indicates that an event has ended or not, the ```atelic process```
-label can be used.
 
-There are two finer-grained ```activity```
-categories which can optionally be distinguished. Certain types of
-activities describe directed change, as in
-<a href="#3-3-1-4 (4)">(4)</a>, whereas other activities describe
-undirected change, as in <a href="#3-3-1-4 (5)">(5)</a>;
-these are annotated as ```directed activity```
-and ```undirected activity``` respectively.
+If an annotator is unsure about whether the text indicates that an event has
+ended or not, the ```atelic-process``` label can be used.
+
+There are two finer-grained ```activity``` categories which can optionally be
+distinguished. Certain types of activities describe directed change, as in <a
+href="#3-3-1-4 (4)">(4)</a>, whereas other activities describe undirected
+change, as in <a href="#3-3-1-4 (5)">(5)</a>; these are annotated as
+```directed-activity``` and ```undirected-activity``` respectively.
 
 
 <span id="3-3-1-4 (4)" label="3-3-1-4 (4)">3-3-1-4 (4)</span>
@@ -5825,7 +5831,7 @@ The soup was cooling on the counter.
 (c/ cool
 	:ARG1 (s/ soup)
 	:place (c2/ counter)
-	:aspect Directed Activity
+	:aspect directed-activity
 	:modal-strength full-affirmative)
 ```
 
@@ -5837,18 +5843,16 @@ The cat was meowing outside the door.
 		:refer-number singular)
 	:place (o/ outside
 		:op1 (d/ door))
-	:aspect Undirected Activity
+	:aspect undirected-activity
 	:modal-strength full-affirmative)
 ```
 
-Events annotated as ```directed activity```
-refer to change that occurs gradually along a qualitative scale. In
-<a href="#3-3-1-4 (4)">(4)</a>, the temperature of the soup
-continues to decrease in a linear fashion. Events annotated as
-```undirected activity``` refer to change that
-does not progress incrementally along a scale; in
-<a href="#3-3-1-4 (5)">(5)</a>, there is no scale or gradual
-change.
+Events annotated as ```directed-activity``` refer to change that occurs
+gradually along a qualitative scale. In <a href="#3-3-1-4 (4)">(4)</a>, the
+temperature of the soup continues to decrease in a linear fashion. Events
+annotated as ```undirected-activity``` refer to change that does not progress
+incrementally along a scale; in <a href="#3-3-1-4 (5)">(5)</a>, there is no
+scale or gradual change.
 
 Events that have ended prior to document creation time and have not yet
 received an annotation move on to the next step.
@@ -5857,22 +5861,18 @@ received an annotation move on to the next step.
 
 ##### Part 3-3-1-5. Endeavor and Performance
 
-At this point, only ```perfective``` events are
-left: ```endeavor``` and
-```performance```. Both the
-```endeavor``` and
-```performance``` aspectual types entail that
-the process has come to an end; they are distinguished by the
-boundedness of the event in terms of qualitative state. The
-```performance``` value is used when the event
-reaches a result state distinct from the base (start) state, that is, a specific “natural” endpoint. The ```endeavor```
-value is used when the events ends, but does not reach a distinct result
-state. The ```performance``` value can be seen
-as the ‘default’ value for events at this step; the
-```endeavor``` value is only annotated in the
-presence of explicit marking, which may come in several forms detailed
-below. If it’s not clear which category an event fits into, it can be
-annotated as ```perfective```.
+At this point, only ```perfective``` events are left: ```endeavor``` and
+```performance```. Both the ```endeavor``` and ```performance``` aspectual
+types entail that the process has come to an end; they are distinguished by
+the boundedness of the event in terms of qualitative state. The
+```performance``` value is used when the event reaches a result state
+distinct from the base (start) state, that is, a specific “natural” endpoint.
+The ```endeavor``` value is used when the events ends, but does not reach a
+distinct result state. The ```performance``` value can be seen as the
+‘default’ value for events at this step; the ```endeavor``` value is only
+annotated in the presence of explicit marking, which may come in several
+forms detailed below. If it’s not clear which category an event fits into, it
+can be annotated as ```perfective```.
 
 The explicit aspectual markings which suggest an
 ```endeavor``` annotation are terminative
@@ -5888,7 +5888,7 @@ Mary stopped mowing the lawn.
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
 	:ARG1 (l/ lawn)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">3-3-1-5 (1b)</span>
@@ -5901,7 +5901,7 @@ Mary mowed the lawn for thirty minutes.
 	:duration (t/ temporal-quantity
 		:unit (m2/ minute)
 		:quant 30)
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (1c)" label="3-3-1-5 (1c)">3-3-1-5 (1c)</span> \*Mary
@@ -5916,7 +5916,7 @@ They walked along the river.
 		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">3-3-1-5 (1e)</span>
@@ -5928,7 +5928,7 @@ They finished walking <u>along the river</u>.
 		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">3-3-1-5 (1f)</span>
@@ -5943,47 +5943,39 @@ They walked along the river in 3 hours.
 	:duration (t/ temporal-quantity
 		:unit (h/ hour)
 		:quant 3)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 
-Terminative aspectual marking, such as *stop* in English, is the
-strongest evidence that an event has ended without reaching a result
-state and should therefore be annotated as
-```endeavor```. Durative adverbials, such as in
-<a href="#3-3-1-5 (1b)">(1b)</a>, are the second strongest evidence for an
-```endeavor``` annotation: they indicate that
-the event took place for a defined period of time and then ended, likely
-without completion. At least in English, durative adverbials cannot
-co-occur with completive aspectual marking; see
-<a href="#3-3-1-5 (1c)">(1c)</a>. A non-result path is the weakest evidence
-for an ```endeavor``` annotation; in the
-absence of other aspectual indicators, a non-result path requires an
-```endeavor``` annotation, as in
-<a href="#3-3-1-5 (1d)">(1d)</a>. But, if there is a completive aspectual marker,
-as in <a href="#3-3-1-5 (1e)">(1e)</a>, or a container adverbial, as in
-<a href="#3-3-1-5 (1f)">(1f)</a>, both indicators that an event has reached
-a distinct result state, then the event is annotated as
-```performance```.
+Terminative aspectual marking, such as *stop* in English, is the strongest
+evidence that an event has ended without reaching a result state and should
+therefore be annotated as ```endeavor```. Durative adverbials, such as in <a
+href="#3-3-1-5 (1b)">(1b)</a>, are the second strongest evidence for an
+```endeavor``` annotation: they indicate that the event took place for a
+defined period of time and then ended, likely without completion. At least in
+English, durative adverbials cannot co-occur with completive aspectual
+marking; see <a href="#3-3-1-5 (1c)">(1c)</a>. A non-result path is the
+weakest evidence for an ```endeavor``` annotation; in the absence of other
+aspectual indicators, a non-result path requires an ```endeavor```
+annotation, as in <a href="#3-3-1-5 (1d)">(1d)</a>. But, if there is a
+completive aspectual marker, as in <a href="#3-3-1-5 (1e)">(1e)</a>, or a
+container adverbial, as in <a href="#3-3-1-5 (1f)">(1f)</a>, both indicators
+that an event has reached a distinct result state, then the event is
+annotated as ```performance```.
 
 In the absence of any of the aspectual indicators listed above, events
 that have made it to this point in the decision tree are annotated as
 ```performance```.
 
-Both ```endeavor``` and
-```performance``` have more fine-grained
-aspectual distinctions which may optionally be annotated. Endeavors may
-be specified with ```undirected endeavor```,
-```directed endeavor```, and
-```semelfactive```. The
-```undirected endeavor``` and
-```directed endeavor``` values correspond to
-```undirected activity``` and
-```directed activity```; they differ in that
-the event has come to an end. Semelfactives refer to punctual events
-that happen once before reverting back to the base state (these are
-similar to ```point state```, but refer to a
-process), as in <a href="#3-3-1-5 (2c)">(2c)</a>.
+Both ```endeavor``` and ```performance``` have more fine-grained aspectual
+distinctions which may optionally be annotated. Endeavors may be specified
+with ```undirected-endeavor```, ```directed endeavor```, and
+```semelfactive```. The ```undirected-endeavor``` and ```directed-endeavor```
+values correspond to ```undirected-activity``` and ```directed-activity```;
+they differ in that the event has come to an end. Semelfactives refer to
+punctual events that happen once before reverting back to the base state
+(these are similar to ```point-state```, but refer to a process), as in <a
+href="#3-3-1-5 (2c)">(2c)</a>.
 
 <span id="3-3-1-5 (2)" label="3-3-1-5 (2)">3-3-1-5 (2)</span>
 
@@ -6000,9 +5992,9 @@ The cat meowed for two hours until I woke up.
 			:ARG1 (p/ person
 				:refer-person 1st
 				:refer-number singular)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative))
-	:aspect Undirected Endeavor
+	:aspect undirected-endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">3-3-1-5 (2b)</span>
@@ -6019,9 +6011,9 @@ The soup cooled for an hour before we ate it.
 				:refer-person 1st
 				:refer-number plural)
 			:ARG1 s
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative))
-	:aspect Directed Endeavor
+	:aspect directed-endeavor
 	:modal-strength full-affirmative)
 ```
 
@@ -6031,48 +6023,41 @@ The cat meowed (once).
 (m/ meow-01
 	:ARG0 (c/ cat
 		:refer-number singular)
-	:aspect Semelfactive
+	:aspect semelfactive
 	:modal-strength full-affirmative)
 ```
 
-The finer-grained annotations for
-```performance``` distinguish between punctual
-events (```directed achievement```) and durative
-events (```incremental accomplishment```,
-```nonincremental accomplishment```), with even
-finer-grained categories based on the type of change.
+The finer-grained annotations for ```performance``` distinguish between
+punctual events (```directed-achievement```) and durative events
+(```incremental-accomplishment```, ```nonincremental-accomplishment```), with
+even finer-grained categories based on the type of change.
 
 Achievements are punctual events, meaning that they are conceptualized as
-occurring at a single point in time (like ```point
-state``` and ```semelfactive```). Unlike
-```point state``` and
-```semelfactive```, achievements don’t revert
-back to the base state, which is why they’re considered a finer-grained
-type of ```performance```. The
-```directed achievement``` annotation can be
-further specified based on whether the change is reversible or
-irreversible. In <a href="#3-3-1-5 (3a)">(3a)</a>, the change that the door
-undergoes can be reversed in that the door can be closed; therefore this
-is annotated as ```reversible directed
-achievement```. In <a href="#3-3-1-5 (3b)">(3b)</a>, the change that the
-window undergoes cannot be reversed; therefore this is annotated as
-```irreversible directed achievement```.
+occurring at a single point in time (like ```point-state``` and
+```semelfactive```). Unlike ```point-state``` and ```semelfactive```,
+achievements don’t revert back to the base state, which is why they’re
+considered a finer-grained type of ```performance```. The
+```directed-achievement``` annotation can be further specified based on
+whether the change is reversible or irreversible. In <a href="#3-3-1-5
+(3a)">(3a)</a>, the change that the door undergoes can be reversed in that
+the door can be closed; therefore this is annotated as
+```reversible-directed-achievement```. In <a href="#3-3-1-5 (3b)">(3b)</a>,
+the change that the window undergoes cannot be reversed; therefore this is
+annotated as ```irreversible-directed-achievement```.
 
-Accomplishments are durative events that can be categorized based on
-whether the change occurs incrementally or nonincrementally; this is
-similar to the difference between directed and undirected activities and
-endeavors. With ```incremental
-accomplishment```, the change occurs incrementally along the
-qualitative dimension; in <a href="#3-3-1-5 (3c)">(3c)</a>, the pancake
-is eaten piece-by-piece and each subsequent bite brings the event closer
-to completion. With ```nonincremental
-accomplishment```, the change ends up at a distinct result state (as
-with all types of Performances), but it may not get there in a
-linear/incremental fashion. In <a href="#3-3-1-5 (3d)">(3d)</a>,
-the computer does not necessarily get progressively more repaired with
-each action. Harry may try one tactic unsuccessfully to fix the
-computer; he may even make the problem worse at some point, but
-eventually succeeds in repairing the computer.
+Accomplishments are durative events that can be categorized based on whether
+the change occurs incrementally or nonincrementally; this is similar to the
+difference between directed and undirected activities and endeavors. With
+```incremental-accomplishment```, the change occurs incrementally along the
+qualitative dimension; in <a href="#3-3-1-5 (3c)">(3c)</a>, the pancake is
+eaten piece-by-piece and each subsequent bite brings the event closer to
+completion. With ```nonincremental-accomplishment```, the change ends up at a
+distinct result state (as with all types of Performances), but it may not get
+there in a linear/incremental fashion. In <a href="#3-3-1-5 (3d)">(3d)</a>,
+the computer does not necessarily get progressively more repaired with each
+action. Harry may try one tactic unsuccessfully to fix the computer; he may
+even make the problem worse at some point, but eventually succeeds in
+repairing the computer.
 
 <span id="3-3-1-5 (3)" label="3-3-1-5 (3)">3-3-1-5 (3)</span>
 
@@ -6082,7 +6067,7 @@ The door opened.
 (o/ open-01
 	:ARG1 (d/ door
 		:refer-number singular)
-	:aspect Reversible Directed Achievement
+	:aspect reversible-directed-achievement
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">3-3-1-5 (3b)</span>
@@ -6091,7 +6076,7 @@ The window shattered.
 (s/ shatter-01
 	:ARG1 (w/ window
 		:refer-number singular)
-	:aspect Irreversible Directed Achievement
+	:aspect irreversible-directed-achievement
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">3-3-1-5 (3c)</span>
@@ -6104,7 +6089,7 @@ I ate an apple pancake.
 	:ARG1 (p2/ pancake
 		:mod (a/ apple)
 		:refer-number singular)
-	:aspect Incremental Accomplishment
+	:aspect incremental-accomplishment
 	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (3d)" label="3-3-1-5 (3d)">3-3-1-5 (3d)</span>
@@ -6115,7 +6100,7 @@ Harry repaired the computer.
 		:name (n/ name :op1 "Harry"))
 	:ARG1 (c/ computer
 		:refer-number singular)
-	:aspect Nonincremental Accomplishment
+	:aspect nonincremental-accomplishment
 	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
@@ -6142,7 +6127,7 @@ Yup , a couple of hundred dollars is going to save the day !
                 :unit (d/ dollar)))
       :ARG1 (d/ day
       	    :refer-number singular)
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative
       :mode expressive)
 ```
@@ -6157,7 +6142,7 @@ Chalk another good one up to the wife .
             :ARG1-of (g/ good-02)
 	    :quant 1)
       :ARG2 (w/ wife)
-      :aspect Performance
+      :aspect performance
       :modal-strength partial-affirmative
       :mode imperative)
 ```
@@ -6170,7 +6155,7 @@ Did you see that?
       	:refer-person 2nd
 	:refer-number singular)
       :ARG1 (t/ that)
-      :aspect State
+      :aspect state
       :modal-strength neutral-affirmative
       :mode interrogative
       :polarity umr-unknown)
@@ -6210,7 +6195,7 @@ As of now , five million tickets have been sold on the StubHub website .
 		:name (n/ name :op1 "StubHub")))
       :temporal (a/ as-of
             :op1 (n2/ now))
-      :Aspect Performance)
+      :aspect performance)
 ```
 
 [Back to Table of Contents](#toc)
@@ -6237,7 +6222,7 @@ Bill saw rare birds today.
 	:ARG1 (b/ bird
 		:mod (r/ rare)
 		:refer-number plural)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 
@@ -6284,7 +6269,7 @@ NEG-2/3M.IRR-DSTR-eat-TI-IPFV=PHOD
 		:refer-person 3rd
 		:refer-number plural)
 	:undergoer (t/ thing)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-negative)
 ```
 
@@ -6310,14 +6295,14 @@ ak-yav-ay'-a=ngkoye		yamet
 	:ARG1 (y/ yamet 'tree')
 	:ARG2 (e/ enyavay'a-00 'large'
 		:degree Intensifier)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (h/ have-mod-91
 	:ARG1 (t/ tree)
 	:ARG2 (l/ large
 		:degree (v/ very))
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 Lexicon: Very - Intensifier
 ```
@@ -6354,7 +6339,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 		 :modal-predicate c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
-	   :aspect Performance
+	   :aspect performance
 	   :modal-strength full-affirmative)
 	:ARG1-of (s2/ sentence-01
 	   :ARG2 (p2/ prison
@@ -6364,9 +6349,9 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	         :quant 20
 		 :unit (y/ year)))
 	   :ARG3 s
-	   :aspect Performance
+	   :aspect performance
 	   :modal-strength full-affirmative)
-     :aspect State
+     :aspect state
      :modal-strength full-affirmative)
 
 Snt3: He denied any wrongdoing.
@@ -6379,7 +6364,7 @@ Snt3: He denied any wrongdoing.
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
 		  :modal-predicate d))
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s3/ sentence
@@ -6403,13 +6388,13 @@ He is very possessive and controlling but he has no right to be as we are not to
 		  	:refer-person 3rd
 			:refer-number singular)
                   :degree (v/ very)
-		  :aspect State
+		  :aspect state
 		  :modal-strength full-affirmative)
             :op2 (h/ have-mod-91
                   :ARG1 p
 		  :ARG2 (c2/ controlling)
                   :degree (v/ very)
-		  :aspect State
+		  :aspect state
 		  :modal-strength full-affirmative))
       :ARG2 (r/ right-05
             :ARG1 p
@@ -6420,9 +6405,9 @@ He is very possessive and controlling but he has no right to be as we are not to
 				:refer-person 1st
 				:refer-number plural)
 			:ARG2 (t/ together)
-			:aspect State
+			:aspect state
 			:modal-strength full-negative))
-            :aspect State
+            :aspect state
 	    :modal-strength full-negative))
 (s/ sentence
   :temporal ((document-creation-time :overlap s1p)
@@ -6458,7 +6443,7 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
                         :poss (p4/ person
 				:wiki -
 				:name (n2/ name :op1 "Malek"))))
-	    :aspect Performance
+	    :aspect performance
 	    :modal-strength full-affirmative)
       :op2 (b/ believe-01
             :ARG1 (w/ worth-01
@@ -6467,9 +6452,9 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
                         :op1 (m2/ monetary-quantity
 			      :quant 1000000
                               :unit (d/ dollar)))
-	          :aspect State
+	          :aspect state
 		  :modal-predicate b)
-	    :aspect State
+	    :aspect state
 	    :modal-strength full-affirmative))
 
 (s1/ sentence
@@ -6495,10 +6480,10 @@ Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial ba
 		  	:wiki "Muslim_Brotherhood"
 			:name (n2/ name :op1 "Brotherhood"))
                   :mod (f/ finance))
-	    :aspect Performance
+	    :aspect performance
 	    :quote s
 	    :modal-strength full-affirmative)
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s2/ sentence
@@ -6534,7 +6519,7 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
             :ord (o/ ordinal-entity
 	    	:value 1))
       :temporal (r2/ recent)
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
 (s1/ sentence
@@ -6568,16 +6553,16 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 				:name (n3/ name
 					:op1 "Three"
 					:op2 "Gorges"))
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
 		:ARG1-of (u/ use-01
 			:ARG2 (s/ system
 				:poss p2
 				:mod (m2/ manage-01))
 			:mod (m3/ main)
-			:aspect Activity
+			:aspect activity
 			:modal-strength full-affirmative))
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (s2/ sentence
@@ -6602,7 +6587,7 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 	    	  :wiki "Netherlands"
                   :name (n/ name
 		  	:op1 "Netherlands"))
-	    :aspect Performance
+	    :aspect performance
 	    :modal-strength full-affirmative)
       :op2 (a3/ arrest-01
             :location (c2/ country
@@ -6610,7 +6595,7 @@ The `:subset-of` relation is also used to annotate the subset relations between 
                   :name (n2/ name
 		  	:op1 "Germany"))
             :mod (a4/ another)
-	    :aspect Performance)
+	    :aspect performance)
 	    :modal-strength full-affirmative)
 
 (s/ sentence
@@ -6632,9 +6617,9 @@ The arrests were ordered by anti-terrorism judge fragnoli.
             :ARG1-of (h/ have-role-91
                   :ARG3 (j/ judge-01)))
       :ARG2 (a/ arrest-01
-      	    :aspect Process
+      	    :aspect process
 	    :quote o)
-      :aspect Performance
+      :aspect performance
       :modal-strength full-affirmative)
 
  (s2/ sentence
@@ -6694,15 +6679,15 @@ In April 1998 Arab countries signed an anti-terrorism agreement that binds the s
                         :purpose (f/ fight-01
                               :ARG0 c
                               :ARG1 t
-			      :aspect Activity
+			      :aspect activity
 			      :modal-strength full-affirmative)
-			:aspect Activity
+			:aspect activity
 			:modal-predicate b)
-		  :aspect Activity
+		  :aspect activity
 		  :modal-strength full-affirmative))
       :temporal (d/ date-entity :year 1998 :month 4)
       :temporal (b2/ before :op1 (n/now))
-      :aspect Performance))
+      :aspect performance))
  ```
 
 In addition to temporal relations at the sentence level, we also annotate
@@ -6886,7 +6871,7 @@ snt15	A-nd u-h and then he gets down out of the tree,
   :ARG2 (s15d / down)
   :source (s15t / tree
             :refer-number singular)
-  :aspect Performance
+  :aspect performance
   :temporal (s15t2 / then)
   :modal-strength full-affirmative)
 
@@ -6904,7 +6889,7 @@ snt16	and he dumps all his pears into the basket
   :ARG1 (s16p2 / pear
           :quant (s16a / all)
           :poss s16p)
-  :aspect Performance
+  :aspect performance
   :goal (s16b / basket
           :refer-number singular)
   :modal-strength full-affirmative)
@@ -6920,7 +6905,7 @@ snt17	and the basket's full,
   :ARG1 (s17b / basket
           :refer-number singular)
   :ARG2 (s17f / full)
-  :aspect State
+  :aspect state
   :modal-strength full-affirmative)
 
 (s17s0 / sentence
@@ -6939,7 +6924,7 @@ snt18	and one of the pears drops down to the floor,
   :ARG4 (s18f / floor
           :refer-number singular)
   :direction (s18d2 / down)
-  :aspect Performance
+  :aspect performance
   :modal-strength full-affirmative)
 
 (s18s0 / sentence
@@ -6986,9 +6971,9 @@ I saw him knock on the door.
 			:refer-number singular)
 		:ARG1 (s1d/ door
 			:refer-number singular))
-		:aspect Performance
+		:aspect performance
 		:modal-predicate s1s)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (s/ sentence
@@ -7007,9 +6992,9 @@ I want to cook dinner.
 	:ARG1 (s1c/ cook-01
 		:ARG0 s1p
 		:ARG1 (s1d/ dinner)
-		:aspect Performance
+		:aspect performance
 		:modal-predicate s1w)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (s/ sentence
@@ -7033,9 +7018,9 @@ I wish she had read the book.
 			:refer-number singular)
 		:ARG1 (s1b/ book
 			:refer-number singular)
-		:aspect Performance
+		:aspect performance
 		:modal-predicate s1w)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (s/ sentence
@@ -7057,9 +7042,9 @@ I want to go to the city and visit a museum.
 		:ARG1 s1p
 		:ARG4 (s1c/ city
 			:refer-number singular)
-		:aspect Performance
+		:aspect performance
 		:modal-predicate s1w)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 
 (s/ sentence
@@ -7089,13 +7074,13 @@ Magdalena said she arrived home, ate dinner, and will meet us at the theater.
 		:op1 (s1a2/ arrive-01
 			:ARG1 s1p
 			:ARG4 (s1h/ home)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative
 			:quote s1s)
 		:op2 (s1e/ eat-01
 			:ARG0 s1p
 			:ARG1 (s1d/ dinner)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative
 			:quote s1s)
 		:op3 (s1m/ meet-03
@@ -7105,10 +7090,10 @@ Magdalena said she arrived home, ate dinner, and will meet us at the theater.
 				:refer-number plural)
 			:place (s1t/ theater
 				:refer-number singular)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative
 			:quote s1s))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 
 (s/ sentence
@@ -7137,9 +7122,9 @@ He went home (in order) to wash the dishes.
 		:ARG0 s1p
 		:ARG1 (s1d/ dish
 			:refer-number plural)
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 
 (s/ sentence
@@ -7370,7 +7355,7 @@ The dog barked last night.
 		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-affirmative)
 ```
 <span id="4-3-1-1-1 (1b)" label="4-3-1-1-1 (1b)">4-3-1-1-1 (1b)</span>
@@ -7381,7 +7366,7 @@ The dog probably barked last night.
 		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength partial-affirmative)
 ```
 <span id="4-3-1-1-1 (1c)" label="4-3-1-1-1 (1c)">4-3-1-1-1 (1c)</span>
@@ -7392,7 +7377,7 @@ The dog may have barked last night.
 		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength neutral-affirmative)
 ```
 <span id="4-3-1-1-1 (1d)" label="4-3-1-1-1 (1d)">4-3-1-1-1 (1d)</span>
@@ -7403,7 +7388,7 @@ The dog may not have barked last night.
 		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength neutral-negative)
 ```
 <span id="4-3-1-1-1 (1e)" label="4-3-1-1-1 (1e)">4-3-1-1-1 (1e)</span>
@@ -7414,7 +7399,7 @@ The dog probably didn't bark last night.
 		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength partial-negative)
 ```
 <span id="4-3-1-1-1 (1f)" label="4-3-1-1-1 (1f)">4-3-1-1-1 (1f)</span>
@@ -7425,7 +7410,7 @@ The dog didn't bark last night.
 		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
+	:aspect endeavor
 	:modal-strength full-negative)
 ```
 [Back to Table of Contents](#toc)
@@ -7450,9 +7435,9 @@ Example <a href="#4-3-1-1-2 (1)">(1)</a> shows how direct and indirect justifica
 			:name (n/ name :op1 "Mary"))
 		:ARG2 (c/ cat
 			:refer-number singular)
-		:aspect Performance
+		:aspect performance
 		**:modal-strength full-affirmative**)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 ```
 <span id="4-3-1-1-2 (1b)" label="4-3-1-1-2 (1b)">4-3-1-1-2 (1b)</span>
@@ -7463,7 +7448,7 @@ Mary must have fed the cat.
 		:name (n/ name :op1 "Mary"))
 	:ARG2 (c/ cat
 		:refer-number singular)
-	:aspect Performance
+	:aspect performance
 	:modal-strength partial-affirmative)
 ```
 
@@ -7507,7 +7492,7 @@ I will go to Santa Fe.
 		:name (n/ name
 			:op1 "Santa"
 			:op2 "Fe"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 ```
 <span id="4-3-1-1-3 (1b)" label="4-3-1-1-3 (1b)">4-3-1-1-3 (1b)</span>
@@ -7522,7 +7507,7 @@ You must go to Santa Fe.
 		:name (n/ name
 			:op1 "Santa"
 			:op2 "Fe"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength partial-affirmative
 	:mode Imperative)
 ```
@@ -7539,7 +7524,7 @@ You can go to Santa Fe.
 		:name (n/ name
 			:op1 "Santa"
 			:op2 "Fe"))
-	:aspect Performance
+	:aspect performance
 	:modal-strength neutral-affirmative)
 ```
 The predictive future, as in <a href="#4-3-1-1-3 (1a)">(1a)</a>, is annotated with
@@ -7572,9 +7557,9 @@ Mary wants to visit France.
 		:ARG1 (c/ country
 			:wiki "France"
 			:name (n/ name :op1 "France"))
-		:aspect Performance
+		:aspect performance
 		:modal-predicate w
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative
 
 (s/ sentence
@@ -7594,9 +7579,9 @@ Rob thinks the dog escaped through the fence.
 		:ARG0 (d/ dog
 			:refer-number singular)
 		:path (f/ fence)
-		:aspect Performance
+		:aspect performance
 		:modal-predicate t)
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1t)
@@ -7616,9 +7601,9 @@ They probably decided to leave on Monday.
 		:ARG0 p
 		:temporal (d/ date-entity
 			:weekday (m/ Monday))
-		:aspect Performance
+		:aspect performance
 		:modal-predicate d)
-	:aspect Performance
+	:aspect performance
 	:modal-strength partial-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1d)
@@ -7640,10 +7625,10 @@ His parents forbid him from smoking.
 		:refer-number plural)
 	:ARG1 (s/ smoke-01
 		:ARG0 p2
-		:aspect Process
+		:aspect process
 		:modal-predicate f)
 	:ARG2 p2
-	:aspect State
+	:aspect state
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1f)
@@ -7683,10 +7668,10 @@ Mary said that she went to Santa Fe.
 			:name (n2/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative
 		:quote s
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
@@ -7714,10 +7699,10 @@ The New York Times reported that Congress voted on the bill this afternoon.
 			:refer-number singular)
 		:temporal (a/ afternoon
 			:mod (t/ this))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative
 		:quote r)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1r)
@@ -7739,10 +7724,10 @@ Mary might have said that she went to Santa Fe.
 			:name (n2/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative
 		:quote s
-	:aspect Performance
+	:aspect performance
 	:modal-strength neutral-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
@@ -7764,10 +7749,10 @@ Mary didn’t say that she went to Santa Fe.
 			:name (n2/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative
 		:quote s
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-negative)
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
@@ -7790,10 +7775,10 @@ Mary said that John might have gone to Santa Fe.
 			:name (n3/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
+		:aspect performance
 		:modal-strength neutral-affirmative
 		:quote s
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
@@ -7816,10 +7801,10 @@ Mary said that John probably didn’t go to Santa Fe.
 			:name (n3/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
+		:aspect performance
 		:modal-strength partial-negative
 		:quote s
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
@@ -7858,9 +7843,9 @@ They dropped water in order to fight the fire.
 	:purpose (f/ fight-01
 		:ARG0 p
 		:ARG1 (f/ fire)
-		:aspect Activity
+		:aspect activity
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1d)
@@ -7881,9 +7866,9 @@ He walked quickly in order to not arrive late.
 	:purpose (a/ arrive-01
 		:ARG1 p
 		:temporal (l/ late)
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-negative)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((past-reference :contained s1w)
@@ -7924,9 +7909,9 @@ If she’s hungry, I’ll feed her dinner.
 		:refer-number singular)
 	:condition (h/ hunger-01
 		:ARG0 p2
-		:aspect State
+		:aspect state
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1h)
@@ -7947,9 +7932,9 @@ If she’s hungry, maybe I’ll cook pasta.
 		:ARG0 (p3/ person
 			:refer-person 3rd
 			:refer-number singular)
-		:aspect State
+		:aspect state
 		:modal-strength full-affirmative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength neutral-affirmative)
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1h)
@@ -7971,9 +7956,9 @@ If she isn’t hungry, we’ll just watch a movie.
 		:ARG0 (p2/ person
 			:refer-person 3rd
 			:refer-number singular)
-		:aspect State
+		:aspect state
 		:modal-strength full-negative)
-	:aspect Performance
+	:aspect performance
 	:modal-strength full-affirmative)
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1h)
@@ -8229,7 +8214,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	   :refer-number singular)
    :ARG1 (p2/ person
 	   :ARG0-of (x/ 3ii'oku 'sit'
-		   :aspect State
+		   :aspect state
 		   :modal-strength full-affirmative)
 	   :mod (n/ nuhu' 'this')
 	   :refer-number plural)
@@ -8237,10 +8222,10 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	   :ARG0 p2
 	   :ARG1 (t/ thing)
 	   :other-role (w/ wohei)
-	   :aspect Performance
+	   :aspect performance
 	   :modal-strength partial-affirmative
 	   :mode Imperative)
-   :aspect Performance
+   :aspect performance
    :modal-strength full-affirmative)
 (s1/ sentence
 	:temporal ((past-reference :contained s1h)
@@ -8277,9 +8262,9 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 				:refer-person 2nd
 				:refer-number plural)
 			:ARG1 (t/ thing)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-affirmative)
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-negative
 		:quote e))
 (s2/ sentence
@@ -8317,9 +8302,9 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 				:refer-person 2nd
 				:refer-number plural)
 			:ARG1 (t/ thing)
-			:aspect Performance
+			:aspect performance
 			:modal-strength full-negative)
-		:aspect Performance
+		:aspect performance
 		:modal-strength full-affirmative
 		:quote e))
 (s3/ sentence
@@ -8355,7 +8340,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 		:refer-number plural)
 	:ARG1 (t/ thing)
 	:duration (w/ wo'oe'onoun 'on and on')
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 (s4/ sentence
 	:temporal (s3e :after s4n)
@@ -8376,7 +8361,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (h/ have-mod-91
        :ARG1 (t /thing)
        :ARG2 (n/ nooko'wuutee 'have.white.streak')
-       :aspect State
+       :aspect state
        :modal-strength full-affirmative)
 (s5/ sentence
 	:temporal (s4n :overlap s5h)
@@ -8400,7 +8385,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:duration (t2/ temporal-quantity
 		:unit (u/ uuus 'day')
 		:quant 7)
-	:aspect Activity
+	:aspect activity
 	:modal-strength full-affirmative)
 (s6/ sentence
 	:temporal (s5h :overlap s6n)
@@ -8423,7 +8408,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	       :refer-number plural)
 	   :ARG1 (e/ event
 		   :mod h)
-       :aspect Performance
+       :aspect performance
        :modal-strength full-affirmative)
    (s7/ sentence
 	   :temporal (s6n :after s7h)
