@@ -125,14 +125,14 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
   :modal-strength full-affirmative)
 
 (s1/ sentence
-    :temporal((DCT :depends-on s1t2)
+    :temporal((document-creation-time :depends-on s1t2)
 	      (s1t2 :contained s1t))
     :modal(AUTH :full-affirmative s1t))
 
 ```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *:depends-on*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-2-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _:contained_ in *today*.
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *document-creation-time*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the document-creation-time of the document. In this sense, we say that *today* depends on document-creation-time, hence the relation between them is *:depends-on*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-2-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _:contained_ in *today*.
 
-The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:full-affirmative* label.
+The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like document-creation-time, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:full-affirmative* label.
 
 <span id="1 (2)">1 (2)</span>
 ```
@@ -168,7 +168,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
      :modal-strength full-affirmative)
 
 (s2/ sentence
-    :temporal((DCT :depends-on s2w)
+    :temporal((document-creation-time :depends-on s2w)
     	      (s2w :contained s2c)
 	      (s2w :contained s2s2)
 	      (s2c :before s2s))
@@ -182,7 +182,7 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman" (the question is really whether it needs to be in the doc graph in addition to the identity-91 predicate in the sent graph)-->
 
 For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
-happened *last week*, which itself depends on the DCT for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
+happened *last week*, which itself depends on the document-creation-time for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
 *sentence* event definitely happened, and that *Pope* is certainly *the American businessman*. It introduces a *NULL_CHARGER* conceiver to indicate that the authority that charged Pope (which is not explicit in the text) presents the *spying* event as a certainty. The coreference annotation specifies that *Pope* in sentence 2 and *Edmund Pope* in sentence 1 are the same entity.
 
 <span id="1 (3)">1 (3)</span>
@@ -201,7 +201,7 @@ Snt3: He denied any wrongdoing.
       :modal-strength full-affirmative)
 
 (s3/ sentence
-    :temporal((DCT :before s3d)
+    :temporal((document-creation-time :before s3d)
               (s3d :before s3d2))
     :modal((AUTH :full-affirmative s3d)
     	   (AUTH :full-affirmative s3p)
@@ -301,14 +301,14 @@ Snt6: He will spend the next several days at the medical center there before he 
       :modal-strength full-affirmative)
 
 (s6/ sentence
-  :temporal((DCT :after s6s)
+  :temporal((document-creation-time :after s6s)
             (s6s :after s6r))
   :modal((AUTH :full-affirmative s6s)
          (AUTH :full-affirmative s6r))
   :coref((s5p :same-entity s6p)
          (s5b :same-entity s6t2))
 ```
-In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the DCT, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in <a href="#1 (5)">(5)</a>, and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence.
+In the temporal annotation of this sentence, the document-creation-time is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the document-creation-time, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in <a href="#1 (5)">(5)</a>, and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence.
 
 <span id="1 (7)">1 (7)</span>
  ```
@@ -371,7 +371,7 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 	:modal-strength full-affirmative)
 
 (s8/ sentence
-  :temporal((DCT :after s8e)
+  :temporal((document-creation-time :after s8e)
   	    (s2c :before s8a)
 	    (s8a :overlap s8c))
   :modal ((AUTH :full-affirmative s8e)
@@ -380,7 +380,7 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
   :coref(s7p :same-entity s8p))
 ```
 
-The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *neutral-affirmative* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
+The *examine-01* event will happen after the document-creation-time. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *neutral-affirmative* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
 
 <span id="1 (9)">1 (9)</span>
 ```
@@ -406,7 +406,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
       :modal-strength full-affirmative)
 
 (s9/ sentence
- :temporal ((DCT :before s9s)
+ :temporal ((document-creation-time :before s9s)
             (s9s :overlap s9s3))
  :modal ((AUTH :AFF s9s)
          (AUTH :AFF s9p)
@@ -3820,7 +3820,7 @@ She parked the truck in the driveway. They loaded the boxes.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s2/ sentence
-	:temporal (DCT :before s2l)
+	:temporal (document-creation-time :before s2l)
 	:modal (AUTH :full-affirmative s2l)
 	:coref (s1t :same-entity s2t))
 ```
@@ -6383,7 +6383,7 @@ Snt3: He denied any wrongdoing.
       :modal-strength full-affirmative)
 
 (s3/ sentence
-    :temporal((DCT :before s3d)
+    :temporal((document-creation-time :before s3d)
               (s3d :before s3d2))
     :modal((AUTH :full-affirmative s3p))
 	   (s3p :full-affirmative s3d)
@@ -6425,7 +6425,7 @@ He is very possessive and controlling but he has no right to be as we are not to
             :aspect State
 	    :modal-strength full-negative))
 (s/ sentence
-  :temporal ((DCT :overlap s1p)
+  :temporal ((document-creation-time :overlap s1p)
   	     (s1p :overlap s1h)
 	     (s1h :overlap s1r)
 	     (s1r :overlap s1h2))
@@ -6474,7 +6474,7 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
 
 (s1/ sentence
   :temporal ((past-reference :includes s1c)
-  	     (DCT :overlap s1b)
+  	     (document-creation-time :overlap s1b)
 	     (s1b :overlap s1w))
   :modal ((AUTH :full-affirmative s1c)
   	  (AUTH :full-affirmative NULL_BELIEVER)
@@ -6581,7 +6581,7 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 	:modal-strength full-affirmative)
 
 (s2/ sentence
-   :temporal ((DCT :overlap s2i)
+   :temporal ((document-creation-time :overlap s2i)
    	      (future-reference :includes s2u))
    :modal ((AUTH :full-affirmative s2i)
    	   (AUTH :full-affirmative s2p)
@@ -6614,8 +6614,8 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 	    :modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((DCT :before a2)
-		   (DCT :before a3))
+	:temporal ((document-creation-time :before a2)
+		   (document-creation-time :before a3))
 	:modal ((AUTH :full-affirmative a2)
 		(AUTH :full-affirmative a3)))
 ```
@@ -6661,7 +6661,7 @@ For now UMR does not annotate cases where one event is a subevent of another eve
 ### Part 4-2. Temporal Dependency
 
 The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression
-*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the DCT is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
+*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (document-creation-time) is also annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the document-creation-time is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the document-creation-time is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the document-creation-time is clearly defined, the temporal relation between *fight* and the document-creation-time is not.
 
 
 <span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
@@ -6713,7 +6713,7 @@ There are three types of nodes in the temporal dependency structure: pre-defined
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
-Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `past-reference`, `present-reference`, `future-reference`, and `DCT` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
+Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `past-reference`, `present-reference`, `future-reference`, and `document-creation-time` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
 above, there is a generic `:depends-on` relation between all nodes
 in the temporal superstructure.
 
@@ -6747,7 +6747,7 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 <tr>
 <td> Relative</td>
 <td> today, two days later </td>
-<td> DCT, another Concrete </td>
+<td> document-creation-time, another Concrete </td>
 </tr>
 <tr>
 <td colspan="2"> Vague</td>
@@ -6776,7 +6776,7 @@ the old days*) are represented as the children of `present-reference`,
 `past-reference`, or `future-reference`. Concrete time expressions
 are divided into relative and absolute time expressions. Relative
 concrete time expressions (*yesterday, the week before*) are represented
-as the children of either `DCT` (as in *yesterday*) or
+as the children of either `document-creation-time` (as in *yesterday*) or
 another concrete time expression on which they depend for their
 interpretation (as in *the week before*). Finally, absolute concrete
 time expressions (*in 2019*) are represented as children of
@@ -7541,7 +7541,7 @@ Mary wants to visit France.
 	:modal-strength full-affirmative
 
 (s/ sentence
-	:temporal ((DCT :overlap s1w)
+	:temporal ((document-creation-time :overlap s1w)
 		   (s1w :after s1v))
 	:modal ((AUTH :full-affirmative s1p)
 		(s1p :full-affirmative s1w)
@@ -7562,7 +7562,7 @@ Rob thinks the dog escaped through the fence.
 	:aspect State
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1t)
+	:temporal ((document-creation-time :overlap s1t)
 		   (s1t :before s1e))
 	:modal ((AUTH :full-affirmative s1p)
 		(s1p :full-affirmative s1t)
@@ -7609,7 +7609,7 @@ His parents forbid him from smoking.
 	:aspect State
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1f)
+	:temporal ((document-creation-time :overlap s1f)
 		   (s1f :overlap s1s))
 	:modal ((AUTH :full-affirmative s1p)
 		(s1p :full-affirmative s1f)
@@ -7892,8 +7892,8 @@ If she’s hungry, I’ll feed her dinner.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1h)
-		   (DCT :after s1f))
+	:temporal ((document-creation-time :overlap s1h)
+		   (document-creation-time :after s1f))
 	:modal ((AUTH :neutral-affirmative have-condition)
 		(have-condition :full-affirmative s1h)
 		(have-condition :full-affirmative s1f)))
@@ -7915,8 +7915,8 @@ If she’s hungry, maybe I’ll cook pasta.
 	:aspect Performance
 	:modal-strength neutral-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1h)
-		   (DCT :after s1c))
+	:temporal ((document-creation-time :overlap s1h)
+		   (document-creation-time :after s1c))
 	:modal ((AUTH :neutral-affirmative have-condition)
 		(have-condition :full-affirmative s1h)
 		(have-condition :neutral-affirmative s1c)))
@@ -7939,8 +7939,8 @@ If she isn’t hungry, we’ll just watch a movie.
 	:aspect Performance
 	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1h)
-		   (DCT :after s1w))
+	:temporal ((document-creation-time :overlap s1h)
+		   (document-creation-time :after s1w))
 	:modal ((AUTH :neutral-affirmative have-condition)
 		(have-condition :full-negative s1h)
 		(have-condition :full-affirmative s1c)))
@@ -8517,7 +8517,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Direction* | Non-participant role relation | **3-2-2-3** |
 | Discourse relations | Semantic category | **3-1-6** |
 | Disjunctive | Discourse relation | **3-1-6** |
-| Document Creation Time (DCT) | Temporal annotation value | 1, 3-3-1-4, 4-2, **4-2-1-1**, 4-2-1-2 |
+| Document Creation Time (document-creation-time) | Temporal annotation value | 1, 3-3-1-4, 4-2, **4-2-1-1**, 4-2-1-2 |
 | Document-level representation | UMR annotation practice | 1, 2-1, 2-2, 2-2-5, 3-1-6, 3-3-3, **4**, 4-1-1, 4-2, 4-3-1, 4-3-1-4 |
 | Doubt | Modal semantic category | **4-3-1-6**, 4-3-2 |
 | *Downtoner* | Degree semantic category, degree annotation value | 2-1, **3-3-6** |
