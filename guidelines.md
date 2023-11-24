@@ -6660,8 +6660,20 @@ For now UMR does not annotate cases where one event is a subevent of another eve
 
 ### Part 4-2. Temporal Dependency
 
-The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression
-*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (document-creation-time) is also annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the document-creation-time is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the document-creation-time is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the document-creation-time is clearly defined, the temporal relation between *fight* and the document-creation-time is not.
+The temporal annotation in UMR is done at both the sentence level and the
+document level. For instance, a time expression that serves as the modifier
+of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression *April 1998* is annotated as a temporal
+modifier of the predicate *sign*. Likewise, the temporal relation between an
+event and its document creation time is also annotated at the sentence level.
+In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the
+document-creation-time is annotated as `:temporal (b2 / before :op1
+(n/now))`. The temporal relation between an event and a time expression is
+annotated when a time expression is present in the sentence. The temporal
+relation between an event and the `document-creation-time` is annotated when
+this temporal relation is defined in that context. For example, while the
+relation between *signed* and the `document-creation-time` is clearly
+defined, the temporal relation between *fight* and the
+`document-creation-time` is not.
 
 
 <span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
