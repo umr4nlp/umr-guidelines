@@ -6701,44 +6701,61 @@ In April 1998 Arab countries signed an anti-terrorism agreement that binds the s
 		  :aspect Activity
 		  :modal-strength full-affirmative))
       :temporal (d/ date-entity :year 1998 :month 4)
-      :temporal (b2/before :op (n/now))
+      :temporal (b2/ before :op1 (n/now))
       :aspect Performance))
  ```
 
-In addition to temporal relations at the sentence level, we also annotate temporal relations at the document level.
-The document-level temporal relations focus on event-event and time-time relations. Time-time relations are annotated when
-a relative time depends on another time expression for its interpretation.
+In addition to temporal relations at the sentence level, we also annotate
+temporal relations at the document level. The document-level temporal
+relations focus on event-event and time-time relations. Time-time relations
+are annotated when a relative time depends on another time expression for its
+interpretation.
 
-Event-event relations are annotated only when the temporal relations are clearly supported by morpho-syntactic clues or when there is a clear temporal sequence can be inferred.
+Event-event relations are annotated only when the temporal relations are
+clearly supported by morpho-syntactic clues or when there is a clear temporal
+sequence can be inferred.
 
-The temporal dependency is divided into two passes: the first pass involves setting up the temporal
-superstructure – the top levels of the dependency structure - and the second
-pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined metanodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
+The temporal dependency is divided into two passes: the first pass involves
+setting up the temporal superstructure – the top levels of the dependency
+structure - and the second pass involves adding events to the temporal
+dependency structure. The temporal superstructure contains the temporal
+expressions (timexs) in the text and pre-defined metanodes and their temporal
+relations to each other; the rest of the temporal dependency contains the
+events and their temporal relations to timexs and other events.
 
 [Back to Table of Contents](#toc)
 
 #### Part 4-2-1. Nodes in the temporal dependency
 
-There are three types of nodes in the temporal dependency structure: pre-defined metanodes, time expressions, and events. Pre-defined metanodes and time expressions make up the top levels of the dependency structure, called the temporal superstructure. `:depends-on` is the relation that is used to link all nodes in the temporal superstructure.
+There are three types of nodes in the temporal dependency structure:
+pre-defined metanodes, time expressions, and events. Pre-defined metanodes
+and time expressions make up the top levels of the dependency structure,
+called the temporal superstructure. `:depends-on` is the relation that is
+used to link all nodes in the temporal superstructure.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
-Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `past-reference`, `present-reference`, `future-reference`, and `document-creation-time` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
-above, there is a generic `:depends-on` relation between all nodes
-in the temporal superstructure.
+Pre-defined metanodes are nodes that are present at the top of every temporal
+dependency structure, connected directly to the `ROOT` node. There are four
+pre-defined metanodes: `past-reference`, `present-reference`,
+`future-reference`, and `document-creation-time`. Unlike time expressions,
+the pre-defined metanodes don’t correspond to linguistic material in the
+text.  As mentioned above, there is a generic `:depends-on` relation between
+all nodes in the temporal superstructure.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-2. Time expressions
 
-The other type of node in the temporal superstructure are time
-expressions. Annotators should identify all time expressions in a document and add them to the temporal superstructure before annotating events.
+The other type of node in the temporal superstructure are time expressions.
+Annotators should identify all time expressions in a document and add them to
+the temporal superstructure before annotating events.
 
-Time expressions are broken down into a taxonomy that
-determines their representation in the temporal superstructure (see
-Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
+Time expressions are broken down into a taxonomy that determines their
+representation in the temporal superstructure (see Table 1 in Zhang & Xue
+(2018), reproduced here in Table 13.
 
 <table>
 <tr>
@@ -6754,17 +6771,17 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 <td rowspan="2"> Concrete </td>
 <td> Absolute</td>
 <td> May 2015</td>
-<td> ROOT </td>
+<td> `ROOT` </td>
 </tr>
 <tr>
 <td> Relative</td>
 <td> today, two days later </td>
-<td> document-creation-time, another Concrete </td>
+<td> `document-creation-time`, another Concrete </td>
 </tr>
 <tr>
 <td colspan="2"> Vague</td>
 <td> nowadays</td>
-<td> Present/Past/future-reference </td>
+<td> `present/past/future-reference` </td>
 </tr>
 <tr>
 <td colspan="3"> Unlocatable Time Expressions</td>
@@ -6773,26 +6790,26 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 </tr>
 </table>
 
-First, time expressions are distinguished based on whether they are
-locatable on a timeline or not. Unlocatable time expressions are time
-expressions which refer to the duration (*for three hours*) or
-quantification (*every day*) of an event. Unlocatable time expressions
-are not represented in the temporal dependency structure at any level. They do influence the aspect annotation, however (see [Part 3-3-1](#part-3-3-1-Aspect)).
+First, time expressions are distinguished based on whether they are locatable
+on a timeline or not. Unlocatable time expressions are time expressions which
+refer to the duration (*for three hours*) or quantification (*every day*) of
+an event. Unlocatable time expressions are not represented in the temporal
+dependency structure at any level. They do influence the aspect annotation,
+however (see [Part 3-3-1](#part-3-3-1-Aspect)).
 
 <!-- (they do influence the aspect annotation; see §[3](#aspectannotation)) -->
 
 All locatable time expressions are represented in the temporal
-superstructure. Locatable time expressions are divided between concrete
-and vague time expressions. Vague time expressions (e.g. *nowadays, in
-the old days*) are represented as the children of `present-reference`,
-`past-reference`, or `future-reference`. Concrete time expressions
-are divided into relative and absolute time expressions. Relative
-concrete time expressions (*yesterday, the week before*) are represented
-as the children of either `document-creation-time` (as in *yesterday*) or
-another concrete time expression on which they depend for their
-interpretation (as in *the week before*). Finally, absolute concrete
-time expressions (*in 2019*) are represented as children of
-`ROOT`.
+superstructure. Locatable time expressions are divided between concrete and
+vague time expressions. Vague time expressions (e.g. *nowadays, in the old
+days*) are represented as the children of `present-reference`,
+`past-reference`, or `future-reference`. Concrete time expressions are
+divided into relative and absolute time expressions. Relative concrete time
+expressions (*yesterday, the week before*) are represented as the children of
+either `document-creation-time` (as in *yesterday*) or another concrete time
+expression on which they depend for their interpretation (as in *the week
+before*). Finally, absolute concrete time expressions (*in 2019*) are
+represented as children of `ROOT`.
 
 [Back to Table of Contents](#toc)
 
@@ -6801,10 +6818,13 @@ time expressions (*in 2019*) are represented as children of
 
 #### Part 4-2-2-1. Choosing the right temporal relation
 
-Once time expressions have been identified and annotated in the temporal dependency, annotators select temporal relations for the events in a text (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines). Each event is annotated as the child of either a time
-expression in the superstructure or another event (or both). The set of
-temporal relations are shown below. Note that the labels characterize
-the relation from child to parent.
+Once time expressions have been identified and annotated in the temporal
+dependency, annotators select temporal relations for the events in a text
+(see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines).
+Each event is annotated as the child of either a time expression in the
+superstructure or another event (or both). The set of temporal relations are
+shown below. Note that the labels characterize the relation from child to
+parent.
 
 `:contained`: child is entirely contained within the parent; parent begins before child and parent ends after child (Note: this is called ‘Includes’ in Zhang & Xue 2018).
 
@@ -6814,10 +6834,15 @@ the relation from child to parent.
 
 `:overlap`: child and parent overlap (either partially or fully).
 
-The goal of this temporal annotation scheme is to give each event the
-most precise temporal location possible. We also want to avoid adding
-annotations which do not give any additional information (i.e., the
-relation falls out logically from the other annotations). Follow the steps below to determine the most accurate and precise reference time for each event (but see [Part 4-2-2-1-1](#part-4-2-2-1-1-special-cases) below for exceptions) . All events need to receive at least one temporal annotation, but may receive two in cases where an event needs to be linked to both a time expression and another event.
+The goal of this temporal annotation scheme is to give each event the most
+precise temporal location possible. We also want to avoid adding annotations
+which do not give any additional information (i.e., the relation falls out
+logically from the other annotations). Follow the steps below to determine
+the most accurate and precise reference time for each event (but see [Part
+4-2-2-1-1](#part-4-2-2-1-1-special-cases) below for exceptions) . All events
+need to receive at least one temporal annotation, but may receive two in
+cases where an event needs to be linked to both a time expression and another
+event.
 
 1. If there is a time expression in the same line as the event, link the event to it with the proper relation (although see exception below). If the event does not receive an annotation at this step, proceed to step 2. If an event does receive an annotation at this step, proceed to step 4.
 
