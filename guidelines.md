@@ -6511,7 +6511,7 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 (i/ identity-91
 	:ARG1 (t/ thing
 		:ARG1-of (l/ loan)
-		:ARG0-of (i2/ identity
+		:ARG0-of (i2/ identity-91
 			:ARG1 (m/ monetary-quantity
 				:quant 12500000
 				:unit (d/ dollar
