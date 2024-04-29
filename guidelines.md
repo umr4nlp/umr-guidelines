@@ -127,12 +127,12 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
 (s1/ sentence
     :temporal((document-creation-time :depends-on s1t2)
 	      (s1t2 :contained s1t))
-    :modal(AUTH :full-affirmative s1t))
+    :modal(author :full-affirmative s1t))
 
 ```
 The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *document-creation-time*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the document-creation-time of the document. In this sense, we say that *today* depends on document-creation-time, hence the relation between them is *:depends-on*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-2-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _:contained_ in *today*.
 
-The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like document-creation-time, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:full-affirmative* label.
+The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *author*. Like document-creation-time, author is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:full-affirmative* label.
 
 <span id="1 (2)">1 (2)</span>
 ```
@@ -172,9 +172,9 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
     	      (s2w :contained s2c)
 	      (s2w :contained s2s2)
 	      (s2c :before s2s))
-    :modal((AUTH :full-affirmative s2i)
-      	   (AUTH :full-affirmative s2c)
-	   (AUTH :full-affirmative NULL_CHARGER)
+    :modal((author :full-affirmative s2i)
+      	   (author :full-affirmative s2c)
+	   (author :full-affirmative NULL_CHARGER)
 	   (NULL_CHARGER :full-affirmative s2c)
 	   (s2c :Unsp s2s)
     :coref(s1p :same-entity s2p))
@@ -203,8 +203,8 @@ Snt3: He denied any wrongdoing.
 (s3/ sentence
     :temporal((document-creation-time :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :full-affirmative s3d)
-    	   (AUTH :full-affirmative s3p)
+    :modal((author :full-affirmative s3d)
+    	   (author :full-affirmative s3p)
            (s3p :full-negative s3d2)
 	   (s3d :Unsp s3d2))
     :coref(s2p :same-entity s3p))
@@ -215,7 +215,7 @@ For this sentence, the coreference annotation indicates that *he* is the same pe
 
 The temporal annotation indicates that Pope's denial took place before document creation time, and that any *wrongdoing* would have happened before this denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
 
-The modal relations indicate that the *deny* event definitely happened according to the author. The author presents themselves as having certainty about Pope's mental state at the time of the denial (annotated as a :full-affirmative relation from AUTH to *Pope*), and the :full-negative relation indicates that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
+The modal relations indicate that the *deny* event definitely happened according to the author. The author presents themselves as having certainty about Pope's mental state at the time of the denial (annotated as a :full-affirmative relation from author to *Pope*), and the :full-negative relation indicates that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
 
 <span id="1 (4)">1 (4)</span>
 ```
@@ -238,7 +238,7 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
 
 (s4/ sentence
     :temporal(s2s2 :after s4p)
-    :modal (AUTH :full-affirmative s4p)
+    :modal (author :full-affirmative s4p)
     :coref(s3p :same-entity s4p4))
 ```
 
@@ -264,7 +264,7 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
 
 (s5/ sentence
     :temporal(s4p :after s5f)
-    :modal(AUTH :full-affirmative s5f)
+    :modal(author :full-affirmative s5f)
     :coref(s4p4 :same-entity s5p))
 ```
 In the document-level annotation of this sentence, *pardon-01* from <a href="#1 (4)">(4)</a> is chosen as the
@@ -303,8 +303,8 @@ Snt6: He will spend the next several days at the medical center there before he 
 (s6/ sentence
   :temporal((document-creation-time :after s6s)
             (s6s :after s6r))
-  :modal((AUTH :full-affirmative s6s)
-         (AUTH :full-affirmative s6r))
+  :modal((author :full-affirmative s6s)
+         (author :full-affirmative s6r))
   :coref((s5p :same-entity s6p)
          (s5b :same-entity s6t2))
 ```
@@ -333,8 +333,8 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
 (s7/ sentence
   :temporal((s2c :before s7a)
             (s7a :overlap s7h))
-  :modal ((AUTH :full-affirmative s7h)
-         (AUTH :full-affirmative s7a))
+  :modal ((author :full-affirmative s7h)
+         (author :full-affirmative s7a))
   :coref (s6p :same-entity s7p))
 ```
 For <a href="#1 (7)">(7)</a>, the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before the *convict-01* event from sentence 2. According to the author, both *arrest-01* and *be in remission* happened. Once again, *Pope* is the same entity as *he* in the previous sentence.
@@ -374,9 +374,9 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
   :temporal((document-creation-time :after s8e)
   	    (s2c :before s8a)
 	    (s8a :overlap s8c))
-  :modal ((AUTH :full-affirmative s8e)
-          (AUTH :neutral-affirmative s8c)
-          (AUTH :full-affirmative s8a))
+  :modal ((author :full-affirmative s8e)
+          (author :neutral-affirmative s8c)
+          (author :full-affirmative s8a))
   :coref(s7p :same-entity s8p))
 ```
 
@@ -408,8 +408,8 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
 (s9/ sentence
  :temporal ((document-creation-time :before s9s)
             (s9s :overlap s9s3))
- :modal ((AUTH :AFF s9s)
-         (AUTH :AFF s9p)
+ :modal ((author :AFF s9s)
+         (author :AFF s9p)
 	 (s9p :AFF s9s3))
  :coref (s8p :same-entity s9p2))
  ```
@@ -501,7 +501,7 @@ UMR differs from AMR in a number of ways:
     :modal-strength neutral-affirmative)
 
 (s0/sentence
-  :modal (AUTH :NEUT s0g))
+  :modal (author :NEUT s0g))
 
 ```
 
@@ -3821,7 +3821,7 @@ She parked the truck in the driveway. They loaded the boxes.
 	:modal-strength full-affirmative)
 (s2/ sentence
 	:temporal (document-creation-time :before s2l)
-	:modal (AUTH :full-affirmative s2l)
+	:modal (author :full-affirmative s2l)
 	:coref (s1t :same-entity s2t))
 ```
 
@@ -6370,7 +6370,7 @@ Snt3: He denied any wrongdoing.
 (s3/ sentence
     :temporal((document-creation-time :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :full-affirmative s3p))
+    :modal((author :full-affirmative s3p))
 	   (s3p :full-affirmative s3d)
 	   (s3d :Unsp s3d2))
   :coref(s2p :same-entity s3p))
@@ -6414,10 +6414,10 @@ He is very possessive and controlling but he has no right to be as we are not to
   	     (s1p :overlap s1h)
 	     (s1h :overlap s1r)
 	     (s1r :overlap s1h2))
-  :modal ((AUTH :full-affirmative s1p)
-  	  (AUTH :full-affirmative s1h)
-	  (AUTH :full-negative s1r)
-	  (AUTH :full-negative s1h2))
+  :modal ((author :full-affirmative s1p)
+  	  (author :full-affirmative s1h)
+	  (author :full-negative s1r)
+	  (author :full-negative s1h2))
   :coref (p :subset-of p2))
 ```
 
@@ -6461,8 +6461,8 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
   :temporal ((past-reference :includes s1c)
   	     (document-creation-time :overlap s1b)
 	     (s1b :overlap s1w))
-  :modal ((AUTH :full-affirmative s1c)
-  	  (AUTH :full-affirmative NULL_BELIEVER)
+  :modal ((author :full-affirmative s1c)
+  	  (author :full-affirmative NULL_BELIEVER)
 	  (NULL_BELIEVER :full-affirmative s1b)
 	  (s1b :Unsp s1w)))
 ```
@@ -6489,8 +6489,8 @@ Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial ba
 (s2/ sentence
   :temporal ((s1c :after s2s)
   	     (s2s :after s2a))
-  :modal ((AUTH :full-affirmative s2s)
-  	  (AUTH :full-affirmative s2p)
+  :modal ((author :full-affirmative s2s)
+  	  (author :full-affirmative s2p)
 	  (s2p :full-affirmative s2c)
 	  (s2p :full-affirmative s2a))
   :coref (s1c :same-event s2c))
@@ -6525,7 +6525,7 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
 (s1/ sentence
 	:temporal ((past-reference :includes s1r2)
 		   (s1r2 :includes s1i))
-	:modal (AUTH :full-affirmative s1i))
+	:modal (author :full-affirmative s1i))
 ```
 <span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
 ```
@@ -6568,9 +6568,9 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 (s2/ sentence
    :temporal ((document-creation-time :overlap s2i)
    	      (future-reference :includes s2u))
-   :modal ((AUTH :full-affirmative s2i)
-   	   (AUTH :full-affirmative s2p)
-	   (AUTH :full-affirmative s2u))
+   :modal ((author :full-affirmative s2i)
+   	   (author :full-affirmative s2p)
+	   (author :full-affirmative s2u))
    :coref (s1i :same-event s2p))
 ```
 The `:subset-of` relation is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in <a href="#4-1-2 (3)">(3)</a>. Both the _arrest_ made in Germany and the one made in the Netherlands are subevents of the _arrests_ that were ordered by judge Fragnoli. Therefore, both the `s1a2` node and the `s1a3` node are annotated with a `:subset-of` relation to `s2a`.
@@ -6601,8 +6601,8 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 (s/ sentence
 	:temporal ((document-creation-time :before a2)
 		   (document-creation-time :before a3))
-	:modal ((AUTH :full-affirmative a2)
-		(AUTH :full-affirmative a3)))
+	:modal ((author :full-affirmative a2)
+		(author :full-affirmative a3)))
 ```
 <span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
 ```
@@ -6624,8 +6624,8 @@ The arrests were ordered by anti-terrorism judge fragnoli.
 
  (s2/ sentence
  	:temporal (s2a :before s2o)
-	:modal ((AUTH :full-affirmative s2o)
-		(AUTH :full-affirmative s2p)
+	:modal ((author :full-affirmative s2o)
+		(author :full-affirmative s2p)
 		(s2p :partial-affirmative s2a))
   	:coref ((s2a :subset-of s1a2)
 		(s2a :subset-of s1a3)))
@@ -6850,7 +6850,7 @@ event.
 
 	b. The parent event has a compatible modal annotation:
 		the parent event and child event have the same parent and the same edge value in the modal dependency OR
-		the parent event has a `:full-affirmative` relation to the `AUTH` node in the modal dependency
+		the parent event has a `:full-affirmative` relation to the `author` node in the modal dependency
 
 	c. There is a clear temporal relation between the parent event and the child event
 
@@ -6876,8 +6876,8 @@ snt15	A-nd u-h and then he gets down out of the tree,
   :modal-strength full-affirmative)
 
 (s15s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-         (AUTH :full-affirmative s15g))
+  :modal ((ROOT :MODAL author)
+         (author :full-affirmative s15g))
   :temporal ((past-reference :contained s15g)))
 
 
@@ -6895,8 +6895,8 @@ snt16	and he dumps all his pears into the basket
   :modal-strength full-affirmative)
 
 (s16s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-          (AUTH :full-affirmative s16d))
+  :modal ((ROOT :MODAL author)
+          (author :full-affirmative s16d))
   :temporal ((s15g :after s16d)))
 
 
@@ -6909,8 +6909,8 @@ snt17	and the basket's full,
   :modal-strength full-affirmative)
 
 (s17s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-          (AUTH :full-affirmative s17h))
+  :modal ((ROOT :MODAL author)
+          (author :full-affirmative s17h))
   :temporal ((s16d :overlap s17h)))
 
 
@@ -6928,15 +6928,15 @@ snt18	and one of the pears drops down to the floor,
   :modal-strength full-affirmative)
 
 (s18s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-         (AUTH :full-affirmative s18d))
+  :modal ((ROOT :MODAL author)
+         (author :full-affirmative s18d))
   :temporal ((s16d :after s18d)))
 
 
 ```
 
 
-The first event in this excerpt (`s15g`) is linked to a tense metanode, as there are no time expressions in the clause and there are no previous events in the excerpt. The next event (`s16d`) is linked to the immediately preceding event in the text (`s15g`) because it fits all of the criteria for a good reference time: its aspect annotation is a type of Process, it has a full-affirmative relation to the `AUTH` node, and there is a clear temporal relation between the two events. In a similar way, `s17h` is linked to `s16d`. For the final event in the excerpt (`s18d`), the previous event in the text does not make a good reference time. Since `s17h` is a State (not a Process), it does not fit the criteria for a good reference time. Therefore, `s18d` is linked to the next event back in the text `s16d`.
+The first event in this excerpt (`s15g`) is linked to a tense metanode, as there are no time expressions in the clause and there are no previous events in the excerpt. The next event (`s16d`) is linked to the immediately preceding event in the text (`s15g`) because it fits all of the criteria for a good reference time: its aspect annotation is a type of Process, it has a full-affirmative relation to the `author` node, and there is a clear temporal relation between the two events. In a similar way, `s17h` is linked to `s16d`. For the final event in the excerpt (`s18d`), the previous event in the text does not make a good reference time. Since `s17h` is a State (not a Process), it does not fit the criteria for a good reference time. Therefore, `s18d` is linked to the next event back in the text `s16d`.
 
 
 
@@ -7203,8 +7203,8 @@ Martin said that the package has probably already arrived.
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1a))
-	:modal ((AUTH :full-affirmative s1p)
-		(AUTH :full-affirmative s1s)
+	:modal ((author :full-affirmative s1p)
+		(author :full-affirmative s1s)
 		(s1p :partial-affirmative s1a)))
 ```
 
@@ -7565,7 +7565,7 @@ Mary wants to visit France.
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1w)
 		   (s1w :after s1v))
-	:modal ((AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1p)
 		(s1p :full-affirmative s1w)
 		(s1w :Unsp s1v))
 ```
@@ -7586,7 +7586,7 @@ Rob thinks the dog escaped through the fence.
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1t)
 		   (s1t :before s1e))
-	:modal ((AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1p)
 		(s1p :full-affirmative s1t)
 		(s1t :Unsp s1e)))
 ```
@@ -7608,7 +7608,7 @@ They probably decided to leave on Monday.
 (s/ sentence
 	:temporal ((past-reference :contained s1d)
 		   (s1m :contained s1l))
-	:modal ((AUTH :partial-affirmative s1p)
+	:modal ((author :partial-affirmative s1p)
 		(s1p :full-affirmative s1d)
 		(s1d :Unsp s1l)))
 ```
@@ -7633,7 +7633,7 @@ His parents forbid him from smoking.
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1f)
 		   (s1f :overlap s1s))
-	:modal ((AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1p)
 		(s1p :full-affirmative s1f)
 		(s1f :Unsp s1s)))
 ```
@@ -7676,8 +7676,8 @@ Mary said that she went to Santa Fe.
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :full-affirmative s1s)
-		(AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1s)
+		(author :full-affirmative s1p)
 		(s1p :full-affirmative s1g)))
 ```
 <span id="4-3-1-3 (1a)" label="4-3-1-3 (1a)">4-3-1-3 (1a)</span>
@@ -7707,8 +7707,8 @@ The New York Times reported that Congress voted on the bill this afternoon.
 (s/ sentence
 	:temporal ((past-reference :contained s1r)
 		   (s1a :contained s1v))
-	:modal ((AUTH :full-affirmative s1r)
-		(AUTH :full-affirmative s1n)
+	:modal ((author :full-affirmative s1r)
+		(author :full-affirmative s1n)
 		(s1n :full-affirmative s1v)))
 ```
 <span id="4-3-1-3 (1b)" label="4-3-1-3 (1b)">4-3-1-3 (1b)</span>
@@ -7732,8 +7732,8 @@ Mary might have said that she went to Santa Fe.
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :neutral-affirmative s1s)
-		(AUTH :neutral-affirmative s1p)
+	:modal ((author :neutral-affirmative s1s)
+		(author :neutral-affirmative s1p)
 		(s1p :full-affirmative s1g)))
 ```
 <span id="4-3-1-3 (1c)" label="4-3-1-3 (1c)">4-3-1-3 (1c)</span>
@@ -7757,8 +7757,8 @@ Mary didn’t say that she went to Santa Fe.
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :full-negative s1s)
-		(AUTH :full-negative s1p)
+	:modal ((author :full-negative s1s)
+		(author :full-negative s1p)
 		(s1p :full-affirmative s1g)))
 ```
 <span id="4-3-1-3 (1d)" label="4-3-1-3 (1d)">4-3-1-3 (1d)</span>
@@ -7783,8 +7783,8 @@ Mary said that John might have gone to Santa Fe.
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :full-negative s1s)
-		(AUTH :neutral-affirmative s1p)
+	:modal ((author :full-negative s1s)
+		(author :neutral-affirmative s1p)
 		(s1p :neutral-affirmative s1g)))
 ```
 <span id="4-3-1-3 (1e)" label="4-3-1-3 (1e)">4-3-1-3 (1e)</span>
@@ -7809,8 +7809,8 @@ Mary said that John probably didn’t go to Santa Fe.
 (s/ sentence
 	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :full-negative s1s)
-		(AUTH :partial-negative s1p)
+	:modal ((author :full-negative s1s)
+		(author :partial-negative s1p)
 		(s1p :partial-negative s1g)))
 ```
 As can be seen above, both the reporting predicate and the reported
@@ -7850,8 +7850,8 @@ They dropped water in order to fight the fire.
 (s/ sentence
 	:temporal ((past-reference :contained s1d)
 		   (s1d :after :s1f))
-	:modal ((AUTH :full-affirmative s1d)
-		(AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1d)
+		(author :full-affirmative s1p)
 		(s1p :partial-affirmative purpose)
 		(purpose :full-affirmative s1f)))
 ```
@@ -7873,8 +7873,8 @@ He walked quickly in order to not arrive late.
 (s/ sentence
 	:temporal ((past-reference :contained s1w)
 		   (s1w :after s1a))
-	:modal ((AUTH :full-affirmative s1w)
-		(AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1w)
+		(author :full-affirmative s1p)
 		(s1p :partial-affirmative purpose)
 		(purpose :full-negative s1a)))
 ```
@@ -7916,7 +7916,7 @@ If she’s hungry, I’ll feed her dinner.
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1h)
 		   (document-creation-time :after s1f))
-	:modal ((AUTH :neutral-affirmative have-condition)
+	:modal ((author :neutral-affirmative have-condition)
 		(have-condition :full-affirmative s1h)
 		(have-condition :full-affirmative s1f)))
 ```
@@ -7939,7 +7939,7 @@ If she’s hungry, maybe I’ll cook pasta.
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1h)
 		   (document-creation-time :after s1c))
-	:modal ((AUTH :neutral-affirmative have-condition)
+	:modal ((author :neutral-affirmative have-condition)
 		(have-condition :full-affirmative s1h)
 		(have-condition :neutral-affirmative s1c)))
 ```
@@ -7963,7 +7963,7 @@ If she isn’t hungry, we’ll just watch a movie.
 (s/ sentence
 	:temporal ((document-creation-time :overlap s1h)
 		   (document-creation-time :after s1w))
-	:modal ((AUTH :neutral-affirmative have-condition)
+	:modal ((author :neutral-affirmative have-condition)
 		(have-condition :full-negative s1h)
 		(have-condition :full-affirmative s1c)))
 ```
@@ -8231,9 +8231,9 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:temporal ((past-reference :contained s1h)
 			   (s1h :overlap s1x)
 			   (s1h :after s1n2))
-	:modal ((AUTH :full-affirmative s1h)
-			(AUTH :full-affirmative s1x)
-			(AUTH :full-affirmative s1p)
+	:modal ((author :full-affirmative s1h)
+			(author :full-affirmative s1x)
+			(author :full-affirmative s1p)
 			(s1p :partial-affirmative s1n2)))
 
 \ref	CrowCh(o).097
@@ -8271,8 +8271,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:temporal ((s1h :after s2e)
 			   (s2e :after s2b)
 			   (s2b :after s2n))
-	:modal ((AUTH :full-affirmative s2e)
-			(AUTH :full-affirmative s2p)
+	:modal ((author :full-affirmative s2e)
+			(author :full-affirmative s2p)
 			(s2p :neutral-affirmative have-condition)
 			(have-condition :full-negative s2n)
 			(have-condition :full-affirmative s2b))
@@ -8311,8 +8311,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:temporal ((s2e :after s3e)
 			   (s3e :after s3b)
 			   (s3b :after s3n))
-	:modal ((AUTH :full-affirmative s3e)
-			(AUTH :full-affirmative s3p)
+	:modal ((author :full-affirmative s3e)
+			(author :full-affirmative s3p)
 			(s3p :neutral-affirmative have-condition)
 			(have-condition :full-affirmative s3n)
 			(have-condition :full-negative s3b))
@@ -8344,7 +8344,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:modal-strength full-affirmative)
 (s4/ sentence
 	:temporal (s3e :after s4n)
-	:modal (AUTH :full-affirmative s4n)
+	:modal (author :full-affirmative s4n)
 	:coref ((s3p4 :same-entity s4p)
 			(s3t :same-entity s4t)
 			(s1n2 :same-event s4n)))
@@ -8365,7 +8365,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
        :modal-strength full-affirmative)
 (s5/ sentence
 	:temporal (s4n :overlap s5h)
-	:modal (AUTH :full-affirmative s5h))
+	:modal (author :full-affirmative s5h))
 
 \ref	CrowCh(o).101
 \tx	niisootoxuuus	ne'no'uxoo';		nooxoheino'.
@@ -8389,7 +8389,7 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:modal-strength full-affirmative)
 (s6/ sentence
 	:temporal (s5h :overlap s6n)
-	:modal (AUTH :full-affirmative s6n)
+	:modal (author :full-affirmative s6n)
 	:coref ((s4p :same-entity s6p)
 			(s4t :same-entity s6t)))
 
@@ -8412,8 +8412,8 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
        :modal-strength full-affirmative)
    (s7/ sentence
 	   :temporal (s6n :after s7h)
-	   :modal ((AUTH :full-affirmative s7h)
-			   (AUTH :full-affirmative s7p)
+	   :modal ((author :full-affirmative s7h)
+			   (author :full-affirmative s7p)
 			   (s7p :Unsp s7e))
 	   :coref ((s6p :same-entity s7p)
 			   (s2b :same-event s7e)))
@@ -8471,7 +8471,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Associated motion | Semantic category | **3-1-3-4** |
 | *Atelic Process* | Aspectual semantic category, aspect annotation value | 3-3-1, 3-3-1-3, **3-3-1-4** |
 | Attribute | Category of UMR objects | 2-1, 2-2-4, **2-2-5**, 3-1-3-3, 3-1-6, 3-2-1-3, 3-2-2-3, **3-3**, 3-3-1, 3-3-2, 3-3-3, 3-3-4, 3-3-5, 3-3-6 |
-| *Author/AUTH* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6 |
+| *Author/author* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6 |
 | Auxiliary | Strategy | **3-1-3-3** |
 | Balinese | Language | 3-2-1 |
 | Before | Temporal annotation value | 1, 4-2, **4-2-2-1** |
