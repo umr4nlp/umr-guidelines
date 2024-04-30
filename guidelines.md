@@ -6817,7 +6817,7 @@ parent.
 
 `:before`: child is before parent.
 
-`:overlap`: child and parent overlap (either partially or fully).
+`:overlap`: child and parent overlap (but one is not fully contained in the other).
 
 The goal of this temporal annotation scheme is to give each event the most
 precise temporal location possible. We also want to avoid adding annotations
