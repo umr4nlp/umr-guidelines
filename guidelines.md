@@ -746,7 +746,7 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 			:mod (c/ country
 				:wiki "Paraguay"
 				:name (n/ name :op1 "Paraguay"))))
-	:frequency (r/ rate-entity
+	:frequency (r/ rate-entity-91
 		:ARG1 1
 		:ARG2 (t/ temporal-quantity
 			:quant 1
