@@ -5273,10 +5273,15 @@ judge in annotation. This aspect lattice is shown below.
 
 ![Aspect lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Aspect%20Lattice_2022.png)
 
+Additional values have been added later in the [working spreadsheet](https://docs.google.com/spreadsheets/d/1PVxgXW3ED3OWLieie9scr6iq_xuQ5RAA8YJKwbLwJ2E/edit?gid=536620417#gid=536620417)
+but they are not yet reflected in the lattice above.
+
 Below are the aspect values with a brief definition.
 
 * ```habitual```: occurs/occurred usually or habitually
+* ```generic```: the event iterates over an entire class of participants (happens in general) (new value)
 * ```imperfective```: ambiguous between state and atelic process
+  * ```inceptive```: an activity or state begins (new value)
 * ```process```: unspecified type of process
 * ```atelic-process```: process that does not reach a result state
 * ```perfective```: process that comes to an end
