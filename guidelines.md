@@ -5,7 +5,7 @@
 
 -AUTHORS-
 
-**<span id="toc" label="toc">Table of Contents</span>**  
+**<span id="toc" label="toc">Table of Contents</span>**
 
 * Part 1. [Introduction: What is UMR and what does UMR annotation look like?](#part-1-introduction-what-is-UMR-and-what-does-UMR-annotation-look-like)
 * Part 2. [From AMR to UMR](#part-2-from-amr-to-umr)
@@ -22,9 +22,9 @@
       	* Part 3-1-1-1. [Processes in predication](#part-3-1-1-1-processes-in-predication)
       	* Part 3-1-1-2. [Processes in modification and reference](#part-3-1-1-2-processes-in-modification-and-reference)
       	* Part 3-1-1-3. [States and entities](#part-3-1-1-3-states-and-entities)
-      	* Part 3-1-1-4. [Implicit events](#part-3-1-1-4-implicit-events) 	
-      * Part 3-1-2. [Named entities](#part-3-1-2-named-entities)  
-      * Part 3-1-3. [Concept-word mismatches](#part-3-1-3-concept-word-mismatches) 
+      	* Part 3-1-1-4. [Implicit events](#part-3-1-1-4-implicit-events)
+      * Part 3-1-2. [Named entities](#part-3-1-2-named-entities)
+      * Part 3-1-3. [Concept-word mismatches](#part-3-1-3-concept-word-mismatches)
          * Part 3-1-3-1. [Predicate and argument as one word](#part-3-1-3-1-predicate-and-argument-as-one-word)
          * Part 3-1-3-2. [Valency-changing operations](#part-3-1-3-2-Valency-changing-operations)
          * Part 3-1-3-3. [TAM categories](#Part-3-1-3-3-TAM-categories)
@@ -33,13 +33,13 @@
          * Part 3-1-3-6. [Non-verbal clauses](#Part-3-1-3-6-Non-verbal-clauses)
          * Part 3-1-3-7. [Multi-word concepts](#part-3-1-3-7-Multi-word-concepts)
          * Part 3-1-3-8. [Miscellaneous constructions](#part-3-1-3-8-Micellaneous-constructions)
-         
+
       * Part 3-1-4. [Word senses](#part-3-1-4-word-senses)
       * Part 3-1-5. [Scope for quantification and negation](#part-3-1-5-scope-for-quantification-and-negation)
       * Part 3-1-6. [Discourse relations](#part-3-1-6-discourse-relations)
-    * Part 3-2. [UMR relations](#part-3-2-umr-relations) 
+    * Part 3-2. [UMR relations](#part-3-2-umr-relations)
       * Part 3-2-1. [Participant roles](#part-3-2-1-participant-roles)
-      	* Part 3-2-1-1. [Stage 0](#part-3-2-1-1-stage-0) 
+      	* Part 3-2-1-1. [Stage 0](#part-3-2-1-1-stage-0)
       		* Part 3-2-1-1-1. [Non-verbal clauses](#part-3-2-1-1-1-non-verbal-clauses)
       		* Part 3-2-1-1-2. [Valency alternations](#part-3-2-1-1-2-valency-alternations)
       	* Part 3-2-1-2. [Stage 1](#part-3-2-1-2-stage-1)
@@ -53,18 +53,18 @@
      	* Part 3-2-2-4. [Named entities](#part-3-2-2-4-named-entities)
      	* Part 3-2-2-5. [Quantification](#part-3-2-2-5-quantification)
      	* Part 3-2-2-6. [Other relations](#part-3-2-2-6-other-relations)
-    * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes) 
-      * Part 3-3-1. [Aspect](#part-3-3-1-Aspect) 
+    * Part 3-3. [UMR attributes](#part-3-3-UMR-attributes)
+      * Part 3-3-1. [Aspect](#part-3-3-1-Aspect)
       	* Part 3-3-1-1. [Event nominals](#part-3-3-1-1-event-nominals)
       	* Part 3-3-1-2. [Habitual](#part-3-3-1-2-habitual)
       	* Part 3-3-1-3. [State](#part-3-3-1-3-state)
       	* Part 3-3-1-4. [Activity](#part-3-3-1-4-activity)
-      	* Part 3-3-1-5. [Endeavor and Performance](#part-3-3-1-5-endeavor-and-performance) 
+      	* Part 3-3-1-5. [Endeavor and Performance](#part-3-3-1-5-endeavor-and-performance)
       * Part 3-3-2. [Mode](#part-3-3-2-mode)
       * Part 3-3-3. [Polarity](#part-3-3-3-polarity)
       * Part 3-3-4. [Quant](#part-3-3-4-quant)
       * Part 3-3-5. [Ref](#part-3-3-5-ref)
-      * Part 3-3-6. [Degree](#part-3-3-6-degree)    
+      * Part 3-3-6. [Degree](#part-3-3-6-degree)
 * Part 4. [Document-Level Representation](#part-4-document-level-representation)
     * Part 4-1. [Coreference](#part-4-1-coreference)
     	* Part 4-1-1. [Entity coreference](#part-4-1-1-entity-coreference)
@@ -78,22 +78,22 @@
     		* Part 4-2-2-1. [Choosing the right temporal relation](#part-4-2-2-1-choosing-the-right-temporal-relation)
     		* Part 4-2-2-2. [Contained or Overlap](#part-4-2-2-2-contained-or-overlap)
     		* Part 4-2-2-3. [Causally-related events](#part-4-2-2-3-causally-related-events)
-    		* Part 4-2-2-4. [Deontic modal events](#part-4-2-2-4-deontic-modal-events)  
-    * Part 4-3. [Modal dependency](#part-4-3-modal-dependency) 
-    	* Part 4-3-1. [Stage 0](#part-4-3-1-stage-0) 
-    		* Part 4-3-1-1. [modstr values](#part-4-3-1-1-modstr-values)
+    		* Part 4-2-2-4. [Deontic modal events](#part-4-2-2-4-deontic-modal-events)
+    * Part 4-3. [Modal dependency](#part-4-3-modal-dependency)
+    	* Part 4-3-1. [Stage 0](#part-4-3-1-stage-0)
+    		* Part 4-3-1-1. [modal-strength values](#part-4-3-1-1-modal-strength-values)
     			* Part 4-3-1-1-1. [Non-future events](#part-4-3-1-1-1-non-future-events)
     			* Part 4-3-1-1-2. [Evidential justification](#part-4-3-1-1-2-evidential-justification)
     			* Part 4-3-1-1-3. [Future events and deontic modality](#part-4-3-1-1-3-future-events-and-deontic-modality)
-    		* Part 4-3-1-2. [modpred relation](#part-4-3-1-2-modpred-relation)
-    		* Part 4-3-1-3. [quot relation](#part-4-3-1-3-quot-relation)
+    		* Part 4-3-1-2. [modal-predicate relation](#part-4-3-1-2-modal-predicate-relation)
+    		* Part 4-3-1-3. [quote relation](#part-4-3-1-3-quote-relation)
     		* Part 4-3-1-4. [purpose relation](#part-4-3-1-4-purpose-relation)
     		* Part 4-3-1-5. [condition relation](#part-4-3-1-5-condition-relation)
     		* Part 4-3-1-6. [Modal dependency structure](#part-4-3-1-6-modal-dependency-structure)
-    	* Part 4-3-2. [English modals](#part-4-3-2-english-modals)  
+    	* Part 4-3-2. [English modals](#part-4-3-2-english-modals)
 
 * Part 5. [Annotation Cheat Sheet](#part-5-annotation-cheat-sheet)
-    
+
 * Part 6. [Integrated examples](#part-6-integrated-examples)
 
 * Part 7. [Alphabetical Index of UMR Annotation Categories](#part-7-alphabetical-index-of-UMR-annotation-categories)
@@ -102,8 +102,8 @@
 ##  Part 1. Introduction: What is UMR and what does UMR annotation look like?
 
 The **Uniform Meaning Representation** (UMR) project aims to design a meaning representation that facilitates
-the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted 
-from **Abstract Meaning Representation** (AMR), which focuses on **predicate-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document as in <a href="#1 (1)">(1)</a> - <a href="#1 (9)">(9)</a>, and then describe in more detail each component of UMR in the next few sections. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations. 
+the computational interpretation of a text. UMR combines a **sentence-level** representation that is adapted
+from **Abstract Meaning Representation** (AMR), which focuses on **predicate-argument structures**, **word senses**, **named entities**, **multi-word expressions**, **aspect**, and **quantification**, and a document-level representation that focuses on **coreference**, **temporal** and **modal** relations. We illustrate this representation with a short English document as in <a href="#1 (1)">(1)</a> - <a href="#1 (9)">(9)</a>, and then describe in more detail each component of UMR in the next few sections. UMR is intended to be a cross-lingual annotation framework with a shared set of **abstract** concepts and relations.
 
 Operationally, for both sentence-level and document-level annotation, we assume an annotation procedure in which a document is processed sentence by sentence. The sentence-level representation is annotated first, so that the document-level annotation can make reference to the concepts in the sentence-level representation.
 
@@ -121,18 +121,18 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
         :range (m/ more-than
                 :op1 (t3/ temporal-quantity :quant 8
                     :unit (m2/ month))))
-  :aspect Performance
-  :modstr FullAff)
-                    
-(s1/ sentence
-    :temporal((DCT :depends-on s1t2)
-	      (s1t2 :contained s1t))
-    :modal(AUTH :FullAff s1t))
-        
-```
-The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *DCT*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the DCT of the document. In this sense, we say that *today* depends on DCT, hence the relation between them is *:depends-on*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-2-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _:contained_ in *today*.
+  :aspect performance
+  :modal-strength full-affirmative)
 
-The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *AUTH*. Like DCT, AUTH is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:FullAff* label.
+(s1/ sentence
+    :temporal((document-creation-time :depends-on s1t2)
+	      (s1t2 :contained s1t))
+    :modal(author :full-affirmative s1t))
+
+```
+The document-level representation includes a list of **temporal and modal dependencies**, as well as a list of **coreference relations**. In this first sentence, the first temporal relation is between *document-creation-time*, a constant that refers to the time when the document is created, and *today*, a concept that can only be correctly interpreted if we know the document-creation-time of the document. In this sense, we say that *today* depends on document-creation-time, hence the relation between them is *:depends-on*. We will define the set of temporal relations used in UMR in [Part 4-2-2](#part-4-2-2-temporal-relations).  The second temporal relation is between *today* and *taste-01*, and we say here *taste-01* happened sometime *today* and therefore is _:contained_ in *today*.
+
+The document-level representation also includes a list of modal dependencies. There is only one modal relation in this sentence, and it is between *taste-01* and *author*. Like document-creation-time, author is also a constant - it refers to the author of this text as a *conceiver*, or in other words, as the *source* of the modal judgment of certainty about the *taste-01* event, which is indicated by the *:full-affirmative* label.
 
 <span id="1 (2)">1 (2)</span>
 ```
@@ -149,11 +149,11 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      :ARG1 b
 	      :ARG2 (s/ spy-02
 	         :ARG0 b
-		 :modpred c2))
+		 :modal-predicate c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
-	   :aspect Performance
-	   :modstr FullAff)
+	   :aspect performance
+	   :modal-strength full-affirmative)
 	:ARG1-of (s2/ sentence-01
 	   :ARG2 (p2/ prison
 	      :mod (c3/ country :wiki "Russia"
@@ -162,50 +162,50 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	         :quant 20
 		 :unit (y/ year)))
 	   :ARG3 s
-	   :aspect Performance
-	   :modstr FullAff)
-     :aspect State
-     :modstr FullAff)
- 
+	   :aspect performance
+	   :modal-strength full-affirmative)
+     :aspect state
+     :modal-strength full-affirmative)
+
 (s2/ sentence
-    :temporal((DCT :depends-on s2w)
+    :temporal((document-creation-time :depends-on s2w)
     	      (s2w :contained s2c)
 	      (s2w :contained s2s2)
 	      (s2c :before s2s))
-    :modal((AUTH :FullAff s2i)
-      	   (AUTH :FullAff s2c)
-	   (AUTH :FullAff NULL_CHARGER)
-	   (NULL_CHARGER :FullAff s2c)
+    :modal((author :full-affirmative s2i)
+      	   (author :full-affirmative s2c)
+	   (author :full-affirmative NULL_CHARGER)
+	   (NULL_CHARGER :full-affirmative s2c)
 	   (s2c :Unsp s2s)
     :coref(s1p :same-entity s2p))
 ```
 <!-- should annotate coreference for nominals? if so we need to annotate "the american businessman" (the question is really whether it needs to be in the doc graph in addition to the identity-91 predicate in the sent graph)-->
 
 For this sentence, the temporal relations represent the fact that the *conviction* event and the *sentence* event both
-happened *last week*, which itself depends on the DCT for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
+happened *last week*, which itself depends on the document-creation-time for its temporal interpretation, and that the *sentence* event happened after the *conviction*. The modal dependencies indicate that from the author's perspective, the *conviction* event and the
 *sentence* event definitely happened, and that *Pope* is certainly *the American businessman*. It introduces a *NULL_CHARGER* conceiver to indicate that the authority that charged Pope (which is not explicit in the text) presents the *spying* event as a certainty. The coreference annotation specifies that *Pope* in sentence 2 and *Edmund Pope* in sentence 1 are the same entity.
 
 <span id="1 (3)">1 (3)</span>
 ```
 Snt3: He denied any wrongdoing.
-(d/ deny-01 
+(d/ deny-01
       :ARG0 (p/person
-         :ref-person 3rd
-	 :ref-number Singular)
+         :refer-person 3rd
+	 :refer-number singular)
       :ARG1 (t/ thing
             :ARG1-of (d2/ do-02
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
-		  :modpred d))
-      :aspect Performance
-      :modstr FullAff)
-  
+		  :modal-predicate d))
+      :aspect performance
+      :modal-strength full-affirmative)
+
 (s3/ sentence
-    :temporal((DCT :before s3d)
+    :temporal((document-creation-time :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :FullAff s3d)
-    	   (AUTH :FullAff s3p)
-           (s3p :FullNeg s3d2)
+    :modal((author :full-affirmative s3d)
+    	   (author :full-affirmative s3p)
+           (s3p :full-negative s3d2)
 	   (s3d :Unsp s3d2))
     :coref(s2p :same-entity s3p))
 
@@ -215,7 +215,7 @@ For this sentence, the coreference annotation indicates that *he* is the same pe
 
 The temporal annotation indicates that Pope's denial took place before document creation time, and that any *wrongdoing* would have happened before this denial. When annotating temporal relations, we always need to pick a *reference time* with respect to which the temporal relation between the reference time and the event can be determined. In this case, it is not clear whether the *deny* event happened before or after the *conviction* and *sentence* events, so the reference time is determined to be the document creation time.
 
-The modal relations indicate that the *deny* event definitely happened according to the author. The author presents themselves as having certainty about Pope's mental state at the time of the denial (annotated as a :FullAff relation from AUTH to *Pope*), and the :FullNeg relation indicates that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
+The modal relations indicate that the *deny* event definitely happened according to the author. The author presents themselves as having certainty about Pope's mental state at the time of the denial (annotated as a :full-affirmative relation from author to *Pope*), and the :full-negative relation indicates that *wrongdoing* did not happen according to Edmund Pope, based on the author's account.
 
 <span id="1 (4)">1 (4)</span>
 ```
@@ -228,17 +228,17 @@ Snt4: Russian President Vladimir Putin pardoned him for health reasons.
                         :name (n2/ name :op1 "Russia"))
                   :ARG3 (p3/ president)))
       :ARG1 (p4/ person
-      	    :ref-person 3rd
-	    :ref-number Singular)
+      	    :refer-person 3rd
+	    :refer-number singular)
       :ARG1-of (c2/ cause-01
             :ARG0 (r/ reason
                   :mod (h2/ health)))
-      :aspect Performance
-      :modstr FullAff)
+      :aspect performance
+      :modal-strength full-affirmative)
 
 (s4/ sentence
     :temporal(s2s2 :after s4p)
-    :modal (AUTH :FullAff s4p)
+    :modal (author :full-affirmative s4p)
     :coref(s3p :same-entity s4p4))
 ```
 
@@ -247,7 +247,7 @@ In the document-level representation for this sentence, the person that is pardo
 <span id="1 (5)">1 (5)</span>
 ```
 Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
- 
+
 (f/ fly-01
       :ARG1 (p/ person :wiki "Edmond_Pope"
             :name (n/ name :op1 "Pope"))
@@ -259,16 +259,16 @@ Snt5: Pope was flown to the U.S. military base at Ramstein, Germany.
                   :name (n3/ name :op1 "Ramstein")
                   :place (c3/ country :wiki "Germany"
                         :name (n4/ name :op1 "Germany"))))
-      :aspect Performance
-      :modstr FullAff)
+      :aspect performance
+      :modal-strength full-affirmative)
 
 (s5/ sentence
     :temporal(s4p :after s5f)
-    :modal(AUTH :FullAff s5f)
+    :modal(author :full-affirmative s5f)
     :coref(s4p4 :same-entity s5p))
 ```
 In the document-level annotation of this sentence, *pardon-01* from <a href="#1 (4)">(4)</a> is chosen as the
-reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is certain that the *fly-01* 
+reference time of the *fly-01* event, and it happened before the *fly-01* event. The author is certain that the *fly-01*
 event happened, and *Pope* in this sentence is the same person as *him* in the previous one.
 
 <span id="1 (6)">1 (6)</span>
@@ -277,8 +277,8 @@ Snt6: He will spend the next several days at the medical center there before he 
 
 (s/ spend-02
       :ARG0 (p/ person
-         :ref-person 3rd
-	 :ref-number Singular)
+         :refer-person 3rd
+	 :refer-number singular)
       :ARG1 (t/ temporal-quantity
          :quant (s2/ several)
 	 :unit (d/ day
@@ -292,23 +292,23 @@ Snt6: He will spend the next several days at the medical center there before he 
 	       :ARG1-of (h2/ have-role-91
 	          :ARG2 p
 		  :ARG3 (w/ wife)))
-	    :aspect Performance
-	    :modstr FullAff))
+	    :aspect performance
+	    :modal-strength full-affirmative))
       :place (c/ center
           :mod (m/ medical)
 	  :place (t2/ there))
-      :aspect State
-      :modstr FullAff)
+      :aspect state
+      :modal-strength full-affirmative)
 
 (s6/ sentence
-  :temporal((DCT :after s6s)
+  :temporal((document-creation-time :after s6s)
             (s6s :after s6r))
-  :modal((AUTH :FullAff s6s)
-         (AUTH :FullAff s6r))
+  :modal((author :full-affirmative s6s)
+         (author :full-affirmative s6r))
   :coref((s5p :same-entity s6p)
          (s5b :same-entity s6t2))
 ```
-In the temporal annotation of this sentence, the DCT is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the DCT, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in <a href="#1 (5)">(5)</a>, and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence. 
+In the temporal annotation of this sentence, the document-creation-time is chosen as the reference time for *spend-02*, which is in turn the reference time for *return-01* - *spending time at the medical center* will happen after the document-creation-time, and *returning home* will happen later still. In the modality annotation, both *spend-02* and and *return-01* are presented by the author as certainly happening - or at least as certain as one can be about future events. In the coreference annotation, *he* is considered to be the same as the *person* whose name is Pope in <a href="#1 (5)">(5)</a>, and *there* is the same location as the town of *Ramstein, Germany* in the preceding sentence.
 
 <span id="1 (7)">1 (7)</span>
  ```
@@ -325,16 +325,16 @@ Snt7: Pope was in remission from a rare form of bone cancer when he was arrested
                    :ARG1 p
                    :place (c/ country :wiki "Russia"
                          :name (n3/ name :op1 "Russia")))
-		   :aspect Performance
-		   :modstr FullAff)
-	:aspect State
-	:modstr FullAff)
+		   :aspect performance
+		   :modal-strength full-affirmative)
+	:aspect state
+	:modal-strength full-affirmative)
 
 (s7/ sentence
   :temporal((s2c :before s7a)
             (s7a :overlap s7h))
-  :modal ((AUTH :FullAff s7h)
-         (AUTH :FullAff s7a))
+  :modal ((author :full-affirmative s7h)
+         (author :full-affirmative s7a))
   :coref (s6p :same-entity s7p))
 ```
 For <a href="#1 (7)">(7)</a>, the state of being in *remission-02* held simultaneously with the *arrest-01* event, and the *arrest-01* event happended before the *convict-01* event from sentence 2. According to the author, both *arrest-01* and *be in remission* happened. Once again, *Pope* is the same entity as *he* in the previous sentence.
@@ -345,10 +345,10 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 
  (e/ examine-01
        :ARG0 (d/ doctor
-          :ref-number Plural)
+          :refer-number plural)
        :ARG1 (p/ person
-          :ref-person 3rd
-	  :ref-number Singular)
+          :refer-person 3rd
+	  :refer-number singular)
        :ARG2 (s/ signal-07
           :ARG1 (c/ come-01
 	     :ARG1 (d2/ disease :wiki "Cancer"
@@ -358,29 +358,29 @@ Snt8: Doctors will examine him for signs that the cancer may have come back whil
 	        :ARG1 p
 		:ARG2 (t/ try-02
 		   :ARG1 p
-		   :aspect Process)
+		   :aspect process)
 		:place (j/ jail
 		   :mod (c2/ country :wiki "Russia
 		      :name (n2/ name :op1 "Russia")))
-		:aspect State
-		:modstr FullAff)
-	     :aspect Performance
-	     :modstr NeutAff)
+		:aspect state
+		:modal-strength full-affirmative)
+	     :aspect performance
+	     :modal-strength neutral-affirmative)
 	  :ARG2 d)
-	:aspect Endeavor
-	:modstr FullAff)
-  
+	:aspect endeavor
+	:modal-strength full-affirmative)
+
 (s8/ sentence
-  :temporal((DCT :after s8e)
+  :temporal((document-creation-time :after s8e)
   	    (s2c :before s8a)
 	    (s8a :overlap s8c))
-  :modal ((AUTH :FullAff s8e)
-          (AUTH :NeutAff s8c)
-          (AUTH :FullAff s8a))
-  :coref(s7p :same-entity s8p)) 
+  :modal ((author :full-affirmative s8e)
+          (author :neutral-affirmative s8c)
+          (author :full-affirmative s8a))
+  :coref(s7p :same-entity s8p))
 ```
 
-The *examine-01* event will happen after the DCT. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *NeutAff* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
+The *examine-01* event will happen after the document-creation-time. The *await-01* event happened before the *conviction* event mentioned earlier in the text, and the potential return of the cancer temporally overlaps with this *await-01* event. According to the author, the *examine-01* event will certainly happen, and the *await-01* event certainly happened as well. The author is uncertain about whether the cancer has come back, indicated with a *neutral-affirmative* epistemic strength link. *He* is annotated as being the same person as Edmund Pope.
 
 <span id="1 (9)">1 (9)</span>
 ```
@@ -389,7 +389,7 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
       :ARG0 (p/ person
             :ARG1-of (h/ have-org-role-92
                   :ARG3 (s2/ spokeswoman))
-	    :ref-number Singular)
+	    :refer-number singular)
       :ARG1 (s3/ suffer-01
             :ARG0 (p2/ person :wiki "Edmond_Pope"
 	          :name (n/ name :op1 "Pope"))
@@ -400,20 +400,20 @@ Snt9:  A spokeswoman said that Pope was suffering from malnutrition and high blo
                         :ARG1 (b/ blood
 			   :part p2)
                         :ARG1-of (h2/ high-02)))
-	    :aspect State
-	    :modstr FullAff)
-      :aspect Performance
-      :modstr FullAff)
-      
+	    :aspect state
+	    :modal-strength full-affirmative)
+      :aspect performance
+      :modal-strength full-affirmative)
+
 (s9/ sentence
- :temporal ((DCT :before s9s)
+ :temporal ((document-creation-time :before s9s)
             (s9s :overlap s9s3))
- :modal ((AUTH :AFF s9s)
-         (AUTH :AFF s9p)
+ :modal ((author :AFF s9s)
+         (author :AFF s9p)
 	 (s9p :AFF s9s3))
  :coref (s8p :same-entity s9p2))
  ```
-The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson. Once again, coreference is indicated between different mentions of *Pope*.  
+The document-level representation indicates the *say-01* event happened before Document Creation Time, and that the *suffer-01* event overlaps temporally with the *say-01* event. The modality annotation indicates that from the author's perspective, the *say-01* event definitely happened, and the author indicates that the *suffer-01* event happened according to the spokesperson. Once again, coreference is indicated between different mentions of *Pope*.
 
 [Back to Table of Contents](#toc)
 
@@ -421,7 +421,7 @@ The document-level representation indicates the *say-01* event happened before D
 
 ### Part 2-1. Introduction
 
-UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph, as in <a href="#2 (1)">(1)</a>. The nodes of this graph are UMR concepts, while edges represent UMR relations. 
+UMR inherits the sentence-level representation of AMR, with modifications. Like AMR, the sentence-level representation of UMR is a single-rooted, directed, node- and edge-labeled graph, as in <a href="#2 (1)">(1)</a>. The nodes of this graph are UMR concepts, while edges represent UMR relations.
 
 <span id="2 (1)">2 (1)</span>
 ```
@@ -437,15 +437,15 @@ Snt1: Edmund Pope tasted freedom today for the first time in more than eight mon
         :range (m/ more-than
                 :op1 (t3/ temporal-quantity :quant 8
                     :unit (m2/ month))))
-  :aspect Performance
-  :modstr FullAff)
+  :aspect performance
+  :modal-strength full-affirmative)
 ```
 
 **UMR concepts:** There are a number of ways that UMR concepts are created based on the input sentence:
 
 * Lemmas: Some UMR concepts are simply lemmas. For example, `today` in the example above is a lemma, which happens to have the same form as the word token itself.
 * Word senses: When definitions of word senses are available for a language in the form of a lexicon, a concept can also be a sense-disambiguated word. For instance, `taste-01` in the example above refers to the first sense of the word *taste* in the English PropBank.
-* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when 
+* Concepts formed out of multi-word expressions: `more-than` is a concept that is formed by concatenating multiple words in a sentence. Exactly when
 mulit-word concepts should be formed will be determined on a language-by-language basis.
 * Named entity types. Named entities in a sentence are annotated with a named entity type concept (e.g., `person`) and a `name` concept. The actual names are annotated as a constant (`Edmund` and `Pope`).
 * Abstract concepts. In some cases a concept can be inferred from the context. In this case, the concept does not correspond to any particular word in the sentence, hence it is an *abstract* concept (e.g. `ordinal-entity`).
@@ -458,19 +458,23 @@ mulit-word concepts should be formed will be determined on a language-by-languag
 **UMR attributes:** UMR currently has seven attribute types:
 
 * Aspect: Aspect is annotated for eventive concepts only (see
-[Part 3-1-1](#part-3-1-1-eventive-concepts) on event identification). Possible Aspect values at the default level of granularity include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1](#part-3-3-1-aspect). 
+[Part 3-1-1](#part-3-1-1-eventive-concepts) on event identification). Possible Aspect values at the default level of granularity include `Activity`, `Habitual`, `State`, `Endeavor`, `Performance`. A complete list of aspect values with explanations and examples can be found in [Part 3-3-1](#part-3-3-1-aspect).
 * Polarity: Polarity is only annotated for negative polarity as indicated by a negation marker or an affix indicating negation (see [Part 3-3-3](#part-3-3-3-polarity)).
 * Mode: The mode attribute is typically for the main predicate of a sentence. Its values include `imperative`, `expressive`, and `interrogative` (see [Part 3-3-2](#part-3-3-2-mode)).
 * Quantity: The value of a `:quant` attribute is a numerical number (see [Part 3-3-4](#part-3-3-4-quant)).
 * Value: The value of a `:value` attribute is a numerical number (see [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations)).
 * Degree: The value of a `:degree` attribute is either `intensifier`, `downtoner`, or `equal` (see [Part 3-3-6](#part-3-3-6-degree)).
-* Reference: The value of a `:ref-person` or `:ref-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`) or a number feature (e.g. `Singular`, `Dual`, `Paucal`, `Plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
+* Reference: The value of a `:refer-person` or `:refer-number` attribute is a either a person feature (e.g. `1st`, `2nd`, `3rd`, `4th`) or a number feature (e.g. `singular`, `dual`, `paucal`, `plural`) used to represent reference. These features are used to represent pronouns, verbal cross-referencing, implicit arguments, and overt nominal number (see [Part 3-3-5](#part-3-3-5-ref)).
 
 **UMR modal values:** UMR currently has three modal relations that are annotated at the sentence level, even though the final modal dependency structure functions at the document level:
 
-* Modstr: Indicates the epistemic strength relation (degree of confidence/certainty) between a conceiver and an event or between a conceiver and an embedded conceiver.
-* Modpred: Indicates the relation between a modal complement-taking predicate and its complement
-* Quot: Indicates the relation between a speech predicate and its complement
+* `:modal-strength`: Indicates the epistemic strength relation (degree of
+confidence/certainty) between a conceiver and an event or between a conceiver
+and an embedded conceiver.
+* `:modal-predicate`: Indicates the relation between a modal
+complement-taking predicate and its complement.
+* `:quote`: Indicates the relation between a reported event and the speech
+predicate.
 
 **Differences between AMR and UMR**
 
@@ -484,21 +488,21 @@ UMR differs from AMR in a number of ways:
 
 ```
 (p/ possible-01
-   :ARG0 (g/ go-01  
+   :ARG0 (g/ go-01
             :ARG0 (b/ boy
-	       :ref-number Singular)))
+	       :refer-number singular)))
 ```
 <span id="2 (2b)">2 (2b)</span>
 ```
-(g/ go-01  
+(g/ go-01
     :ARG0 (b/ boy
-    	:ref-number Singular)
-    :aspect State
-    :modstr NeutAff)
+    	:refer-number singular)
+    :aspect state
+    :modal-strength neutral-affirmative)
 
 (s0/sentence
-  :modal (AUTH :NEUT s0g))
-  
+  :modal (author :NEUT s0g))
+
 ```
 
 * UMR adds a *scope* concept to represent the relative scope of quantifiers and negations. See [Part-3-1-5](#part-3-1-5-scope-for-quantification-and-negation) for details.
@@ -557,7 +561,7 @@ Roleset id: taste.01, use one's tastebuds, active perception of flavor.
 Roles:
 	ARG0: taster
 	ARG1: food
-	
+
 Roleset id: taste.02, possess a flavor.
 Roles
 	ARG1: thing with flavor
@@ -586,14 +590,14 @@ ap-hle-am-ke'		nenhlet
 
 (e/ enhleama-00 'travel'
 	:actor (n/ nenhlet 'person'
-		:ref-number Singular)
-	:aspect Endeavor
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 (t/ travel-01
 	:ARG0 (m/ man
-		:ref-number Singular)
-	:aspect Endeavor
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
 
 The basic, AMR-inspired graph structures for simple sentences in
@@ -605,7 +609,7 @@ one just has the citation form of the *travel*-verb with a `-00` suffix.
 In both cases, the semantic argument 'person/man' is a daughter of this
 predicate, linked with a participant role edge. In English, this is a
 numbered participant role taken from this same PropBank frame file,
-while in Sanapaná it is a predicate-general participant role. In both languages, the participant has a :ref-number Singular attribute.
+while in Sanapaná it is a predicate-general participant role. In both languages, the participant has a :refer-number singular attribute.
 
 AMR and UMR concepts are underspecified for morphosyntactic
 representation: the same concept (for example, `travel-01`) can be used
@@ -618,16 +622,16 @@ content in different parts of speech.
 I heard about his travels.
 (h/ hear-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (t/ travel-01
 		:ARG0 (p2/ person
-			:ref-person 3rd
-			:ref-number Singular)
-		:aspect Process
-		:modstr FullAff)
-	:aspect State
-	:modstr FullAff)
+			:refer-person 3rd
+			:refer-number singular)
+		:aspect process
+		:modal-strength full-affirmative)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
 
@@ -657,9 +661,9 @@ apk-el-vongk-es-akp-e'		tayep	ayko<'o>k
 'The children were rescued.'
 (e/ elvongkeskama-tayep-00 'rescue'
 	:undergoer (a/ ayko'ok 'child'
-		:ref-number Plural)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number plural)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
 
@@ -688,11 +692,11 @@ an-yetn-eye'		ko'o	vakka-hak	ah-angkok
 'I have a book.' lit. 'My book exists.'
 (h/ have-91
 	:ARG1 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG2 (v/ vakkahak 'book')
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 Secondly, abstract concept conventions are inherited from AMR in a
@@ -712,8 +716,8 @@ five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 'They would preserve it for five or six months.'
 (e/ enta'mehlkeskama-00 'preserve'
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:undergoer (t/ thing)
 	:duration (o/ or
 		:op1 (t2/ temporal-quantity
@@ -722,8 +726,8 @@ five	six	months	2/3M-DSTR-be.good-CAUS-TI-NOM
 		:op2 (t3/ temporal-quantity
 			:quant 6
 			:unit (m/ mes 'month')))
-	:aspect Habitual
-	:modstr FullAff)
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
 <span id="2-2-3 (2b)">2-2-3 (2b)</span>
 ```
@@ -732,8 +736,8 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 'For the agricultural school, we would pay six million (guaranies) per year.'
 (e/ enyanmongkeskama-00 'pay'
 	:actor (p/ person
-		:ref-person 1st
-		:ref-number Plural)
+		:refer-person 1st
+		:refer-number plural)
 	:recipient (e2/ escuela 'school'
 		:mod (a/ agrícola 'agricultural'))
 	:theme (m/ monetary-quantity
@@ -742,13 +746,13 @@ school	agricultural	six	million	each	year	1PL.IRR-exchange-CAUS-FUT
 			:mod (c/ country
 				:wiki "Paraguay"
 				:name (n/ name :op1 "Paraguay"))))
-	:frequency (r/ rate-entity
+	:frequency (r/ rate-entity-91
 		:ARG1 1
 		:ARG2 (t/ temporal-quantity
 			:quant 1
 			:unit (a2/ año 'year)))
-	:aspect Habitual
-	:modstr FullAff)
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
 <span id="2-2-3 (2c)">2-2-3 (2c)</span>
 ```
@@ -762,12 +766,12 @@ apk-el-v-ayk-akh-a'		Venancio	el-eyv-om-akha'		mil		novecientos	sesenta	y	seis=a
 	:goal (p3/ place
 		:Place-of (e2/ eleyvoma-00 'live'
 			:actor (p4/ person
-				:ref-person 1st
-				:ref-number Plural)))
+				:refer-person 1st
+				:refer-number plural)))
 	:temporal (d/ date-entity
 		:year 1966)
-	:aspect Performance
-	:modstr NeutAff)
+	:aspect performance
+	:modal-strength neutral-affirmative)
 ```
 [Back to Table of Contents](#toc)
 
@@ -828,7 +832,7 @@ comparability. This means that even less conventionalized measure terms,
 like English *cup* or *bag*, are annotated as modifiers, even though
 they look like morphosyntactic heads. This is illustrated in <a href="#2-2-5 (1)">(1)</a>. The use of the `:polarity` value is constrained to the sentence level.
 Propositional negation is annotated in the modal section of the document
-level annotation and through `:modstr` relations. The `:polarity` value is used to indicate any overt
+level annotation and through `:modal-strength` relations. The `:polarity` value is used to indicate any overt
 morphosyntactic exponents of negation at the sentence level, flagging
 such concepts as interesting for the modal or scope negation. This
 includes e.g. morphologically negated adjectives like _unhappy_, even though in the
@@ -843,7 +847,7 @@ Three bottles of water
 ```
 
 UMR introduces four new attributes: `:aspect` (see [Part 3-3-1](#part-3-3-1-Aspect)), `:degree` (see [Part 3-3-6](#part-3-3-6-degree)), and
-`:ref-person` and `:ref-number` (see [Part 3-3-5](#part-3-3-5-ref)).
+`:refer-person` and `:refer-number` (see [Part 3-3-5](#part-3-3-5-ref)).
 
 [Back to Table of Contents](#toc)
 
@@ -862,8 +866,8 @@ expression “packages” the semantic content. There are three fundamental
 information packaging functions: reference, modification, and
 predication. Croft (2022)  defines them as:
 
-**reference**: what the speaker is talking about  
-**modification**: additional information provided about the referent  
+**reference**: what the speaker is talking about
+**modification**: additional information provided about the referent
 **predication**: what the speaker is asserting about the referents in a particular utterance
 
 The three semantic types can occur with any of the three fundamental
@@ -892,7 +896,7 @@ reference correspond to nouns, states in modification to adjectives, and
 processes in predication to verbs.
 
 <div id="tab:eventive_concepts">
-	
+
 |               |                   Reference                   |                    Modification                    |                  **Predication**                  |
 | :-----------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: |
 |   Entities    | UNMARKED NOUNS |                 relative clauses, PPs on nouns                  |              **predicate nominals,** **complements**             |
@@ -922,9 +926,9 @@ phenomenon under discussion will be italicized.)
 <span id="3-1-1-1 (1)">3-1-1-1 (1)</span>
 
 <span id="3-1-1-1 (1a)">(1a)</span> She
-<u>**_repaired_**</u> her bike.  
+<u>**_repaired_**</u> her bike.
 <span id="3-1-1-1 (1b)">(1b)</span> Before
-she <u>**_went_**</u> to school, she **repaired** my bike.  
+she <u>**_went_**</u> to school, she **repaired** my bike.
 
 Regardless of whether they are in an independent clause, like *repaired*
 in <a href="#3-1-1-1 (1a)">(1a)</a>, or a dependent clause, like *went* in
@@ -1058,55 +1062,55 @@ non-verbal clause predicates, see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-cl
 
 <div id="tab:nonverbalpreds">
 
-<table>  
-<tr>  
-<th>Clause type</th>  
-<th>UMR Predicate</th>  
+<table>
+<tr>
+<th>Clause type</th>
+<th>UMR Predicate</th>
 <th>If Phrasal</th>
-</tr>  
-<tr>  
-<td>thetic/presentational possession</td>  
+</tr>
+<tr>
+<td>thetic/presentational possession</td>
 <td>have-91</td>
 <td>:poss</td>
-</tr>  
-<tr>  
-<td>predicative possession</td>  
-<td>belong-91</td>  
+</tr>
+<tr>
+<td>predicative possession</td>
+<td>belong-91</td>
 <td>:poss</td>
-</tr>  
-<tr>  
-<td>thetic/presentational location</td>  
-<td>exist-91</td>  
+</tr>
+<tr>
+<td>thetic/presentational location</td>
+<td>exist-91</td>
 <td>:place</td>
-</tr>  
-<tr>  
-<td>predicative location</td>  
-<td>have-place-91</td>   
+</tr>
+<tr>
+<td>predicative location</td>
+<td>have-place-91</td>
 <td>:place</td>
-</tr>  
-<tr>  
-<td>property predication</td>  
-<td>have-mod-91</td>   
+</tr>
+<tr>
+<td>property predication</td>
+<td>have-mod-91</td>
 <td>:mod</td>
-</tr>  
-<tr>  
-<td rowspan="3">object predication</td>  
-<td>have-role-91</td> 
+</tr>
+<tr>
+<td rowspan="3">object predication</td>
 <td>have-role-91</td>
-</tr>  
-<tr>  
-<td>have-rel-role-92</td>  
+<td>have-role-91</td>
+</tr>
+<tr>
 <td>have-rel-role-92</td>
-</tr>  
-<tr>  
-<td>have-org-role-92</td>  
+<td>have-rel-role-92</td>
+</tr>
+<tr>
 <td>have-org-role-92</td>
-</tr>  
-<tr>  
-<td>object equation</td>  
+<td>have-org-role-92</td>
+</tr>
+<tr>
+<td>object equation</td>
 <td>identity-91</td>
-<td>identity-91</td>  
-</tr>  
+<td>identity-91</td>
+</tr>
 </table>
 
 
@@ -1212,8 +1216,8 @@ general event possible should be identified.
 [Back to Table of Contents](#toc)
 
  #### Part 3-1-2. Named entities
- 
-Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example <a href="#3-1-2 (1)">(1)</a> has a `nationality` entity and a `person` entity. 
+
+Following AMR, each named entity in a text is annotated with a type. However, the vocabuary of the named entity types are adapted from AMR so that they reflect the characterization of additional languages and thus made uniform across languages. Example <a href="#3-1-2 (1)">(1)</a> has a `nationality` entity and a `person` entity.
 
 <span id="3-1-2 (1)">3-1-2 (1)</span> Edmond Pope is an American businessman.
 ```
@@ -1223,9 +1227,9 @@ Following AMR, each named entity in a text is annotated with a type. However, th
       :ARG3 (b/ businessman
       	    :mod (n2/ nationality :wiki "United_States"
 	          :name (n3/ name :op1 "America")))
-      :aspect State
-      :modstr FullAff)         
-```        
+      :aspect state
+      :modal-strength full-affirmative)
+```
 The total set of entity types are hierarchically organized, as listed in Table 5 below.
 
 
@@ -1235,7 +1239,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 
 
 <div id="tab:named_entity_types">
-	
+
 | Class            |Type                |Subtype           |
 |------------------|--------------------|------------------|
 | animal           |                    |                  |
@@ -1243,7 +1247,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 | language         |                    |                  |
 | nationality      |                    |                  |
 | person           |                    |                  |
-| social_group     | family              |                  | 
+| social_group     | family              |                  |
 |                  | ethnic-group        |                  |
 |                  | regional-group      |                  |
 |                  | religious-group     |                  |
@@ -1257,7 +1261,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 | vehicle          |  ship, aircraft, aircraft-type, spaceship, car-make | |
 | cultural-artifact | work-of-art |
 |                    |picture      |
-|                    |music        | 
+|                    |music        |
 |                    |literature   |
 |                    |dance        |
 |                    | show        |
@@ -1265,7 +1269,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 |                    |publication  |book, newspaper, magazine, journal |
 |cultural-activity   |             |       |
 | event              | incident,  natural-disaster, earthquake, war, conference, game, festival, ceremony | |
-| law                | court-decision, treaty | | 
+| law                | court-decision, treaty | |
 | award              |  |   |
 | food-dish          |  |   |
 |notational-system   |writing-script, music-key, musical-note |
@@ -1275,7 +1279,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 
 </div>
 
-<!-- 
+<!--
 <div id="tab:named_entity_types">
 
 |Type   |  Subtype (AMR NE Type) |
@@ -1285,7 +1289,7 @@ The total set of entity types are hierarchically organized, as listed in Table 5
 | *Geographic-entity*   | ocean, sea, lake, river, gulf, bay, strait, canal, peninsula, mountain, volcano, valley, canyon, island, desert, forest|
 |  *Celestial-body*     |moon, planet, star, constellation|
 | *region*              | local-region, country-region, world-region|
-|  *GPE*     |city, city-district, county, state, province, territory, country| 
+|  *GPE*     |city, city-district, county, state, province, territory, country|
 |  *facility*| airport, station, port, tunnel, bridge, road, railway-line, canal, building, theater, museum, palace, hotel, worship-place, market, sports-facility, park, zoo, amusement-park|
 |  *event*   |  incident, natural-disaster, earthquake, war, conference, game, festival|
 |  *product* |vehicle, ship, aircraft, aircraft-type, spaceship, car-make, work-of-art, picture, music, show, broadcast-program|
@@ -1301,7 +1305,7 @@ Table 5: Named entity types
 [Back to Table of Contents](#toc)
 
  #### Part 3-1-3. Concept-word mismatches
- 
+
 Cross-linguistically, concepts are not always mapped onto words in the
 same way. Many low-resource languages are morphologically more complex
 than languages like English, and they often express in a single word
@@ -1323,7 +1327,7 @@ not straightforward.
 In languages that make use of verbal argument indexation (i.e.
 pronominal affixes on the verb to cross-reference semantic arguments) or
 noun incorporation, predicates and their arguments can be expressed
-together in a single word. Both issues are illustrated in 
+together in a single word. Both issues are illustrated in
 <a href="#3-1-3-1 (1)">(1)</a> from Arapaho. Here, what is
 expressed as a multi-word sentence in the English translation takes the
 form of a single Arapaho word. The pronominal suffix *-o'* indicates
@@ -1340,15 +1344,15 @@ PST-break/remove.stick.like-head-by.blade.CAUS-1SG/3SG
 'I cut his head off with a knife.'
 (t/ teb-e'ei-s ‘break/remove.stick.like’
     :actor (p/ person
-    	:ref-person 1st
-	:ref-number Singular)
+    	:refer-person 1st
+	:refer-number singular)
     :undergoer (p2/ person
-    	:ref-person 3rd
-	:ref-number Singular)
+    	:refer-person 3rd
+	:refer-number singular)
     :theme (t2/ thing
-    	:ref-person Obviative)
-    :aspect Performance
-    :modstr FullAff)
+    	:refer-person Obviative)
+    :aspect performance
+    :modal-strength full-affirmative)
 ```
 
 When languages use verbal affixes to index arguments, these arguments
@@ -1398,29 +1402,29 @@ an incorporated noun to co-occur with an independent NP as criterial. This treat
 
 <div id="tab:noun_incorporation">
 
-<table>  
-<tr>  
-<th>Construction type</th>  
-<th>Construction definition/diagnostic</th>  
-<th>UMR Treatment</th>  
-</tr>  
-<tr>  
-<td rowspan="2">Pronominal affixes </td>  
-<td rowspan="2"> Verbal affixes expressing person/number values of arguments</td>  
-<td>If coreferential with overtly expressed nominal argument: don't annotate</td>  
-</tr>  
-<tr> 
-<td>If no overt nominal is present: annotate as argument with relevant named-entity concept</td>  
-</tr> 
-<td>Incorporated nouns</td>  
-<td>No nominal expression coreferential with the incorporated noun can occur in the clause</td> 
-<td>Annotate separate concept for incorporated noun as argument</td>   
-</tr>  
-<tr>  
-<td>Verbal classifier</td>  
-<td>Nominal expression specifying type of object denoted by incorporated noun can occur in the clause</td>  
-<td>Do not annotate separate concept for incorporated noun</td>  
-</tr> 
+<table>
+<tr>
+<th>Construction type</th>
+<th>Construction definition/diagnostic</th>
+<th>UMR Treatment</th>
+</tr>
+<tr>
+<td rowspan="2">Pronominal affixes </td>
+<td rowspan="2"> Verbal affixes expressing person/number values of arguments</td>
+<td>If coreferential with overtly expressed nominal argument: don't annotate</td>
+</tr>
+<tr>
+<td>If no overt nominal is present: annotate as argument with relevant named-entity concept</td>
+</tr>
+<td>Incorporated nouns</td>
+<td>No nominal expression coreferential with the incorporated noun can occur in the clause</td>
+<td>Annotate separate concept for incorporated noun as argument</td>
+</tr>
+<tr>
+<td>Verbal classifier</td>
+<td>Nominal expression specifying type of object denoted by incorporated noun can occur in the clause</td>
+<td>Do not annotate separate concept for incorporated noun</td>
+</tr>
 </table>
 
 Table 6: Treatment of pronominal affixes and noun incorporation
@@ -1445,7 +1449,7 @@ caused event are construed as independent predicates. Therefore, a
 "cause"-event is identified in addition to the "drink"-event expressed
 by the verb root.
 
-<span id="3-1-3-2 (1)">3-1-3-2 (1)</span> 
+<span id="3-1-3-2 (1)">3-1-3-2 (1)</span>
 
 <span id="3-1-3-2 (1a)">3-1-3-2 (1a)</span> Grandmother made the kid drink the water.
 ```
@@ -1454,14 +1458,14 @@ by the verb root.
     	:actor (p/ person
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
-	    :ref-number Singular)
-    	:aspect Performance
-	:modstr FullAff)
+	    :refer-number singular)
+    	:aspect performance
+	:modal-strength full-affirmative)
     :actor (k2/ kid
-    	:ref-number Singular)
+    	:refer-number singular)
     :undergoer (w/ water)
-    :aspect Performance
-    :modstr FullAff)
+    :aspect performance
+    :modal-strength full-affirmative)
 ```
 <span id="3-1-3-2 (1b)">3-1-3-2 (1b)</span> Grandmother did not make the kid drink the water.
 ```
@@ -1470,14 +1474,14 @@ by the verb root.
     	:actor (p/ person
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
-	    :ref-number Singular)
-    	:aspect Performance
-	:modstr FullNeg)
+	    :refer-number singular)
+    	:aspect performance
+	:modal-strength full-negative)
     :actor (k2/ kid
-    	:ref-number Singular)
+    	:refer-number singular)
     :undergoer (w/ water)
-    :aspect Performance
-    :modstr NeutAff)
+    :aspect performance
+    :modal-strength neutral-affirmative)
 ```
 
 <span id="3-1-3-2 (1c)">3-1-3-2 (1c)</span> Grandmother made the kid not drink the water.
@@ -1487,14 +1491,14 @@ by the verb root.
     	:actor (p/ person
 	    :ARG1-of (h/ have-rel-role-92
 		 :ARG3 (g/ grandmother))
-	    :ref-number Singular)
-    	:aspect Performance
-	:modstr FullAff)
+	    :refer-number singular)
+    	:aspect performance
+	:modal-strength full-affirmative)
     :actor (k2/ kid
-    	:ref-number Singular)
+    	:refer-number singular)
     :undergoer (w/ water)
-    :aspect Performance
-    :modstr FullNeg)
+    :aspect performance
+    :modal-strength full-negative)
 ```
 
 Kukama (Tupían), on the other hand, has a morphological causative, as in
@@ -1505,7 +1509,7 @@ both, indicating that this form is construed in Kukama as denoting a
 single event. Therefore, only a single predicate is identified
 (corresponding to the whole verb stem *kuratata* 'make drink').
 
-<span id="3-1-3-2 (2)">3-1-3-2 (2)</span> 
+<span id="3-1-3-2 (2)">3-1-3-2 (2)</span>
 ```
 nai		kurata-ta	churan=ui	uni-pu
 grandmother	drink-CAUS	kid=PST		water-INST
@@ -1514,11 +1518,11 @@ grandmother	drink-CAUS	kid=PST		water-INST
     :causer (p/ person
     	:ARG1-of (h/ have-rel-role-92
 		:ARG3 (n/ nai 'grandmother'))
-	:ref-number Singular)
+	:refer-number singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
-    :aspect Performance
-    :modstr FullAff)
+    :aspect performance
+    :modal-strength full-affirmative)
 ```
 
 This criterion will be used for all valency change concepts: if the
@@ -1531,7 +1535,7 @@ associated with the verb. Which valency changes lead to which argument
 structures is detailed in [Part 3-2-1-2-1](#part-3-2-1-2-1-valency-alternations).
 
 <div id="tab:valency_changes">
-	
+
 | **IF** | **THEN** |
 | :---------------------------------------------------------------------- |:------------------------------------------------|
 | Event and valency-changing category can be negated independently | Identify and annotate them as separate events |
@@ -1560,7 +1564,7 @@ two different words (example from Bhat 1999). Nevertheless, in both the English 
 UMR, only one event is identified (corresponding to concept of property
 predication, in this case).
 
-<span id="3-1-3-3 (1)">3-1-3-3 (1)</span> 
+<span id="3-1-3-3 (1)">3-1-3-3 (1)</span>
 ```
 ce	əsi	mu-re
 paper	this	black-change
@@ -1569,7 +1573,7 @@ paper	this	black-change
     :ARG1 (c/ ce 'paper')			    :ARG1 (p/ paper)
     	:mod (s/ əsi 'this')			        :mod (t/ this)
     :ARG2 (m/ mu 'black')			    :ARG2 (b/ black)
-    :aspect Performance)			    :aspect Performance)
+    :aspect performance)			    :aspect performance)
 ```
 
 Similarly, modal and temporal auxiliaries will not be identified
@@ -1589,35 +1593,35 @@ independently of the "go"-event, indicating that desires are construed
 as independent events in English. The UMR therefore has predicates for
 both *want* and *go*.
 
-<span id="3-1-3-3 (2)">3-1-3-3 (2)</span> 
+<span id="3-1-3-3 (2)">3-1-3-3 (2)</span>
 
 <span id="3-1-3-3 (2a)">3-1-3-3 (2a)</span> She wants to go to school.
 ```
 (w/ want-01
     :ARG0 (p/ person
-    	:ref-person 3rd
-	:ref-number Singular)
+    	:refer-person 3rd
+	:refer-number singular)
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
-        :aspect Performance
-	:modpred w)
-    :aspect State
-    :modstr FullAff)
+        :aspect performance
+	:modal-predicate w)
+    :aspect state
+    :modal-strength full-affirmative)
 ```
 <span id="3-1-3-3 (2b)">3-1-3-3 (2b)</span> She may want to go to school.
 ```
 (w/ want-01
     :ARG0 (p/ person
-    	:ref-person 3rd
-	:ref-number Singular)
+    	:refer-person 3rd
+	:refer-number singular)
     :ARG1 (g/ go-01
     	:ARG1 p
         :ARG4 (s/ school)
-        :aspect Performance
-	:modpred w)
-    :aspect State
-    :modstr NeutAff)
+        :aspect performance
+	:modal-predicate w)
+    :aspect state
+    :modal-strength neutral-affirmative)
 ```
 
 However, if in a language the desire-event cannot be modalized
@@ -1650,26 +1654,26 @@ better analyzed as a circumstantial locative belonging to the
 motion event. The motion event itself therefore has no independent
 argument structure, and only one event is identified for UMR annotation.
 
-<span id="3-1-3-4 (1)">3-1-3-4 (1)</span> 
+<span id="3-1-3-4 (1)">3-1-3-4 (1)</span>
 ```
 en-na'-ten-ek-ant-a'		La	Esperanza
 1PL-DSTR-sleep-TI-VNT-NOM	La	Esperanza
 'We slept in La Esperanza while coming here'
 (e/ enna'tenekanta' 'sleep while coming'		(s/ sleep-01
     :undergoer (p/ person				    :ARG0 (p/ person
-    	:ref-person 1st						:ref-person 1st
-	:ref-number Plural)					:ref-number Plural)	    
+    	:refer-person 1st						:refer-person 1st
+	:refer-number plural)					:refer-number plural)
     :place (c/ city					    :place (c/ city
     	:name (n/ name					        :name (n/ name
             :op1 "La"						    :op1 "La"
             :op2 "Esperanza"))				    	    :op2 "Esperanza"))
-    :aspect State					    :temporal (c2/ come-01
-    :modstr FullAff)					        :ARG1 p
+    :aspect state					    :temporal (c2/ come-01
+    :modal-strength full-affirmative)					        :ARG1 p
     								:ARG4 (h/ here)
-                                                        	:aspect Activity
-                                                        	:modstr FullAff)
-                                                    	    :aspect State
-                                                   	    :modstr FullAff)
+                                                        	:aspect activity
+                                                        	:modal-strength full-affirmative)
+                                                    	    :aspect state
+                                                   	    :modal-strength full-affirmative)
 ```
 
 The English "venitive" construction in the translational equivalent of
@@ -1681,35 +1685,35 @@ events, and are annotated in UMR as two separate predicates.
 [Back to Table of Contents](#toc)
 
 ##### Part 3-1-3-5. Light verb constructions
-A light verb construction takes the canonical form of a verb followed by an eventive noun, and the verb has little meaning while the nound 
-carries most of the semantic content. An example is in <a href="#3-1-3-5 (1)">(1)</a>, where ``do'' is a light verb and most of the semantic content comes from 
-``interview''. In this case the UMR concept ``interview-01'' is created based on the eventive noun, while the verb is simply dropped. Note however 
+A light verb construction takes the canonical form of a verb followed by an eventive noun, and the verb has little meaning while the nound
+carries most of the semantic content. An example is in <a href="#3-1-3-5 (1)">(1)</a>, where ``do'' is a light verb and most of the semantic content comes from
+``interview''. In this case the UMR concept ``interview-01'' is created based on the eventive noun, while the verb is simply dropped. Note however
 the verb may contribute to the aspectual attribute of the concept.
 
 <span id="3-1-3-5 (1)">3-1-3-5 (1)</span>  Where do you get this information from that Obama uses tax payer money to do interviews and bus trips?
 
 ```
 (g / get-01
-      :aspect Performance
-      :ARG0 (p / person 
-                :ref-number Singular
-		:ref-person 2nd)
+      :aspect performance
+      :ARG0 (p / person
+                :refer-number singular
+		:refer-person 2nd)
       :ARG1 (i / information
             :mod (t / this)
             :topic (u / use-01
-	          :aspect Habitual
+	          :aspect habitual
                   :ARG0 (p2 / person :name (n / name :op1 "Obama"))
                   :ARG1 (m / money
                         :source (p3 / person
                               :ARG0-of (p4 / pay-01
-			            :aspect Process
+			            :aspect process
                                     :ARG1 (t2 / tax-01))))
                   :ARG2 (a2 / and
                         :op1 (i2 / interview-01
-			      :aspect Habitual
+			      :aspect habitual
                               :ARG1 p2)
                         :op2 (t4 / trip-03
-			      :aspect Habitual
+			      :aspect habitual
                               :ARG0 p2
                               :medium (b / bus)))))
       :ARG2 (a / umr-unknown))
@@ -1729,18 +1733,24 @@ serious problems to the predicate-argument structure of UMR - one could
 simply identify the "have" or "be"-verb as a predicate, and the NPs in
 the clause as its arguments.
 
-In the Kukama object predication construction in
-<a href="#3-1-3-6 (1)">(1)</a>, however, the predicate does not map to
-an overt word: object predication is expressed through juxtaposition of
-two NPs, with the predicational meaning implicit but inherent in the
-construction. In the Kukama thetic possession construction in <a href="#3-1-3-6 (2)">(2)</a>, on the other hand, the possessum
-and the relation of possession are expressed together as a single word
-which functions as a predicate: something that is typically thought of
-as an "argument" is predicativized. In languages that use the construction type exemplified in <a href="#3-1-3-6 (2)">(2)</a>, there is only one of the participants that can act as the predicate cross-linguistically. For example, in languages that use a <a href="#3-1-3-6 (2)">(2)</a>-type strategy for object predication, it is always the object category participant and never the theme participant that morphosyntactically looks like a predicate. Both these structures pose problems
-for the annotation of predicate-argument structure, since there is no
-separate material that can be identified as a predicate.
+In the Kukama object predication construction in <a href="#3-1-3-6
+(1)">(1)</a>, however, the predicate does not map to an overt word: object
+predication is expressed through juxtaposition of two NPs, with the
+predicational meaning implicit but inherent in the construction. In the
+Kukama thetic possession construction in <a href="#3-1-3-6 (2)">(2)</a>, on
+the other hand, the possessum and the relation of possession are expressed
+together as a single word which functions as a predicate: something that is
+typically thought of as an "argument" is predicativized. In languages that
+use the construction type exemplified in <a href="#3-1-3-6 (2)">(2)</a>,
+there is only one of the participants that can act as the predicate
+cross-linguistically. For example, in languages that use a <a href="#3-1-3-6
+(2)">(2)</a>-type strategy for object predication, it is always the object
+category participant and never the theme participant that morphosyntactically
+looks like a predicate. Both these structures pose problems for the
+annotation of predicate-argument structure, since there is no separate
+material that can be identified as a predicate.
 
-<span id="3-1-3-6 (1)">3-1-3-6 (1)</span> 
+<span id="3-1-3-6 (1)">3-1-3-6 (1)</span>
 ```
 ajan	kunumi		tsumi
 this	young.man	shaman
@@ -1749,14 +1759,14 @@ this	young.man	shaman
 (h/ have-role-91						(h/ have-role-91
     :ARG1 (k/ kunumi 'young man'				    :ARG1 (m/ man
     	:mod (a/ ajan 'this')						:mod (y/ young)
-	:ref-number Singular)						:mod (t/ this)						
-    :ARG3 (t/ tsumi 'shaman')						:ref-number Singular)	
-    :aspect State						    :ARG3 (s/ shaman)
-    :modstr FullAff)						    :aspect State
-    								    :modstr Aff)
+	:refer-number singular)						:mod (t/ this)
+    :ARG3 (t/ tsumi 'shaman')						:refer-number singular)
+    :aspect state						    :ARG3 (s/ shaman)
+    :modal-strength full-affirmative)						    :aspect state
+    								    :modal-strength full-affirmative)
 ```
 
-<span id="3-1-3-6 (2)">3-1-3-6 (2)</span> 
+<span id="3-1-3-6 (2)">3-1-3-6 (2)</span>
 ```
 Mijiri-tin	ɨara-yara
 Miguel-CER	canoe-owner
@@ -1765,10 +1775,10 @@ Miguel-CER	canoe-owner
 (h/ have-91							(h/ have-91
     :ARG1 (p/ person						    :ARG1 (p/ person
     	:name (n/ name :op1 "Mijiri")					:name (n/ name :op1 "Miguel")
-	:ref-number Singular)					    	:ref-number Singular)
+	:refer-number singular)					    	:refer-number singular)
     :ARG2 (a/ ɨarayara 'canoe')					    :ARG2 (c/ canoe)
-    :aspect State						    :aspect State
-    :modstr FullAff)						    :modstr FullAff)
+    :aspect state						    :aspect state
+    :modal-strength full-affirmative)						    :modal-strength full-affirmative)
 ```
 
 We propose a set of seven abstract concept predicates each corresponding
@@ -1787,95 +1797,95 @@ whether a language uses an overt-predicate strategy, a zero-predicate
 
 <div id="tab:nonverbal_arguments">
 
-<table>  
-<tr>  
-<th>Clause Type</th>  
-<th>Predicate</th>  
-<th>ARG1</th>  
-<th>ARG2</th>  
-<th>ARG3</th>  
-<th>ARG4</th>  
-<th>ARG5</th>  
-</tr>  
-<tr>  
-<td>Thetic Possession</td>  
-<td>have-91</td>  
-<td>possessor</td>  
-<td>possessum</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Predicative Possession</td>  
-<td>belong-91</td>  
-<td>possessum</td>  
-<td>possessor</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Thetic Location</td>  
-<td>exist-91</td>  
-<td>location</td>  
-<td>theme </td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr> 
-<tr>  
-<td>Predicative Location</td>  
-<td>have-place-91</td>  
-<td>theme</td>  
-<td>location</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Property Predication</td>  
-<td>have-mod-91</td>  
-<td>theme</td>  
-<td>property</td>  
-<td>--- </td>  
-<td>---</td>  
-<td>---</td>  
-</tr> 
-<tr>  
-<td rowspan="3">Object Predication</td>  
-<td>have-role-91</td>  
-<td>theme</td>  
-<td>reference point</td>  
-<td>object category, arg1</td>  
-<td>object category, arg2</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>have-org-role-92</td>  
-<td>theme</td>  
-<td>organization</td>  
-<td>title of role</td>  
-<td>job description</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>have-rel-role-92</td>  
-<td>theme</td>  
-<td>relative</td>  
-<td>theme's role</td>  
-<td>relative's role</td>  
-<td>relationship basis</td>  
-</tr>  
-<tr>  
-<td>Equational</td>  
-<td>identity-91</td>  
-<td>theme</td>  
-<td>equated referent</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
+<table>
+<tr>
+<th>Clause Type</th>
+<th>Predicate</th>
+<th>ARG1</th>
+<th>ARG2</th>
+<th>ARG3</th>
+<th>ARG4</th>
+<th>ARG5</th>
+</tr>
+<tr>
+<td>Thetic Possession</td>
+<td>have-91</td>
+<td>possessor</td>
+<td>possessum</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Predicative Possession</td>
+<td>belong-91</td>
+<td>possessum</td>
+<td>possessor</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Thetic Location</td>
+<td>exist-91</td>
+<td>location</td>
+<td>theme </td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Predicative Location</td>
+<td>have-place-91</td>
+<td>theme</td>
+<td>location</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Property Predication</td>
+<td>have-mod-91</td>
+<td>theme</td>
+<td>property</td>
+<td>--- </td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td rowspan="3">Object Predication</td>
+<td>have-role-91</td>
+<td>theme</td>
+<td>reference point</td>
+<td>object category, arg1</td>
+<td>object category, arg2</td>
+<td>---</td>
+</tr>
+<tr>
+<td>have-org-role-92</td>
+<td>theme</td>
+<td>organization</td>
+<td>title of role</td>
+<td>job description</td>
+<td>---</td>
+</tr>
+<tr>
+<td>have-rel-role-92</td>
+<td>theme</td>
+<td>relative</td>
+<td>theme's role</td>
+<td>relative's role</td>
+<td>relationship basis</td>
+</tr>
+<tr>
+<td>Equational</td>
+<td>identity-91</td>
+<td>theme</td>
+<td>equated referent</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
 </table>
 
 Table 8: Argument structure of non-verbal clause predicates
@@ -1896,51 +1906,51 @@ concatenating the lemmatized words, as in <a href="#3-1-3-7 (1)">(1)</a>. In <a 
       :ARG1 (a/ and
             :op1 (s/ steep-01
                   :ARG0 (p/ person
-		        :ref-person 1st
-			:ref-number Singular)
+		        :refer-person 1st
+			:refer-number singular)
                   :ARG1 (t/ thing
-		        :ref-number Singular)
+		        :refer-number singular)
                   :ARG2 (w/ water
                         :ARG1-of (h/ hot-05))
-		  :aspect Habitual
-		  :modstr FullAff)
+		  :aspect habitual
+		  :modal-strength full-affirmative)
             :op2 (a2/ and
                   :op1 (t2/ take-out-11
                         :ARG0 p
                         :ARG1 t
-			:aspect Habitual
-			:modstr FullAff)
+			:aspect habitual
+			:modal-strength full-affirmative)
                   :op2 (s2/ stir-01
                         :ARG0 p
                         :ARG1 t
-			:aspect Habitual
-			:modstr FullAff)
+			:aspect habitual
+			:modal-strength full-affirmative)
                   :op3 (f/ fry-01
                         :ARG0 p
                         :ARG1 t
-			:aspect Habitual
-			:modstr FullAff)
+			:aspect habitual
+			:modal-strength full-affirmative)
                   :temporal (t3/ then)))
       :ARG1-of (n/ normal-02))
 ```
 
-Multi-word concepts are not limited phrasal verbs like ``take out''. They also include idiomatic expressions like ``jump on the bandwagon'', as in 
+Multi-word concepts are not limited phrasal verbs like ``take out''. They also include idiomatic expressions like ``jump on the bandwagon'', as in
 <a href="#3-1-3-7 (1b)">(1b)</a>:
 
 <span id="3-1-3-7 (1b)">3-1-3-7 (1b)</span>  Pretty soon the far left loons will jump on his wagon.
 ```
 (j / jump-on-bandwagon-09
-      :aspect Performance
+      :aspect performance
       :ARG0 (l / loon
             :ARG1-of (l2 / left-19
                   :degree (f / far)))
       :ARG1 (p / person
-               :ref-person 3rd
-	       :ref-number Singular)
+               :refer-person 3rd
+	       :refer-number singular)
       :time (s / soon
             :mod (p / pretty)))
 ```
-Note that these muli-word concepts are predicates and have their own arguments. Other multi-word concepts are not predicates and are simply concatenation of 
+Note that these muli-word concepts are predicates and have their own arguments. Other multi-word concepts are not predicates and are simply concatenation of
 single words, as in <a href="#3-1-3-7 (1c)">(1c)</a>, where the multi-word concept is *as-well*, which maps to two words.
 
 <span id="3-1-3-7 (1c)">3-1-3-7 (1c)</span> The moral aspects of the movement intrigued him as well
@@ -1949,13 +1959,13 @@ single words, as in <a href="#3-1-3-7 (1c)">(1c)</a>, where the multi-word conce
       :ARG0 (a/ aspect
             :ARG1-of (m/ moral-02)
             :poss (m2/ movement-07)
-	    :ref-number Plural)
+	    :refer-number plural)
       :ARG1 (p/ person
-            :ref-person 3rd
-	    :ref-number Singular)
+            :refer-person 3rd
+	    :refer-number singular)
       :mod (a2/ as-well)
-      :aspect State
-      :modstr FullAff)
+      :aspect state
+      :modal-strength full-affirmative)
 ```
 
 
@@ -1973,8 +1983,8 @@ In languages like Chinese where there are no natural word boundaries in written 
             :arg0  (x16 / 办法
                   :mod  (x17 / 这))
             :arg1  x11)
-      :aspect Performance
-      :modstr FullAff)
+      :aspect performance
+      :modal-strength full-affirmative)
 ```
 
 Multi-word concepts are also relevant for idiomatic expressions that are segmented into multiple words but mapped single concepts.
@@ -1983,8 +1993,8 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
 ```
 (x0 / 抛在脑后-01
       :arg0  (x2 / individual-person
-                 :ref-person 1st
-		 :ref-number Singular)
+                 :refer-person 1st
+		 :refer-number singular)
       :arg1  (x3 / and
             :op1  (x4 / 锤子)
             :op2  (x5 / 螺钉)
@@ -1992,11 +2002,11 @@ Multi-word concepts are also relevant for idiomatic expressions that are segment
             :op4  (x7 / 死亡))
       :manner  (x11 / 全-01)
       :manner  (x12 / 都)
-      :aspect Performance)
+      :aspect performance)
 ```
 
 ##### Part 3-1-3-8. Miscellaneous constructions
-Other than multi-word concepts, languages often have regular or irregular constructions that involve mapping multipe words to single concepts. We adopt the general approach of AMR, which is to propose a set of abstract predicates each of which has their semantic roles to annotate such constructions. <a href="#3-1-3-8 (1)">(1)</a> is such an example, where the abstract concept ``correlate-91'' is proposed to annotate the ``the X-er, the Y-er`` construction. 
+Other than multi-word concepts, languages often have regular or irregular constructions that involve mapping multipe words to single concepts. We adopt the general approach of AMR, which is to propose a set of abstract predicates each of which has their semantic roles to annotate such constructions. <a href="#3-1-3-8 (1)">(1)</a> is such an example, where the abstract concept ``correlate-91'' is proposed to annotate the ``the X-er, the Y-er`` construction.
 <!--which concepts are languages-specific, and which are uniform? -->
 
 
@@ -2004,16 +2014,16 @@ Other than multi-word concepts, languages often have regular or irregular constr
 
 ```
  (c2 / correlate-91
-       :aspect Habitual
+       :aspect habitual
        :ARG1 (m / more
                   :frequency-of (r / read-01
                         :ARG0 (p / person
-			         :ref-person  1st
-				 :ref-number Singular)
+			         :refer-person  1st
+				 :refer-number singular)
                         :ARG1 (s2 / stuff
                               :poss (p2 / person
-			                :ref-person 2nd
-					:ref-number Singular))))
+			                :refer-person 2nd
+					:refer-number singular))))
         :ARG2 (m2 / more
                   :ARG3-of (h3 / have-degree-91
                         :ARG1 0
@@ -2029,17 +2039,17 @@ Other than multi-word concepts, languages often have regular or irregular constr
 
 [Back to Table of Contents](#toc)
 #### Part 3-1-4. Word senses
- 
+
  UMR allows concepts to be word senses. In order to annotate word senses, it is necessary to first have a sense inventory for all words that need to be sense-disambiguated. For languages that do not have a sense inventory, concepts can simply be represented by lemmas. For predicate concepts which the annotator wants to flag for later inclusion in a lexicon, the suffix -00 can be added to such lemmas. It is also possible that a language only has a sense inventory for a subset of the words. This is the case with English <a href="#3-1-4 (1)">(1)</a> and Chinese <a href="#3-1-4 (2)">(2)</a>, where word senses are defined for predicates together with their arguments in *frame files*.
 
 <span id="3-1-4 (1)">3-1-4 (1)</span> The school has approximately 570 pupils.
-``` 
+```
 (h/ have-91
       :ARG1 (s/ school)
       :ARG2 (p/ pupil
             :quant (a/ approximately :op1 570))
-      :aspect State
-      :modstr FullAff)
+      :aspect state
+      :modal-strength full-affirmative)
 ```
 
 <span id="3-1-4 (2)">3-1-4 (2)</span>
@@ -2053,10 +2063,10 @@ There will even be many VIPs!
                    :mod (x4/ 高层)
                    :quant (x5/ 很多))
             :mode Expressive
-	    :aspect State
-	    :modstr FullAff))
+	    :aspect state
+	    :modal-strength full-affirmative))
 ```
- 
+
 
 
  [Back to Table of Contents](#toc)
@@ -2087,7 +2097,7 @@ Related to scope is the issue of distributive vs. collective interpretations of 
 <span id="3-1-5 (2a)">3-1-5 (2a)</span> Each man loves a woman.
 
 However, many cases that are technically ambiguous nevertheless have a strong default reading stemming from the lexical semantics of the predicate and its arguments. For example, in <a href="#3-1-5 (3a)">(3a)</a>, there is a strong default interpretation that every single student ran 5 kilometers rather than that they ran a total of 5 kilometers between them - _run_ is typically an individual activity, so its lexical semantics trigger a default distributive reading. However, in <a href="#3-1-5 (3b)">(3b)</a>, the equally strong default interpretation is that the students carried a single piano together and there was only a single carrying-event - our world knowledge specifies that things as heavy as a piano must typically be carried by multiple people, so the lexical semantics of the predicate-argument combination here trigger a default collective reading. In yet another set of cases, our "default" feeling is that it does not really matter in what configurations the participants participate in the denoted events. In <a href="#3-1-5 (3c)">(3c)</a>, all that typically matters is that 6 states were hit by at least one hurricane each, and that there was a total of 10 hurricanes. We can't really know how many hurricanes hit each state, and we don't really care - all we know is that 6 states and 10 hurricanes were involved. This kind of default interpretation is called a summation reading.
-					
+
 <span id="3-1-5 (3)">3-1-5 (3)</span>
 
 <span id="3-1-5 (3a)">3-1-5 (3a)</span> The linguistics students ran 5 kilometers to raise money for charity.
@@ -2114,7 +2124,13 @@ When multiple events are expressed in a complex sentence, a variety of semantic 
 
 ![Discourse Lattice_2022](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Discourse%20Lattice_May2022.png)
 
-Annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination (although, as mentioned before, subordination constructions may allow for the identification of more fine-grained meanings). In the examples below, both options are illustrated wherever possible.
+Annotators may choose annotation values from more fine-grained levels of the lattice when they are confident in doing so, or from more course-grained levels when they are in doubt. Note however that for some nodes in the lattice, there are currently no means of indicating them in the annotation.
+
+- The most fine-grained level of the lattice contains values that are expressed as relations (roles) between two event concept nodes: `:apprehensive`, `:purpose`, `:manner`, `:cause`, `:condition`, `:temporal`, `:pure-addition`, `:substitute`, `:concession`, `:concessive-condition`, `:subtraction`.
+- Some of the more coarse-grained values can be expressed as abstract concept nodes (rolesets), the connected events appear as their `:ARG1` and `:ARG2` roles: `but-91`, `unexpected-co-occurrence-91`, `contrast-91`. There is also the abstract concept `and`, which is not a roleset because the connected events are not `:ARG1` and `:ARG2` but just `:op1`, `:op2` etc. (there can be any number of child nodes, their order does not matter and their roles are not diversified).
+- The remaining values cannot be expressed with the current inventory of abstract concepts and relations: and+unexpected, and+contrast, and+but, Exclusive Disjunctive, Inclusive Disjunctive, Disjunctive, Discourse Relations (the root).
+
+Generally, (adverbial) subordination constructions express overtly more fine-grained values. Many of these are already treated in other parts of UMR (particularly through participant roles), in which case cross-references will lead annotators to the relevant sections of this document. Coordination constructions tend to be more polysemous – they subsume various more fine-grained values and may be ambiguous between them, and they might therefore require the use of higher-level categories. This description already hints at the observation that many of the event-event relations on this lattice can be expressed through either coordination or subordination. We follow Talmy (1978), Reinhart (1984), and Wierzbicka (1980) in taking this difference not to be a semantic one, but rather an information-structural one between a “complex figure” construal (both events are equally “prominent”) and a “figure-ground” construal (one event is “foregrounded” and another is “backgrounded”). We therefore do not require annotators to annotate the same meaning differently when expressed through coordination as opposed to subordination (although, as mentioned before, subordination constructions may allow for the identification of more fine-grained meanings). In the examples below, both options are illustrated wherever possible.
 
 Each discourse relation on the lattice is defined below, based on Croft (2022, ch. 15, ch. 17).
 
@@ -2126,15 +2142,15 @@ I will go for a walk or play some soccer.
 (o/ or
    :op1 (w/ walk-01
    	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
-	:aspect Process
-	:modstr FullAff)
+		:refer-person 1st
+		:refer-number singular)
+	:aspect process
+	:modal-strength full-affirmative)
    :op2 (p2/ play-01
    	:ARG0 p
 	:ARG1 (s/ soccer)
-	:aspect Process
-	:modstr FullAff))
+	:aspect process
+	:modal-strength full-affirmative))
 ```
 
 There are two more fine-grained subtypes of disjunctive relations:
@@ -2153,11 +2169,11 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 (h/ have-condition-91
    :ARG1 (a/ a'vogune-00 'sleep'
    	:actor (p/ person
-		:ref-person 1st
-		:ref-number Plural)
+		:refer-person 1st
+		:refer-number plural)
 	:companion (a2/ aki' 'woman')
-	:aspect Habitual
-	:modstr FullNeg)
+	:aspect habitual
+	:modal-strength full-negative)
    :ARG2 (r/ rmisupamo-00 'go down'
    	:actor p
 	:goal (k/ kikopi' 'place'
@@ -2166,22 +2182,22 @@ pandanus	bash-PURP.1PL-NONEX	corn	husk-eat-PURP.1PL-NONEX	banana	plant-PURP.1PL-
 		:op1 (h2/ hataisupi'bave-00 'bash'
 			:actor p
 			:undergoer (m/ mnu'bo 'pandanus')
-			:aspect Performance
-			:modstr FullAff)
+			:aspect performance
+			:modal-strength full-affirmative)
 		:op2 (k2/ krodesupi'bave-00 'husk and eat'
 			:actor p
 			:undergoer (k3/ kire'bo 'corn')
-			:aspect Performance
-			:modstr FullAff)
+			:aspect performance
+			:modal-strength full-affirmative)
 		:op3 (b/ bresupi'bave-00 'plant'
 			:actor p
 			:undergoer (e/ egemo 'banana')
-			:aspect Performance
-			:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff
-   :aspect State)
-	
+			:aspect performance
+			:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative
+   :aspect state)
+
 ```
 
 <span id="3-1-6 (2b)">3-1-6 (2b)</span>
@@ -2192,17 +2208,17 @@ be.3SG-INTERR	EX	NEG-be.3SG-IND
 (e/ exclusive-disj
    :op1 (h/ have-place-91
    	:ARG1 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG2 (p2/ place)
-	:aspect State
-	:modstr NeutAff
+	:aspect state
+	:modal-strength neutral-affirmative
 	:mode Interrogative)
    :op2 (h2/ have-place-91
-   	:ARG1 p 
+   	:ARG1 p
 	:ARG2 p2
-	:aspect State
-	:modstr NeutNeg
+	:aspect state
+	:modal-strength neutral-negative
 	:polarity -
 	:mode Interrogative))
 ```
@@ -2218,20 +2234,20 @@ The exclusive disjunction relation has one further, more specific subtype:
 Grab a stick lest he attack you!
 (g/ grab-01
      :ARG0 (p/ person
-          :ref-person 2nd
-	  :ref-number Singular)
+          :refer-person 2nd
+	  :refer-number singular)
      :ARG1 (s/ stick
-          :ref-number Singular)
+          :refer-number singular)
      :apprehensive (a/ attack-01
           :ARG0 (p2/ person
-	       :ref-person 3rd
-	       :ref-number Singular)
+	       :refer-person 3rd
+	       :refer-number singular)
 	  :ARG1 p
-	  :aspect Performance
-	  :modstr FullAff)
+	  :aspect performance
+	  :modal-strength full-affirmative)
      :mode Imperative
-     :aspect Performance
-     :modstr PrtAff)
+     :aspect performance
+     :modal-strength partial-affirmative)
 ```
 
 <span id="3-1-6 (3b)">3-1-6 (3b)</span>
@@ -2239,21 +2255,21 @@ Grab a stick lest he attack you!
 Grab a stick or he will he attack you!
 (g/ grab-01					Or	(o/ or
      :ARG0 (p/ person						:op1 (g/ grab-01
-          :ref-person 2nd						:ARG0 (p/ person
-	  :ref-number Singular)							:ref-person 2nd
-     :ARG1 (s/ stick								:ref-number Singular)
-          :ref-number Singular)						:ARG1 (s/ stick
-     :apprehensive (a/ attack-01						:ref-number Singular)
+          :refer-person 2nd						:ARG0 (p/ person
+	  :refer-number singular)							:refer-person 2nd
+     :ARG1 (s/ stick								:refer-number singular)
+          :refer-number singular)						:ARG1 (s/ stick
+     :apprehensive (a/ attack-01						:refer-number singular)
           :ARG0 (p2/ person						:mode Imperative
-	       :ref-person 3rd						:aspect Performance
-	       :ref-number Singular)					:modstr PrtAff)
+	       :refer-person 3rd						:aspect performance
+	       :refer-number singular)					:modal-strength partial-affirmative)
 	  :ARG1 p						:op2 (a/ attack-01
-	  :aspect Performance						:ARG0 (p2/ person
-	  :modstr FullAff)							:ref-person 3rd
-     :mode Imperative								:ref-number Singular)
-     :aspect Performance						:ARG1 p
-     :modstr PrtAff)							:aspect Performance
-                            						:modstr FullAff))
+	  :aspect performance						:ARG0 (p2/ person
+	  :modal-strength full-affirmative)							:refer-person 3rd
+     :mode Imperative								:refer-number singular)
+     :aspect performance						:ARG1 p
+     :modal-strength partial-affirmative)							:aspect performance
+                            						:modal-strength full-affirmative))
 ```
 
 ```Additive```: expresses the addition of one “figure” (foregrounded participant or event) to another one in order to form a complex figure. This is represented in UMR through an ```additive``` abstract concept with numbered ```:opX``` roles. The additive function has a number of more fine-grained subfunctions:
@@ -2271,18 +2287,18 @@ Grab a stick or he will he attack you!
 I read a book while I listened to music. / I read a book while listening to music. / I read a book and listened to music.
 (r/ read-01				Or		(a/ and
    :ARG0 (p/ person						:op1 (r/ read-01
-   	:ref-person 1st							:ARG0 (p/ person
-	:ref-number Singular)							:ref-person 1st
-   :ARG1 (b/ book								:ref-number Singular)
-   	:ref-number Singular)						:ARG1 (b/ book
-   :temporal (listen-01								:ref-number Singular)
-   	:ARG0 p								:aspect Performance
-	:ARG1 (m/ music)						:modstr FullAff)
-	:aspect State						:op2 (l/ listen-01
-	:modstr FullAff)						:ARG0 p
-   :aspect Performance							:ARG1 (m/ music)
-   :modstr FullAff)							:aspect State
-   									:modstr FullAff))
+   	:refer-person 1st							:ARG0 (p/ person
+	:refer-number singular)							:refer-person 1st
+   :ARG1 (b/ book								:refer-number singular)
+   	:refer-number singular)						:ARG1 (b/ book
+   :temporal (listen-01								:refer-number singular)
+   	:ARG0 p								:aspect performance
+	:ARG1 (m/ music)						:modal-strength full-affirmative)
+	:aspect state						:op2 (l/ listen-01
+	:modal-strength full-affirmative)						:ARG0 p
+   :aspect performance							:ARG1 (m/ music)
+   :modal-strength full-affirmative)							:aspect state
+   									:modal-strength full-affirmative))
 ```
 
 <span id="3-1-6 (4b)">3-1-6 (4b)</span>
@@ -2290,31 +2306,31 @@ I read a book while I listened to music. / I read a book while listening to musi
 In addition to having your hand stamped, you have to show your ticket to get into the concert. / You have to have your hand stamped and show your ticket stub to get into the concert.
 (a/ and							Or	(h/ have-04
    :op1 (h/ have-04							:ARG0 (p/ person
-   	:ARG0 (p/ person							:ref-person 2nd
-		:ref-person 2nd							:ref-number Singular)
-		:ref-number Singular)					:ARG1 (s/ stamp-01
+   	:ARG0 (p/ person							:refer-person 2nd
+		:refer-person 2nd							:refer-number singular)
+		:refer-number singular)					:ARG1 (s/ stamp-01
 	:ARG1 (s/ stamp-01							:ARG0 (p2/ person)
 		:ARG0 (p2/ person)						:ARG1 (h/ hand
 		:ARG1 (h2/ hand								:part p)
-			:part p)						:aspect Performance
-		:aspect Performance						:modstr PrtAff)
-		:modstr PrtAff)						:aspect Performance
-	:aspect Performance						:modstr PrtAff
-	:modstr PrtAff)							:pure-addition (s2/ show
+			:part p)						:aspect performance
+		:aspect performance						:modal-strength partial-affirmative)
+		:modal-strength partial-affirmative)						:aspect performance
+	:aspect performance						:modal-strength partial-affirmative
+	:modal-strength partial-affirmative)							:pure-addition (s2/ show
    :op2 (s2/ show-01								:ARG0 p
    	:ARG0 p									:ARG1 (t/ ticket
 	:ARG1 (t/ ticket								:poss p
-		:poss p									:ref-number Singular)
-		:ref-number Singular)						:ARG2 (p3/ person)
-	:ARG2 (p3/ person)							:aspect Performance
-   	:aspect Performance							:modstr PrtAff)
-	:modstr PrtAff)							:purpose (g/ get-05
+		:poss p									:refer-number singular)
+		:refer-number singular)						:ARG2 (p3/ person)
+	:ARG2 (p3/ person)							:aspect performance
+   	:aspect performance							:modal-strength partial-affirmative)
+	:modal-strength partial-affirmative)							:purpose (g/ get-05
    :purpose (g/ get-05								:ARG0 p
    	:ARG0 p									:ARG2 (c/ concert
-	:ARG2 (c/ concert								:ref-number Singular)
-		:ref-number Singular)						:aspect Performance
-	:aspect Performance							:modstr FullAff))
-	:modstr FullAff)
+	:ARG2 (c/ concert								:refer-number singular)
+		:refer-number singular)						:aspect performance
+	:aspect performance							:modal-strength full-affirmative))
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (4c)">3-1-6 (4c)</span>
@@ -2322,21 +2338,21 @@ In addition to having your hand stamped, you have to show your ticket to get int
 Instead of going out to eat, we barbecued chicken at home. / We didn’t go out to eat and/but barbecued chicken at home.
 (b/ barbecue-01				Or		(a/ and
    :ARG0 (p/ person						:op1 (g/ go_out-17
-   	:ref-person 1st							:ARG0 (p/ person
-	:ref-number Plural)							:ref-person 1st
-   :ARG1 (c/ chicken)								:ref-number Plural)
+   	:refer-person 1st							:ARG0 (p/ person
+	:refer-number plural)							:refer-person 1st
+   :ARG1 (c/ chicken)								:refer-number plural)
    :location (h/ home)							:purpose (e/ eat-01
    :substitute (g/ go_out-17							:ARG0 p
-   	:ARG0 p									:aspect Endeavor	
-	:purpose (e/ eat-01							:modstr FullAff)				
-		:ARG0 p							:aspect Performance
-		:aspect Endeavor					:modstr FullNeg)
-		:modstr FullAff)				:op2 (b/ barbecue-01
-	:aspect Performance						:ARG0 p
-	:modstr FullNeg							:ARG1 (c/ chicken)
-   :aspect Performance							:location (h/ home)	
-   :modstr FullAff							:aspect Performance		
-									:modstr FullAff))
+   	:ARG0 p									:aspect endeavor
+	:purpose (e/ eat-01							:modal-strength full-affirmative)
+		:ARG0 p							:aspect performance
+		:aspect endeavor					:modal-strength full-negative)
+		:modal-strength full-affirmative)				:op2 (b/ barbecue-01
+	:aspect performance						:ARG0 p
+	:modal-strength full-negative							:ARG1 (c/ chicken)
+   :aspect performance							:location (h/ home)
+   :modal-strength full-affirmative							:aspect performance
+									:modal-strength full-affirmative))
 ```
 
 ```Consecutive```: expresses two or more events as a complex figure, with additional information on their temporal and/or logical sequencing. Just like the ```additive``` meaning, this is represented in UMR through a ```consecutive``` abstract concept with numbered ```:opX``` relations. The temporal relations holding between the events can then be further specified in the document-level temporal annotation. More fine-grained sub-functions of the consecutive function are the following:
@@ -2358,17 +2374,17 @@ Instead of going out to eat, we barbecued chicken at home. / We didn’t go out 
 I grabbed a stick in order to defend myself. / I grabbed a stick and defended myself.
 (g/ grab-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (s/ stick
-		:ref-number Singular)
+		:refer-number singular)
 	:purpose (d/ defend
 		:ARG0 p
 		:ARG1 p
-		:aspect Performance
-		:modstr FullAff)
-	:Aspect Performance
-	:modstr FullAff)
+		:aspect performance
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (5b)">3-1-6 (5b)</span>
@@ -2376,18 +2392,18 @@ I grabbed a stick in order to defend myself. / I grabbed a stick and defended my
 He got into the army by lying about his age. / He lied about his age and got into the army.
 (g/ get-5
 	:ARG1 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG2 (a/ army)
 	:manner (l/ lie-01
 		:ARG0 p
 		:ARG1 (t/ thing
 			:ARG2-of (a2/ age-01
 				:ARG1 p))
-		:aspect Performance
-		:modstr FullAff)
-	:Aspect Performance
-	:modstr FullAff)
+		:aspect performance
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (5c)">3-1-6 (5c)</span>
@@ -2404,10 +2420,10 @@ Sarah moved back to California because she couldn't find a job in Washington. / 
 		:ARG1 (j/ job)
 		:place (s/ state :wiki "Washington"
 			:name (n3/ name :op1 "Washington"))
-		:aspect Performance
-		:modstr FullNeg)
-	:aspect Performance
-	:modstr FullAff)
+		:aspect performance
+		:modal-strength full-negative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (5d)">3-1-6 (5d)</span>
@@ -2415,14 +2431,14 @@ Sarah moved back to California because she couldn't find a job in Washington. / 
 If you touch it, it might explode. / Touch it, and it might explode.
 (e/ explode-01
 	:ARG1 (t/ thing
-		:ref-number Singular)
+		:refer-number singular)
 	:condition (t2/ touch-01
 		:ARG0 (p/ person)
 		:ARG1 t
-		:aspect Performance
-		:modstr FullAff)
-	:aspect Performance
-	:modstr NeutAff)
+		:aspect performance
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength neutral-affirmative)
 ```
 
 <span id="3-1-6 (5e)">3-1-6 (5e)</span>
@@ -2431,20 +2447,20 @@ I fed my dog before going to the office. / I fed my dog and went to the office.
 
 (f/ feed-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG2 (d/ dog
 		:poss p
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (b/ before
 		:op1 (g/ go-01
 			:ARG1 p
 			:ARG4 (o/ office
-				:ref-number Singular)
-			:aspect Performance
-			:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff)
+				:refer-number singular)
+			:aspect performance
+			:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (5f)">3-1-6 (5f)</span>
@@ -2452,17 +2468,17 @@ I fed my dog before going to the office. / I fed my dog and went to the office.
 I went home after paying the check. / I paid the check and went home.
 (g/ go-01
 	:ARG1 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG4 (h/ home)
 	:temporal (a/ after
 		:op1 (p2/ pay-01
 			:ARG0 p
 			:ARG3 (c/ check)
-			:aspect Performance
-			:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff)
+			:aspect performance
+			:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 Together, the additive and consecutive functions and all their subfunctions can be subsumed under the higher-level, more coarse-grained conjunctive function, marked in UMR with the ```and``` abstract concept and numbered ```:opX``` roles. That these functions are all semantically related and that their conjoining under the higher-level function is appropriate is illustrated by _and_ being the English coordinator used to express all these functions when a complex-figure construal is chosen.
@@ -2483,14 +2499,14 @@ Peter	diligent	CONJ	Vanja	lazy
    	:ARG1 (p/ person
 		:name (n/ name :op1 "Peter"))
 	:ARG2 (s/ staratel'nyi 'diligent')
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
    :ARG2 (h2/ have-mod-91
    	:ARG1 (p2/ person
 		:name (n2/ name :op1 "Vanja"))
 	:ARG2 (l/ lenivyj 'lazy')
-	:aspect State
-	:modstr FullAff))
+	:aspect state
+	:modal-strength full-affirmative))
 ```
 
 <span id="3-1-6 (6b)">3-1-6 (6b)</span>
@@ -2502,13 +2518,13 @@ Vanja	caught_cold	CONJ	went	to	school
    :ARG1 (p/ prostudilsja-00 'catch a cold'
    	:experiencer (p2/ person
 		:name (n/ name :op1 "Vanja"))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
    :ARG2 (p3/ poshël-00 'go'
    	:actor p2
 	:goal (s/ shkolu 'school)
-	:aspect Performance
-	:modstr FullAff))
+	:aspect performance
+	:modal-strength full-affirmative))
 ```
 
 There are three subtypes of unexpected co-occurrence relations that confident annotators, or annotators for languages which have overt grammatical mechanisms of disambiguating them, may distinguish:
@@ -2533,14 +2549,14 @@ Sarah carried the bowl of punch into the living room without doing a somersault.
 		:mod (l/ living))
 	:manner (s/ somersault
 		:ARG0 p
-		:aspect Performance
+		:aspect performance
 		:polarity -
-		:modstr FullNeg)
-	:aspect Performance
-	:modstr FullAff)
+		:modal-strength full-negative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-1-6 (7b)">3-1-6 (7b)</span> 
+<span id="3-1-6 (7b)">3-1-6 (7b)</span>
 ```
 Sarah carried the bowl of punch into the living room without spilling a drop. / Sarah carried the bowl of punch into the living room and/but didn't spill a drop.
 (c/ carry-01
@@ -2554,11 +2570,11 @@ Sarah carried the bowl of punch into the living room without spilling a drop. / 
 		:ARG0 p
 		:ARG1 p2
 			:unit (d/ drop)
-		:aspect Performance
+		:aspect performance
 		:polarity -
-		:modstr FullNeg)
-	:aspect Performance
-	:modstr FullAff)
+		:modal-strength full-negative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (7c)">3-1-6 (7c)</span>
@@ -2566,18 +2582,18 @@ Sarah carried the bowl of punch into the living room without spilling a drop. / 
 Even though he was broke, he bought a new guitar. / He was broke, but (still) bought a new guitar.
 (b/ buy-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (g/ guitar
 		:mod (n/ new)
-		:ref-number Singular)
+		:refer-number singular)
 	:concession (h/ have-mod-91
 		:ARG1 p
 		:ARG2 (b2/ broke)
-		:aspect State
-		:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff)
+		:aspect state
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-1-6 (7d)">3-1-6 (7d)</span>
@@ -2585,18 +2601,18 @@ Even though he was broke, he bought a new guitar. / He was broke, but (still) bo
 Even if you arrive only five minutes late, you will be fired.
 (f/ fire-02
 	:ARG1 (p/ person
-		:ref-person 2nd
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff
+		:refer-person 2nd
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative
 	:concessive-condition (a/ arrive-01
 		:ARG1 p
 		:temporal (l/ late
 			:extent (t/ temporal-quantity
 				:quant 5
 				:unit (m/ minute)))
-		:aspect Performance
-		:modstr FullAff))
+		:aspect performance
+		:modal-strength full-affirmative))
 ```
 
 Lastly, the “(pure) contrast” meaning has a more fine-grained “subtraction” value, where one event is
@@ -2609,15 +2625,15 @@ People don't own tigers, except for Joe Exotic.
 (o/ own-01
 	:polarity -
 	:ARG0 (p/ person
-		:refer-person Plural)
+		:refer-number plural)
 	:ARG1 (t/ tiger
-		:ref-number Plural)
+		:refer-number plural)
 	:subtraction (p2/ person
 		:name (n/ name
 			:op1 "Joe"
 			:op2 "Exotic"))
-	:Aspect State
-	:MODSTR FullNeg)
+	:aspect state
+	:MODSTR full-negative)
 ```
 
 Some languages co-express the “(pure) contrast” and the “unexpected co-occurrence” meanings, using the same form to express both. These two meanings are therefore subsumed under the `adversative` category on the lattice, annotated in UMR using the ```but-91``` abstract concept and ```:ARG1``` and ```:ARG2``` argument roles. However, both the “(pure) contrast” and the “unexpected co-occurrence meaning” may also be co-expressed with conjunctive meanings. Therefore, these categories combine into a number of higher-level, more coarse-grained categories on the UMR lattice above:
@@ -2630,10 +2646,10 @@ Some languages co-express the “(pure) contrast” and the “unexpected co-occ
 
 [Back to Table of Contents](#toc)
 
-### Part 3-2. UMR relations 
+### Part 3-2. UMR relations
 
-   #### Part 3-2-1. Participant roles 
-   
+   #### Part 3-2-1. Participant roles
+
 Every entity and event identified as a participant is related to an
 event (the event that it is dependent on) and annotated with a
 participant role label. The participant role annotation is organized as a road map with different stages. The factor which
@@ -2643,11 +2659,11 @@ frame file is shown in <a href="#3-2-1 (1)">(1)</a>.
 
 <span id="3-2-1 (1)">3-2-1 (1)</span>
 ```
-Predicate: give.01  
-	Roles:    
-	Arg0: giver   
-	Arg1: thing given    
-	Arg2: entity given to    
+Predicate: give.01
+	Roles:
+	Arg0: giver
+	Arg1: thing given
+	Arg2: entity given to
 ```
 Following AMR, UMR uses PropBank frame files to annotate lexicalized
 participant roles. But, this only works for languages which have
@@ -2671,7 +2687,7 @@ an example of a semantic alternation, seen below in
 
 <span id="3-2-1 (2a)">3-2-1 (2a)</span>
 ```
-ta-di=lo	daki-a		tioni	arimi 		ta 	besu  
+ta-di=lo	daki-a		tioni	arimi 		ta 	besu
 PFV-3PL.S=go	find-3SG.O	man	feel.sorry	3SG.PFV	be.hungry
 ‘When they found him, the poor many was hungry.’
 ```
@@ -2697,7 +2713,7 @@ example of a pragmatic valency alternation, as seen in
 
 <span id="3-2-1 (3a)">3-2-1 (3a)</span>
 ```
-anak=e 		muani	cenik	ento 	ngajeng buah=e 		ento 
+anak=e 		muani	cenik	ento 	ngajeng buah=e 		ento
 person=DEF	male	small	that	eat	fruit=DEF	that
 ‘The boy ate the fruit.’
 ```
@@ -2733,31 +2749,33 @@ examples are shown below in Table 9.
 
 <div id="tab:generalroles">
 
-| **UMR Annotation**                         | **Definition**                                                                                                 | **Example**                                                                                                                |
-| :----------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
-| <span class="smallcaps">`actor`</span>       | animate entity that initiates the action                                                                       | **the doctor** laughed <br /> **the boy** ate a salad                                                                             |
-| <span class="smallcaps">`undergoer`</span>   | entity (animate or inanimate) that is affected by the action                                                   | **the papers** burned <br /> he burned **the onions**                                                                             |
+| **UMR Annotation**                           | **Definition**                                                                                                 | **Example**                                                                                                                |
+| :------------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| <span class="smallcaps">`actor`</span>       | animate entity that initiates the action                                                                       | **the doctor** laughed <br /> **the boy** ate a salad                                                                      |
+| <span class="smallcaps">`co-actor`</span>    | animate entity that co-initiates the action (new as of October 2024)                                           |                                                                                                                            |
+| <span class="smallcaps">`undergoer`</span>   | entity (animate or inanimate) that is affected by the action                                                   | **the papers** burned <br /> he burned **the onions**                                                                      |
 | <span class="smallcaps">`theme`</span>       | entity (animate or inanimate) that moves from one entity to another entity, either spatially or metaphorically | she put **the books** on the shelf <br /> she tore **a page** from the book <br /> he gave **a sandwich** to me <br /> she told him **a story** |
-| <span class="smallcaps">`recipient`</span>   | animate entity that gains possession (or at least temporary control) of another entity                         | he gave a sandwich **to me** <br /> she told **him** a story                                                                      |
+| <span class="smallcaps">`recipient`</span>   | animate entity that gains possession (or at least temporary control) of another entity                         | he gave a sandwich **to me** <br /> she told **him** a story                                                               |
 | <span class="smallcaps">`force`</span>       | inanimate entity that initiates the action                                                                     | **the wind** knocked down the tree                                                                                         |
 | <span class="smallcaps">`causer`</span>      | animate entity that acts on another animate entity to initiate the action                                      | **the mother** made her child eat the broccoli                                                                             |
-| <span class="smallcaps">`experiencer`</span> | animate entity that cognitively or sensorily experiences a <span class="smallcaps">`stimulus`</span>             | **the dog** heard a sound                                                                                                  |
-| <span class="smallcaps">`stimulus`</span>    | entity (animate or inanimate) that is experienced by an <span class="smallcaps">`experiencer`</span>             | the dog heard **a sound**                                                                                                  |
+| <span class="smallcaps">`experiencer`</span> | animate entity that cognitively or sensorily experiences a <span class="smallcaps">`stimulus`</span>             | **the dog** heard a sound                                                                                                |
+| <span class="smallcaps">`stimulus`</span>    | entity (animate or inanimate) that is experienced by an <span class="smallcaps">`experiencer`</span>             | the dog heard **a sound**                                                                                                |
 | <span class="smallcaps">`instrument`</span>  | inanimate entity that is manipulated by an external causer in order to initiate the action                     | she hit him with **a broom**                                                                                               |
-| <span class="smallcaps">`companion`</span>   | animate entity that acts with the <span class="smallcaps">`actor`</span> to initiate the action                  | he cooked dinner with **his wife**                                                                                         |
+| <span class="smallcaps">`companion`</span>   | animate entity that acts with the <span class="smallcaps">`actor`</span> to initiate the action                  | he cooked dinner with **his wife**                                                                                       |
 | <span class="smallcaps">`material`</span>    | entity (inanimate) that is transformed into a new entity                                                       | he made a roux with **flour and butter**                                                                                   |
-| <span class="smallcaps">`source`</span>      | entity from which the <span class="smallcaps">`theme`</span> detaches                                            | he plucked a flower from the **the bush**                                                                                  |
+| <span class="smallcaps">`source`</span>      | entity from which the <span class="smallcaps">`theme`</span> detaches                                            | he plucked a flower from the **the bush**                                                                                |
 | <span class="smallcaps">`place`</span>       | location at which the action takes place                                                                       | he read a book in **the garden**                                                                                           |
 | <span class="smallcaps">`start`</span>       | location at which a motion event begins                                                                        | she biked from **her house**                                                                                               |
-| <span class="smallcaps">`goal`</span>        | location at which the action ends, the end point at which the <span class="smallcaps">`theme`</span> arrives     | she put the books on **the shelf**                                                                                         |
-| <span class="smallcaps">`affectee`</span>    | animate entity which the action has a positive or negative influence on, i.e. beneficiary or maleficiary       | he made a cake for **the dog** <br /> she stole a watch from **the CEO**                                                          |
+| <span class="smallcaps">`goal`</span>        | location at which the action ends, the end point at which the <span class="smallcaps">`theme`</span> arrives     | she put the books on **the shelf**                                                                                       |
+| <span class="smallcaps">`affectee`</span>    | animate entity which the action has a positive or negative influence on, i.e. beneficiary or maleficiary       | he made a cake for **the dog** <br /> she stole a watch from **the CEO**                                                   |
 | <span class="smallcaps">`cause`</span>       | inanimate entity that causes the action to happen                                                              | he was late because of **the fire**                                                                                        |
 | <span class="smallcaps">`manner`</span>      | manner in which the action takes place                                                                         | she exercised by **lifting weights**                                                                                       |
-| <span class="smallcaps">`reason`</span>      | motivation for the <span class="smallcaps">`actor`</span> to initiate the action                                 | they got married because **they are in love**                                                                              |
+| <span class="smallcaps">`reason`</span>      | motivation for the <span class="smallcaps">`actor`</span> to initiate the action                               | they got married because **they are in love**                                                                              |
 | <span class="smallcaps">`purpose`</span>     | intended event that results from the action                                                                    | they dropped water in order to **fight the fires**                                                                         |
+| <span class="smallcaps">`result`</span>      | unintended event that results from the action (new as of October 2024)                                         |                                                                                                                            |
 | <span class="smallcaps">`temporal`</span>    | event that has a temporal relation with the action                                                             | she left after **dinner**                                                                                                  |
 | <span class="smallcaps">`extent`</span>      | measurement phrase                                                                                             | he ran **seven miles**                                                                                                     |
-| <span class="smallcaps">`other-role`</span>       | this role can be used when an annotator is unsure of which role is appropriate                                 |                                                                                                                            |
+| <span class="smallcaps">`other-role`</span>  | this role can be used when an annotator is unsure of which role is appropriate                                 |                                                                                                                            |
 
 Table 9: UMR non-lexicalized roles
 </div>
@@ -2766,44 +2784,44 @@ These general semantic roles can be categorized based on the types of events wit
 
 <div id="tab:catroles">
 
-<table>  
-<tr>  
-<th>External Cause</th>  
-<th>Central Event</th>  
-<th>Circumstantial</th>  
-</tr>  
-<tr>  
-<td><pre>actor</pre></td>  
-<td rowspan="2">(CHANGE OF) STATE: <br> <pre>material, undergoer</pre></td>  
-<td><pre>affectee</pre></td>  
-</tr>  
-<tr>  
-<td><pre>companion</pre></td>  
-<td><pre>place</pre></td>  
-</tr>  
-<tr>  
-<td><pre>instrument</pre></td>  
-<td rowspan="2">MOTION/LOCATION: <br><pre>theme, goal, start, source, place</pre></td>  
-<td><pre>manner</pre></td>  
+<table>
+<tr>
+<th>External Cause</th>
+<th>Central Event</th>
+<th>Circumstantial</th>
 </tr>
-<tr>  
-<td><pre>force</pre></td>  
-<td><pre>purpose</pre></td>  
-</tr>  
-<tr>  
-<td><pre>causer</pre></td>  
-<td rowspan="2"> TRANSFER: <br> <pre>theme, recipient</pre> </td>  
-<td><pre>reason</pre></td>  
-</tr> 
-<tr>  
-<td><pre>cause</pre></td>  
-<td><pre>temporal</pre></td>  
-</tr>  
-<tr>  
-<td></td>  
-<td>EXPERIENTIAL: <br> <pre>experiencer, stimulus</pre></td>  
-<td><pre>extent</pre></td>  
-</tr>  
+<tr>
+<td><pre>actor</pre></td>
+<td rowspan="2">(CHANGE OF) STATE: <br> <pre>material, undergoer</pre></td>
+<td><pre>affectee</pre></td>
+</tr>
+<tr>
+<td><pre>companion</pre></td>
+<td><pre>place</pre></td>
+</tr>
+<tr>
+<td><pre>instrument</pre></td>
+<td rowspan="2">MOTION/LOCATION: <br><pre>theme, goal, start, source, place</pre></td>
+<td><pre>manner</pre></td>
+</tr>
+<tr>
+<td><pre>force</pre></td>
+<td><pre>purpose</pre></td>
+</tr>
+<tr>
+<td><pre>causer</pre></td>
+<td rowspan="2"> TRANSFER: <br> <pre>theme, recipient</pre> </td>
+<td><pre>reason</pre></td>
+</tr>
+<tr>
+<td><pre>cause</pre></td>
+<td><pre>temporal</pre></td>
+</tr>
+<tr>
+<td></td>
+<td>EXPERIENTIAL: <br> <pre>experiencer, stimulus</pre></td>
+<td><pre>extent</pre></td>
+</tr>
  </table>
 
 Table 10: Categorization of UMR non-lexicalized roles
@@ -2827,51 +2845,51 @@ that are transformed into the created object.
 
 <span id="3-2-1-1 (1a)">3-2-1-1 (1a)</span>
 ```
-The ice cube melted.  
-(m/ melt-01  
+The ice cube melted.
+(m/ melt-01
 	:undergoer (c/ cube
 		:material (i/ ice)
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (1b)">3-2-1-1 (1b)</span> 
+<span id="3-2-1-1 (1b)">3-2-1-1 (1b)</span>
 ```
-The enemy sank the ship. 
-(s/ sink-01  
-	:actor (e/ enemy) 
+The enemy sank the ship.
+(s/ sink-01
+	:actor (e/ enemy)
 	:undergoer (s2/ ship
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 
 ```
-<span id="#3-2-1-1 (1c)">3-2-1-1 (1c)</span> 
+<span id="#3-2-1-1 (1c)">3-2-1-1 (1c)</span>
 ```
-She built a house out of wood. 
-(b/ build-01  
+She built a house out of wood.
+(b/ build-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)  
+		:refer-person 3rd
+		:refer-number singular)
 	:undergoer (h/ house
-		:ref-number Singular) 
+		:refer-number singular)
 	:material (w/ wood)
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="#3-2-1-1 (1d)">3-2-1-1 (1d)</span> 
+<span id="#3-2-1-1 (1d)">3-2-1-1 (1d)</span>
 ```
-He hit the stick against the fence.  
+He hit the stick against the fence.
 (h/ hit-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)  
+		:refer-person 3rd
+		:refer-number singular)
 	:instrument (s/ stick
-		:ref-number Singular)  
+		:refer-number singular)
 	:undergoer (f/ fence
-		:ref-number Singular)
-	:aspect Endeavor
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
 The `:experiencer` and
 `:stimulus` roles always occur with
@@ -2884,25 +2902,25 @@ experiences the `:stimulus` role.
 
 <span id="3-2-1-1 (4a)">3-2-1-1 (4a)</span>
 ```
-The audience listened to the concerto.  
+The audience listened to the concerto.
 (l/ listen-01
-	:experiencer (a/ audience) 
+	:experiencer (a/ audience)
 	:stimulus (c/ concerto
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (4b)">3-2-1-1 (4b)</span>
 ```
 The cat startled me.
-(s/ startle-01  
+(s/ startle-01
 	:experiencer (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:stimulus (c/ cat
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 The `:start, :goal`, and
 `:source` roles only occur with motion
@@ -2927,68 +2945,68 @@ moves (unless the motion is volitional), as in
 
 <span id="3-2-1-1 (5)">3-2-1-1 (5)</span>
 
-<span id="3-2-1-1 (5a)">3-2-1-1 (5a)</span> 
+<span id="3-2-1-1 (5a)">3-2-1-1 (5a)</span>
 ```
 She walked home from the store.
-(w/ walk-01 
+(w/ walk-01
 	:actor (p/ person
-		:ref-person 3rd
-		ref-number Singular)  
+		:refer-person 3rd
+		refer-number singular)
 	:goal (h/ home)
 	:start (s/ store)
-	:aspect Performance
-	:modstr FullAff)  
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (5b)">3-2-1-1 (5b)</span> 
+<span id="3-2-1-1 (5b)">3-2-1-1 (5b)</span>
 ```
 The leaf fell to the ground.
-(f/ fall-01 
+(f/ fall-01
 	:theme (l/ leaf
-		:ref-number Singular) 
+		:refer-number singular)
 	:goal (g/ ground)
-	:aspect Performance
-	:modstr FullAff)  
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (5c)">3-2-1-1 (5c)</span> 
+<span id="3-2-1-1 (5c)">3-2-1-1 (5c)</span>
 ```
 He put the books in a box.
-(p/ put-01  
+(p/ put-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)  
+		:refer-person 3rd
+		:refer-number singular)
 	:theme (b/ book
-		:ref-number Plural)  
+		:refer-number plural)
 	:goal (b2/ box
-		:ref-number Singular)
+		:refer-number singular)
 	:aspect: Performance
-	:modstr FullAff)  
+	:modal-strength full-affirmative)
 
 ```
-<span id="3-2-1-1 (5d)">3-2-1-1 (5d)</span> 
+<span id="3-2-1-1 (5d)">3-2-1-1 (5d)</span>
 ```
 She is sitting on the couch.
-(s/ sit-01  
+(s/ sit-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)  
+		:refer-person 3rd
+		:refer-number singular)
 	:place (c/ couch
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff)  
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (5e)">3-2-1-1 (5e)</span> 
+<span id="3-2-1-1 (5e)">3-2-1-1 (5e)</span>
 ```
 He picked some berries from the bush.
 (p/ pick-01
 	:actor (p2/ person
-		:ref-person 3rd
-		:ref-number Singular) 
+		:refer-person 3rd
+		:refer-number singular)
 	:theme (b/ berry
-		:ref-number Paucal)  
+		:refer-number paucal)
 	:source (b2/ bush
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 The `:recipient` role only occurs with
 transfer events, or metaphorical transfer events like communication.
@@ -3004,68 +3022,68 @@ annotated as `:affectee`, as in
 
 <span id="3-2-1-1 (6)">3-2-1-1 (6)</span>
 
-<span id="3-2-1-1 (6a)">3-2-1-1 (6a)</span> 
+<span id="3-2-1-1 (6a)">3-2-1-1 (6a)</span>
 ```
 He gave the cat some wet food.
-(g/ give-01  
+(g/ give-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)  
+		:refer-person 3rd
+		:refer-number singular)
 	:theme (f/ food
 		:mod (w/ wet)
-		:quant (s/ some))  
+		:quant (s/ some))
 	:recipient (c/ cat
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-2-1-1 (6b)">3-2-1-1 (6b)</span> 
+<span id="3-2-1-1 (6b)">3-2-1-1 (6b)</span>
 ```
 I showed the pictures to her.
-(s/ show-01  
+(s/ show-01
 	:actor (p/ person
-		:ref-person 1st
-		:ref-number Singular)  
+		:refer-person 1st
+		:refer-number singular)
 	:theme (p2/ picture
-		:ref-number Plural)
+		:refer-number plural)
 	:recipient (p3/ person
-		:ref-person 3rd
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-person 3rd
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-2-1-1 (6c)">3-2-1-1 (6c)</span> 
+<span id="3-2-1-1 (6c)">3-2-1-1 (6c)</span>
 ```
 She told me that they they’re attending.
-(t/ tell-01  
+(t/ tell-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)    
-	:theme (a/ attend-01  
+		:refer-person 3rd
+		:refer-number singular)
+	:theme (a/ attend-01
 		:actor (p2/ person
-			:ref-person 3rd
-			:ref-number Plural)
-		:aspect Activity
-		:quot t
-		:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff) 
+			:refer-person 3rd
+			:refer-number plural)
+		:aspect activity
+		:quote t
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-2-1-1 (6d)">3-2-1-1 (6d)</span> 
+<span id="3-2-1-1 (6d)">3-2-1-1 (6d)</span>
 ```
 She stole the information from a competitor.
 (s/ steal-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
-	:theme (i/ information) 
+		:refer-person 3rd
+		:refer-number singular)
+	:theme (i/ information)
 	:source (c/ competitor
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 The other participant roles can occur pretty much freely with any semantic class of event. The external cause roles are used to annotate entities that bring about the central event. The
@@ -3114,37 +3132,37 @@ initiator in some causative constructions, see [4.1.2](#pr0:alts).
 He winked.
 (w/ wink-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
-	:aspect Endeavor
-	:modstr FullAff)
+		:refer-person 3rd
+		:refer-number singular)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (7b)">3-2-1-1 (7b)</span> 
+<span id="3-2-1-1 (7b)">3-2-1-1 (7b)</span>
 ```
 Jane wrote the paper with Chris.
-(w/ write-01 
+(w/ write-01
 	:actor (p/ person
-		:name (n/ name :op1 "Jane"))  
+		:name (n/ name :op1 "Jane"))
 	:companion (p2/ person
-		:name (n2/ name :op2 "Chris"))  
+		:name (n2/ name :op2 "Chris"))
 	:undergoer (p3/ paper
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-2-1-1 (7c)">3-2-1-1 (7c)</span> 
+<span id="3-2-1-1 (7c)">3-2-1-1 (7c)</span>
 ```
 They wrote the paper.
-(w/ write-01  
+(w/ write-01
 	:actor (p/ person
-		:ref-number Plural)
+		:refer-number plural)
 	:undergoer (p2/ paper
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (7d)">3-2-1-1 (7d)</span> 
+<span id="3-2-1-1 (7d)">3-2-1-1 (7d)</span>
 ```
 Jane and Chris wrote the paper.
 (w/ write-01
@@ -3154,46 +3172,46 @@ Jane and Chris wrote the paper.
 		:op2 (p2/ person
 			:name (n2/ name :op1 "Chris)))
 	:undergoer (p3/ paper
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)  
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (7e)">3-2-1-1 (7e)</span> 
+<span id="3-2-1-1 (7e)">3-2-1-1 (7e)</span>
 ```
 She sliced the bread with a knife.
 (s/ slice-01
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular) 
+		:refer-person 3rd
+		:refer-number singular)
 	:instrument (k/ knife
-		:ref-number Singular) 
+		:refer-number singular)
 	:undergoer (b/ bread
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1 (7f)">3-2-1-1 (7f)</span>
 ```
 The knife sliced through the bread.
-(s/ slice-01 
+(s/ slice-01
 	:instrument (k/ knife
-		:ref-number Singular)  
+		:refer-number singular)
 	:undergoer (b/ bread
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1 (7g)">3-2-1-1 (7g)</span> 
+<span id="3-2-1-1 (7g)">3-2-1-1 (7g)</span>
 ```
 The storm damaged the power lines.
-(d/ damage-01 
+(d/ damage-01
 	:force (s/ storm
-		:ref-number Singular)  
+		:refer-number singular)
 	:undergoer (l/ line
 		:purpose (p/ power)
-		:ref-number Plural)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number plural)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 See Table 9 above for examples of the circumstantial
 roles. In addition, there is an `:other-role`
@@ -3203,18 +3221,18 @@ At Stage 0, participant roles that aren’t explicitly expressed in the clause d
 `:goal` is left implicit on the left-hand side but annotated on the right-hand side; at Stage 0, this
 role may be left out of the annotation.
 
-<span id="3-2-1-1 (8)">3-2-1-1 (8)</span> 
+<span id="3-2-1-1 (8)">3-2-1-1 (8)</span>
 ```
 They loaded the boxes.
 (l/ load-01  					Or		(l/ load-01
 	:actor (p/ person						:actor (p/ person
-		:ref-person 3rd							:ref-person 3rd
-		:ref-number Plural)  						:ref-number Plural)
+		:refer-person 3rd							:refer-person 3rd
+		:refer-number plural)  						:refer-number plural)
 	:theme (b/ box							:theme (b/ box
-		:ref-number Plural)						:ref-number Plural)
-	:aspect Performance						:goal (t/ thing)
-	:modstr FullAff)						:aspect Performance
-									:modstr FullAff)
+		:refer-number plural)						:refer-number plural)
+	:aspect performance						:goal (t/ thing)
+	:modal-strength full-affirmative)						:aspect performance
+									:modal-strength full-affirmative)
 ```
 
 [Back to Table of Contents](#toc)
@@ -3225,95 +3243,95 @@ There is a small set of predicates that use lexicalized roles at all stages of t
 
 <div id="tab:nonverbal_arguments">
 
-<table>  
-<tr>  
-<th>Clause Type</th>  
-<th>Predicate</th>  
-<th>ARG1</th>  
-<th>ARG2</th>  
-<th>ARG3</th>  
-<th>ARG4</th>  
-<th>ARG5</th>  
-</tr>  
-<tr>  
-<td>Thetic Possession</td>  
-<td>have-91</td>  
-<td>possessor</td>  
-<td>possessum</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Predicative Possession</td>  
-<td>belong-91</td>  
-<td>possessum</td>  
-<td>possessor</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Thetic Location</td>  
-<td>exist-91</td>  
-<td>location</td>  
-<td>theme </td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr> 
-<tr>  
-<td>Predicative Location</td>  
-<td>have-place-91</td>  
-<td>theme</td>  
-<td>location</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>Property Predication</td>  
-<td>have-mod-91</td>  
-<td>theme</td>  
-<td>property</td>  
-<td>--- </td>  
-<td>---</td>  
-<td>---</td>  
-</tr> 
-<tr>  
-<td rowspan="3">Object Predication</td>  
-<td>have-role-91</td>  
-<td>theme</td>  
-<td>reference point</td>  
-<td>object category, arg1</td>  
-<td>object category, arg2</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>have-org-role-92</td>  
-<td>theme</td>  
-<td>organization</td>  
-<td>title of role</td>  
-<td>job description</td>  
-<td>---</td>  
-</tr>  
-<tr>  
-<td>have-rel-role-92</td>  
-<td>theme</td>  
-<td>relative</td>  
-<td>theme's role</td>  
-<td>relative's role</td>  
-<td>relationship basis</td>  
-</tr>  
-<tr>  
-<td>Equational</td>  
-<td>identity-91</td>  
-<td>theme</td>  
-<td>equated referent</td>  
-<td>---</td>  
-<td>---</td>  
-<td>---</td>  
-</tr>  
+<table>
+<tr>
+<th>Clause Type</th>
+<th>Predicate</th>
+<th>ARG1</th>
+<th>ARG2</th>
+<th>ARG3</th>
+<th>ARG4</th>
+<th>ARG5</th>
+</tr>
+<tr>
+<td>Thetic Possession</td>
+<td>have-91</td>
+<td>possessor</td>
+<td>possessum</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Predicative Possession</td>
+<td>belong-91</td>
+<td>possessum</td>
+<td>possessor</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Thetic Location</td>
+<td>exist-91</td>
+<td>location</td>
+<td>theme </td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Predicative Location</td>
+<td>have-place-91</td>
+<td>theme</td>
+<td>location</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Property Predication</td>
+<td>have-mod-91</td>
+<td>theme</td>
+<td>property</td>
+<td>--- </td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td rowspan="3">Object Predication</td>
+<td>have-role-91</td>
+<td>theme</td>
+<td>reference point</td>
+<td>object category, arg1</td>
+<td>object category, arg2</td>
+<td>---</td>
+</tr>
+<tr>
+<td>have-org-role-92</td>
+<td>theme</td>
+<td>organization</td>
+<td>title of role</td>
+<td>job description</td>
+<td>---</td>
+</tr>
+<tr>
+<td>have-rel-role-92</td>
+<td>theme</td>
+<td>relative</td>
+<td>theme's role</td>
+<td>relative's role</td>
+<td>relationship basis</td>
+</tr>
+<tr>
+<td>Equational</td>
+<td>identity-91</td>
+<td>theme</td>
+<td>equated referent</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
 </table>
 
 Table 8: Argument structure of non-verbal clause predicates
@@ -3331,130 +3349,130 @@ annotations will be the same at every stage of the road map.
 Thetic/presentational Possession - Kukama <br />
 
 ```
-Mijiri-tin  ɨara-yara  
-Miguel-CER  canoe-owner  
+Mijiri-tin  ɨara-yara
+Miguel-CER  canoe-owner
 ‘Miguel does have a canoe.’ (Lit. ‘Miguel is a canoe-owner’)
 
 (h/ have-91
 	:ARG1 (p/ person
-		:name (n/ name :op1 "Mijiri")) 
+		:name (n/ name :op1 "Mijiri"))
 	:ARG2 (i/ ɨarayara ‘canoe’
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1b)">3-2-1-1-1 (1b)</span> Predicative
 Possession - English <br />
 ```
-The dog is the teacher's.  
-  
+The dog is the teacher's.
+
 (b/ belong-91
 	:ARG1 (d/ dog
-		:ref-number Singular) 
+		:refer-number singular)
 	:ARG2 (p/ person
-		:ref-number Singular
+		:refer-number singular
 		:ARG0-of (t / teach-01))
-	:aspect State
-	:modstr FullAff) 
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1c)">3-2-1-1-1 (1c)</span> Thetic/presentational Location - English <br />
 ```
-On the rock was a symbol.  
-  
+On the rock was a symbol.
+
 (e/ exist-91
 	:ARG1 (r/ rock
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (s/ symbol
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff)  
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1d)">3-2-1-1-1 (1d)</span> Predicative
 Location - Yabem (Dempwolff 1939) <br />
 ```
-àndu  kê-kô 	malac  
-house 3SG-be.at village  
+àndu  kê-kô 	malac
+house 3SG-be.at village
 ‘The house is in the village.’
 (h/ have-place-91
 	:ARG1 (a/ àndu ‘house’
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (m/ malac ‘village’
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1e)">3-2-1-1-1 (1e)</span> Property
 Predication - English <br />
 ```
-The cat is black.  
+The cat is black.
 (h/ have-mod-91
 	:ARG1 (c/ cat
-		:ref-number Singular) 
+		:refer-number singular)
 	:ARG2 (b/ black)
-	:aspect State
-	:modstr FullAff)  
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1f)">3-2-1-1-1 (1f)</span> Object Predication - Kukama <br />
 ```
-ajan kunumi 	tsumi  
-this young.man 	shaman  
+ajan kunumi 	tsumi
+this young.man 	shaman
 ‘This young man is a shaman.’
 (h/ have-role-91
 	:ARG1 (k/ kunumi ‘young man’
 		:mod (a/ ajan 'this')
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG3 (t/ tsumi ‘shaman’)
-	:aspect State
-	:modstr FullAff)  
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-1 (1g)">3-2-1-1-1 (1g)</span> Object Equational - English <br />
 ```
-She is the winner.  
+She is the winner.
 (i/ identity-91
 	:ARG1 (p/ person
-		:ref-person 3rd
-		:ref-number Singular) 
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG2 (p2/ person
 		:ARG0-of (w/ win-01))
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 [Back to Table of Contents](#toc)
 
 ###### Part 3-2-1-1-2. Valency alternations
- 
+
 Information-packaging alternations, such as passives, antipassives, or valency-rearranging applicatives, are not reflected in the annotation. That is, participants are annotated in the same way as in the basic construction in the language. If a participant is omitted, for example the agent in a passive construction as in <a href="#3-2-1-1-2 (1)">(1)</a> from Berber (Guerssel 1986:52), then it doesn't need to be annotated at Stage 0. This means that agentless passives and anticausatives may have the same participant role annotation at Stage 0. Annotators may choose to annotate omitted participants that are semantically present at Stage 0.
 
 <span id="3-2-1-1-2 (1)">3-2-1-1-2 (1)</span>
 
 <span id="3-2-1-1-2 (1a)">3-2-1-1-2 (1a)</span> <br />
 ```
-Y-usy 		wrba 	tafirast.  
-3M.SG-pick.up 	boy:CST	pear  
+Y-usy 		wrba 	tafirast.
+3M.SG-pick.up 	boy:CST	pear
 ‘The boy picked up the pear.’
-(u/ yusy-00 ‘pick up’  
+(u/ yusy-00 ‘pick up’
 	:actor (w/ wrba ‘boy’
-		:ref-number Singular) 
+		:refer-number singular)
 	:undergoer (t/ tafirast ‘pear’
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-2-1-1-2 (1b)">3-2-1-1-2 (1b)</span> <br />
 ```
-T-ttw-asy		tfirast.  
-3F.SG-DETR-pick.up	pear  
+T-ttw-asy		tfirast.
+3F.SG-DETR-pick.up	pear
 ‘The pear was picked up.’
-(t/ tttwasy-00 ‘pick up’  
+(t/ tttwasy-00 ‘pick up’
 	:undergoer (t2/ tafirast ‘pear’
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff) 
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 0, these alternations influence the choice of general participant role labels. 
+Certain types of semantic valency alternations are reflected in the participant role annotation. At Stage 0, these alternations influence the choice of general participant role labels.
 
 **Causatives.** There are a few different types of causatives that
 require different annotation solutions. For most causatives of
@@ -3469,18 +3487,18 @@ the causee *churan* ‘kid’ is annotated as
 
 <span id="3-2-1-1-2 (2)">3-2-1-1-2 (2)</span>
 ```
-nai 		kurata-ta	churan=ui	uni=pu  
-grandmother 	drink-CAUS	kid=PST 	water=INS 
+nai 		kurata-ta	churan=ui	uni=pu
+grandmother 	drink-CAUS	kid=PST 	water=INS
 ‘Grandmother made the kid drink the water.’
 (k/ kuratata 'make drink'
     :causer (p/ person
     	:ARG1-of (h/ have-rel-role-92
 		:ARG3 (n/ nai 'grandmother'))
-	:ref-number Singular)
+	:refer-number singular)
     :actor (c/ churan 'kid')
     :undergoer (u/ uni 'water')
-    :aspect Performance
-    :modstr FullAff)  
+    :aspect performance
+    :modal-strength full-affirmative)
 ```
 
 There are certain causatives of transitives which do not use the `:causer` role. These are constructions which express transfer events, including mental/cognitive transfer. Some
@@ -3492,32 +3510,32 @@ Languages may differ in terms of which types of causative constructions are cons
 
 <span id="3-2-1-1-2 (3a)">3-2-1-1-2 (3a)</span> <br />
 ```
-hogco-l 	raɬad 		b-egā-yo  
-he.OBL-LAT 	sea(iii) 	iii-see-PST  
-‘He saw the sea.’ 
+hogco-l 	raɬad 		b-egā-yo
+he.OBL-LAT 	sea(iii) 	iii-see-PST
+‘He saw the sea.’
 (b/ begāyo-00 ‘see’
 	:experiencer (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:stimulus (r/ raɬad ‘sea’)
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 
 ```
 <span id="3-2-1-1-2 (3b)">3-2-1-1-2 (3b)</span>
 ```
-hogco 		kibba-l 	raɬad 		b-ega-l-lo  
-he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST 
+hogco 		kibba-l 	raɬad 		b-ega-l-lo
+he.OBL(ERG) 	girl.OBL-LAT 	sea(iii) 	iii-see-CAUS-PST
 ‘He showed the sea to the girl.’
 (b/ begallo-00 ‘show’
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:theme (r/ raɬad ‘sea’)
 	:recipient (k/ kibba ‘girl’
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 For causatives of ditransitives, the causer receives the
@@ -3527,8 +3545,8 @@ For causatives of ditransitives, the causer receives the
 
 <span id="3-2-1-1-2 (4)">3-2-1-1-2 (4)</span> <br />
 ```
-Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-bi...  
-that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	give-CAUS-INC 	want-NEG-SDS-EM  
+Ja-tian 	ja 	xontako 		jawen 	tita-n 		xoi 			meni-ma-\[a\]i 	keen-yama-\[a\]i-bi...
+that-TEMP 	that 	unmarried.girl:ABS 	POS3 	mother-ERG 	roasted.meat/fish:ABS 	give-CAUS-INC 	want-NEG-SDS-EM
 ‘Then her mother makes the unmarried girl give roasted meat/fish (to the
 man who had asked her in matrimony) even though she doesn’t want to...’
 (m/ menima-00 'make give'
@@ -3536,20 +3554,20 @@ man who had asked her in matrimony) even though she doesn’t want to...’
 		:ARG1-of (h/ have-rel-role-92
 			:ARG2 (x/ xontako 'unmarried girl'
 				:mod (j/ ja 'that')
-				:ref-number Singular)
+				:refer-number singular)
 			:ARG3 (t/ titan 'mother'))
-			:ref-number Singular)
+			:refer-number singular)
 	:actor x
 	:theme (x2/ xoi 'roasted meat/fish')
 	:temporal (j2/ jatian 'that time')
 	:concession (k2/ keenyamaaibi-00 'want'
 		:experiencer x
 		:stimulus (m
-			:modpred k2)
-		:aspect State
-		:modstr FullNeg)
-	:aspect Habitual
-	:modstr FullAff)
+			:modal-predicate k2)
+		:aspect state
+		:modal-strength full-negative)
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
 
 There are two types of causatives of intransitives, based on the two types of intransitives. For intransitives whose single participant corresponds to an `:undergoer` role, such as
@@ -3560,38 +3578,38 @@ its `:undergoer` label. This can be seen in
 
 <span id="3-2-1-1-2 (5)">3-2-1-1-2 (5)</span>
 
-<span id="3-2-1-1-2 (5a)">3-2-1-1-2 (5a)</span> <br /> 
+<span id="3-2-1-1-2 (5a)">3-2-1-1-2 (5a)</span> <br />
 ```
-Ka 	kedam 	hri	a 	cat.  
-1SG 	shoe 	string	3SG.NOM	broken.1  
+Ka 	kedam 	hri	a 	cat.
+1SG 	shoe 	string	3SG.NOM	broken.1
 ‘My shoelace is broken/broke.’
-(c/ cat-00 ‘broken’ 
+(c/ cat-00 ‘broken’
 	:undergoer (h/ hri 'string'
 		:part (k/ kedam 'shoe')
 		:poss (p/ person
-			:ref-person 1st
-			:ref-number Singular)
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff)
+			:refer-person 1st
+			:refer-number singular)
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-2-1-1-2 (5b)">3-2-1-1-2 (5b)</span> <br /> 
+<span id="3-2-1-1-2 (5b)">3-2-1-1-2 (5b)</span> <br />
 ```
-Thangte in 	ka 	kedam 	hri 	a 	cat-ter.  
-Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS  
+Thangte in 	ka 	kedam 	hri 	a 	cat-ter.
+Thangte ERG 	1SG 	shoe 	string 	3SG.NOM broken.1-CAUS
 ‘Thangte broke my shoelace.’
-(c/ catter-00 ‘break’  
+(c/ catter-00 ‘break’
 	:actor (p/ person
 		:name (n/ name :op1 "Thangte"))
 	:undergoer (h/ hri 'string'
 		:part (k/ kedam 'shoe')
 		:poss (p2/ person
-			:ref-person 1st
-			:ref-number Singular)
-		:ref-number Singular
-	:aspect Performance
-	:modstr FullAff)
+			:refer-person 1st
+			:refer-number singular)
+		:refer-number singular
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 Regardless of whether the causative or anticausative verb is derived (or if neither is derived), the anticausative/intransitive meaning is annotated with a single `:undergoer` participant and the causative/transitive meaning is annotated with an
@@ -3605,27 +3623,27 @@ can be seen in <a href="#3-2-1-1-2 (6)">(6)</a> from Falam Chin (King 2011:195) 
 
 <span id="3-2-1-1-2 (6a)">3-2-1-1-2 (6a)</span> <br />
 ```
-Cinte a 	hni.  
-Cinte 3SG.NOM 	laugh.1  
-‘Cinte laughed.’ 
+Cinte a 	hni.
+Cinte 3SG.NOM 	laugh.1
+‘Cinte laughed.’
 (h/ hni-00 ‘laugh’
 	:actor (p/ person
 		:name (n/ name :op1 "Cinte"))
-	:aspect Endeavor
-	:modstr FullAff)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1-2 (6a)">3-2-1-1-2 (6a)</span> <br /> 
+<span id="3-2-1-1-2 (6a)">3-2-1-1-2 (6a)</span> <br />
 ```
-Parte 	in 	Cinte a 	hni-ter.  
-Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS  
+Parte 	in 	Cinte a 	hni-ter.
+Parte 	ERG 	Cinte 3SG.NOM 	laugh.1-CAUS
 ‘Parte made Cinte laugh.’
-(h/ hniter-00 ‘make laugh’ 
+(h/ hniter-00 ‘make laugh’
 	:causer (p/ person
-		:name (n/ name :op1 "Parte")) 
+		:name (n/ name :op1 "Parte"))
 	:actor (p2/ person
-		:name (n2/ name :op1 "Cinte"))  
-	:aspect Performance
-	:modstr FullAff)
+		:name (n2/ name :op1 "Cinte"))
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 **Applicatives.**  Peterson (2007) distinguishes between “valency-increasing” applicatives and “valency-rearranging” applicatives. In valency-rearranging applicatives, a participant is expressed as an oblique in the basic construction and expressed as a core argument in the applicative construction; they are generally associated with the increased saliency or topicality of the oblique participant. Therefore, these fit into the category of pragmatic valency alternations, and both the basic and applicative construction receive the same participant role
@@ -3636,31 +3654,31 @@ annotation. This can be seen in
 
 <span id="3-2-1-1-2 (7a)">3-2-1-1-2 (7a)</span>
 ```
-Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.  
-Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1  
+Parte in 	Thangte hrang=ah 	hmeh 	a 	suang.
+Parte ERG 	Thangte for=LOC 	curry 	3SG.NOM cook.1
 ‘Parte cooked some curry for Thangte.’
 (s/ suang-00 ‘cook’
 	:actor (p/ person
 		:name (n/ name :op1 "Parte"))
-	:undergoer (h/ hmeh ‘curry’) 
+	:undergoer (h/ hmeh ‘curry’)
 	:affectee (p2/ person
 		:name (n2/ name :op2 "Thangte"))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (7b)">3-2-1-1-2 (7b)</span>
 ```
-Parte in 	Thangte hmeh 	a 	suan-sak  
-Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN  
+Parte in 	Thangte hmeh 	a 	suan-sak
+Parte ERG 	Thangte curry 	3SG.NOM cook.2-BEN
 ‘Parte cooked Thangte some curry.’
 (s/ suangsak-00 ‘cook for’
 	:actor (p/ person
 		:name (n/ name :op1 "Parte"))
-	:undergoer (h/ hmeh ‘curry’) 
+	:undergoer (h/ hmeh ‘curry’)
 	:affectee (p2/ person
 		:name (n2/ name :op1 "Thangte"))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (7c)">3-2-1-1-2 (7c)</span>
 ```
@@ -3669,11 +3687,11 @@ as-teny-aye'	pa'ang
 ‘I bought palm hearts.’
 (t/ entenyay'a-00
 	:actor (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:theme (p2/ pa'ang 'palm)
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 <span id="3-2-1-1-2 (7d)">3-2-1-1-2 (7d)</span>
 ```
@@ -3682,13 +3700,13 @@ as-teny-as-ke'		pa'ang	ap-angkok	Eduardo
 ‘I bought palm hearts from Eduardo.’
 (t/ entenyaskama-00
 	:actor (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:theme (p2/ pa'ang 'palm)
 	:source (p3/ person
 		:name (n/ name :op1 "Eduardo"))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 Whether the beneficiary, *Thangte*, is expressed as an oblique or a core argument, it is annotated as `:affectee`. Valency-increasing applicatives involve the addition of a participant, compared to the basic construction. Here, the added participant is
@@ -3700,29 +3718,29 @@ simply annotated with the appropriate semantic role. This can be seen in <a href
 
 <span id="3-2-1-1-2 (8a)">3-2-1-1-2 (8a)</span>
 ```
-U 	a 	ù-yé 	bánì  
-he 	PERF 	he-REFL wound  
+U 	a 	ù-yé 	bánì
+he 	PERF 	he-REFL wound
 ‘He has wounded himself.’
-(b/ bánì-00 ‘wound’ 
+(b/ bánì-00 ‘wound’
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Singular) 
+		:refer-person 3rd
+		:refer-number singular)
 	:undergoer p
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-1-2 (8b)">3-2-1-1-2 (8b)</span><br /> 
+<span id="3-2-1-1-2 (8b)">3-2-1-1-2 (8b)</span><br />
 ```
-Pi 	a 	pì-yé 		kánù  
-they 	PERF	they-REFL 	love  
+Pi 	a 	pì-yé 		kánù
+they 	PERF	they-REFL 	love
 ‘They loved each other.’
 (k/ kánù-00 ‘love’
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:undergoer p
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 The annotation of participant roles for valency alternations in Step 1 of the road map is summarized in Table 11 below.
@@ -3755,13 +3773,13 @@ PropBank-style frame files in the language for a large number of
 predicates. At this stage, each predicate identified as an event is linked
 to its corresponding frame file. The participants dependent on that
 event are annotated with the lexicalized roles, as determined by the
-frame file. This can be seen in <a href="#3-2-1-2 (1)">(1)</a> below.  
+frame file. This can be seen in <a href="#3-2-1-2 (1)">(1)</a> below.
 
 ```
 predicate: tease-02
 	roles:
 	ARG0: teaser
-	ARG1: teased 
+	ARG1: teased
 	ARG2: about what
 ```
 
@@ -3772,46 +3790,46 @@ He teased the boy about his hat.
 
 (t/ tease-02
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (b/ boy
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (h/ hat
 		:poss b)
-	:aspect Endeavor
-	:modstr FullAff)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
 
 Since the non-verbal clause functions require the use of lexicalized predicates at Stage 0, these are annotated in the same way at Stage 1 (see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses)). Unlike Stage 0, implicit participants are
 annotated for their semantic role at Stage 1. This is shown in
 <a href="#3-2-1-2 (2)">(2)</a>.
 
-<span id="3-2-1-2 (2)">3-2-1-2 (2)</span> 
+<span id="3-2-1-2 (2)">3-2-1-2 (2)</span>
 ```
 She parked the truck in the driveway. They loaded the boxes.
 
 (s1p/ park-01
 	:ARG0 (s1p2/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (s1t/ truck
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (s1d/ driveway)
-	:aspect Performance
-	:modstr FullAff) 
+	:aspect performance
+	:modal-strength full-affirmative)
 
 (s2l/ load-01
 	:ARG0 (s2p/ person
-		:ref-person 3rd
-		:ref-number Plural)
-	:ARG1 (s2t/ thing)  
+		:refer-person 3rd
+		:refer-number plural)
+	:ARG1 (s2t/ thing)
 	:ARG2 (s2b/ box
-		:ref-number Plural)
-	:aspect Performance
-	:modstr FullAff)
+		:refer-number plural)
+	:aspect performance
+	:modal-strength full-affirmative)
 (s2/ sentence
-	:temporal (DCT :before s2l)
-	:modal (AUTH :FullAff s2l)
+	:temporal (document-creation-time :before s2l)
+	:modal (author :full-affirmative s2l)
 	:coref (s1t :same-entity s2t))
 ```
 
@@ -3840,105 +3858,105 @@ AMR, the predecessor of UMR, makes use of **inverse** participant roles for a nu
 
 <span id="3-2-1-3 (1)">3-2-1-3 (1)</span>
 
-<span id="3-2-1-3 (1a)">3-2-1-3 (1a)</span> 
+<span id="3-2-1-3 (1a)">3-2-1-3 (1a)</span>
 ```
 I bought the sweater that you saw.
 (b/ buy-0101
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (s/ sweater
 		:ARG1-of (s2/ see-01
 			:ARG0 (p2/ person
-				:ref-person 2nd
-				:ref-number Singular)
-			:aspect State
-			:modstr FullAff)
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+				:refer-person 2nd
+				:refer-number singular)
+			:aspect state
+			:modal-strength full-affirmative)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-2-1-3 (1b)">3-2-1-3 (1b)</span> 
+<span id="3-2-1-3 (1b)">3-2-1-3 (1b)</span>
 ```
 I didn't see whether he bought the sweater.
 (s/ see-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (t/ truth-value
 		:Polarity-of (b/ buy-01
 			:ARG0 (p2/ person
-				:ref-person 3rd
-				:ref-number Singular)
+				:refer-person 3rd
+				:refer-number singular)
 			:ARG1 (s2/ sweater
-				:ref-number Singular)
-			:aspect Performance
-			:modstr NeutAff))
-	:Aspect State
-	:Modstr FullNeg)
+				:refer-number singular)
+			:aspect performance
+			:modal-strength neutral-affirmative))
+	:aspect state
+	:Modstr full-negative)
 ```
 
-<span id="3-2-1-3 (1c)">3-2-1-3 (1c)</span> 
+<span id="3-2-1-3 (1c)">3-2-1-3 (1c)</span>
 ```
 The runner was wearing a sweater.
 (w/ wear-01
 	:ARG0 (p/ person
 		:ARG0-of (r/ run-02)
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (s/ sweater
-		:ref-number Singular)
-	:aspect State
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 UMR expands upon this AMR system of inverse relations by adding inverses for the general (i.e. non-predicate-specific) participant roles to be used at stage 0 of the road map. So, in addition to having inverses of numbered participant roles, there are now also `:Actor-of` and `:Undergoer-of` roles, and analogues for each of the general participant roles described in table 9 in [Part 3-2-1-1](#part-3-2-1-1-stage-0)). Example <a href="#3-2-1-3 (2)">(2)</a> below illustrates the use of the inverse `:Stimulus-of` role to annotate the same relative clause as in <a href="#3-2-1-3 (1a)">(1a)</a> above.
 
-<span id="3-2-1-3 (2)">3-2-1-3 (2)</span> 
+<span id="3-2-1-3 (2)">3-2-1-3 (2)</span>
 
 ```
 I bought the sweater that you saw.
 (b/ buy-01
 	:actor (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:theme (s/ sweater
 		:Stimulus-of (s2/ see-01
 			:experiencer (p2/ person
-				:ref-person 2nd
-				:ref-number Singular)
-			:aspect State
-			:modstr FullAff)
-		:ref-number Singular)
-	:aspect Performance
-	:modstr FullAff)
+				:refer-person 2nd
+				:refer-number singular)
+			:aspect state
+			:modal-strength full-affirmative)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 One more context in which inverse participant roles are used is in the annotation of certain relations that are mostly thought of (and mostly expressed in languages) as nominal modification - specifically, kinship relations and certain other relational nouns, e.g. those designating functions within organizations. For the annotation of noun phrases like *my father*, or *the President of the University of New Mexico*, UMR uses a `(p/ person)` concept node as the top of the graph, connected with an inverse participant role to a non-verbal clause predicate (which can then take further argument roles to express other elements in the NP). The most general, coarse-grained non-verbal clause predicate to be used in such annotations is `have-role-91`, although more specific predicates (e.g. `have-rel-role-92, have-org-role-92`) for frequently encountered concrete relation types are also available. The rolesets used for their arguments are detailed in [Part 3-1-3-5](#part-3-1-3-5-non-verbal-clauses)). The use of these predicates in such annotations is illustrated in <a href="#3-2-1-3 (3)">(3)</a>.
-  
-<span id="3-2-1-3 (3)">3-2-1-3 (3)</span> 
 
-<span id="3-2-1-3 (3a)">3-2-1-3 (3a)</span> 
+<span id="3-2-1-3 (3)">3-2-1-3 (3)</span>
+
+<span id="3-2-1-3 (3a)">3-2-1-3 (3a)</span>
 ```
 I met my father.
 (m/ meet-03
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (p2/ person
 		:ARG1-of (h/ have-rel-role-92
 			:ARG2 p
 			:ARG3 (f/ father)))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-1-3 (3a)">3-2-1-3 (3a)</span> 
+<span id="3-2-1-3 (3a)">3-2-1-3 (3a)</span>
 ```
 I met the President of the University of New Mexico.
 (m/ meet-03
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (p2/ person
 		:ARG1-of (h/ have-org-role-92
 			:ARG2 (a/ academic_organization
@@ -3949,26 +3967,26 @@ I met the President of the University of New Mexico.
 					:op4 "Mexico")
 				:wiki "University_of_New_Mexico")
 			:ARG2 (p3/ president)))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
 
 ##### Part 3-2-1-4. Table of verb meanings
 
-Table 12 below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a motion sense (ex: She wiped the crumbs from the table) and a change-of-state (COS) sense (ex: He wiped the table). 
+Table 12 below contains the general participant role annotation for the microroles associated with 89 verb meanings. The verb meanings and microroles are from the Valency Patterns Leipzig project (ValPaL; Hartmann et al. 2013). For two verb meanings, WIPE and PEEL, the ValPaL data reflects distinct verb senses: a motion sense (ex: She wiped the crumbs from the table) and a change-of-state (COS) sense (ex: He wiped the table).
 
 As mentioned in [Part 3-2-1-1](#part-3-2-1-1-stage-0), the single participant in a monovalent event can either be annotated as <span class="smallcaps">`actor`</span> or as <span class="smallcaps">`undergoer`</span>. This distinction depends on the amount of control that the single participant has in carrying out the event. For events that are more controlled by the participant ("active" events), the participant is annotated as <span class="smallcaps">`actor`</span>; for events that are less controlled by the participant ("inactive" events), the participant is annotated as <span class="smallcaps">`undergoer`</span>. Languages that reflect this distinction in their morphosyntax (i.e., languages with active alignment) do not always draw the distinction between active events and inactive events in the same place. There is, however, a cross-linguistic organization in terms of how languages with active alignment code these events in their morphosyntax.
 
 The following semantic event classes reflect an ordering from most active to most inactive (Croft 2012; 2022).
 
-Controlled activities (ex: run)  
-Position events (ex: hang)  
-Inherent properties (ex: short)  
-Bodily actions (ex: cough)  
-Change of state (ex: become ill)  
-Transitory properties (ex: be ill)  
-Uncontrolled activities (ex: fall)  
+Controlled activities (ex: run)
+Position events (ex: hang)
+Inherent properties (ex: short)
+Bodily actions (ex: cough)
+Change of state (ex: become ill)
+Transitory properties (ex: be ill)
+Uncontrolled activities (ex: fall)
 
 For the purposes of UMR, controlled activities, position events, inherent properties, and more controlled types of bodily actions (ex: laugh) are annotated with an <span class="smallcaps">`actor`</span> participant. Less controlled types of bodily actions (ex: cry) and the remaining semantic event classes are annotated with an <span class="smallcaps">`undergoer`</span> participant.
 
@@ -3976,60 +3994,60 @@ Annotators may use Table 12 as a reference point for annotating general particip
 
 <div id="tab:predicateroles">
 
-<table>  
-<tr>  
-<th>Verb Meaning</th>  
+<table>
+<tr>
+<th>Verb Meaning</th>
 <th>Microrole</th>
 <th>UMR annotation</th>
-</tr>  
-<tr>  
-<td colspan="3">Active (A-like) S</td>  
-</tr>  
-<tr>  
-<td>RUN</td>  
-<td>runner</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">CLIMB</td>  
-<td>climber</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td>climbing goal</td>  
-<td><pre>undergoer</pre></td>  
-</tr>  
-<tr>  
-<td>JUMP</td>  
-<td>jumper</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">GO</td>  
-<td>goer</td>  
-<td><pre>actor</pre> </td>  
-</tr>  
-<tr>  
-<td>going goal</td>  
-<td><pre>goal</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">LEAVE</td>  
-<td>leaver</td>  
-<td><pre>actor</pre></td>  
-</tr>  
-<tr>  
-<td>left place/person</td>  
-<td><pre>source</pre></td>  
-</tr>  
-<tr>  
-<td rowspan="2">SIT DOWN</td>  
-<td>sit downer </td>  
-<td><pre>actor</pre></td>  
-</tr>  <tr>  
-<td> sitting-down place</td>  
-<td><pre>goal</pre></td>  
-</tr>  
+</tr>
+<tr>
+<td colspan="3">Active (A-like) S</td>
+</tr>
+<tr>
+<td>RUN</td>
+<td>runner</td>
+<td><pre>actor</pre></td>
+</tr>
+<tr>
+<td rowspan="2">CLIMB</td>
+<td>climber</td>
+<td><pre>actor</pre></td>
+</tr>
+<tr>
+<td>climbing goal</td>
+<td><pre>undergoer</pre></td>
+</tr>
+<tr>
+<td>JUMP</td>
+<td>jumper</td>
+<td><pre>actor</pre></td>
+</tr>
+<tr>
+<td rowspan="2">GO</td>
+<td>goer</td>
+<td><pre>actor</pre> </td>
+</tr>
+<tr>
+<td>going goal</td>
+<td><pre>goal</pre></td>
+</tr>
+<tr>
+<td rowspan="2">LEAVE</td>
+<td>leaver</td>
+<td><pre>actor</pre></td>
+</tr>
+<tr>
+<td>left place/person</td>
+<td><pre>source</pre></td>
+</tr>
+<tr>
+<td rowspan="2">SIT DOWN</td>
+<td>sit downer </td>
+<td><pre>actor</pre></td>
+</tr>  <tr>
+<td> sitting-down place</td>
+<td><pre>goal</pre></td>
+</tr>
 <tr>
 <td>DIG </td>
 <td> digger</td>
@@ -4860,7 +4878,7 @@ Table 12: Verb meanings and non-lexicalized role annotation
 [Back to Table of Contents](#toc)
 
   #### Part 3-2-2. Non-participant role UMR relations
-  
+
 Apart from predicate-specific and general participant roles, UMR also has a set of relations that are mainly used to mark NP-internal relations, to mark some types of modifiers of predicates, and to make the meanings of certain natural language expressions computationally tractable. Most of those relations are inherited from AMR, but for some of them, there are some changes in their use.
 
 [Back to Table of Contents](#toc)
@@ -4869,9 +4887,9 @@ Apart from predicate-specific and general participant roles, UMR also has a set 
 
 Some relations are used to describe entities in a standard, canonical form. This is the case for ```:calendar, :century, :day, :dayperiod, :decade, :era, :month, :quarter, :season, :time, :timezone, :weekday, :year,``` and ```:year2```. The use of these relations is exemplified in <a href="#3-2-2-1 (1)">(1)</a>.
 
-<span id="3-2-2-1 (1)" label="3-2-2-1 (1)">3-2-2-1 (1)</span> 
+<span id="3-2-2-1 (1)" label="3-2-2-1 (1)">3-2-2-1 (1)</span>
 
-<span id="3-2-2-1 (1a)" label="3-2-2-1 (1a)">3-2-2-1 (1a)</span> 
+<span id="3-2-2-1 (1a)" label="3-2-2-1 (1a)">3-2-2-1 (1a)</span>
 ```
 March 23rd, 2021
 (d/ date-entity
@@ -4879,14 +4897,14 @@ March 23rd, 2021
 	:month 3
 	:day 23)
 ```
-<span id="3-2-2-1 (1b)" label="3-2-2-1 (1b)">3-2-2-1 (1b)</span> 
+<span id="3-2-2-1 (1b)" label="3-2-2-1 (1b)">3-2-2-1 (1b)</span>
 ```
 Friday the 13th
 (d/ date-entity
 	:weekday (f/ Friday)
 	:day 13)
 ```
-<span id="3-2-2-1 (1c)" label="3-2-2-1 (1c)">3-2-2-1 (1c)</span> 
+<span id="3-2-2-1 (1c)" label="3-2-2-1 (1c)">3-2-2-1 (1c)</span>
 ```
 3.30 pm Albuquerque time
 (d/ date-entity
@@ -4899,74 +4917,74 @@ Friday the 13th
 
 Other relations mostly function to modify object concepts - they are often expressed in languages as modifiers of some sort within an NP. Semantically, modification relations in referring expressions come in two kinds: anchoring and typifying (Croft, to appear). Anchoring modifiers "situate the intended referent of the referring expression via reference to another object", in other words, they provide referential grounding for a referent expression. Many anchoring modification relations are construed in languages as possessive relations: ownership (which situates a referent via reference to its owner), part-whole relations (which situate a referent via reference to a larger entity it is a part of), and kinship relations (which situate a referent via reference to another person that has a particular kind of relation to them). As described in [Part 3-2-1-3](#part-3-2-1-3-inverse-participant-roles), kinship relations are annotated through the `have-rel-role-92` predicate, even when they are not predicated. For ownership and part-whole relations, UMR uses `:poss` and `:part` relations with the possessum or part as the parent and the possessor or whole as the daughter, as in <a href="#3-2-2-1 (1)">(1)</a>.
 
-<span id="3-2-2-2 (1)" label="3-2-2-2 (1)">3-2-2-2 (1)</span> 
+<span id="3-2-2-2 (1)" label="3-2-2-2 (1)">3-2-2-2 (1)</span>
 
-<span id="3-2-2-2 (1a)" label="3-2-2-2 (1a)">3-2-2-2 (1a)</span> 
+<span id="3-2-2-2 (1a)" label="3-2-2-2 (1a)">3-2-2-2 (1a)</span>
 
 ```
 John's car
 (c/ car
 	:poss (p/ person
 		:name (n/ name	:op1 "John"))
-	:ref-number Singular)
+	:refer-number singular)
 ```
-<span id="3-2-2-2 (1b)" label="3-2-2-2 (1b)">3-2-2-2 (1b)</span> 
+<span id="3-2-2-2 (1b)" label="3-2-2-2 (1b)">3-2-2-2 (1b)</span>
 ```
 Guitar strings
 (s/ string
 	:part (g/ guitar)
-	:ref-number Plural)
+	:refer-number plural)
 ```
 Typifying modifiers, on the other hand, "enrich the referent description by subcategorizing it or selecting the quantity (cardinality, amount, proportion, piece) of the
 category or type denoted by the head noun." For such modifiers, a high-level, coarse-grained relation `:mod` is available. For example, in <a href="#3-2-2-2 (2a)">(2a)</a>, the modifier *women* does not narrow down the reference of *magazine* to a specific identifiable instance, but rather to a subclass of magazines. It is therefore annotated with the `:mod` relation, as opposed to a phrase like *that woman's magazine*, where *woman* would be annotated with the `:poss` relation. The `:mod` relation additionally inherits some uses from UMR. It is used to annotate demonstrative determiners, and it is used to annotate property concept modifiers that do not have their own frame files. Those uses are exemplified in <a href="#3-2-2-2 (2b)">(2b)</a>-<a href="#3-2-2-2 (2c)">(2c)</a> A number of more fine-grained subtypes of the `:mod` relation are also available - `:age`, for indicating the age of referents as in <a href="#3-2-2-2 (2d)">(2d)</a>; `:group`, for indicating the membership of groups <a href="#3-2-2-2 (2e)">(2e)</a>; `:topic`, for indicating what a referent is about as in <a href="#3-2-2-2 (2f)">(2f)</a>, and `:medium` for indicating channels of communication, such as languages as in <a href="#3-2-2-2 (2g)">(2g)</a>.
 
-<span id="3-2-2-2 (2)" label="3-2-2-2 (2)">3-2-2-2 (2)</span> 
+<span id="3-2-2-2 (2)" label="3-2-2-2 (2)">3-2-2-2 (2)</span>
 
-<span id="3-2-2-2 (2a)" label="3-2-2-2 (2a)">3-2-2-2 (2a)</span> 
+<span id="3-2-2-2 (2a)" label="3-2-2-2 (2a)">3-2-2-2 (2a)</span>
 ```
 a women's magazine
 (m/ magazine
 	:mod (w/ woman)
-	:ref-number Singular)
+	:refer-number singular)
 ```
-<span id="3-2-2-2 (2b)" label="3-2-2-2 (2b)">3-2-2-2 (2b)</span> 
+<span id="3-2-2-2 (2b)" label="3-2-2-2 (2b)">3-2-2-2 (2b)</span>
 ```
 These shirts of mine
 (s/ shirt
 	:poss (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:mod (t/ these)
-	:ref-number Plural)
+	:refer-number plural)
 ```
-<span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">3-2-2-2 (2c)</span> 
+<span id="3-2-2-2 (2c)" label="3-2-2-2 (2c)">3-2-2-2 (2c)</span>
 ```
 My quirky shirts
 (s/ shirt
 	:poss (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:mod (q/ quirky)
-	:ref-number Plural)
+	:refer-number plural)
 ```
-<span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">3-2-2-2 (2d)</span> 
+<span id="3-2-2-2 (2d)" label="3-2-2-2 (2d)">3-2-2-2 (2d)</span>
 ```
 The thirty year-old man
 (m/ man
 	:age (t/ temporal-quantity
 		:quant 30
 		:unit (y/ year))
-	:ref-number Singular)
+	:refer-number singular)
 ```
-<span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">3-2-2-2 (2e)</span> 
+<span id="3-2-2-2 (2e)" label="3-2-2-2 (2e)">3-2-2-2 (2e)</span>
 
 ```
 A swarm of bees
 (s/ swarm
 	:group (b/ bee
-		:ref-number Plural))
+		:refer-number plural))
 ```
-<span id="3-2-2-2 (2f)" label="3-2-2-2 (2f)">3-2-2-2 (2f)</span> 
+<span id="3-2-2-2 (2f)" label="3-2-2-2 (2f)">3-2-2-2 (2f)</span>
 
 ```
 Information about the case
@@ -4974,7 +4992,7 @@ Information about the case
 	:topic (c/ case))
 ```
 
-<span id="3-2-2-2 (2g)" label="3-2-2-2 (2g)">3-2-2-2 (2g)</span> 
+<span id="3-2-2-2 (2g)" label="3-2-2-2 (2g)">3-2-2-2 (2g)</span>
 ```
 a French song
 (t/ thing
@@ -4990,37 +5008,37 @@ a French song
 
 A number of relations serve to modify events rather than objects - they are used to annotate circumstantial locative and temporal information rather than participants. The `:direction` and `:path` relations are used to annotate cardinal directions and extended spatial paths, respectively, as in <a href="#3-2-2-3 (1a)">(1a)</a> and <a href="#3-2-2-3 (1b)">(1b)</a>. The `:duration` and `:frequency` relations, illustrated in <a href="#3-2-2-3 (1c)">(1c)</a>-<a href="#3-2-2-3 (1e)">(1e)</a>, are optionally used to annotate aspectual information that may be overtly present but that cannot be captured in the `:aspect` attribute - as clarified in [Part 3-3-1](#part-3-3-1-Aspect), the latter abstracts away from duration and frequency information.
 
-<span id="3-2-2-3 (1)" label="3-2-2=3 (1)">3-2-2-3 (1)</span> 
+<span id="3-2-2-3 (1)" label="3-2-2=3 (1)">3-2-2-3 (1)</span>
 
-<span id="3-2-2-3 (1a)" label="3-2-2-3 (1a)">3-2-2-3 (1a)</span> 
+<span id="3-2-2-3 (1a)" label="3-2-2-3 (1a)">3-2-2-3 (1a)</span>
 ```
 He drove west.
 (d/ drive-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:direction (w/ west)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-2-3 (1b)" label="3-2-2-3 (1b)">3-2-2-3 (1b)</span> 
+<span id="3-2-2-3 (1b)" label="3-2-2-3 (1b)">3-2-2-3 (1b)</span>
 ```
 He drove through the tunnel.
 (d/ drive-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:path (t/ tunnel)
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-2-3 (1c)" label="3-2-2-3 (1c)">3-2-2-3 (1c)</span> 
+<span id="3-2-2-3 (1c)" label="3-2-2-3 (1c)">3-2-2-3 (1c)</span>
 ```
 I visited New York City for a week.
 (v/ visit-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5030,16 +5048,16 @@ I visited New York City for a week.
 	:duration (t/ temporal-quantity
 		:quant 1
 		:unit (w/ week))
-	:aspect Endeavor
-	:modstr FullAff)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-2-3 (1d)" label="3-2-2-3 (1d)">3-2-2-3 (1d)</span> 
+<span id="3-2-2-3 (1d)" label="3-2-2-3 (1d)">3-2-2-3 (1d)</span>
 ```
 I visited New York City twice.
 (v/ visit-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5047,16 +5065,16 @@ I visited New York City twice.
 			:op3 "City")
 		:wiki "New_York_City")
 	:frequency 2
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-2-3 (1e)" label="3-2-2-3 (1e)">3-2-2-3(1e)</span> 
+<span id="3-2-2-3 (1e)" label="3-2-2-3 (1e)">3-2-2-3(1e)</span>
 ```
 I visit New York City every December.
 (v/ visit-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5066,8 +5084,8 @@ I visit New York City every December.
 	:frequency (r/ rate-entity-91
 		:ARG4 (d/ date-entity
 			:month 12))
-	:aspect Habitual
-	:modstr FullAff)
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
 
 [Back to Table of Contents](#toc)
@@ -5076,20 +5094,20 @@ I visit New York City every December.
 
 The relations `:name`, `:wiki`, and `:opX` are mostly used in the treatment of named entities. Whenever an entity is explicitly mentioned by name in the text to be annotated, it receives a `:name` relation, whose daughter is an `(n/ name)` node. This node then has as many numbered `:opX` relations as the number of words this name consists of, each of which takes one of these words as their daughter. In <a href="#3-2-2-3 (1e)">\[3-2-2-3 (1e)\]</a> above, for example, the `(n/ name)` concept corresponding to *New York City* takes an `:op1`, `:op1`, and `:op3` relation, one for each orthographic word. Named entities can also take a `:wiki` relation, whose daughter is the title of the Wikipedia page corresponding to the entity in question. Numbered `:opX` relations are also used as the daughters of various abstract concepts used for expressing relations between clauses or phrases (e.g. coordination), as in <a href="#3-2-2-4 (1)">(1)</a>.
 
-<span id="3-2-2-4 (1)" label="3-2-2 (5)">3-2-2-4 (1)</span> 
+<span id="3-2-2-4 (1)" label="3-2-2 (5)">3-2-2-4 (1)</span>
 ```
 I saw a spider and a snake.
 (s/ see-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (a/ and
 		:op1 (s2/ spider
-			:ref-number Singular)
+			:refer-number singular)
 		:op2 (s3/ snake
-			:ref-number Singular))
-	:aspect State
-	:modstr FullAff)
+			:refer-number singular))
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 [Back to Table of Contents](#toc)
@@ -5098,15 +5116,15 @@ I saw a spider and a snake.
 
 The `:ord`, `:quant`, `:range`, `:scale`, `:unit`, and `:value` relations are used to annotate semantics of quantification, as illustrated in <a href="#3-2-2-5 (1)">(1)</a>. The `:ord` role is used to express ordinals. It always takes an `(o/ ordinal-entity)` concept as its daughter, which in turn takes a `:value` relation to express the ordinal position, as in <a href="#3-2-2-5 (1a)">(1a)</a>. It may furthermore take a `:range` relation to indicate a specific time period in which the relevant ordinal position holds, as in <a href="#3-2-2-5 (1b)">(1b)</a>. The `:value` relation is, apart from ordinals, used for annotating percentages, phone numbers, e-mail addresses, and urls, as illustrated in <a href="#3-2-2-5 (1c)">(1c)</a> and <a href="#3-2-2-5 (1d)">(1d)</a>. The `:quant` relation is used for annotating both exact and approximate cardinalities of sets of countable objects as in <a href="#3-2-2-5 (1e)">(1e)</a> and <a href="#3-2-2-5 (1f)">(1f)</a>, as well as for the number of "units" of non-countable substances, as in <a href="#3-2-2-5 (1g)">(1g)</a>. This latter use includes temporal durations and spatial distances, as in <a href="#3-2-2-3 (1c)">\[3-2-2-3 (1c)\]</a> above. The `:unit` relation is used for both standardized, well-established units such as dollars in <a href="#3-3-2 (1a)">\[3-3-2 (1a)\]</a> below or weeks in <a href="#3-2-2-3 (1c)">\[3-2-2-3 (1c)\]</a> above, and for ad-hoc mensural constructions, such as cups in <a href="#3-2-2-5 (1g)">(1g)</a>. Lastly, the `:scale` relation is used for quantities where a `:quant 0` value does not actually represent a 0-quantity, such as on the Richter or Decibel scale, as in <a href="#3-2-2-5 (1h)">(1h)</a>.
 
-<span id="3-2-2-5 (1)" label="3-2-2-5 (1)">3-2-2-5 (1)</span> 
+<span id="3-2-2-5 (1)" label="3-2-2-5 (1)">3-2-2-5 (1)</span>
 
-<span id="3-2-2-5 (1a)" label="3-2-2-5 (1a)">3-2-2-5 (1a)</span> 
+<span id="3-2-2-5 (1a)" label="3-2-2-5 (1a)">3-2-2-5 (1a)</span>
 ```
 I visited New York for the third time.
 (v/ visit-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5114,16 +5132,16 @@ I visited New York for the third time.
 		:wiki "New_York_City")
 	:ord (o/ ordinal-entity
 		:value 3)
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-2-5 (1b)" label="3-2-2-5 (1b)">3-2-2-5 (1b)</span> 
+<span id="3-2-2-5 (1b)" label="3-2-2-5 (1b)">3-2-2-5 (1b)</span>
 ```
 I visited New York for the third time in six months.
 (v/ visit-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (c/ city
 		:name (n/ name
 			:op1 "New"
@@ -5134,41 +5152,41 @@ I visited New York for the third time in six months.
 		:range (t/ temporal-quantity
 			:quant 6
 			:unit (m/ month)))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-2-2-5 (1c)" label="3-2-2 (6c)">3-2-2-5 (1c)</span> 
+<span id="3-2-2-5 (1c)" label="3-2-2 (6c)">3-2-2-5 (1c)</span>
 ```
 30 percent
 (p/ percentage-entity
 	:value 30)
 ```
-<span id="3-2-2-5 (1d)" label="3-2-2-5 (1d)">3-2-2-5 (1d)</span> 
+<span id="3-2-2-5 (1d)" label="3-2-2-5 (1d)">3-2-2-5 (1d)</span>
 ```
 http://umr-tool.cs.brandeis.edu/display_post
 (u/ url-entity
 	:value "http://umr-tool.cs.brandeis.edu/display_post")
 ```
-<span id="3-2-2-5 (1e)" label="3-2-2-5 (1e)">3-2-2-5 (1e)</span> 
+<span id="3-2-2-5 (1e)" label="3-2-2-5 (1e)">3-2-2-5 (1e)</span>
 ```
 Three houses
 (h/ house
 	:quant 3)
 ```
-<span id="3-2-2-5 (1f)" label="3-2-2-5 (1f)">3-2-2-5 (1f)</span> 
+<span id="3-2-2-5 (1f)" label="3-2-2-5 (1f)">3-2-2-5 (1f)</span>
 ```
 More than three houses
 (h/ house
 	:quant (m/ more-than :op1 3))
 ```
-<span id="3-2-2-5 (1g)" label="3-2-2-5 (1g)">3-2-2-5 (1g)</span> 
+<span id="3-2-2-5 (1g)" label="3-2-2-5 (1g)">3-2-2-5 (1g)</span>
 ```
 Three cups of milk
 (m/ milk
 	:quant 3
 	:unit (c/ cup))
 ```
-<span id="3-2-2-5 (1h)" label="3-2-2-5 (1h)">3-2-2-5 (1h)</span> 
+<span id="3-2-2-5 (1h)" label="3-2-2-5 (1h)">3-2-2-5 (1h)</span>
 ```
 6.5 on the Richter scale
 (s/ seismic-quantity
@@ -5182,9 +5200,9 @@ Three cups of milk
 
 The `:example` relation, illustrated in <a href="#3-2-2-6 (1a)">(1a)</a>, is used to annotate illustrative examples of object categories. The `:polite` relation is used to indicate that an utterance (often a command) is marked for deference with respect to the interlocutor, as in <a href="#3-2-2-6 (1b)">(1b)</a>. The `:li` relation is used to mark entities as entries on a bulleted list, as in <a href="#3-2-2-6 (1c)">(1c)</a>.
 
-<span id="3-2-2-6 (1)" label="3-2-2-6 (1)">3-2-2-6 (1)</span> 
+<span id="3-2-2-6 (1)" label="3-2-2-6 (1)">3-2-2-6 (1)</span>
 
-<span id="3-2-2-6 (1a)" label="3-2-2-6 (1a)">3-2-2-6 (1a)</span> 
+<span id="3-2-2-6 (1a)" label="3-2-2-6 (1a)">3-2-2-6 (1a)</span>
 ```
 Countries like Germany and France
 (c/ country
@@ -5196,37 +5214,37 @@ Countries like Germany and France
 			:name (n2/ name	:op1 "France")
 			:wiki "France")))
 ```
-<span id="3-2-2-6 (1b)" label="3-2-2-6 (1b)">3-2-2-6 (1b)</span> 
+<span id="3-2-2-6 (1b)" label="3-2-2-6 (1b)">3-2-2-6 (1b)</span>
 ```
 Could you close the window?
 (c/ close-01
 	:ARG0 (p/ person
-		:ref-person 2nd
-		:ref-number Singular)
+		:refer-person 2nd
+		:refer-number singular)
 	:ARG1 (w/ window)
-	:aspect Performance
+	:aspect performance
 	:mode Imperative
 	:polite +)
 ```
 
-<span id="3-2-2-6 (1c)" label="3-2-2-6 (1c)">3-2-2-6 (1c)</span> 
+<span id="3-2-2-6 (1c)" label="3-2-2-6 (1c)">3-2-2-6 (1c)</span>
 ```
 I will buy (a) rice, (b) beans, and (c) onions.
 (b/ buy-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (and
 		:op1 (r/ rice
 			:li "(a)")
 		:op2 (b/ bean
-			:ref-number Plural
+			:refer-number plural
 			:li "(b)")
 		:op3 (o/ onion
-			:ref-number Plural
+			:refer-number plural
 			:li "(c)")
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 The `:condition` and `:concession` relations are alternative ways of annotating the `have-condition-91` and `have-concession-91` predicates - their use is detailed in [Part 4-3](#part-4-3-modal-dependency).
@@ -5236,15 +5254,15 @@ Lastly, annotators have at their disposal an `:other-role` relation, as already 
 [Back to Table of Contents](#toc)
 
 ### Part 3-3. UMR attributes
-  
+
 #### Part 3-3-1. Aspect
 
-The aspect annotation consists of a single value that is annotated for
-every event identified in [Part 3-1-1](#part-3-1-1-eventive-concepts). The aspect annotation doesn’t
-have distinct annotation stages, unlike modality and participant roles.
-Instead it relies on a typological lattice which ranges from very
-coarse-grained to very fine-grained aspectual values. It’s expected that
-languages at an earlier stage of semantic analysis or annotation will
+The aspect annotation consists of a single value that is annotated for every
+event identified in [Part 3-1-1](#part-3-1-1-eventive-concepts). The aspect
+annotation doesn’t have distinct annotation stages, unlike modality and
+participant roles. Instead it relies on a typological lattice which ranges
+from very coarse-grained to very fine-grained aspectual values. It’s expected
+that languages at an earlier stage of semantic analysis or annotation will
 tend to use more coarse-grained values, and languages at later stages of
 annotation will tend to use more fine-grained values.
 
@@ -5252,36 +5270,41 @@ This is also heavily dependent on the aspectual distinctions that are
 grammaticalized and/or obligatory in the language. For example, although
 English has a long history of semantic analysis and many computational
 resources, it has very little overt aspectual marking in its grammar and
-therefore the most fine-grained aspect distinctions are very difficult
-to judge in annotation. This aspect lattice is shown below. 
+therefore the most fine-grained aspect distinctions are very difficult to
+judge in annotation. This aspect lattice is shown below.
 
 ![Aspect lattice](https://github.com/umr4nlp/umr-guidelines/blob/master/Guidelines_figures/Aspect%20Lattice_2022.png)
 
+Additional values have been added later in the [working spreadsheet](https://docs.google.com/spreadsheets/d/1PVxgXW3ED3OWLieie9scr6iq_xuQ5RAA8YJKwbLwJ2E/edit?gid=536620417#gid=536620417)
+but they are not yet reflected in the lattice above.
+
 Below are the aspect values with a brief definition.
 
-```habitual```: occurs/occurred usually or habitually  
-```imperfective```: ambiguous between state and atelic process  
-```process```: unspecified type of process  
-```atelic process```: process that does not reach a result state  
-```perfective```: process that comes to an end  
-```state```: unspecified type of state  
-```reversible state```: acquired state that is not permanent  
-```irreversible state```: acquired state that is permanent  
-```inherent state```: state that is not acquired and permanent  
-```point state```: state that is acquired and reversed at a single point in time  
-```activity```: process that does not end  
-```undirected activity```: process that does not end and does not progress linearly along a scale  
-```directed activity```: process that does not end and does progress linearly along a scale  
-```endeavor```: process that ends without reaching a result state  
-```semelfactive```: process that ends without reaching a result state and happens at a single point in time  
-```undirected endeavor```: process that ends without reaching a result state and does not progress linearly along a scale  
-```directed endeavor```: process that ends without reaching a result state and progresses linearly along a scale  
-```performance```: process that ends and  reaches a result state  
-```incremental accomplishment```: process that ends and reaches a result state, and progresses linearly along a scale  
-```nonincremental accomplishment```: process that ends and reaches a result state, and does not progress linearly along a scale  
-```directed achievement```: process that ends and reaches a result state within a single point in time, and progresses linearly along a scale  
-```reversible directed achievement```: process that ends and reaches a result state, which is not permanent, within a single point in time, and progresses linearly along a scale  
-```irreversible directed achievement```: process that ends and reaches a result state, which is permanent, within a single point in time, and progresses linearly along a scale  
+* ```habitual```: occurs/occurred usually or habitually
+* ```generic```: the event iterates over an entire class of participants (happens in general) (new value)
+* ```imperfective```: ambiguous between state and atelic process
+  * ```inceptive```: an activity or state begins (new value)
+* ```process```: unspecified type of process
+* ```atelic-process```: process that does not reach a result state
+* ```perfective```: process that comes to an end
+* ```state```: unspecified type of state
+  * ```reversible-state```: acquired state that is not permanent
+  * ```irreversible-state```: acquired state that is permanent
+  * ```inherent-state```: state that is not acquired and permanent
+  * ```point-state```: state that is acquired and reversed at a single point in time
+* ```activity```: process that does not end
+  * ```undirected-activity```: process that does not end and does not progress linearly along a scale
+  * ```directed-activity```: process that does not end and does progress linearly along a scale
+* ```endeavor```: process that ends without reaching a result state
+  * ```semelfactive```: process that ends without reaching a result state and happens at a single point in time
+  * ```undirected-endeavor```: process that ends without reaching a result state and does not progress linearly along a scale
+  * ```directed-endeavor```: process that ends without reaching a result state and progresses linearly along a scale
+* ```performance```: process that ends and  reaches a result state
+  * ```incremental-accomplishment```: process that ends and reaches a result state, and progresses linearly along a scale
+  * ```nonincremental-accomplishment```: process that ends and reaches a result state, and does not progress linearly along a scale
+  * ```directed-achievement```: process that ends and reaches a result state within a single point in time, and progresses linearly along a scale
+    * ```reversible-directed-achievement```: process that ends and reaches a result state, which is not permanent, within a single point in time, and progresses linearly along a scale
+    * ```irreversible-directed-achievement```: process that ends and reaches a result state, which is permanent, within a single point in time, and progresses linearly along a scale
 
 In order to select the appropriate annotation value for each event,
 annotators proceed through a series of decisions.
@@ -5290,13 +5313,14 @@ annotators proceed through a series of decisions.
 
 ##### Part 3-3-1-1. Event Nominals
 
-The first decision concerns the morphosyntactic expression of the event. Events expressed as nominals often lack any grammatical clues as to their aspectual structure. This makes determining an aspectual
-annotation value difficult. We do, however, know that these events are
-processes, and not states, since nominals expressing states are not
-identified as events. On the lattice,
-```process``` is the aspectual value that includes all types of processes. Therefore, events expressed as event
-nominals, as in <a href="#3-3-1-1 (1)">(1)</a>, are annotated as
-```process```.
+The first decision concerns the morphosyntactic expression of the event.
+Events expressed as nominals often lack any grammatical clues as to their
+aspectual structure. This makes determining an aspectual annotation value
+difficult. We do, however, know that these events are processes, and not
+states, since nominals expressing states are not identified as events. On the
+lattice, ```process``` is the aspectual value that includes all types of
+processes. Therefore, events expressed as event nominals, as in <a
+href="#3-3-1-1 (1)">(1)</a>, are annotated as ```process```.
 
 
 <span id="3-3-1-1 (1)" label="3-3-1-1 (1)">3-3-1 (1)</span>
@@ -5306,30 +5330,30 @@ nominals, as in <a href="#3-3-1-1 (1)">(1)</a>, are annotated as
 He presented his research at the meeting yesterday.
 (p/ present-01
 	:ARG0 (p2/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (t/ thing
 		:ARG1-of (r/ research-01
 			:ARG0 p2))
 	:place (m/ meet-01
-		:aspect Process)
+		:aspect process)
 	:temporal (y/ yesterday)
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">3-3-1-1 (1b)</span>   
+<span id="3-3-1-1 (1b)" label="3-3-1-1 (1b)">3-3-1-1 (1b)</span>
 ```
 After the game, she went home.
 (g/ go-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG4 (h/ home)
 	:temporal (a/ after
 		:op1 (g2/ game
-			:aspect Process))
-	:aspect Performance
-	:modstr FullAff)
+			:aspect process))
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 Any event packaged in a referring expression is considered an event
 nominal and annotated with `process`. This
@@ -5337,31 +5361,31 @@ includes underived nominals, nominalizations, and gerunds, as in <a href="#3-3-1
 
 <span id="3-3-1-1 (2)" label="3-3-1-1 (2)">3-3-1-1 (2)</span>
 
-<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">3-3-1-1 (2a)</span>   
+<span id="3-3-1-1 (2a)" label="3-3-1-1 (2a)">3-3-1-1 (2a)</span>
 ```
 The second training was cancelled yesterday.
 (c/ cancel-01
 	:ARG1 (t/ train-01
 		:ord (o/ ordinal-entity
 			:value 2)
-		:aspect Process)
+		:aspect process)
 	:temporal (y/ yesterday)
-	:aspect Performance
-	:modstr FullAff) 
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">3-3-1-1 (2b)</span>   
+<span id="3-3-1-1 (2b)" label="3-3-1-1 (2b)">3-3-1-1 (2b)</span>
 ```
 The dog interrupted the meeting with his barking.
 (i/ interrupt-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG1 (m/ meet-01
-		:aspect Process)
+		:aspect process)
 	:manner (b/ bark-01
 		:ARG0 d
-		:aspect Process)
-	:aspect Performance
-	:modstr FullAff) 
+		:aspect process)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
 Note that *-ing* forms in English can occur in a variety of
@@ -5387,48 +5411,47 @@ It was **an earthquake**.
 
 ##### Part 3-3-1-2. Habitual
 
-The next step concerns the application of the
-```habitual``` aspect value. This value should
-be applied to all events that are presented as occurring usually or
-habitually, as in <a href="#3-3-1-2 (1)">(1)</a>.
+The next step concerns the application of the ```habitual``` aspect value.
+This value should be applied to all events that are presented as occurring
+usually or habitually, as in <a href="#3-3-1-2 (1)">(1)</a>.
 
 
 <span id="3-3-1-2 (1)" label="3-3-1-2 (1)">3-3-1-2 (1)</span>
 
-<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">3-3-1-2 (1a)</span> 
+<span id="3-3-1-2 (1a)" label="3-3-1-2 (1a)">3-3-1-2 (1a)</span>
 ```
 He bakes pies.
 (b/ bake-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (p2/ pie
-		:ref-number Plural)
-	:aspect Habitual
-	:modstr FullAff) 
+		:refer-number plural)
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">3-3-1-2 (1b)</span>  
+<span id="3-3-1-2 (1b)" label="3-3-1-2 (1b)">3-3-1-2 (1b)</span>
 ```
 She rides her bike to work.
 (r/ ride-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (b/ bike
 		:poss p)
 	:goal (w/ work-01
 		:ARG0 p
-		:aspect Process)
-	:aspect Habitual
-	:modstr FullAff)
+		:aspect process)
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">3-3-1-2 (1c)</span>   
+<span id="3-3-1-2 (1c)" label="3-3-1-2 (1c)">3-3-1-2 (1c)</span>
 ```
 They vacation in Taos every winter.
 (v/ vacation-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG (c/ city
 		:name (n/ name :op1 "Taos")
 		:wiki "Taos_New_Mexico")
@@ -5437,16 +5460,16 @@ They vacation in Taos every winter.
 			:quant 1
 			:unit (y/ year))
 		:ARG4 (w/ winter))
-	:aspect Habitual
-	:modstr FullAff)  
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-2 (1d)" label="3-3-1-2 (1d)">3-3-1-2 (1d)</span>
 ```
 They used to vacation in Taos every winter.
 (v/ vacation-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG1 (c/ city
 		:name (n/ name :op1 "Taos")
 		:wiki "Taos_New_Mexico")
@@ -5455,8 +5478,8 @@ They used to vacation in Taos every winter.
 			:quant 1
 			:unit (y/ year))
 		:ARG4 (w/ winter))
-	:aspect Habitual
-	:modstr FullAff)   
+	:aspect habitual
+	:modal-strength full-affirmative)
 ```
 
 In English, present habitual events are signalled by the Simple Present
@@ -5468,69 +5491,74 @@ pie*); see example [3-3-1-3 (3)](#3-3-1-3 (3)) for handling ability modals.
 [Back to Table of Contents](#toc)
 ##### Part 3-3-1-3. State
 
-The next step assesses whether the event is a
-```state```. The distinction between states and
-processes is necessary for event identification (as states are only
-identified as events when predicated, see [Part 3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states are those events which are stative—that is, no change takes place over the course of the event. There are various ways to express states in predication, shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the non-verbal clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities) and annotated with UMR predicates are annotated as ```state```.
+The next step assesses whether the event is a ```state```. The distinction
+between states and processes is necessary for event identification (as states
+are only identified as events when predicated, see [Part
+3-1-1](#part-3-1-1-eventive-concepts)). According to Vendler (1967), states
+are those events which are stative—that is, no change takes place over the
+course of the event. There are various ways to express states in predication,
+shown in <a href="#3-3-1-3 (1)">(1)</a>; note that all of the non-verbal
+clause types identified in [Part 3-1-1-3](#part-3-1-1-3-states-and-entities)
+and annotated with UMR predicates are annotated as ```state```.
 
 
 <span id="3-3-1-3 (1)" label="3-3-1-3 (1)">3-3-1-3 (1)</span>
 
-<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">3-3-1-3 (1a)</span>  
+<span id="3-3-1-3 (1a)" label="3-3-1-3 (1a)">3-3-1-3 (1a)</span>
 ```
 My cat loves tuna.
 (l/ love-01
 	:ARG0 (c/ cat
 		:poss (p/ person
-			:ref-person 1st
-			:ref-number Singular)
-		:ref-number Singular)
+			:refer-person 1st
+			:refer-number singular)
+		:refer-number singular)
 	:ARG1 (t/ tuna)
-	:aspect State
-	:modstr FullAff)  
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">3-3-1-3 (1b)</span>  
+<span id="3-3-1-3 (1b)" label="3-3-1-3 (1b)">3-3-1-3 (1b)</span>
 ```
 The doctor is tall.
 (h/ have-mod-91
 	:ARG1 (d/ doctor
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (t/ tall)
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">3-3-1-3 (1c)</span>   
+<span id="3-3-1-3 (1c)" label="3-3-1-3 (1c)">3-3-1-3 (1c)</span>
 ```
 The book is on the table.
 (h/ have-place-91
 	:ARG1 (b/ book
-		:ref-number Singular)
+		:refer-number singular)
 	:ARG2 (t/ table)
-	:aspect State
-	:modstr FullAff)  
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">3-3-1-3 (1d)</span>   
+<span id="3-3-1-3 (1d)" label="3-3-1-3 (1d)">3-3-1-3 (1d)</span>
 ```
 She is an architect.
 (h/ have-role-91
 	:ARG1 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG3 (a/ architect)
-	:aspect State
-	:modstr FullAff) 
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">3-3-1-3 (1e)</span>   
+<span id="3-3-1-3 (1e)" label="3-3-1-3 (1e)">3-3-1-3 (1e)</span>
 ```
 Your glass is in the kitchen.
-(h/ have-place-91 
+(h/ have-place-91
 	:ARG1 (g/ glass
 		:poss (p/ person
-			:ref-person 2nd
-			:ref-number Singular))
+			:refer-person 2nd
+			:refer-number singular))
 	:ARG2 (k/ kitchen)
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 Modal verbs, as in <a href="#3-3-1-3 (2)">(2)</a>, and events under the scope of
@@ -5539,99 +5567,104 @@ ability modals, as in <a href="#3-3-1-3 (3)">(3)</a>, are also annotated as
 
 <span id="3-3-1-3 (2)" label="3-3-1-3 (2)">3-3-1-3 (2)</span>
 
-<span id="3-3-1-3 (2a)" label="3-3-1-3 (2a)">3-3-1-3 (2a)</span>  
+<span id="3-3-1-3 (2a)" label="3-3-1-3 (2a)">3-3-1-3 (2a)</span>
 ```
-He wants to travel to Albuquerque. 
+He wants to travel to Albuquerque.
 (w/ want-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (t/ travel-01
 		:ARG0 p
 		:ARG4 (c/ city
 			:name (n/ name :op1 "Albuquerque")
 			:wiki "Albuquerque")
-		:aspect Performance
-		:modpred w)
-	:aspect State
-	:modstr FullAff)
+		:aspect performance
+		:modal-predicate w)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">3-3-1-3 (2b)</span> 
+<span id="3-3-1-3 (2b)" label="3-3-1-3 (2b)">3-3-1-3 (2b)</span>
 ```
 The cat needs to be fed.
 (n/ need-01
 	:ARG0 (c/ cat)
 	:ARG1 (f/ feed-01
 		:ARG c
-		:aspect Performance
-		:modpred n)
-	:aspect State
-	:modstr FullAff)
+		:aspect performance
+		:modal-predicate n)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">3-3-1-3 (2c)</span>   
+<span id="3-3-1-3 (2c)" label="3-3-1-3 (2c)">3-3-1-3 (2c)</span>
 ```
 He’s dreading their decision.
-(d/ dread  
+(d/ dread
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (d2/ decide-01
 		:ARG0 (p2/ person
-			:ref-person 3rd
-			:ref-person Plural)
-		:aspect Process
-		:modpred d)
-	:aspect State
-	:modstr FullAff)
+			:refer-person 3rd
+			:refer-number plural)
+		:aspect process
+		:modal-predicate d)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-3 (3)" label="3-3-1-3 (3)">3-3-1-3 (3)</span>
 
-<span id="3-3-1-3 (3a)" label="3-3-1-3 (3a)">3-3-1-3 (3a)</span>   
+<span id="3-3-1-3 (3a)" label="3-3-1-3 (3a)">3-3-1-3 (3a)</span>
 ```
 She is able to sing that aria.
 (s/ sing-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (a/ aria
 		:mod (t/ that)
-		:ref-number Singular)
-	:aspect State
-	:modstr NeutAff)
+		:refer-number singular)
+	:aspect state
+	:modal-strength neutral-affirmative)
 ```
-<span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">3-3-1-3 (3b)</span>   
+<span id="3-3-1-3 (3b)" label="3-3-1-3 (3b)">3-3-1-3 (3b)</span>
 ```
 This car can go up to 150 mph.
 (g/ go-01
 	:ARG0 (c/ car
 		:mod (t/ this)
-		:ref-number Singular)
+		:refer-number singular)
 	:manner (s/ speed-quantity
 		:quant 150
 		:unit (m/ miles-per-hour))
-	:aspect State
-	:modstr NeutAff)
+	:aspect state
+	:modal-strength neutral-affirmative)
 ```
-In this analysis, ability modals refer to a static state of affairs,
-i.e. an entity possesses the relevant ability. For examples like
-<a href="#3-3-1-3 (3a)">(3a)</a>, ability modals may look more like event
-quantification. That is, there are probably multiple singing events that this example is generalizing over. Examples like <a href="#3-3-1-3 (3b)">(3b)</a>, however, show how ability modals are more like states. It is possible
-that the car has never actually gone as fast as 150 mph; the car just
-has the parts and (theoretical) ability to do so. Therefore, all types
-of ability modals, both <a href="#3-3-1-3 (3a)">(3a)</a> and <a href="#3-3-1-3 (3b)">(3b)</a>, are
+
+In this analysis, ability modals refer to a static state of affairs, i.e. an
+entity possesses the relevant ability. For examples like <a href="#3-3-1-3 (3a)">(3a)</a>, ability modals may look more like event quantification. That
+is, there are probably multiple singing events that this example is
+generalizing over. Examples like <a href="#3-3-1-3 (3b)">(3b)</a>, however,
+show how ability modals are more like states. It is possible that the car has
+never actually gone as fast as 150 mph; the car just has the parts and
+(theoretical) ability to do so. Therefore, all types of ability modals, both
+<a href="#3-3-1-3 (3a)">(3a)</a> and <a href="#3-3-1-3 (3b)">(3b)</a>, are
 analyzed as states and annotated as such.
 
-There is a type of event, called “inactive actions” by Croft (2012), which is semantically intermediate between states and processes. In many languages, they can be construed either way. For example, English *lie* can occur in the Progressive (*Bill **is lying** on the bed*) or the Simple Present (*The Sandias **lie** to the east of Albuquerque*). And across languages there is variation as to the default construal of
-inactive actions. The most frequent inactive actions are posture verbs
-(*sit, stand, lie, hang*), perception verbs (*see/look at, watch,
-hear/listen to, feel*), some sensation verbs (*ache*), mental activity
-verbs (*think, understand*), and verbs of operation/function (*work* in
-*This washing machine **works/is working***). For the UMR annotation,
-inactive actions in all constructions are annotated as
-```state```. If it is unclear whether an event
-refers to a ```state``` or an
-```atelic process```, then the
-```imperfective``` annotation value is used.
+There is a type of event, called “inactive actions” by Croft (2012), which is
+semantically intermediate between states and processes. In many languages,
+they can be construed either way. For example, English *lie* can occur in the
+Progressive (*Bill **is lying** on the bed*) or the Simple Present (*The
+Sandias **lie** to the east of Albuquerque*). And across languages there is
+variation as to the default construal of inactive actions. The most frequent
+inactive actions are posture verbs (*sit, stand, lie, hang*), perception
+verbs (*see/look at, watch, hear/listen to, feel*), some sensation verbs
+(*ache*), mental activity verbs (*think, understand*), and verbs of
+operation/function (*work* in *This washing machine **works/is working***).
+For the UMR annotation, inactive actions in all constructions are annotated
+as ```state```. If it is unclear whether an event refers to a ```state``` or
+an ```atelic-process```, then the ```imperfective``` annotation value is
+used.
 
 There are different types of states, shown in
 <a href="#3-3-1-3 (4)">(4)</a>, which can optionally be distinguished in
@@ -5640,74 +5673,71 @@ the aspect annotation.
 
 <span id="3-3-1-3 (4)" label="3-3-1-3 (4)">3-3-1-3 (4)</span>
 
-<span id="3-3-1-3 (4a)" label="3-3-1-3 (4a)">3-3-1-3 (4a)</span> 
+<span id="3-3-1-3 (4a)" label="3-3-1-3 (4a)">3-3-1-3 (4a)</span>
 ```
 My cat is black and white.
 (h/ have-mod-91
 	:ARG1 (c/ cat
 		:poss (p/ person
-			:ref-person 1st
-			:ref-number Singular)
-		:ref-number Singular)
+			:refer-person 1st
+			:refer-number singular)
+		:refer-number singular)
 	:ARG2 (a/ and
 		:op1 (b/ black)
 		:op2 (w/ white)
-	:aspect Inherent State
-	:modstr FullAff)
+	:aspect inherent-state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">3-3-1-3 (4b)</span>   
+<span id="3-3-1-3 (4b)" label="3-3-1-3 (4b)">3-3-1-3 (4b)</span>
 ```
 My cat is hungry.
 (h/ hunger-01
 	:ARG0 (c/ cat
 		:poss (p/ person
-			:ref-person 1st
-			:ref-number Singular))
-		:ref-number Singular)
-	:aspect Reversible State
-	:modstr FullAff)
+			:refer-person 1st
+			:refer-number singular))
+		:refer-number singular)
+	:aspect reversible-state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">3-3-1-3 (4c)</span>   
+<span id="3-3-1-3 (4c)" label="3-3-1-3 (4c)">3-3-1-3 (4c)</span>
 ```
 The wine glass is shattered.
 (s/ shatter-01
 	:ARG1 (g/ glass
 		:purpose (w/ wine)
-		:ref-number Singular)
-	:aspect Irreversible State
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect irreversible-state
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">3-3-1-3 (4d)</span>  
+<span id="3-3-1-3 (4d)" label="3-3-1-3 (4d)">3-3-1-3 (4d)</span>
 ```
 It is 2:30pm.
 (b/ be-temporally-at-91
 	:ARG1 (n/ now)
 	:ARG2 (d/ date-entity
 		:time 14:30)
-	:aspect Point State
-	:modstr FullAff)
+	:aspect point-state
+	:modal-strength full-affirmative)
 ```
 
-Events that are annotated as ```inherent
-state```, as in <a href="#3-3-1-3 (4a)">(4a)</a>, refer to states that are
-an inherent property of the entity, i.e. they did not ‘start’ at any
-particular point in the entity’s history and are not changeable in the
-future. Events annotated as ```reversible
-state```, as in <a href="#3-3-1-3 (4b)">(4b)</a>, refer to properties of entities
-that are not inherent, meaning they have come into existence at some
-point during the entity’s history; these states are reversible, meaning
-the entity likely will revert back to its base state in the future.
-Events annotated as ```irreversible state```,
-as in <a href="#3-3-1-3 (4c)">(4c)</a>, refer to properties of entities that are not
-inherent, but cannot be reversed in the future; once acquired, these
-states are permanent. Finally, events that are annotated as
-```point state```, as in <a href="#3-3-1-3 (4d)">(4d)</a>,
-refer to states that come into and out of existence over a single point
-in time (what is considered a ‘point’ is open to construal); these
-states necessarily do not persist into the future.
+Events that are annotated as ```inherent-state```, as in <a href="#3-3-1-3 (4a)">(4a)</a>, refer to states that are an inherent property of the entity,
+i.e. they did not ‘start’ at any particular point in the entity’s history and
+are not changeable in the future. Events annotated as ```reversible-state```,
+as in <a href="#3-3-1-3 (4b)">(4b)</a>, refer to properties of entities that
+are not inherent, meaning they have come into existence at some point during
+the entity’s history; these states are reversible, meaning the entity likely
+will revert back to its base state in the future. Events annotated as
+```irreversible-state```, as in <a href="#3-3-1-3 (4c)">(4c)</a>, refer to
+properties of entities that are not inherent, but cannot be reversed in the
+future; once acquired, these states are permanent. Finally, events that are
+annotated as ```point-state```, as in <a href="#3-3-1-3 (4d)">(4d)</a>, refer
+to states that come into and out of existence over a single point in time
+(what is considered a ‘point’ is open to construal); these states necessarily
+do not persist into the future.
 
-Events that are not annotated as a type of
-```state``` move on to the next step.
+Events that are not annotated as a type of ```state``` move on to the next
+step.
 
 [Back to Table of Contents](#toc)
 
@@ -5719,33 +5749,33 @@ when there is no evidence that the event has come to an end, as in
 
 <span id="3-3-1-4 (1)" label="3-3-1-4(1)">3-3-1-4 (1)</span>
 
-<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">3-3-1-4 (1a)</span>   
+<span id="3-3-1-4 (1a)" label="3-3-1-4 (1a)">3-3-1-4 (1a)</span>
 ```
 He is still writing his paper.
 (w/ write-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (p2/ paper
 		:poss p
-		:ref-number Singular)
+		:refer-number singular)
 	:mod (s/ still)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">3-3-1-4 (1b)</span>   
+<span id="3-3-1-4 (1b)" label="3-3-1-4 (1b)">3-3-1-4 (1b)</span>
 ```
 He was writing his paper yesterday.
 (w/ write-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG1 (p2/ paper
 		:poss p
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (y/ yesterday)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 ```
 
 This covers cases where it is clear that the process is still ongoing at
@@ -5758,16 +5788,16 @@ however there are some grammatical cues that can help. Events in the
 present tense, as in <a href="#3-3-1-4 (2)">(2)</a>, are annotated as
 ```activity```.
 
-<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">3-3-1-4 (2)</span>   
+<span id="3-3-1-4 (2)" label="3-3-1-4 (2)">3-3-1-4 (2)</span>
 ```
 He is playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG2 (v/ violin)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 ```
 
 Inceptive and continuative aspectual marking, as in <a href="#3-3-1-4 (3)">(3)</a>,
@@ -5780,33 +5810,32 @@ also do not imply that an event has (necessarily) ended.
 He started playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG2 (v/ violin)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">3-3-1-4 (3b)</span>   
+<span id="3-3-1-4 (3b)" label="3-3-1-4 (3b)">3-3-1-4 (3b)</span>
 ```
 He kept on playing the violin.
 (p/ play-01
 	:ARG0 (p2/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG2 (v/ violin)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 ```
-If an annotator is unsure about whether the text indicates that an event has ended or not, the ```atelic process```
-label can be used.
 
-There are two finer-grained ```activity```
-categories which can optionally be distinguished. Certain types of
-activities describe directed change, as in
-<a href="#3-3-1-4 (4)">(4)</a>, whereas other activities describe
-undirected change, as in <a href="#3-3-1-4 (5)">(5)</a>;
-these are annotated as ```directed activity```
-and ```undirected activity``` respectively.
+If an annotator is unsure about whether the text indicates that an event has
+ended or not, the ```atelic-process``` label can be used.
+
+There are two finer-grained ```activity``` categories which can optionally be
+distinguished. Certain types of activities describe directed change, as in <a
+href="#3-3-1-4 (4)">(4)</a>, whereas other activities describe undirected
+change, as in <a href="#3-3-1-4 (5)">(5)</a>; these are annotated as
+```directed-activity``` and ```undirected-activity``` respectively.
 
 
 <span id="3-3-1-4 (4)" label="3-3-1-4 (4)">3-3-1-4 (4)</span>
@@ -5815,8 +5844,8 @@ The soup was cooling on the counter.
 (c/ cool
 	:ARG1 (s/ soup)
 	:place (c2/ counter)
-	:aspect Directed Activity
-	:modstr FullAff)
+	:aspect directed-activity
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-3-1-4 (5)" label="3-3-1-4 (5)">3-3-1-4 (5)</span>
@@ -5824,21 +5853,19 @@ The soup was cooling on the counter.
 The cat was meowing outside the door.
 (m/ meow-01
 	:ARG0 (c/ cat
-		:ref-number Singular)
+		:refer-number singular)
 	:place (o/ outside
 		:op1 (d/ door))
-	:aspect Undirected Activity
-	:modstr FullAff)
+	:aspect undirected-activity
+	:modal-strength full-affirmative)
 ```
 
-Events annotated as ```directed activity```
-refer to change that occurs gradually along a qualitative scale. In
-<a href="#3-3-1-4 (4)">(4)</a>, the temperature of the soup
-continues to decrease in a linear fashion. Events annotated as
-```undirected activity``` refer to change that
-does not progress incrementally along a scale; in
-<a href="#3-3-1-4 (5)">(5)</a>, there is no scale or gradual
-change.
+Events annotated as ```directed-activity``` refer to change that occurs
+gradually along a qualitative scale. In <a href="#3-3-1-4 (4)">(4)</a>, the
+temperature of the soup continues to decrease in a linear fashion. Events
+annotated as ```undirected-activity``` refer to change that does not progress
+incrementally along a scale; in <a href="#3-3-1-4 (5)">(5)</a>, there is no
+scale or gradual change.
 
 Events that have ended prior to document creation time and have not yet
 received an annotation move on to the next step.
@@ -5847,22 +5874,18 @@ received an annotation move on to the next step.
 
 ##### Part 3-3-1-5. Endeavor and Performance
 
-At this point, only ```perfective``` events are
-left: ```endeavor``` and
-```performance```. Both the
-```endeavor``` and
-```performance``` aspectual types entail that
-the process has come to an end; they are distinguished by the
-boundedness of the event in terms of qualitative state. The
-```performance``` value is used when the event
-reaches a result state distinct from the base (start) state, that is, a specific “natural” endpoint. The ```endeavor```
-value is used when the events ends, but does not reach a distinct result
-state. The ```performance``` value can be seen
-as the ‘default’ value for events at this step; the
-```endeavor``` value is only annotated in the
-presence of explicit marking, which may come in several forms detailed
-below. If it’s not clear which category an event fits into, it can be
-annotated as ```perfective```.
+At this point, only ```perfective``` events are left: ```endeavor``` and
+```performance```. Both the ```endeavor``` and ```performance``` aspectual
+types entail that the process has come to an end; they are distinguished by
+the boundedness of the event in terms of qualitative state. The
+```performance``` value is used when the event reaches a result state
+distinct from the base (start) state, that is, a specific “natural” endpoint.
+The ```endeavor``` value is used when the events ends, but does not reach a
+distinct result state. The ```performance``` value can be seen as the
+‘default’ value for events at this step; the ```endeavor``` value is only
+annotated in the presence of explicit marking, which may come in several
+forms detailed below. If it’s not clear which category an event fits into, it
+can be annotated as ```perfective```.
 
 The explicit aspectual markings which suggest an
 ```endeavor``` annotation are terminative
@@ -5871,17 +5894,17 @@ illustrated for English below.
 
 <span id="3-3-1-5 (1)" label="3-3-1-5 (1)">3-3-1-5 (1)</span>
 
-<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">3-3-1-5 (1a)</span>   
+<span id="3-3-1-5 (1a)" label="3-3-1-5 (1a)">3-3-1-5 (1a)</span>
 ```
 Mary stopped mowing the lawn.
 (m/ mow-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
 	:ARG1 (l/ lawn)
-	:aspect Endeavor
-	:modstr FullAff)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">3-3-1-5 (1b)</span>   
+<span id="3-3-1-5 (1b)" label="3-3-1-5 (1b)">3-3-1-5 (1b)</span>
 ```
 Mary mowed the lawn for thirty minutes.
 (m/ mow-01
@@ -5891,93 +5914,85 @@ Mary mowed the lawn for thirty minutes.
 	:duration (t/ temporal-quantity
 		:unit (m2/ minute)
 		:quant 30)
-	:aspect Endeavor
-	:modstr FullAff)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (1c)" label="3-3-1-5 (1c)">3-3-1-5 (1c)</span> \*Mary
-<u>finished</u> **mowing** the lawn <u>for thirty minutes</u>.  
+<u>finished</u> **mowing** the lawn <u>for thirty minutes</u>.
 
-<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">3-3-1-5 (1d)</span>  
+<span id="3-3-1-5 (1d)" label="3-3-1-5 (1d)">3-3-1-5 (1d)</span>
 ```
-They walked along the river. 
+They walked along the river.
 (w/ walk-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
-	:aspect Endeavor
-	:modstr FullAff)
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">3-3-1-5 (1e)</span>  
+<span id="3-3-1-5 (1e)" label="3-3-1-5 (1e)">3-3-1-5 (1e)</span>
 ```
 They finished walking <u>along the river</u>.
 (w/ walk-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
-	:aspect Performance
-	:modstr FullAff) 
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">3-3-1-5 (1f)</span>   
+<span id="3-3-1-5 (1f)" label="3-3-1-5 (1f)">3-3-1-5 (1f)</span>
 ```
 They walked along the river in 3 hours.
 (w/ walk-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG2 (a/ along
 		:op1 (r/ river))
 	:duration (t/ temporal-quantity
 		:unit (h/ hour)
 		:quant 3)
-	:aspect Performance
-	:modstr FullAff) 
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
 
-Terminative aspectual marking, such as *stop* in English, is the
-strongest evidence that an event has ended without reaching a result
-state and should therefore be annotated as
-```endeavor```. Durative adverbials, such as in
-<a href="#3-3-1-5 (1b)">(1b)</a>, are the second strongest evidence for an
-```endeavor``` annotation: they indicate that
-the event took place for a defined period of time and then ended, likely
-without completion. At least in English, durative adverbials cannot
-co-occur with completive aspectual marking; see
-<a href="#3-3-1-5 (1c)">(1c)</a>. A non-result path is the weakest evidence
-for an ```endeavor``` annotation; in the
-absence of other aspectual indicators, a non-result path requires an
-```endeavor``` annotation, as in
-<a href="#3-3-1-5 (1d)">(1d)</a>. But, if there is a completive aspectual marker,
-as in <a href="#3-3-1-5 (1e)">(1e)</a>, or a container adverbial, as in
-<a href="#3-3-1-5 (1f)">(1f)</a>, both indicators that an event has reached
-a distinct result state, then the event is annotated as
-```performance```.
+Terminative aspectual marking, such as *stop* in English, is the strongest
+evidence that an event has ended without reaching a result state and should
+therefore be annotated as ```endeavor```. Durative adverbials, such as in <a
+href="#3-3-1-5 (1b)">(1b)</a>, are the second strongest evidence for an
+```endeavor``` annotation: they indicate that the event took place for a
+defined period of time and then ended, likely without completion. At least in
+English, durative adverbials cannot co-occur with completive aspectual
+marking; see <a href="#3-3-1-5 (1c)">(1c)</a>. A non-result path is the
+weakest evidence for an ```endeavor``` annotation; in the absence of other
+aspectual indicators, a non-result path requires an ```endeavor```
+annotation, as in <a href="#3-3-1-5 (1d)">(1d)</a>. But, if there is a
+completive aspectual marker, as in <a href="#3-3-1-5 (1e)">(1e)</a>, or a
+container adverbial, as in <a href="#3-3-1-5 (1f)">(1f)</a>, both indicators
+that an event has reached a distinct result state, then the event is
+annotated as ```performance```.
 
 In the absence of any of the aspectual indicators listed above, events
 that have made it to this point in the decision tree are annotated as
 ```performance```.
 
-Both ```endeavor``` and
-```performance``` have more fine-grained
-aspectual distinctions which may optionally be annotated. Endeavors may
-be specified with ```undirected endeavor```,
-```directed endeavor```, and
-```semelfactive```. The
-```undirected endeavor``` and
-```directed endeavor``` values correspond to
-```undirected activity``` and
-```directed activity```; they differ in that
-the event has come to an end. Semelfactives refer to punctual events
-that happen once before reverting back to the base state (these are
-similar to ```point state```, but refer to a
-process), as in <a href="#3-3-1-5 (2c)">(2c)</a>.
+Both ```endeavor``` and ```performance``` have more fine-grained aspectual
+distinctions which may optionally be annotated. Endeavors may be specified
+with ```undirected-endeavor```, ```directed endeavor```, and
+```semelfactive```. The ```undirected-endeavor``` and ```directed-endeavor```
+values correspond to ```undirected-activity``` and ```directed-activity```;
+they differ in that the event has come to an end. Semelfactives refer to
+punctual events that happen once before reverting back to the base state
+(these are similar to ```point-state```, but refer to a process), as in <a
+href="#3-3-1-5 (2c)">(2c)</a>.
 
 <span id="3-3-1-5 (2)" label="3-3-1-5 (2)">3-3-1-5 (2)</span>
 
-<span id="3-3-1-5 (2a)" label="3-3-1-5 (2a)">3-3-1-5 (2a)</span> 
+<span id="3-3-1-5 (2a)" label="3-3-1-5 (2a)">3-3-1-5 (2a)</span>
 ```
 The cat meowed for two hours until I woke up.
 (m/ meow-01
@@ -5988,14 +6003,14 @@ The cat meowed for two hours until I woke up.
 	:temporal (u/ until
 		:op1 (w/ wake-01
 			:ARG1 (p/ person
-				:ref-person 1st
-				:ref-number Singular)
-			:aspect Performance
-			:modstr FullAff))
-	:aspect Undirected Endeavor
-	:modstr FullAff)
+				:refer-person 1st
+				:refer-number singular)
+			:aspect performance
+			:modal-strength full-affirmative))
+	:aspect undirected-endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">3-3-1-5 (2b)</span> 
+<span id="3-3-1-5 (2b)" label="3-3-1-5 (2b)">3-3-1-5 (2b)</span>
 ```
 The soup cooled for an hour before we ate it.
 (c/ cool-01
@@ -6006,96 +6021,89 @@ The soup cooled for an hour before we ate it.
 	:temporal (b/ before
 		:op1 (e/ eat-01
 			:ARG0 (p/ person
-				:ref-person 1st
-				:ref-number Plural)
+				:refer-person 1st
+				:refer-number plural)
 			:ARG1 s
-			:aspect Performance
-			:modstr FullAff))
-	:aspect Directed Endeavor
-	:modstr FullAff)
+			:aspect performance
+			:modal-strength full-affirmative))
+	:aspect directed-endeavor
+	:modal-strength full-affirmative)
 ```
 
-<span id="3-3-1-5 (2c)" label="3-3-1-5 (2c)">3-3-1-5 (2c)</span> 
+<span id="3-3-1-5 (2c)" label="3-3-1-5 (2c)">3-3-1-5 (2c)</span>
 ```
 The cat meowed (once).
 (m/ meow-01
 	:ARG0 (c/ cat
-		:ref-number Singular)
-	:aspect Semelfactive
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect semelfactive
+	:modal-strength full-affirmative)
 ```
 
-The finer-grained annotations for
-```performance``` distinguish between punctual
-events (```directed achievement```) and durative
-events (```incremental accomplishment```,
-```nonincremental accomplishment```), with even
-finer-grained categories based on the type of change.
+The finer-grained annotations for ```performance``` distinguish between
+punctual events (```directed-achievement```) and durative events
+(```incremental-accomplishment```, ```nonincremental-accomplishment```), with
+even finer-grained categories based on the type of change.
 
 Achievements are punctual events, meaning that they are conceptualized as
-occurring at a single point in time (like ```point
-state``` and ```semelfactive```). Unlike
-```point state``` and
-```semelfactive```, achievements don’t revert
-back to the base state, which is why they’re considered a finer-grained
-type of ```performance```. The
-```directed achievement``` annotation can be
-further specified based on whether the change is reversible or
-irreversible. In <a href="#3-3-1-5 (3a)">(3a)</a>, the change that the door
-undergoes can be reversed in that the door can be closed; therefore this
-is annotated as ```reversible directed
-achievement```. In <a href="#3-3-1-5 (3b)">(3b)</a>, the change that the
-window undergoes cannot be reversed; therefore this is annotated as
-```irreversible directed achievement```.
+occurring at a single point in time (like ```point-state``` and
+```semelfactive```). Unlike ```point-state``` and ```semelfactive```,
+achievements don’t revert back to the base state, which is why they’re
+considered a finer-grained type of ```performance```. The
+```directed-achievement``` annotation can be further specified based on
+whether the change is reversible or irreversible. In <a href="#3-3-1-5
+(3a)">(3a)</a>, the change that the door undergoes can be reversed in that
+the door can be closed; therefore this is annotated as
+```reversible-directed-achievement```. In <a href="#3-3-1-5 (3b)">(3b)</a>,
+the change that the window undergoes cannot be reversed; therefore this is
+annotated as ```irreversible-directed-achievement```.
 
-Accomplishments are durative events that can be categorized based on
-whether the change occurs incrementally or nonincrementally; this is
-similar to the difference between directed and undirected activities and
-endeavors. With ```incremental
-accomplishment```, the change occurs incrementally along the
-qualitative dimension; in <a href="#3-3-1-5 (3c)">(3c)</a>, the pancake
-is eaten piece-by-piece and each subsequent bite brings the event closer
-to completion. With ```nonincremental
-accomplishment```, the change ends up at a distinct result state (as
-with all types of Performances), but it may not get there in a
-linear/incremental fashion. In <a href="#3-3-1-5 (3d)">(3d)</a>,
-the computer does not necessarily get progressively more repaired with
-each action. Harry may try one tactic unsuccessfully to fix the
-computer; he may even make the problem worse at some point, but
-eventually succeeds in repairing the computer.
+Accomplishments are durative events that can be categorized based on whether
+the change occurs incrementally or nonincrementally; this is similar to the
+difference between directed and undirected activities and endeavors. With
+```incremental-accomplishment```, the change occurs incrementally along the
+qualitative dimension; in <a href="#3-3-1-5 (3c)">(3c)</a>, the pancake is
+eaten piece-by-piece and each subsequent bite brings the event closer to
+completion. With ```nonincremental-accomplishment```, the change ends up at a
+distinct result state (as with all types of Performances), but it may not get
+there in a linear/incremental fashion. In <a href="#3-3-1-5 (3d)">(3d)</a>,
+the computer does not necessarily get progressively more repaired with each
+action. Harry may try one tactic unsuccessfully to fix the computer; he may
+even make the problem worse at some point, but eventually succeeds in
+repairing the computer.
 
 <span id="3-3-1-5 (3)" label="3-3-1-5 (3)">3-3-1-5 (3)</span>
 
-<span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">3-3-1-5 (3a)</span> 
+<span id="3-3-1-5 (3a)" label="3-3-1-5 (3a)">3-3-1-5 (3a)</span>
 ```
 The door opened.
 (o/ open-01
 	:ARG1 (d/ door
-		:ref-number Singular)
-	:aspect Reversible Directed Achievement
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect reversible-directed-achievement
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">3-3-1-5 (3b)</span> 
+<span id="3-3-1-5 (3b)" label="3-3-1-5 (3b)">3-3-1-5 (3b)</span>
 ```
 The window shattered.
 (s/ shatter-01
 	:ARG1 (w/ window
-		:ref-number Singular)
-	:aspect Irreversible Directed Achievement
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect irreversible-directed-achievement
+	:modal-strength full-affirmative)
 ```
-<span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">3-3-1-5 (3c)</span> 
+<span id="3-3-1-5 (3c)" label="3-3-1-5 (3c)">3-3-1-5 (3c)</span>
 ```
 I ate an apple pancake.
 (e/ eat-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (p2/ pancake
 		:mod (a/ apple)
-		:ref-number Singular)
-	:aspect Incremental Accomplishment
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect incremental-accomplishment
+	:modal-strength full-affirmative)
 ```
 <span id="3-3-1-5 (3d)" label="3-3-1-5 (3d)">3-3-1-5 (3d)</span>
 ```
@@ -6104,9 +6112,9 @@ Harry repaired the computer.
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Harry"))
 	:ARG1 (c/ computer
-		:ref-number Singular)
-	:aspect Nonincremental Accomplishment
-	:modstr FullAff)
+		:refer-number singular)
+	:aspect nonincremental-accomplishment
+	:modal-strength full-affirmative)
 ```
 [Back to Table of Contents](#toc)
 
@@ -6125,15 +6133,15 @@ UMR adopts the `:mode` attribute from AMR. The values for the `:mode` attribute 
 <span id="3-3-2 (1a)" label="3-3-2 (1a)">3-3-2 (1a)</span>
 ```
 Yup , a couple of hundred dollars is going to save the day !
-(s/ save-02 
+(s/ save-02
       :ARG0 (c/ couple
             :op1 (m/ monetary-quantity
 	    	:quant 100
                 :unit (d/ dollar)))
       :ARG1 (d/ day
-      	    :ref-number Singular)
-      :aspect Performance
-      :modstr FullAff
+      	    :refer-number singular)
+      :aspect performance
+      :modal-strength full-affirmative
       :mode expressive)
 ```
 <span id="3-3-2 (1b)" label="3-3-2 (1b)">3-3-2 (1b)</span>
@@ -6141,14 +6149,14 @@ Yup , a couple of hundred dollars is going to save the day !
 Chalk another good one up to the wife .
 (c/ chalk-up-02
       :ARG0 (p/ person
-      	    :ref-person 2nd
-	    :ref-number Singular)
+      	    :refer-person 2nd
+	    :refer-number singular)
       :ARG1 (a/ another
             :ARG1-of (g/ good-02)
 	    :quant 1)
       :ARG2 (w/ wife)
-      :aspect Performance
-      :modstr PrtAff
+      :aspect performance
+      :modal-strength partial-affirmative
       :mode imperative)
 ```
 
@@ -6157,11 +6165,11 @@ Chalk another good one up to the wife .
 Did you see that?
 (s/ see-01
       :ARG0 (p/ person
-      	:ref-person 2nd
-	:ref-number Singular)
+      	:refer-person 2nd
+	:refer-number singular)
       :ARG1 (t/ that)
-      :aspect State
-      :modstr NeutAff
+      :aspect state
+      :modal-strength neutral-affirmative
       :mode interrogative
       :polarity umr-unknown)
 ```
@@ -6169,7 +6177,7 @@ Did you see that?
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-3. Polarity
-UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute `:polarity` is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in <a href="#3-3-3 (1)">(1)</a>. These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English. 
+UMR mainly treats propositional negation at the document-level in the modal dependency annotation. However, the AMR attribute `:polarity` is also maintained in the UMR sentence-level annotation. It is used to flag any morphosyntactic indicators of negation that are present in the clause, as in <a href="#3-3-3 (1)">(1)</a>. These do not necessarily signal semantic negation. This is the case, for example, for some instances of derivational negation of adjectives in English.
 
 <span id="3-3-3 (1)" label="3-3-3 (1)">3-3-3 (1)</span>
 
@@ -6200,13 +6208,21 @@ As of now , five million tickets have been sold on the StubHub website .
 		:name (n/ name :op1 "StubHub")))
       :temporal (a/ as-of
             :op1 (n2/ now))
-      :Aspect Performance)
+      :aspect performance)
 ```
 
 [Back to Table of Contents](#toc)
 
 #### Part 3-3-5. Ref
-As opposed to AMR, which uses an English-based lexical treatment of pronominal reference, UMR approaches pronominal reference and person/number marking in a cross-linguistically motivated way. It annotates person and number through two attributes - `:ref-person` for grammatical person information, and `:ref-number` for grammatical number marking. These attributes can apply to any entity concept. If an explicit nominal is marked for plural or dual number, for instance, the node for this entity concept can take the relevant attribute value label, as in <a href="#3-3-5 (1)">(1)</a>.
+
+As opposed to AMR, which uses an English-based lexical treatment of
+pronominal reference, UMR approaches pronominal reference and person/number
+marking in a cross-linguistically motivated way. It annotates person and
+number through two attributes - `:refer-person` for grammatical person
+information, and `:refer-number` for grammatical number marking. These
+attributes can apply to any entity concept. If an explicit nominal is marked
+for plural or dual number, for instance, the node for this entity concept can
+take the relevant attribute value label, as in <a href="#3-3-5 (1)">(1)</a>.
 
 <span id="3-3-5 (1)" label="3-3-5 (1)">3-3-5 (1)</span>
 
@@ -6218,9 +6234,9 @@ Bill saw rare birds today.
 		:name (n/ name	:op1 "Bill"))
 	:ARG1 (b/ bird
 		:mod (r/ rare)
-		:ref-number Plural)
-	:aspect State
-	:modstr FullAff)
+		:refer-number plural)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
 
 <span id="3-3-5 (1b)" label="3-3-5 (1b)">3-3-5 (1b)</span>
@@ -6231,10 +6247,29 @@ woman	that-3PL-EP-DU
 
 (a/ áine 'woman'
 	:mod (ŋ/ ŋara 'that')
-	:ref-number Dual)
+	:refer-number dual)
 ```
 
-For arguments expressed only through verbal cross-referencing, or arguments that are implicit, both `:ref-person` and `:ref-number` can be used to represent their pronominal features. In such cases where there is no overt nominal expression to attach those values to, UMR "hallucinates" a concept (typically a named-entity category, e.g. `person`, `thing`) to attach the attribute labels to in order to facilitate cross-lingual compatibility, as in <a href="#3-3-5 (2)">(2)</a>. In the context preceding this one-word sentence, the speaker talks about how upon first contact between the Sanapaná and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes. Here, the Sanapaná speaker describes the reaction of his ancestors to these gifts. From the prefixal indexation on the verb (2nd/3rd person masculine + distributive) and the preceding context (talking about the Sanapaná ancestors), we know that the `:actor` argument of the *eat*-verb is third person plural. Therefore, we annotate this argument with a `(p/ person)` concept, which in turn takes `:ref-person` and `:ref-number` attributes with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not explicitly expressed at all, but from previous context we know it is the food that they were offered by the Paraguayans. We therefore annotate it with a `(t/ thing)` concept that will later in the document-level annotation be marked as coreferential with a mention of 'food' in the previous context.
+For arguments expressed only through verbal cross-referencing, or arguments
+that are implicit, both `:refer-person` and `:refer-number` can be used to
+represent their pronominal features. In such cases where there is no overt
+nominal expression to attach those values to, UMR "hallucinates" a concept
+(typically a named-entity category, e.g. `person`, `thing`) to attach the
+attribute labels to in order to facilitate cross-lingual compatibility, as in
+<a href="#3-3-5 (2)">(2)</a>. In the context preceding this one-word
+sentence, the speaker talks about how upon first contact between the Sanapaná
+and Latinoparaguayans, the Paraguayans gifted the Sanapaná food and clothes.
+Here, the Sanapaná speaker describes the reaction of his ancestors to these
+gifts. From the prefixal indexation on the verb (2nd/3rd person masculine +
+distributive) and the preceding context (talking about the Sanapaná
+ancestors), we know that the `:actor` argument of the *eat*-verb is third
+person plural. Therefore, we annotate this argument with a `(p/ person)`
+concept, which in turn takes `:refer-person` and `:ref-number` attributes
+with the values `3rd` and `Plural`. The `:undergoer` of this predicate is not
+explicitly expressed at all, but from previous context we know it is the food
+that they were offered by the Paraguayans. We therefore annotate it with a
+`(t/ thing)` concept that will later in the document-level annotation be
+marked as coreferential with a mention of 'food' in the previous context.
 
 <span id="3-3-5 (2)" label="3-3-5 (2)">3-3-5 (2)</span>
 ```
@@ -6244,11 +6279,11 @@ NEG-2/3M.IRR-DSTR-eat-TI-IPFV=PHOD
 
 (e/ entoma-00 'eat'
 	:actor (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:undergoer (t/ thing)
-	:aspect Performance
-	:modstr FullNeg)
+	:aspect performance
+	:modal-strength full-negative)
 ```
 
 The possible values for the `:refer-person` attribute are based on Cysouw's (2003) cross-linguistic study of person-marking systems in the languages of the world. They are organized in a lattice as seen below. The default level of categories contains the well-known and familiar `1st`, `2nd`, and `3rd` person values. Some languages have more fine-grained person systems, distinguishing a first person `exclusive` from a first person `inclusive` value in non-singular numbers (depending on whether the interlocutor is included in the group that is being referred to). Other languages have more coarse-grained systems, making no distinction between first and second person, or between second and third person (like Sanapaná above).
@@ -6273,15 +6308,15 @@ ak-yav-ay'-a=ngkoye		yamet
 	:ARG1 (y/ yamet 'tree')
 	:ARG2 (e/ enyavay'a-00 'large'
 		:degree Intensifier)
-	:aspect State
-	:modstr FullAff)
-	
+	:aspect state
+	:modal-strength full-affirmative)
+
 (h/ have-mod-91
 	:ARG1 (t/ tree)
 	:ARG2 (l/ large
 		:degree (v/ very))
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 Lexicon: Very - Intensifier
 ```
 
@@ -6291,7 +6326,7 @@ Lexicon: Very - Intensifier
 ### Part 4-1. Coreference
 
 
-Anaphoric expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphoric expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.  
+Anaphoric expressions such as pronouns cannot be properly interpreted without identifying their referents. This is generally done by linking an anaphoric expression to a named entity, a process generally known as *coreference* in the field of NLP. Coreference is an established NLP task, and the goal here is to identify the most relevant types of coreference in the UMR framework.
 
 [Back to Table of Contents](#toc)
 
@@ -6314,11 +6349,11 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	      :ARG1 b
 	      :ARG2 (s/ spy-02
 	         :ARG0 b
-		 :modpred c2))
+		 :modal-predicate c2))
 	   :temporal (w/ week
 	      :mod (l/ last))
-	   :aspect Performance
-	   :modstr FullAff)
+	   :aspect performance
+	   :modal-strength full-affirmative)
 	:ARG1-of (s2/ sentence-01
 	   :ARG2 (p2/ prison
 	      :mod (c3/ country :wiki "Russia"
@@ -6327,29 +6362,29 @@ Snt2: Pope is the American businessman who was convicted last week on spying cha
 	         :quant 20
 		 :unit (y/ year)))
 	   :ARG3 s
-	   :aspect Performance
-	   :modstr FullAff)
-     :aspect State
-     :modstr FullAff)
+	   :aspect performance
+	   :modal-strength full-affirmative)
+     :aspect state
+     :modal-strength full-affirmative)
 
 Snt3: He denied any wrongdoing.
-(d/ deny-01 
+(d/ deny-01
       :ARG0 (p/person
-         :ref-person 3rd
-	 :ref-number Singular)
+         :refer-person 3rd
+	 :refer-number singular)
       :ARG1 (t/ thing
             :ARG1-of (d2/ do-02
                   :ARG0 p
                   :ARG1-of (w/ wrong-02)
-		  :modpred d))
-      :aspect Performance
-      :modstr FullAff)
-  
+		  :modal-predicate d))
+      :aspect performance
+      :modal-strength full-affirmative)
+
 (s3/ sentence
-    :temporal((DCT :before s3d)
+    :temporal((document-creation-time :before s3d)
               (s3d :before s3d2))
-    :modal((AUTH :FullAff s3p))
-	   (s3p :FullAff s3d)
+    :modal((author :full-affirmative s3p))
+	   (s3p :full-affirmative s3d)
 	   (s3d :Unsp s3d2))
   :coref(s2p :same-entity s3p))
 ```
@@ -6363,50 +6398,50 @@ He is very possessive and controlling but he has no right to be as we are not to
       :ARG1 (a/ and
             :op1 (p/ possessive-03
                   :ARG0 (p/ person
-		  	:ref-person 3rd
-			:ref-number Singular)
+		  	:refer-person 3rd
+			:refer-number singular)
                   :degree (v/ very)
-		  :aspect State
-		  :modstr FullAff)
+		  :aspect state
+		  :modal-strength full-affirmative)
             :op2 (h/ have-mod-91
                   :ARG1 p
 		  :ARG2 (c2/ controlling)
                   :degree (v/ very)
-		  :aspect State
-		  :modstr FullAff))
+		  :aspect state
+		  :modal-strength full-affirmative))
       :ARG2 (r/ right-05
             :ARG1 p
             :ARG2 a
             :ARG1-of (c3/ cause-01
                   :ARG0 (h2/ have-mod-91
 		  	:ARG1 (p2/ person
-				:ref-person 1st
-				:ref-number Plural)
+				:refer-person 1st
+				:refer-number plural)
 			:ARG2 (t/ together)
-			:aspect State
-			:modstr FullNeg))
-            :aspect State
-	    :modstr FullNeg))
+			:aspect state
+			:modal-strength full-negative))
+            :aspect state
+	    :modal-strength full-negative))
 (s/ sentence
-  :temporal ((DCT :overlap s1p)
+  :temporal ((document-creation-time :overlap s1p)
   	     (s1p :overlap s1h)
 	     (s1h :overlap s1r)
 	     (s1r :overlap s1h2))
-  :modal ((AUTH :FullAff s1p)
-  	  (AUTH :FullAff s1h)
-	  (AUTH :FullNeg s1r)
-	  (AUTH :FullNeg s1h2))
+  :modal ((author :full-affirmative s1p)
+  	  (author :full-affirmative s1h)
+	  (author :full-negative s1r)
+	  (author :full-negative s1h2))
   :coref (p :subset-of p2))
 ```
 
 [Back to Table of Contents](#toc)
 
 #### Part 4-1-2. Event coreference
- 
+
 UMR uses the `:same-event` relation to represent cases where two event mentions refer to  the same event, as in <a href="#4-1-1 (1)">\[4-1-1 (1)\]</a>.
- 
+
  <span id="4-1-2 (1)" label="4-1-2 (1)">4-1-2 (1)</span>
- 
+
  <span id="4-1-2 (1a)" label="4-1-2 (1a)">4-1-2 (1a)</span>
 ```
 El-Shater and Malek's property was confiscated and is believed to be worth millions of dollars.
@@ -6414,34 +6449,34 @@ El-Shater and Malek's property was confiscated and is believed to be worth milli
       :op1 (c/ confiscate-01
             :ARG1 (a2/ and
                   :op1 (p/ property
-                        :poss (p2/ person 
+                        :poss (p2/ person
 				:wiki "Khairat_el-Shater"
 				:name (n/ name :op1 "El-Shater")))
                   :op2 (p3/ property
                         :poss (p4/ person
 				:wiki -
 				:name (n2/ name :op1 "Malek"))))
-	    :aspect Performance
-	    :modstr FullAff)
+	    :aspect performance
+	    :modal-strength full-affirmative)
       :op2 (b/ believe-01
             :ARG1 (w/ worth-01
                   :ARG1 a2
                   :ARG2 (m/ multiple
-                        :op1 (m2/ monetary-quantity 
+                        :op1 (m2/ monetary-quantity
 			      :quant 1000000
                               :unit (d/ dollar)))
-	          :aspect State
-		  :modpred b)
-	    :aspect State
-	    :modstr FullAff))
-	    
+	          :aspect state
+		  :modal-predicate b)
+	    :aspect state
+	    :modal-strength full-affirmative))
+
 (s1/ sentence
-  :temporal ((PAST_REF :includes s1c)
-  	     (DCT :overlap s1b)
+  :temporal ((past-reference :includes s1c)
+  	     (document-creation-time :overlap s1b)
 	     (s1b :overlap s1w))
-  :modal ((AUTH :FullAff s1c)
-  	  (AUTH :FullAff NULL_BELIEVER)
-	  (NULL_BELIEVER :FullAff s1b)
+  :modal ((author :full-affirmative s1c)
+  	  (author :full-affirmative NULL_BELIEVER)
+	  (NULL_BELIEVER :full-affirmative s1b)
 	  (s1b :Unsp s1w)))
 ```
  <span id="4-1-2 (1b)" label="4-1-2 (1b)">4-1-2 (1b)</span>
@@ -6458,19 +6493,19 @@ Abdel-Maksoud stated the confiscation will affect the Brotherhood's financial ba
 		  	:wiki "Muslim_Brotherhood"
 			:name (n2/ name :op1 "Brotherhood"))
                   :mod (f/ finance))
-	    :aspect Performance
-	    :quot s
-	    :modstr FullAff)
-      :aspect Performance
-      :modstr FullAff)
+	    :aspect performance
+	    :quote s
+	    :modal-strength full-affirmative)
+      :aspect performance
+      :modal-strength full-affirmative)
 
 (s2/ sentence
   :temporal ((s1c :after s2s)
   	     (s2s :after s2a))
-  :modal ((AUTH :FullAff s2s)
-  	  (AUTH :FullAff s2p)
-	  (s2p :FullAff s2c)
-	  (s2p :FullAff s2a))
+  :modal ((author :full-affirmative s2s)
+  	  (author :full-affirmative s2p)
+	  (s2p :full-affirmative s2c)
+	  (s2p :full-affirmative s2a))
   :coref (s1c :same-event s2c))
 ```
 Event identity also includes cases where the same underlying event is referred to with two very different linguistic expressions. This is the case for *introduced* and *provide* in <a href="#4-1-2 (2)">(2)</a>.
@@ -6483,7 +6518,7 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
 (i/ introduce-01
       :ARG0 (p/ project
       	    :wiki "Three_Gorges_Dam"
-	    :name (n/ name 
+	    :name (n/ name
 	    	:op1 "The"
 		:op2 "Three"
 		:op3 "Gorges")
@@ -6497,13 +6532,13 @@ The Three Gorges project on the Yangtze River has recently **introduced*** the f
             :ord (o/ ordinal-entity
 	    	:value 1))
       :temporal (r2/ recent)
-      :aspect Performance
-      :modstr FullAff)
-      
+      :aspect performance
+      :modal-strength full-affirmative)
+
 (s1/ sentence
-	:temporal ((PAST_REF :includes s1r2)
+	:temporal ((past-reference :includes s1r2)
 		   (s1r2 :includes s1i))
-	:modal (AUTH :FullAff s1i))
+	:modal (author :full-affirmative s1i))
 ```
 <span id="4-1-2 (2b)" label="4-1-2 (2b)">4-1-2 (2b)</span>
 ```
@@ -6531,24 +6566,24 @@ The loan, a sum of 12.5 million US dollars, is an export credit **provided** to 
 				:name (n3/ name
 					:op1 "Three"
 					:op2 "Gorges"))
-			:aspect Performance
-			:modstr FullAff)
+			:aspect performance
+			:modal-strength full-affirmative)
 		:ARG1-of (u/ use-01
 			:ARG2 (s/ system
 				:poss p2
 				:mod (m2/ manage-01))
 			:mod (m3/ main)
-			:aspect Activity
-			:modstr FullAff))
-	:aspect State
-	:modstr FullAff)
-	    
+			:aspect activity
+			:modal-strength full-affirmative))
+	:aspect state
+	:modal-strength full-affirmative)
+
 (s2/ sentence
-   :temporal ((DCT :overlap s2i)
-   	      (Future_Ref :includes s2u))
-   :modal ((AUTH :FullAff s2i)
-   	   (AUTH :FullAff s2p)
-	   (AUTH :FullAff s2u))
+   :temporal ((document-creation-time :overlap s2i)
+   	      (future-reference :includes s2u))
+   :modal ((author :full-affirmative s2i)
+   	   (author :full-affirmative s2p)
+	   (author :full-affirmative s2u))
    :coref (s1i :same-event s2p))
 ```
 The `:subset-of` relation is also used to annotate the subset relations between two event mentions, with one referring to a subset of another, as is the case in <a href="#4-1-2 (3)">(3)</a>. Both the _arrest_ made in Germany and the one made in the Netherlands are subevents of the _arrests_ that were ordered by judge Fragnoli. Therefore, both the `s1a2` node and the `s1a3` node are annotated with a `:subset-of` relation to `s2a`.
@@ -6565,22 +6600,22 @@ The `:subset-of` relation is also used to annotate the subset relations between 
 	    	  :wiki "Netherlands"
                   :name (n/ name
 		  	:op1 "Netherlands"))
-	    :aspect Performance
-	    :modstr FullAff)
+	    :aspect performance
+	    :modal-strength full-affirmative)
       :op2 (a3/ arrest-01
             :location (c2/ country
 	    	  :wiki "Germany"
                   :name (n2/ name
 		  	:op1 "Germany"))
             :mod (a4/ another)
-	    :aspect Performance)
-	    :modstr FullAff)
+	    :aspect performance)
+	    :modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((DCT :before a2)
-		   (DCT :before a3))
-	:modal ((AUTH :FullAff a2)
-		(AUTH :FullAff a3)))
+	:temporal ((document-creation-time :before a2)
+		   (document-creation-time :before a3))
+	:modal ((author :full-affirmative a2)
+		(author :full-affirmative a3)))
 ```
 <span id="4-1-2 (3b)" label="4-1-2 (3b)">4-1-2 (3b)</span>
 ```
@@ -6595,16 +6630,16 @@ The arrests were ordered by anti-terrorism judge fragnoli.
             :ARG1-of (h/ have-role-91
                   :ARG3 (j/ judge-01)))
       :ARG2 (a/ arrest-01
-      	    :aspect Process
-	    :quot o)
-      :aspect Performance
-      :modstr FullAff)
- 
+      	    :aspect process
+	    :quote o)
+      :aspect performance
+      :modal-strength full-affirmative)
+
  (s2/ sentence
  	:temporal (s2a :before s2o)
-	:modal ((AUTH :FullAff s2o)
-		(AUTH :FullAff s2p)
-		(s2p :PrtAff s2a))
+	:modal ((author :full-affirmative s2o)
+		(author :full-affirmative s2p)
+		(s2p :partial-affirmative s2a))
   	:coref ((s2a :subset-of s1a2)
 		(s2a :subset-of s1a3)))
 ```
@@ -6618,13 +6653,25 @@ For now UMR does not annotate cases where one event is a subevent of another eve
  Reports suggest that the group of nine were having a picnic on Friday when they were abducted in the Saada province of Yemen. A spokesman for the Yemeni Embassy said "The foreigners ventured outside the city of Saada without the required police escorts due to the heightened security situation in the area.
 ```
  --->
-  
+
 [Back to Table of Contents](#toc)
 
 ### Part 4-2. Temporal Dependency
 
-The temporal annotation in UMR is done at both the sentence level and the document level. For instance, a time expression that serves as the modifier of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression 
-*April 1998* is annotated as a temporal modifier of the predicate *sign*. Likewise, the temporal relation between an event and its document creation time (DCT) is also annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the DCT is annotated as `:temporal (b2 /before :op (n/now))`. The temporal relation between an event and a time expression is annotated when a time expression is present in the sentence. The temporal relation between an event and the DCT is annotated when this temporal relation is defined in that context. For example, while the relation between *signed* and the DCT is clearly defined, the temporal relation between *fight* and the DCT is not.
+The temporal annotation in UMR is done at both the sentence level and the
+document level. For instance, a time expression that serves as the modifier
+of a predicate is annotated at the sentence level. In <a href="#4-2 (1)">(1)</a>, the time expression *April 1998* is annotated as a temporal
+modifier of the predicate *sign*. Likewise, the temporal relation between an
+event and its document creation time is also annotated at the sentence level.
+In <a href="#4-2 (1)">(1)</a>, the temporal relation between *sign* and the
+document-creation-time is annotated as `:temporal (b2 / before :op1
+(n/now))`. The temporal relation between an event and a time expression is
+annotated when a time expression is present in the sentence. The temporal
+relation between an event and the `document-creation-time` is annotated when
+this temporal relation is defined in that context. For example, while the
+relation between *signed* and the `document-creation-time` is clearly
+defined, the temporal relation between *fight* and the
+`document-creation-time` is not.
 
 
 <span id="4-2 (1)" label="4-2 (1)">4-2 (1)</span>
@@ -6632,7 +6679,7 @@ The temporal annotation in UMR is done at both the sentence level and the docume
 In April 1998 Arab countries signed an anti-terrorism agreement that binds the signatories to coordinate to fight terrorism.
 (s/ sign-02
       :ARG0 (c/ country
-            :mod (e/ ethnic-group 
+            :mod (e/ ethnic-group
 	    	  :wiki "Arabs"
                   :name (n/ name :op1 "Arab")))
       :ARG1 (a/ agree-01
@@ -6645,51 +6692,68 @@ In April 1998 Arab countries signed an anti-terrorism agreement that binds the s
                         :purpose (f/ fight-01
                               :ARG0 c
                               :ARG1 t
-			      :aspect Activity
-			      :modstr FullAff)
-			:aspect Activity
-			:modpred b)
-		  :aspect Activity
-		  :modstr FullAff))
+			      :aspect activity
+			      :modal-strength full-affirmative)
+			:aspect activity
+			:modal-predicate b)
+		  :aspect activity
+		  :modal-strength full-affirmative))
       :temporal (d/ date-entity :year 1998 :month 4)
-      :temporal (b2/before :op (n/now))
-      :aspect Performance))
+      :temporal (b2/ before :op1 (n/now))
+      :aspect performance))
  ```
 
-In addition to temporal relations at the sentence level, we also annotate temporal relations at the document level.
-The document-level temporal relations focus on event-event and time-time relations. Time-time relations are annotated when 
-a relative time depends on another time expression for its interpretation.
+In addition to temporal relations at the sentence level, we also annotate
+temporal relations at the document level. The document-level temporal
+relations focus on event-event and time-time relations. Time-time relations
+are annotated when a relative time depends on another time expression for its
+interpretation.
 
-Event-event relations are annotated only when the temporal relations are clearly supported by morpho-syntactic clues or when there is a clear temporal sequence can be inferred. 
+Event-event relations are annotated only when the temporal relations are
+clearly supported by morpho-syntactic clues or when there is a clear temporal
+sequence can be inferred.
 
-The temporal dependency is divided into two passes: the first pass involves setting up the temporal
-superstructure – the top levels of the dependency structure - and the second
-pass involves adding events to the temporal dependency structure. The temporal superstructure contains the temporal expressions (timexs) in the text and pre-defined metanodes and their temporal relations to each other; the rest of the temporal dependency contains the events and their temporal relations to timexs and other events.
+The temporal dependency is divided into two passes: the first pass involves
+setting up the temporal superstructure – the top levels of the dependency
+structure - and the second pass involves adding events to the temporal
+dependency structure. The temporal superstructure contains the temporal
+expressions (timexs) in the text and pre-defined metanodes and their temporal
+relations to each other; the rest of the temporal dependency contains the
+events and their temporal relations to timexs and other events.
 
 [Back to Table of Contents](#toc)
 
 #### Part 4-2-1. Nodes in the temporal dependency
 
-There are three types of nodes in the temporal dependency structure: pre-defined metanodes, time expressions, and events. Pre-defined metanodes and time expressions make up the top levels of the dependency structure, called the temporal superstructure. `:depends-on` is the relation that is used to link all nodes in the temporal superstructure.
+There are three types of nodes in the temporal dependency structure:
+pre-defined metanodes, time expressions, and events. Pre-defined metanodes
+and time expressions make up the top levels of the dependency structure,
+called the temporal superstructure. `:depends-on` is the relation that is
+used to link all nodes in the temporal superstructure.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-1. Pre-defined metanodes
 
-Pre-defined metanodes are nodes that are present at the top of every temporal dependency structure, connected directly to the `ROOT` node. There are four pre-defined metanodes: `PAST_REF`, `PRESENT_REF`, `FUTURE_REF`, and `DCT` (document creation time). Unlike time expressions, the pre-defined metanodes don’t correspond to linguistic material in the text.  As mentioned
-above, there is a generic `:depends-on` relation between all nodes
-in the temporal superstructure.
+Pre-defined metanodes are nodes that are present at the top of every temporal
+dependency structure, connected directly to the `ROOT` node. There are four
+pre-defined metanodes: `past-reference`, `present-reference`,
+`future-reference`, and `document-creation-time`. Unlike time expressions,
+the pre-defined metanodes don’t correspond to linguistic material in the
+text.  As mentioned above, there is a generic `:depends-on` relation between
+all nodes in the temporal superstructure.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-2-1-2. Time expressions
 
-The other type of node in the temporal superstructure are time
-expressions. Annotators should identify all time expressions in a document and add them to the temporal superstructure before annotating events.
+The other type of node in the temporal superstructure are time expressions.
+Annotators should identify all time expressions in a document and add them to
+the temporal superstructure before annotating events.
 
-Time expressions are broken down into a taxonomy that
-determines their representation in the temporal superstructure (see
-Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
+Time expressions are broken down into a taxonomy that determines their
+representation in the temporal superstructure (see Table 1 in Zhang & Xue
+(2018), reproduced here in Table 13.
 
 <table>
 <tr>
@@ -6705,17 +6769,17 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 <td rowspan="2"> Concrete </td>
 <td> Absolute</td>
 <td> May 2015</td>
-<td> ROOT </td>
+<td> <tt>ROOT</tt> </td>
 </tr>
 <tr>
 <td> Relative</td>
 <td> today, two days later </td>
-<td> DCT, another Concrete </td>
+<td> <tt>document-creation-time</tt>, another Concrete </td>
 </tr>
 <tr>
 <td colspan="2"> Vague</td>
 <td> nowadays</td>
-<td> Present/Past/Future_Ref </td>
+<td> <tt>present/past/future-reference</tt> </td>
 </tr>
 <tr>
 <td colspan="3"> Unlocatable Time Expressions</td>
@@ -6724,26 +6788,26 @@ Table 1 in Zhang & Xue (2018), reproduced here in Table 13.
 </tr>
 </table>
 
-First, time expressions are distinguished based on whether they are
-locatable on a timeline or not. Unlocatable time expressions are time
-expressions which refer to the duration (*for three hours*) or
-quantification (*every day*) of an event. Unlocatable time expressions
-are not represented in the temporal dependency structure at any level. They do influence the aspect annotation, however (see [Part 3-3-1](#part-3-3-1-Aspect)).
+First, time expressions are distinguished based on whether they are locatable
+on a timeline or not. Unlocatable time expressions are time expressions which
+refer to the duration (*for three hours*) or quantification (*every day*) of
+an event. Unlocatable time expressions are not represented in the temporal
+dependency structure at any level. They do influence the aspect annotation,
+however (see [Part 3-3-1](#part-3-3-1-Aspect)).
 
 <!-- (they do influence the aspect annotation; see §[3](#aspectannotation)) -->
 
 All locatable time expressions are represented in the temporal
-superstructure. Locatable time expressions are divided between concrete
-and vague time expressions. Vague time expressions (e.g. *nowadays, in
-the old days*) are represented as the children of `PRESENT_REF`,
-`PAST_REF`, or `FUTURE_REF`. Concrete time expressions
-are divided into relative and absolute time expressions. Relative
-concrete time expressions (*yesterday, the week before*) are represented
-as the children of either `DCT` (as in *yesterday*) or
-another concrete time expression on which they depend for their
-interpretation (as in *the week before*). Finally, absolute concrete
-time expressions (*in 2019*) are represented as children of
-`ROOT`.
+superstructure. Locatable time expressions are divided between concrete and
+vague time expressions. Vague time expressions (e.g. *nowadays, in the old
+days*) are represented as the children of `present-reference`,
+`past-reference`, or `future-reference`. Concrete time expressions are
+divided into relative and absolute time expressions. Relative concrete time
+expressions (*yesterday, the week before*) are represented as the children of
+either `document-creation-time` (as in *yesterday*) or another concrete time
+expression on which they depend for their interpretation (as in *the week
+before*). Finally, absolute concrete time expressions (*in 2019*) are
+represented as children of `ROOT`.
 
 [Back to Table of Contents](#toc)
 
@@ -6752,30 +6816,38 @@ time expressions (*in 2019*) are represented as children of
 
 #### Part 4-2-2-1. Choosing the right temporal relation
 
-Once time expressions have been identified and annotated in the temporal dependency, annotators select temporal relations for the events in a text (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines). Each event is annotated as the child of either a time
-expression in the superstructure or another event (or both). The set of
-temporal relations are shown below. Note that the labels characterize
-the relation from child to parent.
+Once time expressions have been identified and annotated in the temporal
+dependency, annotators select temporal relations for the events in a text
+(see [Part 3-1-1](#part-3-1-1-eventive-concepts) for event ID guidelines).
+Each event is annotated as the child of either a time expression in the
+superstructure or another event (or both). The set of temporal relations are
+shown below. Note that the labels characterize the relation from child to
+parent.
 
 `:contained`: child is entirely contained within the parent; parent begins before child and parent ends after child (Note: this is called ‘Includes’ in Zhang & Xue 2018).
 
-`:after`: child is after parent.  
+`:after`: child is after parent.
 
 `:before`: child is before parent.
 
-`:overlap`: child and parent overlap (either partially or fully).  
+`:overlap`: child and parent overlap (but one is not fully contained in the other).
 
-The goal of this temporal annotation scheme is to give each event the
-most precise temporal location possible. We also want to avoid adding
-annotations which do not give any additional information (i.e., the
-relation falls out logically from the other annotations). Follow the steps below to determine the most accurate and precise reference time for each event (but see [Part 4-2-2-1-1](#part-4-2-2-1-1-special-cases) below for exceptions) . All events need to receive at least one temporal annotation, but may receive two in cases where an event needs to be linked to both a time expression and another event.
+The goal of this temporal annotation scheme is to give each event the most
+precise temporal location possible. We also want to avoid adding annotations
+which do not give any additional information (i.e., the relation falls out
+logically from the other annotations). Follow the steps below to determine
+the most accurate and precise reference time for each event (but see [Part
+4-2-2-1-1](#part-4-2-2-1-1-special-cases) below for exceptions) . All events
+need to receive at least one temporal annotation, but may receive two in
+cases where an event needs to be linked to both a time expression and another
+event.
 
 1. If there is a time expression in the same line as the event, link the event to it with the proper relation (although see exception below). If the event does not receive an annotation at this step, proceed to step 2. If an event does receive an annotation at this step, proceed to step 4.
 
 	 - **Exception:** The only scenario in which an event which has a clear temporal
         relation with a time expression doesn’t need to have this relation
         annotated is when the relation logically falls out from other
-        annotations. This is the case when an event is `:contained` in another event, which itself is 
+        annotations. This is the case when an event is `:contained` in another event, which itself is
 	`:contained` in a time expression. That is, if
         event A is `:contained` within event B (i.e., a
         subevent) and event B is `:contained` within a time expression,
@@ -6788,11 +6860,11 @@ relation falls out logically from the other annotations). Follow the steps below
 3. If an event is not linked to a time expression, then the next best reference time is another event in the text.  Good reference time events (i.e., parents in the temporal dependency) meet all of the criteria listed below. Often, the most appropriate parent is the event in the immediately preceding line or clause. Starting with the immediately preceding event in the text and working back through the events in the preceding lines, find an event that is a good parent. If there isn't a good parent event in the text, proceed to step 5. Otherwise, the temporal annotation for the event is complete.
 
 	a. The parent event is a Process (or finer-grained subtype) in the Aspect annotation
-	
+
 	b. The parent event has a compatible modal annotation:
 		the parent event and child event have the same parent and the same edge value in the modal dependency OR
-		the parent event has a `:FullAff` relation to the `AUTH` node in the modal dependency
-		
+		the parent event has a `:full-affirmative` relation to the `author` node in the modal dependency
+
 	c. There is a clear temporal relation between the parent event and the child event
 
 4. If an event does get a relation to a time expression, a second annotation that specifies its relationship with another event may also be added. This is the case when a set of events are all `:contained` within the same time expression. The first event in the set of events only needs to be linked to the time expression. Subsequent events can receive two temporal annotations: one that relates it to the time expression and one that relates it to another event in the set.
@@ -6807,51 +6879,51 @@ An example is shown below in <a href="#4-2-2-1 (1)">(1)</a>, an excerpt from a d
 snt15	A-nd u-h and then he gets down out of the tree,
 (s15g / get-05
   :ARG1 (s15p / person
-          :ref-person 3rd
-          :ref-number Singular)
+          :refer-person 3rd
+          :refer-number singular)
   :ARG2 (s15d / down)
   :source (s15t / tree
-            :refer-number Singular)
-  :aspect Performance
+            :refer-number singular)
+  :aspect performance
   :temporal (s15t2 / then)
-  :modstr FullAff)
+  :modal-strength full-affirmative)
 
 (s15s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-         (AUTH :FullAff s15g))
-  :temporal ((PAST_REF :contained s15g)))
+  :modal ((ROOT :MODAL author)
+         (author :full-affirmative s15g))
+  :temporal ((past-reference :contained s15g)))
 
 
 snt16	and he dumps all his pears into the basket
 (s16d / dump-01
   :ARG0 (s16p / person
-          :ref-person 3rd
-          :ref-number Singular)
+          :refer-person 3rd
+          :refer-number singular)
   :ARG1 (s16p2 / pear
           :quant (s16a / all)
           :poss s16p)
-  :aspect Performance
+  :aspect performance
   :goal (s16b / basket
-          :ref-number Singular)
-  :modstr FullAff)
+          :refer-number singular)
+  :modal-strength full-affirmative)
 
 (s16s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-          (AUTH :FullAff s16d))
+  :modal ((ROOT :MODAL author)
+          (author :full-affirmative s16d))
   :temporal ((s15g :after s16d)))
 
 
 snt17	and the basket's full,
 (s17h / have-mod-91
   :ARG1 (s17b / basket
-          :ref-number Singular)
+          :refer-number singular)
   :ARG2 (s17f / full)
-  :aspect State
-  :modstr FullAff)
+  :aspect state
+  :modal-strength full-affirmative)
 
 (s17s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-          (AUTH :FullAff s17h))
+  :modal ((ROOT :MODAL author)
+          (author :full-affirmative s17h))
   :temporal ((s16d :overlap s17h)))
 
 
@@ -6861,23 +6933,23 @@ snt18	and one of the pears drops down to the floor,
           :quant 1
           :ARG2-of (s18i2 / include-91
                      :ARG1 (s18p2 / pear
-                             :ref-number Plural)))
+                             :refer-number plural)))
   :ARG4 (s18f / floor
-          :ref-number Singular)
+          :refer-number singular)
   :direction (s18d2 / down)
-  :aspect Performance
-  :modstr FullAff)
+  :aspect performance
+  :modal-strength full-affirmative)
 
 (s18s0 / sentence
-  :modal ((ROOT :MODAL AUTH)
-         (AUTH :FullAff s18d))
+  :modal ((ROOT :MODAL author)
+         (author :full-affirmative s18d))
   :temporal ((s16d :after s18d)))
 
 
 ```
 
 
-The first event in this excerpt (`s15g`) is linked to a tense metanode, as there are no time expressions in the clause and there are no previous events in the excerpt. The next event (`s16d`) is linked to the immediately preceding event in the text (`s15g`) because it fits all of the criteria for a good reference time: its aspect annotation is a type of Process, it has a FullAff relation to the `AUTH` node, and there is a clear temporal relation between the two events. In a similar way, `s17h` is linked to `s16d`. For the final event in the excerpt (`s18d`), the previous event in the text does not make a good reference time. Since `s17h` is a State (not a Process), it does not fit the criteria for a good reference time. Therefore, `s18d` is linked to the next event back in the text `s16d`.
+The first event in this excerpt (`s15g`) is linked to a tense metanode, as there are no time expressions in the clause and there are no previous events in the excerpt. The next event (`s16d`) is linked to the immediately preceding event in the text (`s15g`) because it fits all of the criteria for a good reference time: its aspect annotation is a type of Process, it has a full-affirmative relation to the `author` node, and there is a clear temporal relation between the two events. In a similar way, `s17h` is linked to `s16d`. For the final event in the excerpt (`s18d`), the previous event in the text does not make a good reference time. Since `s17h` is a State (not a Process), it does not fit the criteria for a good reference time. Therefore, `s18d` is linked to the next event back in the text `s16d`.
 
 
 
@@ -6889,7 +6961,13 @@ There are certain types of modal constructions that require special treatment in
 
 **Complement-taking predicates**
 
-Events that are linked with a `:modpred` relation in the sentence-level modal annotation should also be linked in the temporal dependency. The complement-taking predicate acts as the reference time for its complement. That is, the complement is the child of the complement-taking predicate in the temporal dependency. There can be various types of temporal relations between complement-taking predicates and their complements, shown in <a href="#4-2-2-1-1 (1)">(1)</a>-<a href="#4-2-2-1-1 (3)">(3)</a>.
+Events that are linked with a `:modal-predicate` relation in the
+sentence-level modal annotation should also be linked in the temporal
+dependency. The complement-taking predicate acts as the reference time for
+its complement. That is, the complement is the child of the complement-taking
+predicate in the temporal dependency. There can be various types of temporal
+relations between complement-taking predicates and their complements, shown
+in <a href="#4-2-2-1-1 (1)">(1)</a>-<a href="#4-2-2-1-1 (3)">(3)</a>.
 
 <span id="4-2-2-1-1 (1)" label="4-2-2-1-1 (1)">4-2-2-1-1 (1)</span>
 
@@ -6898,21 +6976,21 @@ I saw him knock on the door.
 
 (s1s/ see-01
 	:ARG0 (s1p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (s1k/ knock-01
 		:ARG0 (s1p2/ person
-			:ref-person 3rd
-			:ref-number Singular)
+			:refer-person 3rd
+			:refer-number singular)
 		:ARG1 (s1d/ door
-			:ref-number Singular))
-		:aspect Performance
-		:modpred s1s)
-	:aspect State
-	:modstr FullAff)
+			:refer-number singular))
+		:aspect performance
+		:modal-predicate s1s)
+	:aspect state
+	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		 (s1s :overlap s1k)))
 ```
 
@@ -6922,18 +7000,18 @@ I saw him knock on the door.
 I want to cook dinner.
 (s1w/ want-01
 	:ARG0 (s1p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (s1c/ cook-01
 		:ARG0 s1p
 		:ARG1 (s1d/ dinner)
-		:aspect Performance
-		:modpred s1w)
-	:aspect State
-	:modstr FullAff)
+		:aspect performance
+		:modal-predicate s1w)
+	:aspect state
+	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PRESENT_REF :contained s1W)
+	:temporal ((present-reference :contained s1W)
 		 (s1w :after s1c)))
 ```
 
@@ -6945,21 +7023,21 @@ I want to cook dinner.
 I wish she had read the book.
 (s1w/ wish-01
 	:ARG0 (s1p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (s1r/ read-01
 		:ARG0 (s1p2/ person
-			:ref-person 3rd
-			:ref-number Singular)
+			:refer-person 3rd
+			:refer-number singular)
 		:ARG1 (s1b/ book
-			:ref-number Singular)
-		:aspect Performance
-		:modpred s1w)
-	:aspect State
-	:modstr FullAff)
+			:refer-number singular)
+		:aspect performance
+		:modal-predicate s1w)
+	:aspect state
+	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PRESENT_REF :contained s1W)
+	:temporal ((present-reference :contained s1W)
 		 (s1w :before s1c)))
 ```
 
@@ -6971,19 +7049,19 @@ In cases where there are multiple complements of the same predicate, the annotat
 I want to go to the city and visit a museum.
 (s1w/ want-01
 	:ARG0 (s1p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (s1g/ go-01
 		:ARG1 s1p
 		:ARG4 (s1c/ city
-			:ref-number Singular)
-		:aspect Performance
-		:modpred s1w)
-	:aspect State
-	:modstr FullAff)
+			:refer-number singular)
+		:aspect performance
+		:modal-predicate s1w)
+	:aspect state
+	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PRESENT_REF :contained s1W)
+	:temporal ((present-reference :contained s1W)
 		 (s1w :after s1c)))
 ```
 
@@ -7009,30 +7087,30 @@ Magdalena said she arrived home, ate dinner, and will meet us at the theater.
 		:op1 (s1a2/ arrive-01
 			:ARG1 s1p
 			:ARG4 (s1h/ home)
-			:aspect Performance
-			:modstr FullAff
-			:QUOT s1s)
+			:aspect performance
+			:modal-strength full-affirmative
+			:quote s1s)
 		:op2 (s1e/ eat-01
 			:ARG0 s1p
 			:ARG1 (s1d/ dinner)
-			:aspect Performance
-			:modstr FullAff
-			:QUOT s1s)
+			:aspect performance
+			:modal-strength full-affirmative
+			:quote s1s)
 		:op3 (s1m/ meet-03
 			:ARG0 s1p
 			:ARG1 (s1p2/ person
-				:ref-person 1st
-				:ref-number Plural)
+				:refer-person 1st
+				:refer-number plural)
 			:place (s1t/ theater
-				:ref-number Singular)
-			:aspect Performance
-			:modstr FullAff
-			:QUOT s1s))
-	:aspect Performance
-	:modstr FullAff)
+				:refer-number singular)
+			:aspect performance
+			:modal-strength full-affirmative
+			:quote s1s))
+	:aspect performance
+	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		 (s1s :before s1e)
 		 (s1e :before s1a)
 		(s1s :after s1m)))
@@ -7050,20 +7128,20 @@ Events in purpose clauses (i.e., annotated with a `:purpose` relation at the sen
 He went home (in order) to wash the dishes.
 (s1g/ go-01
 	:ARG1 (s1p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:ARG4 (s1h/ home)
 	:purpose (s1w/ wash-01
 		:ARG0 s1p
 		:ARG1 (s1d/ dish
-			:ref-number Plural)
-		:aspect Performance
-		:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff)
+			:refer-number plural)
+		:aspect performance
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 
 (s/ sentence
-	:temporal ((PAST_REF :contained s1g)
+	:temporal ((past-reference :contained s1g)
 		 (s1g :after s1w)))
 
 ```
@@ -7126,26 +7204,26 @@ structure is shown below in <a href="#4-3 (1)">(1)</a>.
 
 ```
 Martin said that the package has probably already arrived.
-(s/ say-01  
+(s/ say-01
 	:ARG0 (p/ person
-		:name (n/ name :op1 "Martin")
-	:ARG1 (a/ arrive-01  
+		:name (n/ name :op1 "Martin"))
+	:ARG1 (a/ arrive-01
 		:ARG1 (p/ package
-			:ref-number Singular)  
-		quot: s
-		modstr: PrtAff)
-	modstr: Aff)
+			:refer-number singular)
+		:quote s
+		:modal-strength partial-affirmative)
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1a))
-	:modal ((AUTH :FullAff s1p)
-		(AUTH :FullAff s1s)
-		(s1p :PrtAff s1a)))
+	:modal ((author :full-affirmative s1p)
+		(author :full-affirmative s1s)
+		(s1p :partial-affirmative s1a)))
 ```
 
-The *say*-event and the *arrive*-event each get a modal strength value (`:modstr`), which can then be represented
+The *say*-event and the *arrive*-event each get a modal strength value (`:modal-strength`), which can then be represented
 in the dependency as an edge between the event and the relevant conceiver/source. The
-`:quot` value indicates than an event is
+`:quote` value indicates than an event is
 being reported, and the participant role annotation can be used to
 automatically select the conceiver for the reported event(s), here,
 *Martin*.
@@ -7156,46 +7234,60 @@ This simplified, mostly sentence-level, annotation process is step 0 of the road
 
 #### Part 4-3-1. Stage 0
 
-There are two types of modal annotations at Stage 0: a
-`:modstr` annotation that consists of a
-single epistemic strength/polarity value, and a dependency annotation
-that indicates a relation between two events. There are two dependency
-relations: `:modpred` for the link between a
-modal event and the event(s) that it modalizes, and
-`:quot` for the link between a reporting
-event and the event(s) that it reports. Additionally, events in purpose clauses and events in conditional constructions must be taken up in the modal dependency tree. The right structure of the modal dependency graph for these events will be extrapolated from the sentence-level annotation: events in purpose clauses are daughters of events in the main clause they depend on, and are connected to them with the `:purpose` participant role. This can be leveraged to embed the purpose-event underneath the correct parent in the modal dependency graph as well. For conditionals, similarly, the protasis event will be embedded under the apodosis event with a `:condition` relation, or the protasis and apodosis events will both be ```:ARG1``` and ```:ARG2``` of a `have-condition-91` node. Again, this information will be taken up in the eventual modal dependency graph without annotators needing to indicate it a second time in the document-level modal annotation workflow.
-The `:modstr` annotation applies to all events, except for those under the scope of a modal identified as its own event (i.e., events with `:mod` relations). This
-is summarized below.
+There are two types of modal annotations at Stage 0: a `:modal-strength`
+annotation that consists of a single epistemic strength/polarity value, and a
+dependency annotation that indicates a relation between two events. There are
+two dependency relations: `:modal-predicate` for the link between a modal
+event and the event(s) that it modalizes, and `:quote` for the link between a
+reporting event and the event(s) that it reports (actually the direction is
+from the reported event to the reporting event, typically forming a cycle
+because the reported event is also an `:ARG1` of the reporting event).
+Additionally, events in purpose clauses and events in conditional
+constructions must be taken up in the modal dependency tree. The right
+structure of the modal dependency graph for these events will be extrapolated
+from the sentence-level annotation: events in purpose clauses are daughters
+of events in the main clause they depend on, and are connected to them with
+the `:purpose` participant role. This can be leveraged to embed the
+purpose-event underneath the correct parent in the modal dependency graph as
+well. For conditionals, similarly, the protasis event will be embedded under
+the apodosis event with a `:condition` relation, or the protasis and apodosis
+events will both be ```:ARG1``` and ```:ARG2``` of a `have-condition-91`
+node. Again, this information will be taken up in the eventual modal
+dependency graph without annotators needing to indicate it a second time in
+the document-level modal annotation workflow. The `:modal-strength`
+annotation applies to all events, except for those under the scope of a modal
+identified as its own event (i.e., events with `:mod` relations). This is
+summarized below.
 
 <div id="tab:modal_relations">
 
 | **Event type** | **UMR Treatment** |
 | :------------------------------- |:------------------------------------------------------------------------------------------|
-| Events under the scope of modals | `:modpred` relation to CPT |
-| Events under the scope of reporting events| `:modstr` annotation, `:quot` relation to reporting event |
-| All other events | `:modstr` annotation |
+| Events under the scope of modals | `:modal-predicate` relation to CPT |
+| Events under the scope of reporting events| `:modal-strength` annotation, `:quote` relation to reporting event |
+| All other events | `:modal-strength` annotation |
 
 Table 14: Modal relations at Stage 0
 </div>
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-1. modstr values
+##### Part 4-3-1-1. modal-strength values
 
 The modal strength values correspond to epistemic strength, i.e. the
 author or conceiver’s certainty about the occurrence of the event in the real world, or certainty about another conceiver’s mental content. Based on Boye (2012), a typological study of modal systems across languages, and following FactBank (Pustejovsky et al. 2005), the UMR annotation is based around three levels of modal strength: `Full`, `Partial`, and `Neutral`, illustrated in <a href="#4-3-1-1 (1)">(1)</a>.
 
 <span id="4-3-1-1 (1)" label="4-3-1-1 (1)">4-3-1-1 (1)</span>
 
-<span id="4-3-1-1 (1a)" label="4-3-1-1 (1a)">4-3-1-1 (1a)</span> Full:  
+<span id="4-3-1-1 (1a)" label="4-3-1-1 (1a)">4-3-1-1 (1a)</span> Full:
 The cat already **ate** breakfast.
 
 <span id="4-3-1-1 (1b)" label="4-3-1-1 (1b)">4-3-1-1 (1b)</span>
-Partial:  
-The cat <u>probably</u> already **ate** breakfast.  
+Partial:
+The cat <u>probably</u> already **ate** breakfast.
 
 <span id="4-3-1-1 (1c)" label="4-3-1-1 (1c)">4-3-1-1 (1c)</span>
-Neutral:  
+Neutral:
 The cat <u>might</u> have already **eaten** breakfast.
 
 The `Full` modal strength value, as in <a href="#4-3-1-1 (1a)">(1a)</a>, corresponds to complete certainty; that is, the conceiver is 100% certain that the event occurs in the real world. The `Neutral` modal strength value, shown in <a href="#4-3-1-1 (1c)">(1c)</a>, indicates the possibility of the event; essentially, this corresponds to 50/50 certainty that the event occurs in the real world. The `Partial` modal strength value, as in <a href="#4-3-1-1 (1b)">(1b)</a>, falls between the `Full` and `Neutral` values; the conceiver believes that more likely than not, the event occurs in the real world.
@@ -7216,30 +7308,34 @@ This lattice is based around the base level of `Full` vs. `Partial` vs.
 values that lump together the distinctions in the base level, and more
 fine-grained annotation values. For contexts where it is unclear if the modal strength is `Full` or `Partial`, the `Non-neutral` value can be used; if it is unclear whether the modal strength is `Partial` or `Neutral`, then the `Non-full` value can be used. The most fine-grained modal strength values are generally used with languages that have grammatical forms that encode the relevant distinction.
 
-Also following FactBank (Pustejovsky et al. 2006), the `:modstr`
-annotation combines the epistemic strength values with a binary polarity distinction (`Affirmative`, `Negative`). This results in six modal strength/polarity values for the default level, shown below. Both the affirmative values and the negative values have their own set of related coarse-grained and fine-grained values.
+Also following FactBank (Pustejovsky et al. 2006), the `:modal-strength`
+annotation combines the epistemic strength values with a binary polarity
+distinction (`affirmative`, `negative`). This results in six modal
+strength/polarity values for the default level, shown below. Both the
+affirmative values and the negative values have their own set of related
+coarse-grained and fine-grained values.
 
 <div>
 
 | **Label**                              | **Value**                              |
 | :------------------------------------- | :------------------------------------- |
-| ```FullAff```     | full strength, affirmative polarity    |
-| ```PrtAff```     | partial strength, affirmative polarity |
-| ```NeutAFf```    | neutral strength, affirmative polarity |
-| ```NeutNeg``` | neutral strength, negative polarity    |
-| ```PrtNeg```  | partial strength, negative polarity    |
-| ```FullNeg```    | full strength, negative polarity       |
+| ```full-affirmative```                 | full strength, affirmative polarity    |
+| ```partial-affirmative```              | partial strength, affirmative polarity |
+| ```neutral-affirmative```              | neutral strength, affirmative polarity |
+| ```neutral-negative```                 | neutral strength, negative polarity    |
+| ```partial-negative```                 | partial strength, negative polarity    |
+| ```full-negative```                    | full strength, negative polarity       |
 
 </div>
 
 These values and their interpretation are shown below; the corresponding FactBank values are in parentheses.
 
-```FullAff```: full affirmative support; complete certainty that the event occurs (CT+)  
-```PrtAff```: partial affirmative support; there is strong, but not definitive certainty that the event occurs (PR+)  
-```NeutAff```: affirmative neutral support; there is neutral certainty that the event occurs/doesn’t occur; event is expressed positively (PS+)  
-```NeutNeg```: negative neutral support; there is neutral certainty that the event occurs/doesn’t occur; negation of event is expressed (PS-)  
-```PrtNeg```: partial negative support; there is strong but not definitive certainty that the event does not occur (PR-)  
-```FullNeg```: full negative support; complete certainty that the event does not occur (CT-)
+```full-affirmative```: full affirmative support; complete certainty that the event occurs (CT+)
+```partial-affirmative```: partial affirmative support; there is strong, but not definitive certainty that the event occurs (PR+)
+```neutral-affirmative```: affirmative neutral support; there is neutral certainty that the event occurs/doesn’t occur; event is expressed positively (PS+)
+```neutral-negative```: negative neutral support; there is neutral certainty that the event occurs/doesn’t occur; negation of event is expressed (PS-)
+```partial-negative```: partial negative support; there is strong but not definitive certainty that the event does not occur (PR-)
+```full-negative```: full negative support; complete certainty that the event does not occur (CT-)
 
 Degree of certainty corresponds most straightforwardly to the degree of confidence of a conceiver (often, the author) in the occurrence of an episodic event, i.e. the epistemic continuum from certainty to
 possibility. We use these same values for the evidential continuum from direct evidence to second-hand (reported or inferred) evidence; see [Part 4-3-1-1-2](#part-4-3-1-1-2-evidential-justification) below). And these values are
@@ -7252,84 +7348,84 @@ the modal strength annotation.
 
 ##### Part 4-3-1-1-1. Non-future events
 
-For non-future (non-deontic) events, the `modstr` values correspond to the author’s level of certainty towards the occurrence of the event in the real world. Events presented as fact are annotated with
-`FullAff`, while events for which the author categorically denies their occurrence are annotated `FullNeg`. When the author doesn’t present the
+For non-future (non-deontic) events, the `modal-strength` values correspond to the author’s level of certainty towards the occurrence of the event in the real world. Events presented as fact are annotated with
+`full-affirmative`, while events for which the author categorically denies their occurrence are annotated `full-negative`. When the author doesn’t present the
 event as fact, but has a higher level of certainty towards the event
 either being true or not true, this is annotated as
-`PrtAff` or, when the polarity is negative, `PrtNeg`. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as `NeutAff` or
-`NeutNeg`, depending on the polarity of the
+`partial-affirmative` or, when the polarity is negative, `partial-negative`. When the author doesn’t lean either direction towards the event being true in the real world or not, the event is annotated as `neutral-affirmative` or
+`neutral-negative`, depending on the polarity of the
 linguistic expression. These strength values are exemplified in
 <a href="#4-3-1-1-1 (1)">(1)</a>.
 
 
 <span id="4-3-1-1-1 (1)" label="4-3-1-1-1 (1)">4-3-1-1-1 (1)</span>
 
-<span id="4-3-1-1-1 (1a)" label="4-3-1-1-1 (1a)">4-3-1-1-1 (1a)</span>   
+<span id="4-3-1-1-1 (1a)" label="4-3-1-1-1 (1a)">4-3-1-1-1 (1a)</span>
 ```
 The dog barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
-	:modstr FullAff)  
+	:aspect endeavor
+	:modal-strength full-affirmative)
 ```
-<span id="4-3-1-1-1 (1b)" label="4-3-1-1-1 (1b)">4-3-1-1-1 (1b)</span>  
+<span id="4-3-1-1-1 (1b)" label="4-3-1-1-1 (1b)">4-3-1-1-1 (1b)</span>
 ```
 The dog probably barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
-	:modstr PrtAff)  
+	:aspect endeavor
+	:modal-strength partial-affirmative)
 ```
 <span id="4-3-1-1-1 (1c)" label="4-3-1-1-1 (1c)">4-3-1-1-1 (1c)</span>
 ```
 The dog may have barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
-	:modstr NeutAff)  
+	:aspect endeavor
+	:modal-strength neutral-affirmative)
 ```
-<span id="4-3-1-1-1 (1d)" label="4-3-1-1-1 (1d)">4-3-1-1-1 (1d)</span> 
+<span id="4-3-1-1-1 (1d)" label="4-3-1-1-1 (1d)">4-3-1-1-1 (1d)</span>
 ```
 The dog may not have barked last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
-	:modstr NeutNeg)  
+	:aspect endeavor
+	:modal-strength neutral-negative)
 ```
 <span id="4-3-1-1-1 (1e)" label="4-3-1-1-1 (1e)">4-3-1-1-1 (1e)</span>
 ```
 The dog probably didn't bark last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
-	:modstr PrtNeg)  
-``` 
+	:aspect endeavor
+	:modal-strength partial-negative)
+```
 <span id="4-3-1-1-1 (1f)" label="4-3-1-1-1 (1f)">4-3-1-1-1 (1f)</span>
-```   
+```
 The dog didn't bark last night.
 (b/ bark-01
 	:ARG0 (d/ dog
-		:ref-number Singular)
+		:refer-number singular)
 	:temporal (n/ night
 		:mod (l/ last))
-	:aspect Endeavor
-	:modstr FullNeg)  
-```  
+	:aspect endeavor
+	:modal-strength full-negative)
+```
 [Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-1-2. Evidential justification
@@ -7340,101 +7436,109 @@ Example <a href="#4-3-1-1-2 (1)">(1)</a> shows how direct and indirect justifica
 
 <span id="4-3-1-1-2 (1)" label="4-3-1-1-2 (1)">4-3-1-1-2 (1)</span>
 
-<span id="4-3-1-1-2 (1a)" label="4-3-1-1-2 (1a)">4-3-1-1-2 (1a)</span> 
+<span id="4-3-1-1-2 (1a)" label="4-3-1-1-2 (1a)">4-3-1-1-2 (1a)</span>
 ```
 (I saw) Mary feed the cat.
 (s/ see-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (f/ feed-01
 		:ARG0 (p2/ person
 			:name (n/ name :op1 "Mary"))
 		:ARG2 (c/ cat
-			:ref-number Singular)
-		:aspect Performance
-		**:modstr FullAff**)
-	:aspect State
-	:modstr FullAff)
+			:refer-number singular)
+		:aspect performance
+		**:modal-strength full-affirmative**)
+	:aspect state
+	:modal-strength full-affirmative)
 ```
-<span id="4-3-1-1-2 (1b)" label="4-3-1-1-2 (1b)">4-3-1-1-2 (1b)</span> 
+<span id="4-3-1-1-2 (1b)" label="4-3-1-1-2 (1b)">4-3-1-1-2 (1b)</span>
 ```
 Mary must have fed the cat.
 (f/ feed-01
 	:ARG0 (p/ person
 		:name (n/ name :op1 "Mary"))
 	:ARG2 (c/ cat
-		:ref-number Singular)
-	:aspect Performance
-	:modstr PrtAff)
+		:refer-number singular)
+	:aspect performance
+	:modal-strength partial-affirmative)
 ```
 
-In <a href="#4-3-1-1-2 (1a)">(1a)</a>, the author has direct knowledge of the feeding event, by way of witnessing it. Therefore, *feed* is annotated with `Aff` modal strength. In <a href="#4-3-1-1-2 (1b)">(1b)</a>, however, *must* signals that the author is inferring that the feeding event occurred without direct, perceptual knowledge. Therefore, *fed* in <a href="#4-3-1-1-2 (1b)">(1b)</a> is annotated with `Prt` modal strength.
+In <a href="#4-3-1-1-2 (1a)">(1a)</a>, the author has direct knowledge of the
+feeding event, by way of witnessing it. Therefore, *feed* is annotated with
+`full-affirmative` modal strength. In <a href="#4-3-1-1-2 (1b)">(1b)</a>,
+however, *must* signals that the author is inferring that the feeding event
+occurred without direct, perceptual knowledge. Therefore, *fed* in <a
+href="#4-3-1-1-2 (1b)">(1b)</a> is annotated with `partial-affirmative` modal
+strength.
 
 [Back to Table of Contents](#toc)
 
 ##### Part 4-3-1-1-3. Future events and deontic modality
 
 For events presented as (potentially) happening in the future,
-`:modstr` refers to the predictability of
-the occurrence of the event in the future, as presented by the author.
-Predictive future has full strength (`FullAff`
-or `FullNeg`); intentions and commands
-correspond to partial strength (`PrtAff` or
-`PrtNeg`); and desire and permission
-correspond to neutral (`NeutAff` or
-`NeutNeg`) strength. Keep in mind that events under the scope of modals identified as their own event don't receive any `:modstr` value at all. This section refers to deontic meanings indicated by grammaticalized modals that don't fit the criteria to be identified as events.
+`:modal-strength` refers to the predictability of the occurrence of the event
+in the future, as presented by the author. Predictive future has full
+strength (`full-affirmative` or `full-negative`); intentions and commands
+correspond to partial strength (`partial-affirmative` or `partial-negative`);
+and desire and permission correspond to neutral (`neutral-affirmative` or
+`neutral-negative`) strength. Keep in mind that events under the scope of
+modals identified as their own event don't receive any `:modal-strength`
+value at all. This section refers to deontic meanings indicated by
+grammaticalized modals that don't fit the criteria to be identified as
+events.
 
 This is illustrated in <a href="#4-3-1-1-3 (1)">(1)</a>.
 
 <span id="4-3-1-1-3 (1)" label="4-3-1-1-3 (1)">4-3-1-1-3 (1)</span>
 
-<span id="4-3-1-1-3 (1a)" label="4-3-1-1-3 (1a)">4-3-1-1-3 (1a)</span>  
+<span id="4-3-1-1-3 (1a)" label="4-3-1-1-3 (1a)">4-3-1-1-3 (1a)</span>
 ```
 I will go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG4 (c/ city
 		:wiki "Santa_Fe,_New_Mexico"
 		:name (n/ name
 			:op1 "Santa"
 			:op2 "Fe"))
-	:aspect Performance
-	:modstr FullAff)
+	:aspect performance
+	:modal-strength full-affirmative)
 ```
-<span id="4-3-1-1-3 (1b)" label="4-3-1-1-3 (1b)">4-3-1-1-3 (1b)</span>   
+<span id="4-3-1-1-3 (1b)" label="4-3-1-1-3 (1b)">4-3-1-1-3 (1b)</span>
 ```
 You must go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
-		:ref-person 2nd
-		:ref-number Singular)
+		:refer-person 2nd
+		:refer-number singular)
 	:ARG4 (c/ city
 		:wiki "Santa_Fe,_New_Mexico"
 		:name (n/ name
 			:op1 "Santa"
 			:op2 "Fe"))
-	:aspect Performance
-	:modstr PrtAff
+	:aspect performance
+	:modal-strength partial-affirmative
 	:mode Imperative)
 ```
 
-<span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">4-3-1-1-3 (1c)</span>   
+<span id="4-3-1-1-3 (1c)" label="4-3-1-1-3 (1c)">4-3-1-1-3 (1c)</span>
 ```
 You can go to Santa Fe.
 (g/ go-01
 	:ARG1 (p/ person
-		:ref-person 2nd
-		:ref-number Singular)
+		:refer-person 2nd
+		:refer-number singular)
 	:ARG4 (c/ city
 		:wiki "Santa_Fe,_New_Mexico"
 		:name (n/ name
 			:op1 "Santa"
 			:op2 "Fe"))
-	:aspect Performance
-	:modstr NeutAff)
+	:aspect performance
+	:modal-strength neutral-affirmative)
 ```
 The predictive future, as in <a href="#4-3-1-1-3 (1a)">(1a)</a>, is annotated with
 full modal strength because it presents the future event as a certainty
@@ -7447,15 +7551,15 @@ neutral strength, since even if someone has permission to do something, there is
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-2. modpred relation
+##### Part 4-3-1-2. modal-predicate relation
 
 Events under the scope of a modal identified as its own event are only
-annotated with a `:modpred` relation to the
-relevant modal. This is shown below in <a href="#4-3-1-2 (1)">(1)</a>.
+annotated with a `:modal-predicate` relation to the relevant modal. This is
+shown below in <a href="#4-3-1-2 (1)">(1)</a>.
 
 <span id="4-3-1-2 (1)" label="4-3-1-2 (1)">4-3-1-2 (1)</span>
 
-<span id="4-3-1-2 (1a)" label="4-3-1-2 (1a)">4-3-1-2 (1a)</span> 
+<span id="4-3-1-2 (1a)" label="4-3-1-2 (1a)">4-3-1-2 (1a)</span>
 ```
 Mary wants to visit France.
 (w/ want-01
@@ -7466,19 +7570,19 @@ Mary wants to visit France.
 		:ARG1 (c/ country
 			:wiki "France"
 			:name (n/ name :op1 "France"))
-		:aspect Performance
-		:modpred w
-	:aspect State
-	:modstr FullAff
+		:aspect performance
+		:modal-predicate w
+	:aspect state
+	:modal-strength full-affirmative
 
 (s/ sentence
-	:temporal ((DCT :overlap s1w)
+	:temporal ((document-creation-time :overlap s1w)
 		   (s1w :after s1v))
-	:modal ((AUTH :FullAff s1p)
-		(s1p :FullAff s1w)
+	:modal ((author :full-affirmative s1p)
+		(s1p :full-affirmative s1w)
 		(s1w :Unsp s1v))
 ```
-<span id="4-3-1-2 (1b)" label="4-3-1-2 (1b)">4-3-1-2 (1b)</span> 
+<span id="4-3-1-2 (1b)" label="4-3-1-2 (1b)">4-3-1-2 (1b)</span>
 ```
 Rob thinks the dog escaped through the fence.
 (t/ think-01
@@ -7486,85 +7590,85 @@ Rob thinks the dog escaped through the fence.
 		:name (n/ name :op1 "Rob"))
 	:ARG1 (e/ escape-01
 		:ARG0 (d/ dog
-			:ref-number Singular)
+			:refer-number singular)
 		:path (f/ fence)
-		:aspect Performance
-		:modpred t)
-	:aspect State
-	:modstr FullAff)
+		:aspect performance
+		:modal-predicate t)
+	:aspect state
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1t)
+	:temporal ((document-creation-time :overlap s1t)
 		   (s1t :before s1e))
-	:modal ((AUTH :FullAff s1p)
-		(s1p :FullAff s1t)
+	:modal ((author :full-affirmative s1p)
+		(s1p :full-affirmative s1t)
 		(s1t :Unsp s1e)))
 ```
-<span id="4-3-1-2 (1c)" label="4-3-1-2 (1c)">4-3-1-2 (1c)</span> 
+<span id="4-3-1-2 (1c)" label="4-3-1-2 (1c)">4-3-1-2 (1c)</span>
 ```
 They probably decided to leave on Monday.
 (d/ decide-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG1 (l/ leave-01
 		:ARG0 p
 		:temporal (d/ date-entity
 			:weekday (m/ Monday))
-		:aspect Performance
-		:modpred d)
-	:aspect Performance 
-	:modstr PrtAff) 
+		:aspect performance
+		:modal-predicate d)
+	:aspect performance
+	:modal-strength partial-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1d)
+	:temporal ((past-reference :contained s1d)
 		   (s1m :contained s1l))
-	:modal ((AUTH :PrtAff s1p)
-		(s1p :FullAff s1d)
+	:modal ((author :partial-affirmative s1p)
+		(s1p :full-affirmative s1d)
 		(s1d :Unsp s1l)))
 ```
-<span id="4-3-1-2 (1d)" label="4-3-1-2 (1d)">4-3-1-2 (1d)</span> 
+<span id="4-3-1-2 (1d)" label="4-3-1-2 (1d)">4-3-1-2 (1d)</span>
 ```
 His parents forbid him from smoking.
 (f/ forbid-01
 	:ARG0 (p/ person
 		:ARG0-of (k/ kinship)
 			:ARG1 (p2/ person
-				:ref-person 3rd
-				:ref-number Singular)
+				:refer-person 3rd
+				:refer-number singular)
 			:ARG2 (p3/ parent)
-		:ref-number Plural)
+		:refer-number plural)
 	:ARG1 (s/ smoke-01
 		:ARG0 p2
-		:aspect Process
-		:modpred f)
+		:aspect process
+		:modal-predicate f)
 	:ARG2 p2
-	:aspect State
-	:modstr FullAff)
+	:aspect state
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1f)
+	:temporal ((document-creation-time :overlap s1f)
 		   (s1f :overlap s1s))
-	:modal ((AUTH :FullAff s1p)
-		(s1p :FullAff s1f)
+	:modal ((author :full-affirmative s1p)
+		(s1p :full-affirmative s1f)
 		(s1f :Unsp s1s)))
 ```
 
 Note that the modal itself is annotated with a
-`:modstr` value (if it is not under the
+`:modal-strength` value (if it is not under the
 scope of another modal). The actual modal value imparted by the modal
 event is not annotated at Stage 0. It will be taken up in the lexical entries of modal complement-taking predicates and space-builders as the lexicon is being built, and will then automatically replace the unspecified link between the modal event and the modalized event in the document-level structure.
 
 [Back to Table of Contents](#toc)
 
-##### Part 4-3-1-3. quot relation
+##### Part 4-3-1-3. quote relation
 
 Events under the scope of a reporting predicate or a speech predicate
-are annotated with a `:quot` relation to the
+are annotated with a `:quote` relation to the
 reporting or speech predicate. Unlike events under the scope of modals,
 these events are also annotated with a
-`:modstr` value.
+`:modal-strength` value.
 
 <span id="4-3-1-3 (1)" label="4-3-1-3 (1)">4-3-1-3 (1)</span>
 
-<span id="4-3-1-3 (1)" label="4-3-1-3 (1)">4-3-1-3 (1)</span> 
+<span id="4-3-1-3 (1)" label="4-3-1-3 (1)">4-3-1-3 (1)</span>
 ```
 Mary said that she went to Santa Fe.
 (s/ say-01
@@ -7577,19 +7681,19 @@ Mary said that she went to Santa Fe.
 			:name (n2/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
-		:modstr FullAff
-		:quot s
-	:aspect Performance
-	:modstr FullAff) 
+		:aspect performance
+		:modal-strength full-affirmative
+		:quote s
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :FullAff s1s)
-		(AUTH :FullAff s1p)
-		(s1p :FullAff s1g)))
+	:modal ((author :full-affirmative s1s)
+		(author :full-affirmative s1p)
+		(s1p :full-affirmative s1g)))
 ```
-<span id="4-3-1-3 (1a)" label="4-3-1-3 (1a)">4-3-1-3 (1a)</span> 
+<span id="4-3-1-3 (1a)" label="4-3-1-3 (1a)">4-3-1-3 (1a)</span>
 ```
 The New York Times reported that Congress voted on the bill this afternoon.
 (r/ report-01
@@ -7605,22 +7709,22 @@ The New York Times reported that Congress voted on the bill this afternoon.
 			:name (n3/ name :op1 "Congress")
 			:wiki "United_States_Congress")
 		:ARG1 (b/ bill
-			:ref-number Singular)
+			:refer-number singular)
 		:temporal (a/ afternoon
 			:mod (t/ this))
-		:aspect Performance
-		:modstr FullAff
-		:quot r)
-	:aspect Performance
-	:modstr FullAff)
+		:aspect performance
+		:modal-strength full-affirmative
+		:quote r)
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1r)
+	:temporal ((past-reference :contained s1r)
 		   (s1a :contained s1v))
-	:modal ((AUTH :FullAff s1r)
-		(AUTH :FullAff s1n)
-		(s1n :FullAff s1v)))
+	:modal ((author :full-affirmative s1r)
+		(author :full-affirmative s1n)
+		(s1n :full-affirmative s1v)))
 ```
-<span id="4-3-1-3 (1b)" label="4-3-1-3 (1b)">4-3-1-3 (1b)</span> 
+<span id="4-3-1-3 (1b)" label="4-3-1-3 (1b)">4-3-1-3 (1b)</span>
 ```
 Mary might have said that she went to Santa Fe.
 (s/ say-01
@@ -7633,19 +7737,19 @@ Mary might have said that she went to Santa Fe.
 			:name (n2/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
-		:modstr FullAff
-		:quot s
-	:aspect Performance
-	:modstr NeutAff) 
+		:aspect performance
+		:modal-strength full-affirmative
+		:quote s
+	:aspect performance
+	:modal-strength neutral-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :NeutAff s1s)
-		(AUTH :NeutAff s1p)
-		(s1p :FullAff s1g))) 
+	:modal ((author :neutral-affirmative s1s)
+		(author :neutral-affirmative s1p)
+		(s1p :full-affirmative s1g)))
 ```
-<span id="4-3-1-3 (1c)" label="4-3-1-3 (1c)">4-3-1-3 (1c)</span> 
+<span id="4-3-1-3 (1c)" label="4-3-1-3 (1c)">4-3-1-3 (1c)</span>
 ```
 Mary didn’t say that she went to Santa Fe.
 (s/ say-01
@@ -7658,19 +7762,19 @@ Mary didn’t say that she went to Santa Fe.
 			:name (n2/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
-		:modstr FullAff
-		:quot s
-	:aspect Performance
-	:modstr FullNeg) 
+		:aspect performance
+		:modal-strength full-affirmative
+		:quote s
+	:aspect performance
+	:modal-strength full-negative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :FullNeg s1s)
-		(AUTH :FullNeg s1p)
-		(s1p :FullAff s1g))) 
+	:modal ((author :full-negative s1s)
+		(author :full-negative s1p)
+		(s1p :full-affirmative s1g)))
 ```
-<span id="4-3-1-3 (1d)" label="4-3-1-3 (1d)">4-3-1-3 (1d)</span> 
+<span id="4-3-1-3 (1d)" label="4-3-1-3 (1d)">4-3-1-3 (1d)</span>
 ```
 Mary said that John might have gone to Santa Fe.
 (s/ say-01
@@ -7684,19 +7788,19 @@ Mary said that John might have gone to Santa Fe.
 			:name (n3/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
-		:modstr NeutAff
-		:quot s
-	:aspect Performance
-	:modstr FullAff) 
+		:aspect performance
+		:modal-strength neutral-affirmative
+		:quote s
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :FullNeg s1s)
-		(AUTH :NeutAff s1p)
-		(s1p :NeutAff s1g))) 
+	:modal ((author :full-negative s1s)
+		(author :neutral-affirmative s1p)
+		(s1p :neutral-affirmative s1g)))
 ```
-<span id="4-3-1-3 (1e)" label="4-3-1-3 (1e)">4-3-1-3 (1e)</span> 
+<span id="4-3-1-3 (1e)" label="4-3-1-3 (1e)">4-3-1-3 (1e)</span>
 ```
 Mary said that John probably didn’t go to Santa Fe.
 (s/ say-01
@@ -7710,23 +7814,23 @@ Mary said that John probably didn’t go to Santa Fe.
 			:name (n3/ name
 				:op1 "Santa"
 				:op2 "Fe))
-		:aspect Performance
-		:modstr PrtNeg
-		:quot s
-	:aspect Performance
-	:modstr FullAff) 
+		:aspect performance
+		:modal-strength partial-negative
+		:quote s
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1s)
+	:temporal ((past-reference :contained s1s)
 		   (s1s :before s1g))
-	:modal ((AUTH :FullNeg s1s)
-		(AUTH :PrtNeg s1p)
-		(s1p :PrtNeg s1g)))  
+	:modal ((author :full-negative s1s)
+		(author :partial-negative s1p)
+		(s1p :partial-negative s1g)))
 ```
 As can be seen above, both the reporting predicate and the reported
-events are annotated with a `:modstr` value.
-The `:modstr` value of the reporting
+events are annotated with a `:modal-strength` value.
+The `:modal-strength` value of the reporting
 predicate corresponds to the author’s certainty that the reporting event
-happened. The `:modstr` value associated
+happened. The `:modal-strength` value associated
 with the reported events corresponds to the certainty with which the
 sayer/reporter reports the events. For example, in
 <a href="#4-3-1-3 (1d)">(1d)</a>, the author is certain about the saying event,
@@ -7739,56 +7843,56 @@ annotated with `Neut` modal strength.
 ##### Part 4-3-1-4. purpose relation
 
 Events in purpose clauses are annotated with both a
-`:modstr` value in the document-level annotation, and with the `:purpose` participant role relation to the main clause event in the sentence-level annotation.
+`:modal-strength` value in the document-level annotation, and with the `:purpose` participant role relation to the main clause event in the sentence-level annotation.
 
 <span id="4-3-1-4 (1)" label="4-3-1-4 (1)">4-3-1-4 (1)</span>
 ```
 They dropped water in order to fight the fire.
 (d/ drop-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG1 (w/ water)
 	:purpose (f/ fight-01
 		:ARG0 p
 		:ARG1 (f/ fire)
-		:aspect Activity
-		:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff)
+		:aspect activity
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1d)
+	:temporal ((past-reference :contained s1d)
 		   (s1d :after :s1f))
-	:modal ((AUTH :FullAff s1d)
-		(AUTH :FullAff s1p)
-		(s1p :PrtAff purpose)
-		(purpose :FullAff s1f)))
+	:modal ((author :full-affirmative s1d)
+		(author :full-affirmative s1p)
+		(s1p :partial-affirmative purpose)
+		(purpose :full-affirmative s1f)))
 ```
 <span id="4-3-1-4 (2)" label="4-3-1-4 (2)">4-3-1-4 (2)</span>
 ```
 He walked quickly in order to not arrive late.
 (w/ walk-01
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:manner (q/ quickly)
 	:purpose (a/ arrive-01
 		:ARG1 p
 		:temporal (l/ late)
-		:aspect Performance
-		:modstr FullNeg)
-	:aspect Activity
-	:modstr FullAff)
+		:aspect performance
+		:modal-strength full-negative)
+	:aspect activity
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((PAST_REF :contained s1w)
+	:temporal ((past-reference :contained s1w)
 		   (s1w :after s1a))
-	:modal ((AUTH :FullAff s1w)
-		(AUTH :FullAff s1p)
-		(s1p :PrtAff purpose)
-		(purpose :FullNeg s1a)))
+	:modal ((author :full-affirmative s1w)
+		(author :full-affirmative s1p)
+		(s1p :partial-affirmative purpose)
+		(purpose :full-negative s1a)))
 ```
 
-The `:modstr` value represents any modals or
+The `:modal-strength` value represents any modals or
 negation that are present within the purpose clause. That is, this value
 doesn’t capture the fact that the purpose clause itself imparts a
 non-full epistemic stance on its events; that is captured by the
@@ -7799,84 +7903,84 @@ non-full epistemic stance on its events; that is captured by the
 ##### Part 4-3-1-5. condition relation
 
 The `:condition` relation in the sentence-level annotation indicates the relationship between events in conditional constructions. These events
-also receive a `:modstr` annotation. As can
+also receive a `:modal-strength` annotation. As can
 be seen in <a href="#4-3-1-5 (1)">(1)</a>, the event in the protasis is annotated with a `:condition` relation to the event in the
 apodosis.
 
 <span id="4-3-1-5 (1)" label="4-3-1-5 (1)">4-3-1-5 (1)</span>
 
-<span id="4-3-1-5 (1a)" label="4-3-1-5 (1a)">4-3-1-5 (1a)</span> 
+<span id="4-3-1-5 (1a)" label="4-3-1-5 (1a)">4-3-1-5 (1a)</span>
 ```
 If she’s hungry, I’ll feed her dinner.
 (f/ feed-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (d/ dinner)
 	:ARG2 (p2/ person
-		:ref-person 3rd
-		:ref-number Singular)
+		:refer-person 3rd
+		:refer-number singular)
 	:condition (h/ hunger-01
 		:ARG0 p2
-		:aspect State
-		:modstr FullAff)
-	:aspect Performance
-	:modstr FullAff)
+		:aspect state
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1h)
-		   (DCT :after s1f))
-	:modal ((AUTH :NeutAff have-condition)
-		(have-condition :FullAff s1h)
-		(have-condition :FullAff s1f)))
+	:temporal ((document-creation-time :overlap s1h)
+		   (document-creation-time :after s1f))
+	:modal ((author :neutral-affirmative have-condition)
+		(have-condition :full-affirmative s1h)
+		(have-condition :full-affirmative s1f)))
 ```
-<span id="4-3-1-5 (1b)" label="4-3-1-5 (1b)">4-3-1-5 (1b)</span> 
+<span id="4-3-1-5 (1b)" label="4-3-1-5 (1b)">4-3-1-5 (1b)</span>
 ```
 If she’s hungry, maybe I’ll cook pasta.
 (c/ cook-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Singular)
+		:refer-person 1st
+		:refer-number singular)
 	:ARG1 (p2/ pasta)
 	:condition (h/ hunger-01
 		:ARG0 (p3/ person
-			:ref-person 3rd
-			:ref-number Singular)
-		:aspect State
-		:modstr FullAff)
-	:aspect Performance
-	:modstr NeutAff)
+			:refer-person 3rd
+			:refer-number singular)
+		:aspect state
+		:modal-strength full-affirmative)
+	:aspect performance
+	:modal-strength neutral-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1h)
-		   (DCT :after s1c))
-	:modal ((AUTH :NeutAff have-condition)
-		(have-condition :FullAff s1h)
-		(have-condition :NeutAff s1c)))
+	:temporal ((document-creation-time :overlap s1h)
+		   (document-creation-time :after s1c))
+	:modal ((author :neutral-affirmative have-condition)
+		(have-condition :full-affirmative s1h)
+		(have-condition :neutral-affirmative s1c)))
 ```
-<span id="4-3-1-5 (1c)" label="4-3-1-5 (1c)">4-3-1-5 (1c)</span> 
+<span id="4-3-1-5 (1c)" label="4-3-1-5 (1c)">4-3-1-5 (1c)</span>
 ```
 If she isn’t hungry, we’ll just watch a movie.
 (w/ watch-01
 	:ARG0 (p/ person
-		:ref-person 1st
-		:ref-number Plural)
+		:refer-person 1st
+		:refer-number plural)
 	:ARG1 (m/ movie)
 	:mod (j/ just)
 	:condition (h/ hunger-01
 		:ARG0 (p2/ person
-			:ref-person 3rd
-			:ref-number Singular)
-		:aspect State
-		:modstr FullNeg)
-	:aspect Performance
-	:modstr FullAff)
+			:refer-person 3rd
+			:refer-number singular)
+		:aspect state
+		:modal-strength full-negative)
+	:aspect performance
+	:modal-strength full-affirmative)
 (s/ sentence
-	:temporal ((DCT :overlap s1h)
-		   (DCT :after s1w))
-	:modal ((AUTH :NeutAff have-condition)
-		(have-condition :FullNeg s1h)
-		(have-condition :FullAff s1c))) 
+	:temporal ((document-creation-time :overlap s1h)
+		   (document-creation-time :after s1w))
+	:modal ((author :neutral-affirmative have-condition)
+		(have-condition :full-negative s1h)
+		(have-condition :full-affirmative s1c)))
 ```
-As with purpose clauses, the `:modstr` value
+As with purpose clauses, the `:modal-strength` value
 doesn’t capture the uncertainty imparted by the conditional construction
 itself; it corresponds to any negation or modals which are expressed
 inside of the conditional construction. The modal value of the
@@ -7892,28 +7996,28 @@ are unspecified. The modal strength that a modal verb imparts on its
 complement is one of these pieces. As the modal annotation progresses,
 this information is added to the frame files for modal verbs. For
 example, the complements of English *want* have a
-`:modstr NeutAff` value; this will be indicated
+`:modal-strength neutral-affirmative` value; this will be indicated
 in the frame file as shown below.
 
 ```
-Predicate: want.01 
-	Roles:  
-	Arg0: wanter  
-	Arg1: thing wanted  
-	Arg2: beneficiary  
-	Arg3: in-exchange-for  
-	Arg4: from 
+Predicate: want.01
+	Roles:
+	Arg0: wanter
+	Arg1: thing wanted
+	Arg2: beneficiary
+	Arg3: in-exchange-for
+	Arg4: from
 
-:modstr of complement: NeutAff  
+:modal-strength of complement: neutral-affirmative
 ```
 
-For the complements of modals, the `:modstr`
+For the complements of modals, the `:modal-strength`
 values work largely the same way that they do for other events; however,
 they reflect the beliefs of the
 `:experiencer` participant of the modal
 event, who is often not the author. For example, in
 <a href="#4-3-1-6 (1)">(1)</a>, Mary believes that the visit event may take
-place in the future (`NeutAff` strength), but
+place in the future (`neutral-affirmative` strength), but
 the author disagrees.
 
 <span id="4-3-1-6 (1)" label="4-3-1-6 (1)">\[4-3-1-6 (1)\]</span> Mary wants
@@ -7924,19 +8028,19 @@ to Mary’s beliefs, as the `:experiencer` of
 the wanting event.
 
 Some predicates impart full, positive
-(`FullAff`) strength on their complements,
+(`full-affirmative`) strength on their complements,
 often called factive predicates (e.g., *manage to*). Strong epistemic
 modals (e.g., *expect that, deduce*) and strong deontic modals,
 including intention modals (e.g., *plan to, decide to*) and obligation
-modals (e.g., *need, demand*), impart `PrtAff`
+modals (e.g., *need, demand*), impart `partial-affirmative`
 strength on their complements. Weak deontic modals, including desire
 (e.g., *want*) and permission (e.g., *allow*), impart
-`NeutAff` strength on their complements.
+`neutral-affirmative` strength on their complements.
 Certain modals may also lexicalize negation, such as *doubt*, *forbid*,
 or *wish*. These are annotated with the
-`NeutNeg`,
-`PrtNeg`, and
-`FullNeg` values, respectively.
+`neutral-negative`,
+`partial-negative`, and
+`full-negative` values, respectively.
 
 [Back to Table of Contents](#toc)
 
@@ -7945,11 +8049,11 @@ or *wish*. These are annotated with the
 This list gives the modal strength value associated with common English
 modal constructions (this is certaintly not an exhaustive list). For
 modal predicates that are identified as their own event (e.g.,
-deontic predicates), the modal strength value characterizes the dependency link between the modal predicate node and its child event. For example, *want* is in the `NeutAff` list, which indicates that there
-is a `NeutAff` link between the `want` node and its
-complement event node in the full dependency structure.   
+deontic predicates), the modal strength value characterizes the dependency link between the modal predicate node and its child event. For example, *want* is in the `neutral-affirmative` list, which indicates that there
+is a `neutral-affirmative` link between the `want` node and its
+complement event node in the full dependency structure.
 
-`FullAff` (full affirmative)
+`full-affirmative` (full affirmative)
 
   - Simple assertions: declarative sentences
 
@@ -7959,7 +8063,7 @@ complement event node in the full dependency structure.
 
   - Factual predicates: *manage to, finished*
 
-`PrtAff` (partial affirmative)
+`partial-affirmative` (partial affirmative)
 
   - Strong epistemic modals: *must/must have, have to, expect that,
     deduce*
@@ -7968,17 +8072,17 @@ complement event node in the full dependency structure.
     likely/be likely that*
 
   - Strong deontic modals:
-    
+
       - Intention: *intend, plan,* intentional *be going to, decide, be
         slated to*
-    
+
       - Obligation: imperative, deontic *must, have to, should, ought
         to, be required to, need; order to, tell to, demand*
-    
+
       - Purpose clauses/purposive event nominals: *(in order) to* VERB,
         *for* EVENT.NOM
 
-`NeutAff` (neutral affirmative)
+`neutral-affirmative` (neutral affirmative)
 
   - Weak epistemic modals: *may, might/might have, could have*
 
@@ -7990,27 +8094,27 @@ complement event node in the full dependency structure.
   - Hope/Fear: *hope, fear, worry, dread*
 
   - Weak deontic modals
-    
+
       - Desire: *want, prefer, would like to*
-    
+
       - Permission: *let, permit, allow*
 
-`NeutNeg` (neutral negative)
+`neutral-negative` (neutral negative)
 
   - Doubt: *doubt, call into question, be dubious that, be skeptical
     that*
 
-  - Combination of (some) <span>NeutAff</span> lexical items with negation
+  - Combination of (some) <span>neutral-affirmative</span> lexical items with negation
 
-`PrtNeg` (partial negative)
+`partial-negative` (partial negative)
 
   - Strong negative deontics: *forbid, ban, disallow*
 
   - Negative imperatives
 
-  - Combination of (some) <span>PrtAff</span> lexical items with negation
+  - Combination of (some) <span>partial-affirmative</span> lexical items with negation
 
-`FullNeg` (full negative)
+`full-negative` (full negative)
 
   - Negation: *not, never, no* + noun phrase
 
@@ -8023,13 +8127,13 @@ complement event node in the full dependency structure.
   - Wishes: *wish*
 
 [Back to Table of Contents](#toc)
-  
+
  ## Part 5. Annotation Cheat Sheet
- 
+
  * Sentence-level Annotation
  	* Choose the **top node** of the graph for the sentence you are annotating.
  		* If the sentence contains **one main event** (typically a lexical verb in a main clause), **annotate it** as the **top of the graph** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) and [Part 3-1-3](#part-3-1-3-concept-word-mismatches) on how to decide what counts as one event).
- 			* Highlight the word token that corresponds to the event. 
+ 			* Highlight the word token that corresponds to the event.
  			* If a citation form of it is in the lexicon already, click the "Lexicalized Concept" button and select this lemma.
  			* If it is not in the lexicon yet, click the "add to Lexicon" button and create a lexical entry for it first.
  		* If the sentence contains a **"non-verbal clause"** concept as its main event, choose the relevant **non-verbal clause predicate** as the top node (see [Part 3-1-1-3](#part-3-1-1-3-states-and-entities), [Part 3-1-3-5](#Part-3-1-3-5-Non-verbal-clauses)).
@@ -8038,8 +8142,8 @@ complement event node in the full dependency structure.
 	 		* If one event is a **circumstantial participant** or **adverbial participant** in another event, choose the **main event** as the top node.
 	 		* If two events are **coordinated** but a fine-grained meaning on the lowest level of the lattice in [Part 3-1-6](#part-3-1-6-discourse-relations) can be identified, choose the **main event** as the top node following the guidelines in the aforementioned section.
 	 		* If two events are **coordinated** but a fine-grained meaning on the lowest level of the lattice in [Part 3-1-6](#part-3-1-6-discourse-relations) can not be identified, choose the **relevant coordinator concept** as the top node (see [Part 3-1-6](#part-3-1-6-discourse-relations)).
- 			
- 		
+
+
  	* Annotate the **participants** of the top node - these can be both entities and events.
  		* For each participant, select the correct **role/relation** from the "roles" drop-down menu:
  			* If the top node is an **abstract concept predicate**, use the appropriate **numbered argument roles** or **:opX** roles (see [Part 3-2-1-1-1](#part-3-2-1-1-1-non-verbal-clauses) for non-verbal clause predicates, [Part 3-1-6](#part-3-1-6-discourse-relations) for discourse relations).
@@ -8076,24 +8180,24 @@ complement event node in the full dependency structure.
  		* If a participant is modified by a **quantifier**, annotate it with the **:quant** relation or otherwise follow the guidelines for quantification (see [Part 3-1-5](#part-3-1-5-scope-for-quantification-and-negation), [Part 3-2-2](#part-3-2-2-Non-participant-role-UMR-relations), [Part 3-3-4](#part-3-3-4-quant)).
  		* If a participant is a **named entity**, apply the **:name** and **:wiki** relations to the appropriate named entity category concept node, if you have not done so yet (see [Part 3-1-2](#part-3-1-2-named-entities)).
  	* Annotate **attributes** of participants and events.
- 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a **:ref-number** attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
- 		* Give **_person_ nodes** from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:ref-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give participants with **overt number marking** (e.g. number-marked NPs, verbal indexes with number information), a **:refer-number** attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
+ 		* Give **_person_ nodes** from pronouns, verbal indexation, or implicit participants - but not those corresponding to named entities - a _:refer-person_ attribute with the relevant value (see [Part 3-3-5](#part-3-3-5-ref)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) an **:aspect** attribute with the relevant value (see [Part 3-3-1](#part-3-3-1-Aspect)).
  		* Give concepts identified as **events** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) the relevant **modal attributes** ([Part 4-3](#part-4-3-modal-dependency)):
-	 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a **:modpred** relation with the space-building complement-taking predicate as the parent.
-	 		* Give events **under the scope of a reporting event** a **:quot** relation with the reporting verb as the parent, and a **:modstr** relation with the relevant strenght.
-	 		* Give **all other events** a **:modstr** annotation with the relevant strength.
+	 		* Give events **under the scope of a modal event** (e.g. a wanting-event) a **:modal-predicate** relation with the space-building complement-taking predicate as the parent.
+	 		* Give events **under the scope of a reporting event** a **:quote** relation with the reporting verb as the child, and a **:modal-strength** relation with the relevant strength.
+	 		* Give **all other events** a **:modal-strength** annotation with the relevant strength.
  		* For **interrogative, imperative,** or **expressive** clauses, give the main verb a **:mode** attribute with the relevant value (see [Part 3-3-2](#part-3-3-2-mode)).
  		* Give constituents that are **morphosyntactically negated** or verbs in **polar questions** a **:polarity** attribute with the relevant value (see [Part 3-3-3](#part-3-3-3-polarity)).
  		* Give concepts that are modified with a **downtoner** or **intensifier** a **:degree** attribute with the relevant value ([Part 3-3-6](#part-3-3-6-degree)).
- 
+
  * Document-level Annotation
  	* For any **event concept** or **object concept**:
  		* Assess whether it is **coreferential** with a previously mentioned event or object concept. In the case of object concepts, also assess whether it is a **subset** of another concept.
  		* If so, choose the relevant **coreference relation**, with the previous mention as the head and the current mention as the child (see [Part 4-1](#part-4-1-coreference)).
  	* Assess  the **modal dependency structure** generated on the basis of the sentence-level modal annotation.
 	 	* Edit any errors.
-	 	* If possible, substitute the relevant modal strength value for any **:Unsp** links generated between conceivers and events because of **:modpred** relations in the sentence-level annotation.
+	 	* If possible, substitute the relevant modal strength value for any **:Unsp** links generated between conceivers and events because of **:modal-predicate** relations in the sentence-level annotation.
  	* Give every concept **identified as an event** (see [Part 3-1-1](#part-3-1-1-eventive-concepts) for Event ID guidelines) and each **time expression** in the text a temporal annotation (see [Part 4-2](#part-4-2-temporal-dependency)).
 
 [Back to Table of Contents](#toc)
@@ -8119,31 +8223,31 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 (h/ hee3-01 'say s.t. to s.o.'
    :ARG0 (p/ person
-	   :ref-person 3rd
-	   :ref-number Singular)
+	   :refer-person 3rd
+	   :refer-number singular)
    :ARG1 (p2/ person
 	   :ARG0-of (x/ 3ii'oku 'sit'
-		   :aspect State
-		   :modstr FullAff)
+		   :aspect state
+		   :modal-strength full-affirmative)
 	   :mod (n/ nuhu' 'this')
-	   :ref-number Plural) 
+	   :refer-number plural)
    :ARG2 (n2/ nooxoh-01 'dig for s.t. with a tool'
 	   :ARG0 p2
 	   :ARG1 (t/ thing)
 	   :other-role (w/ wohei)
-	   :aspect Performance
-	   :modstr PrtAff
+	   :aspect performance
+	   :modal-strength partial-affirmative
 	   :mode Imperative)
-   :aspect Performance
-   :modstr FullAff)
+   :aspect performance
+   :modal-strength full-affirmative)
 (s1/ sentence
-	:temporal ((PAST_REF :contained s1h)
+	:temporal ((past-reference :contained s1h)
 			   (s1h :overlap s1x)
 			   (s1h :after s1n2))
-	:modal ((AUTH :FullAff s1h)
-			(AUTH :FullAff s1x)
-			(AUTH :FullAff s1p)
-			(s1p :PrtAff s1n2)))
+	:modal ((author :full-affirmative s1h)
+			(author :full-affirmative s1x)
+			(author :full-affirmative s1p)
+			(s1p :partial-affirmative s1n2)))
 
 \ref	CrowCh(o).097
 \tx	bii'inowuneehek,		neihoowneh'e'.
@@ -8161,35 +8265,35 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:actor (p/ person
 	:theme (n/ neh'-01 'kill s.o.'
 		:ARG0 (p2/ person
-			:ref-person 3rd
-			:ref-number Singular)
+			:refer-person 3rd
+			:refer-number singular)
 		:ARG1 (p3/ person
-			:ref-person 1st
-			:ref-number Singular)
+			:refer-person 1st
+			:refer-number singular)
 		:condition (b/ bii'in-01 'find s.t.'
 			:ARG0 (p4/ person
-				:ref-person 2nd
-				:ref-number Plural)
+				:refer-person 2nd
+				:refer-number plural)
 			:ARG1 (t/ thing)
-			:aspect Performance
-			:modstr FullAff)
-		:aspect Performance
-		:modstr FullNeg
-		:quot e))
+			:aspect performance
+			:modal-strength full-affirmative)
+		:aspect performance
+		:modal-strength full-negative
+		:quote e))
 (s2/ sentence
 	:temporal ((s1h :after s2e)
 			   (s2e :after s2b)
 			   (s2b :after s2n))
-	:modal ((AUTH :FullAff s2e)
-			(AUTH :FullAff s2p)
-			(s2p :NeutAff have-condition)
-			(have-condition :FullNeg s2n)
-			(have-condition :FullAff s2b))
+	:modal ((author :full-affirmative s2e)
+			(author :full-affirmative s2p)
+			(s2p :neutral-affirmative have-condition)
+			(have-condition :full-negative s2n)
+			(have-condition :full-affirmative s2b))
 	:coref ((s1p :same-entity s2p)
 			(s2p :same-entity s2p3)
 			(s1p2 :same-entity s2p4)
 			(s1t :same-entity s2t)))
-					 
+
 \ref	CrowCh(o).098
 \tx	ciibii'inowuneehek,			noh		ne'neh'einoo."
 \mb	cii- bii'in -owunee	-hek	noh		ne'- neh' -einoo
@@ -8201,30 +8305,30 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	:actor (p/ person
 	:theme (n/ neh'-01 'kill s.o.'
 		:ARG0 (p2/ person
-			:ref-person 3rd
-			:ref-number Singular)
+			:refer-person 3rd
+			:refer-number singular)
 		:ARG1 (p3/ person
-			:ref-person 1st
-			:ref-number Singular)
+			:refer-person 1st
+			:refer-number singular)
 		:condition (b/ bii'in-01 'find s.t.'
 			:ARG0 (p4/ person
-				:ref-person 2nd
-				:ref-number Plural)
+				:refer-person 2nd
+				:refer-number plural)
 			:ARG1 (t/ thing)
-			:aspect Performance
-			:modstr FullNeg)
-		:aspect Performance
-		:modstr FullAff
-		:quot e))
+			:aspect performance
+			:modal-strength full-negative)
+		:aspect performance
+		:modal-strength full-affirmative
+		:quote e))
 (s3/ sentence
 	:temporal ((s2e :after s3e)
 			   (s3e :after s3b)
 			   (s3b :after s3n))
-	:modal ((AUTH :FullAff s3e)
-			(AUTH :FullAff s3p)
-			(s3p :NeutAff have-condition)
-			(have-condition :FullAff s3n)
-			(have-condition :FullNeg s3b))
+	:modal ((author :full-affirmative s3e)
+			(author :full-affirmative s3p)
+			(s3p :neutral-affirmative have-condition)
+			(have-condition :full-affirmative s3n)
+			(have-condition :full-negative s3b))
 	:coref ((s2p3 :same-entity s3p)
 			(s3p :same-entity s3p3)
 			(s2p2 :same-entity s3p2)
@@ -8245,15 +8349,15 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 
 (n/ nooxohei-01 'dig for s.t. unspecified'
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG1 (t/ thing)
 	:duration (w/ wo'oe'onoun 'on and on')
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 (s4/ sentence
 	:temporal (s3e :after s4n)
-	:modal (AUTH :FullAff s4n)
+	:modal (author :full-affirmative s4n)
 	:coref ((s3p4 :same-entity s4p)
 			(s3t :same-entity s4t)
 			(s1n2 :same-event s4n)))
@@ -8270,11 +8374,11 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 (h/ have-mod-91
        :ARG1 (t /thing)
        :ARG2 (n/ nooko'wuutee 'have.white.streak')
-       :aspect State
-       :modstr FullAff)
+       :aspect state
+       :modal-strength full-affirmative)
 (s5/ sentence
 	:temporal (s4n :overlap s5h)
-	:modal (AUTH :FullAff s5h))
+	:modal (author :full-affirmative s5h))
 
 \ref	CrowCh(o).101
 \tx	niisootoxuuus	ne'no'uxoo';		nooxoheino'.
@@ -8288,20 +8392,20 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 			SEE ARG STRUCTURE ABOVE SENTENCE 4
 (n/ nooxohei-01 'dig for s.t. unspecified'
 	:ARG0 (p/ person
-		:ref-person 3rd
-		:ref-number Plural)
+		:refer-person 3rd
+		:refer-number plural)
 	:ARG1 (t/ thing)
 	:duration (t2/ temporal-quantity
 		:unit (u/ uuus 'day')
 		:quant 7)
-	:aspect Activity
-	:modstr FullAff)
+	:aspect activity
+	:modal-strength full-affirmative)
 (s6/ sentence
 	:temporal (s5h :overlap s6n)
-	:modal (AUTH :FullAff s6n)
+	:modal (author :full-affirmative s6n)
 	:coref ((s4p :same-entity s6p)
 			(s4t :same-entity s6t)))
-	
+
 \ref	CrowCh(o).102
 \tx	hoo3ontii3i';
 \mb	hoo3ontii -3i'
@@ -8313,16 +8417,16 @@ PRECEDING: A man has been given silver bullets, and told to shoot a Crow Chief. 
 	ARG 1 (implied only) = [find the bullets by digging] [not overt in the sentence, and the verb is syntactically/grammatically intransitive, though semantically transitive]
    (h/ hoo3ontii 'fail to do s.t.'
        :ARG0 (p/ person
-	       :ref-person 3rd
-	       :ref-number Plural)
+	       :refer-person 3rd
+	       :refer-number plural)
 	   :ARG1 (e/ event
 		   :mod h)
-       :aspect Performance
-       :modstr FullAff)
+       :aspect performance
+       :modal-strength full-affirmative)
    (s7/ sentence
 	   :temporal (s6n :after s7h)
-	   :modal ((AUTH :FullAff s7h)
-			   (AUTH :FullAff s7p)
+	   :modal ((author :full-affirmative s7h)
+			   (author :full-affirmative s7p)
 			   (s7p :Unsp s7e))
 	   :coref ((s6p :same-entity s7p)
 			   (s2b :same-event s7e)))
@@ -8380,7 +8484,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Associated motion | Semantic category | **3-1-3-4** |
 | *Atelic Process* | Aspectual semantic category, aspect annotation value | 3-3-1, 3-3-1-3, **3-3-1-4** |
 | Attribute | Category of UMR objects | 2-1, 2-2-4, **2-2-5**, 3-1-3-3, 3-1-6, 3-2-1-3, 3-2-2-3, **3-3**, 3-3-1, 3-3-2, 3-3-3, 3-3-4, 3-3-5, 3-3-6 |
-| *Author/AUTH* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6 |
+| *Author/author* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-3, 4-3-1-6 |
 | Auxiliary | Strategy | **3-1-3-3** |
 | Balinese | Language | 3-2-1 |
 | Before | Temporal annotation value | 1, 4-2, **4-2-2-1** |
@@ -8448,7 +8552,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Direction* | Non-participant role relation | **3-2-2-3** |
 | Discourse relations | Semantic category | **3-1-6** |
 | Disjunctive | Discourse relation | **3-1-6** |
-| Document Creation Time (DCT) | Temporal annotation value | 1, 3-3-1-4, 4-2, **4-2-1-1**, 4-2-1-2 |
+| Document Creation Time (document-creation-time) | Temporal annotation value | 1, 3-3-1-4, 4-2, **4-2-1-1**, 4-2-1-2 |
 | Document-level representation | UMR annotation practice | 1, 2-1, 2-2, 2-2-5, 3-1-6, 3-3-3, **4**, 4-1-1, 4-2, 4-3-1, 4-3-1-4 |
 | Doubt | Modal semantic category | **4-3-1-6**, 4-3-2 |
 | *Downtoner* | Degree semantic category, degree annotation value | 2-1, **3-3-6** |
@@ -8487,7 +8591,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Frustrative | Modal semantic category | **3-1-3-3** |
 | Full support | Modal semantic category | **4-3-1-1***, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
 | Future-oriented modality | Modal semantic category | 4-3-1-1, **4-3-1-1-3** |
-| *Future_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *future-reference* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | General participant roles | Participant role category | 2-1, 2-2-1, 3-2-1, **3-2-1-1**, 3-2-1-1-2, 3-2-1-2-1, 3-2-1-3, 3-2-2 |
 | Generic events | Event type | **3-1-1-4** |
 | Gerund | Strategy | **3-1-1**, 3-3-1-1 |
@@ -8551,7 +8655,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Negation | Modal semantic category | 2-1, 2-2, 3-1-3-2, 3-1-5, 3-1-6, **3-3-3, 4-3-1-1**, 4-3-1-1-1, 4-3-1-4, 4-3-1-5, 4-3-1-6, 4-3-2 |
 | Negative circumstantial | Discourse relation | **3-1-6** |
 | *Neut* | Modal annotation value | 1, **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-3, 4-3-1-6, 4-3-2 |
-| *NeutNeg* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| *Neutral-negative* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
 | Neutral support | Modal semantic category | 1, **4-3-1-1**, 4-3-1-1-3, 4-3-2 |
 | Node | Category of UMR objects | 2-1, **2-2**, 2-2-1, 2-2-3, 2-2-5, 3-2-1-3, 3-2-2-4, 3-2-2-6, 3-3-5, 4-1-1, 4-1-2, 4-2, 4-2-1, 4-2-1-1, 4-2-1-2, 4-2-2-1, 4-3, 4-3-1, 4-3-2 |
 | Nominal modification | Modification semantic category | 3-1-1, **3-2-1-3**, **3-2-2-2** |
@@ -8587,7 +8691,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | *Part-of* | Non-participant role relation | **3-2-2-2** |
 | Part-whole relations | Semantic category | **3-2-2-2** |
 | Passive | Valency-changing category | 3-2-1, **3-2-1-1-2** |
-| *PAST_REF* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *past-reference* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | *Path* | Non-participant role relation | **3-2-2-3** |
 | *Paucal* | Number semantic category, Number annotation value | 2-1, **3-3-5** |
 | *Perfective* | Aspectual semantic category, aspect annotation value | 3-3-1, **3-3-1-5** |
@@ -8613,7 +8717,7 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Predicative location | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
 | Predicative possession | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
 | Predicativization/predicativized argument | Strategy | **3-1-3-5**, 3-2-1-1-1 |
-| *Present_ref* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
+| *present-reference* | Temporal annotation value | **4-2-1-1**, 4-2-1-2 |
 | *Process* | Aspectual semantic category, aspect annotation value | 2-1, 3-3-1, 3-3-1-1 |
 | Pronominal affixes | Strategy | **3-1-3-1**, 3-1-3-5, **3-3-5** |
 | Pronoun | Part of Speech | 2-1, **3-1-3-1, 4-1**, 4-1-1 |
@@ -8621,18 +8725,18 @@ In the following alphabetical index, annotation values are distinguished by thei
 | Property concept | Semantic category | **3-1-1**, 3-1-1-3, 3-1-3-5, 3-1-6, 3-2-1-1-1, 3-3-1-3, 3-3-2, 3-3-6 |
 | Property predication | Non-verbal clause category | **3-1-1-3**, 3-1-3-5, 3-2-1-1-1 |
 | *Prt* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-2, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
-| *PrtNeg* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
+| *Partial-negative* | Modal annotation value | **4-3-1-1**, 4-3-1-1-1, 4-3-1-1-3, 4-3-1-6, 4-3-2 |
 | Purpose | Discourse relation | **3-1-6**, 4-2-2-4, 4-3-1, 4-3-1-4, 4-3-2 |
 | *Purpose* | Participant role | 3-1-6, **3-2-1-1**, 4-3-1, **4-3-1-4** |
 | *Quant* | Quantification annotation value | 2-1, 2-2-5, **3-2-2-5, 3-3-4** |
 | Quantification | Semantic category | 1, 2-1, 2-2, 2-2-5, **3-1-5**, 3-2-2-2, **3-2-2-5**, 3-3-1-3, **3-3-4**, 4-2-1-2 |
 | *Quarter* | Temporal annotation relation | **3-2-2-1** |
-| *Quot* | Modal annotation value | 4-3, 4-3-1, **4-3-1-3** |
+| *Quote* | Modal annotation value | 4-3, 4-3-1, **4-3-1-3** |
 | *Range* | Non-participant role relation | 2-1, **3-2-2-5** |
 | *Recipient* | Participant role | **3-2-1-1**, 3-2-1-1-2 |
 | Reciprocal | Valency-changing category | 3-2-1, **3-2-1-1-2** |
 | Ref-number | UMR attribute | 2-1, 2-2-5, **3-3-5** |
-| Ref-person | UMR attribute | 2-1, 2-2-5, **3-3-5** |
+| Refer-person | UMR attribute | 2-1, 2-2-5, **3-3-5** |
 | Reference | Information packaging | 2-2, 2-2-1, 2-2-4, 2-2-5, **3-1-1**, 3-1-1-2, 3-1-1-3, 3-2-1-3, 3-2-2, 3-2-2-2, 3-2-2-3, 4-2 |
 | Reference time | Temporal annotation value | 1, 3-1-1-2, **4-2-1-2** |
 | Referring expression | Information packaging | 2-2, 2-2-4, 3-2-1-3, 3-2-2-2, 3-3-1-1 |
