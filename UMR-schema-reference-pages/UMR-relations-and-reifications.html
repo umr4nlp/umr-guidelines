@@ -6,6 +6,7 @@
   <style>
     body {
       font-family: sans-serif;
+      font-size: 0.9em;
       max-width: 800px;
       margin: 2em auto;
       padding: 1em;
@@ -30,9 +31,6 @@
     th {
       background-color: #f0f0f0;
     }
-    td:nth-child(1), td:nth-child(2), td:nth-child(3) {
-      line-height: 1;
-    }
     td:nth-child(4), td:nth-child(5),
     th:nth-child(4), th:nth-child(5){
       white-space: normal;
@@ -44,8 +42,9 @@
       padding: 0.1em 0.3em;
       display: inline-block;
       position: relative;
-      font-family: inherit;
+      font-family: monospace;
       font-size: inherit;
+      line-height: 1.2;
     }
     .popup {
       display: none;
@@ -79,6 +78,7 @@
       font-size: inherit;
       font-style: italic;
       position: relative;
+      line-height: 1.5;
     }
     .definition {
       white-space: normal;
@@ -87,8 +87,9 @@
     }
     .nowrap {
       white-space: nowrap;
+    }.smallcaps {
+      font-variant: small-caps;
     }
-
   </style>
 </head>
 <body>
@@ -146,6 +147,7 @@
   :actor (d / doctor)
   :aspect performance
   :modal-strength full-affirmative)</span></span>
+  
         <span class="exsent"><strong>The doctor</strong> ate a salad.
           <span class="popup">(e / eat-01
   <strong>:actor (d / doctor)</strong>
@@ -1092,8 +1094,7 @@
   <tbody>
     <tr>
       <td>
-        <span class="highlight">
-          <code>:direction</code>
+        <span class="highlight"><code>:direction</code>
           <span class="popup"><em>Ex:</em> Move that block <strong>the other way</strong>
     (m / move-01 
         :mode imperative
@@ -1108,14 +1109,12 @@
         :modal-strength partial-affirmative)
       </td>
       <td>
-        <span class="highlight">
-          <code>:direction-of</code>
+        <span class="highlight"><code>:direction-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-direction-91</code><br>
+        <span class="highlight"><code>have-direction-91</code><br>
           <span class="indent">:ARG1 event<br> 
             :ARG2 direction
       </td>
@@ -1134,20 +1133,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:path</code>
+        <span class="highlight"><code>:path</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:path-of</code>
+        <span class="highlight"><code>:path-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-path-91</code><br>
+        <span class="highlight"><code>have-path-91</code><br>
           <span class="indent">:ARG1 event/entity<br> 
             :ARG2 path
       </td>
@@ -1166,20 +1162,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:quant</code>
+        <span class="highlight"><code>:quant</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:quant-of</code>
+        <span class="highlight"><code>:quant-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-quant-91</code><br>
+        <span class="highlight"><code>have-quant-91</code><br>
           <span class="indent">:ARG1 entity<br> 
             :ARG2 quant
       </td>
@@ -1201,20 +1194,26 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:duration</code>
+        <span class="highlight"><code>:degree</code></span>
+      </td> 
+      <td colspan="4">
+        <span class="smallcaps">(see under Attributes)
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <span class="highlight"><code>:duration</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:duration-of</code>
+        <span class="highlight"><code>:duration-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-duration-91</code><br>
+        <span class="highlight"><code>have-duration-91</code><br>
           <span class="indent">:ARG1 event<br> 
             :ARG2 duration
       </td>
@@ -1235,20 +1234,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:frequency</code>
+        <span class="highlight"><code>:frequency</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:frequency-of</code>
+        <span class="highlight"><code>:frequency-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-frequency-91</code><br>
+        <span class="highlight"><code>have-frequency-91</code><br>
           <span class="indent">:ARG1 event<br> 
             :ARG2 frequency
       </td>
@@ -1267,6 +1263,7 @@
             :modal-strength partial-affirmative))</strong>
     :aspect habitual
     :modal-strength full-affirmative)</span></span>
+    
         <span class="exsent">My cat hit my dog on the nose <strong>3 times</strong>.
           <span class="popup">(h / hit-01
     :actor (c / cat
@@ -1285,20 +1282,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:mod</code>
+        <span class="highlight"><code>:mod</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:mod-of</code>
+        <span class="highlight"><code>:mod-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-mod-91</code><br>
+        <span class="highlight"><code>have-mod-91</code><br>
           <span class="indent">:ARG1 entity<br> 
             :ARG2 modifier
       </td>
@@ -1318,7 +1312,8 @@
         :modal-strength partial-negative
         :modal-predicate w)
     :aspect state
-    :modal-strength full-negative)</span></span>
+    :modal-strength full-negative)</span></span
+    
         <span class="exsent">The <strong>tall</strong> man reached the mayonnaise for me.
           <span class="popup">(r / reach-01
     :actor (m / man
@@ -1334,20 +1329,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:topic</code>
+        <span class="highlight"><code>:topic</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:topic-of</code>
+        <span class="highlight"><code>:topic-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-topic-91</code><br>
+        <span class="highlight"><code>have-topic-91</code><br>
           <span class="indent">:ARG1 event/entity<br> 
             :ARG2 topic
       </td>
@@ -1367,20 +1359,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:vocative</code>
+        <span class="highlight"><code>:vocative</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:vocative-of</code>
+        <span class="highlight"><code>:vocative-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-vocative-91</code><br>
+        <span class="highlight"><code>have-vocative-91</code><br>
           <span class="indent">:ARG1 event<br> 
             :ARG2 person addressed
       </td>
@@ -1400,20 +1389,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:medium</code>
+        <span class="highlight"><code>:medium</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:medium-of</code>
+        <span class="highlight"><code>:medium-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-medium-91</code><br>
+        <span class="highlight"><code>have-medium-91</code><br>
           <span class="indent">:ARG1 event/entity<br> 
             :ARG2 medium
       </td>
@@ -1439,20 +1425,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:possessor</code>
+        <span class="highlight"><code>:possessor</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:possessor-of</code>
+        <span class="highlight"><code>:possessor-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-poss-91</code><br>
+        <span class="highlight"><code>have-poss-91</code><br>
           <span class="indent">:ARG1 possessed entity<br> 
             :ARG2 possessor
       </td>
@@ -1472,20 +1455,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:part</code>
+        <span class="highlight"><code>:part</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:part-of</code>
+        <span class="highlight"><code>:part-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-part-91</code><br>
+        <span class="highlight"><code>have-part-91</code><br>
           <span class="indent">:ARG1 whole entity<br> 
             :ARG2 part
       </td>
@@ -1498,6 +1478,7 @@
             :refer-number singular))</strong>
     :aspect state
     :modal-strength full-affirmative)</span></span>
+    
         <span class="exsent">The movers lay the box on its <strong>side</strong>.
           <span class="popup">(l / lay-01
     :actor (p / person
@@ -1515,20 +1496,17 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:group</code>
+        <span class="highlight"><code>:group</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>:group-of</code>
+        <span class="highlight"><code>:group-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-group-91</code><br>
+        <span class="highlight"><code>have-group-91</code><br>
           <span class="indent">:ARG1 members<br> 
             :ARG2 group
       </td>
@@ -1552,8 +1530,7 @@
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-age-91</code><br>
+        <span class="highlight"><code>have-age-91</code><br>
           <span class="indent">:ARG1 entity<br> 
             :ARG2 age
           <span class="popup"><em>Ex:</em> The book I gave Martha was <strong>old</strong>.
@@ -1589,8 +1566,7 @@
           
       </td>
       <td>
-        <span class="highlight">
-          <code>have-example-91</code><br>
+        <span class="highlight"><code>have-example-91</code><br>
           <span class="indent">:ARG1 event/entity<br> 
           :ARG2 example
       </td>
@@ -1608,11 +1584,11 @@
     
     <tr>
       <td class="nowrap">
-        <span class="highlight"><code>:ord</code></span><br><br>
-        <span>child concept:</span><br>
+        <span class="highlight"><code>:ord</code></span><br>
+        <span class="smallcaps">child concept:</span><br>
         <span class="indent">
-          <span class="highlight">(o / ordinal-entity)</span></span><br>
-        <span>subroles:</span><br>
+          <span class="highlight">(o / ordinal-entity)</span></span>
+        <span class="smallcaps">subroles:</span><br>
         <span class="indent">
           <span class="highlight">:value</span><br>
           <span class="highlight">:range</span><br>
@@ -1622,14 +1598,12 @@
           popup
       </td>
       <td>
-        <span class="highlight">
-          <code>:ord-of</code>
+        <span class="highlight"><code>:ord-of</code>
           <span class="popup"><em>Ex:</em>
           
       </td>
       <td class="nowrap">
-        <span class="highlight">
-          <code>have-ord-91</code><br>
+        <span class="highlight"><code>have-ord-91</code><br>
           <span class="indent">:ARG1 main entity<br> 
             :ARG2 ord<br> 
             :ARG3 range<br> 
@@ -1664,22 +1638,19 @@
     
     <tr>
       <td>
-        <span class="highlight">
-          <code>:list-item</code>
+        <span class="highlight"><code>:list-item</code>
           <span class="popup"><em>Ex:</em> <strong></strong>
           </span>
         </span>
       </td>
       <td class="nowrap">
-        <span class="highlight">
-          <code>:list-item-of</code>
+        <span class="highlight"><code>:list-item-of</code>
           <span class="popup"><em>Ex:</em>
           </span>
         </span>
       </td>
       <td class="nowrap">
-        <span class="highlight">
-          <code>have-list-item-91</code><br>
+        <span class="highlight"><code>have-list-item-91</code><br>
           <span class="indent">:ARG1 entity<br> 
           :ARG2 number/value
       </td>
@@ -1706,6 +1677,7 @@
 
 <h2>Attribute Roles</h2>
 <p>Attributes take their values from fixed sets of Constant Concepts.</p>
+<h3>Attributes that modify events and states:</h3>
 
 <table>
   <thead>
@@ -1721,10 +1693,9 @@
       <td rowspan="2" class="nowrap">
         <span class="highlight"><code>:polite</code></span><br><br>
         
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
-        <span class="highlight">
-          <code>be-polite-91</code><br>
+        <span class="highlight"><code>be-polite-91</code>
           <span class="indent">:ARG1 proposition<br> 
           :ARG2 politeness value
       </td>
@@ -1766,7 +1737,7 @@
       <td>
         <span class="highlight"><code>-intense</code>
       </td>
-      <td class="definition">Double negation.<br>
+      <td class="definition">Double negation that adds emphasis.<br>
         <span class="exsent">We <strong>ain't</strong> got <strong>no</strong> money.<br>
       </td>
     </tr>
@@ -1800,9 +1771,9 @@
       <td rowspan="3">
         <span class="highlight"><code>:mode</code></span><br><br>
         
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
-        (no reification)<br><br>
+        <span class="smallcaps">(no reification)</span><br><br>
       </td>
       <td>
         <span class="highlight"><code>interrogative</code>
@@ -1846,14 +1817,14 @@
     :theme (s / sock
         :refer-number plural
         :mod (f / flippin))
-        :aspect state
-        :modal-strength full-negative</span></span>
+    :aspect state
+    :modal-strength full-negative)</span></span>
       </td>
     </tr>
     
     
     <tr>
-      <td rowspan="4">
+      <td rowspan="4" class="nowrap">
         <span class="highlight"><code>:degree</code></span><br><br>
         
         <span class="highlight"><code>:degree-of</code></span><br><br>
@@ -1864,33 +1835,115 @@
           :ARG3 degree<br> 
           :ARG4 compared to<br> 
           :ARG5 reference to superset<br> 
-          :ARG6 threshold of sufficiency</span></span><br><br>
+          :ARG6 threshold of sufficiency</span>
+        
+        <span class="popup"><em>Ex:</em> The girl <strong>is taller than</strong> the boy.
+    (h / have-degree-91
+        :ARG1 (g / girl)
+        :ARG2 (t / tall-01)
+        :ARG3 (m / more)
+        :ARG4 (b / boy)
+        :aspect state
+        :modal-strength full-affirmative)
+  
+<em>Ex:</em> He runs <strong>as fast as</strong> lightning.
+    (h / have-degree-91
+        :ARG1 (r / run-02
+            :ARG1 (p / person
+                :refer-person 3rd
+                :refer-number singular
+            :aspect habitual
+            :modal-strength full-affirmative))
+        :ARG2 (f / fast)
+        :ARG3 (e / equal)
+        :ARG4 (l / lightning)
+        :aspect state
+        :modal-strength full-affirmative)
+  
+<em>Ex:</em> It is <strong>too early to</strong> reach any conclusion as to the motive and identity of the attackers .
+    (h / have-degree-91
+        :ARG2 (e / early-01)
+        :ARG3 (t / too)
+        :ARG6 (c / conclude-01
+            :ARG2 (a / and
+                :op1 (t2 / thing
+                    :ARG0-of (m / motivate-01
+                        :ARG1 (p / person
+                            :ARG0-of (a / attack-01))))
+                :op2 (p2 / person
+                    :ARG1-of (i / identity-91
+                        :ARG2 p)
+            :aspect performance
+            :modal-strength partial-affirmative)
+        :aspect state
+        :modal-strength full-affirmative)
+  
+<em>Ex:</em> the <strong>most intelligent</strong> girl on the team
+    (g / girl
+        :ARG1-of (h / have-degree-91
+            :ARG2 (i / intelligent)
+            :ARG3 (m / most)
+            :ARG5 (g2 / girl
+                :ARG1-of (h2 / have-org-role-92
+                    :ARG2 (t / team)))))</span></span></span><br>
           
         <span class="highlight"><code>have-degree-92</code>
           <span class="indent">:ARG1 state<br>
-          :ARG2 degree value</span></span>
+          :ARG2 degree value</span>
+        
+        <span class="popup"><em>Ex:</em> I know that he is of <strong>high</strong> intelligence.
+    (k / know-01
+        :ARG0 (p / person
+            :refer-person 1st
+            :refer-number singular)
+        :ARG1 (h / have-degree-92
+            :ARG1 (i / intelligent-01
+                :ARG1 (p / person
+                    :refer-person 3rd
+                    :refer-number singular))
+            :ARG2 intensifier
+            :aspect state
+            :modal-strength full-affirmative))
+        :aspect state
+        :modal-strength full-affirmative)</span></span></span>
       </td>
       <td>
         <span class="highlight"><code>intensifier</code>
       </td>
-      <td class="definition">Intensifiers.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">Modifiers that increase the degree to which a state holds.<br>
+        <span class="exsent">The man is <strong>very</strong> tall.
+          <span class="popup">(t / tall-01
+    :theme (m / man) 
+    <strong>:degree intensifier</strong>
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>downtoner</code>
       </td>
-      <td class="definition">Downtoners.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">Modifiers that reduce the degree to which a state holds.<br>
+        <span class="exsent">The taxi is <strong>almost</strong> there. 
+          <span class="popup">(h / have-place-91
+    :ARG1 (m / man) 
+    :ARG2 (t / there)
+    <strong>:degree downtoner</strong>
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>equal</code>
       </td>
-      <td class="definition">Equivalency.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">Modifiers that indicate a state holds for two entities to an equal degree.<br>
+        <span class="exsent">The woman is <strong>highly</strong> intelligent. 
+          <span class="popup">(i / intelligent-01
+    :ARG1 (w / woman) 
+    <strong>:degree (h / high)</strong>
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     <tr>
@@ -1901,15 +1954,30 @@
         <span class="exsent"><strong></strong>. <br>
       </td>
     </tr>
-    
-    
+  </tbody>
+</table>
+
+
+<h3>Attributes that modify pronouns and other nominals:</h3>
+<p>Note that these values are arranged into lattices, and no language is expected to use all of the tags. Languages may choose which of the tags are the best fit for their annotation project to capture distinctions that are intuitive to their speakers.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role, Inverse, Reification</th>
+      <th>Values</th>
+      <th>Definitions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
     <tr>
       <td rowspan="7">
         <span class="highlight"><code>:refer-person</code></span><br><br>
       
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
-        (no reification)
+        <span class="smallcaps">(no reification)</span><br><br>
       </td>
       <td>
         <span class="highlight"><code>non-1st</code>
@@ -1928,8 +1996,8 @@
         <span class="highlight">
           <code>1st</code>
       </td>
-      <td class="definition">1st person.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">1st person.
+        <span class="exsent"><strong>I, me, my, we, us, etc.</strong>
       </td>
     </tr>
     <tr>
@@ -1938,7 +2006,7 @@
         <code>2nd</code>
       </td>
       <td class="definition">2nd person.<br>
-        <span class="exsent"><strong></strong>. <br>
+        <span class="exsent"><strong>you, y'all, you guys, etc.</strong>
       </td>
     </tr>
     <tr>
@@ -1946,8 +2014,8 @@
         <span class="highlight">
           <code>3rd</code>
       </td>
-      <td class="definition">third person.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">Third person.<br>
+        <span class="exsent"><strong>he, she, it, they, one, etc.</strong>
       </td>
     </tr>
     <tr>
@@ -1955,8 +2023,7 @@
         <span class="highlight">
           <code>1st-inclusive</code>
       </td>
-      <td class="definition">1st person, you & me.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">intuitivencludes you as well as me or us.
       </td>
     </tr>
     <tr>
@@ -1964,8 +2031,7 @@
         <span class="highlight">
           <code>1st-exclusive</code>
       </td>
-      <td class="definition">1st person, me without you.<br>
-        <span class="exsent"><strong></strong>. <br>
+      <td class="definition">Includes me or us without you.<br>
       </td>
     </tr>
     
@@ -1974,33 +2040,32 @@
       <td rowspan="9">
         <span class="highlight"><code>:refer-number</code></span><br><br>
       
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
-        (no reification)
+        <span class="smallcaps">(no reification)</span><br><br>
       <td>
         <span class="highlight"><code>singular</code>
       </td>
       <td class="definition">singular.<br>
-        <span class="exsent"><strong></strong>. <br>
       </td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>nonsingular</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">Everything but singular, may refer to a group, class or type.</td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>paucal</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">A small imprecise number (maybe 3-10).</td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>plural</code>
       </td>
-      <td class="definition">plural.<br>
+      <td class="definition">More than one.<br>
         <span class="exsent"><strong></strong>. <br>
       </td>
     </tr>
@@ -2008,31 +2073,33 @@
       <td>
         <span class="highlight"><code>dual</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">Exactly 2.</td>
     </tr>
     <tr>
-      <td>
+      <td class="nowrap">
         <span class="highlight"><code>non-dual-paucal</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">A small imprecise number other than 2. (English annotation has not typically used the paucal tag, but 'a few' is a paucal concept.)
+        <span class="exsent">There were only <strong>a few</strong> radishes.
+      </td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>greater-plural</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">Category captures a larger number than the regular plural class</td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>trial</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">Exactly 3</td>
     </tr>
     <tr>
-      <td>
+      <td class="nowrap">
         <span class="highlight"><code>non-trial-paucal</code>
       </td>
-      <td class="definition"></td>
+      <td class="definition">A small imprecise number greater than 3.</td>
     </tr>
     
     
@@ -2040,16 +2107,37 @@
       <td>
         <span class="highlight"><code>:refer-definiteness</code></span><br><br>
       
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
-        (no reification)
+        <span class="smallcaps">(no reification)</span><br><br>
       </td>
       <td>
         <span class="highlight"><code>class</code>
       </td>
       <td class="definition">Use for generic pronouns. Other uses not explored yet.<br>
-        <span class="exsent"><strong>One</strong> does not simply walk into Mordor.<br>
-          <strong>You</strong> shouldn't judge a book by its cover.
+        <span class="exsent"><strong>One</strong> does not simply walk into Mordor. 
+          <span class="popup">(w / walk-01
+    :polarity -
+    :ARG0 <strong>(p / person
+        :refer-person 3rd
+        :refer-definiteness class)</strong>
+    :goal (p2 / place
+        :name (n / name :op1 "Mordor"))
+    :manner (s / simple)
+    :aspect state
+    :modal-strength full-negative)</span></span>
+    
+        <span class="exsent"><strong>You</strong> shouldn't judge a book by its cover.
+          <span class="popup">(j / judge-01
+    :mode imperative
+    :ARG0 (p / person
+        :refer-person 2nd
+        :refer-definiteness class)
+    :ARG1 (b / book)
+    :ARG3 (c / cover
+        :part-of b)
+    :aspect state
+    :modal-strength partial-negative)</span></span>
       </td>
     </tr>
   </tbody>
@@ -2061,19 +2149,18 @@
 <table>
   <thead>
     <tr>
-      <th>Role</th>
-      <th>Inverse</th>
-      <th>Reification</th>
-      <th>Definition</th>
+      <th>Role, Inverse, Reification</th>
+      <th>Values</th>
+      <th>Definitions</th>
     </tr>
   </thead>
   
   <tbody>
     <tr>
-      <td rowspan="7">
+      <td rowspan="7" class="nowrap">
         <span class="highlight"><code>:modal-strength</code></span><br><br>
       
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
         <span class="highlight"><code>have-modal-strength-91</code>
           <span class="indent">:ARG1 proposition<br>
@@ -2083,26 +2170,26 @@
         <span class="highlight"><code>full-affirmative</code>
       </td>
       <td class="definition">Simple assertions and facts:<br>
-          <span class="exsent">The dog barked last night.</span>
+          <span class="exsent">The dog <strong>barked</strong> last night.</span>
         Certainty;<br>
         Predictive future:<br>
-          <span class="exsent">Mary <strong>will</strong> go to Santa Fe.</span>
+          <span class="exsent">Mary <strong>will go</strong> to Santa Fe.</span>
       </td>
     </tr>
     <tr>
       <td>
         <span class="highlight"><code>partial-affirmative</code>
       </td>
-      <td class="definition">Strong epistemic modals, adverbs and adjectives<br>
-          <span class="exsent">Mary <strong>must have</strong> gone to Santa Fe.<br>
-            The dog <strong>probably</strong> barked last night.</span>
-        Strong imperatives;<br>
+      <td class="definition">Strong epistemic modals, adverbs and adjectives:<br>
+          <span class="exsent">Mary <strong>must have gone</strong> to Santa Fe.<br>
+            The dog <strong>probably barked</strong> last night.</span>
+        Strong imperatives:<br>
           <span class="exsent"><strong>Go</strong> to Santa Fe, Mary.</span>
         Strong deontic modals:<br>
-          <span class="exsent">Mary <strong>must</strong> go to Santa Fe.</span>
-        Intention (<em>intend, plan, decide</em>),<br>
-        Obligation,<br>
-          <span class="exsent">Mary <strong>needs to</strong> go to Santa Fe.</span>
+          <span class="exsent">Mary <strong>must go</strong> to Santa Fe.</span>
+        Intention (<em>intend, plan, decide</em>);<br>
+        Obligation:<br>
+          <span class="exsent">Mary <strong>needs to go</strong> to Santa Fe.</span>
         Purpose clauses:<br>
           <span class="exsent">Mary went to Santa Fe <strong>to buy a new dog</strong>.</span>
       </td>
@@ -2112,16 +2199,16 @@
         <span class="highlight"><code>neutral-affirmative</code>
       </td>
       <td class="definition">Weak epistemic modals, adverbs, and adjectives:<br>
-          <span class="exsent">The dog <strong>may have</strong> barked last night.</span>
+          <span class="exsent">The dog <strong>may have barked</strong> last night.</span>
         Ability:<br>
-          <span class="exsent">Mary <strong>can</strong> drive a car.</span>
+          <span class="exsent">Mary <strong>can drive</strong> a car.</span>
         Conditional phrases:<br>
           <span class="exsent"><strong>If the dog barks</strong>, Mary will buy earplugs.</span>
         Hopes and fears:
           <span class="exsent">I <strong>hope</strong> the dog doesn't bark.</span>
         Weak deontic modals including desire and permission:<br>
-          <span class="exsent">Mary <strong>wants</strong> to go to Santa Fe.</span>
-          <span class="exsent">Mary <strong>is allowed to</strong> to go to Santa Fe.</span>
+          <span class="exsent">Mary <strong>wants to go</strong> to Santa Fe.</span>
+          <span class="exsent">Mary <strong>is allowed to go </strong>to Santa Fe.</span>
       </td>
     </tr>
     <tr>
@@ -2129,8 +2216,8 @@
         <span class="highlight"><code>neutral-negative</code>
       </td>
       <td class="definition">Combination of (some) neutral-affirmative lexical items with negation.<br>
-        <span class="exsent">The dog <strong>may not have</strong> barked last night.<br>
-          Mary <strong>doesn't want</strong> go to Santa Fe.<br>
+        <span class="exsent">The dog <strong>may not have barked</strong> last night.<br>
+          Mary <strong>doesn't want to go</strong> to Santa Fe.<br>
           I <strong>don't hope</strong> the dog doesn't bark.<br>
           <strong>If the dog does'nt bark</strong>, Mary will buy earplugs.
       </td>
@@ -2140,10 +2227,10 @@
         <span class="highlight"><code>partial-negative</code>
       </td>
       <td class="definition">Negative imperatives;<br>
-        Combination of (some) partial-affirmative lexical items with negation.
-        <span class="exsent">The dog <strong>probably didn't</strong> bark last night. <br>
-          Mary <strong>shouldn't</strong> go to Santa Fe.<br>
-          Mary is <strong>probably not</strong> going to Santa Fe.<br>
+        Combination of (some) partial-affirmative lexical items with negation:
+        <span class="exsent">The dog <strong>probably didn't bark</strong> last night. <br>
+          Mary <strong>shouldn't go</strong> to Santa Fe.<br>
+          Mary is <strong>probably not going</strong> to Santa Fe.<br>
           <strong>Don't go</strong> to Santa Fe, Mary.<br>
           Mary went to Santa Fe <strong>to not get woken up in the night</strong>.
       </td>
@@ -2154,8 +2241,8 @@
       </td>
       <td class="definition">Negation: <em>not, never, no</em>;<br>
         Counterfactuals
-        <span class="exsent">The dog <strong>didn't</strong> bark last night. <br>
-          Mary <strong>won't</strong> go to Santa Fe.
+        <span class="exsent">The dog <strong>didn't bark</strong> last night. <br>
+          Mary <strong>won't go</strong> to Santa Fe.
       </td>
     </tr>
     <tr>
@@ -2163,7 +2250,7 @@
         <span class="highlight"><code>undefined</code>
       </td>
       <td class="definition">when the modal strength is not specified, not inferrable.<br>
-        <span class="exsent">I wonder <strong>whether</strong> Mary went to Santa Fe. <br>
+        <span class="exsent">I wonder <strong>whether Mary went</strong> to Santa Fe. <br>
       </td>
     </tr>
     
@@ -2172,13 +2259,23 @@
       <td>
         <span class="highlight"><code>:modal-predicate</code></span><br><br>
       
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
       
-        (no reification)
+        <span class="smallcaps">(no reification)</span><br><br>
       </td>
       <td>(variable of pred)</td>
       <td class="definition">Marks the complement of a modalizing predicate.
         <span class="exsent">The dog wants <strong>to go outside</strong>. 
+          <span class="popup">(w / want-01
+    :ARG0 (d / dog)
+    :ARG1 (g / go-02
+        :ARG1 d
+        :AG4 (o / outside)
+        :aspect performance
+        :modal-strength partial-affirmative
+        <strong>:modal-predicate w</strong>)
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     
@@ -2187,13 +2284,35 @@
       <td>
         <span class="highlight"><code>:quote</code></span><br><br>
         
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
-        (no reification)
+        <span class="smallcaps">(no reification)</span><br><br>
       </td>
       <td>(variable of pred)</td>
       <td class="definition">Marks the utterance argument of a communication/speech predicate.
         <span class="exsent">The dog said <strong>"arf arf, barkity bark bark"</strong>. 
+          <span class="popup">(s / say-01
+    :ARG0 (d / dog)
+    :ARG1 (s / string-entity :value "arf-arf-barkity-bark-bark"
+        <strong>:quote s</strong>)
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+    
+        <span class="exsent">I says to him <strong>"drop the ball, Kevin."</strong>. 
+          <span class="popup">(s / say-01
+    :ARG0 (p / person 
+        :refer-person 1st
+        :refer-number singular)
+    :ARG1 (d / drop-01
+        :mode imperative
+        :ARG0 a
+        :ARG1 (b / ball)
+        :vocative (a / animal 
+            :name (n / name :op1 "Kevin"))
+        <strong>:quote s</strong>)
+    :ARG2 a
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
   </tbody>
@@ -2205,18 +2324,17 @@
 <table>
   <thead>
     <tr>
-      <th>Role</th>
-      <th>Inverse</th>
-      <th>Reification</th>
-      <th>Definition</th>
+      <th>Role, Inverse, Reification</th>
+      <th>Values</th>
+      <th>Definitions</th>
     </tr>
   </thead>
   
     <tr>
-      <td rowspan="26">
+      <td rowspan="26" class="nowrap">
         <span class="highlight"><code>:aspect</code></span><br><br>
         
-        (no inverse)<br><br>
+        <span class="smallcaps">(no inverse)</span><br><br>
         
         <span class="highlight"><code>have-aspect-91</code>
           <span class="indent">:ARG1 event<br> 
@@ -2409,7 +2527,7 @@
         :refer-person 3rd
         :refer-number singular)
     :direction (t / trajectory
-        :direction-of (w / west-01))
+        :axis-of (w / west-01))
     <strong>:aspect activity</strong>
     :modal-strength full-affirmative)</span></span>
       </td>
@@ -2693,9 +2811,205 @@
     :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
-    
   </tbody>
 </table>
+
+<h2>Spatial Relations</h2>
+<p>These relations originated with the Spatial AMR project and appear in the UMR 2.0 release. They are being adopted by UMR but may be considered an add-on for projects that opt to utilize this level of spatial detail.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Inverse</th>
+      <th>Reification</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>
+        <span class="highlight"><code>:size</code>
+      </td>
+      <td>
+        <span class="highlight"><code>:size-of</code>
+      </td>
+      <td>
+        <span class="highlight">
+          <code>have-size-91</code>
+          <span class="indent">:ARG1 entity<br> 
+            :ARG2 size
+      </td>
+      <td class="definition">For size modifiers.<br>
+        <span class="exsent">Build a <strong>3 by 3</strong> square.
+          <span class="popup">(b / build-01
+    :mode imperative
+    :ARG0 (p / person
+        :refer-person 2nd
+        :refer-number singular)
+    :ARG1 (s / square
+        <strong>:size (a / and
+            :op1 (d / dimension-entity :value "3")
+            :op2 (d2 / dimension-entity :value "3")))</strong>
+    :aspect performance
+    :modal-strength partial-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:color</code>
+      </td>
+      <td>
+        <span class="highlight"><code>:color-of</code>
+      </td>
+      <td>
+        <span class="highlight">
+          <code>have-color-91</code>
+          <span class="indent">:ARG1 entity<br> 
+            :ARG2 color
+      </td>
+      <td class="definition">For colors.<br>
+        <span class="exsent">Build a <strong>red</strong> triangle.
+          <span class="popup">(b / build-01
+    :mode imperative
+    :ARG0 (p / person
+        :refer-person 2nd
+        :refer-number singular)
+    :ARG1 (t / triangle
+        <strong>:color (r / red)</strong>)
+    :aspect performance
+    :modal-strength partial-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:configuration</code>
+      </td>
+      <td>
+        <span class="highlight"><code>:configuration-of</code>
+      </td>
+      <td>
+        <span class="highlight">
+          <code>have-configuration-91</code>
+          <span class="indent">:ARG1 components<br> 
+            :ARG2 configuration
+      </td>
+      <td class="definition">For configurations, where individual, separable component parts are arranged in a particular way.<br>
+        <span class="exsent">Now take the orange blocks and build a =.
+          <span class="popup">(a / and
+    :op1 (t / take-01
+        :mode imperative
+        :ARG0 (p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :ARG1 (b / block
+            :refer-number plural
+            :color (o / orange))
+        :aspect performance
+        :modal-strength partial-affirmative)
+    :op2 (b2 / build-01
+        :mode imperative
+        :ARG0 p
+        :ARG1 <strong>(t / thing
+            :configuration (s / string-entity :value "="))</strong>
+        :ARG2 b
+        :aspect performance
+        :modal-strength partial-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:orientation</code>
+      </td>
+      <td>
+        <span class="highlight"><code>:orientation-of</code>
+      </td>
+      <td>
+        <span class="highlight">
+          <code>have-orientation-91</code>
+          <span class="indent">:ARG1 entity<br> 
+            :ARG2 orientation
+      </td>
+      <td class="definition">For orientations of entities who are facing a particular way.<br>
+        <span class="exsent">The painting was upside-down.
+          <span class="popup">(h / have-orientation-91
+    :ARG1 (t / thing
+        :ARG1-of (p / paint-01))
+    :ARG2 <strong>(u / upside-down)</strong>
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:anchor</code>
+      </td>
+      <td>
+        <span class="highlight"><code>:anchor-of</code>
+      </td>
+      <td>
+        <span class="highlight">
+          <code>have-anchor-91</code>
+          <span class="indent">:ARG1 spatial relation<br> 
+            :ARG2 anchor
+      </td>
+      <td class="definition">Marks the spatial frame of reference (usually a defined spatial framework) the speaker is referencing.<br>
+        <span class="exsent">My laptop is on top of my desk.
+          <span class="popup">(o / on-top-03
+    :ARG1 (l / laptop
+        :possessor (p / person
+            :refer-person 1st
+            :refer-number singular))
+    :ARG2 (d / desk
+        :possessor p)
+    <strong>:anchor (c / cartesian-framework-91
+        :ARG1 (e / environment))</strong>
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:axis</code>
+      </td>
+      <td>
+        <span class="highlight"><code>:axis-of</code>
+      </td>
+      <td>
+        <span class="highlight">
+          <code>have-axis-91</code>
+          <span class="indent">:ARG1 spatial relation<br> 
+            :ARG2 axis
+      </td>
+      <td class="definition">For directed spatial relations, the ray that points in the eponymous direction. May be an abstract ray, or may be a physical structure.<br>
+        <span class="exsent">The church is down the street from the school.
+          <span class="popup">(d / down-05
+    :ARG1 (c / church)
+    :ARG2 (s / school)
+    <strong>:axis (s2 / street)</strong>
+    :aspect state
+    :modal-strength full-affirmative)</span></span><br>
+    
+        <span class="exsent">He drove <strong>west</strong>.
+          <span class="popup">(d / drive
+    :actor (p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :direction <strong>(t / trajectory
+        :axis-of (w / west-01)</strong>)
+    :aspect activity
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
 
 </body>
 </html>
