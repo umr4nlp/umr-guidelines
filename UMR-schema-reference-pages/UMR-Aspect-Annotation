@@ -1,0 +1,494 @@
+<h2>Aspect Attribute Role</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role, Inverse, Reification</th>
+      <th>Values</th>
+      <th>Definitions</th>
+    </tr>
+  </thead>
+  
+    <tr>
+      <td rowspan="26" class="nowrap">
+        <span class="highlight"><code>:aspect</code></span><br><br>
+        
+        <span class="smallcaps">(no inverse)</span><br><br>
+        
+        <span class="highlight"><code>have-aspect-91</code>
+          <span class="indent">:ARG1 event<br> 
+          :ARG2 aspect value
+      </td>
+      <td>
+        <span class="highlight"><code>habitual</code>
+      </td>
+      <td class="definition">Occurs/occurred usually or habitually.
+        <span class="exsent">He bakes pies. 
+          <span class="popup">(b / bake-01
+    :actor (p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :undergoer (p2 / pie
+        :refer-number plural)
+    <strong>:aspect habitual</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>generic</code>
+      </td>
+      <td class="definition">The event is a hallmark characteristic of a class of entities.
+        <span class="exsent">Platypuses lay eggs. 
+          <span class="popup">(l / lay-01
+    :actor (p / platypus
+        :refer-number plural)
+    :undergoer (e / egg
+        :refer-number plural)
+    <strong>:aspect generic</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>imperfective</code>
+      </td>
+      <td class="definition">Ambiguous between <span class="highlight">state</span> and <span class="highlight">atelic-process</span>.
+        <span class="exsent"> 
+          <span class="popup"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="highlight"><code>state</code>
+      </td>
+      <td class="definition">Unspecified type of <span class="highlight">state</span>.
+        <span class="exsent">My cat loves tuna. 
+          <span class="popup">(l / love-01
+    :actor (c / cat
+        :possessor (p / person
+            :refer-person 1st
+            :refer-number singular))
+    :undergoer (t / tuna)
+    <strong>:aspect state</strong>
+    :modal-strength full-affirmative)</span></span>
+    
+        <span class="exsent">I didn't go to the store. 
+          <span class="popup">(g / go-02
+    :polarity -
+    :actor (p / person
+            :refer-person 1st
+            :refer-number singular)
+    :goal (s / store)
+    <strong>:aspect state</strong>
+    :modal-strength full-negative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>reversible-state</code>
+      </td>
+      <td class="definition">Acquired <span class="highlight">state</span> that is not permanent.
+        <span class="exsent">My cat is hungry.
+          <span class="popup">(h / hunger-01
+	  :ARG0 (c / cat
+		    :refer-number singular
+		    :possessor (p / person
+			      :refer-person 1st
+			      :refer-number singular)))
+    <strong>:aspect reversible-state</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>irreversible-state</code>
+      </td>
+      <td class="definition">Acquired <span class="highlight">state</span> that is permanent.
+        <span class="exsent">The wine glass is shattered.
+          <span class="popup">(s / shatter-01
+	  :ARG1 (g / glass
+		    :refer-number singular
+		    :purpose (w / wine))
+	  <strong>:aspect irreversible-state</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>point-state</code>
+      </td>
+      <td class="definition"><span class="highlight">State</span> that is acquired and reversed at a single point in time.
+        <span class="exsent">It is 2:30pm.
+          <span class="popup">(h / have-temporal-91
+    :ARG1 (n / now)
+    :ARG2 (d / date-entity
+		    :time 14:30)
+	  <strong>:aspect point-state</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>inherent-state</code>
+      </td>
+      <td class="definition"><span class="highlight">State</span> that is not acquired and permanent.
+        <span class="exsent">My cat is black and white.
+          <span class="popup">(h / have-mod-91
+    :ARG1 (c / cat
+	      :refer-number singular
+		    :possessor (p / person
+		        :refer-person 1st
+		        :refer-number singular))
+	  :ARG2 (a / and
+		    :op1 (b / black)
+		    :op2 (w / white)
+	  <strong>:aspect inherent-state</strong>
+    :modal-strength full-affirmative))</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="highlight"><code>process</code>
+      </td>
+      <td class="definition">Unspecified type of eventuality.
+        <span class="exsent">He was late because of the fire.
+          <span class="popup">(l / late-02
+    :theme (p2 / person
+        :refer-person 3rd
+        :refer-number singular)
+    :cause (f / fire-05
+        <strong>aspect process</strong>
+        :modal-strength full-affirmative)
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="highlight"><code>atelic-process</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that does not reach a result state.
+        <span class="exsent">I heard about his travels.
+          <span class="popup">(h / hear-01
+	  :ARG0 (p / person
+		    :ref-person 1st
+		    :ref-number singular)
+	  :ARG1 (t / travel-01
+		    :ARG0 (p2 / person
+			      :ref-person 3rd
+			      :ref-number singular)
+		    :aspect process
+		    :modal-strength full-affirmative)
+	  <strong>:aspect state</strong>
+	  :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>activity</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that does not end.
+        <span class="exsent">He drove west.
+          <span class="popup">(d / drive
+    :actor (p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :direction (t / trajectory
+        :axis-of (w / west-01))
+    <strong>:aspect activity</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>directed-activity</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span>process that does not end and does progress linearly along a scale.
+        <span class="exsent">The soup was cooling on the counter.
+          <span class="popup">(c / cool-01
+	  :theme (s / soup)
+	  :place (c2 / counter)
+	  <strong>:aspect directed-activity</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>undirected-activity</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that does not end and does not progress linearly along a scale.
+        <span class="exsent">The cat was meowing outside the door.
+          <span class="popup">(m / meow-01
+	  :actor (c / cat
+		    :refer-number singular)
+	  :place (o / outside
+		    :op1 (d / door))
+	  <strong>:aspect undirected-activity</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>iterative</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that occurs repetitively and ongoingly.
+        <span class="exsent">He tapped his foot to the beat.
+          <span class="popup">(t / tap-01
+	  :actor (p / person
+	      :refer-person 3rd
+		    :refer-number singular)
+	  :instrument (f / foot
+	      :part-of p)
+    :manner (r / rate-entity-91
+        :ARG4 (b / beat))
+    <strong>:aspect iterative</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="highlight"><code>perfective</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that comes to an end.
+        <span class="exsent">He stopped singing.
+          <span class="popup">(s / sing-01
+	  :actor (p / person
+	      :refer-person 3rd
+		    :refer-number singular)
+    <strong>:aspect perfective</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>endeavor</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends without reaching a result state.
+        <span class="exsent">He hit the stick against the fence.  
+          <span class="popup">(h / hit-01
+	  :actor (p / person
+	      :refer-person 3rd
+		    :refer-number singular)
+    :instrument (s / stick)
+    :goal (f / fence)
+    <strong>:aspect endeavor</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>semelfactive</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends without reaching a result state and happens at a single point in time.
+        <span class="exsent">The cat blinked.
+          <span class="popup">(b / blink-01
+	  :actor (c / cat)
+    <strong>:aspect semelfactive</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>undirected-endeavor</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends without reaching a result state and does not progress linearly along a scale.
+        <span class="exsent">The cat meowed for two hours until I woke up.
+          <span class="popup">(m / meow-01
+	  :actor (c / cat)
+	  :duration (t / temporal-quantity
+		    :quant 2
+		    :unit (h / hour))
+    :temporal (u / until
+		    :op1 (w / wake-01
+			      :theme (p / person
+				        :refer-person 1st
+				        :refer-number singular)
+			      :aspect performance
+			      :modal-strength full-affirmative))
+    <strong>:aspect undirected-endeavor</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>directed-endeavor</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends without reaching a result state and progresses linearly along a scale.
+        <span class="exsent">The soup cooled for an hour before we ate it.
+          <span class="popup">(c / cool-01
+	  :theme (s / soup)
+	  :duration (t / temporal-quantity
+		    :quant 1
+		    :unit (h / hour))
+	  :temporal (b / before
+		    :op1 (e / eat-01
+			      :actor (p / person
+				        :refer-person 1st
+				        :refer-number plural)
+			      :undergoer s
+			      :aspect performance
+			      :modal-strength full-affirmative))
+    <strong>:aspect directed-activity</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="highlight"><code>performance</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends and reaches a result state.
+        <span class="exsent">The soup cooled for an hour before we ate it.
+          <span class="popup">(c / cool-01
+	  :theme (s / soup)
+	  :duration (t / temporal-quantity
+		    :quant 1
+		    :unit (h / hour))
+	  :temporal (b / before
+		    :op1 (e / eat-01
+			      :actor (p / person
+				        :refer-person 1st
+				        :refer-number plural)
+			      :undergoer s
+			      <strong>:aspect performance</strong>
+			      :modal-strength full-affirmative))
+    :aspect directed-activity
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>inceptive</code>
+      </td>
+      <td class="definition">An <span class="highlight">activity</span> or <span class="highlight">state</span> starts.
+        <span class="exsent">He started singing.
+          <span class="popup">(s / sing-01
+	  :actor (p / person
+	      :refer-person 3rd
+		    :refer-number singular)
+    <strong>:aspect inceptive</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>incremental-accomplishment</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends and reaches a result state, and progresses linearly along a scale.
+        <span class="exsent">I ate an apple pancake.
+          <span class="popup">(e / eat-01
+	  :actor (p / person
+		    :refer-person 1st
+		    :refer-number singular)
+	  :undergoer (p2 / pancake
+		    :refer-number singular
+		    :mod (a / apple))
+    <strong>:aspect incremental-accomplishment</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>nonincremental-accomplishment</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends and reaches a result state, and does not progress linearly along a scale.
+        <span class="exsent">Harry repaired the computer.
+          <span class="popup">(r / repair-01
+	  :actor (p / person
+		    :name (n / name :op1 "Harry"))
+	  :undergoer (c / computer
+		    :refer-number singular)
+    <strong>:aspect nonincremental-accomplishment</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="highlight"><code>directed-achievement</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends and reaches a result state within a single point in time, and progresses linearly along a scale.
+        <span class="exsent">
+          <span class="popup"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="indent"> 
+                <span class="highlight"><code>reversible-directed-achievement</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends and reaches a result state, which is not permanent, within a single point in time, and progresses linearly along a scale.
+        <span class="exsent">The door opened.
+          <span class="popup">(o / open-01
+	  :theme (d / door
+		    :refer-number singular)
+    <strong>:aspect reversible-directed-achievement</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="indent">
+          <span class="indent">
+            <span class="indent">
+              <span class="indent"> 
+                <span class="highlight"><code>irreversible-directed-achievement</code>
+      </td>
+      <td class="definition"><span class="highlight">Process</span> that ends and reaches a result state, which is permanent, within a single point in time, and progresses linearly along a scale.
+        <span class="exsent">The window shattered.
+          <span class="popup">(s / shatter-01
+	  :undergoer (w / window
+		    :refer-number singular)
+    <strong>:aspect irreversible-directed-achievement</strong>
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
