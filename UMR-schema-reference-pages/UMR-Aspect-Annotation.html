@@ -1,4 +1,102 @@
-<h2>Aspect Attribute Role</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My New Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 0.9em;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      line-height: 1.6;
+    }
+    .box {
+      background-color: #e6f2ff;
+      padding: 0.5em;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    td:nth-child(4), td:nth-child(5),
+    th:nth-child(4), th:nth-child(5){
+      white-space: normal;
+      width: auto;
+    }
+    .highlight {
+      background-color: #e6f2ff;
+      border-radius: 4px;
+      padding: 0.1em 0.3em;
+      display: inline-block;
+      position: relative;
+      font-family: monospace;
+      font-size: inherit;
+      line-height: 1.2;
+    }
+    .popup {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      padding: 0.5em;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      width: max-content;
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-style: normal;
+    }
+    .highlight:hover .popup ,
+    .exsent:hover .popup {
+      display: block;
+    }
+    .indent {
+      display: block;
+      margin-left: 1em;
+      font-family: monospace;
+      font-size: inherit;
+    }
+    .exsent {
+      display: block;
+      margin-left: 1em;
+      font-family: inherit;
+      font-size: inherit;
+      font-style: italic;
+      position: relative;
+      line-height: 1.5;
+    }
+    .definition {
+      white-space: normal;
+      width: auto;
+      line-height: 1.2;
+    }
+    .nowrap {
+      white-space: nowrap;
+    }.smallcaps {
+      font-variant: small-caps;
+    }
+  </style>
+</head>
+<body>
+  
+<h1>Aspect Annotation</h1>
+
+<img src="images/Aspect-lattice.svg" alt="Aspect Lattice" width="100%" />
 
 <table>
   <thead>
@@ -492,3 +590,6 @@
     </tr>
   </tbody>
 </table>
+  
+</body>
+</html>
