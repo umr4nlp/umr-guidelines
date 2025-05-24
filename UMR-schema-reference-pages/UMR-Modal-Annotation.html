@@ -1,0 +1,174 @@
+<h1>Modal Annotation:</h1>
+<h2>Modal Attribute Roles Used During Sentence-level Annotation:</h2>
+<p>These roles are used during sentence level annotation to help track the modal relationships. The UMR-writer post-processes these values and automatically generates Document-level annotations based on them. If you are not using UMR-writer, you may wish to skip straight to document-level annotations.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Role, Inverse, Reification</th>
+      <th>Values</th>
+      <th>Definitions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td rowspan="7" class="nowrap">
+        <span class="highlight"><code>:modal-strength</code></span><br><br>
+      
+        <span class="smallcaps">(no inverse)</span><br><br>
+        
+        <span class="highlight"><code>have-modal-strength-91</code>
+          <span class="indent">:ARG1 proposition<br>
+          :ARG2 value
+      </td>
+      <td>
+        <span class="highlight"><code>full-affirmative</code>
+      </td>
+      <td class="definition">Simple assertions and facts:<br>
+          <span class="exsent">The dog <strong>barked</strong> last night.</span>
+        Certainty;<br>
+        Predictive future:<br>
+          <span class="exsent">Mary <strong>will go</strong> to Santa Fe.</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>partial-affirmative</code>
+      </td>
+      <td class="definition">Strong epistemic modals, adverbs and adjectives:<br>
+          <span class="exsent">Mary <strong>must have gone</strong> to Santa Fe.<br>
+            The dog <strong>probably barked</strong> last night.</span>
+        Strong imperatives:<br>
+          <span class="exsent"><strong>Go</strong> to Santa Fe, Mary.</span>
+        Strong deontic modals:<br>
+          <span class="exsent">Mary <strong>must go</strong> to Santa Fe.</span>
+        Intention (<em>intend, plan, decide</em>);<br>
+        Obligation:<br>
+          <span class="exsent">Mary <strong>needs to go</strong> to Santa Fe.</span>
+        Purpose clauses:<br>
+          <span class="exsent">Mary went to Santa Fe <strong>to buy a new dog</strong>.</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>neutral-affirmative</code>
+      </td>
+      <td class="definition">Weak epistemic modals, adverbs, and adjectives:<br>
+          <span class="exsent">The dog <strong>may have barked</strong> last night.</span>
+        Ability:<br>
+          <span class="exsent">Mary <strong>can drive</strong> a car.</span>
+        Conditional phrases:<br>
+          <span class="exsent"><strong>If the dog barks</strong>, Mary will buy earplugs.</span>
+        Hopes and fears:
+          <span class="exsent">I <strong>hope</strong> the dog doesn't bark.</span>
+        Weak deontic modals including desire and permission:<br>
+          <span class="exsent">Mary <strong>wants to go</strong> to Santa Fe.</span>
+          <span class="exsent">Mary <strong>is allowed to go </strong>to Santa Fe.</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>neutral-negative</code>
+      </td>
+      <td class="definition">Combination of (some) neutral-affirmative lexical items with negation.<br>
+        <span class="exsent">The dog <strong>may not have barked</strong> last night.<br>
+          Mary <strong>doesn't want to go</strong> to Santa Fe.<br>
+          I <strong>don't hope</strong> the dog doesn't bark.<br>
+          <strong>If the dog does'nt bark</strong>, Mary will buy earplugs.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>partial-negative</code>
+      </td>
+      <td class="definition">Negative imperatives;<br>
+        Combination of (some) partial-affirmative lexical items with negation:
+        <span class="exsent">The dog <strong>probably didn't bark</strong> last night. <br>
+          Mary <strong>shouldn't go</strong> to Santa Fe.<br>
+          Mary is <strong>probably not going</strong> to Santa Fe.<br>
+          <strong>Don't go</strong> to Santa Fe, Mary.<br>
+          Mary went to Santa Fe <strong>to not get woken up in the night</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>full-negative</code>
+      </td>
+      <td class="definition">Negation: <em>not, never, no</em>;<br>
+        Counterfactuals
+        <span class="exsent">The dog <strong>didn't bark</strong> last night. <br>
+          Mary <strong>won't go</strong> to Santa Fe.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>undefined</code>
+      </td>
+      <td class="definition">when the modal strength is not specified, not inferrable.<br>
+        <span class="exsent">I wonder <strong>whether Mary went</strong> to Santa Fe. <br>
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:modal-predicate</code></span><br><br>
+      
+        <span class="smallcaps">(no inverse)</span><br><br>
+      
+        <span class="smallcaps">(no reification)</span><br><br>
+      </td>
+      <td>(variable of pred)</td>
+      <td class="definition">Marks the complement of a modalizing predicate.
+        <span class="exsent">The dog wants <strong>to go outside</strong>. 
+          <span class="popup">(w / want-01
+    :ARG0 (d / dog)
+    :ARG1 (g / go-02
+        :ARG1 d
+        :AG4 (o / outside)
+        :aspect performance
+        :modal-strength partial-affirmative
+        <strong>:modal-predicate w</strong>)
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>:quote</code></span><br><br>
+        
+        <span class="smallcaps">(no inverse)</span><br><br>
+        
+        <span class="smallcaps">(no reification)</span><br><br>
+      </td>
+      <td>(variable of pred)</td>
+      <td class="definition">Marks the utterance argument of a communication/speech predicate.
+        <span class="exsent">The dog said <strong>"arf arf, barkity bark bark"</strong>. 
+          <span class="popup">(s / say-01
+    :ARG0 (d / dog)
+    :ARG1 (s / string-entity :value "arf-arf-barkity-bark-bark"
+        <strong>:quote s</strong>)
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+    
+        <span class="exsent">I says to him <strong>"drop the ball, Kevin."</strong>. 
+          <span class="popup">(s / say-01
+    :ARG0 (p / person 
+        :refer-person 1st
+        :refer-number singular)
+    :ARG1 (d / drop-01
+        :mode imperative
+        :ARG0 a
+        :ARG1 (b / ball)
+        :vocative (a / animal 
+            :name (n / name :op1 "Kevin"))
+        <strong>:quote s</strong>)
+    :ARG2 a
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
