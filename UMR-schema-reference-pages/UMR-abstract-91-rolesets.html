@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,7 +155,7 @@
     </tr>
     
     <tr>
-      <td>
+      <td class="nowrap">
         <span class="highlight"><code>correlate-91</code>
           <span class="wrap-indent">:ARG1	X; first item changing in relation to another</span> 
           <span class="wrap-indent">:ARG2	Y; second item ARG1 is changing in relation to</span>
@@ -391,10 +390,32 @@
           <span class="wrap-indent">:ARG1	belief</span>
           <span class="wrap-indent">:ARG2	source of belief</span>
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For presentation of inferences.
+        <span class="exsent">So , you want me to make it longer . 
+          <span class="popup">(i / infer-91
+    :ARG1 (w / want-01
+        :ARG0 (p / person
+            :refer-person 2nd
+            :refer-number singular)
+        :ARG1 (m / make-02
+            :ARG0 (p2 / person
+                :refer-person 1st
+                :refer-number singular)
+            :ARG1 (h / have-degree-91
+                :ARG1 (t / thing
+                    :refer-person 3rd
+                    :refer-number singular)
+                :ARG2 (l / long-03)
+                :ARG3 (m2 / more)
+                :aspect state
+                :modal-strength full-affirmative)
+            :aspect performance
+            :modal-strength partial-affirmative
+            :modal-predicate w)
+        :aspect state
+        :modal-strength partial-affirmative
+        :modal-predicate i))
+    </span></span>
       </td>
     </tr>
     
@@ -406,10 +427,13 @@
           <span class="wrap-indent">:ARG2	meaning</span>
           <span class="wrap-indent">:ARG3	perceiver, beneficiary</span>
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For cases where an element signifies a meaning.
+        <span class="exsent">purp = purple
+          <span class="popup">(m / mean-91
+    :ARG1 (s / string-entity :value "purp")
+    :ARG2 (p / purple)
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     
@@ -419,10 +443,26 @@
           <span class="wrap-indent">:ARG1	proverb</span>
           <span class="wrap-indent">:ARG2	2nd part of a two-part allegorical expression. Gives a focused interpretation of ARG1</span>
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
+      <td class="definition">For fixed/semi-fixed expressions that are allegorical or convey wisdom.
+        <span class="exsent">The mountains are high and the emperor is far away . 
+          <span class="popup">(p / proverb-91
+    :ARG1 (a / and
+        :op1 (h / high-05
+            :ARG1 (m / mountain
+                :refer-number plural)
+            :aspect state
+            :modal-strength full-affirmative)
+        :op2 (a2 / away-01
+            :ARG1 (p / person
+                :ARG1-of (h2 / have-org-role-91
+                    :ARG3 (e / emperor)))
+            :extent (f / far-01)
+            :aspect state
+            :modal-strength full-affirmative)))
           </span></span>
+          
+        <span class="exsent">Life is like a box of chocolates; you never know what you're gonna get. 
+          <span class="popup"></span></span>
       </td>
     </tr>
     
@@ -442,10 +482,24 @@
           <span class="wrap-indent">:ARG10 publisher</span>
           <span class="wrap-indent">:ARG11 url</span>
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For publication information, bibliographic references/entries
+        <span class="exsent">Albert Einstein : Zur Elektrodynamik bewegter Körper ( 1905 ) Annalen der Physik , 322 ( 10 ) : 891 - 921 
+          <span class="popup">(p / publication-91  
+    :ARG0 (p2 / person :wiki "Albert_Einstein" 
+        :name (n / name :op1 "Albert" :op2 "Einstein")) 
+    :ARG1 (p3 / publication :wiki "Annus_Mirabilis_papers#Special_relativity" 
+        :name (n2 / name :op1 "Zur" :op2 "Elektrodynamik" :op3 "bewegter" :op4 "Körper")) 
+    :ARG4 (j / journal :wiki "Annalen_der_Physik" 
+        :name (n3 / name :op1 "Annalen" :op2 "der" :op3 "Physik")) 
+    :ARG5 322 
+    :ARG6 10
+    :ARG7 (v / value-interval 
+        :op1 891 
+        :op2 921) 
+    :time (d / date-entity 
+        :year 1905) 
+    :medium (l / language :wiki "German_language" 
+        :name (n4 / name :op1 "German"))) </span></span>
       </td>
     </tr>
     
@@ -456,7 +510,7 @@
           <span class="wrap-indent">:ARG2	end of the range</span>
       </td>
       <td class="definition">not a reification of :range-- this is for instances not involved in ordinals
-        <span class="exsent">French military defeats have been studied extensively ( 1 - 7 ) . 
+        <span class="exsent">French military defeats have been studied extensively ( <span>1 - 7</span> ) . 
           <span class="popup">(s / study-01
     :ARG1 (d / defeat-01
         :refer-number plural
@@ -472,6 +526,8 @@
                 :list-item 1)
             :ARG2 (t2 / thing
                 :list-item 7))))</span></span>
+                
+        <span class="exsent">Ahasuerus ascended the throne in Shush and ruled over 127 provinces <span>from India to Cush</span> .
       </td>
     </tr>
     
@@ -483,10 +539,52 @@
           <span class="wrap-indent">:ARG3	regular interval between events</span>
           <span class="wrap-indent">:ARG4	entity on which recurring event happens</span>
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For complex frequencies.
+        <span class="exsent">twice a year 
+          <span class="popup">(e / event
+    :frequency (r / rate-entity-91
+        :ARG1 2
+        :ARG2 (y / year :quant 1)))</span></span>
+          
+        <span class="exsent">$3 per gallon 
+          <span class="popup">(r / rate-entity-91
+    :ARG1 (m / monetary-quantity
+        :quant 3
+        :unit (d / dollar))
+    :ARG2 (v / volume-quantity
+        :quant 1
+        :unit (g / gallon)))</span></span>
+          
+        <span class="exsent">every other week 
+          <span class="popup">(e / event
+    :frequency (r / rate-entity-91
+        :ARG3 (t / temporal-quantity
+            :quant 2
+            :unit (w / week))))</span></span>
+          
+        <span class="exsent">every other Wednesday 
+          <span class="popup">(e / event
+    :frequency (r / rate-entity-91 
+        :ARG3 (t / temporal-quantity 
+            :quant 2 
+            :unit (w / week)) 
+        :ARG4 (d / date-entity 
+            :weekday (w2 / wednesday))))</span></span>
+          
+        <span class="exsent">$2 a person every 5 miles whenever it snows 
+          <span class="popup">(e / event
+    :frequency (r / rate-entity-91 
+        :ARG1 (m / monetary-quantity 
+            :quant 2 
+            :unit (d / dollar)) 
+        :ARG2 (p / person
+            :quant 1) 
+        :ARG3 (d2 / distance-quantity 
+            :quant 5 
+            :unit (m2 / mile)) 
+        :ARG4 (s / snow-01
+            :aspect activity
+            :modal-strength full-affirmative)))</span></span>
       </td>
     </tr>
     
@@ -498,9 +596,46 @@
           <span class="wrap-indent">:ARG2	entity requestion is being made to</span> 
       </td>
       <td class="definition">For tag questions, or rephrasing received instructions in order to request confirmation of understanding.
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+        <span class="exsent">He's hungry, isn't he? 
+          <span class="popup">(h / hunger-01 
+    :ARG0 (p / person
+        :refer-person 3rd
+        :refer-number singular) 
+    :ARG1-of (r / request-confirmation-91)
+    :aspect state
+    :modal-strength partial-affirmative) </span></span>
+          
+        <span class="exsent">Come here, will you? 
+          <span class="popup">(c / come-01 
+    :mode imperative 
+    :ARG1 (p / person
+        :refer-person 2nd
+        :refer-number singular)
+    :ARG4 (h / here) 
+    :ARG1-of (r / request-confirmation-91)
+    :aspect performance
+    :modal-strength partial-affirmative) </span></span>
+          
+        <span class="exsent">You must be Jack , right ? 
+          <span class="popup">(i / infer-01 
+    :ARG1 (i2 / identity-91
+        :ARG1 (p2 / person
+            :refer-person 2nd
+            :refer-number singular)
+        :ARG2 (p / person 
+            :name (n / name :op1 "Jack"))
+        :ARG1-of (r / request-confirmation-91)
+        :aspect state
+        :modal-strength partial-affirmative
+        :modal-predicate i)) </span></span>
+
+        <span class="exsent">A green one ? 
+          <span class="popup">(h / have-color-91
+    :ARG1 (t / thing
+        :refer-person 3rd
+        :refer-number singular)
+    :ARG2 (g / green)
+    :ARG1-of (r / request-confirmation-91))</span></span>
       </td>
     </tr>
     
@@ -512,9 +647,8 @@
           <span class="wrap-indent">:ARG2	entity requestion is being made to</span> 
       </td>
       <td class="definition">For requests for response (e.g. "hello? ...Julia?").
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+        <span class="exsent">well ? 
+          <span class="popup">(r / request-response-91)</span></span>
       </td>
     </tr>
     
@@ -524,9 +658,16 @@
           <span class="wrap-indent">:ARG1	the copy</span> 
           <span class="wrap-indent">:ARG2	the original</span> 
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
+      <td class="definition">For simile.
+        <span class="exsent">Life is like a box of chocolates . 
+          <span class="popup">(r / resemble-91
+    :ARG1 (l / live-01
+        :aspect process
+        :modal-strength full-affirmative)
+    :ARG2 (c / chocolate
+        :unit (b / box))
+    :aspect state
+    :modal-strength full-affirmative)
           </span></span>
       </td>
     </tr>
@@ -538,10 +679,17 @@
           <span class="wrap-indent">:ARG1	quote, communicated thing (add :quote relation to this argument)</span> 
           <span class="wrap-indent">:ARG2 audience</span> 
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For vocatives and unattributed speech in dialogues.
+        <span class="exsent">"Good morning, <strong>Bert</strong>."
+          <span class="popup">(s / say-91
+    :ARG1 (g / good-02
+        :theme (m / morning)
+        <strong>:vocative (p / person 
+            :name (n / name :op1 "Bert"))</strong>
+        :aspect state
+        :modal-strength full-affirmative
+        :quote s)
+    :ARG2 p)</span></span>
       </td>
     </tr>
     
@@ -552,10 +700,47 @@
           <span class="wrap-indent">:ARG2	worst score on scale</span> 
           <span class="wrap-indent">:ARG3	best score on scale</span> 
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For score ranges.
+        <span class="exsent">Jacques scored a 18 / 20 in math . 
+          <span class="popup">(s / score-01 
+    :ARG1 (p / person 
+        :name (n / name :op1 "Jacques")) 
+    :ARG2 (s2 / score-on-scale-91 
+        :ARG1 18 
+        :ARG3 20) 
+    :ARG3 (m / mathematics)
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+          
+        <span class="exsent">On a scale of 1 to 10, how much pain do you feel? 
+          <span class="popup">(f / feel-01 
+    :mode interrogative
+    :ARG0 (p2 / person
+        :refer-person 2nd
+        :refer-number singular)
+    :ARG1 (p / pain 
+        :quant (s / score-on-scale-91 
+            :ARG1 (u / umr-unknown) 
+            :ARG2 1 
+            :ARG3 10))
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
+          
+        <span class="exsent">John received a B on the Amrican five-letter grade scale, A-F. 
+          <span class="popup">(r / receive-01
+    :ARG0 (p / person 
+        :name (n / name :op1 "John"))
+    :ARG1 (s / score-on-scale-91
+        :ARG1 "B"
+        :ARG2 "F"
+        :ARG3 "A"
+        :scale (s2 / scale
+            :mod (c / country 
+                :name (n2 / name :op1 "America"))
+            :mod (l / letter
+                :quant 5)))
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     
@@ -568,10 +753,33 @@
           <span class="wrap-indent">:ARG4	significance test (e.g., t-test, Chi-square test, Fisher's exact test)</span> 
           <span class="wrap-indent">:ARG5	alternative hypothesis (vs...)</span> 
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For p-values.
+        <span class="exsent">Protein expression increased 10-fold (p=0.05). 
+          <span class="popup">(i / increase-01 
+    :ARG1 (e / express-03 
+          :ARG2 (p / protein)
+          :aspect process
+          :modal-strength full-affirmative) 
+    :ARG2 (t / times :quant 10) 
+    :ARG1-of (s / statistical-test-91 
+          :ARG2 (l / less-than :op1 0.05))
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+          
+        <span class="exsent">Raf-1 also correlated with nuclear activated MAPK (p=0.0022, r2=0.1525). 
+          <span class="popup">(c / correlate-01 
+    :ARG1 (e / enzyme :wiki "C-Raf" 
+        :name (n / name :op1 "Raf-1")) 
+    :ARG2 (e2 / enzyme :wiki "Mitogen-activated_protein_kinase" 
+        :name (n2 / name :op1 "MAPK") 
+        :place (n3 / nucleus) 
+        :ARG1-of (a / activate-01)) 
+    :ARG1-of (s / statistical-test-91 
+        :ARG2 0.0022 
+        :ARG3 0.1525) 
+    :mod (a2 / also)
+    :aspect state
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     
@@ -586,10 +794,15 @@
           <span class="wrap-indent">:ARG6	zip code</span> 
           <span class="wrap-indent">:ARG7	country</span> 
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For street address information.
+        <span class="exsent">1600 Pennsylvania Ave , Washington DC , 20006 
+          <span class="popup">(s / street-address-91 
+    :ARG1 1600  
+    :ARG2 (r / road :wiki "Pennsylvania_Avenue" 
+        :name (n / name :op1 "Pennsylvania" :op2 "Ave")) 
+    :ARG4 (h / human-settlement :wiki "Washington,_D.C." 
+        :name (n2 / name :op1 "Washington")) 
+    :ARG6 20006) </span></span>
       </td>
     </tr>
     
@@ -599,10 +812,13 @@
           <span class="wrap-indent">:ARG1	location</span> 
           <span class="wrap-indent">:ARG2	environmental condition</span> 
       </td>
-      <td class="definition">def
-        <span class="exsent">sent 
-          <span class="popup">graph
-          </span></span>
+      <td class="definition">For environmental conditions.
+        <span class="exsent">It's graupeling outside.
+          <span class="popup">(w / weather-91
+    :ARG1 (o / outside)
+    :ARG2 (g / graupel-00)
+    :aspect activity
+    :modal-strength full-affirmative)</span></span>
       </td>
     </tr>
     
