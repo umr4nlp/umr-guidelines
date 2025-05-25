@@ -1,1 +1,713 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My New Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 0.9em;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      line-height: 1.6;
+    }
+    .box {
+      background-color: #e6f2ff;
+      padding: 0.5em;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    td:nth-child(4), td:nth-child(5),
+    th:nth-child(4), th:nth-child(5){
+      white-space: normal;
+      width: auto;
+    }
+    .highlight {
+      background-color: #e6f2ff;
+      border-radius: 4px;
+      padding: 0.1em 0.3em;
+      display: inline-block;
+      position: relative;
+      font-family: monospace;
+      font-size: inherit;
+      line-height: 1.2;
+    }
+    .popup {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      padding: 0.5em;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      width: max-content;
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-style: normal;
+    }
+    .highlight:hover .popup ,
+    .exsent:hover .popup {
+      display: block;
+    }
+    .indent {
+      display: block;
+      padding-left: 2em;
+      font-family: monospace;
+      font-size: inherit;
+    }
+    .exsent {
+      display: block;
+      margin-left: 1em;
+      font-family: inherit;
+      font-size: inherit;
+      font-style: italic;
+      position: relative;
+      line-height: 1.5;
+    }
+    .definition {
+      white-space: normal;
+      width: auto;
+      line-height: 1.2;
+    }
+    .nowrap {
+      white-space: nowrap;
+    }.smallcaps {
+      font-variant: small-caps;
+    }
+    .wrap-indent {
+      display: block;
+      margin-left: 2em;
+      text-indent: -1em;
+      font-family: monospace;
+      font-size: inherit;
+    }
+  </style>
+</head>
+<body>
+  
+<h1>Abstract -91 Rolesets</h1>
+<p>These rolesets cover implicit relations not necessarily tied to a specific lexical item.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Roleset</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+    <tr>
+      <td>
+        <span class="highlight"><code>byline-91</code>
+          <span class="wrap-indent">:ARG1 news organization</span> 
+          <span class="wrap-indent">:ARG2 author</span>
+          <span class="wrap-indent">:ARG3	photographer, illustrator</span>
+          <span class="wrap-indent">:ARG4	translator</span>
+          <span class="wrap-indent">:ARG5	means</span>
+      </td>
+      <td class="definition">Bylines in newspaper articles that name the writer, etc.
+        <span class="exsent">Xinhua New Agency , Shanghai , February 10 , by wire ( reporters Jinhu Xie and Chijian Zhang ) 
+          <span class="popup">(b / byline-91
+    :ARG0 (n5 / news-media 
+        :name (n / name :op1 "Xinhua" :op2 "New" :op3 "Agency"))
+    :ARG1 (a / and
+        :op1 (p / person 
+            :name (n2 / name :op1 "Jinhu" :op2 "Xie"))
+        :op2 (p2 / person 
+            :name (n3 / name :op1 "Chijian" :op2 "Zhang"))
+        :ARG0-of (r / report-01))
+    :ARG5 (w / wire)
+    :time (d / date-entity 
+        :month 2 
+        :date 10)
+    :place (h / human-settlement 
+        :name (n4 / name :op1 "Shanghai")))</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>confirm-91</code>
+          <span class="wrap-indent">:ARG0	entity confirming</span>
+          <span class="wrap-indent">:ARG1	proposition confirmed (or not)</span>
+          <span class="wrap-indent">:ARG2	conversation partner</span>
+      </td>
+      <td class="definition">Under development. Could be used for confirmation responses in dialogue.
+        <span class="exsent"> 
+          <span class="popup">
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>correlate-91</code>
+          <span class="wrap-indent">:ARG1	X; first item changing in relation to another</span> 
+          <span class="wrap-indent">:ARG2	Y; second item ARG1 is changing in relation to</span>
+          <span class="wrap-indent"></span>
+      </td>
+      <td class="definition">For <em>the X-er the Y-er</em> constructions.
+        <span class="exsent">The lower the price , the more you sell . 
+          <span class="popup">(c / correlate-91
+    :ARG1 (h / have-degree-91
+        :ARG1 (p / price)
+        :ARG2 (l / low-04)
+        :ARG3 (m / more)
+        :aspect state
+        :modal-strength partial-affirmative)
+    :ARG2 (h2 / have-quant-91
+        :ARG1 (t / thing
+            :ARG1-of (s / sell-01
+                :ARG0 (y / you)))
+        :ARG3 (m2 / more)
+        :aspect state
+        :modal-strength full-affirmative))</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>course-91</code>
+          <span class="wrap-indent">:ARG1	topic</span>
+          <span class="wrap-indent">:ARG2	number</span>
+          <span class="wrap-indent">:ARG3	section</span>
+          <span class="wrap-indent">:ARG4	institution</span>
+          <span class="wrap-indent">:ARG5	instructor</span>
+      </td>
+      <td class="definition">For school course enrollment information.
+        <span class="exsent">He enrolled in Economy 101 at Harvard. 
+          <span class="popup">(e / enroll-01
+    :ARG1 (p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :ARG2 (c / course-91
+        :ARG1 (e2 / economy)
+        :ARG2 101
+        :ARG4 (a / academic-organization 
+            :name (n / name :op1 "Harvard")))
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>distribution-range-91</code>
+          <span class="wrap-indent">:ARG1	center, mean</span>
+          <span class="wrap-indent">:ARG2	lower bound</span>
+          <span class="wrap-indent">:ARG3 upper bound</span>
+          <span class="wrap-indent">:ARG4 radius, distance from center to bounds</span>
+          <span class="wrap-indent">:ARG5 confidence that value is in range, typically a percentage, e.g. 95%</span>
+          <span class="wrap-indent">:ARG6 deviation covered by range, e.g. standard-deviation, standard-error-of-the-mean</span>
+          <span class="wrap-indent">:ARG7 type of distribution, e.g. normal-distribution</span>
+      </td>
+      <td class="definition">For statistical distributions
+        <span class="exsent">142.0ARG1 ± 15.7 nM 
+          <span class="popup">(d / distribution-range-91 
+    :ARG1 (c / concentration-quantity :quant 142.0 
+        :unit (n / nanomolar)) 
+    :ARG4 (c2 / concentration-quantity :quant 15.7 
+        :unit (n2 / nanomolar)))</span></span>
+          
+        <span class="exsent">a range of 16.4 % - 19 % ( 17.7 % being the average ) 
+          <span class="popup">(d / distribution-range-91 
+    :ARG1 (p / percentage-entity :value 17.7) 
+    :ARG2 (p2 / percentage-entity :value 16.4) 
+    :ARG3 (p3 / percentage-entity :value 19))</span></span>
+          
+        <span class="exsent">With 95 % confidence , 42 - 45 % of voters will vote for John Smith . 
+          <span class="popup">(i2 / include-91 
+    :ARG1 (p / person 
+        :ARG0-of (v / vote-01 
+            :ARG1 (p2 / person 
+                :name (n / name :op1 "John" :op2 "Smith"))
+            :aspect performance
+            :modal-strength full-affirmative)) 
+    :ARG2 (p3 / person 
+        :refer-number plural
+        :ARG0-of (v2 / vote-01)) 
+    :ARG3 (d / distribution-range-91 
+        :ARG2 (p4 / percentage-entity :value 42) 
+        :ARG3 (p5 / percentage-entity :value 45) 
+        :ARG5 (p6 / percentage-entity :value 95)))</span></span>
+          
+        <span class="exsent">The gestational age was determined to be 28.5 weeks ± 10 days ( 2 standard deviations ) . 
+          <span class="popup">(d / determine-01 
+    :ARG1 (h / have-age-91
+        :ARG1 (p / person 
+            :ARG1-of (g / gestate-01)) 
+        :ARG2 (d2 / distribution-range-91 
+            :ARG1 (t / temporal-quantity :quant 28.5 
+                :unit (w / week)) 
+            :ARG4 (t2 / temporal-quantity :quant 10 
+                :unit (d3 / day)) 
+            :ARG6 (p2 / product-of :op1 2 
+                :op2 (s / standard-deviation))))
+    :aspect performance
+    :modal-strength full-affirmative) </span></span>
+          
+        <span class="exsent">65 ± 3 % ( mean ± SEM ) 
+          <span class="popup">(d / distribution-range-91 
+    :ARG1 (p / percentage-entity :value 65) 
+    :ARG4 (p2 / percentage-entity :value 3) 
+    :ARG6 (s / standard-error-of-the-mean)) </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>emit-sound-91</code>
+          <span class="wrap-indent">:ARG1	entity emitting sound</span>
+          <span class="wrap-indent">:ARG2	the sound (may use (s / string-entity))</span>
+      </td>
+      <td class="definition">For transcription of noises that occur outside of quotative predicates.
+        <span class="exsent">What do you call those little ... um ... paddleball ? You know , with the ball on a string ? Chong chong chong chong . 
+          <span class="popup">(e / emit-sound-91
+    :ARG1 (t / thing)
+    :ARG2 (s / string-entity :value "chong-chong-chong-chong"))</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>gesture-91</code>
+          <span class="wrap-indent">:ARG0	gesturer</span>
+          <span class="wrap-indent">:ARG1	the gesture</span>
+          <span class="wrap-indent">:ARG2	audience</span>
+      </td>
+      <td class="definition">A preliminary roleset for incorporating gestures into multimodal UMR graphs.
+        <span class="exsent">And he goes ... { counting gesture }
+          <span class="popup">(g / go-23
+    :ARG0 (p / person
+        :refer-person 3rd
+        :refer-number singular)
+    :ARG1 (g / gesture-91
+        :ARG0 p
+        :ARG1 (c / count-01))
+    :aspect performance
+    :modal-strength full-affirmative)</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>hyperlink-91</code>
+          <span class="wrap-indent">:ARG1	text being hyperlinked</span>
+          <span class="wrap-indent">:ARG3	url-entity</span>
+      </td>
+      <td class="definition">For hyperlinks.
+        <span class="exsent"><code>&lt;a href="https://www.monticello.org/sites/default/files/uploaded-content-images/Declaration_Engrav_Pg1of1_doctored_0.jpg"&lt; Declaration of Independence &lt;/a&gt;</code> 
+          <span class="popup">(c / cultural-artifact
+    :name (n / name :op1 "Declaration" :op2 "of" :op3 "Independence")
+    :ARG1-of (h / hyperlink-91 
+        :ARG3 (u / url-entity :value "https://www.monticello.org/sites/default/files/uploaded-content-images/Declaration_Engrav_Pg1of1_doctored_0.jpg")))</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>in-text-reference-91</code>
+          <span class="wrap-indent">:ARG1	text accompanied by a citation or reference</span> 
+          <span class="wrap-indent">:ARG2	source publication (publication-91), table, or figure, etc.</span>
+          <span class="wrap-indent">:ARG3	the reference label itself (e.g., 'Smith, 2009" or "Fig 2")</span>
+      </td>
+      <td class="definition">For in-text citations and references to figures, illustrations, tables, examples, etc.
+        <span class="exsent">French military defeats have been studied extensively ( 1 - 7 ) . 
+          <span class="popup">(s / study-01
+    :ARG1 (d / defeat-01
+        :refer-number plural
+        :ARG1 (m / military
+            :mod (c / country 
+                :name (n / name :op1 "France"))))
+    :extent (e / extensive)
+    :aspect state
+    :modal-strength full-affirmative
+    :ARG1-of (i / in-text-reference-91
+        :ARG3 (r / range-91
+            :ARG1 (t / thing
+                :list-item 1)
+            :ARG2 (t2 / thing
+                :list-item 7))))</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>include-91</code>
+          <span class="wrap-indent">:ARG1	subset</span>
+          <span class="wrap-indent">:ARG2	superset</span>
+          <span class="wrap-indent">:ARG3	relative size of subset compared to superset</span>
+      </td>
+      <td class="definition">For relative size of subset compared to superset.
+        <span class="exsent">10 %ARG3 of smokers die of lung cancer . 
+          <span class="popup">(i / include-91 
+    :ARG1 (p / person 
+        :refer-number plural
+        :ARG1-of (d / die-01 
+            :cause (d2 / disease :wiki "Lung_cancer" 
+                :name (n / name :op1 "lung" :op2 "cancer"))
+            :aspect performance
+            :modal-strength full-affirmative))) 
+    :ARG2 (p2 / person 
+        :refer-number plural
+        :ARG0-of (s2 / smoke-02)) 
+    :ARG3 (p3 / percentage-entity :value 10))</span></span>
+          
+        <span class="exsent">26 of the 44 countries in Europe are members of NATO . 
+          <span class="popup">(i / include-91 
+    :ARG1 (c / country :quant 26 
+        :ARG0-of (h / have-org-role-91 
+            :ARG1 (a / armed-organization :wiki "NATO" 
+                :name (n2 / name :op1 "NATO")) 
+            :ARG2 (m2 / member)
+            :aspect state
+            :modal-strength full-affirmative)) 
+    :ARG2 (c2 / country :quant 44 
+        :place (c3 / continent :wiki "Europe" 
+            :name (n / name :op1 "Europe")))) </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>infer-91</code>
+          <span class="wrap-indent">:ARG0	inference-maker</span>
+          <span class="wrap-indent">:ARG1	belief</span>
+          <span class="wrap-indent">:ARG2	source of belief</span>
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>mean-91</code>
+          <span class="wrap-indent">:ARG0	agent</span>
+          <span class="wrap-indent">:ARG1	element containing meaning</span>
+          <span class="wrap-indent">:ARG2	meaning</span>
+          <span class="wrap-indent">:ARG3	perceiver, beneficiary</span>
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>proverb-91</code>
+          <span class="wrap-indent">:ARG1	proverb</span>
+          <span class="wrap-indent">:ARG2	2nd part of a two-part allegorical expression. Gives a focused interpretation of ARG1</span>
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>publication-91</code>
+          <span class="wrap-indent">:ARG0	author(s)</span>
+          <span class="wrap-indent">:ARG1	title</span>
+          <span class="wrap-indent">:ARG2	abstract</span>
+          <span class="wrap-indent">:ARG3	full text</span>
+          <span class="wrap-indent">:ARG4	venue (journal, conference, etc.)</span>
+          <span class="wrap-indent">:ARG5	volume</span>
+          <span class="wrap-indent">:ARG6	issue</span>
+          <span class="wrap-indent">:ARG7	pages</span>
+          <span class="wrap-indent">:ARG8	id (e.g., PubMed)</span>
+          <span class="wrap-indent">:ARG9	editor(s)</span>
+          <span class="wrap-indent">:ARG10 publisher</span>
+          <span class="wrap-indent">:ARG11 url</span>
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>range-91</code>
+          <span class="wrap-indent">:ARG1	start of the range</span>
+          <span class="wrap-indent">:ARG2	end of the range</span>
+      </td>
+      <td class="definition">not a reification of :range-- this is for instances not involved in ordinals
+        <span class="exsent">French military defeats have been studied extensively ( 1 - 7 ) . 
+          <span class="popup">(s / study-01
+    :ARG1 (d / defeat-01
+        :refer-number plural
+        :ARG1 (m / military
+            :mod (c / country 
+                :name (n / name :op1 "France"))))
+    :extent (e / extensive)
+    :aspect state
+    :modal-strength full-affirmative
+    :ARG1-of (i / in-text-reference-91
+        :ARG3 (r / range-91
+            :ARG1 (t / thing
+                :list-item 1)
+            :ARG2 (t2 / thing
+                :list-item 7))))</span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>rate-entity-91</code>
+          <span class="wrap-indent">:ARG1	quantity (with an implied default of 1)</span>
+          <span class="wrap-indent">:ARG2	per quantity</span>
+          <span class="wrap-indent">:ARG3	regular interval between events</span>
+          <span class="wrap-indent">:ARG4	entity on which recurring event happens</span>
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>request-confirmation-91</code>
+          <span class="wrap-indent">:ARG0	entity requesting confirmation</span> 
+          <span class="wrap-indent">:ARG1	thing to be confirmed</span> 
+          <span class="wrap-indent">:ARG2	entity requestion is being made to</span> 
+      </td>
+      <td class="definition">For tag questions, or rephrasing received instructions in order to request confirmation of understanding.
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>request-response-91</code>
+          <span class="wrap-indent">:ARG0	entity requesting confirmation</span> 
+          <span class="wrap-indent">:ARG1	thing to be confirmed</span> 
+          <span class="wrap-indent">:ARG2	entity requestion is being made to</span> 
+      </td>
+      <td class="definition">For requests for response (e.g. "hello? ...Julia?").
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>resemble-91</code>
+          <span class="wrap-indent">:ARG1	the copy</span> 
+          <span class="wrap-indent">:ARG2	the original</span> 
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>say-91</code>
+          <span class="wrap-indent">:ARG0	speaker, communication attributed to</span> 
+          <span class="wrap-indent">:ARG1	quote, communicated thing (add :quote relation to this argument)</span> 
+          <span class="wrap-indent">:ARG2 audience</span> 
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>score-on-scale-91</code>
+          <span class="wrap-indent">:ARG1	score</span> 
+          <span class="wrap-indent">:ARG2	worst score on scale</span> 
+          <span class="wrap-indent">:ARG3	best score on scale</span> 
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>statistical-test-91</code>
+          <span class="wrap-indent">:ARG1	finding</span> 
+          <span class="wrap-indent">:ARG2	p-value (probability of null-hypothesis)</span> 
+          <span class="wrap-indent">:ARG3	r-squared (coefficient of determination)</span> 
+          <span class="wrap-indent">:ARG4	significance test (e.g., t-test, Chi-square test, Fisher's exact test)</span> 
+          <span class="wrap-indent">:ARG5	alternative hypothesis (vs...)</span> 
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>street-address-91</code>
+          <span class="wrap-indent">:ARG1	street number</span> 
+          <span class="wrap-indent">:ARG2	street</span> 
+          <span class="wrap-indent">:ARG3	unit (apartment, suite, etc.)</span> 
+          <span class="wrap-indent">:ARG4	city</span> 
+          <span class="wrap-indent">:ARG5	state, province, district</span> 
+          <span class="wrap-indent">:ARG6	zip code</span> 
+          <span class="wrap-indent">:ARG7	country</span> 
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>weather-91</code>
+          <span class="wrap-indent">:ARG1	location</span> 
+          <span class="wrap-indent">:ARG2	environmental condition</span> 
+      </td>
+      <td class="definition">def
+        <span class="exsent">sent 
+          <span class="popup">graph
+          </span></span>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<h3>Abstract Spatial -91 Rolesets</h3>
+<p>These rolesets originated with Spatial AMR and appear in the UMR 2.0 release. They are being adopted but continue to be developed for UMR purposes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Roleset</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+    <tr>
+      <td class="nowrap">
+        <span class="highlight"><code>cartesian-framework-91</code>
+          <span class="wrap-indent">:ARG1 entity whose centerpoint defines the origin</span>
+          <span class="wrap-indent">:ARG2 x-axis</span>
+          <span class="wrap-indent">:ARG3 y-axis</span>
+          <span class="wrap-indent">:ARG4 z-axis</span>
+          <span class="wrap-indent">:ARG5 origin coordinates (or marker)</span>
+          <span class="wrap-indent">:ARG6 anchoring entity</span>
+          <span class="wrap-indent">:ARG7 (a / armature) (see below)</span>
+      </td>
+      <td class="definition">Used to define Cartesian frameworks, which can be defined for spaces and entities in a spatial environment. These frameworks are leveraged as spatial frames of reference, particularly when speakers use directed spatial terms (like 'up'). <br>
+This roleset can be used for either 2D or 3D frameworks-- if 2D, simply leave out the z-axis.
+        <span class="exsent">(an absolute framework for the Minecraft environment)
+          <span class="popup">(b / build-space
+    :ARG1-of (c / cartesian-framework-91
+        :ARG2 (x / x-axis)
+        :ARG3 (y / y-axis)
+        :ARG4 (z / z-axis)
+        :ARG7 (a / armature
+            :axis-layout right-handed
+            :frame-of-reference-type absolute)))
+          </span></span>
+            
+        <span class="exsent">(a relative framework for some object a viewer is interacting with. This framework is a mirror image of the viewer's)
+          <span class="popup">(o / object
+    :ARG1-of (c / cartesian-framework-91
+        :ARG2 (x / x-axis)
+        :ARG3 (y / y-axis)
+        :ARG4 (z / z-axis)
+        :ARG6 (p / person
+            :name (n / name :op1 "Builder"))
+        :ARG7 (a / armature
+            :axis-layout left-handed
+            :frame-of-reference-type relative
+            :translation reflected)))
+          </span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="highlight"><code>(a / armature)</code>
+          <span class="wrap-indent">:axis-layout <em>left-handed, right-handed</em></span>
+          <span class="wrap-indent">:frame-of-reference-type <em>absolute, intrinsic, relative</em></span>
+          <span class="wrap-indent">:translation <em>rotated, reflected, translated</em>)</span>
+        </span>
+      </td>
+      <td class="definition">Mandatory value for <span class="highlight">:ARG7</span> of <span class="highlight">cartesian-framework-91</span>. <br>
+  <span class="highlight">:axis-layout</span> tells the orientation of the axes in the framework relative to one another based on their polarities. In a 3d left-handed framework, if one axis's positive end is pointing upward and another is pointing towards the right (from your perspective as the viewer), the third axis's positive end will be pointing towards you. In a right-handed framework, the third axis's positive end will point away from you.<br><br>
+  <span class="highlight">:frame-of-reference-type</span> provides an opportunity to add a frame of reference type label, using whatever labels from the literature the user wishes. The obvious three to start with are absolute, intrinsic, and relative.<br><br>
+  <span class="highlight">:translation</span> tells how the present framework relates to the framework of an anchoring entity (useful for <em>relative</em> framework-types). If the framework is reflected, it is a mirror image (so if the anchor framework was left-handed, this one will be right-handed). If rotated, the framework is isomorphic to the anchor framework but rotated 180° so it is facing the anchor. If translated, the framework is purely isomorphic with no further restrictions.
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="highlight"><code>(s / spatial-sequence)</code>
+          <span class="wrap-indent">:axis relations defining the trajectory of the sequence</span> 
+          <span class="wrap-indent">:op1 first entity in sequence</span>
+          <span class="wrap-indent">:op2 second entity in sequence</span>
+          <span class="wrap-indent">:op3 third entity in sequence</span>
+          <span class="wrap-indent">(etc.)</span>
+      </td>
+      <td class="definition">This concept with subroles allows annotation of lists of items whose order is meant to convey a spatial sequence, often understood to proceed in a certain direction.
+        <span class="exsent">Now put <strong>red, red, green, blue going up</strong>.  
+          <span class="popup">(p / put-01
+    :mode imperative
+    :ARG0 (p / person
+        :refer-person 2nd
+        :refer-number singular)
+    :ARG1 <strong>(s / spatial-sequence
+        :axis (t / trajectory
+            :ARG3-of (u / up-03
+                :ARG4 (c / cartesian-framework-91
+                    :ARG1 (b / build-space))))
+        :op1 (t2 / thing
+            :color (r / red))
+        :op2 (t3 / thing
+            :color (r2 / red))
+        :op3 (t4 / thing
+            :color (g / green))
+        :op4 (t5 / thing
+            :color (b / blue))))</strong>
+          </span></span>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+  
+</body>
+</html>
