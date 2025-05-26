@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My New Page</title>
+  <title>UMR Abstract Concepts</title>
   <style>
     body {
       font-family: sans-serif;
