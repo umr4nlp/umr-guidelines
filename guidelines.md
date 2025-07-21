@@ -2689,7 +2689,7 @@ an example of a semantic alternation, seen below in
 ```
 ta-di=lo	daki-a		tioni	arimi 		ta 	besu
 PFV-3PL.S=go	find-3SG.O	man	feel.sorry	3SG.PFV	be.hungry
-‘When they found him, the poor many was hungry.’
+‘When they found him, the poor man was hungry.’
 ```
 
 <span id="3-2-1 (2b)">3-2-1 (2b)</span>
